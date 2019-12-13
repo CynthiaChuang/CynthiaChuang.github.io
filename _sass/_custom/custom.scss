@@ -29,3 +29,18 @@
     .fa { margin-right: 5px; }
 }
   
+// post-tages
+// --------------------------------------------------
+.posts-expand .post-tags {  
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top:100px;
+      font-size: 13px;
+      border:1px solid;
+      border-radius:12px;
+      cursor:pointer;
+      padding:0px 16px;
+
+    }
+  }
