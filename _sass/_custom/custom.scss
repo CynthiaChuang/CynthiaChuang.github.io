@@ -1,1 +1,31 @@
 // Custom styles.
+// no-found-menu
+// use in 404 not found page
+// --------------------------------------------------
+.no-found-menu {
+    padding-left: 0;  
+ }
+  
+.no-found-menu .menu-item {
+    display: inline-block;
+    margin: 0 10px;
+    list-style: none;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 10px;
+    }
+
+    a {
+        display: block;
+        font-size: 13px;
+        line-height: inherit;
+        border-bottom: 1px solid $menu-link-border;
+        transition-property: border-color;
+        @include the-transition();
+
+        &:hover { color:$grey-light}
+    }
+
+    .fa { margin-right: 5px; }
+}
+  
