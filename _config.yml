@@ -168,7 +168,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  host: //fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap
 
   # Global font settings used on <body> element.
   global:
@@ -180,13 +180,13 @@ font:
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Noto Sans TC
 
   # Font settings for posts
   # Fallback to `global` font settings.
   posts:
     external: true
-    family:
+    family: Noto Sans TC
 
   # Font settings for Logo
   # Fallback to `global` font settings.
