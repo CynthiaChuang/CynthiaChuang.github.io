@@ -62,10 +62,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              {% if site.post_meta.item_text %}
-                <span class="post-meta-item-text">{{ __.post.posted }}</span>
-              {% endif %}
-              <time title="{{ __.post.created }}" itemprop="dateCreated datePublished" datetime="{{ post.date | date_to_xmlschema }}">
+               <time title="{{ __.post.created }}" itemprop="dateCreated datePublished" datetime="{{ post.date | date_to_xmlschema }}">
                 {{ post.date | date: site.date_format }}
               </time>
             {% endif %}
@@ -94,10 +91,7 @@
             {% endif %}
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
-              </span>
-              {% if site.post_meta.item_text %}
-                <span class="post-meta-item-text">{{ __.post.in }}</span>
-              {% endif %}
+              </span> 
               {% for cat in post.categories %}
                 {% assign cat_url_encode = cat | url_encode | replace: '+', '%20' %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
