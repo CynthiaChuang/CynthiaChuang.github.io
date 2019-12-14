@@ -6,8 +6,6 @@ categories:
 tags:
 - Github Page
 - Jekyll
-- tags
-
 --- 
 之前有一陣子在找合適的 blog 想用來存放文章，最好能支援數學公式、程式碼，若能使用 Markdown 來撰寫文章就更好了，另外版面最好整潔些不要像傳統 blog 有側欄的干擾（要求真多 XD
 
