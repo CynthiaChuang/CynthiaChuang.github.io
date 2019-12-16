@@ -166,9 +166,9 @@
 // note
 // ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl
 // --------------------------------------------------
-.post-body .highlight {
+.post-body .label {
   display: inline;
   padding: 0 2px;
   white-space: nowrap;
-  background-color: $highlight;
+  background-color: $label;
 }
