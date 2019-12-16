@@ -1,0 +1,37 @@
+// note
+// --------------------------------------------------
+// Default
+$note-default-border        : $grey-dim;
+$note-default-bg            : $gainsboro;
+$note-default-text          : $note-default-border;
+$note-default-icon          : "\f0a9";
+
+// Primary
+$note-primary-border        : #6f42c1;
+$note-primary-bg            : #f5f0fa;
+$note-primary-text          : $note-primary-border;
+$note-primary-icon          : "\f055";
+
+// Info
+$note-info-border           : $blue;
+$note-info-bg               : #eef7fa;
+$note-info-text             : $note-info-border;
+$note-info-icon             : "\f05a";
+
+// Success
+$note-success-border        : #5cb85c;
+$note-success-bg            : #eff8f0;
+$note-success-text          : $note-success-border;
+$note-success-icon          : "\f058";
+
+// Warning
+$note-warning-border        : #f0ad4e;
+$note-warning-bg            : #fdf8ea;
+$note-warning-text          : $note-warning-border;
+$note-warning-icon          : "\f06a";
+
+// Danger
+$note-danger-border         : #d9534f;
+$note-danger-bg             : #fcf1f2;
+$note-danger-text           : $note-danger-border;
+$note-danger-icon           : "\f056";
