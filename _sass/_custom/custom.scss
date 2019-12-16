@@ -43,122 +43,132 @@
     }
   }
 
-  // note
-  // ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl
-  // --------------------------------------------------
-  .post-body .note {
-    position:             relative;
-    padding:              15px;
-    margin-bottom:        20px;
+// note
+// ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl
+// --------------------------------------------------
+.post-body .note {
+  position:             relative;
+  padding:              15px;
+  margin-bottom:        20px;
 
-    border:             initial;
-    border-left:        4px solid $gainsboro;
-    background-color:   lighten($gainsboro, 65%);
+  border:             initial;
+  border-left:        4px solid $gainsboro;
+  background-color:   lighten($gainsboro, 65%);
 
-    // border-radius:        unit(hexo-config('note.border_radius'), px) if hexo-config('note.border_radius') is a 'unit';
-    border-radius: 4px;
+  // border-radius:        unit(hexo-config('note.border_radius'), px) if hexo-config('note.border_radius') is a 'unit';
+  border-radius: 4px;
 
-    h2, h3, h4, h5, h6 {
-        if note_icons {
-          margin-top:       3px;
-        } else {
+  h2, h3, h4, h5, h6 {
+      if note_icons {
+        margin-top:       3px;
+      } else {
+        margin-top:       0;
+      }
+      margin-bottom:      0;
+      border-bottom:      initial;
+      padding-top:        0 !important;
+    }
+  
+  p, ul, ol, table, pre, blockquote {
+      &:first-child {
           margin-top:       0;
-        }
-        margin-bottom:      0;
-        border-bottom:      initial;
-        padding-top:        0 !important;
       }
+      &:last-child {
+          margin-bottom:    0;
+      }
+  }
+
+  &:not(.no-icon) {
+      padding-left:     45px;
+      &:before {
+        position:       absolute;
+        font-family:    'FontAwesome';
+        font-size:      larger;
+        top:            13px;
+        left:           15px;
+      }
+    }
+
     
-    p, ul, ol, table, pre, blockquote {
-        &:first-child {
-            margin-top:       0;
-        }
-        &:last-child {
-            margin-bottom:    0;
-        }
-    }
+  &.default {
+      background-color: $note-default-bg;
+      border-left-color:  $note-default-border;
+      color:  $note-default-text;
+      &:not(.no-icon) {
+          &:before {
+              content: $note-default-icon;
+              color : $note-default-text;
+          }
+      }
+  }
 
+  &.primary  {
+      background-color: $note-primary-bg;
+      border-left-color:  $note-primary-border;
+      color:  $note-primary-text;
+      &:not(.no-icon) {
+          &:before {
+              content: $note-primary-icon;
+              color : $note-primary-text;
+          }
+      }
+  }
+
+  &.info  {
+    background-color: $note-info-bg;
+    border-left-color:  $note-info-border;
+    color: $note-info-text;
     &:not(.no-icon) {
-        padding-left:     45px;
         &:before {
-          position:       absolute;
-          font-family:    'FontAwesome';
-          font-size:      larger;
-          top:            13px;
-          left:           15px;
+            content: $note-info-icon;
+            color : $note-info-text;
         }
-      }
-
-      
-    &.default {
-        background-color: $note-default-bg;
-        border-left-color:  $note-default-border;
-        color:  $note-default-text;
-        &:not(.no-icon) {
-            &:before {
-                content: $note-default-icon;
-                color : $note-default-text;
-            }
-        }
-    }
-
-    &.primary  {
-        background-color: $note-primary-bg;
-        border-left-color:  $note-primary-border;
-        color:  $note-primary-text;
-        &:not(.no-icon) {
-            &:before {
-                content: $note-primary-icon;
-                color : $note-primary-text;
-            }
-        }
-    }
-  
-    &.info  {
-      background-color: $note-info-bg;
-      border-left-color:  $note-info-border;
-      color: $note-info-text;
-      &:not(.no-icon) {
-          &:before {
-              content: $note-info-icon;
-              color : $note-info-text;
-          }
-      }
-    }
-  
-    &.success {
-      background-color: $note-success-bg;
-      border-left-color:  $note-success-border;
-      color: $note-success-text;
-      &:not(.no-icon) {
-          &:before {
-              content: $note-success-icon;
-              color : $note-success-text;
-          }
-      }
-    }
-  
-    &.warning {
-      background-color: $note-warning-bg;
-      border-left-color:  $note-warning-border;
-      color: $note-warning-text;
-      &:not(.no-icon) {
-          &:before {
-              content: $note-warning-icon;
-              color : $note-warning-text;
-          }
-      }
-    }
-
-    &.danger {
-      background-color: $note-danger-bg;
-      border-left-color:  $note-danger-border;
-      color: $note-danger-text;
-      &:not(.no-icon) {
-          &:before {
-              content: $note-danger-icon;
-              color : $note-danger-text;
-          }
-      }
     }
   }
+
+  &.success {
+    background-color: $note-success-bg;
+    border-left-color:  $note-success-border;
+    color: $note-success-text;
+    &:not(.no-icon) {
+        &:before {
+            content: $note-success-icon;
+            color : $note-success-text;
+        }
+    }
+  }
+
+  &.warning {
+    background-color: $note-warning-bg;
+    border-left-color:  $note-warning-border;
+    color: $note-warning-text;
+    &:not(.no-icon) {
+        &:before {
+            content: $note-warning-icon;
+            color : $note-warning-text;
+        }
+    }
+  }
+
+  &.danger {
+    background-color: $note-danger-bg;
+    border-left-color:  $note-danger-border;
+    color: $note-danger-text;
+    &:not(.no-icon) {
+        &:before {
+            content: $note-danger-icon;
+            color : $note-danger-text;
+        }
+    }
+  }
+}
+
+// note
+// ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl
+// --------------------------------------------------
+.post-body .highlight {
+  display: inline;
+  padding: 0 2px;
+  white-space: nowrap;
+  background-color: $highlight;
+}
