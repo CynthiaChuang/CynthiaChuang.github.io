@@ -55,7 +55,6 @@
   border-left:        4px solid $gainsboro;
   background-color:   lighten($gainsboro, 65%);
 
-  // border-radius:        unit(hexo-config('note.border_radius'), px) if hexo-config('note.border_radius') is a 'unit';
   border-radius: 4px;
 
   h2, h3, h4, h5, h6 {
@@ -76,6 +75,10 @@
       &:last-child {
           margin-bottom:    0;
       }
+  }
+
+  .head {
+    font-weight:bold;
   }
 
   &:not(.no-icon) {
@@ -170,5 +173,17 @@
   display: inline;
   padding: 0 2px;
   white-space: nowrap;
-  background-color: $label;
+  border-radius: 2px;
+
+  &.success {
+    background-color: $label-success;
+  }
+
+  &.warning {
+    background-color:$label-warning ;
+  }
+   
+  &.danger {
+    background-color: $label-danger;
+  }
 }
