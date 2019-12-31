@@ -8,7 +8,7 @@ function paginatorHelper(options) {
   var endSize = options.hasOwnProperty('end_size') ? +options.end_size : 1;
   var midSize = options.hasOwnProperty('mid_size') ? +options.mid_size : 2;
   var space = options.hasOwnProperty('space') ? options.space : '&hellip;';
-  var base = options.base || '';
+  var base = escape(options.base) || '';
   var format = options.format || '/%d/';
   var prevText = options.prev_text || 'Prev';
   var nextText = options.next_text || 'Next';
@@ -24,7 +24,22 @@ function paginatorHelper(options) {
     (transform ? transform(current) : current) +
     '</span>';
 
+  function escape(url){
+    if (!url.startsWith('#/'))
+      return url
+    
+    return "#/" + url.replace(new RegExp('^\#/', 'g'), '')
+                    .replace(new RegExp('%', 'g'),'%25')
+                    .replace(new RegExp('/', 'g'),'%2F')       
+                    .replace(new RegExp(' ', 'g'),'%20') 
+                    .replace(new RegExp('\\+', 'g'),'%2B')
+                    .replace(new RegExp('\\?', 'g'),'%3F')
+                    .replace(new RegExp('&', 'g'),'%26')
+                    .replace(new RegExp('#', 'g'),'%23')
+  }
+
   function link(i) {
+    console.log("AAAAA",base)
     return i === 1 ? base : base + format.replace('%d', i);
   }
 
