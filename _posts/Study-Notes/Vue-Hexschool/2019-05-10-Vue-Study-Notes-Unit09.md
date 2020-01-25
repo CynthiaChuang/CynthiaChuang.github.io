@@ -131,7 +131,7 @@ $ vue init webpack my-project
 ## Webpack 腳本介紹 及 自定義環境變數
 
 ![Webpack 流程](https://i.imgur.com/bjYe2nN.png)
-<center style="color:Gainsboro;"> Webpack 流程 （圖片來源: <a href="https://www.udemy.com/vue-hexschool/" style="color:Gainsboro;">課程的第 9 節， 68 講座</a>）</center>
+<center class="imgtext"> Webpack 流程 （圖片來源: <a href="https://www.udemy.com/vue-hexschool/" class="imgtext">課程的第 9 節， 68 講座</a>）</center>
 <br>
 
 ### **Webpack 運行觀念**

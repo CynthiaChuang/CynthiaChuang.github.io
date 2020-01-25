@@ -100,7 +100,7 @@ var app2 = new Vue({
 ## 雙向綁定的資料 與 MVVM 的概念
 
 ![MVVM](https://i.imgur.com/0b3Lz16.png)
-<center style="color:Gainsboro;">Model View View Model（圖片來源: <a href="https://zh.wikipedia.org/wiki/MVVM" style="color:Gainsboro;">維基百科</a>）</center>
+<center class="imgtext">Model View View Model（圖片來源: <a href="https://zh.wikipedia.org/wiki/MVVM" class="imgtext">維基百科</a>）</center>
 
 <br> Vue 是一種受到 [MVVM（Model–view–viewmodel）](https://zh.wikipedia.org/wiki/MVVM) 啟發的架構。實際上寫程式碼時，並不會寫到 VM 的部份，只需要寫 Model 即可。在資料變動的同時 VM 就會去控制視圖的話，反之，若從 UI 更改相關資料， VM 則會通知 Model 改寫資料   
 
@@ -420,7 +420,7 @@ selected = "" ;
  
 來一張經典的：
 ![Organizing Components](https://i.imgur.com/1a2KVgb.png)
-<center style="color:Gainsboro;">components（圖片來源: <a href="https://vuejs.org/v2/guide/components.html#Organizing-Components" style="color:Gainsboro;">Vue.js</a>）</center>
+<center class="imgtext">components（圖片來源: <a href="https://vuejs.org/v2/guide/components.html#Organizing-Components" class="imgtext">Vue.js</a>）</center>
 　　
 <br>定義 component 的方法如下：
 ```javascript

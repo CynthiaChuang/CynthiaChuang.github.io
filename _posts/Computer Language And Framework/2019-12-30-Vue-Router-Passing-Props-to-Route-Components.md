@@ -19,7 +19,7 @@ tags:
 嚴格來說，是因為我同時實作<span class='label'>巢狀路由</span>與<span class='label'><a href="https://router.vuejs.org/zh/guide/essentials/passing-props.htmlg">路由組件傳參</a></span>兩件事情，才使得事情變得有些複雜。
 
 ![巢狀路由（嵌套路由）示意圖](https://i.imgur.com/MUt7P2C.png)
-<center style="color:Gainsboro;"> 巢狀路由示意圖 （圖片來源: <a href="https://router.vuejs.org/zh/guide/essentials/nested-routes.html" style="color:Gainsboro;">Vue Router 官網</a>）</center>
+<center class="imgtext"> 巢狀路由示意圖 （圖片來源: <a href="https://router.vuejs.org/zh/guide/essentials/nested-routes.html" class="imgtext">Vue Router 官網</a>）</center>
 <br>
 
 我的情境有點像上圖，一個頁面中存在兩個元件，分別是外層的的 menu，與主體內容的 content 元件。

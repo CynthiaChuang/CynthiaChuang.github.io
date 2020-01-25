@@ -26,7 +26,7 @@ API 是一個讓開發者能夠存取 Library 裡面的 functions/methods 的介
 -   API 就是皮卡丘，提供鋼鐵尾巴跟雷電兩種技能給你呼叫。你不用研究皮卡為什麼皮卡丘會發電，也不用研究尾巴為什麼會變鋼鐵，反正你只要說，**"上吧皮卡丘，使用雷電"**。 皮卡丘是 API 提供界面給你呼叫技能的函式庫。 
 
     ![上吧皮卡丘](https://imgur.com/8Hn06ql.jpg)
-    <center style="color:Gainsboro;"> 上吧皮卡丘，使用雷電（圖片來源: <a href="https://agirls.aotter.net/post/52299" style="color:Gainsboro;">電獺少女</a>）</center> 
+    <center class="imgtext"> 上吧皮卡丘，使用雷電（圖片來源: <a href="https://agirls.aotter.net/post/52299" class="imgtext">電獺少女</a>）</center> 
 
 <br><br>
 ## SDK (Software Development Kit，軟體開發工具包)

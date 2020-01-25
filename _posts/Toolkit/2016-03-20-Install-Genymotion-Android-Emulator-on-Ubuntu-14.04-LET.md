@@ -15,8 +15,8 @@ tags:
 <!--more-->
 <br> 
 
-<center style="color:Gainsboro;"> <img src="https://sinproject.net/wp-content/uploads/2016/01/genymotion_eyecatch.png"  /></center>
-<center style="color:Gainsboro;">   genymotion_eyecatch （圖片來源: <a href="https://sinproject.net/windows%E3%81%A7android%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E7%99%BA%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%E4%BA%BA%E3%81%8Cmacbook-pro%E3%81%AB%E5%85%A5%E3%82%8C%E3%81%9F%E3%82%BD%E3%83%95/genymotion_eyecatch/" style="color:Gainsboro;">sinProject</a>）</center>
+<center class="imgtext"> <img src="https://sinproject.net/wp-content/uploads/2016/01/genymotion_eyecatch.png"  /></center>
+<center class="imgtext">   genymotion_eyecatch （圖片來源: <a href="https://sinproject.net/windows%E3%81%A7android%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E7%99%BA%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%E4%BA%BA%E3%81%8Cmacbook-pro%E3%81%AB%E5%85%A5%E3%82%8C%E3%81%9F%E3%82%BD%E3%83%95/genymotion_eyecatch/" class="imgtext">sinProject</a>）</center>
 
 <br>
 

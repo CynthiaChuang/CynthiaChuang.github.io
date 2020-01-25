@@ -279,7 +279,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 ## 製作巢狀路由頁面
 
 ![巢狀路由（嵌套路由）示意圖](https://i.imgur.com/MUt7P2C.png)
-<center style="color:Gainsboro;"> 巢狀路由（嵌套路由）示意圖 （圖片來源: <a href="https://router.vuejs.org/zh/guide/essentials/nested-routes.html" style="color:Gainsboro;">Vue Router 官網</a>）</center>
+<center class="imgtext"> 巢狀路由（嵌套路由）示意圖 （圖片來源: <a href="https://router.vuejs.org/zh/guide/essentials/nested-routes.html" class="imgtext">Vue Router 官網</a>）</center>
 <br>
 
 巢狀路由比較適合用在，只變換主體內容的元件其餘元件（如上方 Navbar）不變的情況。這樣可以專心撰寫主體內容的元件，並大幅減少重複其餘元件的重複撰寫。
@@ -364,7 +364,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 <br>
 
 ![博客來商品頁 ](https://i.imgur.com/9JZRISV.png)
-<center style="color:Gainsboro;"> 博客來商品頁 （圖片來源:  <a href="https://www.books.com.tw" style="color:Gainsboro;">博客來</a>）</center>
+<center class="imgtext"> 博客來商品頁 （圖片來源:  <a href="https://www.books.com.tw" class="imgtext">博客來</a>）</center>
 <br>
 
 
@@ -427,7 +427,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 ## 命名路由，同一個路徑載入兩個頁面元件
 
 ![website structure](https://i.imgur.com/deMmnkG.png)
-<center style="color:Gainsboro;"> website structure （圖片來源:  <a href="https://commons.wikimedia.org/wiki/File:Plan_html_5.png" style="color:Gainsboro;">wikimedia</a>）</center>
+<center class="imgtext"> website structure （圖片來源:  <a href="https://commons.wikimedia.org/wiki/File:Plan_html_5.png" class="imgtext">wikimedia</a>）</center>
 <br>
 
 如果時候想同時（同級）展示多個元件，例如建置一個 layout 時，會存在 sidebar 、 header 、 footer ...等元件，這時可以使用命名路由來載入，即在 layout 中添加命名 router-view。

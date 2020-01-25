@@ -15,7 +15,7 @@ tags:
 <br>
 
 ![Imgur](https://i.imgur.com/81zMIRH.png) 
-<center style="color:Gainsboro;"> event flow（圖片來源: <a href="https://www.w3.org/TR/DOM-Level-3-Events/" style="color:Gainsboro;">w3c</a>）</center>
+<center class="imgtext"> event flow（圖片來源: <a href="https://www.w3.org/TR/DOM-Level-3-Events/" class="imgtext">w3c</a>）</center>
 
 <br>
 

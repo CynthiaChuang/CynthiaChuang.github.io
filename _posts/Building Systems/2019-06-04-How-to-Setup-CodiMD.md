@@ -16,7 +16,7 @@ tags:
 <br>
 
 ![HackMD](https://i.imgur.com/lobcWpo.png)
-<center style="color:Gainsboro;">   HackMD 官網截圖 （圖片來源: <a href="https://hackmd.io/" style="color:Gainsboro;"> HackMD 官網</a>）</center>
+<center class="imgtext">   HackMD 官網截圖 （圖片來源: <a href="https://hackmd.io/" class="imgtext"> HackMD 官網</a>）</center>
 
 <br>之前提過 [HackMD](https://hackmd.io/) 是我用過最順手 Markdown 的文字編輯器。而 [CodiMD](https://demo.codimd.org) 其實就是 Open Source 的 HackMD Community Edition。
 

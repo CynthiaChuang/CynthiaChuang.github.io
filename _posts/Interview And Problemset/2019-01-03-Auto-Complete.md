@@ -14,7 +14,7 @@ tags:
 面試時間一個小時，基本上就是**就一個人寫code，另外一個人一直看著寫code..XD**。想當然爾，面試結果想當然是被考官狠狠洗臉了QAQ
 
 ![就一個人寫code，另外一個人一直看著寫code](https://i.imgur.com/vM4ReDR.jpg)
-<center style="color:Gainsboro;">  （圖片來源:   <a href="https://office12.gr/events/practice-a-new-programming-language-hscc/"  style="color:Gainsboro;">Heraklion Innovation Map</a>）</center>
+<center class="imgtext">  （圖片來源:   <a href="https://office12.gr/events/practice-a-new-programming-language-hscc/"  class="imgtext">Heraklion Innovation Map</a>）</center>
  
 <br> 
 大概會好一陣忘不了這次面是的考題— ``AutoComplete`` 吧

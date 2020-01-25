@@ -21,7 +21,7 @@ tags:
 ## Vue 生命週期
 
 ![Imgur](https://i.imgur.com/vDihCVx.png)
-<center style="color:Gainsboro;"> Lifecycle-Diagram（圖片來源: <a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram" style="color:Gainsboro;">Vue.js</a>）</center>
+<center class="imgtext"> Lifecycle-Diagram（圖片來源: <a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram" class="imgtext">Vue.js</a>）</center>
 
 <br>
 

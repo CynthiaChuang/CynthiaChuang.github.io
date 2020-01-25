@@ -86,7 +86,7 @@ $$
 ## Precision
 先來張經典圖，方便大家想像：
 <center> <img src="https://i.imgur.com/1MKvczU.png" alt="Precision and recall"></center>
-<center style="color:Gainsboro;">Precision and recall（圖片來源: <a href="https://en.wikipedia.org/wiki/Precision_and_recall" style="color:Gainsboro;">維基百科</a>）</center>
+<center class="imgtext">Precision and recall（圖片來源: <a href="https://en.wikipedia.org/wiki/Precision_and_recall" class="imgtext">維基百科</a>）</center>
 <br>
 
 在 Accuracy 不具參考價值的狀況下，就會採用 Precision 和 Recall 兩個指標，這兩個指標都是專注被預測為 Positive 的資料，但卻又各有所好。
@@ -179,7 +179,7 @@ $$
 <br> 因此在空間中若存在一點離<span class='label'>左上角越近</span>的點預測準確率越高。反之，離右下角越近的點，預測越不準。
 
 <center> <img src="https://i.imgur.com/G5CdWgG.png" alt="ROC Space"></center>
-<center style="color:Gainsboro;">ROC空間的4個例子（圖片來源: <a href="https://zh.m.wikipedia.org/zh-tw/ROC%E6%9B%B2%E7%BA%BF" style="color:Gainsboro;">維基百科</a>）</center>
+<center class="imgtext">ROC空間的4個例子（圖片來源: <a href="https://zh.m.wikipedia.org/zh-tw/ROC%E6%9B%B2%E7%BA%BF" class="imgtext">維基百科</a>）</center>
 <br>
 
 以這張圖為例，用 A、B 與 C 三不同的模型進行預測，並將結果繪製在 ROC 上，衣此圖判斷最好的結果是 A 模型，反之，最糟糕的預測是 C 模型甚至劣於隨機分類。

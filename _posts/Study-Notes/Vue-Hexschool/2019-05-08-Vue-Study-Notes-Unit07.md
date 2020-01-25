@@ -132,7 +132,7 @@ let groupB = [...groupA]
 <br>
 
 ![Shallow and Deep Copying](https://i.imgur.com/wIERqmP.png)
-<center style="color:Gainsboro;"> Shallow and Deep Copying （圖片來源: <a href="https://www.cs.utexas.edu/~scottm/cs307/handouts/deepCopying.htm" style="color:Gainsboro;">utexas</a>）</center>
+<center class="imgtext"> Shallow and Deep Copying （圖片來源: <a href="https://www.cs.utexas.edu/~scottm/cs307/handouts/deepCopying.htm" class="imgtext">utexas</a>）</center>
 <br>
 	 
 ### **類陣列觀念說明**

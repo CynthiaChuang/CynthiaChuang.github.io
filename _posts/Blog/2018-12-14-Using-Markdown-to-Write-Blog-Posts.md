@@ -51,7 +51,7 @@ tags:
 <br><br>
 ## 用 Stackedit 發佈至 Blogger 
 ![Stackedit](https://stackedit.io/res-min/img/logo.svg)
-<center style="color:Gainsboro;">   Stackedit Icon （圖片來源: <a href="https://stackedit.io/" style="color:Gainsboro;">Stackedit官網</a>）</center>
+<center class="imgtext">   Stackedit Icon （圖片來源: <a href="https://stackedit.io/" class="imgtext">Stackedit官網</a>）</center>
 
 <br> 在 google 的時候，偶然發現有 [StackEdit](https://stackedit.io/)  工程師在 [Stack Exchange](https://webapps.stackexchange.com/questions/40737/markdown-for-blogger) 上~~自薦枕蓆~~。原本它是沒有特別吸引我，因為同為 Markdown 的文字編輯器，目前我 [HackMD](https://hackmd.io/) 使用得正順手，並沒有想換掉它的想法，而且 HackMD 還是繁中界面的哩！ <br><br>
 
