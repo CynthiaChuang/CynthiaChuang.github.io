@@ -47,7 +47,7 @@ $ ssh-keygen
 ```
 第一個問題是問你金鑰儲存的位置與檔名，預設檔名是 id_rsa ，不過這實在看不出這把金鑰的用途，所以習慣上我會更改檔名。
 
-第二跟三個問題則是指定金鑰保護密碼，若有設定密碼的話，之後使用這把金鑰時就要輸入密碼。如果有設密碼，<span class='label warning'>請務必記好密碼</span>，我有一次設完密碼後，數個月沒登入就忘記密碼了，只好在重新 Sign 一次 Key 惹
+第二跟三個問題則是指定金鑰保護密碼，若有設定密碼的話，之後使用這把金鑰時就要輸入密碼。如果有設密碼，<span class='label'>請務必記好密碼</span>，我有一次設完密碼後，數個月沒登入就忘記密碼了，只好在重新 Sign 一次 Key 惹
 (っ╥╯﹏╰╥c)
 
 <br> 最後看到 fingerprint 與 randomart ，就代表產生成功了
@@ -71,8 +71,8 @@ The key's randomart image is:
 ###  2. 將公開金鑰上傳
 
 產生的金鑰有兩把一把是公開金鑰（Public Key）、一把是私密金鑰（Private Key）。
-1. **公開金鑰（Public Key）**：這把是對外公開的金鑰，之後把它<span class='label warning'>上傳到伺服器上使用</span>。
-2. **私密金鑰（Private Key）**：這把則是<span class='label warning'>放在自己電腦</span>的金鑰，它等同於你的密碼，請務必保護好。
+1. **公開金鑰（Public Key）**：這把是對外公開的金鑰，之後把它<span class='label'>上傳到伺服器上使用</span>。
+2. **私密金鑰（Private Key）**：這把則是<span class='label'>放在自己電腦</span>的金鑰，它等同於你的密碼，請務必保護好。
  
 <br>上傳金鑰的方法有幾種，個人偏好第一種與第二種，因為一條指令就搞定了：
 

@@ -50,7 +50,7 @@ $ /opt/android-studio/bin/studio.sh
 
 <br><br>
 ## 再次重灌時...
-我這次重新安裝不幸遇到了點小問題，稍微紀錄一下，這次再安裝的時候跳出了 <span class="label warning">Unable to install Android Studio</span> 的錯誤訊息，有點晴天霹靂阿，不幸得重灌就算了，竟然還出狀況！！！！
+我這次重新安裝不幸遇到了點小問題，稍微紀錄一下，這次再安裝的時候跳出了 <span class="label">Unable to install Android Studio</span> 的錯誤訊息，有點晴天霹靂阿，不幸得重灌就算了，竟然還出狀況！！！！
 
 查了一下與作業系統位元數有關，上次安裝的是 Ubuntu 32 位元的，這次則是 64 位元的，所以上次的 Android Studio 安裝步驟，有點水土不服XDDDD
 

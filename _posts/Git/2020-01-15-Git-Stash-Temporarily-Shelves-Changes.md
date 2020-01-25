@@ -35,7 +35,7 @@ $ git reset HEAD^
 
 <br><br>
 ## 2. git stash
-除了 commit 之後再拆這個方法外，也可以使用 git 的指令，將檔案放到<span class='label warning'>暫存區</span>裡面：
+除了 commit 之後再拆這個方法外，也可以使用 git 的指令，將檔案放到<span class='label'>暫存區</span>裡面：
 
 <br>
 
@@ -49,7 +49,7 @@ Saved working directory and index state WIP on master: 3a9842d
  
 <br>
 
-若是你的此次修改有新增加檔案，或是存在 <span class='label warning'>untracked</span> 狀態的檔案，則應該在指令後 `-u` 指定包含untracked 狀態的檔案：
+若是你的此次修改有新增加檔案，或是存在 <span class='label'>untracked</span> 狀態的檔案，則應該在指令後 `-u` 指定包含untracked 狀態的檔案：
 
 ```shell
 $ git stash -u 

@@ -38,7 +38,7 @@ tags:
   ![trip](https://cdn-images-1.medium.com/max/1600/1*jL2Rc-EpEmNZII552xX7Ig.jpeg)
  
 <br>在寫程式碼之前，面試官要求先用文字寫下演算法後再進行實作。
-聽到這個題目，第一反應是使用 [<span class="label warning">字典樹(Trie)</span>](https://zh.wikipedia.org/wiki/Trie) 實做，先用目前使用者的輸入做為 prefix，進行搜尋找出所有以該詞為字首的單詞，再將取出的結果進行排序。
+聽到這個題目，第一反應是使用 [<span class="label">字典樹(Trie)</span>](https://zh.wikipedia.org/wiki/Trie) 實做，先用目前使用者的輸入做為 prefix，進行搜尋找出所有以該詞為字首的單詞，再將取出的結果進行排序。
 
 <br>實作分幾個階段
 1. 將字典中的單字建成字典樹

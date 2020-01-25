@@ -50,7 +50,7 @@ $ cd codimd-container
 $ docker-compose up
 ```
 
-文件上寫的安裝指令相當簡單只有 3 條指令，執行完後，畫面上會出現 <span class="label warning">HTTP Server listening at port 3000</span>，此時就算啟動完成了。
+文件上寫的安裝指令相當簡單只有 3 條指令，執行完後，畫面上會出現 <span class="label">HTTP Server listening at port 3000</span>，此時就算啟動完成了。
  
 但是事情通常都是沒有這麼簡單的，我有那一次安裝環境照著指令輸完就過的？每次都會踩到一堆坑 QAQ
  

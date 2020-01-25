@@ -6,7 +6,7 @@ categories:
 tags:
 - git-commit
 --- 
-前一陣子，用公司電腦寫自己的code，結果…啊啊啊啊，<span class="label warning">git 的作者資訊</span>顯示的是公司帳號阿 QAQ
+前一陣子，用公司電腦寫自己的code，結果…啊啊啊啊，<span class="label">git 的作者資訊</span>顯示的是公司帳號阿 QAQ
 
 原本想說回家後，用 `git cherry-pick` 一個 commit 一個 commit 搬移後，再重新 commit。結果發現...靠！有將近 20 個 commit ，這樣搬會瘋掉的。
 
@@ -37,7 +37,7 @@ tags:
 	pick <d 的 commitId> <d 的 commit 內容>
 	pick <e 的 commitId> <e 的 commit 內容>
 	```
-	  將要更改的 commit 的 command 由 pick 改成 **<span class="label warning">e 或 edit</span>** 後，儲存離開進入 rebase 流程。
+	  將要更改的 commit 的 command 由 pick 改成 **<span class="label">e 或 edit</span>** 後，儲存離開進入 rebase 流程。
       
 
 3. 此時它會提醒你目前停在 c 的 commit，顯示如下：
@@ -62,12 +62,12 @@ tags:
     $ git rebase --continue
     ```
 
-6. 接下來會進入下一個被修改 commit ，也就是 d，重覆進行**<span class="label warning">步驟 3、4、5</span>** ，直到所有 commit 被修改完成。
+6. 接下來會進入下一個被修改 commit ，也就是 d，重覆進行**<span class="label">步驟 3、4、5</span>** ，直到所有 commit 被修改完成。
 
 
 <br><br>
 ## 修改專案的作者資訊
-不過每次這樣改有點麻煩，畢竟我剛剛是重覆執行了<span class="label warning">二十次</span>阿！
+不過每次這樣改有點麻煩，畢竟我剛剛是重覆執行了<span class="label">二十次</span>阿！
 
 與其事後修補，倒不如防範未然。所以我想直接修改專案的作者資訊，由於指令不帶 `--global` 參數，因此它的作用域只有在這個專案，不會影響整個 git 環境：
 ```shell
