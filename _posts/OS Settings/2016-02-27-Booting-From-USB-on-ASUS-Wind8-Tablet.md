@@ -5,7 +5,6 @@ categories:
 - OS-Settings
 tags:
 - Windows/DOS
-- Win8
 --- 
 
 之前我將 Ubuntu 灌到我的 Toshiba 的行動硬碟中，在用桌電進行開機時還沒有問題，但筆電的 BIOS 完全進不去阿~!! F2 都快按壞了，超崩 ( 皿 ) 潰。
