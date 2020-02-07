@@ -2,8 +2,8 @@
 title: 【機器學習基石筆記】目錄
 date: 2020-01-16
 categories:
-- AI/ML
 - Study-Notes
+- AI/ML
 tags:
 - Coursera
 - 機器學習基石
