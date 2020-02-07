@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- String
-- Math
 --- 
 
 Given two non-negative integers `num1` and `num2` represented as strings, return the product of `num1` and `num2`, also represented as a string.
@@ -34,7 +32,12 @@ Output: "56088"
 > 3 .  Both  `num1`  and  `num2` do not contain any leading zero, except the number 0 itself.  <br>
 > 4 .  You  **must not use any built-in BigInteger library**  or  **convert the inputs to integer**  directly.  <br>
 
+<br>
+
+**Related Topics:**`String`、`Math`
+
 <br><br>
+
 ## 解題邏輯與實作
 這題最直接的解法是用直式乘法的方法做，嘿，就是下面的的那個東西，小學算的要死要活的那的！
 
@@ -118,6 +121,7 @@ class Solution:
 
 
 <br>
+
 ### 作弊...
 上面那邊用自己做的乘法器，執行完的效果感覺不是很好，跑出了大約 536 ms、6.77% 的成績。想說要來就一下 40 ms 的寫法，看完之後我輸的不冤阿...
 

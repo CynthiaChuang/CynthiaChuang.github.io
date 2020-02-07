@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Math
-- String
 --- 
 
 Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
@@ -69,7 +67,13 @@ Input: 1994
 Output: "MCMXCIV"
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 ```
+
+<br>
+
+**Related Topics:**`Math`、`String`
+
 <br><br>
+
 ## 解題邏輯與實作
 厄.. 解法有點偷懶，我直接 hard code 一張對照表，把所有可能的組合列出，在依序找出數字中包含的最大的可轉化為羅馬數字的數字。例如1994，最大可轉換數字是 1000 ，減去 1000 後接下來依序可轉換數字為900 、90、4，因此最後輸出 MCMXCIV。
 

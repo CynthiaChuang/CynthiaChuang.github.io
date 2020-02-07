@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Math
-- String
 --- 
 
 Validate if a given string can be interpreted as a decimal number.
@@ -41,7 +39,12 @@ Some examples:
 > 
 > Of course, the context of these characters also matters in the input.
 
+<br>
+
+**Related Topics:**`Math`、`String`
+
 <br><br>
+
 ## 解題邏輯與實作
 這題是要判斷給定的字串是否為一個合法的十進位數字，合法的數字中包含正負號、小數、科學記號 e，另外科學表示的部份 e 與後面的數字間可夾正號，最後是字串前後的的空白不影響判定。
 

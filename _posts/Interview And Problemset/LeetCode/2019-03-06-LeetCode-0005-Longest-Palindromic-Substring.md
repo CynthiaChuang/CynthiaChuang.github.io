@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Dynamic Programming
-- String
 --- 
 
 Given a string **s**, find the longest palindromic substring in **s**. You may assume that the maximum length of **s** is 1000.
@@ -26,6 +24,10 @@ Note: "aba" is also a valid answer.
 Input: "cbbd"
 Output: "bb"
 ```
+
+<br>
+
+**Related Topics:**`Dynamic Programming`、`String`
 
 <br><br>
 

@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Array
 --- 
 
 Given a  **non-empty**  array of digits representing a non-negative integer, plus one to the integer.
@@ -31,7 +30,13 @@ Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 ```
+
+<br>
+
+**Related Topics:**`Array`
+
 <br><br>
+
 ## 解題邏輯與實作
 這題也是逐位相加的的題目，不同的是這題加數固定是 1，所以要考慮的情況會簡單很多。關於這題我想到兩種做法，在 LeetCode 上跑起來效能差不多。
 

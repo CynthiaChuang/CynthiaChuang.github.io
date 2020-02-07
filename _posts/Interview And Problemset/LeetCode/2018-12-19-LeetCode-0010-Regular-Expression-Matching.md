@@ -6,9 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Backtracking
-- Dynamic Programming
-- String
 --- 
 
 Given an input string (`s`) and a pattern (`p`), implement regular expression matching with support for  `'.'`  and  `'*'`.
@@ -66,8 +63,12 @@ s = "mississippi"
 p = "mis*is*p*."
 Output: false
 ```
+<br>
+
+**Related Topics:**`Backtracking`、`Dynamic Programming`、`String`
 
 <br><br>
+
 ## 解題邏輯與實作
 這題是要實作一個簡易的 Regular Expression 的 Parser，僅支援 a-z、`.` 和 `*`，題目也限定了輸入會是這幾個字元，所以可以先不用考慮其他字元的情況。
 

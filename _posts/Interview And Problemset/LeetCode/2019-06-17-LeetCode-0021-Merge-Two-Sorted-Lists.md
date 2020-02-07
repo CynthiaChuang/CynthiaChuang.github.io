@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Linked List
 --- 
 
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
@@ -20,7 +19,12 @@ Input: 1->2->4, 1->3->4
 Output: 1->1->2->3->4->4
 ```
 
+<br>
+
+**Related Topics:**`Linked List`
+
 <br><br>
+
 ## 解題邏輯與實作
 因為題目給的是兩個有序的鏈結陣列，所以這題只須兩個指針分別指向給定的陣列，將節點值較小的添加到新的鏈結陣列，添加完後將指標移往下一個節點，直到兩鏈結陣列的節點都被添加到新的鏈結陣列為止。
 

@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- String
 --- 
 
 Write a function to find the longest common prefix string amongst an array of strings.
@@ -33,6 +32,9 @@ Explanation: There is no common prefix among the input strings.
 > **Note:**
 All given inputs are in lowercase letters  `a-z`.
 
+<br>
+
+**Related Topics:**`String`
 
 <br><br>
 

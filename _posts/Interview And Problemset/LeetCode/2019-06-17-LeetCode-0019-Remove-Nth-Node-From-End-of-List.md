@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Linked List
-- Two Pointers
 --- 
 
 Given a linked list, remove the _n_-th node from the end of list and return its head.
@@ -28,6 +26,10 @@ After removing the second node from the end, the linked list becomes 1->2->3->5.
 <br>
 >**Follow up:**
 >Could you do this in one pass?
+
+<br>
+
+**Related Topics:**`Linked List`、`Two Pointers`
 
 <br><br>
 

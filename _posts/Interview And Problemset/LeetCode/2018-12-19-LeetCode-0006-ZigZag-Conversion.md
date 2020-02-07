@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- String
 --- 
 
 The string  `"PAYPALISHIRING"`  is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
@@ -41,6 +40,10 @@ A   L S  I G
 Y A   H R
 P     I
 ```
+<br>
+
+**Related Topics:** `String`
+
 <br><br>
 
 ## 解題邏輯與實作

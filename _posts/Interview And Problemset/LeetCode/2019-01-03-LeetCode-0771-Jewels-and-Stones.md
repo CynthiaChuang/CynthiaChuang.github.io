@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Hash Table
 --- 
 
 You're given strings  J  representing the types of stones that are jewels, and  S  representing the stones you have. Each character in  S  is a type of stone you have. You want to know how many of the stones you have are also jewels.
@@ -34,7 +33,12 @@ Output: 0
 >-   `S`  and  `J`  will consist of letters and have length at most 50.
 > -   The characters in  `J`  are distinct.
 
+<br>
+
+**Related Topics:**`Hash Table`
+
 <br><br>
+
 ## 解題邏輯與實作
 還滿簡單的一題，連想都不太需要想。題目翻譯成白話文是這樣的，給定兩個字串 J 與 S，檢查字串 S 中有多少字元屬於字串 J。不用管它寶石還石頭啦XD
 

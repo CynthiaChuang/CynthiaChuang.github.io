@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Math
 --- 
 
 Given a 32-bit signed integer, reverse digits of an integer.
@@ -32,6 +31,10 @@ Output: 21
 <br><br>
 
 > Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [$−2^{31}$, $2^{31} − 1$]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
+
+<br>
+
+**Related Topics:**`Math`
 
 <br><br>
 

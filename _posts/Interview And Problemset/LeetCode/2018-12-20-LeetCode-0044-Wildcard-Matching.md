@@ -6,10 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- String
-- Backtracking
-- Dynamic Programming
-- Greedy
 --- 
 
 Given an input string (`s`) and a pattern (`p`), implement wildcard pattern matching with support for  `'?'`  and  `'*'`.
@@ -59,7 +55,12 @@ Input: s = "acdcb" p = "a*c?b"
 Output: False
 ```
 
+<br>
+
+**Related Topics:**`String`、`Backtracking`、`Dynamic Programming`、`Greedy`
+
 <br><br>
+
 ## 解題邏輯與實作
 有點像是第十題的 [Regular Expression Matching](/LeetCode-0010-Regular-Expression-Matching/)，不過符號的意義不太一樣，這邊使用的 `?` 表示一個萬用字元， `*` 則是表示多個萬用字元。
 

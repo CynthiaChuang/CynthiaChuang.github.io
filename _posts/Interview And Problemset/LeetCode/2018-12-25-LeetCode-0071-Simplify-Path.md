@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- String
-- Stack
 --- 
 
 Given an absolute path for a file (Unix-style), simplify it.
@@ -28,8 +26,13 @@ Additionally, a double period ("..") moves up a directory, so it cancels out wha
     In this case, you should return  `"/"`.
 -   Another corner case is the path might contain multiple slashes  `'/'`  together, such as  `"/home//foo/"`.  
     In this case, you should ignore redundant slashes and return  `"/home/foo"`.
- 
+  
+<br>
+
+**Related Topics:**`String`、`Stack`
+
 <br><br>
+
 ## 解題邏輯與實作
 這題是要將給定的路徑進行簡化，路徑中可能會出現的元素有三種分別是 `.` 、 `..` 及 folder 或 file（先假裝他們是吧，不然我也不知道怎麼稱呼他們XD）
 

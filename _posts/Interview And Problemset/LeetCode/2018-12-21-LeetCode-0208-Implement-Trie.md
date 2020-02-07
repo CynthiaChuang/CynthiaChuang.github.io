@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Trie
 --- 
 
 Implement a trie with  ``insert``,  ``search``, and  ``startsWith``  methods.
@@ -30,8 +29,12 @@ trie.search("app");     // returns true
 > -   You may assume that all inputs are consist of lowercase letters  `a-z`.
 > -   All inputs are guaranteed to be non-empty strings.
 
+<br>
+
+**Related Topics:**`Trie`
 
 <br><br>
+
 ## 解題邏輯與實作
 相見恨晚的一題阿，我面試時就是考這題的概念，可惜太久沒寫 Tree ，也沒用 Python 寫過 Tree，面試實作時超級卡的Orz
 

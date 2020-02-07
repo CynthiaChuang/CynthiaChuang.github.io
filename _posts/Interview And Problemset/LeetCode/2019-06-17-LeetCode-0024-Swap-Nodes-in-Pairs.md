@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Linked List
 --- 
 
 Given a linked list, swap every two adjacent nodes and return its head.
@@ -21,13 +20,18 @@ Given `1->2->3->4`, you should return the list as `2->1->4->3`.
 > **Note:**
 > -   Your algorithm should use only constant extra space.
 > -   You may  **not**  modify the values in the list's nodes, only nodes itself may be changed.
->  
+
+<br>
+
+**Related Topics:**`Linked List`
 
 <br><br>
+
 ## 解題邏輯與實作
 這題是要以兩個節點為一組翻轉鏈結陣列，難度不高，但很容易把自己搞暈頭轉向，建議先畫圖輔助會比較清楚。
 
 <br>
+
 ## 迭代
 這個的想法比較簡單，就是兩兩指標交換，不過在交換時需要注意下交換的順序，不然很容易把指標搞丟了。
 

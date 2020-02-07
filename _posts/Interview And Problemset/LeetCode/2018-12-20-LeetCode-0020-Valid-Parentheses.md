@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- String
-- Stack
 --- 
 
 Given a string containing just the characters  `'('`,  `')'`,  `'{'`,  `'}'`,  `'['`  and  `']'`, determine if the input string is valid.
@@ -50,7 +48,9 @@ Output: False
 Input: "{[]}"
 Output: True
 ```
+<br>
 
+**Related Topics:**`String`、`Stack`
 
 <br><br>
 

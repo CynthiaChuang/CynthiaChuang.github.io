@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Array
-- Two Pointers
 --- 
 
 Given  _n_  non-negative integers  $a_1, a_2, ...,  a_n$ , where each represents a point at coordinate $(i,  a_i)$.  _n_  vertical lines are drawn such that the two endpoints of line  _i_  is at $(i,  a_i)$ and $(i,  0)$. Find two lines, which together with x-axis forms a container, such that the container contains the most water.
@@ -25,7 +23,12 @@ Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
 ```
 
+<br>
+
+**Related Topics:**`Array`、`Two Pointers`
+
 <br><br>
+
 ## 解題邏輯與實作
 給定一組長短不一的隔板，並指定其放置位置，從中挑其中的兩塊板，使得板子之間能裝最多的水。
 <br>

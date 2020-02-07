@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Dynamic Programming
 --- 
 
 Given a  **non-empty**  string  _s_  and a dictionary  _wordDict_  containing a list of  **non-empty**words, determine if  _s_  can be segmented into a space-separated sequence of one or more dictionary words.
@@ -39,7 +38,12 @@ Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: False
 ```
 
+<br>
+
+**Related Topics:**`Dynamic Programming`
+
 <br><br>
+
 ## 解題邏輯與實作
 這題是要將題目給定的句子拆解成字典中的單字。第一個想到的就是我最愛的暴力法，拆、拆、拆就對了！
 
@@ -91,6 +95,7 @@ class Solution:
 但果不期然，效率有點差跑出了個 740 ms, 1.20%  的成績，摸摸鼻子改寫 DP 去。
 
 <br>
+
 ### Dynamic Programming
 這題大概是難得我這幾天整理的題目中，DP 解終於不是欠著的題目了XDDD
 

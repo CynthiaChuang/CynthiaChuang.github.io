@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Dynamic Programming
-- Backtracking
 --- 
 
 Given an array, rotate the array to the right by  _k_  steps, where _k_ is non-negative.
@@ -38,14 +36,19 @@ rotate 2 steps to the right: [3,99,-1,-100]
 > 1. Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 > 2. Could you do it in-place with O(1) extra space?
 
+<br>
+
+**Related Topics:**`Dynamic Programming`、`Backtracking`
 
 <br><br>
+
 ## 解題邏輯與實作
 這提示要求將 array 中的數字右旋 _k_ 位，簡單來說，就是將所以的數字向後移動 _k_ 位，而末尾 out of index 的部份則移到開頭。
 
 這題說麻煩的部份是它最後希望我們提出三種不同實做的方法，例外提供一種只需要 _O(1)_ 空間的解法，會花比較多時間。
 
 <br>
+
 ### 解法1 
 最先想的解法，就是使用 for 迴圈執行 _k_，每次迴圈執行時，記住最後一個數字後，將其他數字向後位移一位，再將所記住的數字放回開頭。
 

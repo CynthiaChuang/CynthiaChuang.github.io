@@ -6,14 +6,7 @@ categories:
 tags:
 - LeetCode
 - Python
-- Math
-- String
 --- 
-
-# 【LeetCode】0008. String to Integer (atoi)
-###### LeetCode-0008-String-to-Integer-atoi
-###### tags: `*Post*`, `Published`, | `Interview/Problemset`, | `LeetCode`, `Python`, `Math`, `String`
-<br>
 
 Implement  `atoi`  which converts a string to an integer.
 
@@ -70,7 +63,12 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
              Thefore INT_MIN (−231) is returned
 ```
 
+<br>
+
+**Related Topics:**`Math`、`String`
+
 <br><br>
+
 ## 解題邏輯與實作
 這題是要將給定的字串轉成數字，字串轉數字不難，但討厭的是傳進來的字串有太多的整可能，例如：空格、正負號、非數字字元...等。
 <br>

@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Array
 --- 
 
 Implement  **next permutation**, which rearranges numbers into the lexicographically next greater permutation of numbers.
@@ -25,8 +24,12 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 1,1,5  →  1,5,1
 ```
 
+<br>
+
+**Related Topics:**`Array`
 
 <br><br>
+
 ## 解題邏輯與實作
 大概是寫到想睡覺，這題花了稍久的時間在理解題目，昨晚我家附近不曉得是不是有什麼事故，消防車、救護車來來回回的奔波；一早鄰居的狗又在狂吠，一整個沒睡好，現在超想睡的…Orz。
 

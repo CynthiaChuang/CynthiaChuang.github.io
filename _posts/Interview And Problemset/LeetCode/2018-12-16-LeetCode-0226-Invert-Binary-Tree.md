@@ -6,12 +6,11 @@ categories:
 tags:
 - LeetCode
 - Python
-- Tree
 --- 
 
 Invert a binary tree.
+
 <!--more-->
-<br>
 
 **Example:**
 ```python
@@ -40,6 +39,9 @@ This problem was inspired by  [this original tweet](https://twitter.com/mxcl/sta
 
 > Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.
 
+<br>
+
+**Related Topics:** `Hash Table`
 
 <br><br>
 

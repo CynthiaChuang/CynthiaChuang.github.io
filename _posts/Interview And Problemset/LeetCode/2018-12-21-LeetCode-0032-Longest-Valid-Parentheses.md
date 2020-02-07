@@ -6,9 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- String
-- Stack
-- Dynamic Programming
 --- 
 
 Given a string containing just the characters  `'('`  and  `')'`, find the length of the longest valid (well-formed) parentheses substring.
@@ -27,8 +24,12 @@ Input: "`)()())`"
 Output: 4
 Explanation: The longest valid parentheses substring is `"()()"`
 ```
+<br>
+
+**Related Topics:**`String`、`Stack`、`Dynamic Programming`
 
 <br><br>
+
 ## 解題邏輯與實作
 這題算是  [Valid Parentheses](/LeetCode-0020-Valid-Parentheses/) 的進階版，不過還是可以用 Stack 來解決。
 

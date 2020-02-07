@@ -6,7 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Math
 --- 
 
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
@@ -39,14 +38,16 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 >**Follow up:**
 Coud you solve it without converting the integer to a string?
 
+<br>
+
+**Related Topics:**`Math`
 
 <br><br>
+
 ## 解題邏輯與實作
 既然是判斷回文，那麼直覺作法就是比頭尾是否相同，如果轉字串實做會變得很簡單，所以我就直接做 Follow up 要求了。
 
-
-
-取尾數比較常見使用 mod (%) 即可。但取最高數的頭則比較麻煩，以 20001 為例，想取出最高位數，則必須計算 20001 // 10000 ，而除數 10000，其實可以換成這樣表示 $10^{len(被除數)-1}$ 。但另一個問題是，被除數是 int 沒有 len 這個函數，因此實際計算時改用迴圈計算被除數除以 10 直到小於 10 的次數，即為 len(被除數)-1 的值。
+<br> 取尾數比較常見使用 mod (%) 即可。但取最高數的頭則比較麻煩，以 20001 為例，想取出最高位數，則必須計算 20001 // 10000 ，而除數 10000，其實可以換成這樣表示 $10^{len(被除數)-1}$ 。但另一個問題是，被除數是 int 沒有 len 這個函數，因此實際計算時改用迴圈計算被除數除以 10 直到小於 10 的次數，即為 len(被除數)-1 的值。
 
 最後比較結束後，會將比較數字（e.g. 20001）去頭尾，並將除數（10000）除以 100 ，因為這個除數是對應比較數字長度，我將比較數字去頭尾，因此除數也必須少兩位。
 
@@ -98,9 +99,6 @@ class Solution:
     return res
 ```
 <br> 果然效能好很很多，從 **88 ms/60.57 %** 提升到 **56 ms/ 99.10%** 。
-
-
-
 
 <br><br>
 

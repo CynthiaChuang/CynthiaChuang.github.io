@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Dynamic Programming
-- Backtracking
 --- 
 
 Given a  **non-empty**  string  _s_  and a dictionary  _wordDict_  containing a list of  **non-empty** words, add spaces in  _s_  to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
@@ -49,7 +47,12 @@ wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: []
 ```
 
+<br>
+
+**Related Topics:**`Dynamic Programming`、`Backtracking`
+
 <br><br>
+
 ## 解題邏輯與實作
 第二個例子，腦中瞬間出現這個旋律（想被洗腦的[這邊走](https://www.youtube.com/watch?v=Ct6BUPvE2sM)），上一題還沒注意到的說XDDD
 
@@ -102,6 +105,7 @@ class Solution(object):
 ```
 
 <br>
+
 ### DAG
 話說在寫這題的時候，越寫越覺得超級像中文斷詞的，只是不需要做到最後一步，在中間就可以回傳中間產物了。以 [Jieba](https://github.com/fxsjy/jieba) 斷詞演算法（雖然我慣用的斷詞API不是 Jieba XDDD）來說，他在第一個步驟會建立 Trie 與 DAG 資料結構，快速算出所有合法的切分組合，就只需要做到這裡就好，第二部份的統計模型計算可以先忽略它。
 

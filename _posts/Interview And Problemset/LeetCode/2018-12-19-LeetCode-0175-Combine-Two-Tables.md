@@ -38,9 +38,10 @@ Table:  `Address`
 
 AddressId is the primary key column for this table.
 
-
 <br><br>
+
 ## 解題邏輯與實作
+
 原來 LeetCode 還有出資料庫的題目阿，不過題目看來不多，而且題目也不太難，所以手癢稍微試了一下。
 
 <br>

@@ -6,8 +6,6 @@ categories:
 tags:
 - LeetCode
 - Python
-- Hash Table
-- String
 --- 
 
 Given a string, find the length of the  **longest substring**  without repeating characters.
@@ -37,6 +35,9 @@ Input: "pwwkew"
 Output: 3 
 Explanation: The answer is `"wke"`, with the length of 3. 
 ```
+<br>
+
+**Related Topics:**`Hash Table`、`String`
 
 <br><br>
 
