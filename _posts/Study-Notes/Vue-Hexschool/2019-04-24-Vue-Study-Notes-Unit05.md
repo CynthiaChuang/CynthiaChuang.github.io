@@ -118,7 +118,7 @@ Uncaught TypeError: this.myMethod is not a function`
 <br><br>  
 
 ## 其他連結
-1. [【Vue.js 學習筆記】00. 目錄](/study-notes/computer-language/framework/2019/04/18/Vue-Study-Notes-Contents/)
+1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 
 <br><br>

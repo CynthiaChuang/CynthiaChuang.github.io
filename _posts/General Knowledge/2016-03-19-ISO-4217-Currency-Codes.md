@@ -24,7 +24,7 @@ tags:
 <br><br> 
 ## Yahoo API 所有幣別對應表
 
-在實作 [Yahoo API 取回所有國家貨幣資料](/computer-language/framework/2016/03/27/Getting-Currency-Exchange-Rates-Using-Yahoo-API/)時，會得到 173 筆資料，這裡稍微整理了一下這173個代碼和所對應的幣別名（如表1），不過只有英文版的，中文的實在有點想偷懶了XDDD
+在實作 [Yahoo API 取回所有國家貨幣資料](/Getting-Currency-Exchange-Rates-Using-Yahoo-API/)時，會得到 173 筆資料，這裡稍微整理了一下這173個代碼和所對應的幣別名（如表1），不過只有英文版的，中文的實在有點想偷懶了XDDD
 
 P.S. 說不想整理，結果最後還是把它弄出來了
 

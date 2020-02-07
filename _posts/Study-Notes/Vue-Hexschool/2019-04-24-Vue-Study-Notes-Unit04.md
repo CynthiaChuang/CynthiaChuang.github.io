@@ -82,7 +82,7 @@ tags:
     arrayClass = ['className1','className2']
     ```
 
-    備註：checkbox 與 array 資料的綁定方法，請看第二章節中 [Vue 表單與資料的綁定](/study-notes/computer-language/framework/2019/04/19/Vue-Study-Notes-Unit02#vue-表單與資料的綁定) 的部份。<br> <br> 
+    備註：checkbox 與 array 資料的綁定方法，請看第二章節中 [Vue 表單與資料的綁定](/Vue-Study-Notes-Unit02#vue-表單與資料的綁定) 的部份。<br> <br> 
 
 4. **綁定行內樣式**  
 	注意原先 CSS 是使用中線命名規則，要改成駝峰式，例如 background-color 改成 backgroundColor，在綁定時可以直接插入物件即可 
@@ -176,7 +176,7 @@ tags:
 
 
 7. **v-for 與 v-if**
-    我之前整理過了，請參考： [02. 基礎 Vue 概述 #v-for 動態產生多筆資料於畫面上](/study-notes/computer-language/framework/2019/04/19/Vue-Study-Notes-Unit02#v-for-動態產生多筆資料於畫面上)
+    我之前整理過了，請參考： [02. 基礎 Vue 概述 #v-for 動態產生多筆資料於畫面上](/Vue-Study-Notes-Unit02#v-for-動態產生多筆資料於畫面上)
  
  
 
@@ -281,7 +281,7 @@ tags:
 4. **@click.once**  
     只觸發一次回調，第二次就不再觸發。
 
-<br> PS. 稍微找了一下相關資料，弄懂事件傳遞傳遞過程：[【Vue.js】DOM 的事件傳遞機制： capture 與 propagation](/computer-language/framework/2019/04/24/DOM-Phases-of-Event-Capture-and-Propagation/)
+<br> PS. 稍微找了一下相關資料，弄懂事件傳遞傳遞過程：[【Vue.js】DOM 的事件傳遞機制： capture 與 propagation](/DOM-Phases-of-Event-Capture-and-Propagation/)
 
 <br>
 
@@ -319,7 +319,7 @@ tags:
 
 ## 其他連結
 
-1. [【Vue.js 學習筆記】00. 目錄](/study-notes/computer-language/framework/2019/04/18/Vue-Study-Notes-Contents/)
+1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 
 <br><br>

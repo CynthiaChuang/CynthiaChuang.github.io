@@ -8,7 +8,7 @@ tags:
 - docker-compose
 --- 
 
-這是 [安裝完 CodiMD](/building-systems/2019/06/04/How-to-Setup-CodiMD/) 後在執行定期備份時踩到的坑...在使用 [crontab + script 定期備份](/computer-language/framework/2019/06/14/Using-Crontab-and-Shell-Script-to-Regular-Backup-and-Keep-It-Last-30-Days/)時，我百思不得其解，為啥我跑出來的 <span class='label'>backup.sql</span> 會是空的？ 更讓我不解的是，我手動執行 script 的結果卻是正常的！？？？ 
+這是 [安裝完 CodiMD](/How-to-Setup-CodiMD/) 後在執行定期備份時踩到的坑...在使用 [crontab + script 定期備份](/Using-Crontab-and-Shell-Script-to-Regular-Backup-and-Keep-It-Last-30-Days/)時，我百思不得其解，為啥我跑出來的 <span class='label'>backup.sql</span> 會是空的？ 更讓我不解的是，我手動執行 script 的結果卻是正常的！？？？ 
 <!--more-->
 <br><br>
 

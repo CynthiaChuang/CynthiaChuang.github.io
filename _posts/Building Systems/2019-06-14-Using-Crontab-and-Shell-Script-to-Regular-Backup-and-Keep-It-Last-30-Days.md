@@ -10,7 +10,7 @@ tags:
 - Linux/Unix
 --- 
 
-這是 [CodiMD 安裝](/building-systems/2019/06/04/How-to-Setup-CodiMD/)的後續...，雖然跟 CodiMD 沒啥關係 XD 
+這是 [CodiMD 安裝](/How-to-Setup-CodiMD/)的後續...，雖然跟 CodiMD 沒啥關係 XD 
 這次的主要目的是為 CodiMD 做一個定期備份，另外為了儲存空間上的考量，備份檔案只保留 30 天，一旦超過就刪除資料。
 <!--more-->
 <br> <br> 
@@ -56,7 +56,7 @@ tags:
     cd ~/codimd-container
     /usr/local/bin/docker-compose exec -T database pg_dump hackmd -U hackmd  > ~/${foldername}/backup.sql
     ```
-    PS. 這邊需要特別注意一下在 crontab 中使用 docker-compose 的一些[坑](/building-systems/2019/06/14/Backup-CodiMD-When-Using-Docker-Compose/)...。 恩...，會這麼提醒當然是因為我踩過了 Orz ... 我老是到處踩坑...
+    PS. 這邊需要特別注意一下在 crontab 中使用 docker-compose 的一些[坑](/Backup-CodiMD-When-Using-Docker-Compose/)...。 恩...，會這麼提醒當然是因為我踩過了 Orz ... 我老是到處踩坑...
 
     <br>
 
@@ -167,7 +167,7 @@ expect eof"
 
 這指令與先前的差不多唯一需要注意的是在 <span class='label'>spawn</span> 中需要注意<span class='label'>字元的跳脫</span>，不然就會跟我一樣 de 了好久的 bug...
 
-<br> 後來雖然抓完蟲，不過還是一氣之下把 ServerB 的改成了[使用 SSH Key-based 的登入驗證方式](/4KPLfwR-QFav0n_3-Ix1Uw)，所以程式可以化簡成：
+<br> 後來雖然抓完蟲，不過還是一氣之下把 ServerB 的改成了[使用 SSH Key-based 的登入驗證方式](/Configuring-SSH-Key-Based-Authentication-on-a-Linux/)，所以程式可以化簡成：
 
 ```shell
 # upload

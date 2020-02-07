@@ -11,7 +11,7 @@ tags:
 
 本週主題：Types of Learning，介紹機器學習各種類型的問題，將問題依照不同的標準進行分類。
 <!--more-->
-<br>
+<br><br>
 
 ## Learning with Different Output Space
 第一種分類是依照輸出空間分類，這邊介紹了四種分類：
@@ -178,7 +178,7 @@ tags:
 <br><br>
 
 ## 其他連結
-1. [機器學習基石筆記目錄](/ai/ml/study-notes/2020/01/16/Machine-Learning-Foundations-Study-Notes-Contents/)
+1. [機器學習基石筆記目錄](/Machine-Learning-Foundations-Study-Notes-Contents/)
     
 <br><br>
 

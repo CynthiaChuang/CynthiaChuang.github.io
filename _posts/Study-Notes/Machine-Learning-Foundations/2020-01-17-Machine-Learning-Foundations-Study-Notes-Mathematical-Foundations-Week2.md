@@ -16,7 +16,7 @@ tags:
 
 ## 上週回顧
 
-[上週課程](/study-notes/ai/ml/2020/01/16/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1)提到，在機器學習中存在一個 Learning Algorithm $A$ 與一個假說集合 Hypothesis Set $H$，$A$ 在觀察餵入的的資料集合 $D$ 後，會從假說集合挑選一個最符合的 $g$ ，這個 $g$ 會在最後應用階段時，被使用來進行分類。
+[上週課程](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1)提到，在機器學習中存在一個 Learning Algorithm $A$ 與一個假說集合 Hypothesis Set $H$，$A$ 在觀察餵入的的資料集合 $D$ 後，會從假說集合挑選一個最符合的 $g$ ，這個 $g$ 會在最後應用階段時，被使用來進行分類。
 
 本週延續上週核發信用卡的例子，發不發卡是一個二元分類問題，使用者資料 $x$ 最終經由 $g$ 後，會得到 $y$，也就是 Yes（發卡）或 No（不發卡）結果。
 
@@ -411,7 +411,7 @@ $$
 
 ## 其他連結
 
-1. [機器學習基石筆記目錄](/ai/ml/study-notes/2020/01/16/Machine-Learning-Foundations-Study-Notes-Contents/)
+1. [機器學習基石筆記目錄](/Machine-Learning-Foundations-Study-Notes-Contents/)
     
 
 <br><br>

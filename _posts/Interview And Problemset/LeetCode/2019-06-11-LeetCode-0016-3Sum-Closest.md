@@ -25,7 +25,7 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 <br><br>
 
 ## 解題邏輯與實作
-這基本上是 [3Sum](/interview/problemset/2019/06/11/LeetCode-0015-3Sum/)的變形，唯一不同的不再是回傳陣列，而是回傳最接近的總和。另外數字相同應該可以不用管，所以我先把它拔掉了。
+這基本上是 [3Sum](/LeetCode-0015-3Sum/)的變形，唯一不同的不再是回傳陣列，而是回傳最接近的總和。另外數字相同應該可以不用管，所以我先把它拔掉了。
 
 ```python
 class Solution:
@@ -131,4 +131,4 @@ class Solution:
 <br><br>
 
 ## 其他連結
-1. [【LeetCode】0000. 解題目錄](/interview/problemset/2018/12/19/LeetCode-0000-Contents/)
+1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

@@ -61,7 +61,7 @@ Output: False
 
 <br><br>
 ## 解題邏輯與實作
-有點像是第十題的 [Regular Expression Matching](/interview/problemset/2018/12/19/LeetCode-0010-Regular-Expression-Matching/)，不過符號的意義不太一樣，這邊使用的 `?` 表示一個萬用字元， `*` 則是表示多個萬用字元。
+有點像是第十題的 [Regular Expression Matching](/LeetCode-0010-Regular-Expression-Matching/)，不過符號的意義不太一樣，這邊使用的 `?` 表示一個萬用字元， `*` 則是表示多個萬用字元。
 
 
 <br>
@@ -184,4 +184,4 @@ class Solution(object):
 <br><br>
 
 ## 其他連結
-1. [【LeetCode】0000. 解題目錄](/interview/problemset/2018/12/19/LeetCode-0000-Contents/)
+1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

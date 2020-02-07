@@ -205,7 +205,7 @@ The training was done using single Tesla P100 GPU and took approximately 22h.
 <br>
 
 ### 結果
-可以看到兩份實做都是以 AUROC（或稱 [ROC-AUC](/ai/ml/2020/01/09/Common-Evaluation-MetricAccuracy-Precision-Recall-F1-ROCAUC-and-PRAUC/)）作為評價模型效能的指標，推測應該是為了克服資料不平衡而採用，兩份實做的數據如下：
+可以看到兩份實做都是以 AUROC（或稱 [ROC-AUC](/Common-Evaluation-MetricAccuracy-Precision-Recall-F1-ROCAUC-and-PRAUC/)）作為評價模型效能的指標，推測應該是為了克服資料不平衡而採用，兩份實做的數據如下：
 
 | Pathology |PyTorch AUROC| Azure AUC Score |
 | -------- | -------- |  -------- |  

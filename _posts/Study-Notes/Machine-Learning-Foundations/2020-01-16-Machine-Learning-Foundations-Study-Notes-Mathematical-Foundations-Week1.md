@@ -113,5 +113,5 @@ tags:
 <br><br>
 
 ## 其他連結
-1. [機器學習基石筆記目錄](/ai/ml/study-notes/2020/01/16/Machine-Learning-Foundations-Study-Notes-Contents/)
+1. [機器學習基石筆記目錄](/Machine-Learning-Foundations-Study-Notes-Contents/)
     

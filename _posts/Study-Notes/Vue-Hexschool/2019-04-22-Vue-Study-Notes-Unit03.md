@@ -206,7 +206,7 @@ removeItem: function(item){
 
 ## 其他連結
 
-1. [【Vue.js 學習筆記】00. 目錄](/study-notes/computer-language/framework/2019/04/18/Vue-Study-Notes-Contents/)
+1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 2. 實戰體驗：[github](https://github.com/CynthiaChuang/vue-exercise/tree/master/Hw1-TodoList)、[codepen](https://codepen.io/cynthiachuang/pen/dLjPed)
 

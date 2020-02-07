@@ -16,30 +16,30 @@ tags:
 <!--more-->
 ## 機器學習基石 - 數學基礎 
 
-### [第一週筆記：The Learning Problem](/study-notes/ai/ml/2020/01/16/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1)
-- [什麼是機器學習](/study-notes/ai/ml/2020/01/16/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#什麼是機器學習)
-- [什麼情況適用機器學習](/study-notes/ai/ml/2020/01/16/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#什麼情況適用機器學習)
-- [符號定義](/study-notes/ai/ml/2020/01/16/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#符號定義)
-- [與相關領域的關係](/study-notes/ai/ml/2020/01/16/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#與相關領域的關係)
+### [第一週筆記：The Learning Problem](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1)
+- [什麼是機器學習](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#什麼是機器學習)
+- [什麼情況適用機器學習](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#什麼情況適用機器學習)
+- [符號定義](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#符號定義)
+- [與相關領域的關係](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#與相關領域的關係)
 
 <br>
 
-### [第二週筆記：Learning to Answer Yes/No](/study-notes/2020/01/17/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2)
-- [感知器 Perceptron](/study-notes/2020/01/17/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#感知器-perceptron)
-- [Perceptron Hypothesis Set](/study-notes/2020/01/17/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#perceptron-hypothesis-set)
-- [Perceptron Learning Algorithm (PLA)](/study-notes/2020/01/17/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#perceptron-learning-algorithm-pla)
-- [Guarantee of PLA](/study-notes/2020/01/17/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2?view#guarantee-of-pla)
-- [Non-Separable Data](/study-notes/2020/01/17/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2?view#non-separable-data)
-- [課堂測驗](/study-notes/2020/01/17/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#課堂測驗)
+### [第二週筆記：Learning to Answer Yes/No](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2)
+- [感知器 Perceptron](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#感知器-perceptron)
+- [Perceptron Hypothesis Set](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#perceptron-hypothesis-set)
+- [Perceptron Learning Algorithm (PLA)](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#perceptron-learning-algorithm-pla)
+- [Guarantee of PLA](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2?view#guarantee-of-pla)
+- [Non-Separable Data](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2?view#non-separable-data)
+- [課堂測驗](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#課堂測驗)
 
 <br>
 
-### [第三週筆記：Types of Learning](/study-notes/ai/ml/2020/01/21/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3)
--  [Learning with Different Output Space](/study-notes/ai/ml/2020/01/21/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-output-space)
--  [Learning with Different Data Label](/study-notes/ai/ml/2020/01/21/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-data-label)
--  [Learning with Different Protocol](/study-notes/ai/ml/2020/01/21/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-protocol)
--  [Learning with Different Input Space](/study-notes/ai/ml/2020/01/21/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-input-space)
-- [課堂測驗](/study-notes/ai/ml/2020/01/21/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#課堂測驗)
+### [第三週筆記：Types of Learning](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3)
+-  [Learning with Different Output Space](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-output-space)
+-  [Learning with Different Data Label](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-data-label)
+-  [Learning with Different Protocol](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-protocol)
+-  [Learning with Different Input Space](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-input-space)
+- [課堂測驗](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#課堂測驗)
 
 <br>
 

@@ -97,4 +97,4 @@ class Solution:
 <br><br>
 
 ## 其他連結
-1. [【LeetCode】0000. 解題目錄](/interview/problemset/2018/12/19/LeetCode-0000-Contents/)
+1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

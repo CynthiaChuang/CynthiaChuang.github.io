@@ -9,7 +9,7 @@ tags:
 - DOM 
 --- 
 
-在[04. 進階模板語法介紹](/study-notes/computer-language/framework/2019/04/24/Vue-Study-Notes-Unit04/)時，遇到 **@click.stop** 與 **@click.capture** 兩個事件修飾符，讓我有點疑惑事件到底是怎麼傳遞的？
+在[04. 進階模板語法介紹](/Vue-Study-Notes-Unit04/)時，遇到 **@click.stop** 與 **@click.capture** 兩個事件修飾符，讓我有點疑惑事件到底是怎麼傳遞的？
 
 <!--more-->
 <br>

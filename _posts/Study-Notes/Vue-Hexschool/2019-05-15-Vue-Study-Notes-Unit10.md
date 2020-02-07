@@ -514,6 +514,11 @@ PS. stack 中用到的名稱可以參考 [Stack: 以Array與Linked list實作](h
 
 <br><br>
 
+## 其他連結
+1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
+
+<br><br>
+
 ## 參考資料
 
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)

@@ -44,7 +44,7 @@ tags:
 <br><br>
 ## 使用 x-template 建立元件
 
-在 [02. 基礎 Vue 概述](/study-notes/computer-language/framework/2019/04/19/Vue-Study-Notes-Unit02) 時，介紹過 component 的註冊方法，如下：
+在 [02. 基礎 Vue 概述](/Vue-Study-Notes-Unit02) 時，介紹過 component 的註冊方法，如下：
 
 ```html
 Vue.component('row-comp', {

@@ -30,7 +30,7 @@ Explanation: The longest valid parentheses substring is `"()()"`
 
 <br><br>
 ## 解題邏輯與實作
-這題算是  [Valid Parentheses](/interview/problemset/2018/12/20/LeetCode-0020-Valid-Parentheses/) 的進階版，不過還是可以用 Stack 來解決。
+這題算是  [Valid Parentheses](/LeetCode-0020-Valid-Parentheses/) 的進階版，不過還是可以用 Stack 來解決。
 
 <br>
 
@@ -76,4 +76,4 @@ DP 參考作法 -> [傳送門](https://leetcode.com/articles/longest-valid-paren
 <br><br>
 
 ## 其他連結
-1. [【LeetCode】0000. 解題目錄](/interview/problemset/2018/12/19/LeetCode-0000-Contents/)
+1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)
