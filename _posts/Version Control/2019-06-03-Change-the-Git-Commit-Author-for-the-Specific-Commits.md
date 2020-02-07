@@ -2,9 +2,9 @@
 title: 【Git】修改 Git commits 的作者資訊
 date: 2019-06-03
 categories:
-- Git
+- Version-Control
 tags:
-- git-commit
+- git
 --- 
 前一陣子，用公司電腦寫自己的code，結果…啊啊啊啊，<span class="label">git 的作者資訊</span>顯示的是公司帳號阿 QAQ
 

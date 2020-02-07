@@ -2,9 +2,9 @@
 title: 【Git】commit message 的寫法
 date: 2019-03-21
 categories:
-- Git
+- Version-Control
 tags:
-- git-commit
+- git
 --- 
 
 紀錄一下，別人的 git commit 都怎麼寫的，我自己的寫法太放飛自我的，每次在翻閱歷史紀錄時都要盯著它看很久 Orz ...

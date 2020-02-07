@@ -2,9 +2,9 @@
 title: 【Git】避免 "fatal:LF would be replaced by CRLF" 的錯誤訊息
 date: 2019-12-14
 categories:
-- Git
+- Version-Control
 tags:
-- git-add
+- git
 - Windows/DOS
 --- 
 那天在 Windows 做完筆記，準備上傳到 Github Page 時，發現我無法執行 `git add .`，並出現了 LF / CRLF 轉換的錯誤訊息 - `LF will be replaced by CRLF`，告訴我要把 LF 換行符號轉換成 CRLF。

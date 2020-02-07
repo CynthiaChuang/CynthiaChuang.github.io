@@ -2,9 +2,9 @@
 title: 【Git】用 git stash 命令暫存目前的修改工作
 date: 2020-01-15
 categories:
-- Git
+- Version-Control
 tags:
-- git-stash
+- git
 --- 
 
 大家應該或多或少遇過這樣的情境：
