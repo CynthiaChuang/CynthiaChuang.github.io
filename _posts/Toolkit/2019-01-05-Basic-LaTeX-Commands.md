@@ -1,5 +1,5 @@
 ---
-title: 【LaTeX】 常用 LaTeX 數學符號指令
+title: 常用 LaTeX 數學符號指令
 date: 2019-01-05
 categories:
 - Toolkit

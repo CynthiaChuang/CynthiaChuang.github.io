@@ -1,5 +1,5 @@
 ---
-title: 【Simulator】 Genymotion 模擬器安裝篇：In ubuntu14.04 LET
+title: Genymotion 模擬器安裝篇：In ubuntu14.04 LET
 date: 2016-03-20
 categories:
 - Toolkit
