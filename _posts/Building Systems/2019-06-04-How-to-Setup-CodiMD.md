@@ -42,6 +42,7 @@ CodiMD 之前好像叫做 HackMD CE ，但為了避免命名混搖的困擾，�
 
 
 <br><br>
+
 ## 安裝步驟
 
 ```shell
@@ -76,6 +77,7 @@ For more on the Compose file format versions, see [https://docs.docker.com/compo
 
 
 <br>但目前 docker-compose [版本](https://github.com/docker/compose/tags) 已經來到 1.25.0-rc1，版本差的有點多，還是升級一下好了。
+
 ```shell
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose 
 $ sudo chmod +x /usr/local/bin/docker-compose 
@@ -83,11 +85,13 @@ $ docker-compose --version
 ```
 
 <br>在執行 `docker-compose --version` 時 ，可能會遇到 `/usr/bin/docker-compose: 沒有此一檔案或目錄`，可以直接把先直接把檔案從 /usr/local/bin 搬到 /usr/bin，不然就是就是建立連結指令：
+
 ```shell
 $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
    
 <br>再次查詢版號，此時就會顯示正確版號了，到這邊 docker-compose 算是安裝完成。
+
 ```shell
 $ docker-compose --version
 docker-compose version 1.25.0-rc1, build 8552e8e2
@@ -96,8 +100,8 @@ docker-compose version 1.25.0-rc1, build 8552e8e2
 <br>
 
 ### 問題2： could not find an available, non-overlapping IPv4 address
-
 不過 docker-compose 安裝完，我還是不能跑 Orz，這次錯誤訊息換成了：
+
 ```shell
 ERROR: could not find an available, non-overlapping IPv4 address pool among the defaults to assign to the network
 ```
@@ -151,6 +155,7 @@ $ cat backup.sql | docker exec -i $(docker-compose ps -q database) psql -U hackm
 ```
 
 <br> 但我在還原資料時，直接得到一個 error
+
 ```shell
 SET
 SET

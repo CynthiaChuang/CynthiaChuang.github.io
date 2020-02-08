@@ -12,12 +12,12 @@ tags:
 
 這大概是我有經驗來最神奇的面試經驗了(●▼●;)
 面試時間一個小時，基本上就是**就一個人寫code，另外一個人一直看著寫code..XD**。想當然爾，面試結果想當然是被考官狠狠洗臉了QAQ
-
+ 
 ![就一個人寫code，另外一個人一直看著寫code](https://i.imgur.com/vM4ReDR.jpg)
 <center class="imgtext">  （圖片來源:   <a href="https://office12.gr/events/practice-a-new-programming-language-hscc/"  class="imgtext">Heraklion Innovation Map</a>）</center>
- 
+  
 <br> 
-大概會好一陣忘不了這次面是的考題— ``AutoComplete`` 吧
+大概會好一陣忘不了這次面是的考題— ``AutoComplete`` 吧...
 
 <!--more-->
 <br>
@@ -128,6 +128,7 @@ print(suggest_words)
 ```
 
 <br><br>
+
 ## 感想
 果然靜下心來寫，陳述的會比較有條理些... 為啥面試的時候可以卡成那樣 Orz
 然後 LeetCode 要乖乖刷阿，這次時間太趕根本來不及準備，[LeetCode No. 208](https://leetcode.com/problems/implement-trie-prefix-tree/) 是建 Trie 的阿阿阿阿

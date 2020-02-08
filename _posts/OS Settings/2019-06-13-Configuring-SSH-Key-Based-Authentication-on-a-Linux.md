@@ -9,7 +9,7 @@ tags:
 --- 
 
 在寫 Shell Script 時被 expect 跳脫搞到快瘋掉，還是來 Sign Key 比較快... Orz 
-
+ 
 不過本來就應該避免把密碼 Hard Code 在程式碼當中啦，當初只是確定這份 Script 只有我要用，不會出我電腦，才放心用 expect 的。但現在既然有可能出我電腦，還是用金鑰做認證登錄比較保險。
 
 <!--more-->
@@ -38,6 +38,7 @@ $ ssh-keygen
 ```
 
 <br>在產生金鑰的過程中，會詢問一些問題，如果沒有特殊需求可以全部使用預設值（按 Enter）就好：
+
 ```bash
 1. Enter file in which to save the key (/home/username/.ssh/id_rsa): /home/username/.ssh/tn_key
 
@@ -45,6 +46,7 @@ $ ssh-keygen
 
 3. Enter same passphrase again: 
 ```
+
 第一個問題是問你金鑰儲存的位置與檔名，預設檔名是 id_rsa ，不過這實在看不出這把金鑰的用途，所以習慣上我會更改檔名。
 
 第二跟三個問題則是指定金鑰保護密碼，若有設定密碼的話，之後使用這把金鑰時就要輸入密碼。如果有設密碼，<span class='label'>請務必記好密碼</span>，我有一次設完密碼後，數個月沒登入就忘記密碼了，只好在重新 Sign 一次 Key 惹

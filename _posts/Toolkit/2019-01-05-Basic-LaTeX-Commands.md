@@ -41,6 +41,7 @@ tags:
 
 
 <br><br>
+
 ## 二元運算號
 
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
@@ -323,6 +324,7 @@ $$
 ```
 
 <br><br> 
+
 ## 參考資料
 1.  [TeX / LaTeX 數學模式符號指令](http://bcc16.ncu.edu.tw/7/latex/math_tex/)
 2. [常用数学符号的 LaTeX 表示方法](http://mohu.org/info/symbols/symbols.htm)

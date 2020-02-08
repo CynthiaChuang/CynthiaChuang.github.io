@@ -9,9 +9,8 @@ tags:
 - Word-Embedding 
 - Word2Vec
 --- 
-
 過年大掃除的時候發現，我的草稿夾內塞滿之前寫一半的草稿，想說欠都欠過年了，還是讓他繼續欠下去吧(誤)...
-
+  
 這篇是紀錄前一陣子（其實也快一年前了...）為了弄出一份符合我們應用的詞向量，開始嘗試著自給自足的故事 XD
 
 <!--more-->
@@ -21,7 +20,6 @@ tags:
 <br><br>
 
 ## Word Embedding 
-
 先來看看 Word Embedding，又名詞向量，是指將文字的語意用一組向量來表示，其概念是出自於 Bengio 的 《A Neural Probabilistic Language Model》（論文：[原文](http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)、[筆記](https://medium.com/%E7%A8%8B%E5%BC%8F%E5%B7%A5%E4%BD%9C%E7%B4%A1/a-neural-probabilistic-language-model-%E8%AB%96%E6%96%87%E7%AD%86%E8%A8%98-61f4c5cecee7)）。
 
 

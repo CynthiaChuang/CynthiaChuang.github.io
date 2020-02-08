@@ -7,8 +7,9 @@ tags:
 - Windows/DOS
 - Linux/Unix
 --- 
-每次回到 Windows 的 DOS command，都習慣性直接打 <span class='label'>cd d:\\</span> 要切換磁槽、使用 <span class='label'>ll</span> 要來顯示檔案，想當然每次都沒反應 XD
 
+每次回到 Windows 的 DOS command，都習慣性直接打 <span class='label'>cd d:\\</span> 要切換磁槽、使用 <span class='label'>ll</span> 要來顯示檔案，想當然每次都沒反應 XD
+ 
 每每遇用到這狀況就要找 google，所以還是決定自己做一份對照表...至少下次還需要 search 時是為自己貢獻流量 XDDD 
 <!--more-->
 <br><br>  

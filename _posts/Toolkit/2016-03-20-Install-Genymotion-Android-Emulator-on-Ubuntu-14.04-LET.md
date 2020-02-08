@@ -9,7 +9,7 @@ tags:
 --- 
 
 雖然我比較喜歡實機測試，有種詭異的滿足感 (๑ˉ∀ˉ๑)，好啦其實我的 RAM 不太夠，跑模擬器會卡到死，所以這週末就衝去買了一條回來，不然其他螢幕的的情況都沒辦法測。
-
+  
 只是...買回來後，開模擬器還是好卡 (〒︿〒)，只好安裝其他模擬器，老大推薦用 Genymotion 聽說比較好用。
 
 <!--more-->
@@ -141,8 +141,8 @@ tags:
   
 安裝完後才想到，我用的是免費版，所以公司用途不在授權範圍內 QAQ，所以要想辦法處理掉 KVM 問題，不然叫公司買 Business版？？
 
-  
 <br><br>
+
 ##  參考資料
 1. [How to Install Genymotion Android Emulator in Ubuntu Linux｜Youtube](https://www.youtube.com/watch?v=k3MSTD9SLy4)
 2. [Virtualization not enabled in BIOS?｜Stack Overflow](http://stackoverflow.com/questions/27884846/virtualization-not-enabled-in-bios)

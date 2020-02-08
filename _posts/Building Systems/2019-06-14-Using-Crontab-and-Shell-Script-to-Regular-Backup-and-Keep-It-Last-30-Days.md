@@ -13,7 +13,7 @@ tags:
 這是 [CodiMD 安裝](/How-to-Setup-CodiMD/)的後續...，雖然跟 CodiMD 沒啥關係 XD 
 這次的主要目的是為 CodiMD 做一個定期備份，另外為了儲存空間上的考量，備份檔案只保留 30 天，一旦超過就刪除資料。
 <!--more-->
-<br> <br> 
+<br><br> 
 
 不過太久沒重頭寫 Shell Script 了，連起手式都有點忘了 Orz，快速找[鳥哥](http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#script_why)複習一下~~塵封在記憶中的起手式~~
 ```shell
@@ -65,8 +65,8 @@ tags:
     ```shell
     tar zcvf ${foldername}.tgz ${foldername}
     ```
-
 <br><br>
+
 ### 刪除 30 天前的檔案
 
 這邊使用 find 指令來實做。利用 find 找到符合特定規則的檔案後再使用指令參數 <span class='label'>-exec</span> 來刪除。這邊所指的特定規則，當然是指三十天前的壓縮檔：
@@ -92,8 +92,8 @@ find ~/codimd_backup -type f -name "*.tgz" -mtime +30
 -exec rm -rf {} \;
 ```
 其中 <span class='label'>{}</span> 指的是 find 指令找到的檔案或目錄，而 <span class='label'>\;</span> 是指令的結束符號。
-
 <br><br>
+
 ### 定期執行
 Script 寫完之後最後就是讓它定期執行了，這邊直接使用 crontab 指令即可，設定方式還算是單純，只是需要稍微注意一下執行者權限與絕對路徑...等等
 
@@ -112,8 +112,8 @@ $ crontab -e
 0 0 * * * sh /home/user/codimd_backup.sh
 ```
 意思就是每天 0 點時執行 codimd_backup.sh 這個 Script。
-
 <br><br>
+
 ### 異地備份
 原本我的想法很簡單，用 scp 將備份的檔案從 CodiMD 的伺服器（簡稱 ServerA）送到備份用的伺服器（簡稱 ServerB）就好。偏偏遇到一個有點尷尬的問題，ServerA 在外網，而 ServerB 在內網，兩邊是互相 ping 不到的。最後沒辦法只好先貢獻我的電腦當跳板 (´_ゝ`)
 
@@ -148,8 +148,6 @@ expect eof"
 ```
 
 這邊麻煩的一點是，ServerB 是用密碼登入的...，所以我還得寫一個自動登入的 Script，只好邊查 expect 的[語法](https://blog.51cto.com/zyp88/1615029)邊湊出一版。
-
-
 <br><br>
 
 ### 刪除 30 天前的檔案
@@ -176,7 +174,6 @@ scp -i ~/.ssh/ServerB_key  -r -p ${foldername} ServerB@HostB:~/
 # only keep 30 days backup
 ssh -i ~/.ssh/ServerB_key ServerB@HostB "find $foldername -type f -name *.tgz -mtime +30 -exec    rm -rf {} \; " 
 ```
- 
 <br><br>
 
 ### （補充）找出只存於 ServerA 的檔案並下載

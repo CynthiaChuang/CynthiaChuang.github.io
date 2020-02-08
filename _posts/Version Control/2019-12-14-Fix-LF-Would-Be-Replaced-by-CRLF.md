@@ -7,6 +7,7 @@ tags:
 - git
 - Windows/DOS
 --- 
+
 那天在 Windows 做完筆記，準備上傳到 Github Page 時，發現我無法執行 `git add .`，並出現了 LF / CRLF 轉換的錯誤訊息 - `LF will be replaced by CRLF`，告訴我要把 LF 換行符號轉換成 CRLF。
 
 <!--more-->
@@ -101,6 +102,7 @@ $ git config --global core.safecrlf false
 > 當 core.autocrlf 為 true 或者 input 時，算激活了 eol，此時如果 core.safecrlf 為 true，git 檢查 crlf 轉換是否正常，比如 Windows 平台，core.autocrlf 設置為 true，如果工作區的文件中含有 LF，git 就會拒絕，因為 true的情況下，git 認為工作區應該都是 CRLF 才對啊。
 
 <br><br>
+
 ## 總結
 簡單來說，若在 window 環境建議設置
 ```shell
@@ -118,6 +120,7 @@ $ git config --global core.safecrlf true
 
 
 <br><br>
+
 ## 參考資料 
 1. [通过阅读git-config文档理解Git如何使用autocrlf、safecrlf、eol和.gitattributes处理line-ending｜简书](https://www.jianshu.com/p/2a46dfd3705a)
 2. [Git 解決出現 warning: LF will be replaced by CRLF ... The file will have its original line endings in your working directory.｜關於網路那些事...](https://adon988.logdown.com/posts/7642074-git-resolves-to-appear-warninglfll-be-replaced-by-crlf-the-file-would-have-its-original-line-endings-in-your-working-directory) 

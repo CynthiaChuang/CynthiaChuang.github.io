@@ -8,11 +8,12 @@ tags:
 --- 
 
 紀錄一下，別人的 git commit 都怎麼寫的，我自己的寫法太放飛自我的，每次在翻閱歷史紀錄時都要盯著它看很久 Orz ...
-
+  
 之後 commit 如果沒有特殊要求（就是原團隊已經定下的書寫規則），盡量就照這份來寫吧 >///<
 
 <!--more-->
 <br>
+
 ## 必要元素
 一個有效的 Git Commit Message 應包含三件事：_What、Why_ 以及 _How_ <br>
 
@@ -69,6 +70,7 @@ ex. [fix] 修正文字大小
 - **upgrade**：版本更新
 
 <br> 個人習慣標籤之前會再加上 branch 或 module 的識別標籤，方便進行功能辨識：
+
 ```
 [branch/module][標籤] 這次變更概要
 
@@ -89,6 +91,7 @@ TT-1985 follow Common UI v4.2 修改文字大小
 ```
  
 <br><br>
+
 ## 參考資料
 1. [Git commit message 的寫法｜Github](https://github.com/oracle-design/guides/wiki/Git-commit-message-的寫法)
 2. [撰寫有效的 Git Commit Message｜Fourdesire Blog](http://blog.fourdesire.com/2018/07/03/%E6%92%B0%E5%AF%AB%E6%9C%89%E6%95%88%E7%9A%84-git-commit-message/)

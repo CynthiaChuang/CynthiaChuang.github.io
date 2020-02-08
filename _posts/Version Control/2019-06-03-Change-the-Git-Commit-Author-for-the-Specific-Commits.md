@@ -6,8 +6,9 @@ categories:
 tags:
 - git
 --- 
-前一陣子，用公司電腦寫自己的code，結果…啊啊啊啊，<span class="label">git 的作者資訊</span>顯示的是公司帳號阿 QAQ
 
+前一陣子，用公司電腦寫自己的code，結果…啊啊啊啊，<span class="label">git 的作者資訊</span>顯示的是公司帳號阿 QAQ
+  
 原本想說回家後，用 `git cherry-pick` 一個 commit 一個 commit 搬移後，再重新 commit。結果發現...靠！有將近 20 個 commit ，這樣搬會瘋掉的。
 
 <!--more-->
@@ -66,6 +67,7 @@ tags:
 
 
 <br><br>
+
 ## 修改專案的作者資訊
 不過每次這樣改有點麻煩，畢竟我剛剛是重覆執行了<span class="label">二十次</span>阿！
 

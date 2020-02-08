@@ -11,7 +11,6 @@ tags:
 - ROC-AUC
 - PR-AUC
 --- 
-
 當評估（Evaluation）一個模型的好壞時，不能總是依靠體感來挑選，因此需要一些量化指標去判定它的好壞。常見的量化指標有 **Accuracy**、**Precision**、**Recall** 與 **F1-Measure**。有時也會使用 **ROC-AUC** 與 **PR-AUC** 還評估在相同資料集下的表現結果
 
 <!--more-->
@@ -21,9 +20,7 @@ tags:
 假定一個具體場景作為例子：
 > 假如現在有 100 筆檢體進行流感快篩，其中已知 70 位為正常人、30 位為流感病患。快篩目的是找出所有的流感病患，現在快篩結果顯示 50 人罹患流感，但這 50 人之中僅有 16 位真的罹患流感，其他 34 位屬於正常人但被誤判的情況。
 
-<br>
-
-依照此情境我們可以繪製出下列表格：
+<br> 依照此情境我們可以繪製出下列表格：
 
 |       | 被診出罹患流感 | 未被診出罹患流感 | |
 |-----| ------------ | ------------  | --- |
@@ -31,9 +28,7 @@ tags:
 | **正常人** | 34 人  （FP） | 36 人  （TN） | 70 人 | 
 |       | 50 人 | 50 人 |
 
-<br>
-
-依此假定情境，我們可以先來定義 **True Positives**、**True Negatives**、**False Positives**、**False Negatives** 這四個名詞解釋。
+<br> 依此假定情境，我們可以先來定義 **True Positives**、**True Negatives**、**False Positives**、**False Negatives** 這四個名詞解釋。
 <br>
 
 ### **TP，True Positives**   
@@ -83,6 +78,7 @@ $$
 
 
 <br><br>
+
 ## Precision
 先來張經典圖，方便大家想像：
 <center> <img src="https://i.imgur.com/1MKvczU.png" alt="Precision and recall"></center>
@@ -112,6 +108,7 @@ $$
 在一般的應用中，如果更在乎的是預測出來的結果，就可以採用這個指標。看到的一個例子是<span class='label'>門禁系統</span>，它更在乎的是有否讓未經許可的人進去（也就是 FP 越小越好）
 
 <br><br>
+
 ## Recall
 以 Recall 則被譯為<span class='label'>召回率</span>。我的理解是它是原本是 Positive 的資料，它能夠召回多少，也就是說<span class='label'>在原本 Positive 的資料中被預測出多少</span>。
 
@@ -134,6 +131,7 @@ $$
 如果你的應用場景更偏向在意是否觸及了所有的 Positive case，例如：廣告投放它更在意的是你是否觸及了所有的潛在客戶（Positive case），寧可錯殺也不放過 XDDDD
 
 <br><br>
+
 ## F1-score
 不過一般來說，這兩個指標通常不可兼得。如果你的模型夠貪婪，想預測出更多的  Ground Truth 為 Positive 的例子，那們它可能會發生誤判，雖然產生較高的 Recall，但也導致 Precision 下降。反之，若是模型都保守地預測，那麼 Precision 或許會很高，但 Recall 就會相對較低。
 
@@ -168,6 +166,7 @@ F_\beta = (\beta^2 + 1) * \cfrac{PR}{\beta^2*P+R}
 $$
 
 <br><br>
+
 ## ROC-AUC （Area Under Curve） 
 也就是指ROC曲線下方的面積，在說明 AUC 前我們先看看 ROC 空間，這個空間就是以 False Positive Rate 為 X 軸，True Positive Rate 為 Y 軸，其公視定義如下：
 
@@ -185,9 +184,7 @@ $$
 以這張圖為例，用 A、B 與 C 三不同的模型進行預測，並將結果繪製在 ROC 上，衣此圖判斷最好的結果是 A 模型，反之，最糟糕的預測是 C 模型甚至劣於隨機分類。
 
 
-<br>
-
-上述 ROC 空間裡的單點，是指給定特定分類模型一個閾值後得出的預測結果。但對於同一個分類模型來說給定不同的閾值，會影響到模型的準確率，進而得到不同的 FPR 和 TPR。因此 ROC 曲線指的是，將同一模型不同閾值所得到的結果一一繪製在 ROC 空間中，所得到的曲線。
+<br> 上述 ROC 空間裡的單點，是指給定特定分類模型一個閾值後得出的預測結果。但對於同一個分類模型來說給定不同的閾值，會影響到模型的準確率，進而得到不同的 FPR 和 TPR。因此 ROC 曲線指的是，將同一模型不同閾值所得到的結果一一繪製在 ROC 空間中，所得到的曲線。
 
 關於這曲線的好壞與空間中單點一樣，若曲線越靠近左上角表示其效能越好。除了肉眼判斷外，也可以引入 AUC （Area Under Curve，曲線下面積）做為模型優劣的指標。
  

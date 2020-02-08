@@ -10,7 +10,7 @@ tags:
 --- 
 
 最近開始碰 Android，而且開發平台又換 Android Studio 而不是慣用的 eclipse，更慘的是作業系統還換到 Linux，簡直是雪上加霜。所以最近真的累到快翻掉　(；ﾟДﾟ；)
-
+  
 老樣子，紀錄一下這次的安裝過程<br>
 ↑ 其實一點也不是老樣子，已經很久沒有打部落格了，最近愛上手寫ＸＤＤＤ
 
@@ -64,6 +64,7 @@ $ sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
 安裝完成後，重新執行初始化安裝設定，讓它重新啟動安裝程序，就OK了！！！
 
 <br><br>
+
 ## 參考資料
 - [How to install Android Studio on Ubuntu 15.04 / CentOS 7∥B N Poornima｜LinOxide](https://linoxide.com/tools/install-android-studio-ubuntu-15-04-centos-7/)
 - [[UBUNTU 14.04.1]_在UBUNTU 14.04 安裝ANDROID STUDIO ∥thkaw｜NTL-NETWORK](http://www.ntex.tw/wordpress/2073.html)

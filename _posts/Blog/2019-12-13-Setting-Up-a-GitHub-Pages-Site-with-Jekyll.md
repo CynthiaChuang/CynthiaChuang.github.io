@@ -8,11 +8,12 @@ tags:
 - Jekyll
 --- 
 之前有一陣子在找合適的 blog 想用來存放文章，最好能支援數學公式、程式碼，若能使用 Markdown 來撰寫文章就更好了，另外版面最好整潔些不要像傳統 blog 有側欄的干擾（要求真多 XD
-
+ 
 前後試過痞客邦、Blogger、Medium、Github Pages...，各有各的優缺點，但其實都不怎滿意，最後挑了Github Pages 主要是想玩玩 Jekyll 順便練習一下前端 XD
 
 <!--more-->
 <br> 
+
 ## 背景知識
 ### Jekyll 
 雖然說是『想玩玩 Jekyll 』而選了 Github Pages，不過其實不懂 Jekyll 也沒差，知道它是一個 Ruby 編寫出來的 framework，讓使用者可以快速的建構出靜態頁面的blog，並讓使用者可以用 markdown 來編寫 html。有這些知識即可。<br>
@@ -22,8 +23,8 @@ tags:
 
 p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個網站名稱有點嗆！？還是只有我這認為？不過它真的還滿淺顯易懂的，很適合 git 的入門。<br>
 
-
 <br>
+
 ## 建置步驟
 ### 1. 新增專案
 新增名為「`username`.github.io」的專案，這個 `username` 指的是自己的 GitHub 帳號。這不僅是你的專案名稱，也是你的 blog 網址。<br>
@@ -107,10 +108,11 @@ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-2.0.2/lib/bundler/resolver.rb:287
 ```sh
 $ bundle install
 ```
-<br>
-<br>
+<br><br>
+
 ## 主題更換
 如果不喜歡預設的 minima 的話，可以試著改寫 css 弄出自己獨一無二的 style。但如果你跟我一樣懶的話，那就考慮直接套用現成的主題來進行修改：
+
 ### 1. 挑選主題
 網路上現成的主題還滿多的，可以直接在 google 上搜尋 **jekyll theme** 就會套出一堆網站了，像我是在 [Jekyll Themes](http://jekyllthemes.org/) 上來進行挑選，挑了三個樣式較為簡潔的樣板，分別是：
 - [Type](https://github.com/aspirethemes/type) :  [Demo](https://type-jekyll.aspirethemes.com/style-guide)
@@ -118,7 +120,6 @@ $ bundle install
 - [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next):   [Demo](https://simpleyyt.com/jekyll-theme-next/)
 
 <br>其實有點大同小異啦，最後挑了第三個 jekyll-theme-next。運氣不錯，它還附有[安裝教學](http://theme-next.simpleyyt.com/getting-started.html)，可以直接照著做就好，不過因為剛剛我已經把專案建好了我就不學它 git clone project 來執行 jekyll serve，而是直接複製貼上了 XD <br>
-
 
 ###  2. 重新安裝相依性
 主題套用完成後，因為個個主題所使用的套件不同，所以必需重新安裝相依性。
@@ -138,7 +139,6 @@ $ bundle update --bundler
 $ bundle install
 ```
 <br>
-
 
 ### 3. 網站預覽
 相依性檔案重新安裝完成後，就可以再次進行預覽，但我在這邊遇到點問題：
@@ -193,14 +193,15 @@ Rendering Markup: assets/css/style.scss
 jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 ```
 <br> 照著[說明](https://github.com/mmistakes/jekyll-theme-hpstr/issues/185#issuecomment-340777090)，我在 `assets/css` 這個路徑下新增一個 `style.scss`   的檔案，檔案內容如下：	
+
 ```css
 ---
 ---
 
 @charset "UTF-8";
 ```
-<br>
-<br>
+<br><br>
+
 ## 撰寫文章
 歷經千辛萬苦終於把網站弄起來了！之後只要將新寫好的 markdown  文章，放在 `_posts`  資料夾下，文章就會顯示在網站上。不過要注意以下幾點：
 
@@ -227,11 +228,12 @@ jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 
 
 <br>
+
 ## 後記
 不過雖然把 Github Pages 建起來了，不過都沒怎麼更新，主要是它的預覽實在有點麻煩，我不能在行動裝置或非本人的電腦進行，有點小苦惱，再加上後來有找到用 Markdown 寫 Blogger 的方法，所以還是以 blogger 為主~~（雖然那邊也是在長草）~~。
 
-
 <br>
+
 ## 參考資料 
 1. [ Jekyll 介紹 ｜卡斯伯 Blog - 前端，沒有極限](https://wcc723.github.io/jekyll/2014/01/04/what-is-jekyll/)
 2. [在 Windows 安裝 Ruby on Rails ｜ShunNien's Blog](https://shunnien.github.io/2015/11/05/in-windwos-install-ruby-on-rails/)

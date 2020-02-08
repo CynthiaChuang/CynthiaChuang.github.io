@@ -9,9 +9,9 @@ tags:
 --- 
 
 好久沒寫網誌了，Blogger 已經雜草叢生了（笑）
-
+ 
 想當初寫網誌最討厭的一見事情就是 — <span class='label'>排版</span>，我花在排版的時間可能比寫文章還久阿，我都直接用 html 寫了，它排版還是可以跑掉....真是的...
-
+ 
 不過這一兩年接觸到了 <span class='label'>[Markdown](https://markdown.tw/)</span>，它的語法可以減少不少排版時間的時間，所以最近又興起了把網誌撿回來的念頭，希望這次可以持之以恆阿...
 
 <!--more-->
@@ -49,6 +49,7 @@ tags:
 
 
 <br><br>
+
 ## 用 Stackedit 發佈至 Blogger 
 ![Stackedit](https://stackedit.io/res-min/img/logo.svg)
 <center class="imgtext">   Stackedit Icon （圖片來源: <a href="https://stackedit.io/" class="imgtext">Stackedit官網</a>）</center>
@@ -121,8 +122,6 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 </script>
 <!-- Mermaid Additions END--> 
 ```
-
-
 
 <br>
 

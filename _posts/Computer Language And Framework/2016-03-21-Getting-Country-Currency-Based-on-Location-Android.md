@@ -9,15 +9,13 @@ tags:
 --- 
 
 這篇還是還是匯率相關XDDD
-
-  
+    
 在實作匯率 App 時，我想讓 App 預先載入使用者最常使用及查詢的貨幣，讓使用者有比較好的 UX，只是到底怎麼定義使用者最常使用及查詢的貨幣，讓我有點傷透腦筋。
 
 <!--more-->
 <br> 
 
 ## 使用者最常使用及查詢的貨幣?
-
 一開始，是有想說透過 GPS 取得使用者所在位置，然後取得所在位置的幣別，作為最常使用的貨幣，想說你都在當地應該會用那邊的貨幣吧？
 
 只是如此一來在 OnCreate 要作的是就會很繁重，要取得位置及幣別，還要取得即時匯率，應該會被 ANR（Application Not Responding），而且我覺得匯率換算 App 跟使用者要位置的權限也頗奇怪。
@@ -31,7 +29,6 @@ tags:
 <br><br> 
 
 ## 取得所在（預設）地點的貨幣
-
 在這邊使用了兩個類別，分別是 [Locale](http://developer.android.com/intl/zh-cn/reference/java/util/Locale.html) 及 [Currency](http://developer.android.com/intl/zh-tw/reference/java/util/Currency.html)
 
 > Locale represents a language/country/variant combination. Locales are used to alter the presentation of information such as numbers or dates to suit the conventions in the region they describe.
@@ -54,11 +51,11 @@ new  Locale("en", "US", "POSIX")
 	// 取得目前國家區域
 	String mCountry = Locale.getDefault().getCountry();
 	```
-
- <br>
+	<br>
  
- 2. 取得該位置所對應貨幣代碼
-在 [Currency](https://www.tutorialspoint.com/java/util/currency_getinstance.htm) 中提供了一個 function，可藉由傳入 Locale 參數取得到該 Locale 國家所對應的貨幣，一旦得知該貨幣，就可取出得該貨幣的代碼
+ 2. 取得該位置所對應貨幣代碼  
+	在 [Currency](https://www.tutorialspoint.com/java/util/currency_getinstance.htm) 中提供了一個 function，可藉由傳入 Locale 參數取得到該 Locale 國家所對應的貨幣，一旦得知該貨幣，就可取出得該貨幣的代碼。
+	
 	```java
 	// 藉由所取得的預設local，得到所對應的 Currency	
     Currency curr = Currency.getInstance(mDefault);

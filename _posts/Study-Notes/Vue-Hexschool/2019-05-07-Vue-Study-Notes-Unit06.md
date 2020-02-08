@@ -42,6 +42,7 @@ tags:
 
 
 <br><br>
+
 ## 使用 x-template 建立元件
 
 在 [02. 基礎 Vue 概述](/Vue-Study-Notes-Unit02) 時，介紹過 component 的註冊方法，如下：
@@ -377,6 +378,7 @@ component 的 template 中設置的預設內容，只有在子元件標籤內沒
 
 
 <br><br>
+
 ## 元件 章節作業
 [codepen](https://codepen.io/cynthiachuang/pen/jobbaN)
 

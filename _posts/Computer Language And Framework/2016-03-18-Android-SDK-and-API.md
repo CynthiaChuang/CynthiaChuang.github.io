@@ -8,7 +8,7 @@ tags:
 --- 
 
 雖然 API 跟 SDK 還不至於傻傻分不清楚，但也還是迷迷糊糊的，在網路上看到幾個不錯的例子，趁著這個機會一併整理整理XDD
-
+ 
 最後順便整理一下 Android API Level 與 SDK 的版本對照表。
 <!--more-->
 <br> 
@@ -29,8 +29,8 @@ API 是一個讓開發者能夠存取 Library 裡面的 functions/methods 的介
     <center class="imgtext"> 上吧皮卡丘，使用雷電（圖片來源: <a href="https://agirls.aotter.net/post/52299" class="imgtext">電獺少女</a>）</center> 
 
 <br><br>
-## SDK (Software Development Kit，軟體開發工具包)
 
+## SDK (Software Development Kit，軟體開發工具包)
 是用來幫一個 **產品** 或 **平台** 開發應用程式的工具組，由產品的廠商提供給開發者使用的，通常是某一家廠商針對某一平台、系統或硬體所發佈出來用以開發應用程式的工具組，在這個工具包裡面，可能包含了各式各樣的開發工具，模擬器、API 等。  
       
 例如：Android 針對不同的版號有不同的 SDK，因此在 Android Studio 進行開發時需要針對你的平台安裝不同的 SDK，而在 SDK 會提供相對應 API 以供使用  

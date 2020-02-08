@@ -61,10 +61,7 @@ drwxr-xr-x  8 Cynthia_Chuang cynthia-chuang 4096 12月 31 16:16 .git/
 $ ls -lR | grep "^-d" | wc -l
 ```
 
-
-
 <br><br>
-
 
 ## 不包含子目錄中的檔案，不包含隱藏檔案
 如果就單純從想算這一層有多少的檔案，直接用 `-l`

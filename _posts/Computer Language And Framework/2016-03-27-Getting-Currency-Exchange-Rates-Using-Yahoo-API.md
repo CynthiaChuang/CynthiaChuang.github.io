@@ -8,20 +8,20 @@ tags:
 - App
 --- 
 
-最近S老大派下拿來練手的是一個匯率換算的 APP，今天總算告一個段落了～稍微紀錄一下免得之後又忘記了
-
-要求
- 1. 使用 Yahoo API
- 2. 透過 HttpURLConnection class 將資料以 Json 型態取下並顯示在手機上
-
-<!--more-->
-<br>
-
 <div class="note danger"> 
 <div class="head">網誌已過時！</div>
 Yahoo! 財務API服務，該服務已停止並且不再起作用。
 我已經換新的API實作了，改天有空再來寫一篇新的。
 </div>
+ 
+最近S老大派下拿來練手的是一個匯率換算的 APP，今天總算告一個段落了～稍微紀錄一下免得之後又忘記了
+
+<!--more-->
+ 
+實作要求有二：
+ 1. 使用 Yahoo API
+ 2. 透過 HttpURLConnection class 將資料以 Json 型態取下並顯示在手機上
+
 
 <br><br>
 
@@ -65,6 +65,7 @@ select * from csv where url='上面獲得 csv檔的url'
 透過這個 [URL](http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json) 就可以取得所有幣別 JSON 檔，只是上面只有代碼，沒有貨幣全稱，不過還好規範命名規則是走 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)，還是有辦法知道，麻煩了點就是。  
     
 <br><br>
+
 ## 實作
 大概了解資料的處理流程後，就可以回到程式中來實做了。
 
@@ -122,9 +123,8 @@ String line = in.readLine();
 
 所以像上面這一串所要取出的順序是這一串物件中→ query 物件 → results 物件 → row 陣列，最後在取出每個 index 中所包含的物件，而物件中的元素col0、col1 分別對應到兌換幣別（美金）的代碼與匯率  
 
- 
-
 <br><br>
+
 ## 踩雷
 
 基本上做到上面就完成大概了，只是實際執行的時候，會跳出下面兩個 error
@@ -134,13 +134,11 @@ String line = in.readLine();
 
 解決的方式只要開新的執行緒就好，不管是用 Thread、 Handle、 AsynTask 都行，別讓它跑在  main Thread 上就行。
  
- <br>
+<br>
  
 ### 2. android.system.ErrnoException: android_getaddrinfo failed: EACCES (Permission denied)
 
 另一個會收到的是這個，主要是告訴你 uses-permission 忘了開，只要去AndroidManifest.xml 中添加即可  
-    
-
   
 <br><br>
 

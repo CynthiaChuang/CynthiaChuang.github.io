@@ -9,7 +9,7 @@ tags:
 --- 
 
 一般來說，想透過路由傳遞參數給元件，多採用[**動態路由**](https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96)的方式來實作，但這種方式一則容易使得元件高度耦合，導致只能在特定 URL 上使用；二則是你永遠別低估使用者亂輸入的能力，他們常常會輸入一些超乎設計者預期的字串 XD
-
+ 
 因此，我希望可以找到其他方式傳參數給元件，最後終於在文件找到[**路由組件傳參**](https://router.vuejs.org/zh/guide/essentials/passing-props.html)的相關說明。不過它的說明有些簡略，還是稍微嘗試了下才找到我要的用法。
 
 <!--more-->
