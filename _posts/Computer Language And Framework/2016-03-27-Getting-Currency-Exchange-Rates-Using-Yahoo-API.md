@@ -8,7 +8,7 @@ tags:
 - App
 --- 
 
-<div class="note danger"> 
+<div class="alert danger"> 
 <div class="head">網誌已過時！</div>
 Yahoo! 財務API服務，該服務已停止並且不再起作用。
 我已經換新的API實作了，改天有空再來寫一篇新的。

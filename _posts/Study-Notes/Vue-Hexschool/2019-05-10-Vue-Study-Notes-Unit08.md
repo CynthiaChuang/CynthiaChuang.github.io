@@ -71,7 +71,7 @@ var childTwo = {
 
 <br>
 
-<div class="note info">
+<div class="alert info">
 <div class="head">2019.05.10 補充</div>
 在 <a herf="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">mozilla</a> 有看到 super 的用法，但在使用時他一直報錯，懷疑與 Vue 本身有關係，詢問講師後得到的回答是：<b>「沒辦法使用super，這邊 extend 是 VUE API，所以與 ES6 Class Extend 是沒有關聯的」</b>。
 </div>

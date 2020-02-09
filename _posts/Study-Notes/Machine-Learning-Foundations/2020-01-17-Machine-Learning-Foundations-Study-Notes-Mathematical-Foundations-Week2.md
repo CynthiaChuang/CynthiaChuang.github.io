@@ -144,7 +144,7 @@ $$
 因此這邊採用逐漸修正的方式，在取得一條初始線段 $g_0$ 的情況下，經過不斷的錯誤修正，對線段進行平移旋轉等操作，最終能找到一條 $g_f$ ，這就是 Perceptron Learning Algorithm (PLA) 演算法的核心。
 <br>
 
-<div class="note info">
+<div class="alert info">
 <div class="head">提醒</div>
 $W$ 其實是直線方程的法向量
 </div>

@@ -148,7 +148,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"  crossorigin="anonymous">
     ```
 
-    <div class="note warning">
+    <div class="alert warning">
     <div class="head">注意</div>
     是 Bootstrap 不是 <a herf="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
     是 Bootstrap 不是 <a herf="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>

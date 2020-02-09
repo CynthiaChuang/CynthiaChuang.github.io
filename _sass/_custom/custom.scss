@@ -46,16 +46,20 @@
 // note
 // ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl
 // --------------------------------------------------
-.post-body .note {
+.post-body .alert {
   position:             relative;
   padding:              15px;
   margin-bottom:        20px;
 
+  // commit setting
   border:             initial;
-  border-left:        4px solid $gainsboro;
-  background-color:   lighten($gainsboro, 65%);
-
+  border-left:        4px solid; 
   border-radius: 4px;
+  
+  // default seeting
+  background-color:   $alert-default-bg;
+  border-left-color:  $alert-default-border;
+  color:  $alert-default-text;
 
   h2, h3, h4, h5, h6 {
       if note_icons {
@@ -84,90 +88,81 @@
   &:not(.no-icon) {
       padding-left:     45px;
       &:before {
+        // common setting
         position:       absolute;
         font-family:    'FontAwesome';
         font-size:      larger;
         top:            13px;
         left:           15px;
+
+        // default setting
+        content: $alert-default-icon;
+        color : $alert-default-text;
       }
     }
 
-    
-  &.default {
-      background-color: $note-default-bg;
-      border-left-color:  $note-default-border;
-      color:  $note-default-text;
-      &:not(.no-icon) {
-          &:before {
-              content: $note-default-icon;
-              color : $note-default-text;
-          }
-      }
-  }
-
   &.primary  {
-      background-color: $note-primary-bg;
-      border-left-color:  $note-primary-border;
-      color:  $note-primary-text;
+      background-color: $alert-primary-bg;
+      border-left-color:  $alert-primary-border;
+      color:  $alert-primary-text;
       &:not(.no-icon) {
           &:before {
-              content: $note-primary-icon;
-              color : $note-primary-text;
+              content: $alert-primary-icon;
+              color : $alert-primary-text;
           }
       }
   }
 
   &.info  {
-    background-color: $note-info-bg;
-    border-left-color:  $note-info-border;
-    color: $note-info-text;
+    background-color: $alert-info-bg;
+    border-left-color:  $alert-info-border;
+    color: $alert-info-text;
     &:not(.no-icon) {
         &:before {
-            content: $note-info-icon;
-            color : $note-info-text;
+            content: $alert-info-icon;
+            color : $alert-info-text;
         }
     }
   }
 
   &.success {
-    background-color: $note-success-bg;
-    border-left-color:  $note-success-border;
-    color: $note-success-text;
+    background-color: $alert-success-bg;
+    border-left-color:  $alert-success-border;
+    color: $alert-success-text;
     &:not(.no-icon) {
         &:before {
-            content: $note-success-icon;
-            color : $note-success-text;
+            content: $alert-success-icon;
+            color : $alert-success-text;
         }
     }
   }
 
   &.warning {
-    background-color: $note-warning-bg;
-    border-left-color:  $note-warning-border;
-    color: $note-warning-text;
+    background-color: $alert-warning-bg;
+    border-left-color:  $alert-warning-border;
+    color: $alert-warning-text;
     &:not(.no-icon) {
         &:before {
-            content: $note-warning-icon;
-            color : $note-warning-text;
+            content: $alert-warning-icon;
+            color : $alert-warning-text;
         }
     }
   }
 
   &.danger {
-    background-color: $note-danger-bg;
-    border-left-color:  $note-danger-border;
-    color: $note-danger-text;
+    background-color: $alert-danger-bg;
+    border-left-color:  $alert-danger-border;
+    color: $alert-danger-text;
     &:not(.no-icon) {
         &:before {
-            content: $note-danger-icon;
-            color : $note-danger-text;
+            content: $alert-danger-icon;
+            color : $alert-danger-text;
         }
     }
   }
 }
 
-// note
-// ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl
+// highlighting
 // --------------------------------------------------
 .post-body .highlighting {
   padding: 0 2px;

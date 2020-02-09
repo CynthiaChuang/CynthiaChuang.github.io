@@ -25,7 +25,7 @@ tags:
 ## Ultimate Autocomplete
 那天面試官一開始就直接跳過自我介紹，端主菜了上個道 Design and Implement Question 給我 - 實做一個 **Ultimate Autocomplete**。
 
-<div class="note info">
+<div class="alert info">
 <div class="head">Ultimate Autocomplete</div>
 在最短的時間和空間內以良好的順序輸出預測的單詞列表，在理想情況下，列表的第一個單詞是正確的選擇。
 </div>

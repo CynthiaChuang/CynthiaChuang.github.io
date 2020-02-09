@@ -30,7 +30,7 @@ tags:
 
 1. **提升（Hoisting）**  
 
-    <div class="note info">
+    <div class="alert info">
     <div class="head">提升（Hoisting）</div>
     在執行任何程式碼前，JavaScript 會把函式宣告放進記憶體裡面，這樣做的優點是：可以在程式碼宣告該函式之前使用它。
     </div>

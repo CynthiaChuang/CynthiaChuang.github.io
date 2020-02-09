@@ -29,7 +29,7 @@ $ git push -f origin <rbranch>:<lbranch>
 **使用前請注意！**`-f` 是個非常危險的指令，它可以無視一切先來後到的規則，讓你的 commit，直接取代線上所有內容。不是讓團隊進度付之一炬，不然就是像這些 Jenkins 的開發人員一樣[不小心強制更新了 150 多個 github repos](https://groups.google.com/forum/#!searchin/jenkinsci-dev/force$20push/jenkinsci-dev/-myjRIPcVwU/mrwn8VkyXagJ)。真的做了你應該會被組員拖去套麻布袋 XD
 <br>
 
-<div class="note info"> 
+<div class="alert info"> 
 <div class="head">強烈建議</div>
 1. 用在只有自己一個人的 Project 或 Branch。<br>
 2. 務必確認送出的內容與遠端分支。<br>

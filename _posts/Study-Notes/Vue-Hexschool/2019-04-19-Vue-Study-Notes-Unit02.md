@@ -90,7 +90,7 @@ var app2 = new Vue({
 >(found in Root)
 
 <br>
-<div class="note info">
+<div class="alert info">
 前面章節介紹的都是<b>直接在網頁上運行</b>，初始化的方法直接用 new Vue 就能夠運行，屬於基本觀念。 <br>
 
 後面章節會介紹透過 <b>Webpack 編譯</b>，才會看到使用 export default 的相關方法進行初始化。
@@ -124,7 +124,7 @@ v-text 和 Mustache 語法起到的效果是一樣的。同樣的，動態修改
 ```
 
 <br> 
-<div class="note warning">
+<div class="alert warning">
 重點說三次！<br>
 <b>VUE JS是以資料狀態操作畫面</b>！<br>
 <b>VUE JS是以資料狀態操作畫面</b>！<br>
@@ -240,7 +240,7 @@ var app = new Vue({
 
 請教老師這是為什麼，助教給了下列的回覆，沒有吃得透測，想說等等上完所有內容再回頭理解這句話：
 
-<div class="note info">
+<div class="alert info">
 <div class="head">助教回覆</div>
 其實你可以把 data:{ } 看成是一個物件，
 而你在 created() 內執行的動作，
@@ -250,7 +250,7 @@ var app = new Vue({
 
 <br>
 
-<div class="note info">
+<div class="alert info">
 <div class="head">2019.05.09 更新</div>
 學到後面的時候再回看這個問題，發現我當初的測試有誤，雖然在 UI 中可以顯示第一次 newText 的賦值結果，但之後的 newText 的值得更新都不會反應在 UI 上了。
 </div>

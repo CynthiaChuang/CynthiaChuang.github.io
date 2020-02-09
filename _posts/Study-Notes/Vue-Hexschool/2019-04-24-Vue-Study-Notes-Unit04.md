@@ -30,7 +30,7 @@ tags:
 1. 在 UI 上顯示變數內容，可在直接使用 ``{{}}`` 包覆變數即可顯示。
 2. 在 Vue 中無法直接使用 ``{{}}`` 插入一段 **HTML** 語法，該語法會直接轉成純文字後顯示，若要插入 HTML 語法請使用 **v-html**。
     <br> 
-    <div class="note warning">
+    <div class="alert warning">
     <div class="head">注意</div>
     在網站上動態渲染任意 HTML 是非常危險的，因為容易導致 XSS 攻擊。因此只在可信內容上使用 v-html，永不用在使用者提交的內容（例如：使用者留言）上。
     </div>
@@ -109,7 +109,7 @@ tags:
 2. **Key**  
     根據[文件](https://cn.vuejs.org/v2/guide/list.html#key)表示，v-for 正在更新**已渲染過**的元素列表時，需要特別注意它默認用 **就地複用** 策略。
     <br>
-    <div class="note info">
+    <div class="alert info">
     <div class="head">就地複用</div>
     所謂的就地複用指的是，如果數據項的順序被改變，Vue 不會移動 DOM 元素來匹配數據項的順序，而是直接重複使用原本位置上的元素。
     </div>

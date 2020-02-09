@@ -17,7 +17,7 @@ tags:
 ## 疑問
 在 Intersection-based Routing For Urban Vehicular Communications With Traffic-light Considerations 一文中所述
 
-<div class="note info"> 
+<div class="alert info"> 
 <b>Greedy forwarding together</b> with <b>carry-and-forward</b> is regarded as a promising solution to conquer the problem of frequent disconnection for packet forwarding in VANETs.
 tatic/hanlp.properties <br>
 </div>

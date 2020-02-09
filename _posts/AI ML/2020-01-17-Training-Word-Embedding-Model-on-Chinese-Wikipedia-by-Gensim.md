@@ -77,7 +77,7 @@ $ pip install pyhanlp
 最後紀錄一下我所使用的 pyhanlp 版號，我有一陣子沒更新了說，[1.x branch](https://github.com/hankcs/HanLP/tree/1.x) 最後的版號應該是 v1.7.6 吧
 
 
-<div class="note info"> 
+<div class="alert info"> 
 <div class="head">hanlp --version</div>
 jar  1.6.8: /py3.6/lib/python3.6/site-packages/pyhanlp/static/hanlp-1.6.8.jar <br>
 data 1.6.8: /py3.6/lib/python3.6/site-packages/pyhanlp/static/data <br>

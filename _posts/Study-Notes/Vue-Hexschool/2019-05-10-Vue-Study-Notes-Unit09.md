@@ -77,7 +77,7 @@ Vue Cli 3.x 的補充課程：13. Vue Cli 3.0 <-- 待補充
 
 ## Vue Cli 所產生的資料夾結構說明
 
-<div class="note info">
+<div class="alert info">
 下面幾節的程式架構與檔案，都是使用 webpack 這個 sampleName 所建構出來的。也就說剛剛 init 是下所產生出來的專案。
 </div>
 

@@ -19,7 +19,7 @@ tags:
  
 <br> 
  
-<div class="note info"> 
+<div class="alert info"> 
 <div class="head">2020-02-08 補充</div>
 除了 Sci-Hub 外，Citationsy 有提供<a href="https://citationsy.com/blog/download-research-papers-scientific-articles-free-scihub/">其他可以下載論文的網站</a>， 而 <a href="https://citationsy.com/">Citationsy</a> 本身也有提供類似的服務。
 </div>

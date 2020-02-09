@@ -1,47 +1,47 @@
-// note
+// alert
 // --------------------------------------------------
 // Default
-$note-default-border        : $grey-dim;
-$note-default-bg            : $gainsboro;
-$note-default-text          : $note-default-border;
-$note-default-icon          : "\f0a9";
+$alert-default-border        : $grey-dim;
+$alert-default-bg            : $gainsboro;
+$alert-default-text          : $alert-default-border;
+$alert-default-icon          : "\f0a9";
 
 // Primary
-$note-primary-border        : #6f42c1;
-$note-primary-bg            : #f5f0fa;
-$note-primary-text          : $note-primary-border;
-$note-primary-icon          : "\f055";
+$alert-primary-border        : #6f42c1;
+$alert-primary-bg            : #f5f0fa;
+$alert-primary-text          : $alert-primary-border;
+$alert-primary-icon          : "\f055";
 
 // Info
-$note-info-border           : $blue;
-$note-info-bg               : #eef7fa;
-$note-info-text             : $note-info-border;
-$note-info-icon             : "\f05a";
+$alert-info-border           : $blue;
+$alert-info-bg               : #eef7fa;
+$alert-info-text             : $alert-info-border;
+$alert-info-icon             : "\f05a";
 
 // Success
-$note-success-border        : #5cb85c;
-$note-success-bg            : #eff8f0;
-$note-success-text          : $note-success-border;
-$note-success-icon          : "\f058";
+$alert-success-border        : #5cb85c;
+$alert-success-bg            : #eff8f0;
+$alert-success-text          : $alert-success-border;
+$alert-success-icon          : "\f058";
 
 // Warning
-$note-warning-border        : #f0ad4e;
-$note-warning-bg            : #fdf8ea;
-$note-warning-text          : $note-warning-border;
-$note-warning-icon          : "\f06a";
+$alert-warning-border        : #f0ad4e;
+$alert-warning-bg            : #fdf8ea;
+$alert-warning-text          : $alert-warning-border;
+$alert-warning-icon          : "\f06a";
 
 // Danger
-$note-danger-border         : #d9534f;
-$note-danger-bg             : #fcf1f2;
-$note-danger-text           : $note-danger-border;
-$note-danger-icon           : "\f056";
+$alert-danger-border         : #d9534f;
+$alert-danger-bg             : #fcf1f2;
+$alert-danger-text           : $alert-danger-border;
+$alert-danger-icon           : "\f056";
 
 // highlighting  colors
 // --------------------------------------------------
 $highlighting-default              : #e6fcf2;
-$highlighting-success              : $note-success-bg;
-$highlighting-warning              : $note-warning-bg ;
-$highlighting-danger               : $note-danger-bg ;
+$highlighting-success              : $alert-success-bg;
+$highlighting-warning              : $alert-warning-bg ;
+$highlighting-danger               : $alert-danger-bg ;
 
 // image text
 // --------------------------------------------------

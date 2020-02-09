@@ -43,7 +43,7 @@ beforeMount(){
   alert('beforeMount! ${this.text}');
 },
 ```
-<div class="note danger">
+<div class="alert danger">
 <div class="head">注意</div>
 不要在選項屬性上使用<b>箭頭函數</b>！<br>
 不要在選項屬性上使用<b>箭頭函數</b>！<br>

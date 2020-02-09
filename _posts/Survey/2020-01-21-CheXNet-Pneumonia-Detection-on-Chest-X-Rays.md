@@ -53,7 +53,7 @@ tags:
 ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影像（約 42G），研究人員對數據採用 NLP 方法從病例報告中提取關鍵字對影像進行標註，1-14 類分別對應 14 種肺部疾病，第 15 類表示未發現疾病。據稱，該數據庫使用 NLP 標註準確率超過 90%。
 <br>
 
-<div class="note info"> 
+<div class="alert info"> 
 關於資料標註的相關研究，請參考 <a href="https://arxiv.org/abs/1705.02315">X. Wang, Y. Peng, L. Lu, Z. Lu, M. Bagheri, and  R.M. Summers. ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases. 2017 </a>。ChestX-ray14 Data 的描述，請看論文的附件 B 。
 </div>
 
@@ -199,7 +199,7 @@ class DenseNet121(nn.Module):
 
 根據 ptrtoch 版本的 ChexNet 實做，要達到與論文的相同的效能大約需要：
 
-<div class="note info"> 
+<div class="alert info"> 
 The training was done using single Tesla P100 GPU and took approximately 22h.
 </div>
 <br>
