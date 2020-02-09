@@ -14,7 +14,7 @@ tags:
 ## 皮書
 通常與顏色詞組合成一個固定短語，其中顏色詞多指其封皮顏色，如白皮書、紅皮書...等。
 
-這類「<span class='label'>某顏色+皮書</span>」的出版物，通常用來指一個政府或組織機構就某一領域正式發表的重要文件或報告。各色皮書根據顏色不同，一般都具有不同的含義，但其對應關係並沒有硬性規定，比較像是約定成俗的用法。
+這類「<span class='highlighting'>某顏色+皮書</span>」的出版物，通常用來指一個政府或組織機構就某一領域正式發表的重要文件或報告。各色皮書根據顏色不同，一般都具有不同的含義，但其對應關係並沒有硬性規定，比較像是約定成俗的用法。
 
 因皮書性質帶有的權威含義，現在大量研究機構會給所發表的研究報告冠以**皮書**之名，來暗示其看法和觀點具有一定的代表性和權威性。
 
@@ -29,7 +29,7 @@ tags:
 <br><br>
 
 ## 白皮書
-白皮書是最早使用**皮書**一詞的，最早起源於英美政府，因用白色羊皮作封面而得名，專指<span class='label'>政府發布的重要文件和報告</span>，或是<span class='label'>具有權威性的報告書或指導性文本</span>作品。
+白皮書是最早使用**皮書**一詞的，最早起源於英美政府，因用白色羊皮作封面而得名，專指<span class='highlighting'>政府發布的重要文件和報告</span>，或是<span class='highlighting'>具有權威性的報告書或指導性文本</span>作品。
 
 白皮書一般被視為政府對國民正式發佈資訊和政策的手段，如必須定期向全民公布的國防白皮書，即[國防報告](https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%98%B2%E5%A0%B1%E5%91%8A%E6%9B%B8)，世界各國皆會定期或不定期發表國防白皮書。
 
@@ -43,7 +43,7 @@ tags:
 
 <br> 另外，白皮書一詞指的可能是一本書，但也可能是一篇文章。在中文裡，WHITE PAPER 與 WHITE BOOK 均被譯做白皮書，但兩者本質略有區別。在英國，WHITE PAPER，主要指政府發表的短篇幅報告。而 WHITE BOOK 篇幅較長，內容更為充實，更像是有關重大事務的官方報告書。不過，除英國外，其他國家在使用時，並未加嚴格區分。
 
-<br> 但，自 1990 年代初以來，白皮書一詞不再局限於官方文件，部分企業使用白皮書一詞作為<span class='label'>公司產品或服務的相關文件的正式名稱</span>，算是另外一種意義上的官方文件，雖然此官方非彼官方啦 XDDDD
+<br> 但，自 1990 年代初以來，白皮書一詞不再局限於官方文件，部分企業使用白皮書一詞作為<span class='highlighting'>公司產品或服務的相關文件的正式名稱</span>，算是另外一種意義上的官方文件，雖然此官方非彼官方啦 XDDDD
 
 <center> <img src="https://i.imgur.com/0PW7mcn.jpg" alt="企業白皮書"></center>
 <center class="imgtext">企業白皮書（圖片來源:截圖自 <a href="https://aws.amazon.com/tw/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc" class="imgtext">AWS</a>、<a href="https://azure.microsoft.com/zh-tw/services/genomics/" class="imgtext">MS Ａzure</a>）</center>
@@ -56,18 +56,18 @@ tags:
 <center class="imgtext">藍皮書計劃 Project Blue Book（圖片來源: <a href="https://forum.gamer.com.tw/C.php?bsn=60481&snA=4027" class="imgtext">巴哈姆特</a>）</center>
 <br>
 
-拉回來繼續，在國外藍皮書一般是用來指<span class='label'>年鑑</span>、<span class='label'>採購指南</span>或其他<span class='label'>統計與資訊的彙編</span>，例如美國的《The Blue Book of Building and Construction》，是一本列載了建設公司訊息的買家指南、英國的《Colonial Blue Books》，則是記載每年英國從的每個殖民地所收集各種各樣的詳細資料。
+拉回來繼續，在國外藍皮書一般是用來指<span class='highlighting'>年鑑</span>、<span class='highlighting'>採購指南</span>或其他<span class='highlighting'>統計與資訊的彙編</span>，例如美國的《The Blue Book of Building and Construction》，是一本列載了建設公司訊息的買家指南、英國的《Colonial Blue Books》，則是記載每年英國從的每個殖民地所收集各種各樣的詳細資料。
 
 此外如：美國政府官員名錄、社會名人錄、國務院每月發行的駐美外交人員銜名錄，以及美國一些大學做試題答案用的小冊子也都被稱為藍皮書。
 
-後有引申為由<span class='label'>第三方或專業機構完成的對某領域的年度研究報告</span>，如：《日本外交藍皮書》是記錄此前一年內國際局勢和外交活動的年度報告書、中國常見的《經濟藍皮書》系列...等。
+後有引申為由<span class='highlighting'>第三方或專業機構完成的對某領域的年度研究報告</span>，如：《日本外交藍皮書》是記錄此前一年內國際局勢和外交活動的年度報告書、中國常見的《經濟藍皮書》系列...等。
 
 另外也[有人](https://kknews.cc/zh-tw/news/zapz3na.html)將 SOP 視為藍皮書，是將年度操作經驗寫作文件的解釋嗎？ 
 
 <br><br>
 
 ## 紅皮書 
-紅色有威脅、警戒的意思，因此報告書一般用於<span class='label'>警示危機</span>。最有名的紅皮書大概是這本《國際自然保護聯盟瀕危物種紅色名錄》：
+紅色有威脅、警戒的意思，因此報告書一般用於<span class='highlighting'>警示危機</span>。最有名的紅皮書大概是這本《國際自然保護聯盟瀕危物種紅色名錄》：
 
 <center> <img src="https://i.imgur.com/RWlVCB2.gif" alt="國際自然保護聯盟瀕危物種紅色名錄"></center>
 <center class="imgtext">國際自然保護聯盟瀕危物種紅色名錄（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%87%AA%E7%84%B6%E4%BF%9D%E8%AD%B7%E8%81%AF%E7%9B%9F%E7%80%95%E5%8D%B1%E7%89%A9%E7%A8%AE%E7%B4%85%E8%89%B2%E5%90%8D%E9%8C%84" class="imgtext">維基百科</a>）</center>
@@ -87,12 +87,12 @@ tags:
 <br><br>
 
 ## 黃皮書 
-黃皮書指的<span class='label'>警告性報告書</span>，一般用於<span class='label'>專家對某領域中的問題所作的分析和預測</span>，如中國著的《2007年：世界經濟形勢分析與預測》用來分析世界經濟形勢一書。
+黃皮書指的<span class='highlighting'>警告性報告書</span>，一般用於<span class='highlighting'>專家對某領域中的問題所作的分析和預測</span>，如中國著的《2007年：世界經濟形勢分析與預測》用來分析世界經濟形勢一書。
 <center> <img src="https://i.imgur.com/DJzTp1i.jpg?1" alt="2006~2007年：世界經濟形勢分析與預測"></center>
 <center class="imgtext">2006~2007年：世界經濟形勢分析與預測（圖片來源: <a href="https://www.books.com.tw/products/CN10092757" class="imgtext">博客來</a>）</center>
 <br>
 
-<br> 不過一般說黃皮書，其實多代指 **<span class='label'>國際預防接種證明書</span>**（International Certificate of Vaccination or Prophylaxis），是指由各國的衛生機關依照世界衛生組織的規定及證明書格式所核發的預防接種證明書。部分國家規定入出境旅客應提供特定疫苗之國際預防接種證明書，旅客必須提早接種疫苗，並且取得證明書。
+<br> 不過一般說黃皮書，其實多代指 **<span class='highlighting'>國際預防接種證明書</span>**（International Certificate of Vaccination or Prophylaxis），是指由各國的衛生機關依照世界衛生組織的規定及證明書格式所核發的預防接種證明書。部分國家規定入出境旅客應提供特定疫苗之國際預防接種證明書，旅客必須提早接種疫苗，並且取得證明書。
 
 <center> <img src="https://imgur.com/5jSFshO.png" alt="國際預防接種證明書"></center>
 <center class="imgtext">國際預防接種證明書（圖片來源: <a href="https://www.cdc.gov.tw/Category/ListContent/WWlwdlIzM2IzMksrZHNNSTJlSXJJZz09?uaid=UnNINXFvNGttYmZKZlU1UHJvQ09UUT09" class="imgtext">衛生福利部疾病管制署</a>）</center>
@@ -100,13 +100,13 @@ tags:
 <br><br>
 
 ## 綠皮書 
-《牛津英漢詞典》將綠皮書定義為「<span class='label'>為了鼓勵討論而發布的政府提案的初步報告</span>」。在歐盟、大英國協、香港與美國地區，綠皮書是政府就某一重要政策或議題而正式發表的<span class='label'>諮詢文件</span>，其中所包含的議題通常還處於討論階段，沒有明確的結論。
+《牛津英漢詞典》將綠皮書定義為「<span class='highlighting'>為了鼓勵討論而發布的政府提案的初步報告</span>」。在歐盟、大英國協、香港與美國地區，綠皮書是政府就某一重要政策或議題而正式發表的<span class='highlighting'>諮詢文件</span>，其中所包含的議題通常還處於討論階段，沒有明確的結論。
 
 如 1991 年，歐盟公開的[《工業設計法律保護綠皮書》](http://aei.pitt.edu/1785/)，不久後就收到來自各界的建議，並於 1992 年召開會議就《工業設計法律保護綠皮書》所收到的建議進行討論。
 
 <br>除上述定義外，我另外還查到其餘兩種定義：
-1. 一般用於專家對<span class='label'>人民生活領域所作的分析報告</span>。
-2. 是關於<span class='label'>樂觀前景</span>的研究報告。
+1. 一般用於專家對<span class='highlighting'>人民生活領域所作的分析報告</span>。
+2. 是關於<span class='highlighting'>樂觀前景</span>的研究報告。
 
 <br> 與第二個定義，**人民生活領域**，相關的報告有 2006 年歐盟的《歐洲的可持續、具競爭力及安全的能源策略》、2010年《中國殯葬事業發展報告》與 2013 年中國的《氣候變化綠皮書：應對氣候變化報告》...等。但就後續報導與相關條目看來，歐盟的其實偏向第一個定義 - **諮詢文件**，中國的兩份就真的是分析報告了。
 
@@ -126,14 +126,14 @@ P.S. 中國的兩份我找不到後續的討論資料，也有可能是沒公開
 <br><br>
 
 ## 黑皮書 
-黑皮書一般用於<span class='label'>對某領域發表的批評或批評性闡述</span>，例如：1998 年的《資本主義黑皮書》，是一本講述資本主義的罪行的書籍、1943 年《波蘭猶太人黑皮書》，則是波蘭猶太難民和移民協會關於波蘭猶太人大屠殺的聲明。
+黑皮書一般用於<span class='highlighting'>對某領域發表的批評或批評性闡述</span>，例如：1998 年的《資本主義黑皮書》，是一本講述資本主義的罪行的書籍、1943 年《波蘭猶太人黑皮書》，則是波蘭猶太難民和移民協會關於波蘭猶太人大屠殺的聲明。
 
 黑皮書在國際上罕見。因為 BLACK BOOK 在英語中通常是指**黑名單**或**記過簿**，所以英語國家避免使用黑皮書。
 
 <br><br>  
     
 ## 橘皮書 / 橙皮書
-橘皮書一般帶有<span class='label'>預警</span>，紀載需要<span class='label'>引起注意的內容</span>，像是 FDA 出版的《Approved Drug Products with Therapeutic Equivalence Evaluations》（具有治療等效性評價的批准藥品）、《聯合國危險貨物運輸建議書》又稱聯合國橘皮書，是有關危險貨物運輸法規的最高指導原則。這些書籍都是屬於橘皮書。
+橘皮書一般帶有<span class='highlighting'>預警</span>，紀載需要<span class='highlighting'>引起注意的內容</span>，像是 FDA 出版的《Approved Drug Products with Therapeutic Equivalence Evaluations》（具有治療等效性評價的批准藥品）、《聯合國危險貨物運輸建議書》又稱聯合國橘皮書，是有關危險貨物運輸法規的最高指導原則。這些書籍都是屬於橘皮書。
 
 <center> <img src="https://i.imgur.com/BGaY19w.jpg?1" alt="聯合國危險貨物運輸建議書"></center>
 <center class="imgtext">聯合國危險貨物運輸建議書（圖片來源: <a href="https://www.amazon.com/Recommendations-Transport-Dangerous-Goods-Regulations/dp/9211391369" class="imgtext">amazon</a>）</center>

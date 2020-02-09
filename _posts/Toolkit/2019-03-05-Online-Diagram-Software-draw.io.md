@@ -14,7 +14,7 @@ tags:
 <!--more-->
 <br> 
 
-說到流程圖繪製軟體，我用的比較順手的只有三套 <span class='label'>Microsoft 的 Visio</span>、<span class='label'>Cacoo</span> 與 <span class='label'>draw.io</span>。
+說到流程圖繪製軟體，我用的比較順手的只有三套 <span class='highlighting'>Microsoft 的 Visio</span>、<span class='highlighting'>Cacoo</span> 與 <span class='highlighting'>draw.io</span>。
 
 只是 Visio 只能在 Windows 上使用，而且需要付費，對偶而用用的我特地買一套很不划算。而 Cacoo 是很好用，但畫圖還好，但在畫流程圖時不小的為啥我畫出來的都有點可愛（?），不會形容就是看起來不太專業（搔頭）。
 

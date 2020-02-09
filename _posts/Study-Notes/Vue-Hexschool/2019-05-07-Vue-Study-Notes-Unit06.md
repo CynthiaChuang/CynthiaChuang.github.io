@@ -32,11 +32,11 @@ tags:
 ## 元件概念介紹
 1. 元件可獨立運作且可重複使用。
 
-2. 元件中的資料皆為<span class='label'>獨立</span>的。
+2. 元件中的資料皆為<span class='highlighting'>獨立</span>的。
 
-3. 父元件傳遞資料給子元件，使用 <span class='label'>props</span> 傳遞。父元件更新資料時，props 會<span class='label'>即時</span>將資料更新到內層元件。
+3. 父元件傳遞資料給子元件，使用 <span class='highlighting'>props</span> 傳遞。父元件更新資料時，props 會<span class='highlighting'>即時</span>將資料更新到內層元件。
 
-4. 子元件若要傳遞給父元件，是使用 <span class='label'>emit</span>，必須透過<span class='label'>e觸發事件mit</span>才會能將資料傳到父元件，相對 props 來說它並非即時的。
+4. 子元件若要傳遞給父元件，是使用 <span class='highlighting'>emit</span>，必須透過<span class='highlighting'>e觸發事件mit</span>才會能將資料傳到父元件，相對 props 來說它並非即時的。
 
 5. SPA（single page application）也是透過元件製作。
 
@@ -101,7 +101,7 @@ Vue.component('row-comp', {
 
 以上例來說，**\<tbody\>** 的標籤中正常來說只能放 **\<tr\>**，如果放了自製的 **\<row-comp\>**，會被視作無效的內容提升到外部，並導致最終渲染結果出錯。
 
-<span class='label'>簡單來說就是資料顯示的出來，但 UI 卻會不合預期。</span>
+<span class='highlighting'>簡單來說就是資料顯示的出來，但 UI 卻會不合預期。</span>
 <br> 
 
 這種情況可以使用 Vue 的 **[is](https://cn.vuejs.org/v2/api/#is)** 來動態切換模板。在一開始載入 HTML 模板會正確，但在開始運行以後才動態的方式使用該屬性的標籤替換成指定的 component 。
@@ -119,13 +119,13 @@ Vue.component('row-comp', {
 </div>
 ```
 
-使用下列方式註冊的 component 方式屬於 <span class='label'>全域註冊 （Registration）</span>。
+使用下列方式註冊的 component 方式屬於 <span class='highlighting'>全域註冊 （Registration）</span>。
 ```javascript
 Vue.component(tagName, options)
 ```
 <br>
 
-若要限定 component 在某個 Vue app 下才使用，應使用 <span class='label'>局部註冊（Local Registration）</span>：
+若要限定 component 在某個 Vue app 下才使用，應使用 <span class='highlighting'>局部註冊（Local Registration）</span>：
 
 ```javascript
 <script>
@@ -149,9 +149,9 @@ Vue.component(tagName, options)
 
 ## 使用 function return 建構資料格式 
 
-在 component 的 data 必須是一個<span class='label'>函數</span>，因此必須使用 function return 才能正常運作。
+在 component 的 data 必須是一個<span class='highlighting'>函數</span>，因此必須使用 function return 才能正常運作。
 
-這是為了確保每個 instance 可以維護一份<span class='label'>獨立的拷貝物件</span>，避免修改一個 instance 的數值後影響到其他所有的 instance。
+這是為了確保每個 instance 可以維護一份<span class='highlighting'>獨立的拷貝物件</span>，避免修改一個 instance 的數值後影響到其他所有的 instance。
 
 ```javascript
 Vue.component(‘counter-component’, {
@@ -166,7 +166,7 @@ Vue.component(‘counter-component’, {
 <br><br>
 
 ## props 基本觀念
-props 為<span class='label'>父元件向子元件</span>傳遞資料的方式。在子元件中設定所要傳入的變數名稱，在 HTML 中使用該元件時使用該變數名稱即可將資料傳入。
+props 為<span class='highlighting'>父元件向子元件</span>傳遞資料的方式。在子元件中設定所要傳入的變數名稱，在 HTML 中使用該元件時使用該變數名稱即可將資料傳入。
 
 ```html
 <photo img-url='圖片 url'></photo>
@@ -197,7 +197,7 @@ props 為<span class='label'>父元件向子元件</span>傳遞資料的方式�
 ## props 使用上的注意事項
 
 1. **單向數據流**  
-    Vue 在不同 component 間強制使用<span class='label'>單向數據流</span>，父元件可以向子元件傳遞數據，但是子元件<span class='label'>不能直接修改</span>父元件的狀態。不然你會得到下列的錯誤訊息：
+    Vue 在不同 component 間強制使用<span class='highlighting'>單向數據流</span>，父元件可以向子元件傳遞數據，但是子元件<span class='highlighting'>不能直接修改</span>父元件的狀態。不然你會得到下列的錯誤訊息：
 
 	>vendor.js:600 [Vue warn]: Avoid mutating a prop directly since the value will be overwritten whenever the parent component re-renders. Instead, use a data or computed property based on the prop's value. Prop being mutated: "imgUrl"
     
@@ -323,7 +323,7 @@ props: {
 
 ## Slot 元件插槽
 
-在一般情況下若直接在子元件標籤內新增內容的話會被模版直接替換，而看不到輸入的內容。因此若想讓父元件替換子元件部分內容，或想讓元件可以依各頁面需求進行客製化，應該使用 <span class='label'>slot</span>。
+在一般情況下若直接在子元件標籤內新增內容的話會被模版直接替換，而看不到輸入的內容。因此若想讓父元件替換子元件部分內容，或想讓元件可以依各頁面需求進行客製化，應該使用 <span class='highlighting'>slot</span>。
 <br>
 
 ### 單個插槽（Single Slot）

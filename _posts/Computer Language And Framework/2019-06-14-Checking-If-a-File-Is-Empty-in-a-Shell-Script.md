@@ -13,7 +13,7 @@ tags:
 <br> 
 
 ## 1. **find** 
-直覺想到就是用 find 指令，加上 <span class='label'>empty</span> ，會回傳為空的檔案名稱，否則回傳空字串。
+直覺想到就是用 find 指令，加上 <span class='highlighting'>empty</span> ，會回傳為空的檔案名稱，否則回傳空字串。
 
 ```bash
 result=`find /home/user -type f  -empty -name  file.txt`
@@ -26,7 +26,7 @@ fi
 <br><br> 
 
 ## 2. **Shell Script -s 參數**
-除了用 find 指令外，另外找到一個 <span class='label'>-s</span>  參數，它會判斷若檔案存在且內容為空，則回傳 true ，否則回傳 false。
+除了用 find 指令外，另外找到一個 <span class='highlighting'>-s</span>  參數，它會判斷若檔案存在且內容為空，則回傳 true ，否則回傳 false。
 
 ```bash
 filename='/home/user/file.txt'

@@ -10,15 +10,15 @@ tags:
 
 好久沒寫網誌了，Blogger 已經雜草叢生了（笑）
  
-想當初寫網誌最討厭的一見事情就是 — <span class='label'>排版</span>，我花在排版的時間可能比寫文章還久阿，我都直接用 html 寫了，它排版還是可以跑掉....真是的...
+想當初寫網誌最討厭的一見事情就是 — <span class='highlighting'>排版</span>，我花在排版的時間可能比寫文章還久阿，我都直接用 html 寫了，它排版還是可以跑掉....真是的...
  
-不過這一兩年接觸到了 <span class='label'>[Markdown](https://markdown.tw/)</span>，它的語法可以減少不少排版時間的時間，所以最近又興起了把網誌撿回來的念頭，希望這次可以持之以恆阿...
+不過這一兩年接觸到了 <span class='highlighting'>[Markdown](https://markdown.tw/)</span>，它的語法可以減少不少排版時間的時間，所以最近又興起了把網誌撿回來的念頭，希望這次可以持之以恆阿...
 
 <!--more-->
 <br> 
 
 ## 在 Blogger 寫 Markdown
-不過想把網誌撿回來好像也沒有那麼的容易？ <span class='label'>因為 Blogger 不支援 Markdown！</span> 還好網路上有不少人有相同需求，感謝他們的分享，我只需要複製貼上就好XD。
+不過想把網誌撿回來好像也沒有那麼的容易？ <span class='highlighting'>因為 Blogger 不支援 Markdown！</span> 還好網路上有不少人有相同需求，感謝他們的分享，我只需要複製貼上就好XD。
 
 基本上，就是開個外掛，然後把下面的 script 貼上就是了，實際操作可以參考[卡卡米的記憶體](http://etrex.blogspot.com/2017/03/blogger-code-markdown-prettyprint.html)的說明。
 

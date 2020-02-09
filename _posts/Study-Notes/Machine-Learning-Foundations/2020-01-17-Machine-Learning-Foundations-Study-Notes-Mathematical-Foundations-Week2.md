@@ -24,7 +24,7 @@ tags:
 
 ## 感知器 Perceptron
 
-開始上課前，我先岔開查了<span class='label'>感知器（Perceptron）</span>，這個詞所代表的意思與定義。
+開始上課前，我先岔開查了<span class='highlighting'>感知器（Perceptron）</span>，這個詞所代表的意思與定義。
 
 感知器這個名詞緣起於類神經網路時期，這個演算法的概念跟真實的生物神經元傳遞訊號的機制類似。
 
@@ -46,7 +46,7 @@ $$
 X = \{x_1, x,2, ... ,x_d\}
 $$
 
-銀行會對每個條件進行評分，也就是依照每個條件的正/負相關性給予給與<span class='label'>權重</span>，例如：年收入的權重給予 1，負債的權重給予 -1...等。而權重也可以用向量來表示：
+銀行會對每個條件進行評分，也就是依照每個條件的正/負相關性給予給與<span class='highlighting'>權重</span>，例如：年收入的權重給予 1，負債的權重給予 -1...等。而權重也可以用向量來表示：
 
 $$
 W = \{w_1,w_2,...,w_d\}
@@ -133,7 +133,7 @@ $$
 
 但我們可使用餵入的資料來協助找到最好的 $g$ ，先忽略錯誤標記及存在雜訊的情況下，我們可以假設所輸入的資料 $x$ 在經由 $f(x)$ 後，可以得到一輸出結果 $y$。 如果我們可以從 $H$ 中找到一條 $g$ ，對每個點其輸出結果與 $f$ 完全一致，我們則認為 $g$ 是個不錯的結果。
 
-因此在這邊對於合適線段的定義應該是，<span class='label'>找到一條只直線 $g$，使資料集中所有點的分類結果與本身的</span> <span class='label'> Label 一致</span>。
+因此在這邊對於合適線段的定義應該是，<span class='highlighting'>找到一條只直線 $g$，使資料集中所有點的分類結果與本身的</span> <span class='highlighting'> Label 一致</span>。
 
 <br>
 
@@ -186,7 +186,7 @@ $$
 
 ## Guarantee of PLA
 
-PLA 演算法停止必須滿足訓練集所有樣本都是<span class='label'>線性可分的（linear separable）</span>，也就是說平面上必須至少存在一條線的，並且使的線的一側全為藍點，另一側全為紅點。
+PLA 演算法停止必須滿足訓練集所有樣本都是<span class='highlighting'>線性可分的（linear separable）</span>，也就是說平面上必須至少存在一條線的，並且使的線的一側全為藍點，另一側全為紅點。
 <br>
 <center> <img src="https://lh3.googleusercontent.com/proxy/Ye7LGG-0fNVwehCXHyoR4HYxpSCVFKqx5kUnOeWyJhV3Aeen6nqY7-Omqw99UYiy6f9x=w1200-h630-p-k-no-nu" alt="線性可分"></center>
 <center class="imgtext">線性可分（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/XckQ1/guarantee-of-pla" class="imgtext">課程截圖</a>）</center>
@@ -226,7 +226,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<span class='label'>�
 
 <br>
 
-2. 向量內積的增長可能原因有二：<span class='label'>向量長度增加或向量夾縮小</span>。為排除向量長度增長對向量內積增加的影響，進行下列證明：  
+2. 向量內積的增長可能原因有二：<span class='highlighting'>向量長度增加或向量夾縮小</span>。為排除向量長度增長對向量內積增加的影響，進行下列證明：  
 
     $\because$ 在運行 $t$ 次時，存在一個分類錯誤的點  $(X_{n(t)}, Y_{n(t)})$ ，使的 $sign(W_t^T, X_{n(t)}) \neq Y_{n(t)}$  
 
@@ -332,13 +332,13 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<span class='label'>�
 
    <br>
 
-    從最後一條式子看來T是有上限的，因此在線性可分的情況下，<span class='label'>PLA 最終會停止</span>。
+    從最後一條式子看來T是有上限的，因此在線性可分的情況下，<span class='highlighting'>PLA 最終會停止</span>。
  
 <br><br>
 
 ## Non-Separable Data
 
-PLA 演算法的優缺點相當清楚，優點是簡易實做，可以適用於任何維度，缺點是<span class='label'>資料必須是線性可分的</span>，可是是否為線性可分通常<span class='label'>無法事前得知</span>。即使資料是線性可分的，但因為時間複雜度高，執行時間也會耗費相當久。
+PLA 演算法的優缺點相當清楚，優點是簡易實做，可以適用於任何維度，缺點是<span class='highlighting'>資料必須是線性可分的</span>，可是是否為線性可分通常<span class='highlighting'>無法事前得知</span>。即使資料是線性可分的，但因為時間複雜度高，執行時間也會耗費相當久。
 <br>
 
 另一種情況是 $f$ 產生的資料本身是線性可分，但因雜訊（noise）、輸入錯誤...等因素，最終產生出線性不可分的資料，也會使得 PLA 無法停止。

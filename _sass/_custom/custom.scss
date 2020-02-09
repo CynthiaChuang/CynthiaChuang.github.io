@@ -169,22 +169,22 @@
 // note
 // ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl
 // --------------------------------------------------
-.post-body .label {
+.post-body .highlighting {
   padding: 0 2px;
   white-space: pre-line;
   border-radius: 2px;
-  background-color: $label-default;
+  background-color: $highlighting-default;
 
   &.success {
-    background-color: $label-success;
+    background-color: $highlighting-success;
   }
 
   &.warning {
-    background-color:$label-warning ;
+    background-color:$highlighting-warning ;
   }
    
   &.danger {
-    background-color: $label-danger;
+    background-color: $highlighting-danger;
   }
 }
 

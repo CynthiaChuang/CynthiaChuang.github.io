@@ -32,20 +32,20 @@ tags:
 <br>
 
 ### **TP，True Positives**   
-其中第一個 True，表示分類正確，第二個 Positives 表示在此次篩檢將此檢體歸為 Positives，也就是被診出罹患流感的狀況。因此，True Positives 就是**診斷正確，且此人被診斷為有病**，簡單來說就是，<span class='label'>病人被診出罹患流感</span>。在本情境中共有 16 人。
+其中第一個 True，表示分類正確，第二個 Positives 表示在此次篩檢將此檢體歸為 Positives，也就是被診出罹患流感的狀況。因此，True Positives 就是**診斷正確，且此人被診斷為有病**，簡單來說就是，<span class='highlighting'>病人被診出罹患流感</span>。在本情境中共有 16 人。
 <br>
 
 ### **TN，True Negatives**   
-同理，第二個 Negatives 表示此次篩檢將此檢體<span class='label'>未</span>被診出罹患流感的狀況。因此，True Negatives 就是**診斷正確，且此人被診斷為正常**，簡單來說就是，<span class='label'>正常人沒有診出患病</span>。在本情境中共有 36 人。
+同理，第二個 Negatives 表示此次篩檢將此檢體<span class='highlighting'>未</span>被診出罹患流感的狀況。因此，True Negatives 就是**診斷正確，且此人被診斷為正常**，簡單來說就是，<span class='highlighting'>正常人沒有診出患病</span>。在本情境中共有 36 人。
 <br>
 
 ### **FP，False Positives**
-其中第一個 False，表示分類錯誤。因此，False Positives 就是**診斷錯誤，且此人被診斷為有病**，簡單來說就是，<span class='label'>正常人被誤診成罹患流感</span>。在本情境中共有 34 人。
+其中第一個 False，表示分類錯誤。因此，False Positives 就是**診斷錯誤，且此人被診斷為有病**，簡單來說就是，<span class='highlighting'>正常人被誤診成罹患流感</span>。在本情境中共有 34 人。
 <br>
 
 
 ### **FN，False Negatives**
-**診斷錯誤，且此人被診斷為正常**，簡單來說就是，<span class='label'>病人但並沒有被檢出罹患流感</span>。在本情境中共有 14 人。
+**診斷錯誤，且此人被診斷為正常**，簡單來說就是，<span class='highlighting'>病人但並沒有被檢出罹患流感</span>。在本情境中共有 14 人。
 
 <br><br>
 
@@ -53,7 +53,7 @@ tags:
 <br>
 
 ## Accuracy
-中文譯作<span class='label'>準確率</span>，其定義是：對於給定的測試數據集，分類器正確分類的樣本數與總樣本數之比。白話來說就是，<span class='label'>模型預測正確數量所佔整體的比例</span>。
+中文譯作<span class='highlighting'>準確率</span>，其定義是：對於給定的測試數據集，分類器正確分類的樣本數與總樣本數之比。白話來說就是，<span class='highlighting'>模型預測正確數量所佔整體的比例</span>。
 
 其公式為： 
 
@@ -72,7 +72,7 @@ $$
 
 <br>
 
-雖然這是最常見的衡量指標，但對於<span class='label'>資料正反例不平衡</span>的狀況下，如：肺炎、癌症檢測...等，Accuracy 指標幾乎沒有不具參考價值。
+雖然這是最常見的衡量指標，但對於<span class='highlighting'>資料正反例不平衡</span>的狀況下，如：肺炎、癌症檢測...等，Accuracy 指標幾乎沒有不具參考價值。
 
 以罕見疾病檢測來說，有 100 個樣本，有 99 位是 Negative（未患病），只有 1 個 Positive（患病）。假設現在有一模型，針對所有樣本預測輸出全是 Negative，則此模型的 Accuracy 高達 $\frac{99}{100} = 0.99$。Accuracy 雖高，但這個模型幾乎報廢不能使用的。
 
@@ -87,7 +87,7 @@ $$
 
 在 Accuracy 不具參考價值的狀況下，就會採用 Precision 和 Recall 兩個指標，這兩個指標都是專注被預測為 Positive 的資料，但卻又各有所好。
 
-以 Precision 來說，中文譯名為<span class='label'>精確率</span>。顧名思義，這個指標更在意的是在預測為 Positive 的結果中，其精確性是多少。白話來說就是，<span class='label'>被預測為 Positive 的資料中，有多少是真的 Positive</span>。
+以 Precision 來說，中文譯名為<span class='highlighting'>精確率</span>。顧名思義，這個指標更在意的是在預測為 Positive 的結果中，其精確性是多少。白話來說就是，<span class='highlighting'>被預測為 Positive 的資料中，有多少是真的 Positive</span>。
 
 其公式為：  
 
@@ -97,7 +97,7 @@ $$
 
 <br>
 
-依照假定場景我們可計算，<span class='label'>被診斷成有病的人中，有多少位是真的病人</span>： 
+依照假定場景我們可計算，<span class='highlighting'>被診斷成有病的人中，有多少位是真的病人</span>： 
 
 $$
 Precision =\cfrac{16}{16+34} = 0.32
@@ -105,12 +105,12 @@ $$
 
 <br>
 
-在一般的應用中，如果更在乎的是預測出來的結果，就可以採用這個指標。看到的一個例子是<span class='label'>門禁系統</span>，它更在乎的是有否讓未經許可的人進去（也就是 FP 越小越好）
+在一般的應用中，如果更在乎的是預測出來的結果，就可以採用這個指標。看到的一個例子是<span class='highlighting'>門禁系統</span>，它更在乎的是有否讓未經許可的人進去（也就是 FP 越小越好）
 
 <br><br>
 
 ## Recall
-以 Recall 則被譯為<span class='label'>召回率</span>。我的理解是它是原本是 Positive 的資料，它能夠召回多少，也就是說<span class='label'>在原本 Positive 的資料中被預測出多少</span>。
+以 Recall 則被譯為<span class='highlighting'>召回率</span>。我的理解是它是原本是 Positive 的資料，它能夠召回多少，也就是說<span class='highlighting'>在原本 Positive 的資料中被預測出多少</span>。
 
 其公式為：  
 
@@ -120,7 +120,7 @@ $$
 
 <br>
 
-依照假定場景我們可計算，<span class='label'>在病人中真的被診斷出來的比例</span>： 
+依照假定場景我們可計算，<span class='highlighting'>在病人中真的被診斷出來的比例</span>： 
 
 $$
 Recall =\cfrac{16}{16+14} = 0.53
@@ -175,7 +175,7 @@ FPR = \cfrac{FP}{FP+TN}，  TPR = \cfrac{TP}{TP+FN}
 $$
 
 
-<br> 因此在空間中若存在一點離<span class='label'>左上角越近</span>的點預測準確率越高。反之，離右下角越近的點，預測越不準。
+<br> 因此在空間中若存在一點離<span class='highlighting'>左上角越近</span>的點預測準確率越高。反之，離右下角越近的點，預測越不準。
 
 <center> <img src="https://i.imgur.com/G5CdWgG.png" alt="ROC Space"></center>
 <center class="imgtext">ROC空間的4個例子（圖片來源: <a href="https://zh.m.wikipedia.org/zh-tw/ROC%E6%9B%B2%E7%BA%BF" class="imgtext">維基百科</a>）</center>
@@ -188,7 +188,7 @@ $$
 
 關於這曲線的好壞與空間中單點一樣，若曲線越靠近左上角表示其效能越好。除了肉眼判斷外，也可以引入 AUC （Area Under Curve，曲線下面積）做為模型優劣的指標。
  
-一般來說，AUC 必在 0~1 之間，<span class='label'>AUC值越大的分類器，正確率越高</span>。
+一般來說，AUC 必在 0~1 之間，<span class='highlighting'>AUC值越大的分類器，正確率越高</span>。
 - **AUC = 1**  
 若線下面積為 1，代表這是一個完美分類器。當你採用這個模型時，你可以找到至少一個閾值能得出完美預測。不過絕大多數情況下完美分類器是不存在。
 
@@ -211,7 +211,7 @@ $$
 ## PR-AUC
 另外還有一個曲線，就是以 Recall 為 X 軸，Pecision 為 Y 軸，曲不同的閾值所畫的曲線。
 
-同樣的，也是線下面積越大越好，或是說曲線越靠近<span class='label'>右上角</span>越好。
+同樣的，也是線下面積越大越好，或是說曲線越靠近<span class='highlighting'>右上角</span>越好。
 
 <br><br> 
 

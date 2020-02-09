@@ -156,7 +156,7 @@ var app = new Vue({
 ```
 其中，img-fluid 是 Bootstrap4 的語法，可以將圖片寬度限制在 100 % 的寬度內。
  
-另外在後面章節有提到，<span class='label'>v-bind:src='imgSrc'</span> 可縮寫成  <span class='label'>:src='imgSrc'</span>。
+另外在後面章節有提到，<span class='highlighting'>v-bind:src='imgSrc'</span> 可縮寫成  <span class='highlighting'>:src='imgSrc'</span>。
 
 <br><br>
 
@@ -227,13 +227,13 @@ var app = new Vue({
 {% endraw %} 
 
 
-<br>另外在後面章節有提到， <span class='label'>v-on:click="reverseText"</span> 可縮寫成 <span class='label'>@click="reverseText"</span>。
+<br>另外在後面章節有提到， <span class='highlighting'>v-on:click="reverseText"</span> 可縮寫成 <span class='highlighting'>@click="reverseText"</span>。
 
 <br><br>
 
 ## 預先定義資料狀態的重要性
 
-在 Vue 中若要操作它的資料，必須要<span class='label'>先定義好它的資料結構</span>。若未事先定義，將無法綁定資料內容，會得到該變數 is not define的錯誤。且事前定義資料有利於程式的程式的維護，且有助於提升可讀性。
+在 Vue 中若要操作它的資料，必須要<span class='highlighting'>先定義好它的資料結構</span>。若未事先定義，將無法綁定資料內容，會得到該變數 is not define的錯誤。且事前定義資料有利於程式的程式的維護，且有助於提升可讀性。
 
 <br>
 不過那天寫程式時被同事提醒，忘了在 data 定義該變數，但卻發現 UI 參考的到，資料也可以進行操作。稍微檢查了一下，發現是因為是在 created 時有進行過一次初始化的動作。
@@ -259,7 +259,7 @@ var app = new Vue({
 
 ## 透過修飾符，讓 v-on 操作更簡單
 
-Vue 的官網中有一句話：<span class='label'>方法只有純粹的數據邏輯，而不是去處理 DOM 事件細節</span>。因此雖然可以在事件處理程序中調用 event 的相關操作，但還是建議使用 <span class='label'>事件修飾符</span> 處理了 DOM 事件的細節，讓事件處理程專注於程式邏輯的撰寫。
+Vue 的官網中有一句話：<span class='highlighting'>方法只有純粹的數據邏輯，而不是去處理 DOM 事件細節</span>。因此雖然可以在事件處理程序中調用 event 的相關操作，但還是建議使用 <span class='highlighting'>事件修飾符</span> 處理了 DOM 事件的細節，讓事件處理程專注於程式邏輯的撰寫。
 
 關於 v-on 所提供的事件修飾符詳見[官網文件](https://vuejs.org/v2/guide/events.html#Event-Modifiers)，舉例來說，若想移除元素預設行為可用：
 ```javascript
@@ -323,7 +323,7 @@ v-bind:class="{ '要加入的className': '判斷式'}"
 
 ## computed 運算功能
 
-computed 內的 function 內容，<span class='label'>所相依的資料有產生變動時會被觸發，重新運算結果呈現於畫面上</span>。
+computed 內的 function 內容，<span class='highlighting'>所相依的資料有產生變動時會被觸發，重新運算結果呈現於畫面上</span>。
 
 這邊 reverseText 一旦偵測到相依 this.text 資料有變動，也就是使用者於輸入框輸入文字時，v-model 就會改變 text 的內容，而 text 一旦改變就會觸發 reverseText 重新計算後並顯示於畫面上，因此可以及時到到反轉的結果。 
 {% raw %}
@@ -369,9 +369,9 @@ var app = new Vue({
 #### 3. **array 與 checkbox-array 的雙向綁定**  
 在儲值的 array 與  checkbox-array 相互綁定後，當勾選任意選項後，改選項值會被加入儲值的 array。
 
-PS.1  checkbox-array 中的每個 checkbox 是 v-model  <span class='label'>同一個</span> array。
+PS.1  checkbox-array 中的每個 checkbox 是 v-model  <span class='highlighting'>同一個</span> array。
 
-另外實作時 checkbox-array 的 value 務必設定，且必須為<span class='label'>唯一值</span>，否則 value 無法寫入儲值的 array，且複選顯示會出問題。可以事前準備一個 array 紀錄 value ，整個 checkbox-array 使用 v-for 來來改寫。
+另外實作時 checkbox-array 的 value 務必設定，且必須為<span class='highlighting'>唯一值</span>，否則 value 無法寫入儲值的 array，且複選顯示會出問題。可以事前準備一個 array 紀錄 value ，整個 checkbox-array 使用 v-for 來來改寫。
 
 ```html
 checkboxArray = []

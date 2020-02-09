@@ -51,7 +51,7 @@ $ cd codimd-container
 $ docker-compose up
 ```
 
-文件上寫的安裝指令相當簡單只有 3 條指令，執行完後，畫面上會出現 <span class="label">HTTP Server listening at port 3000</span>，此時就算啟動完成了。
+文件上寫的安裝指令相當簡單只有 3 條指令，執行完後，畫面上會出現  <span class="highlighting">HTTP Server listening at port 3000</span>，此時就算啟動完成了。
  
 但是事情通常都是沒有這麼簡單的，我有那一次安裝環境照著指令輸完就過的？每次都會踩到一堆坑 QAQ
  
@@ -233,7 +233,7 @@ ERROR:  relation "notes_shortid" already exists
 3.  隨後執行 `cat backup.sql | docker-compose exec database psql -U hackmd`，從備份中還原。
 4.  完成後，重新運行服務 `docker-compose up -d` 。
 
-不過這恢復步驟有個前提就是： <span class="label danger">nothing meaningful in the database yet</span>。
+不過這恢復步驟有個前提就是：  <span class="highlighting danger">nothing meaningful in the database yet</span>。
 
 <br>如果是用預設那份 yml 檔，mount 的那個資料夾應該會對應到 **/var/lib/docker/volumes/codimd-container_database**，原本想說能不能用 `docker volume create`，並複製資料裡面的東西到新的 volume 中，事實證明可以，但不確定這樣的複製方法與文件的備份方法差了多少資料。
 
