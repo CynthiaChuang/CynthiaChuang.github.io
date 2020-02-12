@@ -2,7 +2,7 @@
 title: 【Linux】計算資料夾下的檔案數
 date: 2019-07-30
 categories:
-- OS-Settings
+- Environment
 tags:
 - Linux/Unix 
 --- 

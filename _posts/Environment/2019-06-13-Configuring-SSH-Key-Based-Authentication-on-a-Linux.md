@@ -2,7 +2,7 @@
 title: 【Linux】設定 Linux 使用 SSH Key-based 登入驗證方式
 date: 2019-06-13
 categories:
-- OS-Settings
+- Environment
 tags:
 - Linux/Unix 
 - SSH

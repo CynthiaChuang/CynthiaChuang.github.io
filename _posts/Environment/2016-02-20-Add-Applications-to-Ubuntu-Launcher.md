@@ -2,7 +2,7 @@
 title: 【Linux】將應用程式加到 Ubuntu 的 Launcher 捷徑
 date: 2016-02-20
 categories:
-- OS-Settings
+- Environment
 tags:
 - Linux/Unix 
 --- 

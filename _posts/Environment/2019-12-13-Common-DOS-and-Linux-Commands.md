@@ -2,7 +2,7 @@
 title: 【Windows】常用 Unix 與 DOS 的指令
 date: 2019-12-13
 categories:
-- OS-Settings
+- Environment
 tags:
 - Windows/DOS
 - Linux/Unix
