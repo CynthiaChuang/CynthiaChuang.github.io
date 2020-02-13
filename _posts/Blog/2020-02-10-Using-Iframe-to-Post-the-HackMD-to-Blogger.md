@@ -6,6 +6,7 @@ categories:
 tags:
 - Blogger
 - HackMD/CodiMD
+- HTML
 --- 
 
 那天在閒逛的時候發現很酷的一招，可以直接把 HankMD 的內容直接貼到 Blogger。
