@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given a 32-bit signed integer, reverse digits of an integer.

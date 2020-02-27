@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given a linked list, remove the _n_-th node from the end of list and return its head.

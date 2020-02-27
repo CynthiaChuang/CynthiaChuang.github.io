@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Implement  `atoi`  which converts a string to an integer.

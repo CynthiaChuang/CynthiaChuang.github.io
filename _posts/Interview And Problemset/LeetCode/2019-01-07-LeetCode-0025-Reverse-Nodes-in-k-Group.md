@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given a linked list, reverse the nodes of a linked list  _k_  at a time and return its modified list.

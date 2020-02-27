@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given an absolute path for a file (Unix-style), simplify it.

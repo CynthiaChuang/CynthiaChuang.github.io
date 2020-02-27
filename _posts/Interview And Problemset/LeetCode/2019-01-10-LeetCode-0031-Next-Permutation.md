@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Implement  **next permutation**, which rearranges numbers into the lexicographically next greater permutation of numbers.

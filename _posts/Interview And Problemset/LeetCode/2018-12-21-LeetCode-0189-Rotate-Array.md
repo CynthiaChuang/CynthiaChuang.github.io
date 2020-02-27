@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given an array, rotate the array to the right by  _k_  steps, where _k_ is non-negative.

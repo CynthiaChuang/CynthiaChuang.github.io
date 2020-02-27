@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given a  **non-empty**  string  _s_  and a dictionary  _wordDict_  containing a list of  **non-empty**words, determine if  _s_  can be segmented into a space-separated sequence of one or more dictionary words.

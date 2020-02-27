@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given  _n_  non-negative integers  $a_1, a_2, ...,  a_n$ , where each represents a point at coordinate $(i,  a_i)$.  _n_  vertical lines are drawn such that the two endpoints of line  _i_  is at $(i,  a_i)$ and $(i,  0)$. Find two lines, which together with x-axis forms a container, such that the container contains the most water.

@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Implement a trie with  ``insert``,  ``search``, and  ``startsWith``  methods.

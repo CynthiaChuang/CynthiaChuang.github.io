@@ -5,7 +5,6 @@ categories:
 - Interview/Problemset
 tags:
 - LeetCode
-- Python
 --- 
 
 Given a  **non-empty**  string  _s_  and a dictionary  _wordDict_  containing a list of  **non-empty** words, add spaces in  _s_  to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
