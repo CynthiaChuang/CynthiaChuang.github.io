@@ -2,11 +2,11 @@
 title: 【翻譯練習】Accelerate precision medicine with Microsoft Genomics
 date: 2020-02-14
 categories:
-- Translation
 - Bioinformatics
 tags:
 - Genomics
 - Azure
+- 翻譯
 - 未授翻
 --- 
 
