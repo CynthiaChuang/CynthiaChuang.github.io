@@ -7,7 +7,8 @@ tags:
 - git
 --- 
 
-不小心把 log 給 commit 進去了，來想辦法把它移掉
+不小心把 log 給 commit 進去了，來想辦法把它移掉。
+
 <!--more-->
 <br> <br> 
 

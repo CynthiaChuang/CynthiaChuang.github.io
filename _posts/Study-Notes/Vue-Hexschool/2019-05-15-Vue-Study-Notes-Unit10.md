@@ -11,13 +11,8 @@ tags:
 - Vue 出一個電商網站 
 --- 
 
-# 【Vue.js 學習筆記】10. Vue Router
-###### Vue-Study-Notes-Unit10
-###### tags: `*Post*`, `Draft`, | `Study-Notes`, `Computer-Language/Framework`, | `Front-end`, `Vue.js`, `Udemy`
-
-<br>
 本節內容包含下述子章節：
-
+ 
 1. 使用 Vue Router 及配置路由文件
 2. 新增路由路徑及連結
 3. 製作巢狀路由頁面
@@ -25,7 +20,7 @@ tags:
 5. 命名路由，同一個路徑載入兩個頁面元件
 6. Vue Router 參數設定
 7. 自定義切換路由方法
- 
+
 <!--more-->
 <br>
 

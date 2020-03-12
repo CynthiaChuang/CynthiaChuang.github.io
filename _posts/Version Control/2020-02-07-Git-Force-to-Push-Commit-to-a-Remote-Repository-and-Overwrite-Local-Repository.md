@@ -12,6 +12,7 @@ tags:
 如果只有整理 local 端的 Commit 倒是簡單，只要用`git-rebase`就好，但是如果 Commit 已經上遠端了的呢？
  
 **只能來硬的了 XDDD**
+
 <!--more-->
 <br><br>
 

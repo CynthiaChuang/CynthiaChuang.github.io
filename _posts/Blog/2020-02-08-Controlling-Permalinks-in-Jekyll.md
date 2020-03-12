@@ -11,6 +11,7 @@ tags:
 那天想要修改某篇文章的分類。結果發現一旦改了，所產生的網址也跟著變了，導致我有參考到這篇文章的全部都要修改參考...Orz
  
 所以在猶豫完改不改分類之後，我決定搞個大的：直接<span class='highlighting'>移除網址中的類別</span>，還順便把<span class='highlighting'>時間也移了</span>！
+
 <!--more-->
 <br><br>  
 
