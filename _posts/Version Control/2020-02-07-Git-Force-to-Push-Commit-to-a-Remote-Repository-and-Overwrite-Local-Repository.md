@@ -24,7 +24,7 @@ $ git push -f origin <rbranch>:<lbranch>
 ```
 
 <center> <img src="https://miro.medium.com/max/500/0*XaLzNzYkA6PZjbl9.jpg" alt="危險的 force 指令"></center>
-<center style="color:Gainsboro;">危險的 force 指令（圖片來源: <a href="https://estl.tech/a-gentler-force-push-on-git-force-with-lease-fb15701218df" style="color:Gainsboro;">Engineering Tomorrow’s Systems</a>）</center>
+<center class="imgtext">危險的 force 指令（圖片來源: <a href="https://estl.tech/a-gentler-force-push-on-git-force-with-lease-fb15701218df" class="imgtext">Engineering Tomorrow’s Systems</a>）</center>
 <br>
 
 **使用前請注意！**`-f` 是個非常危險的指令，它可以無視一切先來後到的規則，讓你的 commit，直接取代線上所有內容。不是讓團隊進度付之一炬，不然就是像這些 Jenkins 的開發人員一樣[不小心強制更新了 150 多個 github repos](https://groups.google.com/forum/#!searchin/jenkinsci-dev/force$20push/jenkinsci-dev/-myjRIPcVwU/mrwn8VkyXagJ)。真的做了你應該會被組員拖去套麻布袋 XD

@@ -12,7 +12,7 @@ tags:
 當訓練資料不足時， <span class="highlighting">multiple crops</span>是其中一種資料增強方法。且 multiple crops 也可以避免 Overfitting。
  <br> 
 <center> <img src="https://i.imgur.com/EUxkmxF.jpg" alt="Desperate "></center>
-<center style="color:Gainsboro;">Desperate （圖片來源: <a href="https://pixabay.com/photos/youtuber-blogger-screenwriter-2838945/" style="color:Gainsboro;">pixabay - lukasbieri</a>）</center>
+<center class="imgtext">Desperate （圖片來源: <a href="https://pixabay.com/photos/youtuber-blogger-screenwriter-2838945/" class="imgtext">pixabay - lukasbieri</a>）</center>
 
 <!--more-->
 

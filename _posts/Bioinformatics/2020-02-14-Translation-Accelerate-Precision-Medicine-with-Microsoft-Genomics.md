@@ -133,7 +133,7 @@ Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，�
 陣亡！ 這部份先欠著，反正內容大抵上就是說準確度不輸標準流程、但速度快很多之類的。
 
 <center> <img src="https://imgur.com/fvnLx0K.png" alt="举白旗的兔子"></center>
-<center style="color:Gainsboro;">舉白旗，陣亡！（圖片來源: <a href="http://616pic.com/sucai/1yqiqp69z.html" style="color:Gainsboro;">图精灵</a>）</center>
+<center class="imgtext">舉白旗，陣亡！（圖片來源: <a href="http://616pic.com/sucai/1yqiqp69z.html" class="imgtext">图精灵</a>）</center>
 
 <br><br>
 

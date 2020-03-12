@@ -163,12 +163,12 @@ PLINK軟體輸入檔案的常見格式型別：
 ### 輸入過濾
 
 <center> <img src="https://pic2.zhimg.com/80/v2-b494eaba88bea07b1b8fb40b35f44e6d_hd.jpg" alt="GWAS 粗略流程圖"></center>
-<center style="color:Gainsboro;">GWAS 粗略流程圖（圖片來源: <a href="https://zhuanlan.zhihu.com/p/72490817" style="color:Gainsboro;">用plink做一套GWAS分析 - 知乎</a>）</center>
+<center class="imgtext">GWAS 粗略流程圖（圖片來源: <a href="https://zhuanlan.zhihu.com/p/72490817" class="imgtext">用plink做一套GWAS分析 - 知乎</a>）</center>
 <br>
 
 
 <center> <img src="https://upload-images.jianshu.io/upload_images/9697684-cd49dd9a75ae0a8c.png?imageMogr2/auto-orient/strip|imageView2/2/w/967/format/webp" alt="GWAS 粗略流程圖"></center>
-<center style="color:Gainsboro;">GWAS基本分析内容（圖片來源: <a href="https://www.jianshu.com/p/70164cce947c" style="color:Gainsboro;">GWAS基本分析内容 - 簡書</a>）</center>
+<center class="imgtext">GWAS基本分析内容（圖片來源: <a href="https://www.jianshu.com/p/70164cce947c" class="imgtext">GWAS基本分析内容 - 簡書</a>）</center>
 <br>
 
 
