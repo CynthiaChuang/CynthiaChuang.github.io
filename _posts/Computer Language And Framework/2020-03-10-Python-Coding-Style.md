@@ -202,8 +202,3 @@ c = (a+b) * (a-b)
 2.  subineru (2018-02-20)。[Python 變數命名規則](https://subineru.wordpress.com/2018/02/20/python-%E8%AE%8A%E6%95%B8%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87/) 。檢自 CJ Hung (2020-03-06)。
 3. 宅吉便 (2017-06-05)。[Python，你到底是在__底線__什麼啦！](https://aji.tw/python%E4%BD%A0%E5%88%B0%E5%BA%95%E6%98%AF%E5%9C%A8__%E5%BA%95%E7%B7%9A__%E4%BB%80%E9%BA%BC%E5%95%A6/) 。檢自 宅吉便 (2020-03-06)。
 4. sooner高 (2017-05-07)。[Python 类中Name mangling和下划线命名](https://blog.csdn.net/g11d111/article/details/71367649) 。檢自 Python_g11d111的博客 - CSDN博客 (2020-03-06)。
-
-
-https://myapollo.com.tw/zh-tw/python-pep8-and-vim-configs/
-https://docs.microsoft.com/zh-tw/visualstudio/python/linting-python-code?view=vs-2019
-https://stackoverflow.com/questions/53183669/how-to-run-pylint-plugin-in-intellij-idea
