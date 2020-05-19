@@ -114,11 +114,6 @@ tags:
 
 
 <style>
-
-.timestamp {
-  line-height:15px ;
-}
-
 table {    
   background-color:#ffffff;
   border:0;
