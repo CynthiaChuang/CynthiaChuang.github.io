@@ -4,14 +4,10 @@ date: 2020-01-09
 categories:
 - AI/ML
 tags:
-- Accuracy
-- Precision 
-- Recall 
-- F1
-- ROC-AUC
-- PR-AUC
+- Evaluation 
 - 煉丹常識
 --- 
+
 當評估（Evaluation）一個模型的好壞時，不能總是依靠體感來挑選，因此需要一些量化指標去判定它的好壞。常見的量化指標有 **Accuracy**、**Precision**、**Recall** 與 **F1-Measure**。有時也會使用 **ROC-AUC** 與 **PR-AUC** 還評估在相同資料集下的表現結果
 
 <!--more-->
