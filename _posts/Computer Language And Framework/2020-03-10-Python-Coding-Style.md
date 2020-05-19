@@ -12,7 +12,7 @@ tags:
 
 <!--more-->
 <center> <img src="https://i.imgur.com/8znl2lD.jpg" alt="Coding Style"></center>
-<center style="color:Gainsboro;">Coding Style（圖片來源: <a href="https://www.orientation-education.com/metier/developpeur-informatique" style="color:Gainsboro;">orientation</a>）</center>
+<center class="imgtext">Coding Style（圖片來源: <a href="https://www.orientation-education.com/metier/developpeur-informatique" class="imgtext">orientation</a>）</center>
 <br>
 
 ## Code Lay-out
