@@ -256,7 +256,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 <br><br> 
 
 ## 其他連結
-1. [Serverless 應用案例賞析筆記目錄](/@CynthiaChuang/Serverless-Use-Cases-Study-Notes-Contents)
+1. [Serverless 應用案例賞析筆記目錄](/Serverless-Use-Cases-Study-Notes-Contents)
 2. 課程內容：影片（[IBM片源](https://mediacenter.ibm.com/media/03_Serverless+%E5%9C%A8%E7%89%A9%E8%81%94%E7%BD%91%E9%A2%86%E5%9F%9F%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/1_9u4hn9xd) 、[youku教育片源](https://v.youku.com/v_show/id_XMzg4MTM4MDEzNg==.html?spm=a2hzp.8253869.0.0)）/ [講義](https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-02.pdf) / [Blog](https://mp.weixin.qq.com/s/mDjTDcV-V25YRXbSFLNYyg)
 
 <br><br> 
