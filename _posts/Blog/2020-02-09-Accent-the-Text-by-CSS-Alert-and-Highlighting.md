@@ -1,5 +1,5 @@
 ---
-title: 【Github Page】實作 CSS 凸顯文字內容： Alert 與 Highlighting
+title: 【技能樹栽種】實作 CSS 凸顯文字內容： Alert 與 Highlighting
 date: 2020-02-09
 categories:
 - Blog
@@ -7,6 +7,7 @@ categories:
 tags:
 - Github Page
 - CSS
+- 技能樹栽種
 --- 
 
 我目前 Github Page 採用的主題是 [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next) ，我很喜歡這個主題。但唯一讓我不滿意的大概就是沒有凸顯內容文字的手段，只好自食其力了！

@@ -1,12 +1,14 @@
 ﻿---
-title: 【Github Pages】使用 Jekyll 和搭建 Github Pages
+title: 【技能樹栽種】使用 Jekyll 和搭建 Github Pages
 date: 2019-12-13
 categories:
 - Blog
 tags:
 - Github Page
 - Jekyll
+- 技能樹栽種
 --- 
+
 之前有一陣子在找合適的 blog 想用來存放文章，最好能支援數學公式、程式碼，若能使用 Markdown 來撰寫文章就更好了，另外版面最好整潔些不要像傳統 blog 有側欄的干擾（要求真多 XD
  
 前後試過痞客邦、Blogger、Medium、Github Pages...，各有各的優缺點，但其實都不怎滿意，最後挑了Github Pages 主要是想玩玩 Jekyll 順便練習一下前端 XD

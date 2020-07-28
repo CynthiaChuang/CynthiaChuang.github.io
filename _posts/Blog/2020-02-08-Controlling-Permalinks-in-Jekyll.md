@@ -1,11 +1,12 @@
 ---
-title: "【Github Page】修改 Jekyll 生成的靜態網址"
+title: "【技能樹栽種】修改 Jekyll 生成的靜態網址"
 date: 2020-02-08
 categories:
 - Blog
 tags:
 - Github Page
 - Jekyll
+- 技能樹栽種
 --- 
 
 那天想要修改某篇文章的分類。結果發現一旦改了，所產生的網址也跟著變了，導致我有參考到這篇文章的全部都要修改參考...Orz
