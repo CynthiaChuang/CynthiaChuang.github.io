@@ -1,6 +1,6 @@
 ---
 title: 免授權圖庫
-date: 2020-05-26
+date: 2020-06-18
 categories:
 - Toolkit
 tags:
@@ -13,6 +13,7 @@ tags:
 <br>
     
 這邊列舉一些免授權圖庫，方便之後使用 :heart_decoration: 
+
 <!--more-->
 <br><br> 
 
@@ -27,6 +28,7 @@ tags:
 7. [Canva](https://designschool.canva.com/blog/free-stock-photos/)
 8. [Unsplash](https://unsplash.com/)
 9. [Google 圖片(注意圖片授權)](https://www.google.com.tw/imghp?hl=zh-TW)
+10. [免費圖庫相片 · Pexels](https://www.pexels.com/zh-tw/) (2020-06-18 補充最近的新寵 XD)
 
 不雖說上述圖庫可以免授權使用，但部份作者會要求附上出處。為了避免麻煩最好還是在使用時，都要附上原出處。
 
@@ -40,8 +42,9 @@ tags:
 
 ## 更新紀錄
 <details>
-  <summary>最後更新日期： 2020-05-26</summary>
+  <summary>最後更新日期： 2020-06-18</summary>
   <ul class="timestamp">
+      <li>2020-06-18 更新</li>
     　<li>2020-05-26 發布</li>
     　<li>2020-04-30 完稿</li>
   </ul>
