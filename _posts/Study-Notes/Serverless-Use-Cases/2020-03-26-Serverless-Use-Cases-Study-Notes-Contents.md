@@ -17,9 +17,10 @@ tags:
 
 <!--more-->
 
-1. **[Serverless 架構與 Apache OpenWhisk](/Serverless-Use-Cases-Study-Notes-01)**
-2. **[Serverless 在 API 經濟中的應用](/Serverless-Use-Cases-Study-Notes-02)**
-3. **[Serverless 在物聯網領域中的應用](/Serverless-Use-Cases-Study-Notes-03)**
-4. **[Serverless 在人工智能領域的應用](/Serverless-Use-Cases-Study-Notes-04)**
 
-
+| 讀完 | 章節名稱                                                                                      |
+| ------- |:--------------------------------------------------------------------------------------------- |
+| ☑️      | [01. Serverless 架構與 Apache OpenWhisk](/Serverless-Use-Cases-Study-Notes-01)|
+| ☑️      | [02. Serverless 在 API 經濟中的應用](/Serverless-Use-Cases-Study-Notes-02)     |
+| ☑️      | [03. Serverless 在物聯網領域中的應用](/Serverless-Use-Cases-Study-Notes-03)    |
+| ☑️      | [04. Serverless 在人工智能領域的應用](/Serverless-Use-Cases-Study-Notes-04)    |
