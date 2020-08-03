@@ -1,6 +1,7 @@
 ---
 title: ImageNet 中的 Top-1 與 Top-5 accuracy
 date: 2020-03-10
+modified: 2020-03-10
 categories:
 - AI/ML
 tags:

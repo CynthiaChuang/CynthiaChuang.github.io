@@ -1,6 +1,7 @@
 ---
 title: 【Vue.js 學習筆記】07. JavaScript ES6
 date: 2019-05-08
+modified: 2019-05-08
 categories:
 - Study-Notes
 - Computer-Language/Framework

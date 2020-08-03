@@ -1,6 +1,7 @@
 ---
 title: "【Survey】CheXNet: 肺部 X-Ray 醫學影像判讀技術"
 date: 2020-01-21
+modified: 2020-01-21
 categories:
 - AI/ML
 tags:

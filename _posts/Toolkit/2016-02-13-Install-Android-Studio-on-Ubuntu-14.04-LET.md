@@ -1,6 +1,7 @@
 ---
 title: Android Studio的安裝篇：In ubuntu14.04 LET
 date: 2016-02-13
+modified: 2016-02-13
 categories:
 - Toolkit
 tags:

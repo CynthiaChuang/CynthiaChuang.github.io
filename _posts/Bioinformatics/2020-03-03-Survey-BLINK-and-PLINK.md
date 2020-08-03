@@ -1,6 +1,7 @@
 ---
 title: 【Survey】 BLINK ＆ PLINK
 date: 2020-03-03
+modified: 2020-03-03
 categories:
 - Bioinformatics
 - Toolkit

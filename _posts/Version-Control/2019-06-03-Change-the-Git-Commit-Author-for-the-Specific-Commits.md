@@ -1,6 +1,7 @@
 ---
 title: 【Git】修改 Git commits 的作者資訊
 date: 2019-06-03
+modified: 2019-06-03
 categories:
 - Version-Control
 tags:

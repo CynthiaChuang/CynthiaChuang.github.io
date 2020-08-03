@@ -1,6 +1,7 @@
 ---
 title: 基於 gensim 訓練中文維基詞向量
 date: 2020-01-17
+modified: 2020-01-17
 categories:
 - AI/ML
 tags:

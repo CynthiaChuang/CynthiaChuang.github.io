@@ -1,6 +1,7 @@
 ---
 title: 【LeetCode】0208. Implement Trie (Prefix Tree) 
 date: 2018-12-21
+modified: 2018-12-21
 categories:
 - Interview/Problemset
 tags:

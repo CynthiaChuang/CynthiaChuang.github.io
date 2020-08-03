@@ -1,6 +1,7 @@
 ---
 title: Multi-class, Multi-label 以及 Multi-task 的區別
 date: 2020-05-27
+modified: 2020-05-27
 categories:
 - AI/ML
 tags:

@@ -1,6 +1,7 @@
 ---
 title: 【Shell Script】使用 crontab + script 定期備份並保留30天
 date: 2019-06-14
+modified: 2019-06-14
 categories:
 - Computer-Language/Framework
 tags:

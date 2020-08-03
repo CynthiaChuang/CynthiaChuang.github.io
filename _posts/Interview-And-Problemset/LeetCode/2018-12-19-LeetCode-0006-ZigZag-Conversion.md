@@ -1,6 +1,7 @@
 ---
 title: 【LeetCode】0006. ZigZag Conversion
 date: 2018-12-19
+modified: 2018-12-19
 categories:
 - Interview/Problemset
 tags:

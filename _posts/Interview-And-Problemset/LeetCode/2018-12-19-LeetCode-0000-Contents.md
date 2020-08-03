@@ -1,6 +1,7 @@
 ---
 title: 【LeetCode】0000. 解題目錄
 date: 2018-12-19
+modified: 2018-12-19
 categories:
 - Interview/Problemset
 tags:

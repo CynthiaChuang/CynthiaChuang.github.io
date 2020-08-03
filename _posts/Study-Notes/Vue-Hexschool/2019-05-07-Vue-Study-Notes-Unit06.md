@@ -1,6 +1,7 @@
 ---
 title: 【Vue.js 學習筆記】06. Vue.js 元件
 date: 2019-05-07
+modified: 2019-05-07
 categories:
 - Study-Notes
 - Computer-Language/Framework

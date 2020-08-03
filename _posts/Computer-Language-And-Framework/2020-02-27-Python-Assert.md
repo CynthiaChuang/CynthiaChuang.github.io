@@ -1,6 +1,7 @@
 ---
 title: 【Python】 斷言 assert
 date: 2020-02-27
+modified: 2020-02-27
 categories:
 - Computer-Language/Framework
 tags:

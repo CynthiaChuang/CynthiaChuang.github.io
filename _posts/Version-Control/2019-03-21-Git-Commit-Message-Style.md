@@ -1,6 +1,7 @@
 ---
 title: 【Git】commit message 的寫法
 date: 2019-03-21
+modified: 2019-03-21
 categories:
 - Version-Control
 tags:

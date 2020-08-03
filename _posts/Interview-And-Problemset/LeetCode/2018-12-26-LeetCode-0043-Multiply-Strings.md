@@ -1,6 +1,7 @@
 ---
 title: 【LeetCode】0043. Multiply Strings
 date: 2018-12-26
+modified: 2018-12-26
 categories:
 - Interview/Problemset
 tags:

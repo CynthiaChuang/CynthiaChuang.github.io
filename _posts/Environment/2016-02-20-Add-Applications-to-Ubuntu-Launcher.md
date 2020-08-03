@@ -1,6 +1,7 @@
 ---
 title: 【Linux】將應用程式加到 Ubuntu 的 Launcher 捷徑
 date: 2016-02-20
+modified: 2016-02-20
 categories:
 - Environment
 tags:

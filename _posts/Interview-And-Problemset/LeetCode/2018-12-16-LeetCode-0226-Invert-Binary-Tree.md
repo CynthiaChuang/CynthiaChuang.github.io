@@ -1,6 +1,7 @@
 ---
 title: 【LeetCode】0226. Invert Binary Tree
 date: 2018-12-16
+modified: 2018-12-16
 categories:
 - Interview/Problemset
 tags:

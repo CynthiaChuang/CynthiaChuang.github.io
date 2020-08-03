@@ -1,6 +1,7 @@
 ---
 title: 【Vue.js】 DOM 的事件傳遞機制： capture 與 propagation
 date: 2019-04-24
+modified: 2019-04-24
 categories:
 - Computer-Language/Framework
 tags:

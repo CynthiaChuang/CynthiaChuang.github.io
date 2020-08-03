@@ -1,6 +1,7 @@
 ---
 title: 【Serverless 應用案例賞析筆記】 02. Serverless 在 API 經濟中的應用
 date: 2020-04-02
+modified: 2020-04-02
 categories:
 - Study-Notes
 - Cloud-Computing

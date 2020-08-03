@@ -1,6 +1,7 @@
 ---
 title: 【Vue.js 學習筆記】10. Vue Router
 date: 2019-05-15
+modified: 2019-05-15
 categories:
 - Study-Notes
 - Computer-Language/Framework

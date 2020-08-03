@@ -1,6 +1,7 @@
 ---
 title: 【機器學習基石筆記】數學基礎 Week3
 date: 2020-01-21
+modified: 2020-01-21
 categories:
 - Study-Notes
 - AI/ML
