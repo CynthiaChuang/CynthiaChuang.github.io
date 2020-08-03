@@ -25,7 +25,8 @@
   {% assign paginate = site.archive.paginate | default: site.paginate  %}
   {% assign paginate_path = site.archive.paginate_path | default: site.paginate_path  %}
 
-  {% for post in site.posts %}
+  {% assign sorted_list = site.posts | sort:"modified" | reverse  %}
+  {% for post in sorted_list %}
     {% if paginate > 0 %}
       {% assign page_num = forloop.index0 | divided_by: paginate | plus: 1 %}
       {% if page_num == 1 %}
@@ -37,7 +38,7 @@
     {% endif %}
 
     {% comment %} Show year {% endcomment %}
-    {% assign post_year = post.date | date: '%Y' %}
+    {% assign post_year = post.modified | date: '%Y' %}
     {% if post_year != year or index0_modulo_paginate == 0 and index0_modulo_paginate %}
       {% assign year = post_year %}
       <div class="collection-title" {% if route %}route="{{ route }}"{% endif %}>

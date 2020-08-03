@@ -13,7 +13,8 @@
     {% assign cat = cat_posts[0] | url_encode | replace: '+', '%20' %}
     {% assign posts = cat_posts[1] %}
 
-    {% for post in posts %}
+    {% assign sorted_list = posts | sort:"modified" | reverse  %}
+    {% for post in sorted_list %}
       {% if paginate > 0 %}
         {% assign page_num = forloop.index0 | divided_by: paginate | plus: 1 %}
         {% assign route = '/' | append: cat %}
