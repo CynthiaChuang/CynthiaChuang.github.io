@@ -54,11 +54,13 @@ $image-text                 : Gainsboro;
 // --------------------------------------------------
 
 // Global text color on <body>
-$greendark-dark    : #2a382e;
-$greendark-dim     : #303832;
-$green-dark        : #76B900;
-$green-dim         : #76b900;
-$green-light       : #b9da7e;
+$greendark-dark               : #2a382e;
+$greendark-dim                : #303832;
+$greendark-lighter            : #e1e6e1;
+$green-dark                   : #76B900;
+$green-dim                    : #76b900;
+$green-light                  : #b9da7e;
+$green-lighter                  : #c3dc99;
 
 $h2-color                     : $green-dark;
 $h3-color                     : $greendark-dark ;

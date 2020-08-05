@@ -204,3 +204,13 @@ h3 {
   color: $h3-color;
 }
 
+.posts-expand .post-tags {  
+  a {
+    background: $greendark-lighter;
+    &:hover {
+      color: white;
+      background: $green-lighter;
+    }
+  }
+}
+
