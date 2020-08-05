@@ -1,4 +1,3 @@
-// Custom styles.
 // no-found-menu
 // use in 404 not found page
 // --------------------------------------------------
@@ -191,3 +190,17 @@
 .post-body .timestamp{
   line-height:15px ;
 }
+
+
+// Custom styles.
+// Settings for some of the most global styles.
+// --------------------------------------------------
+
+h2 {
+  color: $h2-color;
+}
+
+h3 {
+  color: $h3-color;
+}
+

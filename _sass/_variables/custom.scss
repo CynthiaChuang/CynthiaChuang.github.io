@@ -38,7 +38,7 @@ $alert-danger-icon           : "\f056";
 
 // highlighting  colors
 // --------------------------------------------------
-$highlighting-default              : #e6fcf2;
+$highlighting-default              : rgb(227, 242, 201);
 $highlighting-success              : $alert-success-bg;
 $highlighting-warning              : $alert-warning-bg ;
 $highlighting-danger               : $alert-danger-bg ;
@@ -46,3 +46,30 @@ $highlighting-danger               : $alert-danger-bg ;
 // image text
 // --------------------------------------------------
 $image-text                 : Gainsboro;
+
+
+
+// Custom styles.
+// Settings for some of the most global styles.
+// --------------------------------------------------
+
+// Global text color on <body>
+$greendark-dark    : #2a382e;
+$greendark-dim     : #303832;
+$green-dark        : #76B900;
+$green-dim         : #76b900;
+$green-light       : #b9da7e;
+
+$h2-color                     : $green-dark;
+$h3-color                     : $greendark-dark ;
+$text-color                   : $greendark-dim;
+
+// Global link color.
+$link-color                   : $text-color;
+$link-hover-color             : $green-dim ;
+$link-decoration-color        : $grey-light;
+$link-decoration-hover-color  : $link-hover-color;
+
+// Selection
+$selection-bg                 : $green-light;
+$selection-color              : $text-color;
