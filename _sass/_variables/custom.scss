@@ -55,7 +55,7 @@ $image-text                 : Gainsboro;
 
 // Global text color on <body>
 $greendark-dark               : #2a382e;
-$greendark-dim                : #303832;
+$greendark-dim                : #414b43;
 $greendark-ligh               : #a7b5a7;
 $greendark-lighter            : #eaf3ea;
 $green-dark                   : #76B900;
@@ -76,3 +76,6 @@ $link-decoration-hover-color  : $link-hover-color;
 // Selection
 $selection-bg                 : $green-light;
 $selection-color              : $text-color;
+
+// image text
+$image-text                 : $greendark-ligh;
