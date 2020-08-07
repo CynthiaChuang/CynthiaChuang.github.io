@@ -6,7 +6,7 @@ categories:
 - AI/ML
 tags:
 - CV
-- Medical-Imaging
+- Medical Imaging
 - X-Rays
 --- 
 

@@ -7,7 +7,7 @@ categories:
 tags:
 - NLP
 - gensim
-- Word-Embedding 
+- Word Embedding 
 - Word2Vec
 --- 
 過年大掃除的時候發現，我的草稿夾內塞滿之前寫一半的草稿，想說欠都欠過年了，還是讓他繼續欠下去吧(誤)...

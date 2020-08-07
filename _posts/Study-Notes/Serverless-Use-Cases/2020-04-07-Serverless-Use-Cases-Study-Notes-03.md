@@ -6,7 +6,7 @@ categories:
 - Study-Notes
 - Cloud-Computing
 tags:
-- Other-Online-Courses
+- Other Online Courses
 - Serverless 應用案例賞析
 - Fass/Serverless
 - OpenWhisk

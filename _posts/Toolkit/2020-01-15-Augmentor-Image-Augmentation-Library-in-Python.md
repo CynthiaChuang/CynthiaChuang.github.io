@@ -6,7 +6,7 @@ categories:
 - AI/ML
 - Toolkit
 tags:
-- Data transformation
+- Data Transformation
 - CV
 - Python
 - 影像處理

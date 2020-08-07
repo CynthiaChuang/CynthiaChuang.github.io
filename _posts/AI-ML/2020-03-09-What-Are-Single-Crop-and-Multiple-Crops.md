@@ -5,7 +5,7 @@ modified: 2020-03-09
 categories:
 - AI/ML
 tags:
-- Data transformation
+- Data Transformation
 - CV
 - 煉丹常識
 --- 
