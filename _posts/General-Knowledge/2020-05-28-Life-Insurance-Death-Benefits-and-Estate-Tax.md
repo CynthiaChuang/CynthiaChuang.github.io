@@ -1,11 +1,12 @@
 ---
-title: 保單需要申報遺產嗎？
+title: 【長知識】保單需要申報遺產嗎？
 date: 2020-05-28
 modified: 2020-05-28
 categories:
-- Chores
+- General-Knowledge
 tags:
 - 法律與行政流程
+- 長知識
 ---  
 
 寫點跟電腦工程無關的筆記。  

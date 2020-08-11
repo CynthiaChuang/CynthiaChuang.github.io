@@ -1,10 +1,11 @@
 ---
-title: 【知識】貨幣代碼規則 - ISO 4217
+title: 【長知識】貨幣代碼規則 - ISO 4217
 date: 2016-03-19
 modified: 2016-03-19
 categories:
 - General-Knowledge
 tags:
+- 長知識
 --- 
 
 前一陣子在實作匯率換算的 APP 時候，有注意到從 Yahoo API 上拉下來的全是貨幣代碼，對於不熟悉的人很難知道，這三個字母到底對應的是哪種貨幣。
