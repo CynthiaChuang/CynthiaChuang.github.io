@@ -29,8 +29,6 @@ tags:
 ## 在時間軸上顯示完整日期
 實做過程可以細分成兩個步驟：
 
-<br>
-
 ### Step1、更改時間格式
 
 時間軸上的每個物件是定義在 `_includes/_macro/post-collapse.html` 中，找到一個 `post.date`，而後面的 pipleline 所接的就是所顯示的時間格式，把它換成你需要的格式就好。
@@ -56,8 +54,7 @@ tags:
 
 ```
 
-
-<br><br>
+<br>
 
 ### Step2、更改字體大小
 

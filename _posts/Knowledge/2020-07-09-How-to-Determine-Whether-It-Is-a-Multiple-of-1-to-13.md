@@ -25,7 +25,7 @@ def is_multiple_of_1(number):
   return True
 ```
 
-<br><br> 
+<br>
 
 ## 2的倍數
 2 的倍數：個位數字為偶數（含0）。
@@ -35,8 +35,7 @@ def is_multiple_of_2(number):
   return sd % 2 == 0
 ```
 
-
-<br><br> 
+<br>
 
 ## 3的倍數
 3 的倍數：各個數字和為 3 的倍數。
@@ -46,7 +45,7 @@ def is_multiple_of_3(number):
   return s % 3 == 0
 ```
 
-<br><br> 
+<br>
 
 ## 4的倍數
 4 的倍數：末二位數為 4 的倍數。
@@ -56,9 +55,7 @@ def is_multiple_of_4(number):
   return s % 4 == 0
 ```
 
-
-
-<br><br> 
+<br>
 
 ## 5的倍數
 5 的倍數：個位數字為 5 或 0。
@@ -68,8 +65,7 @@ def is_multiple_of_5(number):
   return s==0 or s==5
 ```
 
-
-<br><br> 
+<br>
 
 ## 6的倍數
 6 的倍數：各個數字和為 6 的倍數（同時是2和3的倍數）。
@@ -78,7 +74,7 @@ def is_multiple_of_6(number):
   return is_multiple_of_2(number) and is_multiple_of_3(number)
 ```
 
-<br><br> 
+<br>
 
 ## 7的倍數
 7 的倍數：由個數起每三位數字一節，各奇數節的和與偶數節的和相減，其差是 7 的倍數。
@@ -91,7 +87,7 @@ def is_multiple_of_7(number):
   return df % 7 == 0
 ```
 
-<br><br> 
+<br>
 
 ## 8的倍數
 8 的倍數：末三位數為 8 的倍數。
@@ -101,7 +97,7 @@ def is_multiple_of_8(number):
   return s % 8 == 0
 ```
     
-<br><br> 
+<br>
 
 ## 9的倍數
 9 的倍數：各個數字和為 9 的倍數。
@@ -111,7 +107,7 @@ def is_multiple_of_9(number):
   return s % 9 == 0
 ```
 
-<br><br> 
+<br>
 
 ## 10的倍數
 10 的倍數：個位數字為 0。
@@ -121,7 +117,7 @@ def is_multiple_of_10(number):
   return sd == 0
 ```
 
-<br><br> 
+<br>
 
 ## 11的倍數
 11 的倍數：奇數位數字和與偶數位數字和相差為 11 的倍數。
@@ -134,7 +130,7 @@ def is_multiple_of_11(number):
   return d % 11 == 0
 ```
 
-<br><br> 
+<br>
 
 ## 12的倍數
 12 的倍數：同時是 3 和 4 的倍數。
@@ -143,7 +139,7 @@ def is_multiple_of_12(number):
   return is_multiple_of_3(number) and is_multiple_of_4(number)
 ```
 
-<br><br> 
+<br>
 
 ## 13的倍數
 13 的倍數：由個數起每三位數字一節，各奇數節的和與偶數節的和相減，其差是 13 的倍數。
@@ -155,8 +151,8 @@ def is_multiple_of_13(number):
   df = odd_group - even_group
   return df % 13 == 0
 ```
-<br><br> 
 
+<br><br> 
 
 ## 參考資料 
 1. 李老師 (2012-09-17)。[[數學]1～13的倍數判別法](https://leestar2013.pixnet.net/blog/post/45638266) 。檢自 痞客邦 (2020-07-02)。

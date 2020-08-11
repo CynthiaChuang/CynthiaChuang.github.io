@@ -10,7 +10,6 @@ tags:
 - Linux/Unix
 --- 
 
-
 從草稿夾清出了草稿，拖了有點久，都去年的事情了 XD
   
 起因是這樣的，去年去支援了 UI team 的工作，需要用到 postman 做些 API 資料的測試，順便接回前端。但這個案子的開發環境有點麻煩，我又是在外點工作，所以會用到好幾個不同的 VPN 連到不同環境。而這次的 API 又需要用另外一個 VPN 連到其他地方去...真是有夠麻煩的 :broken_heart: 
@@ -26,7 +25,6 @@ tags:
 ## VPN 踩坑流程
 
 在安裝 Openconnect 之前，搭檔還先嘗試了好幾套 VPN 軟體，不過都悲劇了。
-<br>
 
 ### GlobalProtect
 
@@ -47,7 +45,6 @@ Retrieving configuration...
 ###  SoftEther
 
 他們說要來試試看，在 [Linux 上的安裝](https://linuxconfig.org/setting-up-softether-vpn-server-on-ubuntu-16-04-xenial-xerus-linux)，沒有看到他們說成功的消息，反而開始討論起其他的，應該是失敗了？
-
 <br>
 
 ### network-manager-l2tp
@@ -57,7 +54,6 @@ Retrieving configuration...
 - [Configure IPsec/L2TP VPN Clients：Linux](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/clients.md#linux)
 
 搭檔回報 failed，有一個 Enter `Your VPN IPsec PSK` for the **Pre-shared key**，看起來是必要欄位，但他沒法填。
-
 
 <br><br>
 
@@ -98,7 +94,6 @@ Retrieving configuration...
     ```bash
     $ sudo ./openconnect --protocol=gp IP
     ```
-
 
 <br><br> 
 
