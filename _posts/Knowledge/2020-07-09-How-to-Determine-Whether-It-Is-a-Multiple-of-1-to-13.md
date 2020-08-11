@@ -1,14 +1,12 @@
 ---
-title: "【長知識】如何判別是否為 1～13 的倍數"
+title: "如何判別是否為 1～13 的倍數"
 date: 2020-08-10
 modified: 2020-08-10
-disqus: cynthiahackmd
 categories:
-- General-Knowledge
+- Knowledge
 tags:
 - Math
 - Python
-- 長知識
 --- 
 
 那天在社團看到有人在詢問倍數的判斷的寫法，在家監工閒著也是閒著，就按這篇[判別法](https://leestar2013.pixnet.net/blog/post/45638266)把剩下的判斷式也補齊了。

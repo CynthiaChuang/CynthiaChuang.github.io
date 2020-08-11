@@ -1,12 +1,11 @@
 ---
-title: 【長知識】如何辦理機車過戶
+title: 如何辦理機車過戶
 date: 2020-07-28
 modified: 2020-07-28
 categories:
-- General-Knowledge
+- Knowledge
 tags:
 - 法律與行政流程
-- 長知識
 --- 
 
 這兩天在辦理機車過戶，不過網路上查到的資料不盡相同（主要是強制險的部份），決定紀錄一下這次的流程。

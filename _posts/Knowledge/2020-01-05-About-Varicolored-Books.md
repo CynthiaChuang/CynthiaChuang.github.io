@@ -1,11 +1,11 @@
 ---
-title: 【長知識】關於五顏六色的皮書
+title: 關於五顏六色的皮書
 date: 2020-02-05
 modified: 2020-02-05
 categories:
-- General-Knowledge
+- Knowledge
 tags:
-- 長知識
+- 編碼規則
 --- 
 
 最近在 survey 一些東西，注意到各網站都有屬於他們的白皮書，讓我有點好奇它的定義到底是什麼，又有那些顏色的皮書，所以就有了這篇。
