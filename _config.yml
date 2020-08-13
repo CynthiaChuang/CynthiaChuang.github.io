@@ -6,7 +6,7 @@
 # Site
 title: 辛西亞的技能樹
 subtitle:
-description: 記得常澆水阿...
+description: 自己整理過才是自己的
 author: Cynthia
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
@@ -233,7 +233,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+avatar: /assets/images/avatar.jpg
 
 
 # Table Of Contents in the Sidebar

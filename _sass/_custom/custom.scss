@@ -222,12 +222,8 @@ h3 {
   border-top: 1px solid $greendark-ligh;
 }
 
+.header ,
 .footer {
-  color: $greendark-dark;
-  background: $greendark-lighter;
-}
-
-.header {
   color: $greendark-dark;
   background: $greendark-lighter;
 }
@@ -244,7 +240,6 @@ h3 {
   }
 }
 
-
 .menu .menu-item {
   a {
     color: $greendark-dark;
@@ -254,4 +249,25 @@ h3 {
       background: none;
     }
   }
+}
+
+.sidebar,
+.back-to-top,
+.sidebar-toggle {
+  background: $greendark-darker ;
+}
+
+.page-post-detail .sidebar-toggle-line,
+.sidebar-toggle-line {
+  background: white;
+}
+
+.site-author-image {
+  border-radius: 100%;
+}
+
+.site-state-item a {
+  &:hover {
+    color: $toc-link-hover-color  ;
+  } 
 }

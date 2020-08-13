@@ -54,6 +54,7 @@ $image-text                 : Gainsboro;
 // --------------------------------------------------
 
 // Global text color on <body>
+$greendark-darker             : #202220;
 $greendark-dark               : #2e4233;
 $greendark-dim                : #414b43;
 $greendark-ligh               : #a7b5a7;
@@ -79,3 +80,16 @@ $selection-color              : $text-color;
 
 // image text
 $image-text                 : $greendark-ligh;
+
+// Sidebar
+// Variables for sidebar section elements.
+// --------------------------------------------------
+$sidebar-highlight                    : $green-dim;
+$sidebar-nav-hover-color              : $green-lighter;
+
+$toc-link-hover-color                 : $green-lighter;
+$toc-link-hover-border-color          : $green-lighter;
+$toc-link-active-color                : $sidebar-highlight;
+$toc-link-active-border-color         : $sidebar-highlight;
+$toc-link-active-current-color        : $sidebar-highlight;
+$toc-link-active-current-border-color : $sidebar-highlight;
