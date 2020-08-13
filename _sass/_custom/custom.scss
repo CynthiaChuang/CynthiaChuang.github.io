@@ -226,3 +226,32 @@ h3 {
   color: $greendark-dark;
   background: $greendark-lighter;
 }
+
+.header {
+  color: $greendark-dark;
+  background: $greendark-lighter;
+}
+
+.site-meta {
+  .brand {
+    color: $greendark-dark;
+  }
+  .logo-line-before,
+  .logo-line-after {
+    i {
+      background: $greendark-dark;
+    }
+  }
+}
+
+
+.menu .menu-item {
+  a {
+    color: $greendark-dark;
+    background: none;
+    &:hover {
+      color: $green-dim ;
+      background: none;
+    }
+  }
+}
