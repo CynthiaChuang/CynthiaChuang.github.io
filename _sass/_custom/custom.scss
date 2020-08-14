@@ -255,13 +255,14 @@
 // Settings for some of the most global styles.
 // --------------------------------------------------
 
-h1, h2 {
+h1 {
+  color: $h1-color;
+} 
+
+h2 {
   color: $h2-color;
 }
 
-h3 {
-  color: $h3-color;
-}
 
 .posts-expand .post-tags {  
   a {
