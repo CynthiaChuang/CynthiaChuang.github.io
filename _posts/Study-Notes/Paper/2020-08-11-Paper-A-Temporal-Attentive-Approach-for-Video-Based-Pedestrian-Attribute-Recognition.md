@@ -12,8 +12,8 @@ tags:
 --- 
 
 > [A Temporal Attentive Approach for Video-Based Pedestrian Attribute Recognition](https://arxiv.org/pdf/1901.05742.pdf)  
-> Chen Z, Li A, Wang（2019）    
-> School of Computer Science and Engineering, Beihang University, Beijing, China
+> Chen Z, Li A, Wang    
+> Pattern Recognition and Computer Vision, 2019, pp: 209-220
 
 - [程式碼](https://github.com/yuange250/video_pedestrian_attributes_recognition)
 - [資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)
