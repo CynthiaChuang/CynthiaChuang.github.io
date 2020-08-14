@@ -60,6 +60,15 @@
   border-left-color:  $alert-default-border;
   color:  $alert-default-text;
 
+  a {
+    color: $alert-default-text;
+    border-bottom-color: $alert-default-text;
+    &:hover {
+      color: $alert-default-hover; 
+      border-bottom-color: $alert-default-hover;
+    } 
+  }
+
   h2, h3, h4, h5, h6 {
       if note_icons {
         margin-top:       3px;
@@ -104,6 +113,16 @@
       background-color: $alert-primary-bg;
       border-left-color:  $alert-primary-border;
       color:  $alert-primary-text;
+
+      a {
+        color: $alert-primary-text;   
+        border-bottom-color: $alert-primary-text; 
+        &:hover {
+          color: $alert-primary-hover   ; 
+          border-bottom-color: $alert-primary-hover ;
+        } 
+      }
+
       &:not(.no-icon) {
           &:before {
               content: $alert-primary-icon;
@@ -116,6 +135,16 @@
     background-color: $alert-info-bg;
     border-left-color:  $alert-info-border;
     color: $alert-info-text;
+
+    a {
+      color: $alert-info-text;    
+      border-bottom-color: $alert-info-text; 
+      &:hover {
+        color: $alert-info-hover   ; 
+        border-bottom-color: $alert-info-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-info-icon;
@@ -128,6 +157,16 @@
     background-color: $alert-success-bg;
     border-left-color:  $alert-success-border;
     color: $alert-success-text;
+
+    a {
+      color: $alert-success-text; 
+      border-bottom-color: $alert-success-text;    
+      &:hover {
+        color: $alert-success-hover   ; 
+        border-bottom-color: $alert-success-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-success-icon;
@@ -140,6 +179,16 @@
     background-color: $alert-warning-bg;
     border-left-color:  $alert-warning-border;
     color: $alert-warning-text;
+
+    a {
+      color: $alert-warning-text;  
+      border-bottom-color: $alert-warning-text;    
+      &:hover {
+        color: $alert-warning-hover   ; 
+        border-bottom-color: $alert-warning-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-warning-icon;
@@ -152,6 +201,16 @@
     background-color: $alert-danger-bg;
     border-left-color:  $alert-danger-border;
     color: $alert-danger-text;
+
+    a {
+      color: $alert-danger-text;   
+      border-bottom-color: $alert-danger-text;     
+      &:hover {
+        color: $alert-danger-hover   ; 
+        border-bottom-color: $alert-danger-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-danger-icon;
