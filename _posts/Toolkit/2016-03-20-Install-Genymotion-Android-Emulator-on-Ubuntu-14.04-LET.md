@@ -16,8 +16,8 @@ tags:
 <!--more-->
 <br> 
 
-<center class="imgtext"> <img src="https://sinproject.net/wp-content/uploads/2016/01/genymotion_eyecatch.png"  /></center>
-<center class="imgtext">   genymotion_eyecatch （圖片來源: <a href="https://sinproject.net/windows%E3%81%A7android%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E7%99%BA%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%E4%BA%BA%E3%81%8Cmacbook-pro%E3%81%AB%E5%85%A5%E3%82%8C%E3%81%9F%E3%82%BD%E3%83%95/genymotion_eyecatch/" class="imgtext">sinProject</a>）</center>
+<center class="imgtext"> <img src="https://i.imgur.com/TTwPWQc.png"  /></center>
+<center class="imgtext">   genymotion_eyecatch （圖片來源: <a href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.testrisk.com%2F2016%2F03%2Fmobile-application-testing-change-host.html&psig=AOvVaw2T8Xe4HV0w8PKGv0dXUWqA&ust=1597463854717000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDayN7mmesCFQAAAAAdAAAAABAD" class="imgtext">testrisk</a>）</center>
 
 <br>
 
@@ -33,9 +33,9 @@ tags:
     1. VirtualBox 5.0.16 for Linux hosts 
     2. Ubuntu 14.04 ("Trusty") / 14.10 ("Utopic") / 15.04 ("Vivid") AMD64
     <br>    
-    ![](https://3.bp.blogspot.com/-ynnVpcbL5BQ/Vu6jr7g5bRI/AAAAAAAAQfo/rwJDZQwWgSwnVkM4xWQlUupRm8CY5dFZA/s400/%25E5%25B7%25A5%25E4%25BD%259C%25E5%258D%2580%2B1_002.png)
+    ![](https://i.imgur.com/FxNSO6O.png)
     <br> 
-    ![](https://1.bp.blogspot.com/-TQ9yPiR4Puc/Vu6oB-RG5sI/AAAAAAAAQgQ/eVZ1-uM-wEgVUH7NkTn8qV08CgpxTI9RQ/s400/%25E9%2581%25B8%25E5%2596%25AE_003.png)
+    ![](https://i.imgur.com/psZKhX0.png)
 <br> 
 
 2.  **下載 Virtual Box**   
@@ -52,11 +52,10 @@ tags:
 2. **下載 Genymotion**   
 註冊完帳號後，先回到首頁，點選首頁正中間的 choose paln 按鈕，選擇個人的免費版本，即 Individual 中 BASIC 標籤，點選 Get started 開始下載。
 
-    ![](https://3.bp.blogspot.com/-I5GJD_ajMK8/Vu6qicsFvXI/AAAAAAAAQgg/nVNA8bi4lyEx3ehqd2sWSR12kuCgy2-fw/s400/Genymotion%2B%25E2%2580%2593%2BFast%2BAnd%2BEasy%2BAndroid%2BEmulation%2B-%2BGoogle%2BChrome_004.png)
+    ![](https://i.imgur.com/87aYyrA.png)
     
-      
     
-    ![](https://1.bp.blogspot.com/-JdXpZQi_XZs/Vu6qiPwLgZI/AAAAAAAAQgc/J1b8dmcA98UbkQZV_7N2pa3PcoBGs5QDw/s400/2016-03-20%2B17%253A31%253A59%2B%25E7%259A%2584%25E8%259E%25A2%25E5%25B9%2595%25E6%2593%25B7%25E5%259C%2596.png)
+    ![](https://i.imgur.com/IjSSoLr.png)
    <br>  
       
 2. **安裝 Genymotion**   
@@ -65,7 +64,7 @@ tags:
 	$ chmod +x genymotion-2.6.0-linux_x64.bin
 	$ ./genymotion-2.6.0-linux_x64.bin
 	``` 
-	![](https://3.bp.blogspot.com/-jp7qNGFOjxA/Vu6uSs2ex-I/AAAAAAAAQgs/frQkqUiI8-8a7-gngJrryYdWcIIRGPHLA/s400/2016-03-20%2B17%253A40%253A38%2B%25E7%259A%2584%25E8%259E%25A2%25E5%25B9%2595%25E6%2593%25B7%25E5%259C%2596.png)
+	![](https://i.imgur.com/TVMBBxb.png)
 <br> 
 
 4.  **執行**   
@@ -116,21 +115,21 @@ tags:
 ### 1. 開啟 plugins 
 在Android Studio中，依序點選 File → Settings lugins→ plugins → Browse repositories
 
- ![](https://4.bp.blogspot.com/-stkOY-CCDYc/Vu67uHTRLVI/AAAAAAAAQhc/Kc4_IzpuoXMKvvzYijrmyIaZ7c33A1KcQ/s320/2016-03-20%2B20%253A19%253A01%2B%25E7%259A%2584%25E8%259E%25A2%25E5%25B9%2595%25E6%2593%25B7%25E5%259C%2596.png)
+ ![](https://i.imgur.com/IOsQGu2.png)
     
 <br>
 
 ### 2. 安裝 Genymotion plugins
 在搜尋攔輸入 Genymotion 後就會跳出，然點選安裝即可。 
 
-![](https://2.bp.blogspot.com/-iGJpZcDkPe8/Vu68uvrdKAI/AAAAAAAAQhk/jx63nZTkASAMgxKStGbDIijCx_yklfpbA/s320/2016-03-20%2B20%253A19%253A22%2B%25E7%259A%2584%25E8%259E%25A2%25E5%25B9%2595%25E6%2593%25B7%25E5%259C%2596.png)
+![](https://i.imgur.com/Ej5Qzlo.png)
   
 <br>
     
 ### 3. 設定路徑  
 安裝完 plugins 後重新啟動Android Studio 就會發現多了Genymotion 的圖示。
 
-![](https://2.bp.blogspot.com/-dnes3V-pPxU/Vu69fKOW1LI/AAAAAAAAQho/sQml8_hPbsUF__EQeLY26KT0NJ9eYrWDA/s320/2016-03-20%2B20%253A25%253A26%2B%25E7%259A%2584%25E8%259E%25A2%25E5%25B9%2595%25E6%2593%25B7%25E5%259C%2596.png)
+![](https://i.imgur.com/vDtPD51.png)
 
 點選後進入設定路徑，將路徑設定為剛剛 genymotion 執行檔所在的目錄即可，這樣下次執行時就會看到有模擬器可選了。
 
