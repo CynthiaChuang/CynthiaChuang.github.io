@@ -39,7 +39,7 @@ tags:
 	pick <d 的 commitId> <d 的 commit 內容>
 	pick <e 的 commitId> <e 的 commit 內容>
 	```
-	  將要更改的 commit 的 command 由 pick 改成 ** <span class="highlighting">e 或 edit</span>** 後，儲存離開進入 rebase 流程。
+	  將要更改的 commit 的 command 由 pick 改成 <span class="highlighting">e 或 edit</span>後，儲存離開進入 rebase 流程。
       
 
 3. 此時它會提醒你目前停在 c 的 commit，顯示如下：
@@ -64,13 +64,13 @@ tags:
     $ git rebase --continue
     ```
 
-6. 接下來會進入下一個被修改 commit ，也就是 d，重覆進行** <span class="highlighting">步驟 3、4、5</span>** ，直到所有 commit 被修改完成。
+6. 接下來會進入下一個被修改 commit ，也就是 d，重覆進行 <span class="highlighting">步驟 3、4、5</span>，直到所有 commit 被修改完成。
 
 
 <br><br>
 
 ## 修改專案的作者資訊
-不過每次這樣改有點麻煩，畢竟我剛剛是重覆執行了 <span class="highlighting">二十次</span>阿！
+不過每次這樣改有點麻煩，畢竟我剛剛是重覆執行了<span class="highlighting">二十次</span>阿！
 
 與其事後修補，倒不如防範未然。所以我想直接修改專案的作者資訊，由於指令不帶 `--global` 參數，因此它的作用域只有在這個專案，不會影響整個 git 環境：
 ```shell
