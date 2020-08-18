@@ -73,6 +73,6 @@ img = img.astype("float32")
 <br><br> 
 
 ## 參考資料 
-1.  -牧野- (2018-01-25)。[OpenCV-Python cv2.imdecode()和cv2.imencode() 图片解码和编码](https://blog.csdn.net/dcrmg/article/details/791552332) 。檢自 牧野的博客-CSDN博客(2020-02-19)。
+1.  -牧野- (2018-01-25)。[OpenCV-Python cv2.imdecode()和cv2.imencode() 图片解码和编码](https://blog.csdn.net/dcrmg/article/details/79155233) 。檢自 牧野的博客-CSDN博客(2020-02-19)。
 2. flamelite (2017-12-28)。[Reading image file (file storage object) using CV2](https://stackoverflow.com/questions/47515243/reading-image-file-file-storage-object-using-cv2) 。檢自 Stack Overflow (2020-02-19)。
 3. tbicr (2013-11-16)。[Read file data without saving it in Flask](https://stackoverflow.com/questions/20015550/read-file-data-without-saving-it-in-flask) 。檢自 Stack Overflow (2020-02-19)。
