@@ -1,7 +1,7 @@
 ---
 title: 【技能樹栽種】實作 CSS 凸顯文字內容： Alert 與 Highlighting
 date: 2020-02-09
-modified: 2020-02-09
+modified: 2020-08-14
 categories:
 - Blog
 - Computer-Language/Framework
@@ -90,6 +90,15 @@ $alert-default-icon          : "\f0a9";
   border-left-color:  $alert-default-border;
   color:  $alert-default-text;
 
+  a {
+    color: $alert-default-text;
+    border-bottom-color: $alert-default-text;
+    &:hover {
+      color: $alert-default-hover  ; 
+      border-bottom-color: $alert-default-hover;
+    } 
+  }
+  
   h2, h3, h4, h5, h6 {
       if note_icons {
         margin-top:       3px;
@@ -134,6 +143,15 @@ $alert-default-icon          : "\f0a9";
       background-color: $alert-primary-bg;
       border-left-color:  $alert-primary-border;
       color:  $alert-primary-text;
+      a {
+        color: $alert-primary-text;        
+        border-bottom-color: $alert-primary-text;
+        &:hover {
+          color: $alert-primary-hover   ; 
+          border-bottom-color: $alert-primary-hover ;
+        } 
+      }
+
       &:not(.no-icon) {
           &:before {
               content: $alert-primary-icon;
@@ -234,6 +252,17 @@ $highlighting-default              : #e6fcf2;
 ```html
 拜託，請幫我畫<span class="highlighting warning">重點</span>。
 ```
+
+<br>
+
+
+<div class="alert info">
+<div class="head">HTML \<mark\> Tag</div>
+後來發現用 HTML \<mark\> Tag 來改效果會更好，所以又做了另外一篇：  <br>
+-【技能樹栽種】HTML \<mark\> Tag 實做 Highlighting<br>
+P.S. 網誌完成後再來補連結 <br> 
+</div>
+
  
 <br><br> 
 
@@ -244,3 +273,14 @@ $highlighting-default              : #e6fcf2;
 4. MDN contributors (2019-12-20)。[:not()](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)。檢自 MDN web docs (2020-02-09)。
 5. [CSS white-space 属性](https://www.w3school.com.cn/cssref/pr_text_white-space.asp)。檢自 W3school (2020-02-09)。
 
+<br><br> 
+
+## 更新紀錄
+<details>
+  <summary>最後更新日期： 2020-08-14</summary>
+  <ul class="timestamp">
+    　<li>2020-08-14 更新 新增超連結顏色</li>
+    　<li>2020-02-09 發布</li>
+    　<li>2020-08-13 完稿</li>
+  </ul>
+</details>
