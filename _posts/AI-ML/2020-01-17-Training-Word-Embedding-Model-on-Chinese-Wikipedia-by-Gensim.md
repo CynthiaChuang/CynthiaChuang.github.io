@@ -223,7 +223,7 @@ with open(self.output, "w") as fw:
 
 最後一個註解是移除 [stop word](https://zh.wikipedia.org/wiki/%E5%81%9C%E7%94%A8%E8%AF%8D)，中文翻作停用詞，這些詞極其普遍，但與其他詞相比它並沒有什麼實際含義，如：阿、呀。這些詞的移除可以加強單詞的上下文關係，理論上有助於詞向量的訓練。
 
-除了上述的前處理外，在程式碼看不到的部份，我還對 Hanlp 的字典進行調整，引入了[內政資料開放平臺](https://data.moi.gov.tw/)的資料，並使用 Hanlp 內建的[新詞挖掘](https://github.com/hankcs/HanLP/wiki/%E6%96%B0%E8%AF%8D%E8%AF%86%E5%88%AB)的功能，使它的斷詞結果更符合台灣的對話情境。
+除了上述的前處理外，在程式碼看不到的部份，我還對 Hanlp 的字典進行調整，引入了[內政資料開放平臺](https://data.moi.gov.tw/)的資料，並使用 Hanlp 內建的[新詞挖掘](https://github.com/hankcs/HanLP/wiki/%E6%96%B0%E8%AF%8D%E8%AF%86%E5%88%AB)的功能，使它的斷詞結果更符合臺灣的對話情境。
 <br>
 
 ### Out-of-Vocabulary Words，即 OOV

@@ -93,7 +93,7 @@ Oops! 我好像搞混時間軸了。這篇是 2015 的文章，另外一篇被�
 
 <div class="alert warning"> 
 <div class="head">the multi-label CNN architecture we are using</div>
-同一段落中有提到這句話，作者認為所使用的是 multi-label？但在一個章節看網路架構圖，比較偏向我所認知的 <b>Multitask Learning</b> 的架構。
+同一段落中有提到這句話，作者認為所使用的是 multilabel？但在一個章節看網路架構圖，比較偏向我所認知的 <b>Multitask Learning</b> 的架構。
 </div>
 
 

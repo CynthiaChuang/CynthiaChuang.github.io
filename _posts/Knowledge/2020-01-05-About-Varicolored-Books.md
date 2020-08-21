@@ -33,7 +33,7 @@ tags:
 ## 白皮書
 白皮書是最早使用**皮書**一詞的，最早起源於英美政府，因用白色羊皮作封面而得名，專指<span class='highlighting'>政府發布的重要文件和報告</span>，或是<span class='highlighting'>具有權威性的報告書或指導性文本</span>作品。
 
-白皮書一般被視為政府對國民正式發佈資訊和政策的手段，如必須定期向全民公布的國防白皮書，即[國防報告](https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%98%B2%E5%A0%B1%E5%91%8A%E6%9B%B8)，世界各國皆會定期或不定期發表國防白皮書。
+白皮書一般被視為政府對國民正式發布資訊和政策的手段，如必須定期向全民公布的國防白皮書，即[國防報告](https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%98%B2%E5%A0%B1%E5%91%8A%E6%9B%B8)，世界各國皆會定期或不定期發表國防白皮書。
 
 <center> <img src="https://i.imgur.com/QQDsotJ.jpg?1" alt="國防報告書"></center>
 <center class="imgtext">國防報告書（圖片來源:國家網路書店 <a href="https://www.govbooks.com.tw/books/69766" class="imgtext">97年</a>、<a href="https://www.govbooks.com.tw/books/123353" class="imgtext">108年</a>）</center>

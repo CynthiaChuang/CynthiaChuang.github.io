@@ -62,20 +62,20 @@ tags:
 
 MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條運動軌跡所組成，是 Market-1501 的擴充集；而 DukeMTMC-VideoReID 的資料則是來自於 8 隻監視器中的 1402 人共 20478 條運動軌跡，是 DukeMTMC-ReID的 的擴充。其中，兩個原始資料集是 Image-Based Dataset，而兩個擴充資料集則是 Video-Based Dataset。
 
-兩個擴充集與原始資料集間，雖皆遵循相同的身份規則，但因 Image-Based 與 Video-Based Dataset 之間的實體不是一對一的對應的，無法直接使用，需要重新標註。另一個需要重新標註的原因是，由於行人在持續的運動，即使是同一個人但在不同的軌跡中，可能某些屬性會出現或消失，因此不能直接按行人的 ID 進行屬性標註，必須檢查當下運動軌跡重新標註屬性。
+兩個擴充集與原始資料集間，雖皆遵循相同的身分規則，但因 Image-Based 與 Video-Based Dataset 之間的實體不是一對一的對應的，無法直接使用，需要重新標註。另一個需要重新標註的原因是，由於行人在持續的運動，即使是同一個人但在不同的軌跡中，可能某些屬性會出現或消失，因此不能直接按行人的 ID 進行屬性標註，必須檢查當下運動軌跡重新標註屬性。
 
 <center> <img src="https://i.imgur.com/WI137nK.png" alt="MARS 中屬性改變的例子"></center>
 <center class="imgtext">MARS 中屬性改變的例子（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
 <br>
 
-重標註後的屬性共有 2 類 14 種共 52 個項目，其中第一類是**行為相關屬性**，這屬性與外觀描述無關，但卻會極大地影響外觀的呈現；第二類則是**身份相關屬性**，可以理解成描述此人所會用到的形容詞。
+重標註後的屬性共有 2 類 14 種共 52 個項目，其中第一類是**行為相關屬性**，這屬性與外觀描述無關，但卻會極大地影響外觀的呈現；第二類則是**身分相關屬性**，可以理解成描述此人所會用到的形容詞。
 
 <div class="alert danger"> 
 <div class="head">關於重標註後的屬性類別數</div>
 論文寫 16 種，但我怎麼算都只有 14 種，因此網誌我寫 14 種。
 </div>
 
-下圖是重標註後 14 種屬性，除運動（Motion）與姿態（Post）是行為相關屬性外，其餘皆是身份相關屬性。
+下圖是重標註後 14 種屬性，除運動（Motion）與姿態（Post）是行為相關屬性外，其餘皆是身分相關屬性。
 
 <center> <img src="https://i.imgur.com/2F56VgW.png" alt="MARS 行人屬性標註"></center>
 <center class="imgtext">MARS 行人屬性標註（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
@@ -90,7 +90,7 @@ MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條�
 
 在 CV 方面，似乎使用遷移學習試起手勢？在這邊作者挑選了<span class='highlighting'>ResNet-50</span>作為骨幹網路，並將最後一個 flatten 層作為 frame-level 的 feature map，然後將網路分成兩個分支分別進行 multi-task learning。
 
-兩個分支的概念對應到前面所提到的<span class='highlighting'>行為</span>與<span class='highlighting'>身份</span>相關屬性的區份，一個分支會進行動作與姿態的識別，另一個分支會進行行人外觀屬性的識別。
+兩個分支的概念對應到前面所提到的<span class='highlighting'>行為</span>與<span class='highlighting'>身分</span>相關屬性的區份，一個分支會進行動作與姿態的識別，另一個分支會進行行人外觀屬性的識別。
 
 這邊將兩種類型屬性區分開，應該是為將兩者的任務參數分開來學習不互相影響與約束。因為這兩種類型的屬性，在學習時會關注特徵不同的部份，這會導致兩種類型屬性對於同一特徵的表示有競爭的情況。
 
@@ -155,13 +155,13 @@ image-based method 這項我實在沒看懂它究竟是出自於哪個方法？
 
 ### Ablation study
 
-這段實驗室用來證明他們引入了**行為與身份屬性分離**與**時間注意力機制**的效能：
+這段實驗室用來證明他們引入了**行為與身分屬性分離**與**時間注意力機制**的效能：
 
 <center> <img src="https://i.imgur.com/Q3VZYec.png" alt="結果比較"></center>
 <center class="imgtext">結果比較（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
 <br>
 
-Temporal Pooling 應該是指用 ResNet50 當骨架直接做 multi-task 訓練，也就是 ResNet50 出來的特徵直接接各個屬性的 conv + pooling 最後做分類；separate channel 指的是行為與身份屬性分離；temporal attention 則是時間注意力機制。
+Temporal Pooling 應該是指用 ResNet50 當骨架直接做 multi-task 訓練，也就是 ResNet50 出來的特徵直接接各個屬性的 conv + pooling 最後做分類；separate channel 指的是行為與身分屬性分離；temporal attention 則是時間注意力機制。
 
 在表格中可以看到，單就兩方法的比較，temporal attention 所能帶來的效益較大，不僅能輸入軌跡中提取出有區別的幀，還能緩解在[網路架構章節中](#network-architecture)所提到特徵競爭問題。不過真的解決特徵競爭問題的是 separate channel，temporal attention 只能達到緩解的效果，在反向傳遞的過程中幫助梯度平滑傳遞到底層，達到類似的效果。
 
@@ -182,7 +182,7 @@ Temporal Pooling 應該是指用 ResNet50 當骨架直接做 multi-task 訓練�
 
 2. **期望能介紹該方面的實做與 STOA**
     - 所謂的 Video-Based 指的是同一運動目標的連續的靜態影像序列。
-    - 使用 ResNet-50 作為骨幹網路，進行遷移學習，後面依照行為與身份屬性分成兩個分支，並進行 multi-task 訓練，在每個任務的子分支中，又都加入時間注意力機制對每幀的中的特定屬性進行加權。
+    - 使用 ResNet-50 作為骨幹網路，進行遷移學習，後面依照行為與身分屬性分成兩個分支，並進行 multi-task 訓練，在每個任務的子分支中，又都加入時間注意力機制對每幀的中的特定屬性進行加權。
     - 子分支中網路應該就是兩個 1D-Convolution 做並聯，時間 Temporal-attention 負責壓縮時間、另一邊則負責提取空間特徵。
     - 比較對象有 [CNN-RNN model](https://ieeexplore.ieee.org/document/7780517) 。
    

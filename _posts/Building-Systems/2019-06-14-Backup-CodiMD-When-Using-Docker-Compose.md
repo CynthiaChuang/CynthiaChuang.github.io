@@ -33,7 +33,7 @@ $ sudo docker-compose exec database pg_dump hackmd -U hackmd > backup.sql
 /usr/local/bin/docker-compose exec database pg_dump hackmd -U hackmd > backup.sql
 ``` 
 
-<br><br> 執行時多加了兩行，確認一下執行身份與路徑有沒有跑掉，但看起來也一切正常。
+<br><br> 執行時多加了兩行，確認一下執行身分與路徑有沒有跑掉，但看起來也一切正常。
 ```shell
 whoami > log.txt
 whereis >> log.txt

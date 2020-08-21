@@ -8,7 +8,7 @@ tags:
 - 煉丹常識
 --- 
 
-<center> <img src="https://i.imgur.com/elR7EfU.png" alt="Multi-Label Classification"></center>
+<center> <img src="https://i.imgur.com/elR7EfU.png" alt="Multilabel Classification"></center>
 <center class="imgtext">Multilabel Classification（圖片來源: <a href="https://suhitaghosh10.github.io/EurLexClassification/" class="imgtext">EurLex classification </a>）</center>
 <br>
   

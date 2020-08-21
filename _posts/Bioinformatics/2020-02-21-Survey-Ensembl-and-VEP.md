@@ -15,7 +15,7 @@ tags:
   
 <div class="alert warning">
 <div class="head">翻譯交雜</div>
-對 Bioinformatics 實在很不熟，許多專有名詞大陸翻譯與台灣翻譯交雜，我會盡量附上對應的英文方便日後找尋。
+對 Bioinformatics 實在很不熟，許多專有名詞中國翻譯與臺灣翻譯交雜，我會盡量附上對應的英文方便日後找尋。
 </div>
 
 <!--more-->

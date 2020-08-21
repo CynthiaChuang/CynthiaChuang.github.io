@@ -51,7 +51,7 @@ tags:
 
 <br><br>
 
-## 用 Stackedit 發佈至 Blogger 
+## 用 Stackedit 發布至 Blogger 
 ![Stackedit](https://stackedit.io/res-min/img/logo.svg)
 <center class="imgtext">   Stackedit Icon （圖片來源: <a href="https://stackedit.io/" class="imgtext">Stackedit官網</a>）</center>
 
@@ -64,7 +64,7 @@ tags:
 
 雖然，我還滿喜歡 HackMD 的程式碼有支援行數的顯示，但即使沒有顯示也只是可讀行稍微差了點。若沒有要在 Blogger 貼長篇程式碼，這個缺點應該可以忽略不計。
  
-關於從 StackEdit 發表的Blogger的教學，可參考： [使用 StackEdit 發佈至 Blogger ~ Open Jiang](http://jeffyon.blogspot.com/2015/05/stackedit-bloggermd.html)
+關於從 StackEdit 發表的Blogger的教學，可參考： [使用 StackEdit 發布至 Blogger ~ Open Jiang](http://jeffyon.blogspot.com/2015/05/stackedit-bloggermd.html)
 
 <br><br>
 
@@ -141,7 +141,7 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 ## 參考資料 
 1. [在 blogger 貼漂亮 code 的方法（使用 markdown 和 prettyprint）｜卡卡米的記憶體](http://etrex.blogspot.com/2017/03/blogger-code-markdown-prettyprint.html)
 2. [Markdown for Blogger｜Web Applications Stack Exchange](https://webapps.stackexchange.com/questions/40737/markdown-for-blogger)
-3. [使用 Stackedit 發佈至 Blogger｜Open Jiang](http://jeffyon.blogspot.com/2015/05/stackedit-bloggermd.html)
+3. [使用 Stackedit 發布至 Blogger｜Open Jiang](http://jeffyon.blogspot.com/2015/05/stackedit-bloggermd.html)
 4. [使用 Stackedit 編輯 Markdown｜EAGLES VIEW 鳥瞰之眼](http://map-testing.blogspot.com/2016/08/hello_23.html)
 5. [如何让你的HEXO博客支持手写流程图？｜慧行说](https://www.liuyude.com/How_to_make_your_HEXO_blog_support_handwriting_flowchart.html)
 6. [The need for mermaid.css should be mentioned explicitly in the intro docs... · Issue #273 · knsv/mermaid｜Github](https://github.com/knsv/mermaid/issues/273)
