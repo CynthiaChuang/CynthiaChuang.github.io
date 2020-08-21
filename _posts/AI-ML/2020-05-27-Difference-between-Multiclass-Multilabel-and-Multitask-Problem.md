@@ -1,7 +1,7 @@
 ---
-title: Multi-class, Multi-label 以及 Multi-task 的區別
+title: Multiclass, Multilabel 以及 Multitask 的區別
 date: 2020-05-27
-modified: 2020-05-27
+modified: 2020-08-12
 categories:
 - AI/ML
 tags:
@@ -9,16 +9,16 @@ tags:
 --- 
 
 <center> <img src="https://i.imgur.com/elR7EfU.png" alt="Multi-Label Classification"></center>
-<center class="imgtext">Multi-Label Classification（圖片來源: <a href="https://suhitaghosh10.github.io/EurLexClassification/" class="imgtext">EurLex classification </a>）</center>
+<center class="imgtext">Multilabel Classification（圖片來源: <a href="https://suhitaghosh10.github.io/EurLexClassification/" class="imgtext">EurLex classification </a>）</center>
 <br>
   
-最近在糾結 Multi-class 與 Multi-label 的區別，順便頭疼他們該採用的 activation 與 loss function。
+最近在糾結 Multiclass 與 Multilabel 的區別，順便頭疼他們該採用的 activation 與 loss function。
 
 <!--more-->
 <br><br> 
 
 ## Binary classification
-在開始前先提提最常見的 Binary classification 二元分類，也就是學習 Yes/No 。
+在開始前，我們先提提最常見的 Binary classification 二元分類，也就是學習 Yes/No 。
 
 在此類型的分類任務中，會將給定訓練資料分成兩類別進行訓練，常見的二元分類（或者說我最近常見的？）包含：
 1. 診斷病患是否患病？
@@ -58,8 +58,8 @@ P.S. 是說選 Softmax 也沒關係？因為在二元分類情况下 Softmax 會
 <br><br> 
 
 ## Multilabel classification
-<center> <img src="https://i.imgur.com/SiUMrKl.png" alt="Multi-Label Classification"></center>
-<center class="imgtext">Multi-Label Classification（圖片來源: <a href="https://gombru.github.io/2018/05/23/cross_entropy_loss/" class="imgtext">Raúl Gómez blog</a>）</center>
+<center> <img src="https://i.imgur.com/SiUMrKl.png" alt="Multilabel Classification"></center>
+<center class="imgtext">Multilabel Classification（圖片來源: <a href="https://gombru.github.io/2018/05/23/cross_entropy_loss/" class="imgtext">Raúl Gómez blog</a>）</center>
 <br>
  
 Multilabel classification 多標籤分類任務，在此訓練任務中存在著兩個以上類別，但每個類別之間並不互斥。
@@ -89,6 +89,17 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
  [0 0 1 1]
  [0 2 0 0]]
 ```
+<br>
+
+**2020-08-12 更新**  
+後來發現如果是在說 Multitask 時，大家會傾向是在說 **Multitask Learning（多任務學習）**。一般的學習，一次只學習一個任務，無論是上述所提到的分類文章或是分類貓狗，他們實際上都只學習一件事，所以稱作 Single Task Learning（單任務學習)。
+
+而多任務學習，則是將多的<span class='highlighting'>相關的（related）<span>任務放在一起學習，在常見的多任務學習網路架構中，他們會共用前半部的參數，以從中習得任務之間的關聯性。
+
+<center> <img src="https://i.imgur.com/94EpzyP.png" alt="Multitask Learning Architecture"></center>
+<center style="color:Gainsboro;">Multitask Learning Architecture（圖片來源: <a href="https://arxiv.org/pdf/1611.00851.pdf" style="color:Gainsboro;">論文</a>）</center>
+<br>
+
 
 
 
@@ -101,13 +112,15 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 4. Leoch007 (2018-06-12)。[Multi-class Multi-label Multi-task区别](https://www.geek-share.com/detail/2739811489.html) 。檢自 极客分享 (2020-05-21)。
 5. 協同創作。[Multi-label classification](https://en.wikipedia.org/wiki/Multi-label_classification) 。檢自 Wikipedia (2020-05-21)。
 6. Anu (2019-02-10)。[What is the difference between Multitask and Multiclass learning](https://stats.stackexchange.com/a/391805)。檢自 Cross Validated - StackExchange (2020-05-21)。
+7. 深度学习于NLP (2017-06-06)。[模型汇总-14 多任务学习-Multitask Learning概述](https://zhuanlan.zhihu.com/p/27421983)。檢自 知乎 (2020-08-12)。
 
 <br><br> 
 
 ## 更新紀錄
 <details>
-  <summary>最後更新日期： 2020-05-27</summary>
-  <ul class="timestamp">
+  <summary>最後更新日期： 2020-08-12</summary>
+  <ul class="timestamp">  
+    　<li>2020-08-12 更新：新增 Multi-task 說明</li>
     　<li>2020-05-27 發布</li>
     　<li>2020-05-24 完稿</li>
   </ul>
