@@ -331,3 +331,60 @@ h2 {
     color: $toc-link-hover-color  ;
   } 
 }
+
+.category-all-page {
+  .category-list-count, 
+  .category-all-title { color: $greendark-ligh;}
+}
+
+.posts-collapse {
+  &::after {
+    background-image: linear-gradient(180deg, #d2e6d2,   $greendark-lighter );
+  }
+
+  .collection-title {
+    small { color: $greendark-ligh; }
+
+    &::before {
+      content: "\f06c";
+      font-family: FontAwesome;
+      background: none;
+      margin-left: 4px;
+      margin-top: -22px;
+      font-size: 24px;
+      color: $green-light;
+      transform: rotateY(180deg);
+    }
+  }
+
+
+  .post-header {
+    color: $text-color;
+    .post-title-link{
+      color: $text-color;
+    }
+
+    border-bottom-color:$green-light;
+    &::before {
+      background: $greendark-ligh;
+    }    
+          
+    &:hover{    
+      border-bottom-color: $greendark-dim;    
+
+      &::before {
+        background: $greendark-dim;    
+      } 
+    }    
+  }  
+}
+
+.page-archive{
+  .archive-page-counter {
+    color: $greendark-ligh;
+  }
+
+  .posts-collapse .archive-move-on {
+    background-color: $greendark-ligh;
+  }
+} 
