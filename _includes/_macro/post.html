@@ -58,29 +58,31 @@
 
         <div class="post-meta">
           <span class="post-time">
-            {% if site.post_meta.updated_at != true%}
+            {% if site.post_meta.created_at %}
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
+              {% if site.post_meta.item_text %}
+                <span class="post-meta-item-text">{{ __.post.posted }}</span>
+              {% endif %}
               <time title="{{ __.post.created }}" itemprop="dateCreated datePublished" datetime="{{ post.date | date_to_xmlschema }}">
                 {{ post.date | date: site.date_format }}
               </time>
-            {% else %} 
-              {% assign format_modified = post.modified | date: site.date_format%}
-              {% assign format_data = post.date | date: site.date_format%}
-             
-              {% if format_modified == format_data %}
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-o"></i>
-                </span>
-              {% else %}                 
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-              {% endif %}
+            {% endif %}
 
-              <time title="{{ __.post.modified }}" itemprop="dateModified" datetime="{{ post.modified | date: site.date_format }}">
-                {{ post.modified | date: site.date_format }}
+            {% if site.post_meta.created_at and site.post_meta.updated_at %}
+              <span class="post-meta-divider">|</span>
+            {% endif %}
+
+            {% if site.post_meta.updated_at %}
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              {% if site.post_meta.item_text %}
+                <span class="post-meta-item-text">{{ __.post.modified }}</span>
+              {% endif %}
+              <time title="{{ __.post.modified }}" itemprop="dateModified" datetime="{{ post.updated | date: site.date_format }}">
+                {{ post.updated | date: site.date_format }}
               </time>
             {% endif %}
           </span>
