@@ -34,11 +34,11 @@ tags:
 
 ## 全基因體關聯分析 （GWAS） 
 
-全基因組關體分析（Genome Wide Association Study）是指在人類全基因體範圍內找出存在的序列變異，即單核苷酸多態性（SNP），從中篩選出與疾病相關的 SNPs。
+全基因體關體分析（Genome Wide Association Study）是指在人類全基因體範圍內找出存在的序列變異，即單核苷酸多態性（SNP），從中篩選出與疾病相關的 SNPs。
 
 白話一點的說法就是，先決定一個想研究的性狀/疾病，然後去找到兩群人，一群有這性狀/疾病，另外一群做對照。考慮可能的混淆因素，並比對這兩群人所有/可能的 SNPs，最後依照基因型頻率分布來找到與該性狀/疾病相關的遺傳位點。之後的應用可以在搭配醫療資料的大數據分析，以進行疾病預防及治療...等。
 
-而全基因組關聯研究（GWAS）效能取決於三個因素：computing speed, memory requirements, and	statistical	power，這三個因素取決於所使用工具的統計方法與工具本身設計。
+而全基因體關聯研究（GWAS）效能取決於三個因素：computing speed, memory requirements, and	statistical	power，這三個因素取決於所使用工具的統計方法與工具本身設計。
 
 在 GWAS 常用演算法有三種常用：BLINK、FarmCPU 和 PLINK，不過這三種演算法偏向統計方法的改進，這篇的目的就是為了 Survey 這些工具。
 

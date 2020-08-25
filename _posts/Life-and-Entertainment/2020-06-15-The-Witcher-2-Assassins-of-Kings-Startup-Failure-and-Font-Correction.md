@@ -40,7 +40,7 @@ tags:
 好像[找的資源](https://forum.gamer.com.tw/Co.php?bsn=07364&sn=10709)多數雅黑體的，但我實在不愛雅黑體，由於它是簡中的字型包，所以在繁中表現上有點差強人意。它的字元的高度不一致，導致畫面凌亂、不整齊。這會逼瘋處女座的 XDDD
 
 <center> <img src="https://i.imgur.com/n1LCpWm.png" alt="微軟正黑體 (上) 和 微軟雅黑體 (下) 來顯示的結果"></center>
-<center class="imgtext">微軟正黑體 (上) 和 微軟雅黑體 (下) 來顯示的結果（圖片來源: <a href="https://louis925.wordpress.com/2018/03/29/%E8%AB%8B%E4%B8%8D%E8%A6%81%E7%94%A8%E5%BE%AE%E8%BB%9F%E9%9B%85%E9%BB%91%E9%AB%94%E4%BE%86%E9%A1%AF%E7%A4%BA%E5%8F%B0%E7%81%A3%E5%8D%80%E7%9A%84%E7%B9%81%E9%AB%94%E5%AD%97/" class="imgtext">steam</a>）</center>
+<center class="imgtext">微軟正黑體 (上) 和 微軟雅黑體 (下) 來顯示的結果（圖片來源: <a href="https://louis925.wordpress.com/2018/03/29/%E8%AB%8B%E4%B8%8D%E8%A6%81%E7%94%A8%E5%BE%AE%E8%BB%9F%E9%9B%85%E9%BB%91%E9%AB%94%E4%BE%86%E9%A1%AF%E7%A4%BA%E5%8F%B0%E7%81%A3%E5%8D%80%E7%9A%84%E7%B9%81%E9%AB%94%E5%AD%97/" class="imgtext">稚空's Blog</a>）</center>
 
 <br>
 

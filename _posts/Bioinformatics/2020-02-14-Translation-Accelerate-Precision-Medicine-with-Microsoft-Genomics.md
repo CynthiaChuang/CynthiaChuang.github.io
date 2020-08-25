@@ -61,7 +61,7 @@ Microsoft Azure 雲端運算服務憑藉著可靠性、安全性、全球資料�
 
 為使 Microsoft Azure 成為基因體學最佳的雲端運算服務，Microsoft Genomics 開發了一種優化的輔助分析服務，可以在幾小時內處理 30x 基因體，而不需要花費一天或以上的時間來處理。 Microsoft Genomics Service 包含一個經過優化的高效能引擎，可以讀取較大的基因體資料文件，並使用多核心進行處理、排序並對結果進行過濾，最後再將過濾結果寫回。該引擎協調 BWA 與 GATK HaplotypeCaller 的變異位點偵測操作以實現最大吞吐量。此外，它還整合其他一些標準基因體管線中較為簡易的部份，如：重複標記（Duplicate Marking）、定序質量分數重新校正（Base Quality Score Recalibration，BQSR）與索引（indexing）。從單一樣本的原始資料讀取、定序片段比對到變異點偵測，該引擎在一台多核心伺服器上可以在幾個小時以內完成。
  
-Microsoft Genomics service controller 管理雲端運算服務中分佈在機器集區（pools of machines）裡的一批基因組的處理。它維護傳入請求的佇列，將它們分發到運行基因體引擎的伺服器，並監視其性能與進度，最後評估結果。它確保服務在安全的 Web Service API 的後方可以可靠且安全地大規模運行。客戶端無需處理複雜的軟硬體維護與更新，並且可以快速且有效地執行精確的 GATK 標準分析流程。其分析結果可以輕鬆連接到三級分析和與機器學習服務，如：Azure 上的 Microsoft R Server。
+Microsoft Genomics service controller 管理雲端運算服務中分佈在機器集區（pools of machines）裡的一批基因體的處理。它維護傳入請求的佇列，將它們分發到運行基因體引擎的伺服器，並監視其性能與進度，最後評估結果。它確保服務在安全的 Web Service API 的後方可以可靠且安全地大規模運行。客戶端無需處理複雜的軟硬體維護與更新，並且可以快速且有效地執行精確的 GATK 標準分析流程。其分析結果可以輕鬆連接到三級分析和與機器學習服務，如：Azure 上的 Microsoft R Server。
 <br>
 
 ### 2.1 Client Architecture
@@ -105,7 +105,7 @@ Service Controller 是個具有可執行後端服務的分佈式 C＃ 網路應�
 
 
 #### 2.1.2  SNAP Engine
-SNAP Engine 是基於 Microsoft Research 與 UC Berkeley AMPLab 合作開發的的高性能 SNAP short read aligner。但此版本不使用 SNAP alignment 演算法，而是使用更廣泛的 BWA MEM 比對器來取代。它擁有一個高性能的非同步輸入/輸出子系統，可以有效地處理大量的基因組數據。它還包括一個高效的系統，用於排程跨多核心的計算密集型工作並收集結果。為了盡量減少額外的硬碟讀取次數，通過該框架的總體資料流只在兩個步驟間進讀取和寫入數據，而不是像標準 BWA / GATK 管線中所要求的半打或以上的讀寫次數。
+SNAP Engine 是基於 Microsoft Research 與 UC Berkeley AMPLab 合作開發的的高性能 SNAP short read aligner。但此版本不使用 SNAP alignment 演算法，而是使用更廣泛的 BWA MEM 比對器來取代。它擁有一個高性能的非同步輸入/輸出子系統，可以有效地處理大量的基因體數據。它還包括一個高效的系統，用於排程跨多核心的計算密集型工作並收集結果。為了盡量減少額外的硬碟讀取次數，通過該框架的總體資料流只在兩個步驟間進讀取和寫入數據，而不是像標準 BWA / GATK 管線中所要求的半打或以上的讀寫次數。
 
 <center><img src="https://i.imgur.com/fq0zMBR.png" alt=" Standard BWA/GATK Pipeline"></center>
 <br>
@@ -190,7 +190,7 @@ Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，�
 
 [^annotations]: **註釋 annotations**<br> 顧名思義，就是寫註解，有分成結構性註釋與功能性註釋。結構性註釋是標註外顯子、內含子等資訊。功能性註釋則是說明美條基因編碼什麼蛋白質、有什麼功能。
  
-[^reads]: **定序片段 reads**<br> reads 並不是基因基因組中的組成，是一小段短的定序片段，為高通量定序儀產生的定序數據。不過這個自很多時候都沒有翻譯就直接使用了。
+[^reads]: **定序片段 reads**<br> reads 並不是基因基因體中的組成，是一小段短的定序片段，為高通量定序儀產生的定序數據。不過這個自很多時候都沒有翻譯就直接使用了。
 
 [^30x]: **平均以 30 個副本涵蓋整個基因體**<br> 猜這邊想表達的應該是 30x 的定序深度。
 

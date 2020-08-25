@@ -55,7 +55,7 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
     <center> <img src="https://i.imgur.com/1ALsKQ3.jpg" alt="Human Search Result"></center>
     <br>
     
-2. 點擊搜尋結果，可以看到人類基因組的[主頁](http://asia.ensembl.org/Homo_sapiens/Info/Index)
+2. 點擊搜尋結果，可以看到人類基因體的[主頁](http://asia.ensembl.org/Homo_sapiens/Info/Index)
     <center> <img src="https://i.imgur.com/G5bMvLn.png" alt="Human"></center>
     <br>
     
