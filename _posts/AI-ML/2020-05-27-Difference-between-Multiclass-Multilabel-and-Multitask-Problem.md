@@ -110,7 +110,7 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 2. [What is the difference between multiple outputs and multilabel output?](https://www.researchgate.net/post/What_is_the_difference_between_multiple_outputs_and_multilabel_output)。檢自 Researchgate (2020-05-21)。
 3. 东明山庄 (2016-04-26)。[Multi-class, Multi-label 以及 Multi-task 问题](https://blog.csdn.net/u012176591/article/details/51251252) 。檢自 金良山庄 CSDN博客 (2020-05-21)。
 4. Leoch007 (2018-06-12)。[Multi-class Multi-label Multi-task区别](https://www.geek-share.com/detail/2739811489.html) 。檢自 极客分享 (2020-05-21)。
-5. 協同創作。[Multi-label classification](https://en.wikipedia.org/wiki/Multi-label_classification) 。檢自 Wikipedia (2020-05-21)。
+5. 協同撰寫。[Multi-label classification](https://en.wikipedia.org/wiki/Multi-label_classification) 。檢自 Wikipedia (2020-05-21)。
 6. Anu (2019-02-10)。[What is the difference between Multitask and Multiclass learning](https://stats.stackexchange.com/a/391805)。檢自 Cross Validated - StackExchange (2020-05-21)。
 7. 深度学习于NLP (2017-06-06)。[模型汇总-14 多任务学习-Multitask Learning概述](https://zhuanlan.zhihu.com/p/27421983)。檢自 知乎 (2020-08-12)。
 

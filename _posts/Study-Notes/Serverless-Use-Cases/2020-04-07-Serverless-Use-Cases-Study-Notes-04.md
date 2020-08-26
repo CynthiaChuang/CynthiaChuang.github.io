@@ -213,4 +213,4 @@ $ wsk	rule	create	update-trigger-rule	update-trigger	update-document-with-watson
 <br><br> 
 
 ## 參考資料 
-1. 公開編輯 (2019-02-14)。[OpenWhisk system details](https://github.com/apache/openwhisk/blob/master/docs/reference.md#actions) 。檢自 openwhisk - github (2020-04-15)。
+1. 協同撰寫 (2019-02-14)。[OpenWhisk system details](https://github.com/apache/openwhisk/blob/master/docs/reference.md#actions) 。檢自 openwhisk - github (2020-04-15)。

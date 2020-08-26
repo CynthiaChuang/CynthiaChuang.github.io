@@ -124,7 +124,7 @@ Universal Time is now:  Fri Feb 21 02:31:05 UTC 2020.
 <br><br> 
 
 ## 參考資料 
-1. 多人協同創作 (2016-07-13)。[UbuntuTime](https://www.itread01.com/p/154107.html) 。檢自 Community Help  (2020-02-18)。
+1. 協同撰寫 (2016-07-13)。[UbuntuTime](https://www.itread01.com/p/154107.html) 。檢自 Community Help  (2020-02-18)。
 2. LINUX教程 (2018-10-02)。[Docker容器時區設定與中文字元支援](https://www.itread01.com/p/154107.html) 。檢自 IT閱讀 (2020-02-18)。
 3. pyfreyr (2019-05-28)。[Avoiding user interaction with tzdata when installing certbot in a docker container](https://askubuntu.com/a/1129284) 。檢自 Ask Ubuntu (2020-02-18)。
 4. [Dockerfile reference - ENV](https://docs.docker.com/engine/reference/builder/#env) 。檢自  Docker Documentation (2020-02-18)。

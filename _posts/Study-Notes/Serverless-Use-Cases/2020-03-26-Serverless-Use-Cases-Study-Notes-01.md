@@ -361,7 +361,7 @@ Apache OpenWhisk 的部屬看理來很簡單，只要支援 docker 的設備都�
 
 ## 參考資料 
 1. 费良宏 (2017-01-18)。[从IaaS到FaaS—— Serverless架构的前世今生](https://aws.amazon.com/cn/blogs/china/iaas-faas-serverless/) 。檢自 亚马逊AWS官方博客 (2020-03-25)。
-2. 公開協作。[無伺服器計算](https://zh.wikipedia.org/wiki/%E7%84%A1%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%88%E7%AE%97)。檢自 維基百科 (2020-03-25)。
+2. 協同撰寫。[無伺服器計算](https://zh.wikipedia.org/wiki/%E7%84%A1%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%88%E7%AE%97)。檢自 維基百科 (2020-03-25)。
 3. (2018-11)。 [IBM Cloud Functions](https://www-03.ibm.com/software/sla/sladb.nsf/8bd55c6b9fa8039c86256c6800578854/c9c99a9fc9731d3f86258340006f9704/$FILE/i126-7607-03_11-2018_zh_TW.pdf)。檢自 IBM Cloud 其他服務說明 (2020-03-25)。
 4. Shashikanh (2019-07-25)。[“Hello, World” in IBM Cloud Functions vs Express Serverless Platform — A Developer’s Perspective](https://medium.com/ibm-cloud/hello-world-in-ibm-cloud-functions-vs-express-serverless-platform-a-developers-perspective-4d5e391653e) 。檢自 IBM Cloud - Medium (2020-03-25)。
 5. (2019-07-12)。[Cloud Functions 的運作方式 - Cloud Functions 術語](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-about#cloud-functions-terminology) 。檢自 IBM Cloud (2020-03-25)。
