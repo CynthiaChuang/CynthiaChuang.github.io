@@ -391,3 +391,10 @@ h2 {
 .tag-cloud .tag-cloud-title { 
   color: $greendark-ligh;
 }
+
+.local-search-popup {
+  .local-search-header{
+    color: $greendark-dark;
+    background: $greendark-lighter;
+  }
+}
