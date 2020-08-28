@@ -357,7 +357,6 @@ h2 {
     }
   }
 
-
   .post-header {
     color: $text-color;
     .post-title-link{
@@ -388,3 +387,7 @@ h2 {
     background-color: $greendark-ligh;
   }
 } 
+
+.tag-cloud .tag-cloud-title { 
+  color: $greendark-ligh;
+}
