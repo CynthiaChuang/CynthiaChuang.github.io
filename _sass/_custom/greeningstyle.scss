@@ -1,0 +1,173 @@
+// Custom styles.
+// Settings for some of the most global styles.
+// --------------------------------------------------
+
+h1 {
+  color: $h1-color;
+} 
+
+h2 {
+  color: $h2-color;
+}
+
+// Post 
+// --------------------------------------------------
+.posts-expand .post-tags {  
+  a {
+    background: $greendark-lighter;
+    &:hover {
+      color: white;
+      background: $green-lighter;
+    }
+  }
+}
+
+.posts-expand .post-meta {
+  color: $greendark-ligh ;
+}
+
+.post-nav {
+  border-top: 1px solid $greendark-ligh;
+}
+
+// header & footer
+// --------------------------------------------------
+
+.header ,
+.footer {
+  color: $greendark-dark;
+  background: $greendark-lighter;
+}
+
+.site-meta {
+  .brand {
+    color: $greendark-dark;
+  }
+  .logo-line-before,
+  .logo-line-after {
+    i {
+      background: $greendark-dark;
+    }
+  }
+}
+
+.menu .menu-item {
+  a {
+    color: $greendark-dark;
+    background: none;
+    &:hover {
+      color: $green-dim ;
+      background: none;
+    }
+  }
+}
+
+// sidebar
+// --------------------------------------------------
+.sidebar,
+.back-to-top,
+.sidebar-toggle {
+  background: $greendark-darker ;
+}
+
+.page-post-detail .sidebar-toggle-line,
+.sidebar-toggle-line {
+  background: white;
+}
+
+.site-author-image {
+  border-radius: 100%;
+}
+
+.site-state-item a {
+  &:hover {
+    color: $toc-link-hover-color  ;
+  } 
+}
+
+// category & Archive 
+// --------------------------------------------------
+.category-all-page {
+  .category-list-count, 
+  .category-all-title { color: $greendark-ligh;}
+}
+
+.posts-collapse {
+  &::after {
+    background-image: linear-gradient(180deg, #d2e6d2,   $greendark-lighter );
+  }
+
+  .collection-title {
+    small { color: $greendark-ligh; }
+
+    &::before {
+      content: "\f06c";
+      font-family: FontAwesome;
+      background: none;
+      margin-left: 4px;
+      margin-top: -22px;
+      font-size: 24px;
+      color: $green-light;
+      transform: rotateY(180deg);
+    }
+  }
+
+  .post-header {
+    color: $text-color;
+    .post-title-link{
+      color: $text-color;
+    }
+
+    border-bottom-color:$green-light;
+    &::before {
+      background: $greendark-ligh;
+    }    
+          
+    &:hover{    
+      border-bottom-color: $greendark-dim;    
+
+      &::before {
+        background: $greendark-dim;    
+      } 
+    }    
+  }  
+}
+
+.page-archive{
+  .archive-page-counter {
+    color: $greendark-ligh;
+  }
+
+  .posts-collapse .archive-move-on {
+    background-color: $greendark-ligh;
+  }
+} 
+
+// tag
+// --------------------------------------------------
+.tag-cloud .tag-cloud-title { 
+  color: $greendark-ligh;
+}
+
+// search
+// --------------------------------------------------
+.local-search-popup {
+  .local-search-header{
+    color: $greendark-dark;
+    background: $greendark-lighter;
+  }
+}
+
+// 404
+// ---------------------------------
+.no-found-page .no-found-menu .menu-item{
+  a {
+    color: $greendark-dark;
+    background: none;
+    &:hover {
+      color: $green-dim ;
+      background: none;
+    }
+  }
+}
+ 

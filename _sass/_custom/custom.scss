@@ -1,32 +1,71 @@
-// Custom styles.
 // no-found-menu
 // use in 404 not found page
 // --------------------------------------------------
-.no-found-menu {
-    padding-left: 0;  
- }
+
+.no-found-page {
+  font-family:" Noto Sans TC","Noto Sans TC", "Noto Sans TC","PingFang SC","Microsoft YaHei","sans-serif"; 
+  background-color: #fff;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -250px;
+  display: table;
+
   
-.no-found-menu .menu-item {
-    display: inline-block;
-    margin: 0 10px;
-    list-style: none;
+  .text-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
-    @media screen and (max-width: 767px) {
-        margin-top: 10px;
-    }
+  h1, h2 {
+    margin:0;
+    padding:0;
+    text-align: center;
+  }  
 
-    a {
-        display: block;
-        font-size: 13px;
-        line-height: inherit;
-        border-bottom: 1px solid $menu-link-border;
-        transition-property: border-color;
-        @include the-transition();
+  .title {
+    font-size:150px; 
+    line-height:150px; 
+    font-weight:bold;
+  }
 
-        &:hover { color:$grey-light}
-    }
+  .subtitle {
+    font-size: 30px;
+  }
+ 
+  .hint{
+    color:$text-color;
+  }
 
-    .fa { margin-right: 5px; }
+  .no-found-menu {
+      padding-left: 0;  
+  }
+    
+  .no-found-menu .menu-item {
+      display: inline-block;
+      margin: 0 10px;
+      list-style: none;
+
+      @media screen and (max-width: 767px) {
+          margin-top: 10px;
+      }
+
+      a {
+          display: block;
+          font-size: 13px;
+          line-height: inherit;
+          border-bottom: 1px solid $menu-link-border;
+          transition-property: border-color;
+          @include the-transition();
+
+          &:hover { color:$grey-light; }
+      }
+
+      .fa { margin-right: 5px; }
+  }
+
 }
   
 // post-tages
@@ -60,6 +99,15 @@
   background-color:   $alert-default-bg;
   border-left-color:  $alert-default-border;
   color:  $alert-default-text;
+
+  a {
+    color: $alert-default-text;
+    border-bottom-color: $alert-default-text;
+    &:hover {
+      color: $alert-default-hover; 
+      border-bottom-color: $alert-default-hover;
+    } 
+  }
 
   h2, h3, h4, h5, h6 {
       if note_icons {
@@ -105,6 +153,16 @@
       background-color: $alert-primary-bg;
       border-left-color:  $alert-primary-border;
       color:  $alert-primary-text;
+
+      a {
+        color: $alert-primary-text;   
+        border-bottom-color: $alert-primary-text; 
+        &:hover {
+          color: $alert-primary-hover   ; 
+          border-bottom-color: $alert-primary-hover ;
+        } 
+      }
+
       &:not(.no-icon) {
           &:before {
               content: $alert-primary-icon;
@@ -117,6 +175,16 @@
     background-color: $alert-info-bg;
     border-left-color:  $alert-info-border;
     color: $alert-info-text;
+
+    a {
+      color: $alert-info-text;    
+      border-bottom-color: $alert-info-text; 
+      &:hover {
+        color: $alert-info-hover   ; 
+        border-bottom-color: $alert-info-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-info-icon;
@@ -129,6 +197,16 @@
     background-color: $alert-success-bg;
     border-left-color:  $alert-success-border;
     color: $alert-success-text;
+
+    a {
+      color: $alert-success-text; 
+      border-bottom-color: $alert-success-text;    
+      &:hover {
+        color: $alert-success-hover   ; 
+        border-bottom-color: $alert-success-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-success-icon;
@@ -141,6 +219,16 @@
     background-color: $alert-warning-bg;
     border-left-color:  $alert-warning-border;
     color: $alert-warning-text;
+
+    a {
+      color: $alert-warning-text;  
+      border-bottom-color: $alert-warning-text;    
+      &:hover {
+        color: $alert-warning-hover   ; 
+        border-bottom-color: $alert-warning-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-warning-icon;
@@ -153,6 +241,16 @@
     background-color: $alert-danger-bg;
     border-left-color:  $alert-danger-border;
     color: $alert-danger-text;
+
+    a {
+      color: $alert-danger-text;   
+      border-bottom-color: $alert-danger-text;     
+      &:hover {
+        color: $alert-danger-hover   ; 
+        border-bottom-color: $alert-danger-hover ;
+      } 
+    }
+
     &:not(.no-icon) {
         &:before {
             content: $alert-danger-icon;

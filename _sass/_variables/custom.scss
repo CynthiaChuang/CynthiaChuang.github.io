@@ -4,41 +4,47 @@
 $alert-default-border        : $grey-dim;
 $alert-default-bg            : $gainsboro;
 $alert-default-text          : $alert-default-border;
+$alert-default-hover         : $black-deep;
 $alert-default-icon          : "\f0a9";
 
 // Primary
 $alert-primary-border        : #6f42c1;
 $alert-primary-bg            : #f5f0fa;
 $alert-primary-text          : $alert-primary-border;
+$alert-primary-hover         : #381d69;   
 $alert-primary-icon          : "\f055";
 
 // Info
 $alert-info-border           : $blue;
 $alert-info-bg               : #eef7fa;
 $alert-info-text             : $alert-info-border;
+$alert-info-hover            : #00008B;   
 $alert-info-icon             : "\f05a";
 
 // Success
 $alert-success-border        : #5cb85c;
 $alert-success-bg            : #eff8f0;
 $alert-success-text          : $alert-success-border;
+$alert-success-hover         : #3c783c; 
 $alert-success-icon          : "\f058";
 
 // Warning
 $alert-warning-border        : #f0ad4e;
 $alert-warning-bg            : #fdf8ea;
 $alert-warning-text          : $alert-warning-border;
+$alert-warning-hover         : #bf7105; 
 $alert-warning-icon          : "\f06a";
 
 // Danger
 $alert-danger-border         : #d9534f;
 $alert-danger-bg             : #fcf1f2;
 $alert-danger-text           : $alert-danger-border;
+$alert-danger-hover          : #d32b25;
 $alert-danger-icon           : "\f056";
 
 // highlighting  colors
 // --------------------------------------------------
-$highlighting-default              : #e6fcf2;
+$highlighting-default              : rgb(227, 242, 201);
 $highlighting-success              : $alert-success-bg;
 $highlighting-warning              : $alert-warning-bg ;
 $highlighting-danger               : $alert-danger-bg ;

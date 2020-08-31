@@ -21,6 +21,7 @@ $jekyll-config-map : {{ config_map }};
 @import "_variables/base";
 @import "_variables/{{ site.scheme | default: Muse }}";
 @import "_variables/custom";
+@import "_variables/greeningstyle";
 
 // Mixins Layer
 // --------------------------------------------------
@@ -52,3 +53,4 @@ $jekyll-config-map : {{ config_map }};
 // Custom Layer
 // --------------------------------------------------
 @import "_custom/custom";
+@import "_custom/greeningstyle";

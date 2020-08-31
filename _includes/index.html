@@ -1,6 +1,6 @@
-{% assign posts = site.posts | sort:"modified" | reverse  %}
+{% assign posts = site.posts %}
 {% if site.paginate > 0 %}
-  {% assign posts = paginator.posts | sort:"modified" | reverse  %}
+  {% assign posts = paginator.posts %}
 {% endif %}
 
 <section id="posts" class="posts-expand">
