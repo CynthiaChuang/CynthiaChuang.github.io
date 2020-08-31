@@ -157,3 +157,17 @@ h2 {
     background: $greendark-lighter;
   }
 }
+
+// 404
+// ---------------------------------
+.no-found-page .no-found-menu .menu-item{
+  a {
+    color: $greendark-dark;
+    background: none;
+    &:hover {
+      color: $green-dim ;
+      background: none;
+    }
+  }
+}
+ 

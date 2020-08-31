@@ -1,31 +1,71 @@
 // no-found-menu
 // use in 404 not found page
 // --------------------------------------------------
-.no-found-menu {
-    padding-left: 0;  
- }
+
+.no-found-page {
+  font-family:" Noto Sans TC","Noto Sans TC", "Noto Sans TC","PingFang SC","Microsoft YaHei","sans-serif"; 
+  background-color: #fff;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -250px;
+  display: table;
+
   
-.no-found-menu .menu-item {
-    display: inline-block;
-    margin: 0 10px;
-    list-style: none;
+  .text-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
-    @media screen and (max-width: 767px) {
-        margin-top: 10px;
-    }
+  h1, h2 {
+    margin:0;
+    padding:0;
+    text-align: center;
+  }  
 
-    a {
-        display: block;
-        font-size: 13px;
-        line-height: inherit;
-        border-bottom: 1px solid $menu-link-border;
-        transition-property: border-color;
-        @include the-transition();
+  .title {
+    font-size:150px; 
+    line-height:150px; 
+    font-weight:bold;
+  }
 
-        &:hover { color:$grey-light}
-    }
+  .subtitle {
+    font-size: 30px;
+  }
+ 
+  .hint{
+    color:$text-color;
+  }
 
-    .fa { margin-right: 5px; }
+  .no-found-menu {
+      padding-left: 0;  
+  }
+    
+  .no-found-menu .menu-item {
+      display: inline-block;
+      margin: 0 10px;
+      list-style: none;
+
+      @media screen and (max-width: 767px) {
+          margin-top: 10px;
+      }
+
+      a {
+          display: block;
+          font-size: 13px;
+          line-height: inherit;
+          border-bottom: 1px solid $menu-link-border;
+          transition-property: border-color;
+          @include the-transition();
+
+          &:hover { color:$grey-light; }
+      }
+
+      .fa { margin-right: 5px; }
+  }
+
 }
   
 // post-tages
