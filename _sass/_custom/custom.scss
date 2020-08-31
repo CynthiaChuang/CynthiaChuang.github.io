@@ -70,17 +70,28 @@
   
 // post-tages
 // --------------------------------------------------
-.posts-expand .post-tags {  
+.posts-expand{
+  .post-footer{
+    margin-top: 100px;
+  }
+
+  .post-tags {  
     a {
       display: inline-block;
       margin-right: 10px;
-      margin-top:100px;
+      margin-top: 30px;
       font-size: 13px;
       border-radius:12px;
       cursor:pointer;
       padding:0px 16px;
     }
   }
+
+  .licenses {
+    margin-top: 30px;
+    border-left-color:red
+  }
+}
 
 // note
 // ref: https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl

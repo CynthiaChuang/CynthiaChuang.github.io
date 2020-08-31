@@ -12,19 +12,26 @@ h2 {
 
 // Post 
 // --------------------------------------------------
-.posts-expand .post-tags {  
-  a {
-    background: $greendark-lighter;
-    &:hover {
-      color: white;
-      background: $green-lighter;
+.posts-expand{
+  .post-tags {  
+    a {
+      background: $greendark-lighter;
+      &:hover {
+        color: white;
+        background: $green-lighter;
+      }
     }
+  }
+
+  .post-meta {
+    color: $greendark-ligh ;
+  }
+
+  .licenses {
+    border-left-color:$green-light 
   }
 }
 
-.posts-expand .post-meta {
-  color: $greendark-ligh ;
-}
 
 .post-nav {
   border-top: 1px solid $greendark-ligh;
