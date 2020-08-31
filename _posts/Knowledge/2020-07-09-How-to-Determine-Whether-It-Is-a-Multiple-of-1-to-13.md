@@ -1,7 +1,7 @@
 ---
 title: "如何判別是否為 1～13 的倍數"
 date: 2020-08-10
-modified: 2020-08-10
+is_modified: false
 categories:
 - Knowledge
 tags:

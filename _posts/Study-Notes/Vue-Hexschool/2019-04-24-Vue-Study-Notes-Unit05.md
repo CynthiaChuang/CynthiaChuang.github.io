@@ -1,7 +1,7 @@
 ---
 title: 【Vue.js 學習筆記】05. Vue 的生命週期
 date: 2019-04-24
-modified: 2020-04-24
+is_modified: false
 categories:
 - Study-Notes
 - Computer-Language/Framework

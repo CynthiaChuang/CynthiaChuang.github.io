@@ -1,7 +1,7 @@
 ---
 title: "【論文筆記】A Temporal Attentive Approach for Video-Based Pedestrian Attribute Recognition"
 date: 2020-08-13
-modified: 2020-08-13
+is_modified: false
 categories:
 - Study-Notes
 - AI/ML

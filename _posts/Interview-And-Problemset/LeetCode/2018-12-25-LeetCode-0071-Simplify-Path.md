@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0071. Simplify Path
 date: 2018-12-25
-modified: 2018-12-25
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

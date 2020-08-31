@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0014. Longest Common Prefix
 date: 2019-06-10
-modified: 2019-06-10
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

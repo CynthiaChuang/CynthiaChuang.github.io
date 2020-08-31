@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0031. Next Permutation
 date: 2019-01-10
-modified: 2019-01-10
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

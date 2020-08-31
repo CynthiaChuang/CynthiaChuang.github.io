@@ -1,7 +1,7 @@
 ---
 title: "【論文筆記】Convolutional Neural Networks for Fashion Classification and Object Detection"
 date: 2020-08-21
-modified: 2020-08-21
+is_modified: false
 categories:
 - Study-Notes
 - AI/ML
@@ -49,10 +49,9 @@ tags:
 2. 在**監視環境**中，可以利用行人服裝屬性輔助進行行人再識別（ReID）
 3. 在**檢索應用**方面，可以使用文字檢索圖片，例如：穿紅衣的小女孩...等
 <center> <img src="https://i.imgur.com/HJYJ70U.png" alt="洋裝下擺與單裙下擺"></center>
+<center class="imgtext">洋裝下擺與單裙下擺（左：洋裝、右：單裙）（圖片來源: 左: <a href="https://tw.baddiary.com/product/%E5%BE%8C%E6%8B%89%E9%8D%8A%E9%96%8B%E8%A1%A9%E8%A2%96%E5%A2%8A%E8%82%A9%E7%99%BE%E8%A4%B6%E6%B4%8B%E8%A3%9D%E9%99%84%E8%85%B0%E5%B8%B6/16754/?cafe_mkt=google_tw_dy&utm_source=Google&utm_medium=cpc&utm_campaign=Google_shopping&gclid=Cj0KCQjwg8n5BRCdARIsALxKb94BR8R5d_GGycXTqWv9UyWr_UdzFvFKTQN6VJ4T91wxmY8VS9dNkwYaAgxiEALw_wcB" class="imgtext">baddiary</a>、右:<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fworld.taobao.com%2Fproduct%2F%25E5%2596%25AE%25E8%25A3%2599%25E9%25A1%25AF%25E7%2598%25A6.htm&psig=AOvVaw2Nentv0o4g8jWz-gOhqw-y&ust=1597222436780000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCKCcx7LjkusCFQAAAAAdAAAAABAI" class="imgtext">淘寶海外</a>）</center>
 
 <br>
-
-<center class="imgtext">洋裝下擺與單裙下擺（左：洋裝、右：單裙）（圖片來源: 左: <a href="https://tw.baddiary.com/product/%E5%BE%8C%E6%8B%89%E9%8D%8A%E9%96%8B%E8%A1%A9%E8%A2%96%E5%A2%8A%E8%82%A9%E7%99%BE%E8%A4%B6%E6%B4%8B%E8%A3%9D%E9%99%84%E8%85%B0%E5%B8%B6/16754/?cafe_mkt=google_tw_dy&utm_source=Google&utm_medium=cpc&utm_campaign=Google_shopping&gclid=Cj0KCQjwg8n5BRCdARIsALxKb94BR8R5d_GGycXTqWv9UyWr_UdzFvFKTQN6VJ4T91wxmY8VS9dNkwYaAgxiEALw_wcB" class="imgtext">baddiary</a>、右:<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fworld.taobao.com%2Fproduct%2F%25E5%2596%25AE%25E8%25A3%2599%25E9%25A1%25AF%25E7%2598%25A6.htm&psig=AOvVaw2Nentv0o4g8jWz-gOhqw-y&ust=1597222436780000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCKCcx7LjkusCFQAAAAAdAAAAABAI" class="imgtext">淘寶海外</a>）</center>
 
 並說明了在此領域會遇到的挑戰：
 1. 各類衣服會具有<span class='highlighting'>相似的特徵</span>，如：洋裝下擺與單裙下擺。

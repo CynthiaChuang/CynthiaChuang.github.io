@@ -1,7 +1,7 @@
 ---
 title: 【Serverless 應用案例賞析筆記】 01. Serverless 架構與 Apache OpenWhisk
 date: 2020-03-26
-modified: 2020-03-26
+is_modified: false
 categories:
 - Study-Notes
 - Cloud-Computing

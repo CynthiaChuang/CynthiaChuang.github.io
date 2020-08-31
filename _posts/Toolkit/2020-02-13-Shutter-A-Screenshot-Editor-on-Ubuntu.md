@@ -1,7 +1,7 @@
 ---
 title: Ubuntu 上的螢幕截圖編輯軟體 - Shutter
 date: 2020-02-13
-modified: 2020-02-13
+is_modified: false
 categories:
 - Toolkit
 tags:

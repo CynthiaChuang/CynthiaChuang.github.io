@@ -1,7 +1,7 @@
 ---
 title: Vim 卡死動不了的解決方法
 date: 2020-05-26
-modified: 2020-05-26
+is_modified: false
 categories:
 - Toolkit
 tags:

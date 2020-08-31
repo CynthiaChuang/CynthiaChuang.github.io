@@ -1,7 +1,7 @@
 ---
 title: 在 Linux 系统安裝 Openconnect
 date: 2020-08-10 
-modified: 2020-08-10 
+is_modified: false
 categories:
 - Toolkit
 tags:

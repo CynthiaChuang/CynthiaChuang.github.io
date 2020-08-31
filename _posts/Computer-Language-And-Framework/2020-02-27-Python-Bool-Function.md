@@ -1,7 +1,7 @@
 ---
 title: 【Python】 bool()
 date: 2020-02-27
-modified: 2020-02-27
+is_modified: false
 categories:
 - Computer-Language/Framework
 tags:

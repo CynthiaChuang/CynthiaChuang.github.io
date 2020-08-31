@@ -1,7 +1,7 @@
 ---
 title: 數學中常見的 arg 和 arg max/ min 是什麼？
 date: 2013-12-21
-modified: 2013-12-21
+is_modified: false
 categories:
 - Study-Notes
 tags:

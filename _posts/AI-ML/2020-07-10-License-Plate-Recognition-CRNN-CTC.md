@@ -1,7 +1,7 @@
 ---
 title: 車牌辨識：CRNN + CTC
 date: 2020-08-12
-modified: 2020-08-12
+is_modified: false
 categories:
 - AI/ML
 tags:

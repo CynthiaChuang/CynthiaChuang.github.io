@@ -1,7 +1,7 @@
 ---
 title: 【Python】三元運算子
 date: 2018-12-13
-modified: 2018-12-13
+is_modified: false
 categories:
 - Computer-Language/Framework
 tags:

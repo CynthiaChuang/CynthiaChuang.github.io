@@ -1,7 +1,7 @@
 ---
 title: 使用 OpenCV 不存檔直接讀入 Flask 所傳進的圖片
-date: 2020-02-19
-modified: 2020-08-19
+date: 2020-08-19
+is_modified: true
 categories:
 - Computer-Language/Framework
 tags:

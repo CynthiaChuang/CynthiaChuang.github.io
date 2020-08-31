@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0021. Merge Two Sorted Lists
 date: 2019-06-17
-modified: 2019-06-17
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

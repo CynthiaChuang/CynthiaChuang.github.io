@@ -1,7 +1,7 @@
 ---
 title: 常見評價指標：Accuracy、Precision、Recall、F1、ROC-AUC 與 PR-AUC
 date: 2020-01-09
-modified: 2020-01-09
+is_modified: false
 categories:
 - AI/ML
 tags:

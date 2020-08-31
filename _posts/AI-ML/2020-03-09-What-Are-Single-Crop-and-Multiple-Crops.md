@@ -1,7 +1,7 @@
 ---
 title: 關於 AI/ML 中的 single crop / multiple crops
 date: 2020-03-09
-modified: 2020-03-09
+is_modified: false
 categories:
 - AI/ML
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0065. Valid Number
 date: 2019-01-04
-modified: 2019-01-04
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

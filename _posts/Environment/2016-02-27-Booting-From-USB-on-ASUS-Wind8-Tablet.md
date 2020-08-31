@@ -1,7 +1,7 @@
 ---
 title: 【Windows】Asus win8 筆電使用 USB 開機
 date: 2016-02-27
-modified: 2016-02-27
+is_modified: false
 categories:
 - Environment
 tags:

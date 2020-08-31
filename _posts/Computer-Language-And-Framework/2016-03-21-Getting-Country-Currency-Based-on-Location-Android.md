@@ -1,7 +1,7 @@
 ---
 title: 【Android】取得所在（預設）地點的貨幣
 date: 2016-03-21
-modified: 2016-03-21
+is_modified: false
 categories:
 - Computer-Language/Framework
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 【Vue.js 學習筆記】01. 相關資源與工具設置
 date: 2019-04-18
-modified: 2020-04-18
+is_modified: false
 categories:
 - Study-Notes
 - Computer-Language/Framework

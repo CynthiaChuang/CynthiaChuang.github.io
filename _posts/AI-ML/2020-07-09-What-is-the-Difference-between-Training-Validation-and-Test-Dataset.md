@@ -1,7 +1,7 @@
 ---
 title: 訓練集、驗證集、測試集的定義與劃分
 date: 2020-08-10
-modified: 2020-08-10
+is_modified: false
 categories:
 - AI/ML
 tags:

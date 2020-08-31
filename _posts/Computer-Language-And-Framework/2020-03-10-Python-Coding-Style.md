@@ -1,7 +1,7 @@
 ---
 title: Python Coding Style
 date: 2020-03-10
-modified: 2020-03-10
+is_modified: false
 categories:
 - Computer-Language/Framework
 tags:

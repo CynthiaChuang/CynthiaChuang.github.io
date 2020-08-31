@@ -1,7 +1,7 @@
 ---
 title: '解決 sudo: unable to resolve hostname'
 date: 2020-02-19
-modified: 2020-02-19
+is_modified: false
 categories:
 - Environment
 tags:

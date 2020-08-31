@@ -1,7 +1,7 @@
 ---
 title: 【Shell Script】檢查檔案是否為空白
 date: 2019-06-14
-modified: 2019-06-14
+is_modified: false
 categories:
 - Computer-Language/Framework
 tags:

@@ -1,7 +1,7 @@
 ---
 title: SOTA model 是什麼意思？
 date: 2020-05-26
-modified: 2020-05-26
+is_modified: false
 categories:
 - AI/ML
 tags:

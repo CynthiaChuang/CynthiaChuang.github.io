@@ -1,7 +1,7 @@
 ---
 title: Genymotion 模擬器安裝篇：In ubuntu14.04 LET
 date: 2016-03-20
-modified: 2016-03-20
+is_modified: false
 categories:
 - Toolkit
 tags:

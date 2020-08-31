@@ -1,7 +1,7 @@
 ---
 title: 【Vue.js 學習筆記】08. Vue 常用 API
 date: 2019-05-10
-modified: 2019-05-10
+is_modified: false
 categories:
 - Study-Notes
 - Computer-Language/Framework

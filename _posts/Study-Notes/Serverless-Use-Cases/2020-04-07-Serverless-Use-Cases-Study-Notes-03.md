@@ -1,7 +1,7 @@
 ---
 title: 【Serverless 應用案例賞析筆記】 03. Serverless 在物聯網領域中的應用
 date: 2020-04-07
-modified: 2020-04-07
+is_modified: false
 categories:
 - Study-Notes
 - Cloud-Computing

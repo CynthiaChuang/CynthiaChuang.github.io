@@ -1,7 +1,7 @@
 ---
 title: 【Vue.js 學習筆記】02. 基礎 Vue 概述
 date: 2019-04-19
-modified: 2020-04-19
+is_modified: false
 categories:
 - Study-Notes
 - Computer-Language/Framework

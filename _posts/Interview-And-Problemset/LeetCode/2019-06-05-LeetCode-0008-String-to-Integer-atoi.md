@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0008. String to Integer (atoi)
 date: 2019-06-05
-modified: 2019-06-05
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

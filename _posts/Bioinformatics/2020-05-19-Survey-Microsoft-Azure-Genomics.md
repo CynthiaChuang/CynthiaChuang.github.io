@@ -1,7 +1,7 @@
 ---
 title: 【Survey】 Microsoft Azure Genomics
 date: 2020-05-19
-modified: 2020-05-19
+is_modified: false
 categories:
 - Bioinformatics
 tags:

@@ -1,7 +1,7 @@
 ---
 title: EarlyStopping callbacks 介紹
 date: 2020-08-11
-modified: 2020-08-11
+is_modified: false
 categories:
 - AI/ML
 tags:

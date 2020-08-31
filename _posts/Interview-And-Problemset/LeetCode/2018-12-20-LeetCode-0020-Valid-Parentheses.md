@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0020. Valid Parentheses
 date: 2018-12-20
-modified: 2018-12-20
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

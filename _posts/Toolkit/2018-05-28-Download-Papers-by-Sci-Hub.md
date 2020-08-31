@@ -1,7 +1,7 @@
 ---
 title: Sci-Hub 下載期刊論文電子全文 
-date: 2018-05-28
-modified: 2020-08-14
+date: 2020-08-14
+is_modified: true
 categories:
 - Toolkit
 tags:

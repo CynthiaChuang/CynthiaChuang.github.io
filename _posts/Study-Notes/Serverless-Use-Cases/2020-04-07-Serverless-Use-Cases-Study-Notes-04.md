@@ -1,7 +1,7 @@
 ---
 title: 【Serverless 應用案例賞析筆記】 04. Serverless 在人工智慧領域的應用
 date: 2020-04-07
-modified: 2020-04-07
+is_modified: false
 categories:
 - Study-Notes
 - Cloud-Computing

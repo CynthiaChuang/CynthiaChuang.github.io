@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0009. Palindrome Number
 date: 2019-06-06
-modified: 2019-06-06
+is_modified: false
 categories:
 - Interview/Problemset
 tags:

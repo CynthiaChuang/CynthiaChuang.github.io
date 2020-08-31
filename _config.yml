@@ -7,7 +7,7 @@
 title: 辛西亞的技能樹
 subtitle:
 description: 自己整理過才是自己的
-author: Cynthia
+author: 辛西亞．Cynthia
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
@@ -311,7 +311,7 @@ auto_excerpt:
 post_meta:
   item_text: false
   created_at: true
-  updated_at: false
+  updated_at: true
   categories: true
 
 # Post wordcount display settings

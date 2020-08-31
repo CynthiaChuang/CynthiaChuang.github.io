@@ -1,7 +1,7 @@
 ---
 title: 【Vue.js】Vue Router 之透過路由組件傳參數給元件
 date: 2019-12-30
-modified: 2019-12-30
+is_modified: false
 categories:
 - Computer-Language/Framework
 tags:
