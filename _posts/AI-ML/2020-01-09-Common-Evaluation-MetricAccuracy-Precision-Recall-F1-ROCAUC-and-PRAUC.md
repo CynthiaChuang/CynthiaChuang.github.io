@@ -5,7 +5,7 @@ is_modified: false
 categories:
 - AI/ML
 tags:
-- Evaluation 
+- Evaluation Criteria 
 - 煉丹常識
 --- 
 
@@ -179,7 +179,7 @@ $$
 <center class="imgtext">ROC空間的4個例子（圖片來源: <a href="https://zh.m.wikipedia.org/zh-tw/ROC%E6%9B%B2%E7%BA%BF" class="imgtext">維基百科</a>）</center>
 <br>
 
-以這張圖為例，用 A、B 與 C 三不同的模型進行預測，並將結果繪製在 ROC 上，衣此圖判斷最好的結果是 A 模型，反之，最糟糕的預測是 C 模型甚至劣於隨機分類。
+以這張圖為例，用 A、B 與 C 三不同的模型進行預測，並將結果繪製在 ROC 上，依此圖判斷最好的結果是 A 模型，反之，最糟糕的預測是 C 模型甚至劣於隨機分類。
 
 
 <br> 上述 ROC 空間裡的單點，是指給定特定分類模型一個閾值後得出的預測結果。但對於同一個分類模型來說給定不同的閾值，會影響到模型的準確率，進而得到不同的 FPR 和 TPR。因此 ROC 曲線指的是，將同一模型不同閾值所得到的結果一一繪製在 ROC 空間中，所得到的曲線。

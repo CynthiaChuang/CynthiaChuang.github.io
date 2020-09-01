@@ -157,10 +157,10 @@ c = (a+b) * (a-b)
 ## Naming Conventions
 
 ### 命名規則
-1. Modules and packages：一律小寫
-2. Globals and constants：一律大寫
+1. Modules and packages：小蛇式命名法（所有字都小寫，並用 _ 區隔）， i.e. `modules_name`
+2. Globals and constants：大蛇式命名法（所有字都大寫，並用 _ 區隔）， i.e. `CONSTANT_NAME`
 3. Class ：大駝峰式命名法， i.e. `ClassName`
-4. Methods and functions：小蛇式命名法（所有字都小寫，並用 _ 區隔）， i.e. `method_name`
+4. Methods and functions：packages：小蛇式命名法
 5. Local variables：小蛇式命名法
 
 <br>
