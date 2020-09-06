@@ -139,7 +139,7 @@ Pass
     是個 pixel-based 的圖像分割演算法，詳細執行步驟可以看看這篇[網誌](https://www.jianshu.com/p/99e121c3beb8)。
     
 - **IoU（Intersection over Union）**  
-    在目標檢測中，IoU 指的是一種衡量指標，是用來計算模型產生的 bounding box 與原先標記的 bounding box 的重疊律。簡單來說就是算匡的準不準，一般來說分數大於 0.5 就可以視為不錯的結果。
+    在目標檢測中，IoU 指的是一種衡量指標，是用來計算模型產生的 bounding box 與原先標記的 bounding box 的重疊率。簡單來說就是算框的準不準，一般來說分數大於 0.5 就可以視為不錯的結果。
 
 <br><br> 
 
