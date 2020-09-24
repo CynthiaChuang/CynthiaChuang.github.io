@@ -124,10 +124,10 @@ ERROR: could not find an available, non-overlapping IPv4 address pool among the 
 	$ sudo service network-manager restart
 	```
  
-<br>我自己是屬於第三種狀況，重起網路就OK了｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡
+<br>我自己是屬於第三種狀況，重起網路就 OK 了｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡
 
 
-不過我同事試過前面的指令都不行。但他後來發現 disable 掉某張網卡就行了，因此懷疑是與那張網卡的網段衝到了，因此他根據[這篇](http://www.itmuch.com/docker/24-docker-compose-network/)，建立一個網路然後在 yaml 中設定名稱。
+不過我同事試過前面的指令都不行。但他後來發現 disable 掉某張網卡就行了，懷疑是與那張網卡的網段衝到了，因此他根據[這篇](http://www.itmuch.com/docker/24-docker-compose-network/)，建立一個網路然後在 yaml 中設定名稱。
 ```shell
 networks:
  # Internal network for communication with PostgreSQL/MySQL
@@ -227,10 +227,10 @@ ERROR:  relation "notes_alias" already exists
 ERROR:  relation "notes_shortid" already exists
 ```
 
-<br><br>[問了一下](https://community.codimd.org/t/i-got-a-error-when-i-restored/42)，才知道不能在 CodiMD 執行時恢復資料庫...，想想也合理，我為啥會在運行去恢復資料庫阿，白痴...。還好管理者沒有嫌棄我 ~~（反正他嫌棄了我也看不到）~~，還很好熱心的告訴我還原的詳細步驟：
+<br><br>[問了一下](https://community.codimd.org/t/i-got-a-error-when-i-restored/42)，才知道不能在 CodiMD 執行時恢復資料庫...，想想也合理，我為啥會在運行去恢復資料庫阿，白痴...。還好管理者沒有嫌棄我 ~~（反正他嫌棄了我也看不到）~~，還很熱心的告訴我還原的詳細步驟：
 
 1.  先停止所有服務，下 `docker-compose down` 或 `docker-compose down -v`，-v 會直接刪除 database。
-2.  接下單獨運行 database container，`docker-compose up -d database`。
+2.  接下來單獨運行 database container，`docker-compose up -d database`。
 3.  隨後執行 `cat backup.sql | docker-compose exec database psql -U hackmd`，從備份中還原。
 4.  完成後，重新運行服務 `docker-compose up -d` 。
 

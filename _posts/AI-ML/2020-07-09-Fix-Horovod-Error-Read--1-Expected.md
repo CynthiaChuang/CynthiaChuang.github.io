@@ -8,7 +8,7 @@ tags:
 - Horovod
 --- 
 
-最近[專案](/Distributed-Training-with-Horovod-for-TensorFlow-Keras)指定要用 [Horovod](https://horovod.readthedocs.io/en/stable/summary_include.html) 分散式深度學習框架，難度不大，就是執行的時候遇到一些惱人的小問題，不影響執行，但超煩 orz ....
+最近[專案](/Distributed-Training-with-Horovod-for-TensorFlow-Keras)指定要用 [Horovod](https://horovod.readthedocs.io/en/stable/summary_include.html) 分散式深度學習框架，難度不大，就是執行的時候遇到一些惱人的小問題，不影響執行，但超煩... orz 
 
 <!--more-->
 <br><br> 
@@ -22,7 +22,7 @@ tags:
 
 ## 解決辦法
 
-感謝大神同事-墨非解惑，他給了我兩種解決辦法：
+感謝墨非大神解惑，他給了我兩種解決辦法：
 
 1. **過濾掉這些訊息**
     ```bash

@@ -30,7 +30,7 @@ tags:
 2.  刪除 30 天前的檔案
 3.  定期執行
 
-另外執行完備份，為了避免這台機器掛掉連同備份一起不見，最後再做一個異地的備份
+另外執行完備份，為了避免這台機器掛掉連同備份一起不見，最後在做一個異地的備份
 
 <br>
 
@@ -165,7 +165,7 @@ expect {
 expect eof"
 ```
 
-這指令與先前的差不多唯一需要注意的是在 <span class='highlighting'>spawn</span> 中需要注意<span class='highlighting'>字元的跳脫</span>，不然就會跟我一樣 de 了好久的 bug...
+這指令與先前的差不多唯一需要注意的是在 <span class='highlighting'>spawn</span> 中需要注意<span class='highlighting'>字元的跳脫</span>，不然就會跟我一樣 de 了好久的 bug ...
 
 <br> 後來雖然抓完蟲，不過還是一氣之下把 ServerB 的改成了[使用 SSH Key-based 的登入驗證方式](/Configuring-SSH-Key-Based-Authentication-on-a-Linux/)，所以程式可以化簡成：
 

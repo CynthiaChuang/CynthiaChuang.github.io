@@ -15,7 +15,6 @@ tags:
 最近（或該說前一陣子？）在看 FasS/Serverless 相關文章，順帶提一提一些 SaaS、PaaS 與 IaaS。
 
 <!--more-->
-<br><br> 
 
 <center> <img src="https://i.imgur.com/Aj0HhN7.jpg" alt="IaaS、PaaS、SaaS 與自行架構比較。"></center>
 <center class="imgtext">IaaS、PaaS、SaaS 與自行架構比較。（圖片來源: <a href="https://www.ionos.com/digitalguide/server/know-how/caas-container-as-a-service-service-comparison/" class="imgtext">IONOS</a>）</center>
@@ -46,7 +45,7 @@ Infrastructure as a Service 翻譯為**基礎設施即服務**，一般簡稱 **
 <center> <img src="https://i.imgur.com/XKLsrUQ.png" alt="PaaS"></center>
 <center class="imgtext">PaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-paas/" class="imgtext">Microsoft Azure</a>）</center>
 
-<br><br> 
+<br>
 
 Platform as a Service 翻譯為**平台即服務**，一般簡稱 **PaaS**，在這項服務中供應商會提供使用者開發與管理所需的平台環境，如此一來，使用者只需要專注在資料處理與應用程式的開發項目...等，免除開發環境設置、相依軟體安裝、安全性、伺服器軟體及備份...等困擾。
  
@@ -59,7 +58,7 @@ Platform as a Service 翻譯為**平台即服務**，一般簡稱 **PaaS**，在
 <center> <img src="https://i.imgur.com/J0otbOf.png" alt="SaaS"></center>
 <center class="imgtext">SaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-saas/" class="imgtext">Microsoft Azure</a>）</center>
 
-<br><br> 
+<br>
 
 Software as a Service 翻譯為**軟體即服務**，簡稱 **SaaS**。它可以讓使用者透過網際網路和瀏覽器等媒介，提供使用者所需軟體服務，最常見的如：電子郵件、日曆...等。
 

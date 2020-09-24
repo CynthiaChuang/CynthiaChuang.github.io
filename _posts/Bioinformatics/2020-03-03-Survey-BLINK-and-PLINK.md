@@ -14,9 +14,9 @@ tags:
 
 這是前一陣子（2019-08-28）的筆記了...，那一陣子從「全基因體定序」、「全基因體圖譜繪製」到「全基因體關聯分析 （GWAS）」都稍微沾了點，但計畫最終不了了之，只好先擱置一旁...
   
-不過沒留下點紀錄真的很可惜，所以趁著兩個專案間的空檔，把工作時做的隨手筆記從草稿夾抓出來整理整理。
+不過沒留下點紀錄真的很可惜，所以趁著兩個專案間的空檔，把工作時留下的隨手筆記從草稿夾抓出來整理整理。
   
-不過不是立即紀錄下的筆記，難免缺三漏四的...:sweat_smile:
+不過不是立即記錄下的筆記，難免缺三漏四的...:sweat_smile:
    
 <div class="alert warning">
 <div class="head">大量複製貼上</div>
@@ -52,7 +52,7 @@ tags:
 2. [BLINK: A Package for Next Level of Genome Wide Association Studies with Both Individuals and Markers in Millions](https://academic.oup.com/gigascience/article/8/2/giy154/5238723) 
     - [Lab](http://zzlab.net/blink/index.html)
     - [GitHub](https://github.com/Menggg/BLINK) / [BLINK_User_Manual.pdf](https://github.com/Menggg/BLINK/blob/master/BLINK_User_Manual.pdf "BLINK_User_Manual.pdf")
-3. [一种交替运用固定效应和随机效应模型优化全基因组关联分析的算法开发](http://tow.cnki.net/kcms/detail/detail.aspx?filename=1016156134.nh&dbcode=CRJT_CDFD&dbname=CDFDTOTAL&v=)
+3. [一种交替运用固定效应和随机效应模型优化全基因组关联分析的算法开发](http://tow.cnki.net/kcms/detail/detail.aspx?filename=1016156134.nh&dbcode=CRJT_CDFD&dbname=CDFDTOTAL&v=)  
     P.S. 挑這一篇單純就只是看它的一些名詞解釋
 
 <br>
@@ -168,7 +168,7 @@ PLINK軟體輸入檔案的常見格式型別：
 <br>
 
 
-<center> <img src="https://upload-images.jianshu.io/upload_images/9697684-cd49dd9a75ae0a8c.png?imageMogr2/auto-orient/strip|imageView2/2/w/967/format/webp" alt="GWAS 粗略流程圖"></center>
+<center> <img src="https://i.imgur.com/0xx5gzW.png" alt="GWAS基本分析内容"></center>
 <center class="imgtext">GWAS基本分析内容（圖片來源: <a href="https://www.jianshu.com/p/70164cce947c" class="imgtext">GWAS基本分析内容 - 簡書</a>）</center>
 <br>
 

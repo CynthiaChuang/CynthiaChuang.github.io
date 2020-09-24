@@ -16,7 +16,6 @@ tags:
 
 ## 從名句學英文？
 
-<br>
 <center> <img src="https://i.imgur.com/ZtyUiK8.jpg" alt="Denis Waitley Quotes"></center>
 <center class="imgtext">Denis Waitley Quotes（圖片來源: <a href="https://quotefancy.com/quote/793846/Denis-Waitley-Losers-let-it-happen-winners-make-it-happen"  class="imgtext">quotefancy</a>）</center>
 <br>

@@ -8,7 +8,7 @@ tags:
 - Shell Script
 --- 
 
-在寫 Shell Script 時 ，想確定某檔案是否為空，若為空想執行其他動作。
+在寫 Shell Script 時 ，想確定某檔案是否為空，若為空則想執行其他動作。
 
 <!--more-->
 <br> 

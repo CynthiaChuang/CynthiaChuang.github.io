@@ -111,11 +111,10 @@ Feed 主要負責從外部事件來源來接收事件，不管所接收事件原
 
  
 2. **Polling（輪詢）**  
-    如果沒有 hook 或者你也可以，使用一個 Polling 方法，在 Serverless 上起一個定時的動作，定期發發送一次 request 來獲取新數據。這種模式相對容易建立，但是事件的頻率受到輪詢間隔的限制。若間隔時間太短，會造成 server 端的負荷。若間隔時間太長，也會同時造成收到的資訊有不即時的問題發生。
+    如果沒有 hook ，你也可以使用一個 Polling 方法，在 Serverless 上起一個定時的動作，定期發送一次 request 來獲取新數據。這種模式相對容易建立，但是事件的頻率受到輪詢間隔的限制。若間隔時間太短，會造成 server 端的負荷。若間隔時間太長，也會同時造成收到的資訊有不即時的問題發生。
 
     <div class="alert info">
     <div class="head">Webhook 與 Polling</div>
-     1. <br> 
      可以看看<a href="https://medium.com/@justinlee_78563/line-bot-%E7%B3%BB%E5%88%97%E6%96%87-%E4%BB%80%E9%BA%BC%E6%98%AF-webhook-d0ab0bb192be">這篇</a>餐廳與外送員的例子。
     </div>   
     <br> 
@@ -174,7 +173,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 1. **異構的大數據**  
     由於感測器數量繁多，且種類不盡相同，例如在環境感知應用中，可能會灑上成千上萬個感測器用於收集溫濕度...等資料，由於感測器會不間斷的收集環境資料，且每種設備回報的資料結構又都不盡相同。
     
-    因此一種應用可能會得到資料結構各異的大數據資料，在使用會彙整時需要針對不同的設備進行不同的處理。
+    因此一種應用可能會得到資料結構各異的大數據資料，在彙整資料時需要針對不同的設備進行不同的處理。
     
 2. **設備通常由 Gateway 接入**  
     雖說物聯網中有主從模式（Master-Slave）架構形成星狀拓墣（Star Topology），也有從點對點（Peer-to-Peer）衍生出的網狀拓樸（Mesh Networking Topology）、叢集拓樸（Cluster Networking Topology）。但這些感測器通常不會直接接入網際網路，畢竟通訊協定不一樣？
@@ -185,7 +184,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
     有可能因為網路延遲、封包遺失等原因，導致資料亂序呈現，所以會在這邊做重新排序處理，也有可能會在這邊做一些隱私資料的遮蔽。
 
 4. **資料通常被傳輸到雲端做存儲和分析**  
-    在物聯網中邊緣節點因為成本的考量，恩...畢竟很多感測器灑出去就拿不回來，想想那荒山野嶺要拿的回還來還真難，更別說還有些感測器是放水流的...，因此它們計算能力通常不強，儲存空間也不大，因此繁複的運算通常送到後端來進行。
+    在物聯網中邊緣節點因為成本的考量，恩...畢竟很多感測器灑出去就拿不回來，想想那荒山野嶺要拿的回來還真難，更別說還有些感測器是放水流的...，因此它們計算能力通常不強，儲存空間也不大，所以通常會將繁複的運算送到後端來進行。
 
 
 <br>
@@ -250,7 +249,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 - [让智慧冰箱能够请求替换件 - IBM Developer](https://developer.ibm.com/cn/patterns/power-smart-fridge/)
 - [通过 OpenWhisk 和 Watson IoT 提供主动客户服务](https://github.com/IBM/ibm-cloud-functions-serverless-iot-openfridge/blob/master/README-cn.md)
 
-在這個範例中，他們其實是用一個 action 來監聽 mqtt 當作 Feed，其中 action 的 annotation 設為 feed true。
+在這個範例中，他們其實是用一個 action 來監聽 MQTT 當作 Feed，其中 action 的 annotation 設為 feed true。
 
 
  

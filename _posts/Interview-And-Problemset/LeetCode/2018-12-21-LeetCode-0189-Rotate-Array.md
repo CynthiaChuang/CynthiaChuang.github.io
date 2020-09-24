@@ -43,33 +43,32 @@ rotate 2 steps to the right: [3,99,-1,-100]
 <br><br>
 
 ## 解題邏輯與實作
-這提示要求將 array 中的數字右旋 _k_ 位，簡單來說，就是將所以的數字向後移動 _k_ 位，而末尾 out of index 的部份則移到開頭。
+這提示要求將 array 中的數字右旋 _k_ 位，簡單來說，就是將所有的數字向後移動 _k_ 位，而末尾 out of index 的部份則移到開頭。
 
-這題說麻煩的部份是它最後希望我們提出三種不同實做的方法，例外提供一種只需要 _O(1)_ 空間的解法，會花比較多時間。
+這題說麻煩的部份是它最後希望我們提出三種不同實做的方法，另外要提供一種只需要 _O(1)_ 空間的解法，這會花比較多時間。
 
 <br>
 
 ### 解法1 
-最先想的解法，就是使用 for 迴圈執行 _k_，每次迴圈執行時，記住最後一個數字後，將其他數字向後位移一位，再將所記住的數字放回開頭。
+最先想到的解法，就是使用 for 迴圈執行 _k_，每次迴圈執行時，記住最後一個數字後，將其他數字向後位移一位，再將所記住的數字放回開頭。
 
 這種解法相當的直覺，算是暴力法了吧(笑，這種解法的空間複雜度會符合 _O(1)_ 的要求，但時間複雜度應該會相當的高 _O(kn)_。為了減少執行次數，我將執行次數 _k_ 對 _n_ 取餘數，因為當 _k_ = _n_ 時，相當於沒有做旋轉。 
 
 
 ```python
 class Solution:
-  def rotate(self, nums: List[int], k: int) -> None:
-    n = len(nums)
-    k %= n
-    for i in range(k) :
-      final = nums[n-1]
-      for idx in range((n-1)-1,-1, -1):
-        nums[idx+1] = nums[idx]
+   def rotate(self, nums: List[int], k: int) -> None:
+      n = len(nums)
+      k %= n
+      for i in range(k) :
+         final = nums[n-1]
+         for idx in range((n-1)-1,-1, -1):
+            nums[idx+1] = nums[idx]
 
-      nums[0] = final
-
+         nums[0] = final
 ```
 
-另外，題目有要求 in-place instead ，不然寫成這樣易讀性會更好
+另外，題目有要求 in-place instead，不然寫成這樣易讀性會更好
 
 ```python
 nums = [nums[n-1]] + nums[:-1]
@@ -84,19 +83,19 @@ nums = [nums[n-1]] + nums[:-1]
 
 ```python
 class Solution:
-  def rotate(self, nums: List[int], k: int) -> None:
-    n = len(nums)
-    k %= n
+   def rotate(self, nums: List[int], k: int) -> None:
+      n = len(nums)
+      k %= n
 
-    final = nums[n-k:]
-    for idx in range((n-k)-1,-1, -1):
-      nums[idx+k] = nums[idx]
+      final = nums[n-k:]
+      for idx in range((n-k)-1,-1, -1):
+         nums[idx+k] = nums[idx]
 
-    for idx in range(len(final)):
-      nums[idx] = final[idx]
+      for idx in range(len(final)):
+         nums[idx] = final[idx]
 ```
 
-這次就被 accept 了，不過我一個月沒上來 LeetCode ，還多一個 Memory Usage 的比較耶～！
+這次就被 accept 了，不過我一個月沒上來 LeetCode ，還多一個 Memory Usage 的比較耶～！   
 **Runtime: 68 ms, faster than  46.18%  of  Python3  online submissions forRotate Array.
 Memory Usage: 13.4 MB, less than  5.04%  of  Python3  online submissions for  Rotate Array.**
 
@@ -116,19 +115,19 @@ Memory Usage: 13.4 MB, less than  5.04%  of  Python3  online submissions for  Ro
 
 ```python
 class Solution:
-    def rotate(self, nums: List[int], k: int) -> None:
-        n = len(nums)
-        k %= n
+   def rotate(self, nums: List[int], k: int) -> None:
+      n = len(nums)
+      k %= n
 
-        self.reverse(nums, 0, (n-k)-1)
-        self.reverse(nums, n-k, n-1)
-        self.reverse(nums, 0, n - 1)
+      self.reverse(nums, 0, (n-k)-1)
+      self.reverse(nums, n-k, n-1)
+      self.reverse(nums, 0, n - 1)
 
-    def reverse(self, nums, start, end):
-        while start < end :
-            nums[start], nums[end] = nums[end],  nums[start]
-            start += 1
-            end -= 1
+   def reverse(self, nums, start, end):
+      while start < end :
+         nums[start], nums[end] = nums[end],  nums[start]
+         start += 1
+         end -= 1
 ```
 <br><br>
 

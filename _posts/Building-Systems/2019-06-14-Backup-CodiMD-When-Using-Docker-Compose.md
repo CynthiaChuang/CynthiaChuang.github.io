@@ -46,7 +46,7 @@ whereis >> log.txt
 
 <br>查了一下 -T 是<span class='highlighting'>禁用 TTY</span> ，<span class='highlighting'>docker-compose exec</span> 是預設有啟用 TTY，而 crontab 是沒有預設 TTY（終端設備），所以將 docker-compose exec 加上 -T 就可以。
 
-不過我還是不太明白，即便預設有啟用 TTY，但 Script 在執行過程並有任何輸出到終端機上，我以為這樣應該不會卡死才對＠＠？
+不過我還是不太明白，即便預設有啟用 TTY，但 Script 在執行過程並有任何輸出到終端機上，我以為這樣應該不會卡死才對 ＠＠？
 
 
 

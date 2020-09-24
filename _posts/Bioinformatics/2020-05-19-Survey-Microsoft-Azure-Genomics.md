@@ -76,7 +76,7 @@ tags:
      
  - **資料管理**  
    1. 資料的操作與保管使用有通過 ISO 認證並遵循 HIPAA 法規 ，確保患者記錄和健康資訊的隱私。
-   2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://gallery.technet.microsoft.com/Azure-A-Practical-Guide-to-5ebdc8bd)。(:cold_sweat:...誰看完了分享一下吧！紀錄一下有這東西就好，需要實在回頭看。
+   2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://gallery.technet.microsoft.com/Azure-A-Practical-Guide-to-5ebdc8bd)。(:cold_sweat:...誰看完了分享一下吧！記錄一下有這東西就好，需要實在回頭看。
 
 <br>
 

@@ -59,9 +59,9 @@ tags:
         
     ```javascript
     for (var i = 0; i < 10; i++) {
-      setTimeout(function () {
-        console.log('這執行第' + i + '次');
-      }, 10);
+       setTimeout(function () {
+          console.log('這執行第' + i + '次');
+       }, 10);
     }
     ```
     <br>當使用 **var** 來宣告迴圈變數 i 時，會輸出 10次 **這執行第10次**，而非預期中 **這執行第0~9次**。
@@ -79,20 +79,20 @@ tags:
 ### const
 const 是宣告常數用，一旦宣告就不能更改。
 
-不過若是宣告物件，由於物件本身的紀錄方式是紀錄參考值，因此物件內的屬性是可以被修改，但是重新指定一個新的物件給常數的話還是會跳錯。
+不過若是宣告物件，由於物件本身的記錄方式是記錄參考值，因此物件內的屬性是可以被修改，但是重新指定一個新的物件給常數的話還是會跳錯。
 <br>
 
 ### 額外問題，不使用 let，如何印出正確答案
 答：用[立即函式](http://www.victsao.com/blog/81-javascript/287-javascript-function-iife)傳入 i ，製造一個更小的作用域，讓 console.log 引用。
 
 ```javascript
-for (var  i = 0; i < 10; i++) {
-  console.log(i);
-  (function(index){
-    setTimeout(function () {
-      console.log('這執行第' + index + '次');
-    }, 10) ;
-  }(i))
+for (var   i = 0; i < 10; i++) {
+   console.log(i);
+   (function(index){
+      setTimeout(function () {
+         console.log('這執行第' + index + '次');
+      }, 10) ;
+   }(i))
 }
 ``` 
 <br><br>
@@ -112,7 +112,7 @@ let familyAll6=[...groupA,...groupB] //ES6合併陣列
 <br>
 	
 ### **淺複製 (Shallow Copy) V.S. 深複製 (Deep Copy)**  
-JavaScript 的物件或是陣列的的儲存方式是紀錄記憶體位置，因此當將 groupA 指給 groupB 對 groupB 進行賦值時，是使用<span class='highlighting'>淺複製</span>的方式將 groupA 所紀錄的記憶體位置傳給 groupB，最終會導致<span class='highlighting'>當對 groupB 進行操作時， groupA 也會後受到影響</span>，即下圖左。
+JavaScript 的物件或是陣列的儲存方式是記錄記憶體位置，因此當將 groupA 指給 groupB 對 groupB 進行賦值時，是使用<span class='highlighting'>淺複製</span>的方式將 groupA 所記錄的記憶體位置傳給 groupB，最終會導致<span class='highlighting'>當對 groupB 進行操作時， groupA 也會後受到影響</span>，即下圖左。
 
 ```javascript
 let groupA = ['小明', '杰倫', '阿姨'];
@@ -158,11 +158,11 @@ let myArray = [...myNodeList]
 JavaScript 還有一個（個人認為）比較神奇的特性，如果你傳入參數多於你宣告的個數，多餘的部份會變成名為 arguments 的類陣列物件，我之前學的語言多直接報錯的說... 
 ```javascript
 function updateEasyCard() {
-  let arg = [...arguments];
-  let sum = arg.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue;
-  }, 0);
-  console.log('我有 ' + sum + ' 元');
+   let arg = [...arguments];
+   let sum = arg.reduce(function (accumulator, currentValue) {
+      return accumulator + currentValue;
+   }, 0);
+   console.log('我有 ' + sum + ' 元');
 }
 
 updateEasyCard(0); // 我有 0 元
@@ -223,10 +223,10 @@ let c = str.split("")
 
 ### 從物件中取值並附與新的變數名稱 
 ```javascript
-let GinyuTeam = {  
-  Ginyu: "基紐",  
-  Jeice: "吉斯",  
-  burter: "巴特"
+let GinyuTeam = {   
+   Ginyu: "基紐",   
+   Jeice: "吉斯",   
+   burter: "巴特"
 }
 // 從物件中取出特定屬性 Ginyu ，並賦予新的變數名稱 leader
 let{ Ginyu: leader } = GinyuTeam 

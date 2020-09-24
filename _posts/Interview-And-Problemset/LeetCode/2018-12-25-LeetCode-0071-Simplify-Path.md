@@ -48,58 +48,58 @@ Additionally, a double period ("..") moves up a directory, so it cancels out wha
 <br>
 
 ## Stack
-這題可以使用 stack 來實做，依照上面的解題邏輯：遇到 `.` 就跳過、 `..` 就pop，若非以上兩者就push 進 stack，整題實做流程如下：
+這題可以使用 stack 來實做，依照上面的解題邏輯：遇到 `.` 就跳過、 `..` 就pop，若非以上兩者就 push 進 stack，整題實做流程如下：
 
-1. 使用 regular expression，先將路徑正規化
+1. 使用 Regular Expression，先將路徑正規化
 2. 將路徑依左斜線切斷後，依序取出
-	1. 若為`.` ，就跳過不執行
-	2. 若為`..` 就，且stack不為空，就pop最頂層元素
-	3. 若非以上兩者，就當作是一個 folder 或file，將它 push 進入 stack
+	1. 若為 `.` ，就跳過不執行
+	2. 若為 `..` 就，且 stack 不為空，就 pop 最頂層元素
+	3. 若非以上兩者，就當作是一個 folder 或 file，將它 push 進入 stack
 3. 最後將 stack 中的結果使用左斜線串接起來 
 
 ```python
 import re
 class Solution:
-  def preprocess(self,path):
-    reg = r'/+'
-    path = re.sub(reg, "/", path)
-    path = path.strip('/')
-    return path.split("/")
+   def preprocess(self,path):
+      reg = r'/+'
+      path = re.sub(reg, "/", path)
+      path = path.strip('/')
+      return path.split("/")
 
-  def simplifyPath(self, path):
-    stack = []
-    tokens = self.preprocess(path)
+   def simplifyPath(self, path):
+      stack = []
+      tokens = self.preprocess(path)
 
-    for t in tokens:
-      if t == '.':
-        continue
-      elif t == '..':
-        if len(stack) > 0:
-          stack.pop()
-      else :
-        stack.append(t)
+      for t in tokens:
+         if t == '.':
+            continue
+         elif t == '..':
+            if len(stack) > 0:
+               stack.pop()
+         else :
+            stack.append(t)
 
-    return "/"+"/".join(stack)
+      return "/"+"/".join(stack)
 ```
 不過跑出來的效能有點不盡理想，只有 96 ms,  2.95% 。
 <br>
 
-所以稍微 Tune 了一下，放棄使用 regular expression 做正規化了，改成直接使用左斜線切斷後，若是遇到需要正規化的部份，切斷後的結果會是空字串，此時跳過不處理，就可以達到對左斜線做正規化的效果了
+所以稍微 Tune 了一下，放棄使用 Regular Expression 做正規化了，改成直接使用左斜線切斷後，若是遇到需要正規化的部份，切斷後的結果會是空字串，此時跳過不處理，就可以達到對左斜線做正規化的效果了。
 
 ```python
 class Solution:
-    def simplifyPath(self, path):
-        stack = []
-        tokens = path.split("/")
-        for t in tokens:
-            if len(t) == 0 or t == '.':
-                continue
-            elif t == '..':
-                stack = stack[:-1]
-            else :
-                stack.append(t)
+   def simplifyPath(self, path):
+      stack = []
+      tokens = path.split("/")
+      for t in tokens:
+         if len(t) == 0 or t == '.':
+            continue
+         elif t == '..':
+            stack = stack[:-1]
+         else :
+            stack.append(t)
 
-        return "/"+"/".join(stack)
+      return "/"+"/".join(stack)
 ```
 跑出來的效能果然進步許多，52 ms, 49.56% ，雖然還是沒有過半...
 

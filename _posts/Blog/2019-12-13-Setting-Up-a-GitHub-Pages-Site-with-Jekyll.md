@@ -13,14 +13,14 @@ tags:
 
 之前有一陣子在找合適的 blog 想用來存放文章，最好能支援數學公式、程式碼，若能使用 Markdown 來撰寫文章就更好了，另外版面最好整潔些不要像傳統 blog 有側欄的干擾（要求真多 XD
  
-前後試過痞客邦、Blogger、Medium、Github Pages...，各有各的優缺點，但其實都不怎滿意，最後挑了Github Pages 主要是想玩玩 Jekyll 順便練習一下前端 XD
+前後試過痞客邦、Blogger、Medium、Github Pages...，各有各的優缺點，但其實都不怎麼滿意，最後挑了Github Pages 主要是想玩玩 Jekyll 順便練習一下前端 XD
 
 <!--more-->
 <br> 
 
 ## 背景知識
 ### Jekyll 
-雖然說是『想玩玩 Jekyll 』而選了 Github Pages，不過其實不懂 Jekyll 也沒差，知道它是一個 Ruby 編寫出來的 framework，讓使用者可以快速的建構出靜態頁面的blog，並讓使用者可以用 markdown 來編寫 html。有這些知識即可。<br>
+雖然說是『想玩玩 Jekyll 』而選了 Github Pages，不過其實不懂 Jekyll 也沒差，知道它是一個 Ruby 編寫出來的 framework，讓使用者可以快速的建構出靜態頁面的 blog，並讓使用者可以用 Markdown 來編寫 HTML。有這些知識即可。<br>
 
 ### Git / Github
 要建 Github Pages ，首先當必須有個 [Github](https://github.com/) 帳號，如果不喜歡 Github 也可以考慮用 GitLab pages，兩個的步驟其實是一樣的，就看你喜歡章魚貓還是狐狸了。至於 git 的部份，只要會 commit 跟 push 就夠了（應該?），不會的話可以找[猴子老師](https://backlog.com/git-tutorial/tw/intro/intro1_1.html)學學。對了，git 要記得安裝。
@@ -43,7 +43,7 @@ p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個�
 > 否則當你想使用 ruby 指令時，會出現**不是內部或外部命令、可執行的程式或批次檔**的錯訊息，如果出現該訊息就必須手動設定環境變數。
 
 <br> 	
-安裝完成後，接著開啟命令提示字元確認 Ruby 是否安裝成功，若成功應該可以看到目前的版號，請務必確認所安裝的 ruby 是 Jekyll 所要求的 **2.0 以上**的版本 。
+安裝完成後，接著開啟命令提示字元確認 Ruby 是否安裝成功，若成功應該可以看到目前的版號，請務必確認所安裝的 Ruby 是 Jekyll 所要求的 **2.0 以上**的版本 。
 ```sh
 $ ruby -v
 ruby 2.5.5p157 (2019-03-15 revision 67260) [x64-mingw32]
@@ -70,7 +70,7 @@ $ jekyll serve
 編譯結果可在瀏覽器輸入 [http://localhost:4000](http://localhost:4000) 後查看。若可以順利執行，就將這次的 diff 進行 commit 後送上 github了。<br> 	
 
 ### 5. debug啦
-不過通常我做事都沒這順利....果不其然，當我執行 jekyll serve 時，結果出現下列錯誤訊息：
+不過通常我做事都沒這順利...果不其然，當我執行 jekyll serve 時，結果出現下列錯誤訊息：
 ```sh
 $ jekyll server
 Traceback (most recent call last):
@@ -126,7 +126,7 @@ $ bundle install
 <br>其實有點大同小異啦，最後挑了第三個 jekyll-theme-next。運氣不錯，它還附有[安裝教學](http://theme-next.simpleyyt.com/getting-started.html)，可以直接照著做就好，不過因為剛剛我已經把專案建好了我就不學它 git clone project 來執行 jekyll serve，而是直接複製貼上了 XD <br>
 
 ###  2. 重新安裝相依性
-主題套用完成後，因為個個主題所使用的套件不同，所以必需重新安裝相依性。
+主題套用完成後，因為各各主題所使用的套件不同，所以必需重新安裝相依性。
 ```sh
 $ bundle install
 Traceback (most recent call last):
@@ -169,7 +169,7 @@ $ bundle exec jekyll server
 <br>
 
 ### 4. 繼續debug
-反正，我沒次安裝從來沒有一次照著說明書就可以安裝完成的（嘆
+反正，我每次安裝從來沒有一次照著說明書就可以安裝完成的（嘆
 ```sh
 $ bundle exec jekyll server
 Configuration file: D:/tmp/_config.yml
@@ -196,7 +196,7 @@ Rendering Markup: assets/css/style.scss
 					Invalid CP950 character "\xE2" on line 5
 jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 ```
-<br> 照著[說明](https://github.com/mmistakes/jekyll-theme-hpstr/issues/185#issuecomment-340777090)，我在 `assets/css` 這個路徑下新增一個 `style.scss`   的檔案，檔案內容如下：	
+<br> 照著[說明](https://github.com/mmistakes/jekyll-theme-hpstr/issues/185#issuecomment-340777090)，我在 `assets/css` 這個路徑下新增一個 `style.scss`  的檔案，檔案內容如下：	
 
 ```css
 ---
@@ -207,10 +207,10 @@ jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 <br><br>
 
 ## 撰寫文章
-歷經千辛萬苦終於把網站弄起來了！之後只要將新寫好的 markdown  文章，放在 `_posts`  資料夾下，文章就會顯示在網站上。不過要注意以下幾點：
+歷經千辛萬苦終於把網站弄起來了！之後只要將新寫好的 Markdown  文章，放在 `_posts`  資料夾下，文章就會顯示在網站上。不過要注意以下幾點：
 
--   markdown 的檔案命名必須為  `YYYY-MM-DD-{article_title}.md`。
--   markdown 內容的開頭應該類似下方，不過不同的主題可能會略有不同，請按照各自主題的定義來撰寫：
+-   Markdown 的檔案命名必須為  `YYYY-MM-DD-{article_title}.md`。
+-   Markdown 內容的開頭應該類似下方，不過不同的主題可能會略有不同，請按照各自主題的定義來撰寫：
 
 	```
 	---
@@ -234,7 +234,7 @@ jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 <br>
 
 ## 後記
-不過雖然把 Github Pages 建起來了，不過都沒怎麼更新，主要是它的預覽實在有點麻煩，我不能在行動裝置或非本人的電腦進行，有點小苦惱，再加上後來有找到用 Markdown 寫 Blogger 的方法，所以還是以 blogger 為主~~（雖然那邊也是在長草）~~。
+不過雖然把 Github Pages 建起來了，不過都沒怎麼更新，主要是它的預覽實在有點麻煩，我不能在行動裝置或非本人的電腦進行，有點小苦惱，再加上後來有找到用 Markdown 寫 Blogger 的方法，所以還是以 Blogger 為主~~（雖然那邊也是在長草）~~。
 
 <br>
 

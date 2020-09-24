@@ -83,7 +83,7 @@ Output: false
 2.  檢查 pattern 的長度是否大於 2 且第二字元為 `*`
 	- 是，判斷 string 是否為空字串
 		- Case1：是，則呼叫遞迴傳入 string 與 pattern[2:] 
-		- 否，則 pattern 的字首與 string 的字首是否相等〈相等情況包含 pattern 字首為`.`的情況〉
+		- 否，則 pattern 的字首與 string 的字首是否相等（相等情況包含 pattern 字首為`.`的情況）
 			- Case2：是，則呼叫遞分別傳入 string[1:] 與 pattern、string[1:] 與 pattern[2:] 和 string 與 pattern[2:] 
 			- Case3：否，則呼叫遞迴傳入 string 與 pattern[2:] 
 	
@@ -93,43 +93,43 @@ Output: false
 
 <br>
 
-另外針對流程中幾個地回傳入的Case進行說明：
-- **Case1**： pattern 第二字元為 `*` 且 string 是為空字串，則呼叫遞迴傳入 string 與 pattern[2:] 
--`*` 可代表 pattern[0] 出現0次，因此略過 pattern 字首向後檢查。
+另外針對流程中幾個遞迴傳入的Case進行說明：
+- **Case1**： pattern 第二字元為 `*` 且 string 是為空字串，則呼叫遞迴傳入 string 與 pattern[2:]   
+    - `*` 可代表 pattern[0] 出現 0 次，因此略過 pattern 字首向後檢查。
 
 - **Case2**：是，則呼叫遞分別傳入 string[1:] 與 pattern、string[1:] 與 pattern[2:] 和 string 與 pattern[2:] 
     -	string[1:] 與 pattern：為 `*` 出現多次的情況，下個字元比對時仍與 pattern 字首比對。
-    -	string[1:] 與 pattern[2:] ：為 `*` 出現1次的情況，因此下一個字元比對時略過 pattern 字首。
-    -	string 與 pattern[2:] ：為 `*` 出現0次的情況，因此忽略 pattern 字首。
+    -	string[1:] 與 pattern[2:] ：為 `*` 出現 1 次的情況，因此下一個字元比對時略過 pattern 字首。
+    -	string 與 pattern[2:] ：為 `*` 出現 0 次的情況，因此忽略 pattern 字首。
 
 - **Case3**： pattern 第二字元為 `*` 且 pattern 的字首與 string 的字首**不相等**，則呼叫遞迴傳入 string 與pattern[2:]  
--在不相等的情況下，因為 `*` 的緣故可以假定 pattern[0] 為不存在〈出現0次〉的元素，因此略過pattern 字首向後檢查。
+    - 在不相等的情況下，因為 `*` 的緣故可以假定 pattern[0] 為不存在（出現 0 次）的元素，因此略過 pattern 字首向後檢查。
  
 ```python
 class Solution:
-  def __init__(self):
-    self.memo = {}
+   def __init__(self):
+      self.memo = {}
 
-  def isMatch(self, s, p):
-    p_len = len(p)
-    if p_len == 0:
-      return len(s) == 0
+   def isMatch(self, s, p):
+      p_len = len(p)
+      if p_len == 0:
+         return len(s) == 0
 	
-    if (s,p) in self.memo:
-      return self.memo.get((s,p))
+      if (s,p) in self.memo:
+         return self.memo.get((s,p))
 
-    result = False
-    if p_len >= 2 and p[1] == '*' :
-      if len(s) > 0 and (p[0] == '.' or  p[0] == s[0]):
-        result = self.isMatch(s[1:] , p) or self.isMatch(s[1:] , p[2:]) or self.isMatch(s , p[2:])
-      else:
-        result = self.isMatch(s,p[2:])
+      result = False
+      if p_len >= 2 and p[1] == '*' :
+         if len(s) > 0 and (p[0] == '.' or   p[0] == s[0]):
+            result = self.isMatch(s[1:] , p) or self.isMatch(s[1:] , p[2:]) or self.isMatch(s , p[2:])
+         else:
+            result = self.isMatch(s,p[2:])
 
-    elif len(s) > 0  and (p[0] == '.' or  p[0] == s[0]):
-      result =  self.isMatch(s[1:],p[1:])
+      elif len(s) > 0   and (p[0] == '.' or   p[0] == s[0]):
+         result =   self.isMatch(s[1:],p[1:])
 
-    self.memo[(s,p)] = result
-    return result
+      self.memo[(s,p)] = result
+      return result
 ```
 不過單用遞迴會 Time Limit Exceeded，因此多加了參數暫存比較結果，節省呼叫次數。
 
@@ -138,9 +138,9 @@ class Solution:
 <br>
 
 ### Dynamic Programming
-是說寫完地回後很高興要切下一題的時候，才後知後覺的想到，我剛剛應該是挑了 DP  的標籤要練習阿XDDD
+是說寫完地回後很高興要切下一題的時候，才後知後覺的想到，我剛剛應該是挑了 DP  的標籤要練習阿 XDDD
 
-但是，我真的對DP不太擅長的說，想破了頭還是毫無頭緒，只好去翻了下[討論區的答案](https://leetcode.com/problems/regular-expression-matching/discuss/5684/9-lines-16ms-c-dp-solutions-with-explanations)，解釋有點難懂還沒有啃透，晚點再回來補充好了...腦袋燒壞Orz
+但是，我真的對 DP 不太擅長的說，想破了頭還是毫無頭緒，只好去翻了下[討論區的答案](https://leetcode.com/problems/regular-expression-matching/discuss/5684/9-lines-16ms-c-dp-solutions-with-explanations)，解釋有點難懂還沒有啃透，晚點再回來補充好了...腦袋燒壞 Orz
 
 1.  `P[i][j] = P[i - 1][j - 1]`, if  `p[j - 1] != '*' && (s[i - 1] == p[j - 1] || p[j - 1] == '.')`;
 2.  `P[i][j] = P[i][j - 2]`, if  `p[j - 1] == '*'`  and the pattern repeats for  `0`  times;
@@ -148,18 +148,18 @@ class Solution:
 
 ```python
 class Solution:
-  def isMatch(self, s, p):
-    m = len(s)
-    n = len(p)
-    dp = [[False for i in range(n + 1)] for i in range(m + 1)]
-    dp[0][0] = True
-    for i in range(m+1):
-      for j in range(1, n+1):
-        if p[j-1] == '*':
-          dp[i][j] = dp[i][j - 2] or (i > 0 and (s[i - 1] == p[j - 2] or p[j - 2] == '.') and dp[i - 1][j])
-        else:
-          dp[i][j] = i > 0 and dp[i - 1][j - 1] and (s[i - 1] == p[j - 1] or p[j - 1] == '.')
-    return dp[m][n]
+   def isMatch(self, s, p):
+      m = len(s)
+      n = len(p)
+      dp = [[False for i in range(n + 1)] for i in range(m + 1)]
+      dp[0][0] = True
+      for i in range(m+1):
+         for j in range(1, n+1):
+            if p[j-1] == '*':
+               dp[i][j] = dp[i][j - 2] or (i > 0 and (s[i - 1] == p[j - 2] or p[j - 2] == '.') and dp[i - 1][j])
+            else:
+               dp[i][j] = i > 0 and dp[i - 1][j - 1] and (s[i - 1] == p[j - 1] or p[j - 1] == '.')
+      return dp[m][n]
 ```
 是說，我硬是將討論區的 Code 改成 Python 版本的，執行時間 60 ms，效能好像沒有比較好？
 

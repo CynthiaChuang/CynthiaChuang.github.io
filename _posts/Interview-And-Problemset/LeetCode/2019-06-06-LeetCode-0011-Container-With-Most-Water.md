@@ -25,7 +25,7 @@ Output: 49
 
 <br>
 
-**Related Topics:**`Array`、`Two Pointers`
+**Related Topics:** `Array`、`Two Pointers`
 
 <br><br>
 
@@ -37,23 +37,23 @@ Output: 49
 
 ```python
 class Solution:
-  def maxArea(self, height: List[int]) -> int:
-    start = 0 
-    end = len(height) - 1
-    area = 0
+   def maxArea(self, height: List[int]) -> int:
+      start = 0 
+      end = len(height) - 1
+      area = 0
 
-    while(start < end):
-      w = end - start
-      if height[start] < height[end]:
-        h = height[start]
-        start += 1 
-      else:
-        h = height[end]
-        end -= 1 
-                
-      area = max(area, h*w)
+      while(start < end):
+         w = end - start
+         if height[start] < height[end]:
+            h = height[start]
+            start += 1 
+         else:
+            h = height[end]
+            end -= 1 
+                        
+         area = max(area, h*w)
 
-    return area
+      return area
 ```
 
 <br><br>

@@ -32,7 +32,7 @@ tags:
 
 1. **新增變數與函式**  
     - newTask：字串，用於儲存輸入框文字 
-	- todoList：陣列，紀錄代辦事項，裡面為 key / value ，包含 id、taskName 與完成狀況（completed） 
+	- todoList：陣列，記錄代辦事項，裡面為 key / value ，包含 id、taskName 與完成狀況（completed） 
 	- addToList：methods function，當點擊新增按鈕時，會被觸發的函式。 <br>
 
 2. **輸入框與變數雙向綁定**  
@@ -66,10 +66,10 @@ tags:
 
 ## 刪除陣列上的特定資料
 
-1. **新增函式並與刪除按鈕綁定**  
+1. **新增函式並與刪除按鈕綁定**    
     建立所需函式 deleteTask 並與 delete icon 使用 `v-on` 進行綁定。使的點擊 delete icon 時，可以觸發該函式。
 
-2. **實做 deleteTask 函式**
+2. **實做 deleteTask 函式**  
     可以使用 **array.splice** 刪除陣列中指定的元素，但其指定方式是使用 index ，因此必須知道欲刪除元素的 index。 Index 可以在進行 v-for 迴圈時取得，並與 item 一併傳入。
     
 <br><br>
@@ -89,16 +89,16 @@ tags:
 
 <br>先實做上方頁簽切換的部份
 1.  **新增變數**  
-    新增三個變數 `allItem` 、 `processing` 與 `done`，分別對應到 card-header 的三個分頁全部、進行中、已完成。另外宣告一個變數 `visibilityTab` ，並將該值初始化為 **allItem**，此變數用來紀錄目前使用者正在查看的頁簽，
+    新增三個變數 `allItem` 、 `processing` 與 `done`，分別對應到 card-header 的三個分頁全部、進行中、已完成。另外宣告一個變數 `visibilityTab` ，並將該值初始化為 **allItem**，此變數用來記錄目前使用者正在查看的頁簽。
     
 2. **頁簽渲染**  
-    為了突顯目前正在查看的頁簽，會將該頁簽進行渲染。因為為各個頁簽加上 class 的動態切換，當 `visibilityTab` 指向該頁時，就加上 active class 的渲染效果。
+    為了突顯目前正在查看的頁簽，會將該頁簽進行渲染。為了為各個頁簽加上 class 的動態切換效果，當 `visibilityTab` 指向該頁時，就加上 active class 的渲染效果。
     ```html
     :class="{'active':visibility == 'allList'}"
     ```
     
 3. **頁簽切換效果**  
-    為實做為點擊切換的效果，因此當點擊頁簽虛將將 `visibilityTab` 指向自己，例如：
+    為實做為點擊切換的效果，因此當點擊頁簽時將變數 `visibilityTab` 指向自己，例如：
     ```html
     @click="visibility = 'done'"
     ```
@@ -115,7 +115,7 @@ tags:
     PS. 如果為確認 `filteredList` 與 v-for 的搭配是否正常運作，可以在 `filteredList` 中直接回傳 `todoList` 做為測試。 
 
 3. **實作 filteredList 函數**  
-    依照 `visibilityTab` 的內容回不同的過濾結果。實作如下，課程影片中老師是用 forEach 的方式，不過個人偏好 filter XD：<br>
+    依照 `visibilityTab` 的內容回傳不同的過濾結果。實作如下，課程影片中老師是用 forEach 的方式，不過個人偏好 filter XD：<br>
     ```javascript
     filteredList: function(){
       if (this.visibility == "allItem"){
@@ -141,14 +141,14 @@ tags:
     準備好一個 input text 元件，並與目前顯示內容的元件 - 也就是剛剛包住 label 與 checkbox 的 div - 放置在同一層。
 
 2. **雙擊事件**  
-    這邊希望點擊代辦事件兩下後，可以進入修入模式。因此為 **div** 元件建立一個雙擊事件。
+    這邊希望點擊代辦事件兩下後，可以進入編輯模式。因此為 **div** 元件建立一個雙擊事件。  
     PS. 是加在 div 而不是新增的 text 元件，因為在一般模式下的顯示是 div，所以會收到 dblclick 事件的會是 div。
     ```html
     @dblclick="editTask(item)"
     ```
 
 3. **實做 editTask 函數**  
-    宣告三個變數 cacheTask、cacheTaskName，分別紀錄目前編輯的資料項目、與編輯中 taskName。
+    宣告三個變數 cacheTask、cacheTaskName，分別記錄目前編輯的資料項目、與編輯中 taskName。
     
 4. **顯示編輯框**  
     在顯示內容的元件 - 也就是剛剛包住 label 與 checkbox 的 div上加入
@@ -161,7 +161,7 @@ tags:
     
 
 5. **為 text 加上所需屬性**  
-    如：使用 `v-model` 綁定 text 與 cacheTaskName 紀錄編輯中的內容、`@keyup.esc` 取消輸入與 `@keyup.enter` 完成輸入。
+    如：使用 `v-model` 綁定 text 與 cacheTaskName 記錄編輯中的內容、`@keyup.esc` 取消輸入與 `@keyup.enter` 完成輸入。
 
 6. **取消編輯**  
     使用 `cancelEdit` 來實做取消輸入事件，當按下 esc 後，清空 cacheTask、cacheTaskName。
@@ -179,26 +179,26 @@ tags:
 如果直接刪除所傳入 index 會出現誤刪的情況，因此改利用傳入 id 反查該筆資料在原始陣列中正確的位置，然後在進行刪除。
 <br>
 
-課程中在實做時方法有二，一是使用 **array.forEach** ，當遇到 id 同時就紀錄下目前的 index，最後在刪除所紀錄下的 index：
+課程中在實做時方法有二，一是使用 **array.forEach** ，當遇到 id 同時就記錄下目前的 index，最後在刪除所紀錄下的 index：
 ```javascript
 removeItem: function(item){
-  let removeId = -1 ;
-  this.todos.forEach((todo,index)=>{
-    if (todo.id === item.id){
-      removeId = index;
-    }
-  })
-  this.todos.splice(removeId,1);
+   let removeId = -1 ;
+   this.todos.forEach((todo,index)=>{
+      if (todo.id === item.id){
+         removeId = index;
+      }
+   })
+   this.todos.splice(removeId,1);
 },
 ```
 
 <br>不過個人更偏好第二種方法：
 ```javascript
 removeItem: function(item){
-  let removeId = this.todos.findIndex((todo) => {
-    return todo.id === item.id
-  })
-  this.todos.splice(removeId, 1);
+   let removeId = this.todos.findIndex((todo) => {
+      return todo.id === item.id
+   })
+   this.todos.splice(removeId, 1);
 },
 ```
 

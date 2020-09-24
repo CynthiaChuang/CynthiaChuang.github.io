@@ -35,8 +35,6 @@ tags:
 
 開始前先來複習一下 **Serverless要點** 與 **OpenWhisk 程式編輯模型**。
 
-<br>
-
 ### Serverless 要點
 
 - [第一堂課程筆記 - Serverless](/Serverless-Use-Cases-Study-Notes-01/#serverless-要點)
@@ -63,7 +61,7 @@ Function-as-a-Service FaaS，中文翻譯為**函式即服務**，...恩...函�
 
 ### OpenWhisk 程式編輯模型
 
-在本堂課主要會利用 Serverless 無狀態、短暫的、有限制的 特點，來看看它在 API 經濟中的作用。
+在本堂課主要會利用 Serverless 無狀態、短暫的、有限制的特點，來看看它在 API 經濟中的作用。
 - [第一堂課程筆記 - OpenWhisk 程式編輯模型](/Serverless-Use-Cases-Study-Notes-01/#openwhisk-%E7%A8%8B%E5%BC%8F%E7%B7%A8%E8%BC%AF%E6%A8%A1%E5%9E%8B)
  
 <center> <img src="https://i.imgur.com/lZP3G5P.png" alt="Apache OpenWhisk 程式編輯模型"></center>
@@ -71,7 +69,7 @@ Function-as-a-Service FaaS，中文翻譯為**函式即服務**，...恩...函�
 <br>
 
 
-另外在上一講中還提到了OpenWhisk 程式編輯模型。
+另外在上一講中還提到了 OpenWhisk 程式編輯模型。
 
 
 OpenWhisk　是一個典型的<span class="highlighting">事件驅動型</span>的程式編輯模型，其中有幾個主要的概念：觸發器（Trigger）、動作（Action）、規則（Rule）與套件（Package）。
@@ -120,8 +118,7 @@ OpenWhisk　是一個典型的<span class="highlighting">事件驅動型</span>�
 
 而所謂 API 經濟，指的是通過 Open API 把後臺的資料、資源...等能力，開放提供第三方人員有償或是無償使用，這樣的開放可以直接對企業利潤帶來引響，或是擴大自身在生態圈影響力，並且很快的完成創新。
 
-
- <br>
+<br>
 
 ###  開放 API
  
@@ -135,8 +132,6 @@ OpenWhisk　是一個典型的<span class="highlighting">事件驅動型</span>�
 </div>
 
 <br> 在 API 經濟之下，越來越多的企業通過 API 將自己企業的功能和數據開放出去供別人調用，從而給企業本身帶來直接的價值。可是很多情況下，企業已有的功能不適合直接暴露給外部使用戶，需要考慮相關認證的機制以及隱私資料遮蔽，做一定的限制和修改。
-
-
 
 <br>
 
@@ -160,9 +155,7 @@ API Gateway 這邊主要負責安全性、流量管理、拜訪與響應的策�
 而在 API Gateway 後面則是接　Serverless 中的 FaaS 服務，在這邊就依照你的開發需求去撰寫程式，例如：輸⼊輸出格式轉化、隱私數據屏蔽、加密與解密...等。
 
 
-<br>
-
-簡單來說 FaaS 這邊放的開放給外部使用時所有需要使用程式來處理的內容。這部份的內容可用任何語言實作。
+簡單來說， FaaS 這邊存放的是，當開放給外部使用時所有需要使用程式來處理的內容。這部份的內容可用任何語言實作。
 
 接下來，通過 API Gateway 曝露出來一個 URL，再將這個 URL 發布出去就可以了。
 
@@ -179,7 +172,7 @@ API Gateway 這邊主要負責安全性、流量管理、拜訪與響應的策�
 
 課程這邊講師舉了好幾個場景示例，不過有點懶沒有將它們一一打出來。
 
-不過就是基本上就使用這藉由網路通過 API Gateway 去請求 FaaS，而 FaaS 接到請求後執行相對應的程式，再將結果返回給使用者。
+不過基本上就是藉由網路通過 API Gateway 去請求 FaaS，而 FaaS 接到請求後執行相對應的程式，再將結果返回給使用者。
 
 <!--more-->
 <br><br>
@@ -225,7 +218,7 @@ IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操�
 
 <br>
 
-紀錄一下，在 Docker Container 中我需要反覆查詢的指令：
+記錄一下，在 Docker Container 中我需要反覆查詢的指令：
 1. **安裝**  
     如要安裝其他程式，如 vim ，用的指令不是 `apt-get`
     
@@ -277,7 +270,7 @@ IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操�
     $ ibmcloud plugin install cloud-functions
     ```
     
-    安裝的時候忘了紀錄，我記得會出現一些安裝與升級的提示，依照提示的指令裝一裝就好了。
+    安裝的時候忘了記錄，我記得會出現一些安裝與升級的提示，依照提示的指令裝一裝就好了。
 
 
 3. **目標名稱空間**  
@@ -310,10 +303,8 @@ IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操�
 
 這堂課主要是在說 API 操作的部份，所以我也依照講師的授課內容，先找相對應的指令。至於其他的指令，我在酌情要貼測試結果還是文件就好。
  
-<br>
 
 **action**  
-
 在開始前先準備一段 action 的程式，課程中的範例是關於資料庫的操作，不過我這邊為了偷懶直接印出來假裝有 insert XD
 
 另外，因為我不想預先編譯，所以挑了<span class="highlighting">直譯式語言</span>來實做，而在 Python 與 JavaScript 兩者之間，我挑了比較熟悉的 Python。

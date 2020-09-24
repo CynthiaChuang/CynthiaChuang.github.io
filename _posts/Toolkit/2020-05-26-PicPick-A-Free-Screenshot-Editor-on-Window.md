@@ -12,7 +12,7 @@ tags:
 上次找了一個 [Ubuntu 上的螢幕截圖編輯軟體 - Shutter](/Shutter-A-Screenshot-Editor-on-Ubuntu)，基本的截圖、畫框、螢光筆都有，可惜它沒支援 Windows，只好來找找替代品了。
 
 <!--more-->
-<br>
+
 <center> <img src="https://i.imgur.com/7Vg8auj.png" alt="picpick homepage"></center>
 <center class="imgtext">Homepage（圖片來源: <a href="https://picpick.app/zh-tw/" class="imgtext">Picpick</a>）</center>
  
@@ -24,8 +24,6 @@ tags:
 
 之後用 prtSc + 小畫家撐了一陣子後，受不了而去下載了 [Snagit](https://www.techsmith.com/download/snagit/)，體感上跟 Shutter 操作很類似，一度想花錢買了，不過考慮我一年可能用個沒幾次，就還是算了。
 
-<br> 
-
 <center> <img src="https://i.imgur.com/LP7aUck.png" alt="picpick download page"></center>
 
 <br> 
@@ -34,7 +32,6 @@ tags:
 
 PicPick 它也是一款螢幕擷取軟體，可以簡易編輯圖片、畫線/框、箭頭、加入文字、螢光筆都有，非常符合我的需求。而且它有提供免費下載。
 
-<br> 
 <center> <img src="https://i.imgur.com/ZGdG3co.png" alt="picpick download page"></center>
 <br> 
 

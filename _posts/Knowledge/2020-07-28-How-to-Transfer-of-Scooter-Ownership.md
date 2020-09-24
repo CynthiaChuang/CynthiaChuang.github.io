@@ -8,10 +8,9 @@ tags:
 - 法律與行政流程
 --- 
 
-這兩天在辦理機車過戶，不過網路上查到的資料不盡相同（主要是強制險的部份），決定紀錄一下這次的流程。
+這兩天在辦理機車過戶，不過網路上查到的資料不盡相同（主要是強制險的部份），決定記錄一下這次的流程。
 
 <!--more-->
-<br>
 <center> <img src="https://i.imgur.com/BaZKyrR.jpg" alt="機車過戶囉"></center>
 <center class="imgtext">機車過戶囉（圖片來源: <a href="https://pxhere.com/zh/photo/501153" class="imgtext">Picpick</a>）</center>
  

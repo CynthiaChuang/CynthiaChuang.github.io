@@ -10,9 +10,10 @@ tags:
 - Word Embedding 
 - Word2Vec
 --- 
-過年大掃除的時候發現，我的草稿夾內塞滿之前寫一半的草稿，想說欠都欠過年了，還是讓他繼續欠下去吧(誤)...
-  
-這篇是紀錄前一陣子（其實也快一年前了...）為了弄出一份符合我們應用的詞向量，開始嘗試著自給自足的故事 XD
+
+過年大掃除的時候發現，我的草稿夾內塞滿之前寫一半的草稿，想說欠都欠過年了，還是讓它繼續欠下去吧(誤)...
+
+這篇是記錄前一陣子（其實也快一年前了...）為了弄出一份符合我們應用的詞向量，開始嘗試著自給自足的故事 XD
 
 <!--more-->
 
@@ -75,7 +76,7 @@ $ pip install pyhanlp
 <br> HanLP 最近似乎有釋出 [HanLP 2.0](https://github.com/hankcs/HanLP) ，但還在 Alpha 階段就是了。不過，不管是 jieba 或是 pyhanlp/HanLP 都是以簡體中文為核心，若想使用繁體中文為核心的，可以考慮在去年(2019)中研院釋出 [CKIP](https://github.com/ckiplab/ckiptagger)的 python API 。
 <br>
 
-最後紀錄一下我所使用的 pyhanlp 版號，我有一陣子沒更新了說，[1.x branch](https://github.com/hankcs/HanLP/tree/1.x) 最後的版號應該是 v1.7.6 吧
+最後記錄一下我所使用的 pyhanlp 版號，我有一陣子沒更新了說，[1.x branch](https://github.com/hankcs/HanLP/tree/1.x) 最後的版號應該是 v1.7.6 吧
 
 
 <div class="alert info"> 
@@ -131,7 +132,7 @@ with open(output, "w") as f:
         f.write(" ".join(corpus) + ' \n')
 ```
 
-<br> 在解析的過程中，我發現這份檔案有繁簡交雜的現象，導致我最終的結果不如預期，因此我在寫出檔案前多做了些處理。
+<br> 在解析的過程中，我發現這份檔案有繁簡交雜的現象，導致我最終的結果不如預期，因此我在寫出檔案前多做了些處理：
 1. 每個 token，依序做一次繁簡轉換。
 2. 檢查轉換的結果是否符合編碼，若結果符合則留下，反之則保留轉換前的輸入。
  
@@ -148,7 +149,7 @@ with open(output, "w") as f:
 $ cd ~/py3.6/lib/python3.6/site-packages/pyhanlp
 ```
 
-<br> 接著修改 `__init__.py`，在最下方的 API 列表中加入
+<br> 接著修改 `__init__.py`，在最下方的 API 列表中加入：
 ```python
 TraditionalChineseTokenizer= SafeJClass('com.hankcs.hanlp.tokenizer.TraditionalChineseTokenizer')
 ```
@@ -172,7 +173,7 @@ HanLP.segment('你好，歡迎在Python中調用HanLP的API')
 TraditionalChineseTokenizer.segment('你好，歡迎在Python中調用HanLP的API')
 ```
 
-<br> 若是不想修改 init 檔案，也可以在使用繁體斷詞器前才引入
+<br> 若是不想修改 init 檔案，也可以在使用繁體斷詞器前才引入：
 ```python
 from pyhanlp import *
 
@@ -199,27 +200,27 @@ def restructuring(line):
     if endswith:
         line += " \n"
     return line
-        
+
 sources=["Sentences_1.txt", "Sentences_2.txt"]      
 output="segment_result.txt"
 
 with open(self.output, "w") as fw:
     for file in self.sources:
-      with open(file, 'r') as fr:
-        for line in tqdm(fr, desc='segment {0} lines'.format(file)):
-          line = line.strip()
+        with open(file, 'r') as fr:
+            for line in tqdm(fr, desc='segment {0} lines'.format(file)):
+                line = line.strip()
 
-          # （看情境）其他處理-1： 取代 e-mail、取代 url
-          term = HanLP.segment(line)
-          corpus = self.getWordsAndNatures(term)
-          # （看情境）其他處理-2: 依照詞性取代掉姓名、機關名稱
-          # 其他處理-3: 移除 stop word
-          fw.write(self.restructuring(corpus[0]) + "\n")
+                # （看情境）其他處理-1： 取代 e-mail、取代 url
+                term = HanLP.segment(line)
+                corpus = self.getWordsAndNatures(term)
+                # （看情境）其他處理-2: 依照詞性取代掉姓名、機關名稱
+                # 其他處理-3: 移除 stop word
+                fw.write(self.restructuring(corpus[0]) + "\n")
 ```
 <br>
 
 ### 其他前處理
-如果有注意到，在上段程式碼中我留了三個其他處理的註解，這邊可以取決你的應用是否希望將它換成特定的標籤，例如將對話中的 e-mail 或 url 換成 `#EMAIL#`、`#URL#` 等標籤，使斷詞結果更符合我們預期，或是可以依照詞性取代掉姓名、機關名稱，使最後訓練出來詞向量可以集中這些詞性的詞，但這樣的修改有好有壞就是。
+如果有注意到，在上段程式碼中我留了三個其他處理的註解，這邊可以取決你的應用是否希望將它換成特定的標籤，例如將對話中的 e-mail 或 url 換成 `#EMAIL#`、`#URL#` 等標籤，使斷詞結果更符合我們預期，或是可以依照詞性取代掉姓名、機關名稱，使最後訓練出來詞向量可以集中這些詞性的詞，但這樣的修改有好有壞就是了。
 
 最後一個註解是移除 [stop word](https://zh.wikipedia.org/wiki/%E5%81%9C%E7%94%A8%E8%AF%8D)，中文翻作停用詞，這些詞極其普遍，但與其他詞相比它並沒有什麼實際含義，如：阿、呀。這些詞的移除可以加強單詞的上下文關係，理論上有助於詞向量的訓練。
 

@@ -32,10 +32,9 @@ tags:
 
 另外，每個動作都可自定義套用機率，在影像經由 pipeline 時，會按機率決定是否套用該操作，以增加資料的多樣性。
 
+↑ 以上全出自於 [Augmentor文件](https://augmentor.readthedocs.io/en/master/index.html)， Google 翻譯友情贊助 XDDD
 
-↑ 以上全出自於 [Augmentor文件](https://augmentor.readthedocs.io/en/master/index.html)， Google 翻譯友情贊助 XDDDD
-
-<br> 
+<br><br> 
 
 ## 安裝
 我是透過 pip 安裝，所以還挺簡單，一條指令就搞定：
@@ -44,8 +43,8 @@ tags:
 $ pip install Augmentor
 ```
 
-<br><br> 
- 
+<br> 
+
 ## 使用方法
  
 ### 純圖片增強
@@ -59,7 +58,7 @@ p = Augmentor.Pipeline("./images")
 ```
 <br>
 
-接下添加，所需的影像增強操作
+接下來，添加所需的影像增強操作
 ```python
 p.random_contrast(probability=0.5, min_factor=0.3, max_factor=0.8)
 p.random_brightness(probability=0.5, min_factor=0.5, max_factor=1.0)
@@ -91,8 +90,8 @@ batch_imgs = []
 batch_texts = []   
 
 for i, file in enumerate(img_files):
-batch_imgs.append(cv2.imread(file))
-texts.append(file)
+   batch_imgs.append(cv2.imread(file))
+   batch_texts.append(file)
 
 # batch_imgs shape = (bs, 3)             
 p = Augmentor.DataPipeline(batch_imgs, batch_texts)
@@ -117,8 +116,8 @@ batch_imgs = []
 batch_texts = []   
 
 for i, file in enumerate(img_files):
-batch_imgs.append(cv2.imread(file))
-texts.append(file)
+   batch_imgs.append(cv2.imread(file))
+   batch_texts.append(file)
 
 batch_imgs = np.expand_dims(batch_imgs, axis=1)
 # batch_imgs shape = (bs, 1, 3)   
@@ -167,32 +166,32 @@ batch_imgs = np.squeeze(batch_imgs, axis=1)
  
 ```python
 class CustomizeHSVShifting(Operation):
-    def __init__(self, probability, max_h_shift=359, min_h_shift=1, max_s_shift=100, min_s_shift=0):
-        Operation.__init__(self, probability)
-        self.max_h_shift = max_h_shift
-        self.min_h_shift = min_h_shift
-        self.max_s_shift = max_s_shift
-        self.min_s_shift = min_s_shift
+   def __init__(self, probability, max_h_shift=359, min_h_shift=1, max_s_shift=100, min_s_shift=0):
+      Operation.__init__(self, probability)
+      self.max_h_shift = max_h_shift
+      self.min_h_shift = min_h_shift
+      self.max_s_shift = max_s_shift
+      self.min_s_shift = min_s_shift
 
-    def perform_operation(self, images):
-        def do(img):
-            img = np.array(img)
-            hsv_image = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+   def perform_operation(self, images):
+      def do(img):
+         img = np.array(img)
+         hsv_image = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
 
-            h_shift = random.randint(self.min_h_shift, self.max_h_shift)
-            hsv_image[:, :, 0] = hsv_image[:, :, 0] + h_shift
+         h_shift = random.randint(self.min_h_shift, self.max_h_shift)
+         hsv_image[:, :, 0] = hsv_image[:, :, 0] + h_shift
 
-            s_shift = random.randint(self.min_s_shift, self.max_s_shift)
-            hsv_image[:, :, 1] = hsv_image[:, :, 1] + s_shift
+         s_shift = random.randint(self.min_s_shift, self.max_s_shift)
+         hsv_image[:, :, 1] = hsv_image[:, :, 1] + s_shift
 
-            return Image.fromarray(cv2.cvtColor(hsv_image, cv2.COLOR_HSV2RGB))
+         return Image.fromarray(cv2.cvtColor(hsv_image, cv2.COLOR_HSV2RGB))
 
-        augmented_images = []
+      augmented_images = []
 
-        for image in images:
-            augmented_images.append(do(image))
+      for image in images:
+         augmented_images.append(do(image))
 
-        return augmented_images
+      return augmented_images
 ```
 
 注意，perform_operation 傳入的會是圖片陣列，而非單張圖片，別被[文件](https://augmentor.readthedocs.io/en/master/userguide/extend.html)中的 <span class='highlighting'>image</span> 這個字給騙了！實做時可以與其他功能的[實做](https://augmentor.readthedocs.io/en/master/_modules/Augmentor/Operations.html#RandomBrightness)進行對照。

@@ -14,7 +14,7 @@ tags:
 <br><br> 
 
 ## 情境假設
-假設目前 git log 存在多筆 commit ， A -> B -> C -> D -> E， e 是目前最新的 commit ，也就是 HEAD。
+假設目前 git log 存在多筆 commit ， A → B → C → D → E， e 是目前最新的 commit ，也就是 HEAD。
 
 <br>現在我想對某一筆 commit 進行修改，可以使用 rebase -i 命令選擇要修改的提交
 ```shell
@@ -47,7 +47,7 @@ pick <E 的 commitId> <E 的 commit 內容>
 <br><br> 
 
 ## 修改 commits message
-這是我對常做的，在要修正的 commit 前的 `pick` 換成 `r` 或 `reword`：
+這是我最常做的，在要修正的 commit 前的 `pick` 換成 `r` 或 `reword`：
 ```shell
 r <C 的 commitId> <C 的 commit 內容>
 ```
@@ -96,7 +96,7 @@ Once you are satisfied with your changes, run
 	git rebase --continue
 ```
 
-當檔案修改完後，先用 diff 檢查一下檔案的差異，再用將檔案加進索引，最後按照提示依序輸入 `amend` 與 `continue`。
+當檔案修改完後，先用 `diff` 檢查一下檔案的差異，再用 `add` 將檔案加進索引，最後按照提示依序輸入 `amend` 與 `continue`。
 
 ```shell
 $ git diff

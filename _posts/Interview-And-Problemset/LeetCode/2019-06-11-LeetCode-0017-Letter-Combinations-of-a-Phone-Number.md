@@ -30,35 +30,35 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
 <br>
 
-**Related Topics:**`String`、`Backtracking`
+**Related Topics:** `String`、`Backtracking`
 
 <br><br>
 
 ## 解題邏輯與實作
-這議題是要求字母的組合，在電話鍵盤上 2-9 分別對應到不同的字母，題目會給定一串數字，找出這串數字所有可能的字母組合。
+這一題是要求字母的組合，在電話鍵盤上 2-9 分別對應到不同的字母，題目會給定一串數字，找出這串數字所有可能的字母組合。
 
 
-這一題可以遞回來解，先建立一個 dict 紀錄數字所對應的，然後將每個數字對應的字母都當做樹的節點，並使用深度優先搜尋 (dsf) 的方式來尋訪這棵樹。
+這一題可以遞回來解，先建立一個 dict 記錄數字所對應的字母，然後將每個數字對應的字母都當做樹的節點，並使用深度優先搜尋 (dsf) 的方式來尋訪這棵樹。
 
 
 ```python
 class Solution:
-  digit2letters = { '2': "abc", '3': "def", '4': "ghi",  '5': "jkl",
-                     '6': "mno", '7': "pqrs", '8': "tuv", '9': "wxyz", }
-  def letterCombinations(self, digits: str) -> List[str]:
-    if not digits:
-      return []
+   digit2letters = { '2': "abc", '3': "def", '4': "ghi",   '5': "jkl",
+                               '6': "mno", '7': "pqrs", '8': "tuv", '9': "wxyz", }
+   def letterCombinations(self, digits: str) -> List[str]:
+      if not digits:
+         return []
 
-    return self.dsf(digits,[],"")
+      return self.dsf(digits,[],"")
 
-  def dsf(self, digits, results = [], current = ""):
-    if not digits:
-      results.append(current)
+   def dsf(self, digits, results = [], current = ""):
+      if not digits:
+         results.append(current)
+         return results
+
+      for c in self.digit2letters[digits[0]]:
+         results = self.dsf(digits[1:],results,current+c)
       return results
-
-    for c in self.digit2letters[digits[0]]:
-      results = self.dsf(digits[1:],results,current+c)
-    return results
 ```
 
 <br><br>

@@ -51,7 +51,7 @@ Output: False
 <br>
 
 ### 遞迴
-也就是暴力解，想法很簡單，就是把句子拆成前後兩句下去查，一旦有一種拆法可以查的到就回傳 True，否則回傳 False。當然為了避免大量重複計算，例外用HashTable 紀錄查過得結果，解法如下：
+也就是暴力解，想法很簡單，就是把句子拆成前後兩句下去查，一旦有一種拆法可以查的到就回傳 True，否則回傳 False。當然為了避免大量重複計算，例外用 HashTable 紀錄查過得結果，解法如下：
 
 1.  查詢此單字是否存在於字典中
 	1. 有，則回傳 True
@@ -62,61 +62,61 @@ Output: False
 
 ```python
 class Solution:
-    def __init__(self, mydict=None):
-        self.mydict = mydict
-        self.memo = {}
+      def __init__(self, mydict=None):
+            self.mydict = mydict
+            self.memo = {}
 
-    def set_dict(self,mydict):
-        self.mydict = mydict
-        
-    def wordBreak(self, s, wordDict):
-        self.set_dict(set(wordDict))
-        return self.check(s)
+      def set_dict(self,mydict):
+            self.mydict = mydict
+            
+      def wordBreak(self, s, wordDict):
+            self.set_dict(set(wordDict))
+            return self.check(s)
 
-    def check(self, s):
-        length = len(s)
-        
-        if s in self.memo:
-            return self.memo.get(s)
+      def check(self, s):
+            length = len(s)
+            
+            if s in self.memo:
+                  return self.memo.get(s)
 
-        if length <= 0 or s in self.mydict:
-            self.memo[s] = True
-            return True
+            if length <= 0 or s in self.mydict:
+                  self.memo[s] = True
+                  return True
 
-        result = False
-        for i in range(1, length):
-            result = self.check(s[:i]) and self.check(s[i:])
-            if result :
-                break
+            result = False
+            for i in range(1, length):
+                  result = self.check(s[:i]) and self.check(s[i:])
+                  if result :
+                        break
 
-        self.memo[s] = result
-        return result
+            self.memo[s] = result
+            return result
 ```
 但果不期然，效率有點差跑出了個 740 ms, 1.20%  的成績，摸摸鼻子改寫 DP 去。
 
 <br>
 
 ### Dynamic Programming
-這題大概是難得我這幾天整理的題目中，DP 解終於不是欠著的題目了XDDD
+這題大概是難得我這幾天整理的題目中，DP 解終於不是欠著的題目了 XDDD
 
-這邊使用了一個 dp 陣列紀錄結果，其中 dp[i] 中紀錄著字串 s[:i] 是否能夠拆解，接下來若是 s[i:j]也可以進行拆解，因為已知 s[:i] 可拆解，又s[i:j] 可拆解，故 s[:j] 可拆解，因此紀錄 dp[j]為 True，按這關係推導，最後就可以判斷目標字串是否可以被拆解。
+這邊使用了一個 dp 陣列紀錄結果，其中 dp[i] 中紀錄著字串 s[:i] 是否能夠拆解，接下來若是 s[i:j] 也可以進行拆解，因為已知 s[:i] 可拆解，又s[i:j] 可拆解，故 s[:j] 可拆解，因此紀錄 dp[j] 為 True，按這關係推導，最後就可以判斷目標字串是否可以被拆解。
  
 ```python
 class Solution:
-    def wordBreak(self, s, wordDict):
-        n = len(s)
-        dp = [False] * (n + 1)
-        dp[0] = True
-    
-        words = set(wordDict)
-        for j in range(n):
-            for i in range(j, -1, -1):
-                if dp[i] and s[i:j + 1] in words:
-                    dp[j + 1] = True
-                    break
-        return dp[n]
+      def wordBreak(self, s, wordDict):
+            n = len(s)
+            dp = [False] * (n + 1)
+            dp[0] = True
+      
+            words = set(wordDict)
+            for j in range(n):
+                  for i in range(j, -1, -1):
+                        if dp[i] and s[i:j + 1] in words:
+                              dp[j + 1] = True
+                              break
+            return dp[n]
 ```
-這效能果然好上不少，跑出了68 ms, 15.49% 的成績。
+這效能果然好上不少，跑出了 68 ms, 15.49% 的成績。
 
 <br>
 
@@ -128,21 +128,21 @@ class Solution:
  
 ```python
 class Solution:
-    def wordBreak(self, s, wordDict):
-        words = set(wordDict)
-        maxLen = 0
-        for word in wordDict:
-            maxLen = max(maxLen, len(word))
-        n = len(s) 
-        dp =  [False] * (n + 1)
-        dp[n] = True 
+      def wordBreak(self, s, wordDict):
+            words = set(wordDict)
+            maxLen = 0
+            for word in wordDict:
+                  maxLen = max(maxLen, len(word))
+            n = len(s) 
+            dp =   [False] * (n + 1)
+            dp[n] = True 
 
-        for i in range(n - 1, -1, -1):
-            for j in range(i + 1, min(i + maxLen, n) + 1): 
-                if dp[j] and s[i:j] in words:
-                    dp[i] = True
-                    break 
-        return dp[0]
+            for i in range(n - 1, -1, -1):
+                  for j in range(i + 1, min(i + maxLen, n) + 1): 
+                        if dp[j] and s[i:j] in words:
+                              dp[i] = True
+                              break 
+            return dp[0]
 ```
 <br><br>
 

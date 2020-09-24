@@ -75,7 +75,7 @@ class Solution:
 
 ### 最速解
 
-我寫這篇就是為了分享這個，在[Ruby China](https://ruby-china.org/topics/25977)上看到**如何用最少字元翻轉二元樹**XDDDDD
+我寫這篇就是為了分享這個，在 [Ruby China](https://ruby-china.org/topics/25977) 上看到**如何用最少字元翻轉二元樹**XDDDDD
 
 ```python
 class Solution:

@@ -22,51 +22,51 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 <br>
 
-**Related Topics:**`Array`、`Two Pointers`
+**Related Topics:** `Array`、`Two Pointers`
 
 <br><br>
 
 ## 解題邏輯與實作
-這基本上是 [3Sum](/LeetCode-0015-3Sum/)的變形，唯一不同的不再是回傳陣列，而是回傳最接近的總和。另外數字相同應該可以不用管，所以我先把它拔掉了。
+這基本上是 [3Sum](/LeetCode-0015-3Sum/) 的變形，唯一不同的不再是回傳陣列，而是回傳最接近的總和。另外數字相同應該可以不用管，所以我先把它拔掉了。
 
 ```python
 class Solution:
-  def threeSumClosest(self, nums: List[int], target: int) -> int:
-    assert len(nums) >= 3 , " n >= 3"
+   def threeSumClosest(self, nums: List[int], target: int) -> int:
+      assert len(nums) >= 3 , " n >= 3"
 
-    diff = 2**32
-    ans = 0
+      diff = 2**32
+      ans = 0
 
-    length = len(nums)
-    nums.sort()
-    for first_idx, first in enumerate(nums[:-2]):
-      if first_idx > 0 and first == nums[first_idx-1]:
-        continue
+      length = len(nums)
+      nums.sort()
+      for first_idx, first in enumerate(nums[:-2]):
+         if first_idx > 0 and first == nums[first_idx-1]:
+            continue
 
-      second_idx = first_idx + 1
-      third_idx = length -1	
-      
-      while(second_idx < third_idx): 
-        second = nums[second_idx] 
-        third = nums[third_idx]
+         second_idx = first_idx + 1
+         third_idx = length -1	
+         
+         while(second_idx < third_idx): 
+            second = nums[second_idx] 
+            third = nums[third_idx]
 
-        summation = first + second + third  
-        
-        if abs(target-summation) < diff:
-          diff = abs(target-summation)
-          ans = summation
+            summation = first + second + third   
+            
+            if abs(target-summation) < diff:
+               diff = abs(target-summation)
+               ans = summation
 
-        if summation < target:
-          second_idx += 1
-        elif summation > target:
-          third_idx -= 1
-        else:
-          break
+            if summation < target:
+               second_idx += 1
+            elif summation > target:
+               third_idx -= 1
+            else:
+               break
 
-    return ans
+      return ans
 ```
 
-不過這份程式碼的效能有點差，只跑出了 **176 / 27.85%**  的成績，所以我這邊又加上的一些邊界的判斷進行剪枝，加速迴圈的進行。
+不過這份程式碼的效能有點差，只跑出了 **176 / 27.85%**  的成績，所以我這邊又加上了一些邊界的判斷進行剪枝，加速迴圈的進行。
 
 <br><br> 
 這邊加上了兩個條件
@@ -80,52 +80,52 @@ class Solution:
 
 ```python
 class Solution:
-  def threeSumClosest(self, nums: List[int], target: int) -> int:
-    assert len(nums) >= 3 , " n >= 3"
+   def threeSumClosest(self, nums: List[int], target: int) -> int:
+      assert len(nums) >= 3 , " n >= 3"
 
-    diff = 2**32
-    ans = 0
+      diff = 2**32
+      ans = 0
 
-    length = len(nums)
-    nums.sort()
-    for first_idx, first in enumerate(nums[:-2]):
-      if first_idx > 0 and first == nums[first_idx-1]:
-                continue
+      length = len(nums)
+      nums.sort()
+      for first_idx, first in enumerate(nums[:-2]):
+         if first_idx > 0 and first == nums[first_idx-1]:
+                        continue
 
-      summation = first + nums[first_idx+1] + nums[first_idx+2] 
-      if summation > target:
-        return summation if abs(target- summation) < diff else ans
-
-
-      summation = first + nums[length-2] + nums[length-1] 
-      if summation < target:
-        if abs(target- summation) < diff :
-          diff = abs(target-summation)
-          ans = summation
-        continue
+         summation = first + nums[first_idx+1] + nums[first_idx+2] 
+         if summation > target:
+            return summation if abs(target- summation) < diff else ans
 
 
-      second_idx = first_idx + 1
-      third_idx = length -1	
+         summation = first + nums[length-2] + nums[length-1] 
+         if summation < target:
+            if abs(target- summation) < diff :
+               diff = abs(target-summation)
+               ans = summation
+            continue
 
-      while(second_idx < third_idx): 
-        second =  nums[second_idx] 
-        third = nums[third_idx]
 
-        summation = first + second + third  
+         second_idx = first_idx + 1
+         third_idx = length -1	
 
-        if summation == target:
-          return summation
-        elif summation < target:
-          second_idx += 1
-        else:
-          third_idx -= 1
+         while(second_idx < third_idx): 
+            second =   nums[second_idx] 
+            third = nums[third_idx]
 
-        if abs(target-summation) < diff:
-          diff = abs(target-summation)
-          ans = summation
+            summation = first + second + third   
 
-    return ans
+            if summation == target:
+               return summation
+            elif summation < target:
+               second_idx += 1
+            else:
+               third_idx -= 1
+
+            if abs(target-summation) < diff:
+               diff = abs(target-summation)
+               ans = summation
+
+      return ans
 ```
 改良的效果有點出乎意料，比我想像好很多從  **176 / 27.85%**   提升到  **28 / 100%**  。
 

@@ -11,17 +11,17 @@ tags:
 
 <div class="alert danger"> 
 <div class="head">網誌已過時！</div>
-Yahoo! 財務API服務，該服務已停止並且不再起作用。
-我已經換新的API實作了，改天有空再來寫一篇新的。
+Yahoo! 財務 API 服務，該服務已停止並且不再起作用。<br>
+我已經換新的 API 實作了，改天有空再來寫一篇新的。
 </div>
  
-最近S老大派下拿來練手的是一個匯率換算的 APP，今天總算告一個段落了～稍微紀錄一下免得之後又忘記了
+最近S老大派下拿來練手的是一個匯率換算的 APP，今天總算告一個段落了～稍微記錄一下免得之後又忘記了。
 
 <!--more-->
  
 實作要求有二：
- 1. 使用 Yahoo API
- 2. 透過 HttpURLConnection class 將資料以 Json 型態取下並顯示在手機上
+ 1. 使用 Yahoo API。
+ 2. 透過 HttpURLConnection class 將資料以 Json 型態取下並顯示在手機上。
 
 
 <br><br>
@@ -30,17 +30,17 @@ Yahoo! 財務API服務，該服務已停止並且不再起作用。
 
 ### 1. Yahoo API 提供的 URL 分析
 
-點擊這個的 URL 會得一份 CSV 檔案，文件內容會是新台幣兌美金的匯率  
+點擊這個的 URL 會得一份 CSV 檔案，文件內容會是新臺幣兌美金的匯率。  
 
 [http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=c4l1&s=TWDUSD=x](http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=c4l1&s=TWDUSD=x)  
 
 其中 URL 中
 - **f=c4l1** <br>
-這是只取下**兌換幣別（美金）的代碼與匯率**。若想取得更詳細的資料，可以將 **f=c4l1** 換成 **f=sl1d1t1**，這個分別指定了代碼（含原始幣別跟對換幣別）、匯率、日期、時間這四個欄位，
+這是只取下**兌換幣別（美金）的代碼與匯率**。若想取得更詳細的資料，可以將 **f=c4l1** 換成 **f=sl1d1t1**，這個分別指定了代碼（含原始幣別跟兌換幣別）、匯率、日期、時間這四個欄位。
 <br>
 
 - **s=TWDUSD=x** <br>
-其中 **TWD（新台幣）為原始幣別**、 **USD （美金）為兌換幣別**，可以依需求自行更換，如果要查詢多筆資料則在後在後接續即可，例如：
+其中 **TWD（新臺幣）為原始幣別**、 **USD （美金）為兌換幣別**，可以依需求自行更換，如果要查詢多筆資料則在後在後接續即可，例如：
     ```
     http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=c4l1&s=TWDUSD=x,TWDJPY=x
     ```
@@ -117,29 +117,29 @@ String line = in.readLine();
 <br>
 
 基本上在 JSON 中
-- 大括號 { } 指物件（object
+- 大括號 { } 指物件（object）
 - 中括號 [ ] 指陣列（array）
 - 引號 "" 則是指元素
 
 
-所以像上面這一串所要取出的順序是這一串物件中→ query 物件 → results 物件 → row 陣列，最後在取出每個 index 中所包含的物件，而物件中的元素col0、col1 分別對應到兌換幣別（美金）的代碼與匯率  
+所以像上面這一串所要取出的順序是這一串物件中 → query 物件 → results 物件 → row 陣列，最後在取出每個 index 中所包含的物件，而物件中的元素 col0、col1 分別對應到兌換幣別（美金）的代碼與匯率。  
 
 <br><br>
 
 ## 踩雷
 
-基本上做到上面就完成大概了，只是實際執行的時候，會跳出下面兩個 error
+基本上做到上面就完成大概了，只是實際執行的時候，會跳出下面兩個 error。
 
 ### 1. android.os.NetworkOnMainThreadException
 查了一下，這個是因為我把網路的活動跑在 main Thread 上，貼心過頭 Google 大神告訴你，你的 APP 可能會因為等待網路活動的回應太久，而被系統強制關閉。 
 
-解決的方式只要開新的執行緒就好，不管是用 Thread、 Handle、 AsynTask 都行，別讓它跑在  main Thread 上就行。
+解決的方式只要開新的執行緒就好，不管是用 Thread、 Handle、 AsynTask 都行，別讓它跑在 main Thread 上就行。
  
 <br>
  
 ### 2. android.system.ErrnoException: android_getaddrinfo failed: EACCES (Permission denied)
 
-另一個會收到的是這個，主要是告訴你 uses-permission 忘了開，只要去AndroidManifest.xml 中添加即可  
+另一個會收到的是這個，主要是告訴你 uses-permission 忘了開，只要去 AndroidManifest.xml 中添加即可  
   
 <br><br>
 

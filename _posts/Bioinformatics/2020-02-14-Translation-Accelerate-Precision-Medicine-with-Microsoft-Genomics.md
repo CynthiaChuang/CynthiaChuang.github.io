@@ -15,7 +15,7 @@ tags:
 最近的任務 Survey 到了 Azure 的 Microsoft Genomics，想說看了都看了，所以閒暇之餘練習翻譯他們[白皮書](https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf)。
   
 <div class="alert danger"> 
-<div class="head">糟糕翻譯 慎入</div>
+<div class="head">糟糕翻譯慎入</div>
 有非常明顯的機器翻譯痕跡，還有些部份詞不達意，甚至有些地方還點過度腦補。
 <br>
 服用時請小心！
@@ -45,9 +45,9 @@ Microsoft Azure 雲端運算服務憑藉著可靠性、安全性、全球資料�
     用於偵測變異位點，並添加註釋[^annotations]，以協助變異位點解釋其生物學或臨床上的意義。
 
 
-初級分析階段是在實驗室中使用 Illumina 與 Thermo-Fisher 等公司的專業定序設備完成的。基因體定序儀會結合生化、光學、電子學和影像處理，在大規模平行處理過程中複製並片段化 DNA 最後讀取鹼基對。辨識 DNA 序列中的鹼基對，即鹼基識別(Base calling)，是困難的，並且也會發生識別錯誤。所以除了識別每個位置的 A、C、T、G 鹼基外，定序儀還會產生一份**質量分數**，用以紀錄定序儀在鹼基識別過程中的信心程度。定序人類全部的基因體通常會產生約十億個長度為 100 個字元的 A、C、T、G 字串，即定序片段[^reads]，平均以 30 個副本涵蓋整個基因體[^30x]以實現樣本擴增[^redundancy]。最終，會連同其它的詮釋資料[^metadata]如質量分數，一起產生約 60 GB 的壓縮原始資料以供次級分析進行。
+初級分析階段是在實驗室中使用 Illumina 與 Thermo-Fisher 等公司的專業定序設備完成的。基因體定序儀會結合生化、光學、電子學和影像處理，在大規模平行處理過程中複製並片段化 DNA 最後讀取鹼基對。辨識 DNA 序列中的鹼基對，即鹼基識別(Base calling)，是困難的，並且也會發生識別錯誤。所以除了識別每個位置的 A、C、T、G 鹼基外，定序儀還會產生一份**質量分數**，用以記錄定序儀在鹼基識別過程中的信心程度。定序人類全部的基因體通常會產生約十億個長度為 100 個字元的 A、C、T、G 字串，即定序片段[^reads]，平均以 30 個副本涵蓋整個基因體[^30x]以實現樣本擴增[^redundancy]。最終，會連同其它的詮釋資料[^metadata]如質量分數，一起產生約 60 GB 的壓縮原始資料以供次級分析進行。
 
-次級分析的第一步是將每個定序片段與參考基因體進行比對，考慮到定序過程中的錯誤、樣本與參考基因體之間的差異以及整個基因體存在許多相似區域等原因，會存在將近 30 億個可能位置，此步驟必須從中找到最可能的位置進行比對。第二步會進行變異位點偵測[^variantCalling]，它會從每個定序片段與參考基因體的比對結果中找出相異處，並判斷這是屬於定序錯誤還是樣品 DNA 中的真的產生變異。這些變異可以是簡單的單個核苷酸 A、T、C 或 G 的改變所影響產生的變異，稱為單點突變 (Single Nucleotide Variants，SNVs)，也可以是更複雜的，插入與刪除（insertion/deletion) 與基因重組(Rearrangement)
+次級分析的第一步是將每個定序片段與參考基因體進行比對，考慮到定序過程中的錯誤、樣本與參考基因體之間的差異以及整個基因體存在許多相似區域等原因，會存在將近 30 億個可能位置，此步驟必須從中找到最可能的位置進行比對。第二步會進行變異位點偵測，它會從每個定序片段與參考基因體的比對結果中找出相異處，並判斷這是屬於定序錯誤還是樣品 DNA 中的真的產生變異。這些變異可以是簡單的單個核苷酸 A、T、C 或 G 的改變所影響產生的變異，稱為單點突變 (Single Nucleotide Variants，SNVs)，也可以是更複雜的，插入與刪除（insertion/deletion) 與基因重組(Rearrangement)
    
 
 三級分析更是更為複雜且多樣。此階段使用了各種各樣的工具和資料庫。根據分析目的，可能會添加有關進化演化保守性(Evolutionary Conservation)、蛋白質結構、藥物反應、疾病風險與基因體相互作用...等資訊。資料庫與工具的選擇在很大程度上取決於分析的目的以及臨床醫生或研究人員的總體方法。
@@ -69,7 +69,7 @@ Microsoft Genomics 客戶端（msgen）是 Python 實做的前端用以連接 we
 
 對於要處理的每個基因體樣本，你需要建立個配置文件配置包含用於下載資料、執行 Microsoft Genomics 管線以及上傳結果所需的所有參數：
 
-- 您的 Microsoft Genomics 訂閱金鑰
+- Microsoft Genomics 訂閱金鑰
 - 執行過程與其參數
 - 提供一對 FASTQ 文件、一對壓縮 FASTQ 文件或一對 BAM 格式的輸入檔案在 Azure Storage 中的路徑與相對應 Storage 帳密。
 - 輸出文件寫出到 Azure Storage 時的位置的路徑與相對應 Storage 帳密。
@@ -88,7 +88,7 @@ Microsoft Genomics service 在 Azure 中負責處理基因體資料。整個系�
     用於接收 API 請求，安排工作佇列以及管理 Azure Batch 中跨機器集區的執行。
     
 2. **SNAP執行引擎，SNAP execution engine**  
-    規劃單一樣本於單一機器上的 IO 與 計算的所有流程。
+    規劃單一樣本於單一機器上的 IO 與計算的所有流程。
 
 3. **GATK pipeline 前/後處理步驟的優化**  
     例如：重複標記、定序質量分數重新校正、索引與 BAM 壓縮。
@@ -157,7 +157,7 @@ Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，�
 8. [测序技术的个体化医学检测](http://www.hbccl.cn/HbcclUpload/201504/08/201504081113340408.pdf)。檢自 湖北临床检验中心 (2020-01-30)。
 9. 微笑如酒 (2019-01-13)。[测序了，然后呢（二）｜基因功能注释](http://www.360doc.com/content/19/0131/11/19913717_812332751.shtml)。檢自 微笑如酒-個人圖書館 (2020-01-30)。 
 10. 圖爾思生物科技 (2016-05-30)。[重定序(Re-sequencing)常見專有名詞，你知道幾個呢？](http://toolsbiotech.blog.fc2.com/blog-entry-19.html)。檢自 次世代定序知識櫥窗 (2020-01-30)。
-11. TCoo_阿西 (2019-12-21)。 [Reads在生物基因里是何物？可否形象解释一下？或者给个专业的翻译……](https://zhidao.baidu.com/question/381471696.html)。檢自 百度知道 (2020-01-30)。
+11. TCoo_阿西 (2019-12-21)。 [Reads在生物基因里是何物？可否形象解释一下？或者给个专业的翻译......](https://zhidao.baidu.com/question/381471696.html)。檢自 百度知道 (2020-01-30)。
 12. 勤奋的du芝痲 (2017-11-22)。[基因学中reads指的是什么意思](https://zhidao.baidu.com/question/1434647735364863619.html)。檢自 百度知道 (2020-01-30)。
 13. [次世代定序（NEXT GENERATION SEQUENCING，NGS）](http://ai-ngs.com/NGS.asp)。檢自 AI-NGS.com (2020-01-30)。
 14. [metadata - 詮釋資料](hhttp://terms.naer.edu.tw/detail/1679224/?index=6)。檢自 國家教育研究院 (2020-01-30)。

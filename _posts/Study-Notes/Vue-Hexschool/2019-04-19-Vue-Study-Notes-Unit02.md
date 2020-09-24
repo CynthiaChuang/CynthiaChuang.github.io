@@ -33,15 +33,15 @@ tags:
 {% raw %}
 ```html
 <div id='app'>
-  {{ text }}
+   {{ text }}
 </div>
 
 <script>
 var app = new Vue({
-  el: '#app',
-  data: {
-    text:  '這是一段話'
-  }
+   el: '#app',
+   data: {
+      text:   '這是一段話'
+   }
 })
 </script>
 ```
@@ -59,25 +59,25 @@ el: '.app',    改成  el: '.app',
 {% raw %}
 ```html
 <div id='app'>
-  {{text}}  
-  <div  id='app2'>
-    {{text2}}
-  </div>
+   {{text}}   
+   <div id='app2'>
+      {{text2}}
+   </div>
 </div> 
-  
+   
 <script>
 var app = new Vue({
-  el: '#app',
-  data: {
-    text: '這是一段話'
-  }
+   el: '#app',
+   data: {
+      text: '這是一段話'
+   }
 })
 
 var app2 = new Vue({
-  el: '#app2',
-  data: {
-    text: '這是一段話'
-  }
+   el: '#app2',
+   data: {
+      text: '這是一段話'
+   }
 })
 </script>
 ```
@@ -115,7 +115,7 @@ var app2 = new Vue({
 v-text 和 Mustache 語法起到的效果是一樣的。同樣的，動態修改對象名稱的值時，渲染結果也會有對應的變化。例如：`<div v-text="text"></div>`。
 
 3. **v-html**：  
-`innerHTML` 的概念，會將包含html的字串解析成 `字符實體`。
+`innerHTML` 的概念，會將包含 html 的字串解析成 `字符實體`。
 {% endraw %} 
 
 <br> 
@@ -139,19 +139,19 @@ v-text 和 Mustache 語法起到的效果是一樣的。同樣的，動態修改
 
 v-text 與 v-html 也是屬於 Vue 指令的一種，更多的的指令可以看官方的 [API 文件](https://vuejs.org/v2/api/#Directives)，就我個人經驗 **v-** 開頭幾乎都是。
 
-v-bind 是用來更新 HTML 上的屬性使用的，例如：
+v-bind 是用來更新 html 上的屬性使用的，例如：
 ```html
 <div id="app">
-  <img v-bind:src="imgSrc" v-bind:class="className" alt="">
+   <img v-bind:src="imgSrc" v-bind:class="className" alt="">
 </div>
 
 <script>
 var app = new Vue({
-  el: '#app',
-  data: {
-    imgSrc: 'https://images.unsplash.com/photo-1479568933336-ea01829af8de?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d9926ef56492b20aea8508ed32ec6030&auto=format&fit=crop&w=2250&q=80',
-    className: 'img-fluid'
-  }
+   el: '#app',
+   data: {
+      imgSrc: 'https://images.unsplash.com/photo-1479568933336-ea01829af8de?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d9926ef56492b20aea8508ed32ec6030&auto=format&fit=crop&w=2250&q=80',
+      className: 'img-fluid'
+   }
 })
 </script>
 ```
@@ -167,23 +167,23 @@ v-for 可以基於原始資料多次渲染指定元素，必須搭配特定語�
 {% raw %}
 ```html
 <div id="app">
-  <ui>
-    <li v-for = "(item, idx) in list" 
-      v-if ="item.age < 25"> 
-      {{idx+1}}:{{item.name}} 年齡是 {{item.age}}
-    </li>
-  </ui>
+   <ui>
+      <li v-for = "(item, idx) in list" 
+         v-if ="item.age < 25"> 
+         {{idx+1}}:{{item.name}} 年齡是 {{item.age}}
+      </li>
+   </ui>
 </div> 
 <script>
 var app = new Vue({
-  el: '#app',
-  data: {
-    list: [
-      { name: '小明', age: 16 },
-      { name: '媽媽', age: 38 },
-      { name: '漂亮阿姨', age: 24}
-    ]
-  }
+   el: '#app',
+   data: {
+      list: [
+         { name: '小明', age: 16 },
+         { name: '媽媽', age: 38 },
+         { name: '漂亮阿姨', age: 24}
+      ]
+   }
 })
 </script>
 ```
@@ -203,25 +203,25 @@ var app = new Vue({
 {% raw %}
 ```html
 <div id="app">
-  <input type="text" class="form-control" v-model="text">
-  <button class="btn btn-primary mt-1" v-on:click="reverseText">反轉字串</button>
-  <div class="mt-3">
-    {{ newText }}
-  </div>
+   <input type="text" class="form-control" v-model="text">
+   <button class="btn btn-primary mt-1" v-on:click="reverseText">反轉字串</button>
+   <div class="mt-3">
+      {{ newText }}
+   </div>
 </div>
 
 <script>
 var app = new Vue({
-  el: '#app',
-  data: {
-    text: '',
-    newText: ''
-  },
-  methods: {
-    reverseText() {
-      this.newText = this.text.split('').reverse().join('');
-    }
-  },
+   el: '#app',
+   data: {
+      text: '',
+      newText: ''
+   },
+   methods: {
+      reverseText() {
+         this.newText = this.text.split('').reverse().join('');
+      }
+   },
 });
 </script>
 ```
@@ -234,12 +234,12 @@ var app = new Vue({
 
 ## 預先定義資料狀態的重要性
 
-在 Vue 中若要操作它的資料，必須要<span class='highlighting'>先定義好它的資料結構</span>。若未事先定義，將無法綁定資料內容，會得到該變數 is not define的錯誤。且事前定義資料有利於程式的程式的維護，且有助於提升可讀性。
+在 Vue 中若要操作它的資料，必須要<span class='highlighting'>先定義好它的資料結構</span>。若未事先定義，將無法綁定資料內容，會得到該變數 is not define 的錯誤。且事前定義資料有利於程式的程式的維護，並有助於提升可讀性。
 
 <br>
 不過那天寫程式時被同事提醒，忘了在 data 定義該變數，但卻發現 UI 參考的到，資料也可以進行操作。稍微檢查了一下，發現是因為是在 created 時有進行過一次初始化的動作。
 
-請教老師這是為什麼，助教給了下列的回覆，沒有吃得透測，想說等等上完所有內容再回頭理解這句話：
+請教老師這是為什麼，助教給了下列的回覆，沒有吃得透徹，想說等等上完所有內容再回頭理解這句話：
 
 <div class="alert info">
 <div class="head">助教回覆</div>
@@ -253,22 +253,22 @@ var app = new Vue({
 
 <div class="alert info">
 <div class="head">2019.05.09 更新</div>
-學到後面的時候再回看這個問題，發現我當初的測試有誤，雖然在 UI 中可以顯示第一次 newText 的賦值結果，但之後的 newText 的值得更新都不會反應在 UI 上了。
+學到後面的時候再回看這個問題，發現我當初的測試有誤，雖然在 UI 中可以顯示第一次 newText 的賦值結果，但之後的 newText 的值更新都不會反應在 UI 上了。
 </div>
 
 <br><br>
 
 ## 透過修飾符，讓 v-on 操作更簡單
 
-Vue 的官網中有一句話：<span class='highlighting'>方法只有純粹的數據邏輯，而不是去處理 DOM 事件細節</span>。因此雖然可以在事件處理程序中調用 event 的相關操作，但還是建議使用 <span class='highlighting'>事件修飾符</span> 處理了 DOM 事件的細節，讓事件處理程專注於程式邏輯的撰寫。
+Vue 的官網中有一句話：<span class='highlighting'>方法只有純粹的數據邏輯，而不是去處理 DOM 事件細節</span>。因此雖然可以在事件處理程序中調用 event 的相關操作，但還是建議使用 <span class='highlighting'>事件修飾符</span> 處理了 DOM 事件的細節，讓事件處理專注於程式邏輯的撰寫。
 
 關於 v-on 所提供的事件修飾符詳見[官網文件](https://vuejs.org/v2/guide/events.html#Event-Modifiers)，舉例來說，若想移除元素預設行為可用：
 ```javascript
-v-on:click="reverseText"  
+v-on:click="reverseText"   
 
 reverseText(event) {
-  event.preventDefault();
-  ...
+   event.preventDefault();
+   ...
 }
 ```
 <br>或是直接使用事件修飾符
@@ -279,7 +279,7 @@ v-on:click.prevent="reverseText"
 
 除了事件修飾符外還有[鍵盤修飾符](https://vuejs.org/v2/guide/events.html#Key-Modifiers)與[滑鼠按鈕修飾符](https://vuejs.org/v2/guide/events.html#Mouse-Button-Modifiers) ... 等。
 
-PS. 看影片時發現一個很酷的功能，在 VSCode 中輸入br * 20 ，就會新增 20 個 \<br\> 。
+PS. 看影片時發現一個很酷的功能，在 VSCode 中輸入 br * 20 ，就會新增 20 個 \<br\> 。
  
  
 <br><br>
@@ -288,31 +288,30 @@ PS. 看影片時發現一個很酷的功能，在 VSCode 中輸入br * 20 ，就
 
 ```html
 <div id="app">
-  <div class="box" :class= "{'rotate': isTransform }"></div>
-  <hr>
-  <button class="btn btn-outline-primary"  
-          @click="isTransform = !isTransform">
-      <!-- 選轉物件 -->
-  </button>
+   <div class="box" :class= "{'rotate': isTransform }"></div>
+   <hr>
+   <button class="btn btn-outline-primary"   
+                 @click="isTransform = !isTransform">
+          <!--選轉物件 -->
+   </button>
 </div>
 
 <script>
 var app = new Vue({
-  el: '#app',
-  data: {
-    isTransform:  false
-  },
+   el: '#app',
+   data: {
+       isTransform:   false
+   },
 });
 </script>
 
 <style>
 .box {
-  transition: transform .5s;
+   transition: transform .5s;
 }
 .box.rotate {
-  transform: rotate(45deg)
+   transform: rotate(45deg)
 }
-</style>
 ```
 
 <br> 簡單來說就是
@@ -324,28 +323,28 @@ v-bind:class="{ '要加入的className': '判斷式'}"
 
 ## computed 運算功能
 
-computed 內的 function 內容，<span class='highlighting'>所相依的資料有產生變動時會被觸發，重新運算結果呈現於畫面上</span>。
+computed 內的 function 內容，<span class='highlighting'>所相依的資料有產生變動時會被觸發時，重新運算結果呈現於畫面上</span>。
 
-這邊 reverseText 一旦偵測到相依 this.text 資料有變動，也就是使用者於輸入框輸入文字時，v-model 就會改變 text 的內容，而 text 一旦改變就會觸發 reverseText 重新計算後並顯示於畫面上，因此可以及時到到反轉的結果。 
+這邊 reverseText 一旦偵測到相依 this.text 資料有變動，也就是使用者於輸入框輸入文字時，v-model 就會改變 text 的內容，而 text 一旦改變就會觸發 reverseText 重新計算後並顯示於畫面上，因此可以及時得到反轉的結果。 
 {% raw %}
 ```html
 <div id="app">
-  <input type="text" class="form-control" v-model="text">
-  <button class="btn btn-primary mt-1">反轉字串</button>
-  {{ reverseText }}
+   <input type="text" class="form-control" v-model="text">
+   <button class="btn btn-primary mt-1">反轉字串</button>
+   {{ reverseText }}
 </div>
 
 <script>
 var app = new Vue({
-  el: '#app',
-  data: {
-    text: '',
-  },
-  computed: {
-    reverseText(){
-      return this.text.split('').reverse().join('')
-    }
-  },
+   el: '#app',
+   data: {
+      text: '',
+   },
+   computed: {
+      reverseText(){
+         return this.text.split('').reverse().join('')
+      }
+   },
 });
 </script>
 ```
@@ -378,38 +377,38 @@ PS.1  checkbox-array 中的每個 checkbox 是 v-model  <span class='highlightin
 checkboxArray = []
 
 <div class="form-check">
-<input type="checkbox" class="form-check-input" 
-        id="check2" value="雞"  v-model="checkboxArray">
-<label class="form-check-label" for="check2">雞</label>
+   <input type="checkbox" class="form-check-input" 
+         id="check2" value="雞"  v-model="checkboxArray">
+   <label class="form-check-label" for="check2">雞</label>
 </div>
 
 <div class="form-check">
-<input type="checkbox" class="form-check-input"
-        id="check3" value="豬"  v-model="checkboxArray">
-<label class="form-check-label" for="check3">豬</label>
+   <input type="checkbox" class="form-check-input"
+         id="check3" value="豬"  v-model="checkboxArray">
+   <label class="form-check-label" for="check3">豬</label>
 </div>
 
 <div class="form-check">
-<input type="checkbox" class="form-check-input"
-        id="check4" value="牛"  v-model="checkboxArray">
-<label class="form-check-label" for="check4">牛</label>
+   <input type="checkbox" class="form-check-input"
+         id="check4" value="牛"  v-model="checkboxArray">
+   <label class="form-check-label" for="check4">牛</label>
 </div>
 ```
 <br>
 
 #### 4. **string 與 single radio 的雙向綁定**  
-在 string 與  single radio  相互綁定後，string 紀錄目前選定元素的 value。一樣相同 name 的 radio 必須綁定同一個 string。 
+在 string 與  single radio  相互綁定後，string 記錄目前選定元素的 value。一樣相同 name 的 radio 必須綁定同一個 string。 
 <br>
 
 #### 5. **string 與 selected 的雙向綁定**  
-在 string 與 selected  相互綁定後，string 紀錄目前選定 option 的 value。option 放在首項，表示這是 default 值，若 default 值在引導使用這下拉後，就不提供使用這選取，可以在 option 的屬性中加上 disabled 。<br>
+在 string 與 selected  相互綁定後，string 記錄目前選定 option 的 value。option 放在首項，表示這是 default 值，若 default 值在引導使用者下拉後，就不讓使用者再次選取此選項，可以在 option 的屬性中加上 disabled 。<br>
 ```html
 selected = "" ; 
 <select name="" id="" class="form-control" v-model="selected"> 
-  <option disabled value="">請選擇</option>
-  <option value="小美">小美</option>
-  <option value="小妞">可愛小妞</option>
-  <option value="阿姨">漂亮阿姨</option>
+   <option disabled value="">請選擇</option>
+   <option value="小美">小美</option>
+   <option value="小妞">可愛小妞</option>
+   <option value="阿姨">漂亮阿姨</option>
 </select>
 ```
 
@@ -417,7 +416,7 @@ selected = "" ;
 
 ##  元件基礎概念
 
-每一個 Vue 元件都可以獨立儲存自己的狀態。為避免因使用同一個變數而在造成狀態混淆的狀況，會將它細分成各個元件，在元件獨立控制自己的狀態。
+每一個 Vue 元件都可以獨立儲存自己的狀態。為避免因使用同一個變數而造成狀態混淆的狀況，會將它細分成各個元件，在元件獨立控制自己的狀態。
  
 來一張經典的：
 ![Organizing Components](https://i.imgur.com/1a2KVgb.png)
@@ -426,17 +425,17 @@ selected = "" ;
 <br>定義 component 的方法如下：
 ```javascript
 Vue.component('元件名稱', {
-  data: function () {  
-    return {  
-      count: 0  
-    }  
-  },
-  template: `html 語法`  
+   data: function () {   
+      return {   
+         count: 0   
+      }   
+   },
+   template: `html 語法`  
 ```
 
-<br><br>component 的元件名稱，這個元件名稱會是我們在 HTML 中所使用的元素標籤，按官方 style guide 建議元件名稱盡量採用組合字，不使用一個單字，避免原生元素標籤衝突。
+<br><br>component 的元件名稱，這個元件名稱會是我們在 html 中所使用的元素標籤，按官方 style guide 建議元件名稱盡量採用組合字，不使用一個單字，避免原生元素標籤衝突。
 
-而 component 內部的寫法，其實與一般 Vue 元件寫法是一致的，唯一需要特別住要的是 data 在 component 內部是以 **function** 來回傳物件內容。
+而 component 內部的寫法，其實與一般 Vue 元件寫法是一致的，唯一需要特別注意的是 data 在 component 內部是以 **function** 來回傳物件內容。
 
 
 <br><br>

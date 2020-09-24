@@ -78,10 +78,10 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 	import router from "./router" 
 	 
 	new Vue({
-	  el: '#app',
-	  components: { App },
-	  template: '<App/>',
-	  router,
+	   el: '#app',
+	   components: { App },
+	   template: '<App/>',
+    router,
 	})
 	```
 	<br>我自己在練習的時候在這步驟卡好久，一直得到下面 error
@@ -106,11 +106,11 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 	```javascript
 	// 匯出給 entry 使用
 	export  default  new  VueRouter({
-	  routes:[{
-	    name:"HomePage", // 元件呈現的名稱
-	    path:"/Hello", // 對應的虛擬路徑
-	    component:  Hello  // 對應的元件
-	  }],
+	   routes:[{
+	      name:"HomePage", // 元件呈現的名稱
+	      path:"/Hello", // 對應的虛擬路徑
+	      component:  Hello  // 對應的元件
+	   }],
 	});
 	```
 	<br>
@@ -119,13 +119,13 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     回到 **App.vue** 中更改 template，在 template 中加上 router-view 的標籤（可以順便 mark 掉原先的 HelloWorld 標籤）
     ```html
     <template>
-      <div id="app">
-        <router-view></router-view>
-      </div>
+       <div id="app">
+          <router-view></router-view>
+       </div>
     </template>
     ```
 
-6. **測試**
+6. **測試**  
     在網址中加上 Hello，就可連到所定義的元件。<br>
  
 
@@ -146,9 +146,9 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
     <div class="alert warning">
     <div class="head">注意</div>
-    是 Bootstrap 不是 <a herf="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
-    是 Bootstrap 不是 <a herf="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
-    是 Bootstrap 不是 <a herf="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
+    是 Bootstrap 不是 <a href="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
+    是 Bootstrap 不是 <a href="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
+    是 Bootstrap 不是 <a href="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
     </div>
 
 	<br>
@@ -158,21 +158,21 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     ```html
     <template>
       <div class="hello">
-        <div class="card"  style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">example.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="card"   style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">example.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
-        </div>
       </div>
     </template> 
 
     <script>
     export default {
       data () {
-        return {
-        }
+          return {
+          }
       }
     }
     </script>
@@ -196,20 +196,20 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     // 匯出給 entry 使用
     export default new VueRouter({
       routes: [
-        {
-          name: "HelloWorld", // 元件呈現的名稱
-          path: "/Hello", // 對應的虛擬路徑
-          component: HelloWorld  // 對應的元件
-        },
-        {
-          name: "Page",
-          path: "/Page",
-          component: Page
-        }
+          {
+            name: "HelloWorld", // 元件呈現的名稱
+            path: "/Hello", // 對應的虛擬路徑
+            component: HelloWorld   // 對應的元件
+          },
+          {
+            name: "Page",
+            path: "/Page",
+            component: Page
+          }
       ],
     });
     ```
-	<br>
+	  <br>
     加上後可以試著在 url 上分別加上 /Hello 或 /Page 確定是否能夠順列切換。
     
 	
@@ -373,7 +373,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 這邊以使個人資料卡為例
 
 0. **安裝 vue-axios**  
-    開始前先安裝 vue-axios，這是來進行 ajax 請求的套件，住要是為取得一些隨機個人資料
+    開始前先安裝 vue-axios，這是來進行 ajax 請求的套件，主要是為取得一些隨機個人資料
     ```shell
     $ npm install --save axios vue-axios
     ```
@@ -482,7 +482,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 <br><br> 
 文件中常用的 method 如下：
 - **router.push**  
-跳轉到指定路由，並將此動作加到跳轉紀錄中中。如果使用 stack 來想像這個行為，就是一個 Push into the history stack 的概念。
+跳轉到指定路由，並將此動作加到跳轉紀錄中。如果使用 stack 來想像這個行為，就是一個 Push into the history stack 的概念。
 <br>
 
 - **router.back**  

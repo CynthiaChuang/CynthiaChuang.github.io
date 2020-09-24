@@ -50,19 +50,19 @@ Explanation: The array represents the integer 4321.
 
 ```python
 class Solution:
-  def plusOne(self, digits):
-    carry = 1
-    digit_len = len(digits) 
+   def plusOne(self, digits):
+      carry = 1
+      digit_len = len(digits) 
 
-    for i in range(digit_len-1,0-1,-1) :
-      if carry == 0:
-        break
+      for i in range(digit_len-1,0-1,-1) :
+         if carry == 0:
+            break
 
-      carry += digits[i]
-      digits[i] = carry % 10
-      carry //= 10   
+         carry += digits[i]
+         digits[i] = carry % 10
+         carry //= 10    
 
-    return digits if carry == 0 else [carry] + digits 
+      return digits if carry == 0 else [carry] + digits 
 ```
 
 <br>
@@ -72,31 +72,31 @@ class Solution:
 
 ```python
 class Solution:
-  def plusOne(self, digits):
-    digit_len = len(digits) 
-    for i in range(digit_len-1,0-1,-1) :
-      if digits[i] == 9:
-        digits[i] = 0
-      else:
-        digits[i] += 1
-        break
+   def plusOne(self, digits):
+      digit_len = len(digits) 
+      for i in range(digit_len-1,0-1,-1) :
+         if digits[i] == 9:
+            digits[i] = 0
+         else:
+            digits[i] += 1
+            break
 
-    return [1] + digits if digits[0] == 0 else digits
+      return [1] + digits if digits[0] == 0 else digits
 ```
 <br>
 
 相同想法的另一個實作，但好像也沒比較快，三個程式碼都落在 56ms~60ms 左右。
 ```python
 class Solution:
-  def plusOne(self, digits):
-    digit_len = len(digits) 
-    index = -1
-    for i in range(digit_len-1,0-1,-1) :
-      if digits[i] != 9:
-        index = i
-        break 
+   def plusOne(self, digits):
+      digit_len = len(digits) 
+      index = -1
+      for i in range(digit_len-1,0-1,-1) :
+         if digits[i] != 9:
+            index = i
+            break 
 
-    return [1] + [0] * digit_len if index == -1 else digits[:index] + [digits[index]+1] + [0] * (digit_len-index-1)
+      return [1] + [0] * digit_len if index == -1 else digits[:index] + [digits[index]+1] + [0] * (digit_len-index-1)
 ```
 
 <br><br>

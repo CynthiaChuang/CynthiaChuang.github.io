@@ -10,7 +10,7 @@ tags:
 - DOM 
 --- 
 
-在[04. 進階模板語法介紹](/Vue-Study-Notes-Unit04/)時，遇到 **@click.stop** 與 **@click.capture** 兩個事件修飾符，讓我有點疑惑事件到底是怎麼傳遞的？
+在 [04. 進階模板語法介紹](/Vue-Study-Notes-Unit04/)時，遇到 **@click.stop** 與 **@click.capture** 兩個事件修飾符，讓我有點疑惑事件到底是怎麼傳遞的？
 
 <!--more-->
 <br>
@@ -20,7 +20,7 @@ tags:
 
 <br>
 
-這張是[w3c 介紹 event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)的圖，我覺得超清楚的。
+這張是 [w3c 介紹 event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) 的圖，我覺得超清楚的。
 整體步驟可以分成三個階段：
 
 <br>

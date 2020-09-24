@@ -37,7 +37,7 @@ command 'extension.launch' not found
 
 <br>
 
-是說，關於 Vue 延展模組有發現另一套星星更多的 [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)，他的功能看起來是 vue + Vue 2 Snippets 的合併版，也可以拿來試試看。
+是說，關於 Vue 延展模組有發現另一套星星更多的 [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)，它的功能看起來是 vue + Vue 2 Snippets 的合併版，也可以拿來試試看。
 
 不過因為之前是使用 Android Studio 與 IntelliJ IDEA 這 JetBrains 系列的 IDE，所以我開發環境可能會選擇同系列的 [Webstorm](https://www.jetbrains.com/webstorm/)。
 

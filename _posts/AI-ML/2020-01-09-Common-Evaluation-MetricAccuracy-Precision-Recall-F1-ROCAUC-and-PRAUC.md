@@ -9,7 +9,7 @@ tags:
 - 煉丹常識
 --- 
 
-當評估（Evaluation）一個模型的好壞時，不能總是依靠體感來挑選，因此需要一些量化指標去判定它的好壞。常見的量化指標有 **Accuracy**、**Precision**、**Recall** 與 **F1-Measure**。有時也會使用 **ROC-AUC** 與 **PR-AUC** 還評估在相同資料集下的表現結果
+當評估（Evaluation）一個模型的好壞時，不能總是依靠體感來挑選，因此需要一些量化指標去判定它的好壞。常見的量化指標有 **Accuracy**、**Precision**、**Recall** 與 **F1-Measure**。有時也會使用 **ROC-AUC** 與 **PR-AUC** 還評估在相同資料集下的表現結果。
 
 <!--more-->
 <br> 
@@ -34,16 +34,16 @@ tags:
 <br>
 
 ### **TN，True Negatives**   
-同理，第二個 Negatives 表示此次篩檢將此檢體<span class='highlighting'>未</span>被診出罹患流感的狀況。因此，True Negatives 就是**診斷正確，且此人被診斷為正常**，簡單來說就是，<span class='highlighting'>正常人沒有診出患病</span>。在本情境中共有 36 人。
+同理，第二個 Negatives 表示此次篩檢將此檢體<span class='highlighting'>未</span>被診出罹患流感的狀況。因此，True Negatives 就是**診斷正確，且此人被診斷為正常**，換句話說就是，<span class='highlighting'>正常人沒有診出患病</span>。在本情境中共有 36 人。
 <br>
 
 ### **FP，False Positives**
-其中第一個 False，表示分類錯誤。因此，False Positives 就是**診斷錯誤，且此人被診斷為有病**，簡單來說就是，<span class='highlighting'>正常人被誤診成罹患流感</span>。在本情境中共有 34 人。
+其中第一個 False，表示分類錯誤。因此，False Positives 就是**診斷錯誤，且此人被診斷為有病**，也就是，<span class='highlighting'>正常人被誤診成罹患流感</span>。在本情境中共有 34 人。
 <br>
 
 
 ### **FN，False Negatives**
-**診斷錯誤，且此人被診斷為正常**，簡單來說就是，<span class='highlighting'>病人但並沒有被檢出罹患流感</span>。在本情境中共有 14 人。
+**診斷錯誤，且此人被診斷為正常**，即，<span class='highlighting'>病人但並沒有被檢出罹患流感</span>。在本情境中共有 14 人。
 
 <br><br>
 
@@ -51,7 +51,7 @@ tags:
 <br>
 
 ## Accuracy
-中文譯作<span class='highlighting'>準確率</span>，其定義是：對於給定的測試數據集，分類器正確分類的樣本數與總樣本數之比。白話來說就是，<span class='highlighting'>模型預測正確數量所佔整體的比例</span>。
+中文譯作<span class='highlighting'>準確率</span>，其定義是：對於給定的測試資料集，分類器正確分類的樣本數與總樣本數之比。白話來說就是，<span class='highlighting'>模型預測正確數量所佔整體的比例</span>。
 
 其公式為： 
 
@@ -70,7 +70,7 @@ $$
 
 <br>
 
-雖然這是最常見的衡量指標，但對於<span class='highlighting'>資料正反例不平衡</span>的狀況下，如：肺炎、癌症檢測...等，Accuracy 指標幾乎沒有不具參考價值。
+雖然這是最常見的衡量指標，但對於<span class='highlighting'>資料正反例不平衡</span>的狀況下，如：肺炎、癌症檢測...等，Accuracy 指標幾乎不具參考價值。
 
 以罕見疾病檢測來說，有 100 個樣本，有 99 位是 Negative（未患病），只有 1 個 Positive（患病）。假設現在有一模型，針對所有樣本預測輸出全是 Negative，則此模型的 Accuracy 高達 $\frac{99}{100} = 0.99$。Accuracy 雖高，但這個模型幾乎報廢不能使用的。
 
@@ -126,7 +126,7 @@ $$
 
 <br>
 
-如果你的應用場景更偏向在意是否觸及了所有的 Positive case，例如：廣告投放它更在意的是你是否觸及了所有的潛在客戶（Positive case），寧可錯殺也不放過 XDDDD
+如果你的應用場景更偏向在意是否觸及了所有的 Positive case，例如：廣告投放它更在意的是你是否觸及了所有的潛在客戶（Positive case），寧可錯殺也不放過 XDDD
 
 <br><br>
 
@@ -141,7 +141,7 @@ $$
 $$
 
 <br>
-調整後
+調整後：
 
 $$
 F_1 = \cfrac{2PR}{P+R} = \cfrac{2TP}{2TP+FP+FN} 
@@ -149,7 +149,7 @@ $$
 
 <br>
 
-依照假定場景我們可計算 F1-score  
+依照假定場景我們可計算 F1-score：
 
 $$
 F_1 = \cfrac{2*16}{2*16+34+14} = 0.4
@@ -157,7 +157,7 @@ $$
 
 <br>
 
-F1 中，認為 Precision 與 Recall 的權重是一樣，因此有人將其一般化，列出了這樣的公式
+F1 中，認為 Precision 與 Recall 的權重是一樣，因此有人將其一般化，列出了這樣的公式：
 
 $$
 F_\beta = (\beta^2 + 1) * \cfrac{PR}{\beta^2*P+R}
@@ -166,7 +166,7 @@ $$
 <br><br>
 
 ## ROC-AUC （Area Under Curve） 
-也就是指ROC曲線下方的面積，在說明 AUC 前我們先看看 ROC 空間，這個空間就是以 False Positive Rate 為 X 軸，True Positive Rate 為 Y 軸，其公視定義如下：
+也就是指 ROC 曲線下方的面積，在說明 AUC 前我們先看看 ROC 空間，這個空間就是以 False Positive Rate 為 X 軸，True Positive Rate 為 Y 軸，其公式定義如下：
 
 $$
 FPR = \cfrac{FP}{FP+TN}，  TPR = \cfrac{TP}{TP+FN}
@@ -186,7 +186,7 @@ $$
 
 關於這曲線的好壞與空間中單點一樣，若曲線越靠近左上角表示其效能越好。除了肉眼判斷外，也可以引入 AUC （Area Under Curve，曲線下面積）做為模型優劣的指標。
  
-一般來說，AUC 必在 0~1 之間，<span class='highlighting'>AUC值越大的分類器，正確率越高</span>。
+一般來說，AUC 必在 0~1 之間，<span class='highlighting'>AUC 值越大的分類器，正確率越高</span>。
 - **AUC = 1**  
 若線下面積為 1，代表這是一個完美分類器。當你採用這個模型時，你可以找到至少一個閾值能得出完美預測。不過絕大多數情況下完美分類器是不存在。
 

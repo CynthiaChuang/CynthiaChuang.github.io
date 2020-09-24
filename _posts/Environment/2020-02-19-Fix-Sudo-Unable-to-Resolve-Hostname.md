@@ -25,13 +25,13 @@ sudo: unable to resolve host ubuntu16-x64
 <br><br> 
 
 ## 解決辦法
-其實還滿簡單的，修改 `/etc/hosts` 就好了
+其實還滿簡單的，修改 `/etc/hosts` 就好了：
 
 ```bash
 $ vim /etc/hosts
 ```
 
-<br> 然後把新的 hostname，也就是 ubuntu16-x64 加到檔案中
+<br> 然後把新的 hostname，也就是 ubuntu16-x64 加到檔案中：
 
 ```diff 
 - 127.0.0.1 localhost

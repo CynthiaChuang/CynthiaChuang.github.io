@@ -8,9 +8,9 @@ tags:
 - git
 --- 
 
-紀錄一個壞習慣 XD 我這處女座的個性，大概每隔一陣子就會對專案的 Commit 的歷史紀錄感到不順眼，想要對它大刀闊斧地診整頓一番。
+記錄一個壞習慣 XD 我這處女座的個性，大概每隔一陣子就會對專案的 commit 的歷史紀錄感到不順眼，想要對它大刀闊斧地診整頓一番。
  
-如果只有整理 local 端的 Commit 倒是簡單，只要用`git-rebase`就好，但是如果 Commit 已經上遠端了的呢？
+如果只有整理 local 端的 commit 倒是簡單，只要用`git-rebase`就好，但是如果 commit 已經上遠端了的呢？
  
 **只能來硬的了 XDDD**
 
@@ -49,7 +49,7 @@ $ git push -f origin <rbranch>:<lbranch>
 ### git pull
 對相應`git push`，`pull`當然也有相對應的強制指令：
 ```shell
-git pull --force origin master:master
+$ git pull --force origin master:master
 ```
 
 <br> 不過一開始我並沒下完整分支，所以一直跳出 merge 的訊息。所以我回頭看了文件，發現它寫到：
@@ -62,12 +62,12 @@ git pull --force origin master:master
 <br>
 
 ### git reset
-如過上面一招不行還有另外一招組合技，先取回遠端數據庫的最新歷史記錄
+如過上面一招不行還有另外一招組合技，先取回遠端數據庫的最新歷史紀錄
 ```shell
 $ git fetch --all 
 ```   
 
-然後放棄目前所有檔案與 commit, 還原成遠端版本
+然後放棄目前所有檔案與 commit，還原成遠端版本
 ```shell
 $ git reset --hard origin/master
 ```

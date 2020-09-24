@@ -23,12 +23,12 @@ Given `1->2->3->4`, you should return the list as `2->1->4->3`.
 
 <br>
 
-**Related Topics:**`Linked List`
+**Related Topics:** `Linked List`
 
 <br><br>
 
 ## 解題邏輯與實作
-這題是要以兩個節點為一組翻轉鏈結陣列，難度不高，但很容易把自己搞暈頭轉向，建議先畫圖輔助會比較清楚。
+這題是要以兩個節點為一組翻轉鏈結串列，難度不高，但很容易把自己搞暈頭轉向，建議先畫圖輔助會比較清楚。
 
 <br>
 
@@ -37,23 +37,22 @@ Given `1->2->3->4`, you should return the list as `2->1->4->3`.
 
 ```python
 class Solution:
-  def swapPairs(self, head):
-    dummy_head = ListNode(-1)
-    dummy_head.next = head
-    iteration = dummy_head
+   def swapPairs(self, head):
+      dummy_head = ListNode(-1)
+      dummy_head.next = head
+      iteration = dummy_head
 
-    while iteration.next and iteration.next.next :
-      node1 = iteration.next
-      node2 = iteration.next.next
+      while iteration.next and iteration.next.next :
+         node1 = iteration.next
+         node2 = iteration.next.next
 
-      iteration.next = node2
-      node1.next = node2.next
-      node2.next = node1
+         iteration.next = node2
+         node1.next = node2.next
+         node2.next = node1
 
-      iteration = iteration.next.next
+         iteration = iteration.next.next
 
-    return dummy_head.next
-        
+      return dummy_head.next
 ```
 
 <br>
@@ -63,15 +62,15 @@ class Solution:
 
 ```python
 class Solution:
-  def swapPairs(self, head):
-    if not head or not head.next:
-        return head
+   def swapPairs(self, head):
+      if not head or not head.next:
+            return head
 
-    node = head.next
-    head.next = self.swapPairs(head.next.next)
-    node.next = head
+      node = head.next
+      head.next = self.swapPairs(head.next.next)
+      node.next = head
 
-    return node        
+      return node            
 ```
 
 <br><br>

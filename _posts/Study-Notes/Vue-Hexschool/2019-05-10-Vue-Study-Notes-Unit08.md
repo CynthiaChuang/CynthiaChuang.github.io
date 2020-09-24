@@ -25,24 +25,24 @@ tags:
 
 ## 使用 Extend 避免重複造輪子
 
-這邊跟 Java 一樣中使用 _extends_ 作為其擴充父類別的關鍵字，不過他雖然關鍵字是 _extends_ 有加 _s_ ，但實質是<span class='highlighting'>不支援</span>多重繼承的。
+這邊跟 Java 一樣中使用 _extends_ 作為其擴充父類別的關鍵字，不過它雖然關鍵字是 _extends_ 有加 _s_ ，但實質是<span class='highlighting'>不支援</span>多重繼承的。
  
 實做方式如下，先使用 <span class='highlighting'>Vue.extend</span> 實做要被擴充父類別：
 ```javascript
 // extend  
-var newExtends = Vue.extend({  
-  data: function () {  
-    return {  
-      data: {},  
-      extendData: '這段文字是 extend 得到'
-  }}}),
-  mounted: function () {
-    console.log('Extend:', this)
-  },
-  computed: {
-    getValue(){
-      console.log('getValue Extend:', this)
-  }
+var newExtends = Vue.extend({   
+   data: function () {   
+      return {   
+         data: {},   
+         extendData: '這段文字是 extend 得到'
+   }}}),
+   mounted: function () {
+      console.log('Extend:', this)
+   },
+   computed: {
+      getValue(){
+         console.log('getValue Extend:', this)
+   }
 },
 ```
 
@@ -50,19 +50,19 @@ var newExtends = Vue.extend({
 
 ```javascript
 var childOne = {
-  extends: newExtend,
-  computed: {
-    getValue(){
-      console.log('getValue childOne:', this)
-  }
-}  
+   extends: newExtend,
+   computed: {
+      getValue(){
+         console.log('getValue childOne:', this)
+   }
+}   
 
 var childTwo = {
-  extends: newExtend,
-  template: '#row-component-two',
-  mounted: function () {
-    console.log('childTwo:', this)
-  }
+   extends: newExtend,
+   template: '#row-component-two',
+   mounted: function () {
+      console.log('childTwo:', this)
+   }
 }
 ```
 
@@ -74,7 +74,7 @@ var childTwo = {
 
 <div class="alert info">
 <div class="head">2019.05.10 補充</div>
-在 <a herf="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">mozilla</a> 有看到 super 的用法，但在使用時他一直報錯，懷疑與 Vue 本身有關係，詢問講師後得到的回答是：<b>「沒辦法使用super，這邊 extend 是 VUE API，所以與 ES6 Class Extend 是沒有關聯的」</b>。
+在 <a herf="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">mozilla</a> 有看到 super 的用法，但在使用時它一直報錯，懷疑與 Vue 本身有關係，詢問講師後得到的回答是：<b>「沒辦法使用super，這邊 extend 是 VUE API，所以與 ES6 Class Extend 是沒有關聯的」</b>。
 </div>
 
  
@@ -88,23 +88,23 @@ Vue.js 還有提供 Filter（過濾器）的功能，主要用於處理格式化
 
 ```javascript
 Vue.filter(filterName,function(n){
-  ...
+   ...
 })
 ```
 
 <br> 而局部宣告是在元件中加入 <span class='highlighting'>filters</span> 的物件
 ```javascript
-var  child = {
-  data:function() {
-    return {
-      ...
-    }
-  },
-  filters: {
-    filterName:function (n) {
-      ...
-    },
-  }
+var child = {
+   data:function() {
+      return {
+         ...
+      }
+   },
+   filters: {
+      filterName:function (n) {
+         ...
+      },
+   }
 }
 ```
 
@@ -115,19 +115,19 @@ var  child = {
 {% raw %}
 ```javascript
 <td>
-{{ item.icash | separator | dollarSign}}
+   {{ item.icash | separator | dollarSign}}
 </td>
 
 filters: {
-  dollarSign: function (n) {
-    return `$ ${n}`
-  },
+   dollarSign: function (n) {
+      return `$ ${n}`
+   },
 
-  separator: function (n) {
-    return n.toFixed(2).replace(/./g, function (c, i, a) {
-      return  i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
-    });
-  }
+   separator: function (n) {
+      return n.toFixed(2).replace(/./g, function (c, i, a) {
+         return   i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+      });
+   }
 },
 ```
 {% endraw %}
@@ -142,7 +142,7 @@ filters: {
  
 ![Imgur](https://i.imgur.com/vrR6i8A.png)
 
-<br> 未被綁定在 DOM 的資料，雖然 log 或 tool 上看到的資料內容可能正確，但並不會觸發 UI 的更新
+<br> 未被綁定在 DOM 的資料，雖然 log 或 tool 上看到的資料內容可能正確，但並不會觸發 UI 的更新。
 
 不過 get 與 set 似乎只有物件才有，其他變數型態如 String、boolean 並沒有，似乎沒有其他方式可以觀察。...不過好像也不用觀察...直接看有沒有在 data 裡面就好了 XD
 
@@ -161,32 +161,32 @@ mixins:[object1, object2]
 ```javascript
 // 用物件將元件的功能寫好
 var mixinFilter = { 
-  template: '#row-component',
-  filters: {
-    dollarSign: function(n) {
-      return `$ ${n}`
-    },
-    separator: function (n) {
-      return n.toFixed(2).replace(/./g, function (c, i, a) {
-        return  i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
-      });
-    }
-  },
-        
+   template: '#row-component',
+   filters: {
+      dollarSign: function(n) {
+         return `$ ${n}`
+      },
+      separator: function (n) {
+         return n.toFixed(2).replace(/./g, function (c, i, a) {
+            return   i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+         });
+      }
+   },
+            
 var mixinMounted = {
-  mounted() {
-    console.log('這段是 Mixin 產生')
-  }
+   mounted() {
+      console.log('這段是 Mixin 產生')
+   }
 }
 
 Vue.component('row-component', {
-  props: ['item'],
-  data: function() {
-    return { 
-      aAata: {}, 
-    }
-  },
-  mixins:[mixinFilter, mixinMounted],
+   props: ['item'],
+   data: function() {
+      return { 
+         aAata: {}, 
+      }
+   },
+   mixins:[mixinFilter, mixinMounted],
 );
 ```
 
@@ -198,26 +198,26 @@ Vue.component('row-component', {
 先看一個簡單的範例先
 ```html
 <div id="app">
-  // v-focus = "v-" + directive name
-  <input type="email" v-model="email" v-focus>
-</div>  
+   // v-focus = "v-" + directive name
+   <input type="email" v-model="email" v-focus>
+</div>   
 
 <script>
 // focus 為 directive name， html 中會使用 "v-" + directive name，來呼叫這個指令
 Vue.directive('focus', {
-  // 定義生命週期該執行的動作，function 中可以傳入的參數在文件中 Directive Hook Arguments
-  // 有定義。
-  inserted: function(el) {
-    el.focus()
-  }
+   // 定義生命週期該執行的動作，function 中可以傳入的參數在文件中 Directive Hook Arguments
+   // 有定義。
+   inserted: function(el) {
+      el.focus()
+   }
 })
 </script>
 ```
  
  <br> 通常 function 常用的參數有
  - el：指令所绑定的元素，可以用来直接操作 HTML
- - binding：directive所自帶的一些屬性  
- - vnode：Vue的虛擬節點 
+ - binding：directive 所自帶的一些屬性  
+ - vnode：Vue 的虛擬節點 
 
 這邊需要搭配 console.log 印出 this，才會比較清楚要對這些參數下的哪些元素做操作。
 

@@ -29,7 +29,7 @@ tags:
 
 <br>
 
-由圖中可以發現架構演變的趨勢，是朝著是朝著<span class="highlighting">簡單</span>、<span class="highlighting">便捷</span>與<span class="highlighting">低成本</span>實現<span class="highlighting">商業邏輯</span>（Business Logic）的方向前進。
+由圖中可以發現架構演變的趨勢，是朝著<span class="highlighting">簡單</span>、<span class="highlighting">便捷</span>與<span class="highlighting">低成本</span>實現<span class="highlighting">商業邏輯</span>（Business Logic）的方向前進。
 
 從最開始裸機的配置與開發；接著進入 IaaS 飛速發展，在這期間以 OpenStack 為代表的社區逐漸的成長，發展出許多的雲端平台公司；到之後發展出以 docker 為代表的 containers，而使得 Kubernetes 和 Mesos 等容器調度工具廣為人知。
 
@@ -127,7 +127,7 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 在第一次看到 FaaS 的觀念時，覺得它像是更專注提供某種功能的 PaaS，所以查了一下兩者的比較。
 
 在[維基百科上](https://zh.wikipedia.org/wiki/%E7%84%A1%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%88%E7%AE%97)提到：
-> 以平台即服務（PaaS）為基礎，無伺服器運算提供一個微型的架構 ....
+> 以平台即服務（PaaS）為基礎，無伺服器運算提供一個微型的架構 ...
 
 所以可以推測 FaaS 是 PaaS 的上層，但還不到 SaaS。
 
@@ -165,7 +165,7 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
     想想剛剛水龍頭的例子，就可以理解了。
 
 4. **對開發者友好**  
-    恩...不用管硬體配置，只要寫程式就好。這對我這個討厭配置環境的人來說，真的是非常友好 XDDDD 每次配環境都會在坑裡掙扎超久的 Orz
+    恩...不用管硬體配置，只要寫程式就好。這對我這個討厭配置環境的人來說，真的是非常友好 XDDD 每次配環境都會在坑裡掙扎超久的 Orz
 
 5. **費用用低**  
     在降低成本上包含了兩個方面，即基礎設施的成本和人員（運營/開發）的成本。
@@ -348,7 +348,7 @@ Apache OpenWhisk 的部屬看理來很簡單，只要支援 docker 的設備都�
     <br>
     
     應該會看到 trigger 每 20 秒被觸發，接著執行 action 。  
-    P.S. OOP，我現在才發現 every20 打錯了，不過也來不及了...
+    P.S. Oops，我現在才發現 every20 打錯了，不過也來不及了...
 
 
 <br><br> 

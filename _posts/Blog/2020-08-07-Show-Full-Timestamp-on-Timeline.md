@@ -34,7 +34,7 @@ tags:
 時間軸上的每個物件是定義在 `_includes/_macro/post-collapse.html` 中，找到一個 `post.date`，而後面的 pipleline 所接的就是所顯示的時間格式，把它換成你需要的格式就好。
 
 原本程式碼
-
+{% raw %}
 ```html
 <time class="post-time" itemprop="dateCreated"
       datetime="{{ post.date | date_to_xmlschema }}"
@@ -42,18 +42,17 @@ tags:
         {{ post.date | date: '%m-%d' }}
 </time>
 ```
-
+{% endraw %}
 換成
-
+{% raw %}
 ```html
 <time class="post-time" itemprop="dateCreated"
       datetime="{{ post.date | date_to_xmlschema }}"
       content="{{ post.date | date: site.date_format }}" >
       {{ post.date | date: '%Y.%m.%d' }}
 </time>
-
 ```
-
+{% endraw %}
 <br>
 
 ### Step2、更改字體大小
@@ -83,8 +82,6 @@ tags:
 <div class="head">參考資料</div>
 此次修改請參考此 <a href="https://github.com/CynthiaChuang/CynthiaChuang.github.io/commit/5cd5dc871594a5d7a43b971f1bb2e9b6cf889356">commit</a>
 </div>
-
-
 
 <br><br> 
 

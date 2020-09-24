@@ -46,7 +46,7 @@ img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 <br>
 
 ### 資料型態
-用這方式讀進來的資料型態是 `uint8`，在我的應用中，我會接著喂進 TensorFlow 做 predict，結果會跳出
+用這方式讀進來的資料型態是 `uint8`，在我的應用中，我會接著喂進 TensorFlow 做 predict，結果會跳出：
 
 <div class="alert danger"> 
 <div class="head">TensorFlow TypeError</div>

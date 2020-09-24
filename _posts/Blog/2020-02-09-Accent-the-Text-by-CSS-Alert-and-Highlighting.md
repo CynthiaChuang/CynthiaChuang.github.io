@@ -220,7 +220,7 @@ $highlighting-default              : #e6fcf2;
 #### 2. 本體
 再回到 `\_sass\_custom\custom.scss` 中設定本體。 如果不算 warning 選擇器的部分，程式碼只有四行而已。
 
-其中需要注意的是`white-space`，我之前把它的屬性設成了 `nowrap`，導致當 highlight 較長文句時，該句不會換行，史的文句超出頁面([#5](https://github.com/CynthiaChuang/CynthiaChuang.github.io/issues/5))。
+其中需要注意的是`white-space`，我之前把它的屬性設成了 `nowrap`，導致當 highlight 較長文句時，該句不會換行，使的文句超出頁面([#5](https://github.com/CynthiaChuang/CynthiaChuang.github.io/issues/5))。
 
 ```sass
 .post-body .highlighting {
@@ -257,9 +257,9 @@ $highlighting-default              : #e6fcf2;
 
 
 <div class="alert info">
-<div class="head">HTML \<mark\> Tag</div>
-後來發現用 HTML \<mark\> Tag 來改效果會更好，所以又做了另外一篇：  <br>
--【技能樹栽種】HTML \<mark\> Tag 實做 Highlighting<br>
+<div class="head">HTML <mark\> Tag</div>
+後來發現用 HTML <mark\> Tag 來改效果會更好，所以又做了另外一篇：  <br>
+-【技能樹栽種】HTML <mark\> Tag 實做 Highlighting<br>
 P.S. 網誌完成後再來補連結 <br> 
 </div>
 

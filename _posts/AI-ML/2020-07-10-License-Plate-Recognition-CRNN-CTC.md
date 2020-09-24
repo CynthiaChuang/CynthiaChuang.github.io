@@ -26,7 +26,7 @@ OCR 為光學字元辨識（Optical Character Recognition）的縮寫，主要�
 <center> <img src="https://i.imgur.com/CoO98Wb.png" alt="two stage flow"></center>
 <br>
 
-以超速照相為例為例，會先透過影像掃描器，即攝影機或是照相機拍下超速車輛，再並將圖片送往光學字元辨識軟體，也就是我們的車牌辨識系統，得到超速車輛的車牌，最後再把此車牌號碼送往罰單的系統，開出一張超速罰單，此步驟對應到就是流程中的輸出介面。
+以超速照相為例，會先透過影像掃描器，即攝影機或是照相機拍下超速車輛，再並將圖片送往光學字元辨識軟體，也就是我們的車牌辨識系統，得到超速車輛的車牌，最後再把此車牌號碼送往罰單的系統，開出一張超速罰單，此步驟對應到就是流程中的輸出介面。
 
 雖說整套流程包含三個部份，但在這邊我們只將目光放在光學字元辨識系統上。
 
@@ -95,7 +95,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 
 在此必須提到一件事，根據論文架構表格中，作者將最後後兩層的 pooling size 改為 <span class='highlighting'>1 X 2</span> pooling。有人認為這是為了盡可能不丟失寬度方向的資料，會較適合英文字母的識別（例如非等寬字體中較窄的 i 與 l）。
 
-不過在論文作者的[原始碼](https://github.com/bgshih/crnn/blob/f5d41e3355fc4447f77cd6d5e5777b3a160c93cb/model/crnn_demo/config.lua#L68)中，在最後兩層的 pooling size 並非如論文內紅框處設計，[作者表示](https://github.com/bgshih/crnn/issues/6)論文中的 $1 \times 2$，其實是筆誤 XDDDD 
+不過在論文作者的[原始碼](https://github.com/bgshih/crnn/blob/f5d41e3355fc4447f77cd6d5e5777b3a160c93cb/model/crnn_demo/config.lua#L68)中，在最後兩層的 pooling size 並非如論文內紅框處設計，[作者表示](https://github.com/bgshih/crnn/issues/6)論文中的 $1 \times 2$，其實是筆誤 XDDD 
 <br>
 
 <center> <img src="https://i.imgur.com/ykx0PYw.png" alt=""></center>
@@ -125,7 +125,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 <br>
 
 **Transcription Layer**  
-將從 Recurrent Layers 取的的標籤通過去重複、整合等等動作得到最終的辨識結果。白話的說就是將 RNN 的輸出做 Softmax 後得到各字元。
+將從 Recurrent Layers 取的標籤通過去重複、整合等動作得到最終的辨識結果。白話的說就是將 RNN 的輸出做 Softmax 後得到各字元。
 
 值得一提的是，這邊並不是採用常用的 Softmax cross-entropy loss，而是所謂的 <span class='highlighting'>CTC loss（Connectionist Temporal Classification，聯接時間分類）</span>。
 
@@ -141,7 +141,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 <center class="imgtext">上層輸出的特徵值必須每一行對應到一個字元，才能進行訓練（圖片來源: <a href="https://www.cnblogs.com/skyfsm/p/10335717.html" class="imgtext">冠军的试炼</a>）</center>
 <br>
 
-但在實務上，若要何外標註每個字元位置會比單純標記字元，多出 5 倍以上的時間，耗時又費工。且由於車牌字元長度不定、照片角度不一、字寬不等、字型也有所差別，想讓每一行會剛好對應到一個字元，幾乎不可能。
+但在實務上，若要額外標註每個字元位置會比單純標記字元，多出 5 倍以上的時間，耗時又費工。且由於車牌字元長度不定、照片角度不一、字寬不等、字型也有所差別，想讓每一行會剛好對應到一個字元，幾乎不可能。
 
 但若忽略這個問題，直接對 Recurrent Layers 輸出進行序列分類，可能會出現冗餘資訊，如一個字母被連續識別兩次。遇到這情況又不可直接去除重複的字母，因為原始文字可能本來就存在連續重複字元，如：cook、geek、hello。
 
@@ -149,10 +149,9 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 <center class="imgtext">直接序列分類可能會出現冗餘資訊（圖片來源: <a href="http://fancyerii.github.io/books/ctc/" class="imgtext">李理的博客</a>）</center>
 <br>
 
-幸運的是，這問題在語音辨識中已有所研究。因為每個人語速不一，如何針對每一幀進行對齊與識別，這問題在語音辨識中存又已久。
-，因為每個人語速不一。
+那如何針對每一幀進行對齊與識別？幸運的是，這問題在語音辨識中已有所研究。這是因為每個人語速不一，因此導致語音分幀結果和標籤對齊的挑戰。
 
-論文中引入的是 CTC 來計算 loss，計算概念上類似 beam search，計算每條路徑的機率、並加總相同輸出的機率，最終取最高值最為輸出。
+論文中引入了語音辨識中常用的 CTC 來計算 loss，計算概念上類似 beam search，計算每條路徑的機率、並加總相同輸出的機率，最終取最高值最為輸出。
 
 <div class="alert info"> 
 <div class="head">若對 CTC 的實做理論有興趣的，請詳閱這兩篇</div>

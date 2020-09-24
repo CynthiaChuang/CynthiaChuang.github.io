@@ -26,7 +26,7 @@ tags:
 
 <br>
 
-每個 Vue instance 在被創建時都要經過一系列的初始化過程，在這個過程中 Vue 也會運行  <span class='highlighting'>lifecycle hooks</span> 的函數，提供使者者在不同階段添加自己的操作。
+每個 Vue instance 在被創建時都要經過一系列的初始化過程，在這個過程中 Vue 也會運行  <span class='highlighting'>lifecycle hooks</span> 的函數，提供使用者在不同階段添加自己的操作。
 
 
 上圖中，紅色圓角框的文字，都屬於 Vue 所提供的 lifecycle hooks，呼叫方式如下：
@@ -61,7 +61,7 @@ created：() => console.log(this.a)
 vm.$watch('a'，newValue => this.myMethod())
 ```
 
-因為箭頭函數並沒有 **this** ， **this**  會作為變量一直向查找，直到找到，因此經常導致 
+因為箭頭函數並沒有 **this** ， **this**  會作為變數一直向上找尋，直到找到，因此經常導致 
 ```
 Uncaught TypeError: Cannot read property of undefined
 
@@ -76,7 +76,7 @@ Uncaught TypeError: this.myMethod is not a function`
 ### 各階段介紹
 
 #### **beforeCreate**
-剛完成初始化，此階段資料尚未產生，理論上此階段別再操作資料，但也不是沒辦法啦 → [vue怎么在beforeCreate里获取data](https://segmentfault.com/q/1010000012331476)。不過人家最後也說了...**實際情況中從來沒遇到過需要在組件還沒初始化就去拿 data 的**...
+剛完成初始化，此階段資料尚未產生，理論上此階段別進行操作資料，但也不是沒辦法啦 → [vue怎么在beforeCreate里获取data](https://segmentfault.com/q/1010000012331476)。不過人家最後也說了...**實際情況中從來沒遇到過需要在組件還沒初始化就去拿 data 的**...
 
 #### **created**
 數據觀測後所產生的 hook，從此階段開始才能對資料做操作。

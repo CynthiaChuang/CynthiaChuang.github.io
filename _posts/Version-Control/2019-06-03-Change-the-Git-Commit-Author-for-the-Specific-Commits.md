@@ -8,7 +8,7 @@ tags:
 - git
 --- 
 
-前一陣子，用公司電腦寫自己的code，結果…啊啊啊啊， <span class="highlighting">git 的作者資訊</span>顯示的是公司帳號阿 QAQ
+前一陣子，用公司電腦寫自己的 code，結果...啊啊啊啊， <span class="highlighting">git 的作者資訊</span>顯示的是公司帳號阿 QAQ
   
 原本想說回家後，用 `git cherry-pick` 一個 commit 一個 commit 搬移後，再重新 commit。結果發現...靠！有將近 20 個 commit ，這樣搬會瘋掉的。
 
@@ -20,7 +20,7 @@ tags:
 
 ## 修改 Git commits 的作者資訊
 ### 1. 情境
-假設目前 git log 存在多筆 commit ， A -> B -> c -> d -> e， e 是目前最新的 commit ，也就是 HEAD。
+假設目前 git log 存在多筆 commit ， A → B → c → d → e， e 是目前最新的 commit ，也就是 HEAD。
 其中大小寫字母屬於不同作者提交的 commit。以我的案例來說，大寫是我私人帳號、小寫的則是我公司帳號。<br>
 
 

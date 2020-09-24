@@ -9,14 +9,14 @@ tags:
 - AutoComplete
 --- 
 
-這大概是我有經驗來最神奇的面試經驗了(●▼●;)
-面試時間一個小時，基本上就是**就一個人寫code，另外一個人一直看著寫code..XD**。想當然爾，面試結果想當然是被考官狠狠洗臉了QAQ
+這大概是我有經驗來最神奇的面試經驗了(●▼●;)  
+面試時間一個小時，基本上就是**就一個人寫code，另外一個人一直看著寫code..XD**。想當然爾，面試結果想當然是被考官狠狠洗臉了 QAQ
  
 ![就一個人寫code，另外一個人一直看著寫code](https://i.imgur.com/vM4ReDR.jpg)
 <center class="imgtext">  （圖片來源:   <a href="https://office12.gr/events/practice-a-new-programming-language-hscc/"  class="imgtext">Heraklion Innovation Map</a>）</center>
   
 <br> 
-大概會好一陣忘不了這次面是的考題— ``AutoComplete`` 吧...
+大概會好一陣忘不了這次面是的考題  ``AutoComplete`` 吧...
 
 <!--more-->
 <br>
@@ -48,7 +48,7 @@ tags:
 	3.  重複步驟 1.1 與 1.2，直到字典中所有單字都建立完畢。<br>
 <br>
 
-2. 輪巡字典樹，找出所有符合的清單
+2. 尋訪字典樹，找出所有符合的清單
 	1.   將使用者的輸入做為 prefix，進行搜尋找出目前所在節點
 	2.   使用深度優先，尋訪該節點的所有子樹
 	3.   回傳尋訪結果
@@ -66,59 +66,59 @@ tags:
 ```python
 from collections import defaultdict
 class Node:
-	def __init__(self):
-		## 簡單起見，額外資訊僅記錄詞頻
-		self.childs = defaultdict(Node)
-		self.is_word_end = False
-		self.frequency = 0
+   def __init__(self):
+      ## 簡單起見，額外資訊僅記錄詞頻
+      self.childs = defaultdict(Node)
+      self.is_word_end = False
+      self.frequency = 0
 
 class Trie:
-	def __init__(self):
-		self.root = Node()
+   def __init__(self):
+      self.root = Node()
 
-	def insert(self, word, freq):
-		word = word.lower()
-		
-		current = self.root
-		for char in word:
-			current = current.childs[char]
-		
-		current.is_word_end = True
-		current.frequency = freq
+   def insert(self, word, freq):
+      word = word.lower()
+      
+      current = self.root
+      for char in word:
+         current = current.childs[char]
+      
+      current.is_word_end = True
+      current.frequency = freq
 
-	def complete(self, prefix):
-		prefix = prefix.lower()
-		
-		current = self.root
-		for char in prefix:
-			current = current.childs.get(char)
-			if current == None:
-				return  []
+   def complete(self, prefix):
+      prefix = prefix.lower()
+      
+      current = self.root
+      for char in prefix:
+         current = current.childs.get(char)
+         if current == None:
+            return  []
 
-		results = self.find(current,list(prefix),[])
-		results.sort(key=lambda x: x[1],reverse=True)
-		return  [w for w,f in results]
+      results = self.find(current,list(prefix),[])
+      results.sort(key=lambda x: x[1],reverse=True)
+      return  [w for w,f in results]
 
-	  
-	def find(self, node, prefix, results):
-		if node.is_word_end:
-			results.append(("".join(prefix),node.frequency))
-	 
-		if len(node.childs) <= 0  :
-			return results
+     
+   def find(self, node, prefix, results):
+      if node.is_word_end:
+         results.append(("".join(prefix),node.frequency))
+    
+      if len(node.childs) <= 0  :
+         return results
 
-		for char, next_node in node.childs.items():
-			prefix.append(char)
-			results = self.find(next_node,prefix,results)
-			prefix.pop(-1)
+      for char, next_node in node.childs.items():
+         prefix.append(char)
+         results = self.find(next_node,prefix,results)
+         prefix.pop(-1)
 
-		return results
+      return results
 
 trip = Trie()
 words = [('this',40),  ('that',80),  ('there',70),  ('what',60),  ('where',50),  ('when',11)]
 
 for w,f in words:
-	trip.insert(w,f)
+   trip.insert(w,f)
 
 prefix = 'whe'
 suggest_words = trip.complete(prefix)

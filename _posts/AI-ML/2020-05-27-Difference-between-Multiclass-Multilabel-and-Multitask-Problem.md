@@ -51,7 +51,7 @@ P.S. 是說選 Softmax 也沒關係？因為在二元分類情况下 Softmax 會
 ```
 <br> 
 
-而此訓練任務的 activation 與 loss function 會選擇 <span class='highlighting'>Softmax</span> 與 <span class='highlighting'>categorical cross-entropy</span>。使用 Softmax 原因在於其輸出值是相互關聯，且其機率的總和始終為1，因此一旦提升某一類別的機率時，其他類別的機率必須會相對應減少，以符合每個樣本只能被標記一類別的定義。
+而此訓練任務的 activation 與 loss function 會選擇 <span class='highlighting'>Softmax</span> 與 <span class='highlighting'>categorical cross-entropy</span>。使用 Softmax 原因在於其輸出值是相互關聯，且其機率的總和始終為 1，因此一旦提升某一類別的機率時，其他類別的機率必須會相對應減少，以符合每個樣本只能被標記一類別的定義。
 
 
 

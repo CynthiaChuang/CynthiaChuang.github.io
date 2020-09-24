@@ -34,45 +34,45 @@ All given inputs are in lowercase letters  `a-z`.
 
 <br>
 
-**Related Topics:**`String`
+**Related Topics:** `String`
 
 <br><br>
 
 ## 解題邏輯與實作
-這題是要找出最長共同字首，最直覺的方法是兩兩相比，所以這邊使用了遞迴，把他拆成兩組後兩相比較後，可得到共同字首。
+這題是要找出最長共同字首，最直覺的方法是兩兩相比，所以這邊使用了遞迴，把它拆成兩組後兩相比較後，可得到共同字首。
 
 ```python
 class Solution:
-  def longestCommonPrefix(self, strs: List[str]) -> str:
-    if not strs:
-      return ""
-    strs.sort()	
-    return self.LCP(strs)
+   def longestCommonPrefix(self, strs: List[str]) -> str:
+      if not strs:
+         return ""
+      strs.sort()	
+      return self.LCP(strs)
 
-  def LCP(self, strs): 
-    total_str = len(strs)    
+   def LCP(self, strs): 
+      total_str = len(strs)      
 
-    prefix = ""
-    if total_str == 1 :
-      prefix = strs[0]
+      prefix = ""
+      if total_str == 1 :
+         prefix = strs[0]
 
-    elif total_str == 2 :
-      if len(strs[0]) <  len(strs[1]) :
-        prefix = strs[0]
-        compared = strs[1]
+      elif total_str == 2 :
+         if len(strs[0]) <   len(strs[1]) :
+            prefix = strs[0]
+            compared = strs[1]
+         else:
+            prefix = strs[1]			
+            compared = strs[0]
+
+         while prefix not in compared[:len(prefix)] and len(prefix)>0 :
+            prefix = prefix[:len(prefix)-1]
+
+
       else:
-        prefix = strs[1]			
-        compared = strs[0]
+         half= total_str // 2 
+         prefix = self.LCP([self.LCP(strs[:half]), self.LCP(strs[half:])]) 
 
-      while prefix not in compared[:len(prefix)] and len(prefix)>0 :
-        prefix = prefix[:len(prefix)-1]
-
-
-    else:
-      half= total_str // 2 
-      prefix = self.LCP([self.LCP(strs[:half]), self.LCP(strs[half:])]) 
-
-    return prefix
+      return prefix
 ```
 
 <br><br>
@@ -81,18 +81,18 @@ class Solution:
 
 ```python
 class Solution:
-  def longestCommonPrefix(self, strs: List[str]) -> str:
-    if not strs:
-      return ""
+   def longestCommonPrefix(self, strs: List[str]) -> str:
+      if not strs:
+         return ""
 
-    strs.sort(key = lambda i:len(i),reverse=False) 
+      strs.sort(key = lambda i:len(i),reverse=False) 
 
-    prfix = strs[0]
-    for i, c in enumerate(prfix):
-      for s in strs:
-        if c != s[i] :
-          return prfix[:i]
-    return prfix
+      prfix = strs[0]
+      for i, c in enumerate(prfix):
+         for s in strs:
+            if c != s[i] :
+               return prfix[:i]
+      return prfix
 ```
 
 <br><br>

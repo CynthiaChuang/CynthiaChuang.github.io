@@ -21,7 +21,7 @@ tags:
 <br><br> 
 
 ## 閱讀前自我提問
-1. 期望能了解服裝分類領域中的 Know-how，包含但不限於：常用名詞、定義與方法、挑戰與現存的 benchmark
+1. 期望能了解服裝分類領域中的 Know-how，包含但不限於：常用名詞、定義與方法、挑戰與現存的 benchmark。
 
 <br><br> 
 
@@ -36,7 +36,7 @@ tags:
     - 在服裝風格（Style）分類上準確率有 50.0 %
     - 在服裝屬性（Attribute）分類上準確率有 74.5%
 
-我這邊對於**相似服裝檢索**不感興趣，僅專注在服裝類型（Type）與屬性（Attribute）的分類上。是說，說到 Fashion Classification，可以瞄一下 <span class='highlighting'>Fashion MNIST</span> 資料集。
+我這邊對於**相似服裝檢索**不感興趣，因此僅專注在服裝類型（Type）與屬性（Attribute）的分類上。是說，說到 Fashion Classification，可以瞄一下 <span class='highlighting'>Fashion MNIST</span> 資料集。
 <center> <img src="https://i.imgur.com/oRSeVTN.png" alt=" Fashion MNIST 資料集"></center>
 <center class="imgtext"> Fashion MNIST 資料集（圖片來源: <a href="https://github.com/zalandoresearch/fashion-mnist" class="imgtext">zalandoresearch/ fashion-mnist ｜ github </a>）</center>
 
@@ -63,14 +63,14 @@ tags:
 
 ## 2. Problem Statement
 
-在 [Abstract](#Abstract) 中出現的四種分類 Type、Attribute、Object 與 Style，這邊先進行定義。不過 Type 並沒有標註在圖上，該詞僅用於相似服裝檢索，根據上下文推測指得應該是<span class='highlighting'>服裝的風格</span>，如：淑女、學院、中性、洛麗塔、街頭、簡約...等。
+在 [Abstract](#abstract) 中出現的四種分類 Type、Attribute、Object 與 Style，這邊先進行定義。不過 Type 並沒有標註在圖上，該詞僅用於相似服裝檢索，根據上下文推測指的應該是<span class='highlighting'>服裝的風格</span>，如：淑女、學院、中性、蘿莉塔、街頭、簡約...等。
 
 <center> <img src="https://i.imgur.com/Qg6EdSw.png" alt="分類任務的摘要"></center>
 <center class="imgtext"> 分類任務的摘要（圖片來源: <a href="http://cs231n.stanford.edu/reports/2015/pdfs/BLAO_KJAG_CS231N_FinalPaperFashionClassification.pdf" class="imgtext">論文</a>）</center>
 
 <br> 
 
-這篇的四個子任務主要使用 CNN 來實做，不過他這邊提到 **Fashion classification has more generally consisted of nonCNN approaches**？這讓我感到有點驚訝，剛剛看 Pedestrian Attribute Recognition（PAR），兩者都是在辨識身上的屬性，但在 PAR 中有大半的方法引入 CNN。
+這篇的四個子任務主要使用 CNN 來實做，不過他這邊提到 **Fashion classification has more generally consisted of nonCNN approaches**？這讓我感到有點驚訝，剛剛在看 Pedestrian Attribute Recognition（PAR），兩者都是在辨識身上的屬性，但在 PAR 中有大半的方法引入 CNN。
 
 <div class="alert info"> 
 <div class="head">關於 CNN PAR 的時間軸</div>
@@ -97,7 +97,7 @@ Oops! 我好像搞混時間軸了。這篇是 2015 的文章，另外一篇被�
 
 
 
-服裝屬性分類就是分類服裝<span class='highlighting'>顏色</span>、<span class='highlighting'>圖案</span>、<span class='highlighting'>長度</span>...等屬性的問題。這些屬性有些可以用二進制量來表達，如：有無領帶；但有些無法，如上裝顏色。感覺資料格式有點類似之前在看的 [Multitask classification](/@CynthiaChuang/Difference-between-Multiclass-Multilabel-and-Multitask-Problem#Multitask-classification)。
+服裝屬性分類就是分類服裝<span class='highlighting'>顏色</span>、<span class='highlighting'>圖案</span>、<span class='highlighting'>長度</span>...等屬性的問題。這些屬性有些可以用二進制量來表達，如：有無領帶；但有些無法，如：上裝顏色。感覺資料格式有點類似之前在看的 [Multitask classification](/Difference-between-Multiclass-Multilabel-and-Multitask-Problem#multitask-classification)。
 
 
 這部份網路訓練時採用的資料集是 [Clothing Attribute (CA) Dataset](http://chenlab.ece.cornell.edu/people/Andy/publications/ECCV2012_ClothingAttributes.pdf)，該資料集包含了 1856 張<span class='highlighting'>上身服裝</span>照片，，共有 26 個類別。 

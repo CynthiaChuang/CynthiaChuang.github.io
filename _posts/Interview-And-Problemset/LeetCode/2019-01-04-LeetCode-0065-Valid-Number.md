@@ -29,7 +29,8 @@ Some examples:
 "95a54e53"  =>  False
 ```
 
-<br></br>
+<br><br>
+
 > **Note:**  It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one. However, here is a list of characters that can be in a valid decimal number:
 >
 > -   Numbers 0-9
@@ -41,7 +42,7 @@ Some examples:
 
 <br>
 
-**Related Topics:**`Math`、`String`
+**Related Topics:** `Math`、`String`
 
 <br><br>
 
@@ -59,9 +60,9 @@ Some examples:
 import re
 
 class Solution:
-  def isNumber(self, s):
-    reg = re.compile(r'^\s*[-+]?(\d+\.?|\.\d+)\d*(e[-+]?\d+)?\s*$')
-    return re.match(reg, s) != None
+   def isNumber(self, s):
+      reg = re.compile(r'^\s*[-+]?(\d+\.?|\.\d+)\d*(e[-+]?\d+)?\s*$')
+      return re.match(reg, s) != None
 ```
 
 

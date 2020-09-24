@@ -29,13 +29,13 @@ For k  = 3, you should return:  3->2->1->4->5
 
 <br>
 
-**Related Topics:**`Linked List`
+**Related Topics:** `Linked List`
 
 <br><br>
 
 ## 解題邏輯與實作
 
-這題是 [Swap Nodes in Pairs](/LeetCode-0024-Swap-Nodes-in-Pairs/) 的進階題，不同於上一題是兩兩交換，這一題是以每 k 個節點為一組翻轉鍊結陣列。
+這題是 [Swap Nodes in Pairs](/LeetCode-0024-Swap-Nodes-in-Pairs/) 的進階題，不同於上一題是兩兩交換，這一題是以每 k 個節點為一組翻轉鏈結串列。
  
 不過這題在實做時，卡了我老久，主要是我試圖在一個迴圈把所整個翻轉過程，連同頭尾的指標一併搞定，所以寫起來超級的不順手。後來在[這一篇](https://shenjie1993.gitbooks.io/leetcode-python/025%20Reverse%20Nodes%20in%20k-Group.html)中看到它的整理，這才總算讓我的思考清晰了許多：
 ```
@@ -53,48 +53,48 @@ For k  = 3, you should return:  3->2->1->4->5
 
 ```python
 class Solution(object):
-  def __init__(self,k=None):
-    self.k = None
+   def __init__(self,k=None):
+      self.k = None
 		
-  def reverseKGroup(self, head, k):
-    self.k = k
-    if not head or self.k <= 1:
-      return head
+   def reverseKGroup(self, head, k):
+      self.k = k
+      if not head or self.k <= 1:
+         return head
 
-    dummy_head = ListNode(-1)
-    dummy_head.next = head
-    iteration = dummy_head
+      dummy_head = ListNode(-1)
+      dummy_head.next = head
+      iteration = dummy_head
 
-    while self.hasNextK(iteration):
-      iteration = self.reverseNextK(iteration)
+      while self.hasNextK(iteration):
+         iteration = self.reverseNextK(iteration)
 
-    return dummy_head.next
+      return dummy_head.next
 
-  def hasNextK(self, head):
-    has = True
-    tmp = head
-    for i in range(self.k):
-      if tmp.next is None :
-        has = False
-        break
-      tmp = tmp.next
+   def hasNextK(self, head):
+      has = True
+      tmp = head
+      for i in range(self.k):
+         if tmp.next is None :
+            has = False
+            break
+         tmp = tmp.next
 
-    return has
+      return has
 
-  def reverseNextK(self, head): 
-    pre = head
-    current = head.next
-    group_end = head.next
+   def reverseNextK(self, head): 
+      pre = head
+      current = head.next
+      group_end = head.next
 
-    for i in range(self.k):
-      next_node = current.next
-      current.next = pre
-      pre, current  = current, next_node
+      for i in range(self.k):
+         next_node = current.next
+         current.next = pre
+         pre, current   = current, next_node
 
-    head.next = pre
-    group_end.next = current
+      head.next = pre
+      group_end.next = current
 
-    return group_end
+      return group_end
 ```
 
 

@@ -8,7 +8,7 @@ tags:
 - 煉丹常識
 --- 
 
-在找一些 SOTA model 的時候，看到有人提問　[sota model是什么意思？](http://sofasofa.io/forum_main_post.php?postid=1005670)　這問題好像我剛開始看論文的時候也問過 XDDDD
+在找一些 SOTA model 的時候，看到有人提問 [sota model是什么意思？](http://sofasofa.io/forum_main_post.php?postid=1005670)　這問題好像我剛開始看論文的時候也問過 XDDD
 <!--more-->
 <br><br> 
 

@@ -65,47 +65,47 @@ Output: True
 
 ```python
 class Stack(object):
-  def __init__(self):
-    self.stack=[]
-  def isEmpty(self):
-    return self.stack==[]
-  def push(self,item):
-    self.stack.append(item)
-  def pop(self):
-    if self.isEmpty():
-      raise IndexError
-    return self.stack.pop()
-  def peek(self):
-    return self.stack[-1]
-  def size(self):
-    return len(self.stack)
-    
+   def __init__(self):
+      self.stack=[]
+   def isEmpty(self):
+      return self.stack==[]
+   def push(self,item):
+      self.stack.append(item)
+   def pop(self):
+      if self.isEmpty():
+         raise IndexError
+      return self.stack.pop()
+   def peek(self):
+      return self.stack[-1]
+   def size(self):
+      return len(self.stack)
+      
 class Solution:
-  def isValid(self, s: str) -> bool:
-    match = {")":"(", "}":"{","]":"["}
+   def isValid(self, s: str) -> bool:
+      match = {")":"(", "}":"{","]":"["}
 
-    stack = Stack()
-    legal = True
-        
-    for c in s:
-      if c in match.values():
-        stack.push(c)
-      elif c in match.keys():
-        if stack.isEmpty():
-          legal=False
-          break
-        else:                    
-          if match[c] !=  stack.pop():
-            legal = False
-            break
-      else :
-          legal=False
-          break
-                    
-    if not stack.isEmpty():
-      legal = False
-        
-    return legal
+      stack = Stack()
+      legal = True
+            
+      for c in s:
+         if c in match.values():
+            stack.push(c)
+         elif c in match.keys():
+            if stack.isEmpty():
+               legal=False
+               break
+            else:                              
+               if match[c] !=   stack.pop():
+                  legal = False
+                  break
+         else :
+               legal=False
+               break
+                              
+      if not stack.isEmpty():
+         legal = False
+            
+      return legal
 ```
 
 <br><br>
@@ -113,18 +113,18 @@ class Solution:
 依照題目的輸入限制，進一步優化與精簡程式碼：
 ```python
 class Solution:
-  def isValid(self, s: str) -> bool:
-    stack = []
-    match = {")":"(", "}":"{","]":"["}
+   def isValid(self, s: str) -> bool:
+      stack = []
+      match = {")":"(", "}":"{","]":"["}
 
-    for c in s:
-      if c in match:
-        if stack == [] or match[c] !=  stack.pop():
-          return False
-      else:
-        stack.append(c)
+      for c in s:
+         if c in match:
+            if stack == [] or match[c] !=   stack.pop():
+               return False
+         else:
+            stack.append(c)
 
-    return stack == []
+      return stack == []
 ```
 
 <br><br>

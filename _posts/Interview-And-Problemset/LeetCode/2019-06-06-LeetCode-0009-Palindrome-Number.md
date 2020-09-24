@@ -40,7 +40,7 @@ Coud you solve it without converting the integer to a string?
 
 <br>
 
-**Related Topics:**`Math`
+**Related Topics:** `Math`
 
 <br><br>
 
@@ -49,29 +49,29 @@ Coud you solve it without converting the integer to a string?
 
 <br> 取尾數比較常見使用 mod (%) 即可。但取最高數的頭則比較麻煩，以 20001 為例，想取出最高位數，則必須計算 20001 // 10000 ，而除數 10000，其實可以換成這樣表示 $10^{len(被除數)-1}$ 。但另一個問題是，被除數是 int 沒有 len 這個函數，因此實際計算時改用迴圈計算被除數除以 10 直到小於 10 的次數，即為 len(被除數)-1 的值。
 
-最後比較結束後，會將比較數字（e.g. 20001）去頭尾，並將除數（10000）除以 100 ，因為這個除數是對應比較數字長度，我將比較數字去頭尾，因此除數也必須少兩位。
+最後比較結束後，會將比較數字（e.g. 20001）去頭尾，並將除數（10000）除以 100 ，因為這個除數是對應比較數字長度，我將比較數字去頭尾，因此除數也必須至少有兩位數。
 
 ```python
 class Solution:
-  def isPalindrome(self, x: int) -> bool:
-    if (x < 0) | ((x % 10 == 0 ) & (x != 0)):
-      return False
+   def isPalindrome(self, x: int) -> bool:
+      if (x < 0) | ((x % 10 == 0 ) & (x != 0)):
+         return False
 
-    div = 1
-    while x // div >= 10:
-      div *= 10
+      div = 1
+      while x // div >= 10:
+         div *= 10
 
-    while x > 0:
-      highest = x // div
-      lowest = x % 10
+      while x > 0:
+         highest = x // div
+         lowest = x % 10
 
-      if highest != lowest:
-        return False
+         if highest != lowest:
+            return False
 
-      x = (x % div) // 10
-      div /= 100
+         x = (x % div) // 10
+         div /= 100
 
-    return True		
+      return True		
 ```
 <br> 一開始的判斷是判斷兩種 case：
 1. 是否為負數，若是負數則不可能是回文
@@ -83,20 +83,20 @@ class Solution:
 
 ```python
 class Solution:
-  def isPalindrome(self, x: int) -> bool:
-    if (x < 0) | ((x % 10 == 0 ) & (x != 0)):
-      return False
+   def isPalindrome(self, x: int) -> bool:
+      if (x < 0) | ((x % 10 == 0 ) & (x != 0)):
+         return False
 
-    reverse_x = self.reverse(x)
-    return x == reverse_x
+      reverse_x = self.reverse(x)
+      return x == reverse_x
 
-  def reverse(self, x: int) -> int:
-    res = 0;
-    while x != 0:
-      res = res * 10 + x % 10;
-      x //= 10;
+   def reverse(self, x: int) -> int:
+      res = 0;
+      while x != 0:
+         res = res * 10 + x % 10;
+         x //= 10;
 
-    return res
+      return res
 ```
 <br> 果然效能好很很多，從 **88 ms/60.57 %** 提升到 **56 ms/ 99.10%** 。
 

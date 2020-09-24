@@ -88,7 +88,7 @@ MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條�
 
 ### Network Architecture
 
-在 CV 方面，似乎使用遷移學習試起手勢？在這邊作者挑選了<span class='highlighting'>ResNet-50</span>作為骨幹網路，並將最後一個 flatten 層作為 frame-level 的 feature map，然後將網路分成兩個分支分別進行 multi-task learning。
+在 CV 方面，似乎使用遷移學習是起手勢？在這邊作者挑選了<span class='highlighting'>ResNet-50</span>作為骨幹網路，並將最後一個 flatten 層作為 frame-level 的 feature map，然後將網路分成兩個分支分別進行 multi-task learning。
 
 兩個分支的概念對應到前面所提到的<span class='highlighting'>行為</span>與<span class='highlighting'>身分</span>相關屬性的區份，一個分支會進行動作與姿態的識別，另一個分支會進行行人外觀屬性的識別。
 
@@ -113,7 +113,7 @@ MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條�
 
 在分支中還存在每個屬性判別任務的子分支中，這些子分支是帶有時間注意力機制的小網路。這是為了補全 ResNet-50 無法有效提取時間相關特徵而提出的概念。
 
-在某些幀中，各個屬性可能因為<span class='highlighting'>裁切</span>、<span class='highlighting'>難以識別</span>和<span class='highlighting'>遮擋</span>等現象，無法作為有效的判斷依據。因次不同屬性的識別可能必須依賴不同幀。因此這邊引入時間注意力機制，以產生 `n×1` 的時間注意力向量 $A$ ，用來表示每幀在識別特定屬性中的重要性。然後利用時間注意力向量對每幀的空間特徵進行加權，根據加權後的特徵，得到屬性分類的結果。
+在某些幀中，各個屬性可能因為<span class='highlighting'>裁切</span>、<span class='highlighting'>難以識別</span>和<span class='highlighting'>遮擋</span>等現象，無法作為有效的判斷依據。因此不同屬性的識別可能必須依賴不同幀。因而引入時間注意力機制，以產生 `n×1` 的時間注意力向量 $A$ ，用來表示每幀在識別特定屬性中的重要性。然後利用時間注意力向量對每幀的空間特徵進行加權，根據加權後的特徵，得到屬性分類的結果。
 
 <center> <img src="https://i.imgur.com/8aOEopZ.png" alt="時間注意力機制"></center>
 <center class="imgtext">時間注意力機制（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
@@ -155,7 +155,7 @@ image-based method 這項我實在沒看懂它究竟是出自於哪個方法？
 
 ### Ablation study
 
-這段實驗室用來證明他們引入了**行為與身分屬性分離**與**時間注意力機制**的效能：
+這段實驗是用來證明他們引入了**行為與身分屬性分離**與**時間注意力機制**的效能：
 
 <center> <img src="https://i.imgur.com/Q3VZYec.png" alt="結果比較"></center>
 <center class="imgtext">結果比較（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>

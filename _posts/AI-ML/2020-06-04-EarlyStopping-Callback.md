@@ -15,7 +15,7 @@ tags:
 
 ## Callbacks
 
-在談 EarlyStopping 前，先來談談 Callbacks 本身好了。Callbacks 可用來指定在 train/predict/test 的 epoch 或 batch 的前後進行如存檔特定等操作。
+在談 EarlyStopping 前，先來談談 Callbacks 本身好了。Callbacks 可用來指定在 train/predict/test 的 epoch 或 batch 的前後進行，如存檔特定，等操作。
 
 部份 Callbacks 的操作觸發與否會由監控的數據變化來決定，有的則是會在指定時刻皆會觸發。
 

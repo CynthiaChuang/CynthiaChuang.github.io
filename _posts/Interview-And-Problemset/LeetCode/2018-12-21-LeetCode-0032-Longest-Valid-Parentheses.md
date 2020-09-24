@@ -47,30 +47,30 @@ Explanation: The longest valid parentheses substring is `"()()"`
 ```python
 from pythonds.basic.stack import Stack 
 class Solution:
-  def longestValidParentheses(self, s):
-    max_valid = 0
-    stack = Stack()
-    stack.push((-1,')'))
-    for i, char in enumerate(s) :
-      if char == '(':
-        stack.push((i,char))
-      else:
-        if stack.peek()[1] == ")" :
-          stack.push((i,char))
-        else:
-          stack.pop()
-          max_valid = max(max_valid, i - stack.peek()[0]) 
+   def longestValidParentheses(self, s):
+      max_valid = 0
+      stack = Stack()
+      stack.push((-1,')'))
+      for i, char in enumerate(s) :
+         if char == '(':
+            stack.push((i,char))
+         else:
+            if stack.peek()[1] == ")" :
+               stack.push((i,char))
+            else:
+               stack.pop()
+               max_valid = max(max_valid, i - stack.peek()[0]) 
 
-    return max_valid
+      return max_valid
 ```
 
 <br>
 
 ### Dynamic Programming
-Po 文前打 Tag 時才發現，這題的標籤是 DP 反而沒有 Stack 耶～！
+Po 文前打 Tag 時才發現，這題的標籤是 DP 反而沒有 Stack 耶～！  
 所以...我逃避現實先，之後再來補好了....是說我欠了多少題的 DP 解了？
 
-DP 參考作法 -> [傳送門](https://leetcode.com/articles/longest-valid-parentheses/)
+DP 參考作法 → [傳送門](https://leetcode.com/articles/longest-valid-parentheses/)
 
 
 

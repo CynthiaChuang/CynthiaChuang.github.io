@@ -65,7 +65,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 
 <br>
 
-**Related Topics:**`Math`、`String`
+**Related Topics:** `Math`、`String`
 
 <br><br>
 
@@ -90,18 +90,18 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 ```python
 import re
 class Solution:
-  def myAtoi(self, str: str) -> int:
-    INT_MAX = 2147483647
-    INT_MIN = -2147483648
+   def myAtoi(self, str: str) -> int:
+      INT_MAX = 2147483647
+      INT_MIN = -2147483648
 
-    val_str = re.match('(^[\+\-]?\d+)', str.strip())
-    
-    if not val_str :
-      return 0
-          
-    val = int(val_str.group(0)) 
-    val = min(INT_MAX, max(INT_MIN, val))
-    return val
+      val_str = re.match('(^[\+\-]?\d+)', str.strip())
+      
+      if not val_str :
+         return 0
+               
+      val = int(val_str.group(0)) 
+      val = min(INT_MAX, max(INT_MIN, val))
+      return val
 ```
 
 <br><br>
@@ -109,26 +109,26 @@ class Solution:
 後來又試著不用  Regular Expression 做了一版，並進一步在轉換字串時，不使用 int 來實做
 ```python
 class Solution:
-  def myAtoi(self, str: str) -> int:
-    INT_MAX = 2147483647
-    INT_MIN = -2147483648
+   def myAtoi(self, str: str) -> int:
+      INT_MAX = 2147483647
+      INT_MIN = -2147483648
 
-    str = str.strip()
-    if len(str) == 0 :
-      return 0 
+      str = str.strip()
+      if len(str) == 0 :
+         return 0 
 			
-    sign = 1
-    val = 0
-    if str[0] in ["-", "+"]:
-      sign = 1 if str[0] == '+' else -1	
-      str = str[1:]
+      sign = 1
+      val = 0
+      if str[0] in ["-", "+"]:
+         sign = 1 if str[0] == '+' else -1	
+         str = str[1:]
 
-    for char in str:
-      if not char.isdigit(): 
-        break
-      val = val * 10 + (ord(char) - ord("0"))
+      for char in str:
+         if not char.isdigit(): 
+            break
+         val = val * 10 + (ord(char) - ord("0"))
 
-    return min(INT_MAX, max(INT_MIN, val * sign))
+      return min(INT_MAX, max(INT_MIN, val * sign))
 ```
 <br>執行速度由 **44 ms / 83.62 %** 提升到 **40 ms / 92.02 %** 。
 

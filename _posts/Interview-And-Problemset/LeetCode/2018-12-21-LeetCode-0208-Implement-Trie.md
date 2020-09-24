@@ -36,7 +36,7 @@ trie.search("app");     // returns true
 <br><br>
 
 ## 解題邏輯與實作
-相見恨晚的一題阿，我面試時就是考這題的概念，可惜太久沒寫 Tree ，也沒用 Python 寫過 Tree，面試實作時超級卡的Orz
+相見恨晚的一題阿，我面試時就是考這題的概念，可惜太久沒寫 Tree ，也沒用 Python 寫過 Tree，面試實作時超級卡的 Orz
 
 需要注意的是，在實作與樹不一樣的是，節點本身不需要儲存字元，而是使用節點的連線來代表字母，換句話說在父節點儲存子節點時，使用 mapping (其 Key 值為字元，Value 為子節點)方式來儲存，會比較方便操作。另外節點本需要額外變數紀錄樹否為某一單字結尾。
 
@@ -58,40 +58,40 @@ trie.search("app");     // returns true
 
 
 ```python
-## 用defaultdict單純只是我懶的判斷在dict中key值存不存在
+## 用 defaultdict 單純只是我懶的判斷在 dict 中 key 值存不存在
 from collections import defaultdict
 class Node:
-    def __init__(self):
-        self.childs = defaultdict(Node)
-        self.is_word_end = False        
+   def __init__(self):
+      self.childs = defaultdict(Node)
+      self.is_word_end = False      
 
 class Trie:
-    def __init__(self): 
-        self.root = Node()
+   def __init__(self): 
+      self.root = Node()
 
-    def insert(self, word):
-        current = self.root
-        for char in word:
-            current = current.childs[char]
-        current.is_word_end = True
+   def insert(self, word):
+      current = self.root
+      for char in word:
+         current = current.childs[char]
+      current.is_word_end = True
 
-    def find(self, word):
-        current = self.root
-        is_exist = True
-        for char in word:
-            current = current.childs.get(char)
-            if current == None:
-                is_exist = False
-                break
-        return is_exist, current
-        
-    def search(self, word):
-        is_exist, current = self.find(word)	
-        return is_exist and current.is_word_end 
+   def find(self, word):
+      current = self.root
+      is_exist = True
+      for char in word:
+         current = current.childs.get(char)
+         if current == None:
+            is_exist = False
+            break
+      return is_exist, current
+      
+   def search(self, word):
+      is_exist, current = self.find(word)	
+      return is_exist and current.is_word_end 
 
-    def startsWith(self, prefix):
-        is_exist, _ = self.find(prefix)
-        return is_exist
+   def startsWith(self, prefix):
+      is_exist, _ = self.find(prefix)
+      return is_exist
 ```
 <br><br>
 

@@ -117,17 +117,17 @@ P.S. 這數據因為我刪除過些影像，所以數字可能有出入，但概
 他認為與人類醫生的視覺評估相比，這份資料集中的標籤準確度值得商榷，其標註並不準確或不清楚，且部分標籤屬於醫學上的次要發現，因此認為，無法匹配影像中顯示的疾病，並對這些標籤在臨床上的真實意義與實用性進行討論。
 <br>
 
-但，針對使用NLP挖掘疾病標籤的功效以及導致不良標籤質量的討論，Azure 倒是[認為](https://github.com/Azure/AzureChestXRay#criticisms)，即使標籤很髒，深度學習模型有時仍能夠學到良好的分類性能。
+但，針對使用 NLP 挖掘疾病標籤的功效以及導致不良標籤質量的討論，Azure 倒是[認為](https://github.com/Azure/AzureChestXRay#criticisms)，即使標籤很髒，深度學習模型有時仍能夠學到良好的分類性能。
 <br>
 
 ### Google 裁決標籤
 除了直接使用 ChestX-ray 的標籤進行訓練，有些~~財大氣粗~~的研究單位，會結合公開 ChestX-ray 與其他資料集，進行重新標註與 review。
 
-像是 Google 用來[診斷胸部 X 光片的最新研究](https://ai.googleblog.com/2019/12/developing-deep-learning-models-for.html)，他們不僅引入美國國立衛生研究院的 ChestX-ray14 資料集，還取得自阿波羅醫院的胸部 X 光片，兩資料集總共約60萬張圖片。重新標註成 4 個重要的臨床病徵分類，分別是氣胸、結節和腫塊、骨折以及氣腔陰影。
+像是 Google 用來[診斷胸部 X 光片的最新研究](https://ai.googleblog.com/2019/12/developing-deep-learning-models-for.html)，他們不僅引入美國國立衛生研究院的 ChestX-ray14 資料集，還取得自阿波羅醫院的胸部 X 光片，兩資料集總共約 60 萬張圖片。重新標註成 4 個重要的臨床病徵分類，分別是氣胸、結節和腫塊、骨折以及氣腔陰影。
 
 不過雖說重新標註，但由於整體數量過於龐大，還是無法全由人工手動為影像上標籤，必須借助 NLP 擷取關鍵字為影像添加標籤，最後再藉由放射科醫生人工檢視約 37,000 張圖片，以提高資料集標籤的品質。
 
-會特別提到這件事的原因是，Google 有對社群[開放](https://console.cloud.google.com/storage/browser/gcs-public-data--healthcare-nih-chest-xray-labels/) ChestX-ray14 資料集中所有裁決標籤，以幫助社群對胸部X光片進行研究。
+會特別提到這件事的原因是，Google 有對社群[開放](https://console.cloud.google.com/storage/browser/gcs-public-data--healthcare-nih-chest-xray-labels/) ChestX-ray14 資料集中所有裁決標籤，以幫助社群對胸部 X 光片進行研究。
 
 但數量比不上原先的資料集大小，僅包含 2,412 張圖像的訓練與驗證資料集，還有 1,962 張圖像的測試集，且與原先的資料集一樣存在<span class='highlighting'>資料傾斜</span>的現象需要克服。
 <br>

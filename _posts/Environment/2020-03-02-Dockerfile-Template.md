@@ -9,7 +9,7 @@ tags:
 - Dockerfile
 --- 
 
-為了提供 inference 給其他人使用，所以包了包 image 放上 server 給其他人呼叫。這裡紀錄一下成果，下次可以直接複製貼上就好 XD
+為了提供 inference 給其他人使用，所以包了包 image 放上 server 給其他人呼叫。這裡記錄一下成果，下次可以直接複製貼上就好 XD
 
 <!--more-->
 <br><br> 

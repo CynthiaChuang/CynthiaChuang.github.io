@@ -14,7 +14,7 @@ tags:
 <!--more-->
 <br> 
 其實還滿簡單，
-1. 依序點擊 File -> Settings -> Editor -> TODO 
+1. 依序點擊 File → Settings → Editor → TODO 
 2. 打開 TODO 設定頁面，點擊 Patterns 區域右上方的 + 號
 3. 新增一個 pattern
 

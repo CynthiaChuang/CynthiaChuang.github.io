@@ -9,12 +9,12 @@ tags:
 - 編輯繪圖軟體/網站
 --- 
 
-找到 一款 Linux 的截圖軟體，重點是他有圖片編輯器阿！GIMP 好麻煩，我的要求不多能畫條線、畫個箭頭再加畫個螢光筆就好了。
+找到一款 Linux 的截圖軟體，重點是它有圖片編輯器阿！GIMP 好麻煩，我的要求不多能畫條線、畫個箭頭再加畫個螢光筆就好了。
 
 <!--more-->
 <br><br> 
 
-安裝超級簡單在軟體中心就找的到了
+安裝超級簡單在軟體中心就找的到了！
 
 應用程式 → Ubuntu 軟體中心 → 搜尋 Shutter → 點擊安裝了。
 <center> <img src="https://i.imgur.com/vHvLaNL.jpg" alt="在 Ubuntu 軟體中心中安裝 Shutter"></center>

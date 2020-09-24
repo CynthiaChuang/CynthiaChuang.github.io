@@ -16,7 +16,7 @@ tags:
 <br><br> 
 
 ## 時區檢查
-如果在終端要檢查時間與時區是否正確可以使用：`date` 或是 `timedatectl` 來檢查
+如果在終端要檢查時間與時區是否正確可以使用：`date` 或是 `timedatectl` 來檢查：
 
 ```bash
 $ date
@@ -27,13 +27,13 @@ Fri Feb 21 09:03:40 CST 2020
 
 ```bash
 $ timedatectl
-      Local time: Fri 2020-02-21 09:05:28 CST
-  Universal time: Fri 2020-02-21 01:05:28 UTC
-        RTC time: Fri 2020-02-21 01:05:28
-       Time zone: Asia/Taipei (CST, +0800)
- Network time on: yes
+Local time: Fri 2020-02-21 09:05:28 CST
+Universal time: Fri 2020-02-21 01:05:28 UTC
+RTC time: Fri 2020-02-21 01:05:28
+Time zone: Asia/Taipei (CST, +0800)
+Network time on: yes
 NTP synchronized: yes
- RTC in local TZ: no
+RTC in local TZ: no
 ```
  
 <br> 正常情況下，若設定台北時間（ +8:00 ），時區代碼應該會顯 <span class='highlighting'>CST</span>（Chungyuan Standard Time，中原標準時間），就像上面那樣，但我顯示的卻是 <span class='highlighting'>UTC</span>：
@@ -83,7 +83,7 @@ RUN TZ=Asia/Taipei \
 <br> 但實際在 build 的時候會發現， 跑到 `apt-get install tzdata` 這行時，終端機就會跑出互動訊息要求設定時區。
 
 
-後來[查到](https://askubuntu.com/a/1013396)，如果不想讓 dpkg 出現互動訊息，要設定環境變數
+後來[查到](https://askubuntu.com/a/1013396)，如果不想讓 dpkg 出現互動訊息，要設定環境變數：
 
 ```
 DEBIAN_FRONTEND=noninteractive

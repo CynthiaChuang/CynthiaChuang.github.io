@@ -16,7 +16,7 @@ tags:
 <br><br> 
 
 ## 疑問
-在 Intersection-based Routing For Urban Vehicular Communications With Traffic-light Considerations 一文中所述
+在 Intersection-based Routing For Urban Vehicular Communications With Traffic-light Considerations 一文中所述：
 
 <div class="alert info"> 
 <b>Greedy forwarding together</b> with <b>carry-and-forward</b> is regarded as a promising solution to conquer the problem of frequent disconnection for packet forwarding in VANETs.
@@ -36,9 +36,9 @@ tatic/hanlp.properties <br>
 <br><br>
 
 ### Carry and forward
-當A、B 其中一方有資料要送往對方，卻發現無法直接傳送時，會先把要送給對方的訊息攜帶在自己身上，繼續往前進。當其進到對方的通訊範圍時，再將此訊息傳送給對方。
+當 A、B 其中一方有資料要送往對方，卻發現無法直接傳送時，會先把要送給對方的訊息攜帶在自己身上，繼續往前進。當其進到對方的通訊範圍時，再將此訊息傳送給對方。
 
-不過，要達到以上目的，前提是A、B 兩車事先能透過 GPS 等方式取得對方的位置相關資訊。
+不過，要達到以上目的，前提是 A、B 兩車事先能透過 GPS 等方式取得對方的位置相關資訊。
 
 <br><br> 
 

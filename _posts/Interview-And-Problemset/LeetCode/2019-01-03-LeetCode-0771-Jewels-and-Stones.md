@@ -30,7 +30,7 @@ Output: 0
 <br>
 
 > **Note:**
->-   `S`  and  `J`  will consist of letters and have length at most 50.
+> -   `S`  and  `J`  will consist of letters and have length at most 50.
 > -   The characters in  `J`  are distinct.
 
 <br>
@@ -40,26 +40,26 @@ Output: 0
 <br><br>
 
 ## 解題邏輯與實作
-還滿簡單的一題，連想都不太需要想。題目翻譯成白話文是這樣的，給定兩個字串 J 與 S，檢查字串 S 中有多少字元屬於字串 J。不用管它寶石還石頭啦XD
+還滿簡單的一題，連想都不太需要想。題目翻譯成白話文是這樣的，給定兩個字串 J 與 S，檢查字串 S 中有多少字元屬於字串 J。不用管它寶石還石頭啦 XD
 
 <br>
 
-這題用暴力法逐一搜索就好了，為了改善時間複雜度，我將 J 放入HashSet 中
+這題用暴力法逐一搜索就好了，為了改善時間複雜度，我將 J 放入 HashSet 中
 ```python
 class Solution:
-  def numJewelsInStones(self, J, S):
-    J = set(J) 
-    counter = [c for c in S if c in J]
-    return len(counter)
+   def numJewelsInStones(self, J, S):
+      J = set(J) 
+      counter = [c for c in S if c in J]
+      return len(counter)
 ```
 
 <br>
 
-程式碼可以進一使用map來化簡 
+程式碼可以進一使用 map 來化簡 
 ```python
 class Solution:
-  def numJewelsInStones(self, J, S):
-    return(sum(map(J.count,S)))
+   def numJewelsInStones(self, J, S):
+      return(sum(map(J.count,S)))
 ```
 <br><br>
 

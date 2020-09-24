@@ -36,7 +36,7 @@ tags:
 
 3. 父元件傳遞資料給子元件，使用 <span class='highlighting'>props</span> 傳遞。父元件更新資料時，props 會<span class='highlighting'>即時</span>將資料更新到內層元件。
 
-4. 子元件若要傳遞給父元件，是使用 <span class='highlighting'>emit</span>，必須透過<span class='highlighting'>e觸發事件mit</span>才會能將資料傳到父元件，相對 props 來說它並非即時的。
+4. 子元件若要傳遞給父元件，是使用 <span class='highlighting'>emit</span>，必須透過<span class='highlighting'>觸發事件</span>才會能將資料傳到父元件，相對 props 來說它並非即時的。
 
 5. SPA（single page application）也是透過元件製作。
 
@@ -49,12 +49,12 @@ tags:
 
 ```html
 Vue.component('row-comp', {
-  props: ['person'],
-  template: `<tr>
-    <td>{{ person.name }}</td>
-    <td>{{ person.cash }}</td>
-    <td>{{ person.icash }}</td>
-    </tr>
+   props: ['person'],
+   template: `<tr>
+      <td>{{ person.name }}</td>
+      <td>{{ person.cash }}</td>
+      <td>{{ person.icash }}</td>
+      </tr>
 }	`
 ```
 <br>
@@ -65,16 +65,16 @@ Vue.component('row-comp', {
 
 ```html
 <script type="text/x-template"  id="rowCompTemp">
- <tr>
-  <td>{‌{ person.name }}</td>
-  <td>{‌{ person.cash }}</td>
-  <td>{‌{ person.icash }}</td>
- </tr>
+   <tr>
+    <td>{‌{ person.name }}</td>
+    <td>{‌{ person.cash }}</td>
+    <td>{‌{ person.icash }}</td>
+   </tr>
 </script>
 
 Vue.component('row-comp', {
-  props: ['person'],
-  emplate: '#rowCompTemp'
+   props: ['person'],
+   emplate: '#rowCompTemp'
 })
 ```
 <br>
@@ -83,14 +83,14 @@ Vue.component('row-comp', {
 
 ```html
 <div id="app">
-  <table class="table">
-  <thead></thead>
-    <tbody>
-      <row-comp v-for="(item, key) in data"
+   <table class="table">
+   <thead></thead>
+     <tbody>
+       <row-comp v-for="(item, key) in data"
                 :person="item" 
                 :key="key"></row-comp>
-    </tbody>
-  </table>
+     </tbody>
+   </table>
 </div>
 ```
 <br> 
@@ -108,14 +108,14 @@ Vue.component('row-comp', {
 
 ```html
 <div id="app">
-  <table class="table">
-  <thead></thead>
-    <tbody>
-      <tr v-for="(item, key) in data" 
+   <table class="table">
+   <thead></thead>
+     <tbody>
+       <tr v-for="(item, key) in data" 
           is="row-comp" 
           :person="item" :key="key"></tr>
-    </tbody>
-  </table>
+     </tbody>
+   </table>
 </div>
 ```
 
@@ -129,18 +129,18 @@ Vue.component(tagName, options)
 
 ```javascript
 <script>
-  var child = {
-    props: ['person'],
-    template: '#rowCompTemp'
-  }
+   var child = {
+      props: ['person'],
+      template: '#rowCompTemp'
+   }
 
-  var app = new Vue({
-    el: '#app',
-    data: {...},
-    components:{ 
-      'row-comp':child
-    }
-  });
+   var app = new Vue({
+      el: '#app',
+      data: {...},
+      components:{ 
+         'row-comp':child
+      }
+   });
 </script>
 ```
 
@@ -155,11 +155,11 @@ Vue.component(tagName, options)
 
 ```javascript
 Vue.component(‘counter-component’, {
-  data: function(){
-    return {counter: 0}
-  },
-  template: '#counter-component'
-})  
+   data: function(){
+      return {counter: 0}
+   },
+   template: '#counter-component'
+})   
 ```
 
 
@@ -172,10 +172,10 @@ props 為<span class='highlighting'>父元件向子元件</span>傳遞資料的�
 <photo img-url='圖片 url'></photo>
 
 <script>
-  Vue.component('photo', {
-    props:['imgUrl'],
-    template:  '#photo'
-  })
+   Vue.component('photo', {
+      props:['imgUrl'],
+      template:   '#photo'
+   })
 <script>
 ```
 
@@ -218,17 +218,17 @@ props 為<span class='highlighting'>父元件向子元件</span>傳遞資料的�
 ## props 型別及預設值
 
 ```javascript
-props: {     
-  propA: Number,
-  propB: [String, Number],
-  propC: {
-    type: String,
-    required: true
-  },
-  propD: {
-    type: Number,
-    default: 100
-  }
+props: {       
+   propA: Number,
+   propB: [String, Number],
+   propC: {
+      type: String,
+      required: true
+   },
+   propD: {
+      type: Number,
+      default: 100
+   }
 }
 ```
 <br> 為 props 定義資料型別，可以避免傳入錯誤的資料內容...至少傳錯會跳 Warnning ！？
@@ -244,47 +244,49 @@ props: {
 ## emit 向外層傳遞事件
 資料由子元件向外層傳遞，先看個完整程式碼，程式的目的是透過子元件 button-counter 去累加父元件的變數 cash 。
 
+{% raw %}
 ```html
 <div id="app">
-  <h2>透過 emit 向外傳遞資訊</h2>
-    我透過元件儲值了 {{ cash }} 元
-  <button-counter v-on:increment="incrementTotal"></button-counter>
+   <h2>透過 emit 向外傳遞資訊</h2>
+      我透過元件儲值了 {{ cash }} 元
+   <button-counter v-on:increment="incrementTotal"></button-counter>
 </div>
 
 <script>
-  Vue.component('buttonCounter', {
-    template:  
-      `<div>
-        <button @click="incrementCounter" class="btn btn-outline-primary">
-          增加 {{ counter }} 元
-        </button>
-    <input type="number" class="form-control mt-2" v-model="counter">
-      </div>`,
-    data: function() {
-      return {
-        counter:  1
+   Vue.component('buttonCounter', {
+      template:   
+         `<div>
+            <button @click="incrementCounter" class="btn btn-outline-primary">
+               增加 {{ counter }} 元
+            </button>
+      <input type="number" class="form-control mt-2" v-model="counter">
+         </div>`,
+      data: function() {
+         return {
+            counter:   1
+         }
+      },
+      methods: {
+         incrementCounter(){
+            this.$emit("increment", Number(this.counter))
+         }
       }
-    },
-    methods: {
-      incrementCounter(){
-        this.$emit("increment", Number(this.counter))
-      }
-    }
-  });
+   });
 
-  var app = new Vue({
-    el:  '#app',
-    data: {
-      cash:  300
-    },
-    methods: {
-      incrementTotal(addCount){
-        this.cash += addCount;
+   var app = new Vue({
+      el:   '#app',
+      data: {
+         cash:   300
+      },
+      methods: {
+         incrementTotal(addCount){
+            this.cash += addCount;
+         }
       }
-    }
-  });
+   });
 </script>
 ```
+{% endraw %}
 
 <br> 實作步驟如下：
 
@@ -305,7 +307,7 @@ props: {
     為子元件的 button 加上 click 事件 incrementCounter。而在該方法的實作中，我們會再使用 **emit** 去觸發自訂事件 **increment**
     ```javascript
     incrementCounter(){
-      this.$emit("increment")
+       this.$emit("increment")
     }
     ```
     <br>
@@ -313,7 +315,7 @@ props: {
 
     ```javascript
     incrementCounter(){
-      this.$emit("increment", Number(this.counter))
+       this.$emit("increment", Number(this.counter))
     }
     ```
 
@@ -334,12 +336,12 @@ props: {
 ```html
 <!--在父元件中，直接在子元件標籤內新增內容-->
 <single-slot-component>  
-  <p>使用這段取代原本的 Slot。</p>
+   <p>使用這段取代原本的 Slot。</p>
 </single-slot-component>
 
 <!--子元件中實作-->
 <script type="text/x-template" id="singleSlotComponent">  
-  <slot><p>slot中的預設文字</p></slot>
+   <slot><p>slot中的預設文字</p></slot>
 </script>  
 ```
 
@@ -353,17 +355,17 @@ component 的 template 中設置的預設內容，只有在子元件標籤內沒
 ```html
 <!--在父元件中，直接在子元件標籤內新增內容-->
 <named-slot-component>  
-  <header slot="header">替換的 Header</header>  
-  <footer slot="footer">替換的 Footer</footer>  
+   <header slot="header">替換的 Header</header>  
+   <footer slot="footer">替換的 Footer</footer>  
 </named-slot-component>
 
 <!--子元件中實作-->
 <script type="text/x-template" id="namedSlotComponent">  
-  <slot name="header">這段是預設的文字</slot>  
-  <slot name="footer">這是預設的 Footer</slot>  
+   <slot name="header">這段是預設的文字</slot>  
+   <slot name="footer">這是預設的 Footer</slot>  
 </script>
 ```
-<br> 備註：一个不帶 **name** 的 **\<slot\>**，其 name 的預設值為 default。
+<br> 備註：一個不帶 **name** 的 **\<slot\>**，其 name 的預設值為 default。
 <br>
 
 > 在2.6.0中，Vue 為具名插槽和作用域插槽引入了一個新的統一的語法（即 v-slot 指令）。它取代了slot 和slot-scope 這兩個目前已被廢棄但未被移除且仍在文檔中的特性。 

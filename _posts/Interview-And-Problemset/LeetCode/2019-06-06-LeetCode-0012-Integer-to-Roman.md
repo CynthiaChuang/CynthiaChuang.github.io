@@ -70,29 +70,29 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 <br>
 
-**Related Topics:**`Math`、`String`
+**Related Topics:** `Math`、`String`
 
 <br><br>
 
 ## 解題邏輯與實作
-厄.. 解法有點偷懶，我直接 hard code 一張對照表，把所有可能的組合列出，在依序找出數字中包含的最大的可轉化為羅馬數字的數字。例如1994，最大可轉換數字是 1000 ，減去 1000 後接下來依序可轉換數字為900 、90、4，因此最後輸出 MCMXCIV。
+厄... 解法有點偷懶，我直接 hard code 一張對照表，把所有可能的組合列出，在依序找出數字中包含的最大的可轉化為羅馬數字的數字。例如 1994，最大可轉換數字是 1000 ，減去 1000 後接下來依序可轉換數字為 900 、90、4，因此最後輸出 MCMXCIV。
 
 
 ```python
 class Solution:
-  def intToRoman(self, num: int) -> str:
-    int_to_roman =  ((1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'),
-                     (90, 'XC'), (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'),
-                     (5, 'V'), (4, 'IV'), (1, 'I'))
+   def intToRoman(self, num: int) -> str:
+      int_to_roman =   ((1000, 'M'), (900, 'CM'), (500, 'D'), (400, 'CD'), (100, 'C'),
+                               (90, 'XC'), (50, 'L'), (40, 'XL'), (10, 'X'), (9, 'IX'),
+                               (5, 'V'), (4, 'IV'), (1, 'I'))
 
-    result = ""
-    for k_int, v_roman in int_to_roman:
-      digital = num // k_int
-      if digital > 0 :
-        result += (v_roman * digital)
-        num %= k_int 
+      result = ""
+      for k_int, v_roman in int_to_roman:
+         digital = num // k_int
+         if digital > 0 :
+            result += (v_roman * digital)
+            num %= k_int 
 				
-    return result 
+      return result 
 ```
 <br> P.S. 這應該算是貪婪演算法！？
 
@@ -116,28 +116,28 @@ array
 
 ```python
 class Solution:
-  def intToRoman(self, num: int) -> str:
-    int_to_roman =  ((1000, 'M'), (500, 'D'), (100, 'C'), (50, 'L'), (10, 'X'),
+   def intToRoman(self, num: int) -> str:
+      int_to_roman =   ((1000, 'M'), (500, 'D'), (100, 'C'), (50, 'L'), (10, 'X'),
 						(5, 'V'), (1, 'I'))
 
 		
-    result = ""
-    for i in range(0, len(int_to_roman), 2): 
-      k_int, v_roman = int_to_roman[i] 
-      digital = num // k_int
+      result = ""
+      for i in range(0, len(int_to_roman), 2): 
+         k_int, v_roman = int_to_roman[i] 
+         digital = num // k_int
 
-      if(1 <= digital <= 3):
-        result += (v_roman * digital)
-      elif(digital == 4):
-        result += v_roman + int_to_roman[i-1][1]
-      elif(5 <= digital <= 8):
-        result += int_to_roman[i-1][1] + v_roman * (digital - 5)
-      elif(digital == 9):
-        result += v_roman + int_to_roman[i-2][1]
+         if(1 <= digital <= 3):
+            result += (v_roman * digital)
+         elif(digital == 4):
+            result += v_roman + int_to_roman[i-1][1]
+         elif(5 <= digital <= 8):
+            result += int_to_roman[i-1][1] + v_roman * (digital - 5)
+         elif(digital == 9):
+            result += v_roman + int_to_roman[i-2][1]
 
-      num %= k_int
+         num %= k_int
 		
-    return result
+      return result
 ```
 
 <br><br>

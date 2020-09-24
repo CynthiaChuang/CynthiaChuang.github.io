@@ -70,27 +70,27 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 <br>
 
-**Related Topics:**`Math`、`String`
+**Related Topics:** `Math`、`String`
 
 <br><br>
 
 ## 解題邏輯與實作
-在羅馬數字的規則中有一條，若是左邊的數字比右邊小，則這個位數的值為右減左。其他情況下至需要把羅馬數至相對應的值相加。
+在羅馬數字的規則中有一條，若是左邊的數字比右邊小，則這個位數的值為右減左。其他情況下則需要把羅馬數至相對應的值相加。
 
 但在實做時，若發現當前的數字比前一個數字大，才回頭更新值，會使的程式流程變得相當複雜，因此這邊將傳入的字串反過來操作。
 
 ```python
 class Solution:
-  def romanToInt(self, s: str) -> int:
-    roman_to_int = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1}
-    result = 0
-    pre_int = 0
-    for idx , char in enumerate(s[::-1]):
-      now_int = roman_to_int [char]
-      result += now_int * -1 if now_int < pre_int else now_int
-      pre_int = now_int
+    def romanToInt(self, s: str) -> int:
+         roman_to_int = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1}
+         result = 0
+         pre_int = 0
+         for idx , char in enumerate(s[::-1]):
+             now_int = roman_to_int [char]
+             result += now_int * -1 if now_int < pre_int else now_int
+             pre_int = now_int
 			
-    return result
+         return result
 ```
 
 <br><br>

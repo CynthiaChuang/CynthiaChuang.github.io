@@ -15,7 +15,6 @@ tags:
 <!--more-->
 <br><br> 
 
-
 ## 新增過濾腳本
 
 如果有不想放進去的檔案，只需要可以在專案中的 `.gitignore` 設置忽略規則即可。
@@ -36,8 +35,7 @@ $ touch .gitignore
 $ vim .gitignore
 ```
 
-不過如果你是全新專案或者剛開始編輯 `.gitignore`，可以考慮直接用 [github 的模板](https://github.com/github/gitignore)，至少一些基本的都可以過濾掉，之後再加上你自己的客製化就好。
-
+如果你是全新專案或者剛開始編輯 `.gitignore`，可以考慮直接用 [github 的模板](https://github.com/github/gitignore)，至少一些基本的都可以過濾掉，之後再加上你自己的客製化就好。
 
 例如，我會進一步過濾掉下列文件與資料夾：
 ```
@@ -60,17 +58,14 @@ models/
 
 基本上語法跟 <span class='highlighting'>Regular Expression</span>  相似，不清楚的可以查查[這篇網誌](https://atedev.wordpress.com/2007/11/23/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%A4%BA%E5%BC%8F-regular-expression/)，這篇網誌可是我 Regular Expression 的入門呢，至於我自己的筆記？還躺在草稿夾呢 :joy: 
 
-
 - `#` : 表註解
 - `/` 結尾：表目錄
 - `*` : 表示匹配 0 或多個字元
 - `?` : 表示匹配 0 或 1 個字元
 - `[]` : 表示匹配中括弧內的任一個字元
 - `!` : 則是用來表示追蹤特定文件，有可能在前面規則中過濾掉了某個資料夾，但該資料夾下某個文件卻是要追蹤的，就可以用 `!`
- 
 
 <br><br> 
-
  
 ## 過濾已追蹤的檔案
 
@@ -83,6 +78,13 @@ $ git rm -r --cached .
 ```
 
 然後再 commit 忽略掉這檔案。
+
+
+<div class="alert info"> 
+<div class="head">相關文章</div>
+忽然發現我之前寫過 <a href="/Ignore-Tracked-Files-in-Git/">【Git】取消追蹤檔案 </a>。
+</div>
+
 
 
 <br><br> 

@@ -10,7 +10,7 @@ tags:
 - Keras/TF.Keras
 --- 
 
-其實對於放棄使用 TensorFlow 分散式，擁抱 Horovod 這件事我並沒有太大的感覺，如可以放棄...我還比較想放棄 TF，擁抱 Pytorch（個人嚴重偏愛 Pytorch :heartpulse: )
+其實對於放棄使用 TensorFlow 分散式，擁抱 Horovod 這件事我並沒有太大的感覺，如可以放棄...我還比較想放棄 TF，擁抱 PyTorch（個人嚴重偏愛 PyTorch :heartpulse: )
    
 不過 TF 既不能丟，專案又指定要用 Horovod 做為分散式深度學習框架，還是乖乖來看看怎改吧。
 
@@ -19,7 +19,7 @@ tags:
 
 ## Horovod 使用
 
-這邊就不介紹[如何安裝 Horovod](https://horovod.readthedocs.io/en/stable/install_include.html)了，直接針對訓練的腳本進行改，依照文件可分5個步驟：
+這邊就不介紹[如何安裝 Horovod](https://horovod.readthedocs.io/en/stable/install_include.html)了，直接針對訓練的腳本進行更改，依照[文件](https://horovod.readthedocs.io/en/stable/keras.html)可分 5 個步驟：
 
 ### 1. 初始化
 
@@ -46,7 +46,7 @@ if gpus:
 ```
 <br> 
 
-### 3. 依照分散的的個數縮放 lr 
+### 3. 依照分散的個數縮放 lr 
 
 ```python
 # Build model and dataset
@@ -109,7 +109,7 @@ model.fit(dataset,
 
 ### 切割 epochs 數
 
-若是資料量小、或是沒有合適的切分方法，又或者是想保證整個資料集都被看過，可能就得分 epochs。但缺點是，實際上所有節點執行的 epoch 總和會是節點個數的倍數，換就話說，如果使用者給定 epoch 數不是節點個數倍數，會多 train 就是了....
+若是資料量小、或是沒有合適的切分方法，又或者是想保證整個資料集都被看過，可能就得分 epochs。但缺點是，實際上所有節點執行的 epoch 總和會是節點個數的倍數，換就話說，如果使用者給定 epoch 數不是節點個數倍數，會多 train 就是了...
 
 <br>
 
@@ -132,7 +132,7 @@ dataset = dataset.repeat()
 
 ## Horovod 與 TF2.2 兼容性問題 
 
-紀錄下一個問題，那天在 tensorflow 看到一條 [Horovod 無法進行梯度計算的 issue](https://github.com/tensorflow/tensorflow/issues/35138)，應該在 TF2.2 以上會遇到，不過 Horovod 這邊有用一些 [HACK 方式進行 HotFix](https://github.com/horovod/horovod/issues/1688)，目前看來程式可以照常執行。若之後 TF 有更新在關注這 issue 的狀況。 
+紀錄下一個問題，那天在 TensorFlow 看到一條 [Horovod 無法進行梯度計算的 issue](https://github.com/tensorflow/tensorflow/issues/35138)，應該在 TF2.2 以上會遇到，不過 Horovod 這邊有用一些 [HACK 方式進行 HotFix](https://github.com/horovod/horovod/issues/1688)，目前看來程式可以照常執行。若之後 TF 有更新在關注這 issue 的狀況。 
  
 <br><br> 
 

@@ -11,15 +11,15 @@ tags:
 
 好久沒寫網誌了，Blogger 已經雜草叢生了（笑）
  
-想當初寫網誌最討厭的一見事情就是 — <span class='highlighting'>排版</span>，我花在排版的時間可能比寫文章還久阿，我都直接用 html 寫了，它排版還是可以跑掉....真是的...
+想當初寫網誌最討厭的一件事情就是<span class='highlighting'>排版</span>，我花在排版的時間可能比寫文章還久阿，我都直接用 html 寫了，它排版還是可以跑掉...真是的...
  
-不過這一兩年接觸到了 <span class='highlighting'>[Markdown](https://markdown.tw/)</span>，它的語法可以減少不少排版時間的時間，所以最近又興起了把網誌撿回來的念頭，希望這次可以持之以恆阿...
+不過這一兩年接觸到了 <span class='highlighting'>[Markdown](https://markdown.tw/)</span>，它的語法可以減少不少排版的時間，所以最近又興起了把網誌撿回來的念頭，希望這次可以持之以恆阿...
 
 <!--more-->
 <br> 
 
 ## 在 Blogger 寫 Markdown
-不過想把網誌撿回來好像也沒有那麼的容易？ <span class='highlighting'>因為 Blogger 不支援 Markdown！</span> 還好網路上有不少人有相同需求，感謝他們的分享，我只需要複製貼上就好XD。
+不過想把網誌撿回來好像也沒有那麼的容易？ <span class='highlighting'>因為 Blogger 不支援 Markdown！</span> 還好網路上有不少人有相同需求，感謝他們的分享，我只需要複製貼上就好 XD。
 
 基本上，就是開個外掛，然後把下面的 script 貼上就是了，實際操作可以參考[卡卡米的記憶體](http://etrex.blogspot.com/2017/03/blogger-code-markdown-prettyprint.html)的說明。
 
@@ -64,7 +64,7 @@ tags:
 
 雖然，我還滿喜歡 HackMD 的程式碼有支援行數的顯示，但即使沒有顯示也只是可讀行稍微差了點。若沒有要在 Blogger 貼長篇程式碼，這個缺點應該可以忽略不計。
  
-關於從 StackEdit 發表的Blogger的教學，可參考： [使用 StackEdit 發布至 Blogger ~ Open Jiang](http://jeffyon.blogspot.com/2015/05/stackedit-bloggermd.html)
+關於從 StackEdit 發表的 Blogger的教學，可參考： [使用 StackEdit 發布至 Blogger ~ Open Jiang](http://jeffyon.blogspot.com/2015/05/stackedit-bloggermd.html)
 
 <br><br>
 
@@ -131,9 +131,9 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 <link href='https://miaochien.github.io/MyBlogger/template/css_template/markDown.css?raw=1' rel='stylesheet'  type='text/css'/>
 ```
 
-除了上面幾個必須個別調整的標籤外，其他的標籤我本想直接套用在[這篇文章](http://map-testing.blogspot.com/2016/08/hello_23.html)找到的CSS 文件。但還是因為深色背景的關係，必須修改他的 [CSS 的部份](https://miaochien.github.io/MyBlogger/template/css_template/markDown.css?raw=1)，避免文字被背景吃掉。
+除了上面幾個必須個別調整的標籤外，其他的標籤我本想直接套用在[這篇文章](http://map-testing.blogspot.com/2016/08/hello_23.html)找到的 CSS 文件。但還是因為深色背景的關係，必須修改他的 [CSS 的部份](https://miaochien.github.io/MyBlogger/template/css_template/markDown.css?raw=1)，避免文字被背景吃掉。
 
-但說是修改，其實我只取出所以他的 ``table``、``blockquote`` 兩部份出來改顏色跟文字大小而已，因為我還滿滿意目前這個主體的 CSS 設定的XD
+但說是修改，其實我只取出所以他的 ``table``、``blockquote`` 兩部份出來改顏色跟文字大小而已，因為我還滿滿意目前這個主體的 CSS 設定的 XD
 
 
 <br><br> 

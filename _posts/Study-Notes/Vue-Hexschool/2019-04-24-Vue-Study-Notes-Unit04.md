@@ -57,7 +57,7 @@ tags:
     :class = objectClass
     ```
 
-    <br>若是想在 html 中變更 objectClass 內容，可以使用下列方式來讀取及修改。
+    <br>若是想在 HTML 中變更 objectClass 內容，可以使用下列方式來讀取及修改。
     ```html
     bjectClass.rotate 
     
@@ -83,10 +83,10 @@ tags:
     arrayClass = ['className1','className2']
     ```
 
-    備註：checkbox 與 array 資料的綁定方法，請看第二章節中 [Vue 表單與資料的綁定](/Vue-Study-Notes-Unit02#vue-表單與資料的綁定) 的部份。<br> <br> 
+    備註：checkbox 與 array 資料的綁定方法，請看第二章節中 [Vue 表單與資料的綁定](/Vue-Study-Notes-Unit02#vue-表單與資料的綁定)的部份。<br> <br> 
 
 4. **綁定行內樣式**  
-	注意原先 CSS 是使用中線命名規則，要改成駝峰式，例如 background-color 改成 backgroundColor，在綁定時可以直接插入物件即可 
+	注意原先 CSS 是使用中線命名規則，要改成駝峰式，例如 background-color 改成 backgroundColor，在綁定時可以直接插入物件即可。 
     ```html
     :style="{屬性:"值"}"></div>
     ```
@@ -137,17 +137,17 @@ tags:
 
     // 情境二：透過索引來取代資料  
     this.arrayData[0] = {  
-      name: '阿強',  
-      age: 99
+       name: '阿強',
+       age: 99
     }
     ```
 
-    <br>因為 <span class='highlighting'>Vue 無法探測普通的新增屬性</span>，它必須用於向響應式對像上添加新屬性，因此必須使用 <span class='highlighting'>Vue.set</span> 強制將資料寫入視圖中：
+    <br>因為 <span class='highlighting'>Vue 無法探測普通的新增屬性</span>，它必須用於向響應式對象上添加新屬性，因此必須使用 <span class='highlighting'>Vue.set</span> 強制將資料寫入視圖中：
 
     ```javascript
     Vue.set(this.arrayData, 0, {
-      name: '阿強',
-      age: 99
+       name: '阿強',
+       age: 99
     })
     ```
 
@@ -157,7 +157,7 @@ tags:
     {% raw %}
     ```html
     <li v-for=”item in 輸入數字範圍"> 
-      {{ item }}  
+       {{ item }}  
     </li>
     ```
     {% endraw %}
@@ -167,10 +167,10 @@ tags:
     {% raw %}
     ```html
     <table class=”table”>
-      <template v-for=”item in arrayData”> 
-        <tr><td>{{item.name}}</td></tr>  
-        <tr><td>{{item.age}}</td></tr>  
-      <template>
+       <template v-for=”item in arrayData”> 
+          <tr><td>{{item.name}}</td></tr>  
+          <tr><td>{{item.age}}</td></tr>  
+       <template>
     </table>
     ```
     {% endraw %}
@@ -192,13 +192,13 @@ tags:
     Vue 會盡可能高效地渲染元素，通常會重複用已有元素而不是從頭開始渲染。但這種方式可能會造成了畫面資訊不一致的狀況，舉例來說：
     ```html
     <template v-if="loginType === 'username'">
-      <label>Username</label>
-      <input class="form-control" placeholder="Enter your username">
+       <label>Username</label>
+       <input class="form-control" placeholder="Enter your username">
     </template>
 
     <template v-else>
-      <label>Email</label>
-      <input class="form-control" placeholder="Enter your email address">
+       <label>Email</label>
+       <input class="form-control" placeholder="Enter your email address">
     </template>
     ```
 	

@@ -92,7 +92,7 @@ $ vue init webpack my-project
 <br>
 
 ### **dist**
-這個資料夾是在下 ``npm run dev``  時，他會將所有網頁的的內容打包壓縮而產生的。這個 build 完的檔案必須要運行 http server  才可以正常運作，直接打開資料夾中的 index.html 是不能運作的。
+這個資料夾是在下 ``npm run dev``  時，它會將所有網頁的的內容打包壓縮而產生的。這個 build 完的檔案必須要運行 http server  才可以正常運作，直接打開資料夾中的 index.html 是不能運作的。
 <br>
 
 ###  **index.html**

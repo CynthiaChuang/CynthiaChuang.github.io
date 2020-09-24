@@ -26,7 +26,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 <br>
 
-**Related Topics:**`Array`
+**Related Topics:** `Array`
 
 <br><br>
 
@@ -69,7 +69,7 @@ class Solution:
     if descending_idx == -1 :
         nums.reverse()
         return 
-	 
+    
     swap_idx = self.find_more_than(nums,descending_idx)
 
     nums[swap_idx], nums[descending_idx]= nums[descending_idx], nums[swap_idx]
@@ -84,10 +84,10 @@ class Solution:
             result_indx = i
 
     return result_indx
-		
+      
 
   def find_descending_point(self, nums):
-    point = -1	
+    point = -1   
     for i in range(len(nums)-1,0,-1):
         if nums[i] > nums[i-1] :
             point =  i-1

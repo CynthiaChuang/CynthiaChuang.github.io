@@ -9,7 +9,7 @@ tags:
 - Python
 --- 
  
-紀錄一下我自己的 Python Coding Style，最近都照專案原本的 Coding Style 在寫，還是紀錄一下，免得忘了自己 Style。
+記錄一下我自己的 Python Coding Style，最近都照專案原本的 Coding Style 在寫，還是記錄一下，免得忘了自己 Style。
 
 <!--more-->
 <center> <img src="https://i.imgur.com/8znl2lD.jpg" alt="Coding Style"></center>
@@ -19,7 +19,7 @@ tags:
 ## Code Lay-out
 
 ### 縮排
-Python 是用縮排來表示區塊的語言，所以最好保持縮排的一致，不然很容易出問題...。尤其是跟 Windows 的開發者 co-work 的時候，這個狀況更明顯，為了避免無謂的 `diff` ，依照 [code style](https://www.python.org/dev/peps/pep-0008/#code-lay-out) 建議改用<span class='highlighting'>用 4 個空格取代 Tab</span>，這個可以直接在 IDE 設定，把 Tab 的輸出換成 4 個空格即可。
+Python 是用縮排來表示區塊的語言，所以最好保持縮排的一致，不然很容易出問題...。尤其是跟 Windows 的開發者 co-work 的時候，這個狀況更明顯，為了避免無謂的 `diff` ，依照 [code style](https://www.python.org/dev/peps/pep-0008/#code-lay-out) 建議改用 <span class='highlighting'>4 個空格取代 Tab</span>，這個可以直接在 IDE 設定，把 Tab 的輸出換成 4 個空格即可。
 
 <br>
 
@@ -73,7 +73,7 @@ income = (gross_wages
 <br>
 
 ### Imports
-<span class='highlighting'>一行一個 Import 模組</span>，除非是用 Wildcard imports 才會把從同一個模組 imports 出來的東西寫在同一行
+<span class='highlighting'>一行一個 Import 模組</span>，除非是用 Wildcard imports 才會把從同一個模組 imports 出來的東西寫在同一行。
 
 
 ```python
@@ -87,10 +87,8 @@ from subprocess import Popen, PIPE
 - 第三方函式庫
 - 本地端檔案及函式庫引用
 
-不過我通常第一跟第二項都混成一群了....
+不過我通常第一跟第二項都混成一群了...
 
- 
-<br> 另外 guideline 推薦 import 本地端檔案及函式庫用相對路徑...，不過我個人習慣是用<span class='highlighting'>相對路徑</span>。
 
 <br><br>  
 
@@ -117,7 +115,7 @@ Yes: spam(1)
 No:  spam (1)
 ```
 
-<br> 參數名稱與值之間也不用留白
+<br> 參數名稱與值之間也不用留白。
 ```python
 Yes:
 def complex(real, imag=0.0):
@@ -174,8 +172,7 @@ c = (a+b) * (a-b)
     
     ```python
     No: import *
-    Yes: import _protected_func
-    
+    Yes: import _protected_func    
     ```
 
 2. `__foo__`:  
