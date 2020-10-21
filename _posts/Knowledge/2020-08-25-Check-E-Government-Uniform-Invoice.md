@@ -12,7 +12,7 @@ tags:
 - 臺灣ID驗證系列
 --- 
 
-前一陣子寫了篇[身分證字號驗證](/CheckUID)後，結果同學後來貼了個有趣[專案](https://github.com/enylin/taiwan-id-validator)，包含了許多驗證項目。看起來還頗感興趣，決定試著了解一下。    
+前一陣子寫了篇[身分證字號驗證](/CheckUID)後，結果同學後來貼了個有趣[專案](https://github.com/enylin/taiwan-id-validator)，包含了許多驗證項目。看起來還頗為有趣，決定試著了解一下。    
 先挑常用的**電子發票條碼**練身手。
 
 <!--more-->
@@ -88,8 +88,8 @@ public static boolean verifyEgui(String egui){
         boolean isLetter = (charactercode>=65 && charactercode<=90);
         
         if (!(isSymbol || isNumber || isLetter)) {
-        System.out.println("Fail, 包含不合法字元"); 
-        return false;
+            System.out.println("Fail, 包含不合法字元"); 
+            return false;
         } 
     }
     return true;

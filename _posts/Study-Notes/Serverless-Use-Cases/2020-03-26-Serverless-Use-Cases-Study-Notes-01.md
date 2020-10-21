@@ -189,7 +189,7 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 事件驅動顧名思義就是，事件來了才去做一件事情。以講師給的流程圖為例：  
 當事件源觸動觸發器後進入系統，然後在系統中通過規則的匹配去決定要觸發的動作，最終產生所需的結果。通常來說，輸入與輸出的的資料格式都是 Json。
 
-<center> <img src="https://i.imgur.com/a5Wgs5M.png" alt="apache OpenWhisk理念"></center>
+<center> <img src="https://i.imgur.com/a5Wgs5M.png?1" alt="apache OpenWhisk理念"></center>
 <center class="imgtext">Apache OpenWhisk理念（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
 <br>
 
