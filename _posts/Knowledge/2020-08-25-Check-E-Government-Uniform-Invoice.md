@@ -12,7 +12,7 @@ tags:
 - 臺灣ID驗證系列
 --- 
 
-前一陣子寫了篇[身分證字號驗證](/CheckUID)後，結果同學後來貼了個有趣[專案](https://github.com/enylin/taiwan-id-validator)，包含了許多驗證項目。看起來還頗為有趣，決定試著了解一下。    
+前一陣子寫了篇[身分證字號驗證](/CheckUID)後，結果同學分享了個有趣[專案](https://github.com/enylin/taiwan-id-validator)，包含了許多驗證項目。看起來還頗為有趣，決定試著了解一下。    
 先挑常用的**電子發票條碼**練身手。
 
 <!--more-->
