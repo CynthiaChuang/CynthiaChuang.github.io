@@ -62,7 +62,7 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 
 |預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|
-|$\not <$|<||$>$|>||$=$|=|
+|$<$|<||$>$|>||$=$|=|
 |$\le$|\le||$\ge$|\ge||$\equiv$|\equiv|
 |$\ll$|\ll||$\gg$|\gg||$\doteq$|\doteq|
 |$\prec$|\prec||$\succ$|\succ||$\sim$|\sim|
