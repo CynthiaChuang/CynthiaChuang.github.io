@@ -10,7 +10,6 @@ tags:
 - 編碼規則
 - regexp
 - 臺灣ID驗證系列
-- regexp
 --- 
 
 ID 驗證系列第三彈！     
