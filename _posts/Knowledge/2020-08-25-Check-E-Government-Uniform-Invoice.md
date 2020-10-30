@@ -50,8 +50,8 @@ class Main {
     public static void main(String[] args) {
         int len_args = args.length ; 
         if (len_args <= 0){
-        System.out.println("Give me an EGUI(Electronic Government Uniform Invoice)!!!!");
-        return;
+            System.out.println("Give me an EGUI(Electronic Government Uniform Invoice)!!!!");
+            return;
         }
 
         String egui = args[0]; 
