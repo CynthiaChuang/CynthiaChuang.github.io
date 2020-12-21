@@ -2,7 +2,6 @@
 title: 【清單】1000 場現場球賽記錄
 date: 2020-09-24 22:57
 is_modified: false
-disqus: cynthiahackmd
 categories:
 - Life-and-Entertainment
 tags:

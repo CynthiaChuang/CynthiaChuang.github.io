@@ -2,7 +2,6 @@
 title: 【Survey】Ensembl 與 VEP
 date: 2020-02-21
 is_modified: false
-disqus: cynthiahackmd
 categories:
 - Bioinformatics
 - Toolkit

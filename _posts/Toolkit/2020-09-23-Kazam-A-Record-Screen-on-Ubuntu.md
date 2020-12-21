@@ -2,7 +2,6 @@
 title: Ubuntu 上的螢幕錄影工具 - Kazam
 date: 2020-11-12 21:01
 is_modified: false
-disqus: cynthiahackmd
 categories:
 - Toolkit
 tags:

@@ -2,7 +2,6 @@
 title: 【臺灣ID驗證系列】電子發票手機條碼驗證
 date: 2020-09-24 23:13
 is_modified: false
-disqus: cynthiahackmd
 categories:
 - Knowledge
 tags:

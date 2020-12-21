@@ -2,7 +2,6 @@
 title: 【PyTorch】用 Horovod 進行分散式訓練
 date: 2020-12-21 21:39
 is_modified: false
-disqus: cynthiahackmd
 categories:
 - AI/ML 
 - Computer-Language/Framework 
