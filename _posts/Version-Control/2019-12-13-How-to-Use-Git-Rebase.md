@@ -8,7 +8,7 @@ tags:
 - git
 --- 
 
-紀錄一下自己常用的 `git-rebase` 的用法。
+記錄一下自己常用的 `git-rebase` 的用法。
 
 <!--more-->
 <br><br> 

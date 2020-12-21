@@ -371,7 +371,7 @@ var app = new Vue({
 
 PS.1  checkbox-array 中的每個 checkbox 是 v-model  <span class='highlighting'>同一個</span> array。
 
-另外實作時 checkbox-array 的 value 務必設定，且必須為<span class='highlighting'>唯一值</span>，否則 value 無法寫入儲值的 array，且複選顯示會出問題。可以事前準備一個 array 紀錄 value ，整個 checkbox-array 使用 v-for 來來改寫。
+另外實作時 checkbox-array 的 value 務必設定，且必須為<span class='highlighting'>唯一值</span>，否則 value 無法寫入儲值的 array，且複選顯示會出問題。可以事前準備一個 array 記錄 value ，整個 checkbox-array 使用 v-for 來來改寫。
 
 ```html
 checkboxArray = []

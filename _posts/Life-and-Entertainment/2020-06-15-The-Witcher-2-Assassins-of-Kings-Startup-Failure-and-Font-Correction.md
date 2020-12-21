@@ -11,7 +11,7 @@ tags:
 不務正業的一篇 XD   
 最近看完亨超演的巫師後，默默的把 Witcher 2 加強版又安裝回來玩了，說實話這款遊戲我最熟的是新手教學（笑
   
-不過每次重來一次都得找一次補釘還真麻煩！受不了每次都要重找補釘，我還是自己紀錄一下吧：)
+不過每次重來一次都得找一次補釘還真麻煩！受不了每次都要重找補釘，我還是自己記錄一下吧：)
   
 <center> <img src="https://i.imgur.com/9uRiqjZ.jpg" alt="Witcher 2 加強版"></center>
 <center class="imgtext">Witcher 2 加強版（圖片來源: <a href="https://store.steampowered.com/app/20920/The_Witcher_2_Assassins_of_Kings_Enhanced_Edition/" class="imgtext">steam</a>）</center>
@@ -44,7 +44,7 @@ tags:
 
 <br>
 
-還好後面有找到 [Adoltw 阿特魯所提供的儷黑體](https://www.ptt.cc/bbs/Steam/M.1392644855.A.476.html)與 [Clavius 提供思源黑體](https://steamcommunity.com/sharedfiles/filedetails/?id=402934070)的字型檔，不然我就要來研究怎麼自製字型了 XD，這邊紀錄一下儷黑體的更換步驟：
+還好後面有找到 [Adoltw 阿特魯所提供的儷黑體](https://www.ptt.cc/bbs/Steam/M.1392644855.A.476.html)與 [Clavius 提供思源黑體](https://steamcommunity.com/sharedfiles/filedetails/?id=402934070)的字型檔，不然我就要來研究怎麼自製字型了 XD，這邊記錄一下儷黑體的更換步驟：
 1. 下載[字體](http://www.mediafire.com/download/8i313kxns6045ds/The_witcher_2_ZH_Fonts.zip) 得到 **cfonts.swf** 及 **fonts_zh.swf** 兩個檔案，並放到 <b>the witcher 2\CookedPC\globals\gui\ </b> 下，其中 cfonts.swf 主要影響介面中的小字體
 2. 另外將 **fonts.csv** 放在 <b>the witcher 2\CookedPC\globals\gui\fonts  </b>  目錄下
 
@@ -68,7 +68,7 @@ tags:
 <br><br> 
 
 ## 攻略
-最後紀錄一下一些攻略的連結
+最後記錄一下一些攻略的連結
 1. [[心得] 巫師2心得與注意要點｜批踢踢實業坊](https://www.ptt.cc/bbs/XBOX/M.1357041046.A.C34.html)
 2. [《巫師 2：王國刺客》全章節圖文流程攻略｜遊戲百科 GameWikia](https://www.gamewikia.com/guide/full/5347)
 3. [巫師2：王國刺客 隱藏彩蛋｜娛樂計程車](https://www.entertainment14.net/blog/post/63661521-%e5%b7%ab%e5%b8%ab2%ef%bc%9a%e7%8e%8b%e5%9c%8b%e5%88%ba%e5%ae%a2-%e9%9a%b1%e8%97%8f%e5%bd%a9%e8%9b%8b)

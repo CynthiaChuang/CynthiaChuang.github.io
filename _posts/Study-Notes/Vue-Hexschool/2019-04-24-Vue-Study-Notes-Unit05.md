@@ -97,7 +97,7 @@ Uncaught TypeError: this.myMethod is not a function`
 分別會在銷毀元件前後觸發。
 
 #### **deactivated** 與 **activated**
-一般元件，如：v-if，不想每次切換條件判斷式就被 destroy 並摧毀該元件上所紀錄的資料，導致下次更改判斷式後就必須重新走一次 created 流程。
+一般元件，如：v-if，不想每次切換條件判斷式就被 destroy 並摧毀該元件上所記錄的資料，導致下次更改判斷式後就必須重新走一次 created 流程。
 
 此時就可以使用 **\<keep-alive\>** 來維持資料狀態，避免被 destroy。當組件在 \<keep-alive\>  內被切換，它的 deactivated 和 activated 這兩個 lifecycle hooks 函數將會被對應執行。
 

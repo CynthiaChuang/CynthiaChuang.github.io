@@ -170,9 +170,9 @@ Temporal Pooling 應該是指用 ResNet50 當骨架直接做 multi-task 訓練�
 
 <br><br> 
 
-## 閱讀後紀錄與動作
+## 閱讀後記錄與動作
 
-### 紀錄
+### 記錄
 1.  **Video-Based PAR 與 Image-Based PAR 的異同與挑戰**
     - **異同**：  
     兩者對於輸入的圖像皆有高度依賴性，可能會因為裁切、難以識別和遮擋的現象，導致屬性分類困難。但在 Video-Based 中引入序列資料，添加時間軸資料，能夠提 PAR 的準確率。

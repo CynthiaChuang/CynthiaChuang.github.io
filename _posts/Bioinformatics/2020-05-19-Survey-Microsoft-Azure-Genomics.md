@@ -30,7 +30,7 @@ tags:
 1) **初級分析（Primary analysis）**  
 這個階段會先檢測採樣的生物樣本，如血液或唾液...等，經由專業儀器分析後產生原始資料。  
 
-此階段多在生物實驗室中進行，研究員會使用定序設備對 DNA 序列進行鹼基識別，並同時紀錄定序儀在鹼基識別過程中的信心程度。最終定序儀會產生 30 倍定序深度的定序片段資料，連同其它的詮釋資料，如剛剛所提到質量信心分數，一起產生約 60 GB 的壓縮原始資料。
+此階段多在生物實驗室中進行，研究員會使用定序設備對 DNA 序列進行鹼基識別，並同時記錄定序儀在鹼基識別過程中的信心程度。最終定序儀會產生 30 倍定序深度的定序片段資料，連同其它的詮釋資料，如剛剛所提到質量信心分數，一起產生約 60 GB 的壓縮原始資料。
  
 2) **次級分析（Secondary analysis）**  
 此階段會將定序儀產生的原始資料與參考基因體進行比對，並將樣本與參考基因體不同處，及變異位點，一一標出。此階段可以在細分成兩個步驟：
@@ -194,7 +194,7 @@ CromwellOnAzure</a>）</center>
 其實這邊有如果需要以直接看 MS Genomics 的[官方文件](https://docs.microsoft.com/zh-tw/azure/genomics/quickstart-run-genomics-workflow-portal)。若是想要看圖文手把手教學，可以看看這篇《[次世代定序二次分析 Microsoft Azure Genomics](https://medium.com/@102316115/%E6%AC%A1%E4%B8%96%E4%BB%A3%E5%AE%9A%E5%BA%8F%E4%BA%8C%E6%AC%A1%E5%88%86%E6%9E%90microsoft-azure-genomics-77f2cc4994b6)》。
 <br>
 
-<br> 不過這邊還是留一下紀錄：
+<br> 不過這邊還是留一下記錄：
 
 #### 事前準備
 1. Azure 帳戶 ~~(廢話)~~，並準備 **Azure Blob 儲存體** 帳戶與 **Microsoft Genomics** 帳戶。

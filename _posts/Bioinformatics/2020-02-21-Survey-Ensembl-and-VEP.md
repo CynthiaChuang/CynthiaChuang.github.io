@@ -10,11 +10,6 @@ tags:
 - Genomics
 --- 
 
-# 【Survey】Ensembl 與 VEP
-###### tags:  | `Bioinformatics` `Toolkit` | `Genomics` | `BlogPost` `Published`
-
-<br>
-
 最近（2019/08）因為公司專案需求，因此稍微 Survey 一下 [Ensembl](https://asia.ensembl.org/index.html) 這個網站，不過 Survey 方向只會專注在專案需求上，並不會全面的 Survey 。
   
 在 Survey 過程中最痛苦的大概是，看懂並搞懂那些那些專有名詞，我的生物程度只停留在高三，而且還有退化的趨勢阿(( 崩潰
@@ -53,7 +48,7 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
 <br><br>
  
 ## Ensembl 資料庫網站操作
-在 Ensembl  資料庫網站想進行資料查詢，可藉由物種、基因名稱、基因位置與疾病名稱...等。這邊挑了兩種不同類型的搜尋結果做紀錄。
+在 Ensembl  資料庫網站想進行資料查詢，可藉由物種、基因名稱、基因位置與疾病名稱...等。這邊挑了兩種不同類型的搜尋結果做記錄。
 
 <br>
 
@@ -135,7 +130,7 @@ P.S. 其實沒比較好懂...不過至少知道它是只基因上的座標 XD
 
 <br> 
 
-這邊接下來紀錄一下 VEP 安裝方式。
+這邊接下來記錄一下 VEP 安裝方式。
 ### Installation VEP
 在 Ensembl 中有分 [Web interface](https://asia.ensembl.org/Tools/VEP) 與 [Command line tool](https://asia.ensembl.org/info/docs/tools/vep/script/index.html)，兩種使用方式，小資料量用前者，大資料量用後者。
 

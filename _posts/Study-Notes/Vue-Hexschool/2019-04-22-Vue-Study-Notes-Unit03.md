@@ -179,7 +179,7 @@ tags:
 如果直接刪除所傳入 index 會出現誤刪的情況，因此改利用傳入 id 反查該筆資料在原始陣列中正確的位置，然後在進行刪除。
 <br>
 
-課程中在實做時方法有二，一是使用 **array.forEach** ，當遇到 id 同時就記錄下目前的 index，最後在刪除所紀錄下的 index：
+課程中在實做時方法有二，一是使用 **array.forEach** ，當遇到 id 同時就記錄下目前的 index，最後在刪除所記錄下的 index：
 ```javascript
 removeItem: function(item){
    let removeId = -1 ;

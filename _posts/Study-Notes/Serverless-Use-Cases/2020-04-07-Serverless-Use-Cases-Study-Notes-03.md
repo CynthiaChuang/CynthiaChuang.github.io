@@ -103,7 +103,7 @@ Feed 主要負責從外部事件來源來接收事件，不管所接收事件原
      這個方法的好處大概是不需要在外部維持任何一個長期的服務，而且設置還挺容易的，但就是有些系統並沒有提供 hook，可能需要單獨寫段程式去長時間運行，來監測系統是否有事件產生。 
      
     <div class="alert info">
-    <div class="head">紀錄一下 Github 的設置文章</div>
+    <div class="head">記錄一下 Github 的設置文章</div>
      1. <a href="https://developer.github.com/v3/orgs/hooks/#receiving-webhooks">Organization Webhooks | GitHub Developer Guide</a> <br> 
      2. <a href="https://kknews.cc/code/l3qen3e.html">用github的webhooks實現項目自動化構建</a> <br> 
     </div>

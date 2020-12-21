@@ -12,7 +12,7 @@ tags:
 - 影像處理
 --- 
 
-紀錄一下最近使用的影像資料增強工具 - [Augmentor](https://augmentor.readthedocs.io/en/master/)，可用來做訓練圖像生成與雜訊添加...等
+記錄一下最近使用的影像資料增強工具 - [Augmentor](https://augmentor.readthedocs.io/en/master/)，可用來做訓練圖像生成與雜訊添加...等
 
 <!--more-->
 

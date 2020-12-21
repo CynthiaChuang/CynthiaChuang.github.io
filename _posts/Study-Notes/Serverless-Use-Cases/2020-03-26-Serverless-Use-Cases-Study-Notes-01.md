@@ -223,7 +223,7 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 
 動作是執行某個特定動作的一段程式碼，它將會在 openwhisk 中執行。使用所選擇的語言來撰寫 Action，或者直接將 Docker 以映像檔提供執行。
 
-Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽取、第三方 API 調用...等，程式寫的出來的都行。但必須注意的是，在 FaaS 中是<span class="highlighting">無狀態</span>的，不應該存在狀態的紀錄，而且<span class="highlighting">短時運行</span>的。在 openwhisk 中預設最長執行時間為是 5 分鐘，若超過 5 分鐘則不建議使用 Faas 執行，或是必須在要切成更小的粒度分開執行。
+Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽取、第三方 API 調用...等，程式寫的出來的都行。但必須注意的是，在 FaaS 中是<span class="highlighting">無狀態</span>的，不應該存在狀態的記錄，而且<span class="highlighting">短時運行</span>的。在 openwhisk 中預設最長執行時間為是 5 分鐘，若超過 5 分鐘則不建議使用 Faas 執行，或是必須在要切成更小的粒度分開執行。
 
 <center> <img src="https://i.imgur.com/URsL9hc.png" alt="Action"></center>
 <center class="imgtext">Action（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>

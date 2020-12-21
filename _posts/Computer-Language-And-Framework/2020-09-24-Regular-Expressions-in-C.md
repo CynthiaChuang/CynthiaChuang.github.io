@@ -99,7 +99,7 @@ typedef struct{
 繼續我們的 Code：
 ```cpp
 char* target = "testmail_10@gmail.com";   //目標字串
-regmatch_t matchptr[1];   // 紀錄匹配結果陣列，長度為1僅紀錄 full match
+regmatch_t matchptr[1];   // 記錄匹配結果陣列，長度為1僅記錄 full match
 const size_t nmatch = 1;    //  matchptr陣列長度
 int status = regexec(&preg, target, nmatch, matchptr, 0); //匹配
 if (status == REG_NOMATCH){ // 沒匹配
@@ -174,7 +174,7 @@ int main(){
     assert(success==0);
 
     char* target = "testmail_10@gmail.com";   //目標字串
-    regmatch_t matchptr[1];   // 紀錄匹配結果陣列，長度為1僅紀錄 full match
+    regmatch_t matchptr[1];   // 記錄匹配結果陣列，長度為1僅記錄 full match
     const size_t nmatch = 1;    //  matchptr陣列長度
     int status = regexec(&preg, target, nmatch, matchptr, 0); //匹配
     if (status == REG_NOMATCH){ // 沒匹配

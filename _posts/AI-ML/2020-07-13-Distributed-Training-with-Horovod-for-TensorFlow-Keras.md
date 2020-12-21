@@ -132,7 +132,7 @@ dataset = dataset.repeat()
 
 ## Horovod 與 TF2.2 兼容性問題 
 
-紀錄下一個問題，那天在 TensorFlow 看到一條 [Horovod 無法進行梯度計算的 issue](https://github.com/tensorflow/tensorflow/issues/35138)，應該在 TF2.2 以上會遇到，不過 Horovod 這邊有用一些 [HACK 方式進行 HotFix](https://github.com/horovod/horovod/issues/1688)，目前看來程式可以照常執行。若之後 TF 有更新在關注這 issue 的狀況。 
+記錄下一個問題，那天在 TensorFlow 看到一條 [Horovod 無法進行梯度計算的 issue](https://github.com/tensorflow/tensorflow/issues/35138)，應該在 TF2.2 以上會遇到，不過 Horovod 這邊有用一些 [HACK 方式進行 HotFix](https://github.com/horovod/horovod/issues/1688)，目前看來程式可以照常執行。若之後 TF 有更新在關注這 issue 的狀況。 
  
 <br><br> 
 

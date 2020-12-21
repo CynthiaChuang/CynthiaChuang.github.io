@@ -68,7 +68,7 @@ tags:
 
 ## 範例
 
-之前寫的信被系統洗掉，紀錄下先前寫的 mail：
+之前寫的信被系統洗掉，記錄下先前寫的 mail：
 > Thank you for your email. I am out of the office until 日期,  I will look to reply to your email when I return. Please refer all urgent matters to 代理人 on 分機. <br>
 > Regards, Cynthia
  

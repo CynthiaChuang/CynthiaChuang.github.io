@@ -36,13 +36,13 @@ Explanation: The longest valid parentheses substring is `"()()"`
 <br>
 
 ### Stack
-由於我需要知道知道它們之間的距離，所以推入 stack 時我除了紀錄括號外，也紀錄他們的索引值。
+由於我需要知道知道它們之間的距離，所以推入 stack 時我除了記錄括號外，也記錄他們的索引值。
 1. 開始前先 `push ( -1, ')' )` 進入 stack
 2. 依序讀入字串
 	1. 若遇到左括號，`push (index ,  '(' )`
 	2. 若遇到右括號，則檢查stack最上層
 		1. 若為右括號，`push  (index ,  ')' )`
-		2. 若為左括號，將其 pop 並檢查長度，檢查方式為：使用目前索引值減掉目前最上層的索引值後，與目前所紀錄的最長合法長度取 max。
+		2. 若為左括號，將其 pop 並檢查長度，檢查方式為：使用目前索引值減掉目前最上層的索引值後，與目前所記錄的最長合法長度取 max。
 
 ```python
 from pythonds.basic.stack import Stack 
