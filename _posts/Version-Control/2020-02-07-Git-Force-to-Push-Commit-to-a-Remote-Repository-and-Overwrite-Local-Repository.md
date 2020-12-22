@@ -49,7 +49,7 @@ $ git push -f origin <rbranch>:<lbranch>
 ### git pull
 對相應`git push`，`pull`當然也有相對應的強制指令：
 ```shell
-$ git pull --force origin master:master
+$ git pull --force origin <rbranch>:<lbranch> 
 ```
 
 <br> 不過一開始我並沒下完整分支，所以一直跳出 merge 的訊息。所以我回頭看了文件，發現它寫到：
