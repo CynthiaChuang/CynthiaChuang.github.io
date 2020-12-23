@@ -230,7 +230,7 @@ D主管提出關於 VCF annotation 可以歸納出幾項是需要進一步了解
 <br><br>
 
 ## 參考資料 
-1. [Ensembl](https://zh.wikipedia.org/wiki/Ensembl)。檢自 維基百科 (2019-08-28)。
+1. 協同撰寫。[Ensembl](https://zh.wikipedia.org/wiki/Ensembl)。檢自 維基百科 (2019-08-28)。
 2. Lin Ting-Wei (2016-02-24)。[Ensembl API（一）：簡介](https://weitinglin.com/2016/02/24/ensembl-api%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E7%B0%A1%E4%BB%8B/)。檢自 我們的基因體時代 Our "Gene"ration (2019-08-28)。
 3. Sam (2019-01-16)。[【3.2】 一级核酸数据库-Ensemble](https://qinqianshan.com/bioinformatics/biodatabase/ensembl/)。檢自 sam's note (2019-08-28)。
 4. 子非鱼 (2017-08-02)。[NCBI, UCSC, Ensembl, Uniprot, 一次学完统统不要钱](http://www.sohu.com/a/161725404_170798)。檢自 解螺旋·临床医生科研成长平台 (2019-08-28)。

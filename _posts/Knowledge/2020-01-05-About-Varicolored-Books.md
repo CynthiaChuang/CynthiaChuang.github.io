@@ -166,30 +166,30 @@ P.S. 原本想放圖片的，但我覺得嚇到自己機會比較大，所以還
 <br><br> 
 
 ## 參考資料 
-1. [皮書](https://zh.wikipedia.org/wiki/%E7%9A%AE%E4%B9%A6)。檢自 維基百科 (2019-01-03)。
+1. 協同撰寫。[皮書](https://zh.wikipedia.org/wiki/%E7%9A%AE%E4%B9%A6)。檢自 維基百科 (2019-01-03)。
 2. 取之於網路用之於網路 (2010-09-20)。[何謂白皮書?黃皮書?綠皮書?藍皮書?紅皮書?黑皮書?](http://relyky.blogspot.com/2010/09/blog-post.html)。檢自 取之於網路用之於網路 (2019-01-03)。
 3. 未眠 (2018-11-20)。[五颜六色的“X皮书”](https://zhuanlan.zhihu.com/p/50445602)。檢自 知乎 (2019-01-03)。
 4. [白皮書](https://wiki.mbalib.com/zh-tw/%E7%99%BD%E7%9A%AE%E4%B9%A6)。檢自 MBA智库百科 (2019-01-03)。
-5. 紫宸0404 (2019-07-13)。[外交部常說的黃皮書，白皮書，藍皮書、綠皮書、黑皮書、紅皮書？](https://kknews.cc/news/mlg52x9.html) 。檢自 [每日頭條](2019-01-03)。
-6. [White paper](https://en.wikipedia.org/wiki/White_paper)。檢自 Wikipedia (2019-01-03)。
-7. [Blue book]((https://en.wikipedia.org/wiki/Blue_book))。檢自 Wikipedia (2019-01-04)。
-8. [蓝皮书](https://baike.baidu.com/item/%E8%93%9D%E7%9A%AE%E4%B9%A6?timestamp=1580801292637)。檢自 百度百科 (2019-01-04)。
+5. 紫宸0404 (2019-07-13)。[外交部常說的黃皮書，白皮書，藍皮書、綠皮書、黑皮書、紅皮書？](https://kknews.cc/news/mlg52x9.html) 。檢自 每日頭條(2019-01-03)。
+6. 協同撰寫。[White paper](https://en.wikipedia.org/wiki/White_paper)。檢自 Wikipedia (2019-01-03)。
+7. 協同撰寫。[Blue book](https://en.wikipedia.org/wiki/Blue_book)。檢自 Wikipedia (2019-01-04)。
+8. 協同撰寫。[蓝皮书](https://baike.baidu.com/item/%E8%93%9D%E7%9A%AE%E4%B9%A6?timestamp=1580801292637)。檢自 百度百科 (2019-01-04)。
 9. [日本外交藍皮書](https://taiwannews.fandom.com/zh/wiki/%E6%97%A5%E6%9C%AC%E5%A4%96%E4%BA%A4%E8%97%8D%E7%9A%AE%E6%9B%B8)。檢自 Taiwannews Wiki Fandom (2019-01-04)。
 10. 熱點追蹤一下 (2019-01-05)。[經濟冷知識：藍皮書、紅皮書......各色皮書有何不同？](https://kknews.cc/zh-tw/news/2xk6p2y.html)。檢自 每日頭條 (2019-01-04)。 
 11. [经济蓝皮书](https://baike.baidu.com/item/%E7%BB%8F%E6%B5%8E%E8%93%9D%E7%9A%AE%E4%B9%A6)。檢自 百度百科(2019-01-04)。
 12. 光華博雅 (2018-11-19)。[為什麼企業要做SOP？](https://kknews.cc/zh-tw/news/zapz3na.html)。檢自 每日頭條 (2019-01-04)。
-13. [國際自然保護聯盟瀕危物種紅色名錄](https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%87%AA%E7%84%B6%E4%BF%9D%E8%AD%B7%E8%81%AF%E7%9B%9F%E7%80%95%E5%8D%B1%E7%89%A9%E7%A8%AE%E7%B4%85%E8%89%B2%E5%90%8D%E9%8C%84)。檢自 維基百科 (2019-01-04)。
-14. [Red Book](https://en.wikipedia.org/wiki/Red_Book) (2019-01-04)。檢自 Wikipedia (2019-01-04)。
+13. 協同撰寫。[國際自然保護聯盟瀕危物種紅色名錄](https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%87%AA%E7%84%B6%E4%BF%9D%E8%AD%B7%E8%81%AF%E7%9B%9F%E7%80%95%E5%8D%B1%E7%89%A9%E7%A8%AE%E7%B4%85%E8%89%B2%E5%90%8D%E9%8C%84)。檢自 維基百科 (2019-01-04)。
+14. 協同撰寫。[Red Book](https://en.wikipedia.org/wiki/Red_Book) (2019-01-04)。檢自 Wikipedia (2019-01-04)。
 15. 農委會特生中心 (2018-04-04)。[【台灣紅皮書】什麼是「紅皮書」？特生中心用4個問答告訴你！](https://e-info.org.tw/node/210852)。檢自 台灣環境資訊協會-環境資訊中心 (2019-01-04)。
 16. 衛生福利部疾病管制署 (2019-09-12)。[國際預防接種證明書](https://www.cdc.gov.tw/Category/ListContent/WWlwdlIzM2IzMksrZHNNSTJlSXJJZz09?uaid=UnNINXFvNGttYmZKZlU1UHJvQ09UUT09)。檢自 衛生福利部疾病管制署 (2019-01-04)。
-17. [綠皮書](https://zh.wikipedia.org/wiki/%E7%B6%A0%E7%9A%AE%E6%9B%B8) 。檢自 維基百科 (2019-01-04)。
-18. [Green paper](https://en.wikipedia.org/wiki/Green_paper)。檢自 Wikipedia (2019-01-04)。
+17. 協同撰寫。[綠皮書](https://zh.wikipedia.org/wiki/%E7%B6%A0%E7%9A%AE%E6%9B%B8) 。檢自 維基百科 (2019-01-04)。
+18. 協同撰寫。[Green paper](https://en.wikipedia.org/wiki/Green_paper)。檢自 Wikipedia (2019-01-04)。
 19. 徐銘夆 (2011-07)。[歐盟共同體設計保護制度制定脈絡之探討介紹](https://www1.tipo.gov.tw/public/epaper/TIPO_Epaper/ch/MultiMedia_FileDownloadd49b.pdf) 。檢自  經濟部智慧財產局 (2019-01-04)。
 20. 小北先生 (2017-03-03)。[白皮書 藍皮書 紅皮書 黃皮書 綠皮書——這些到底是啥書？](https://kknews.cc/zh-tw/news/enzyv8y.html)。檢自 每日頭條 (2019-01-04)。
-21. [气候变化绿皮书：应对气候变化报告(2013)](https://baike.baidu.com/item/%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96%E7%BB%BF%E7%9A%AE%E4%B9%A6%EF%BC%9A%E5%BA%94%E5%AF%B9%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96%E6%8A%A5%E5%91%8A%282013%29)。檢自 百度百科 (2019-01-04)。
+21. 協同撰寫。[气候变化绿皮书：应对气候变化报告(2013)](https://baike.baidu.com/item/%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96%E7%BB%BF%E7%9A%AE%E4%B9%A6%EF%BC%9A%E5%BA%94%E5%AF%B9%E6%B0%94%E5%80%99%E5%8F%98%E5%8C%96%E6%8A%A5%E5%91%8A%282013%29)。檢自 百度百科 (2019-01-04)。
 22. NENS南韓，沈瑞筠編譯 (2012-09-14)。[全新保育工具誕生：生態系紅皮書、保護區綠皮書](https://e-info.org.tw/node/80341)。檢自 台灣環境資訊協會-環境資訊中心 (2019-01-04)。
-23. [資本主義黑皮書](https://zh.wikipedia.org/wiki/%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E9%BB%91%E7%9A%AE%E6%9B%B8) 。檢自 維基百科 (2019-01-05)。
-24. [The Black Book of Polish Jewry](https://en.wikipedia.org/wiki/The_Black_Book_of_Polish_Jewry)。檢自 Wikipedia (2019-01-05)。
-25. [Orange Book](https://en.wikipedia.org/wiki/Orange_Book)。檢自 Wikipedia (2019-01-05)。
-26. [Approved Drug Products with Therapeutic Equivalence Evaluations](https://en.wikipedia.org/wiki/Approved_Drug_Products_with_Therapeutic_Equivalence_Evaluations)。檢自 Wikipedia (2019-01-05)。
+23. 協同撰寫。[資本主義黑皮書](https://zh.wikipedia.org/wiki/%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E9%BB%91%E7%9A%AE%E6%9B%B8) 。檢自 維基百科 (2019-01-05)。
+24. 協同撰寫。[The Black Book of Polish Jewry](https://en.wikipedia.org/wiki/The_Black_Book_of_Polish_Jewry)。檢自 Wikipedia (2019-01-05)。
+25. 協同撰寫。[Orange Book](https://en.wikipedia.org/wiki/Orange_Book)。檢自 Wikipedia (2019-01-05)。
+26. 協同撰寫。[Approved Drug Products with Therapeutic Equivalence Evaluations](https://en.wikipedia.org/wiki/Approved_Drug_Products_with_Therapeutic_Equivalence_Evaluations)。檢自 Wikipedia (2019-01-05)。
 27. [聯合國運輸橘皮書](https://ghs.osha.gov.tw/CHT/intro/orange.aspx)。檢自 GHS化學品全球調和制度 (2019-01-05)。

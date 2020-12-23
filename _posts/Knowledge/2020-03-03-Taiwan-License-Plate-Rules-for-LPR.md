@@ -210,7 +210,7 @@ P.S. 我真的覺得臺灣歷代車牌中，第六代的字體最好看。 :hear
 3. Khalid al-Hazmi。[車牌研究報告](https://medium.com/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A) 。檢自 車牌研究報告 (2020-03-03)。
 4. Khalid al-Hazmi (2017-09-18)。 [<#4> 淺談台灣車牌演進 IV](http://khalidhazmi.hatenablog.com/)。檢自 KH的車牌研究日記 (2020-03-03)。
 5. Khalid al-Hazmi (2017-12-10)。 [<#6> 淺談台灣車牌演進 VI](http://khalidhazmi.hatenablog.com/)。檢自 KH的車牌研究日記 (2020-03-03)。
-6. 協同撰寫 。[臺灣車輛牌照](https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7) 。檢自 維基百科 (2020-03-03)。
+6. 協同撰寫。[臺灣車輛牌照](https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7) 。檢自 維基百科 (2020-03-03)。
 7. 監理組車輛管理科 (2020-02-26)。[號牌型式及編碼規則表](https://www.thb.gov.tw/page?node=92d4a6e2-9afb-464d-a2eb-2be8d26d8d89) 。檢自 公路總局 (2020-03-03)。
 8. 李建興等 (2010)。[即時動態車牌辨識](http://ir.lib.ntust.edu.tw/retrieve/50742/DYNAMIC+REAL-TIME+LICENSE+PLATE+RECOGNITION.pdf)。檢自 技術學刊 第二十五卷 第二期 (2020-03-03)。
 9. cevasu (2015-04-10)。[難以塗改的德國車牌字體](https://dailycold.tw/4961/%E9%9B%A3%E4%BB%A5%E5%A1%97%E6%94%B9%E7%9A%84%E5%BE%B7%E5%9C%8B%E8%BB%8A%E7%89%8C%E5%AD%97%E9%AB%94/)。檢自 每日一冷 (2020-03-03)。

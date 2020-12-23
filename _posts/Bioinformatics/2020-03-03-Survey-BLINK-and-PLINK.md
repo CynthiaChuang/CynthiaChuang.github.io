@@ -471,7 +471,7 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
 ## 參考資料 
 1. 研之有物│中央研究院 (2018/05/18)。[全基因組分析能讓我們知道多少事？](https://kknews.cc/zh-tw/science/yarmxxa.html) 。檢自 PanSci 泛科學 (2020-03-03)。
 2. 知乎日報 (2016-12-20)。[聽起來很厲害的「全基因組關聯分析」，能算命嗎？](https://kknews.cc/zh-tw/science/yarmxxa.html) 。檢自 每日頭條 (2020-03-03)。
-3. 知乎日報 (2016-12-20)。[全基因組關聯分析](https://zh.wikipedia.org/wiki/%E5%85%A8%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90) 。檢自 維基百科 (2020-03-03)。
+3. 協同撰寫。[全基因組關聯分析](https://zh.wikipedia.org/wiki/%E5%85%A8%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%85%B3%E8%81%94%E5%88%86%E6%9E%90) 。檢自 維基百科 (2020-03-03)。
 4. 刘思远 (2019-07-29)。[华盛顿州立大学张志武教授来基因组所做作学术报告](http://agis.caas.cn/xwzx/xwzx1/195503.htm)。檢自 中国农业科学院农业基因组研究所 (2020-03-03)。
 5. 心心向農隊 (2019-06-14)。[關聯分析的特點和優勢](https://kknews.cc/zh-tw/news/9gry48b.html)。檢自 每日頭條 (2020-03-03)。
 6. rapunzel0103 (2018-01-08)。[临床生物信息学中的GWAS分析](https://vip.biotrainee.com/d/206-%E4%B8%B4%E5%BA%8A%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E4%B8%AD%E7%9A%84gwas%E5%88%86%E6%9E%90)。檢自 生信技能树 (2020-03-03)。

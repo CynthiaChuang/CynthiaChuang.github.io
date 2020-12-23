@@ -150,8 +150,8 @@ Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，�
 1. 活躍星系核 (2012-09-21)。[全球化視野下的基因體學](https://pansci.asia/archives/27710)。檢自 PanSci 泛科學 (2020-01-30)。 
 2. 黃彥華 (2019-10-01)。[新世代定序技術](https://scitechvista.nat.gov.tw/c/sTfS.htm)。檢自 科技大觀園 (2020-01-30)。 
 3. 基因叔叔(2019-06-08)。[什麼是全基因定序(Whole genome sequence ,WGS)](https://unclegene6666.pixnet.net/blog/post/352053530-%E4%BB%80%E9%BA%BC%E6%98%AF%E5%85%A8%E5%9F%BA%E5%9B%A0%E5%AE%9A%E5%BA%8F%28whole-genome-sequence-%2Cwgs%29)。檢自 基因叔叔：科普、期刊導讀(Uncle Gene) - 痞客邦 (2020-01-30)。
-4. [De facto](https://zh.wikipedia.org/wiki/De_facto)。檢自 維基百科 (2020-01-30)。
-5. [粒線體DNA](https://zh.wikipedia.org/wiki/%E7%BA%BF%E7%B2%92%E4%BD%93DNA)。檢自 維基百科 (2020-01-30)。
+4. 協同撰寫。[De facto](https://zh.wikipedia.org/wiki/De_facto)。檢自 維基百科 (2020-01-30)。
+5. 協同撰寫。[粒線體DNA](https://zh.wikipedia.org/wiki/%E7%BA%BF%E7%B2%92%E4%BD%93DNA)。檢自 維基百科 (2020-01-30)。
 6. [人類基因組計劃](https://zh.wikipedia.org/wiki/%E4%BA%BA%E7%B1%BB%E5%9F%BA%E5%9B%A0%E7%BB%84%E8%AE%A1%E5%88%92)。檢自 維基百科 (2020-01-30)。
 7. [NGS 次世代定序常用名詞](https://www.zgenebio.com.tw/ngs-274251999020195234502420724120299922151735422.html)。檢自 力鈞生物科技有限公司 (2020-02-10)。
 8. [测序技术的个体化医学检测](http://www.hbccl.cn/HbcclUpload/201504/08/201504081113340408.pdf)。檢自 湖北临床检验中心 (2020-01-30)。
@@ -163,7 +163,7 @@ Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，�
 14. [metadata - 詮釋資料](hhttp://terms.naer.edu.tw/detail/1679224/?index=6)。檢自 國家教育研究院 (2020-01-30)。
 15. 張益祥/有勁生物科技 (2019-05-17)。[變異位點偵測─left alignment](https://yourgene.pixnet.net/blog/post/119576346-%E8%AE%8A%E7%95%B0%E4%BD%8D%E9%BB%9E%E5%81%B5%E6%B8%AC%E2%94%80left-alignment)。檢自 有勁的基因資訊-痞客邦 (2020-01-30)。
 16. 基因叔叔 (2017-04-18)。[麼是單核苷酸多型性 (Single Nucleotide Polymorphism，簡稱SNP，讀作/snip/)?](https://unclegene6666.pixnet.net/blog/post/308333779)什。檢自 基因叔叔：科普、期刊導讀(Uncle Gene) - 痞客邦 (2020-01-30)。
-17. [保守序列](https://zh.wikipedia.org/wiki/%E4%BF%9D%E5%AE%88%E5%BA%8F%E5%88%97)。檢自 維基百科  (2020-01-30)。
+17. 協同撰寫。[保守序列](https://zh.wikipedia.org/wiki/%E4%BF%9D%E5%AE%88%E5%BA%8F%E5%88%97)。檢自 維基百科  (2020-01-30)。
 18. starsyi (2016-05-25)。[变异检测（BWA+ SAMtools+ picard+ GATK）](http://starsyi.github.io/2016/05/25/%E5%8F%98%E5%BC%82%E6%A3%80%E6%B5%8B%EF%BC%88BWA-SAMtools-picard-GATK%EF%BC%89/)。檢自 寂寞先生 (2020-01-30)。
 19. [SNAP Scalable Nucleotide Alignment Program](http://snap.cs.berkeley.edu/#publications)。檢自 UC Berkeley AMP Lab (2020-02-10)。
 
