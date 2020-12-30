@@ -27,7 +27,7 @@ tags:
 ## Ensembl Intro.
 
 <center> <img src="https://i.imgur.com/gX2Re5D.png" alt="ensembl_logo"></center>
-<center style="color:Gainsboro;">Ensembl Logo（圖片來源: <a href="https://asia.ensembl.org/info/about/legal/logo_policy.html" style="color:Gainsboro;">ensembl</a>）</center>
+<center class="imgtext">Ensembl Logo（圖片來源: <a href="https://asia.ensembl.org/info/about/legal/logo_policy.html" class="imgtext">ensembl</a>）</center>
 <br>
 
 Ensembl 其實是一項開始於 1999 年的生物資訊學的研究計劃，由是一個由歐洲生物資訊研究所（European Bioinformatics Institute, EMBL）和維康基金桑格研究院（Wellcome Trust Sanger Institute）所推動。其目標是其致力於<span class='highlighting'>統整基因註釋（Annotation）和定序資料的整合</span>，並讓研究人員可以透過網路來取得所需資料。
@@ -126,7 +126,7 @@ P.S. 其實沒比較好懂...不過至少知道它是只基因上的座標 XD
 不過這次 Survey 的主要目標是關於 <span class='highlighting'>annotation</span> 的步驟。在 Ensembl 中有提供一套註釋與分析工具 - Variant Effect Predictor（簡稱 VEP），它可以對測試結果產生的變異進行註釋，包括 SNPs、Indel 等，每個註釋用來預測可能受到影響的轉錄。此外所輸出的結果也可以根據資料庫內容與需求，對變異進行過濾與排序，並列出最具致病性的或是全部的效應。
 
 <center> <img src="https://i.imgur.com/P8DYMOP.png" alt="VEP 註釋流程"></center>
-<center style="color:Gainsboro;">VEP 註釋流程（圖片來源: <a href="https://www.genedock.com/article/2017/10/16/vep-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%8F%98%E5%BC%82%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7/" style="color:Gainsboro;">GeneDock 文档</a>）</center>
+<center class="imgtext">VEP 註釋流程（圖片來源: <a href="https://www.genedock.com/article/2017/10/16/vep-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%8F%98%E5%BC%82%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7/" class="imgtext">GeneDock 文档</a>）</center>
 <br>
 
 此外，在找尋資料的過程中，發現關於 annotation tool 中有三套被反覆提及，分別是 <span class='highlighting'>Annovar</span>、<span class='highlighting'>SnpEff</span> 與 Ensembl 的 <span class='highlighting'>VEP</span>，這三套都是做變異註釋的工具：

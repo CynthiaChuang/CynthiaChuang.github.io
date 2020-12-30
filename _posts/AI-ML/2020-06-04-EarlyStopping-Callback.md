@@ -32,7 +32,7 @@ EarlyStopping 顧名思義就是提前中止訓練，一般來說會在下列情
 3.  模型收斂不了或收斂過慢。
 
 <center> <img src="https://i.imgur.com/Bp5cK74.jpg" alt="Early Stopping"></center>
-<center style="color:Gainsboro;">Early Stopping（圖片來源: <a href="http://mmds-data.org/presentations/2016/s-martin.pdf" style="color:Gainsboro;">CC MMDS Talk 2106</a>）</center>
+<center class="imgtext">Early Stopping（圖片來源: <a href="http://mmds-data.org/presentations/2016/s-martin.pdf" class="imgtext">CC MMDS Talk 2106</a>）</center>
 <br><br>
 
 在 tf.keras 中，提供了下列參數可設置：

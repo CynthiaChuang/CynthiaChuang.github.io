@@ -16,7 +16,7 @@ ID 驗證系列第三彈！
 <!--more-->
 
 <center> <img src="https://i.imgur.com/Fl4uKtL.png?1" alt="捐贈碼"></center>
-<center style="color:Gainsboro;">捐贈碼（圖片來源: <a href="https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ601W.htmll" style="color:Gainsboro;">課電子發票整合服務平台</a>）</center>
+<center class="imgtext">捐贈碼（圖片來源: <a href="https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ601W.htmll" class="imgtext">課電子發票整合服務平台</a>）</center>
 
 <br><br> 
 

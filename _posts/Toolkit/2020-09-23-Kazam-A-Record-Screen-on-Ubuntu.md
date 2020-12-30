@@ -35,7 +35,7 @@ $ sudo apt-get upgrade kazam
 升級完版本顯示為 `1.4.5` ，這[看起來](https://launchpad.net/kazam)是他們的最新版本沒錯，不過開發團隊看起來很久沒有更新了，最後 release 時間停在 2014.08.18。
 
 <center> <img src="https://i.imgur.com/StG6H1x.png" alt="Kazam timeline"></center>
-<center style="color:Gainsboro;">timeline（圖片來源: <a href="https://launchpad.net/kazam/+series" style="color:Gainsboro;">Kazam Screencaster</a>）</center>
+<center class="imgtext">timeline（圖片來源: <a href="https://launchpad.net/kazam/+series" class="imgtext">Kazam Screencaster</a>）</center>
 
 <br>
 

@@ -16,7 +16,7 @@ tags:
 
 <!--more-->
 <center> <img src="https://i.imgur.com/dN9tdi6.jpg" alt="電子發票手機條碼"></center>
-<center style="color:Gainsboro;">電子發票手機條碼（圖片來源: <a href="https://einvoice.nat.gov.tw/APCONSUMER/BTC500W/" style="color:Gainsboro;">電子發票整合服務平台</a>）</center>
+<center class="imgtext">電子發票手機條碼（圖片來源: <a href="https://einvoice.nat.gov.tw/APCONSUMER/BTC500W/" class="imgtext">電子發票整合服務平台</a>）</center>
 <br><br> 
 
 ## 編號規則

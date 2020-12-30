@@ -26,7 +26,7 @@ tags:
 2. 將產生的 Pub key 放到遠端倉庫，也就是我們的 GitHub。
 
 <center> <img src="https://i.imgur.com/XkG1sE2.png" alt="SSH 連線運作方式"></center>
-<center style="color:Gainsboro;">SSH 連線運作方式（圖片來源: <a href="https://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html" style="color:Gainsboro;">Sébastien Saunier</a>）</center>
+<center class="imgtext">SSH 連線運作方式（圖片來源: <a href="https://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html" class="imgtext">Sébastien Saunier</a>）</center>
 <br>
 
 ### 產生金鑰對

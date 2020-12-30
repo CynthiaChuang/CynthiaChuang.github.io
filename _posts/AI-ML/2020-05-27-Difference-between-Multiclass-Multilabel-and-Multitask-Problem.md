@@ -97,7 +97,7 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 而多任務學習，則是將多的<span class='highlighting'>相關的（related）<span>任務放在一起學習，在常見的多任務學習網路架構中，他們會共用前半部的參數，以從中習得任務之間的關聯性。
 
 <center> <img src="https://i.imgur.com/94EpzyP.png" alt="Multitask Learning Architecture"></center>
-<center style="color:Gainsboro;">Multitask Learning Architecture（圖片來源: <a href="https://arxiv.org/pdf/1611.00851.pdf" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">Multitask Learning Architecture（圖片來源: <a href="https://arxiv.org/pdf/1611.00851.pdf" class="imgtext">論文</a>）</center>
 <br>
 
 

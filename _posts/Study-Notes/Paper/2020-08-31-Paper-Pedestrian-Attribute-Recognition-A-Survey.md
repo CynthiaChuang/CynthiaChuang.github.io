@@ -51,7 +51,7 @@ tags:
     這好猜，應該就是引入了 Attention，只是我之前不會特地區分是不是用在 CV 還是 NLP，雖然兩種都有看過 XDDD，說到 CV 的 Attention，忽然想到 Grad Cam 的熱力圖。~~史嘉蕾·喬韓森真的很漂亮 :heart_decoration:~~   
     
     <center> <img src="https://i.imgur.com/m9ufMlz.png" alt="Grad Cam 的熱力圖"></center>
-    <center style="color:Gainsboro;">Grad Cam 的熱力圖（圖片來源: <a href="https://kknews.cc/zh-my/science/qorxb2b.html" style="color:Gainsboro;">每日头条</a>）</center>
+    <center class="imgtext">Grad Cam 的熱力圖（圖片來源: <a href="https://kknews.cc/zh-my/science/qorxb2b.html" class="imgtext">每日头条</a>）</center>
     <br>
 
 2. **Graph Convolutional Network**  
@@ -88,7 +88,7 @@ tags:
 而行人屬性辨識目的在於，從中挖掘出目標人物圖像中所能被觀察到的一些高階語義描述，如性別、年齡、服飾、配件等，如下圖所示：
 
 <center> <img src="https://i.imgur.com/RAzm5mx.png" alt="PAR Define"></center>
-<center style="color:Gainsboro;">論文架構圖（圖片來源: <a href="https://arxiv.org/abs/1901.07474" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">論文架構圖（圖片來源: <a href="https://arxiv.org/abs/1901.07474" class="imgtext">論文</a>）</center>
 
 
 更正式的定義如下：
@@ -138,7 +138,7 @@ tags:
 
 順便附上一張論文架構圖
 <center> <img src="https://i.imgur.com/yxxvCsJ.png" alt="論文架構圖"></center>
-<center style="color:Gainsboro;">論文架構圖（圖片來源: <a href="https://sites.google.com/view/ahu-pedestrianattributes/" style="color:Gainsboro;">論文 Blog</a>）</center>
+<center class="imgtext">論文架構圖（圖片來源: <a href="https://sites.google.com/view/ahu-pedestrianattributes/" class="imgtext">論文 Blog</a>）</center>
 
 <br><br>
 
@@ -162,7 +162,7 @@ tags:
     
 
 <center> <img src="https://i.imgur.com/cyJXVyc.png" alt="Dataset Overview"></center>
-<center style="color:Gainsboro;">Dataset Overview（圖片來源: <a href="https://sites.google.com/view/ahu-pedestrianattributes/" style="color:Gainsboro;">論文 Blog</a>）</center>
+<center class="imgtext">Dataset Overview（圖片來源: <a href="https://sites.google.com/view/ahu-pedestrianattributes/" class="imgtext">論文 Blog</a>）</center>
 <br>
 
 文章中列了將近 10 個 dataset，不過其中最著名的 RAP 與 PETA，還有 2017 公佈的 PA-100K 。下列排序按照論文排序，不做調整：
@@ -174,18 +174,18 @@ tags:
     2014 年發布的資料集，是第一個行人屬性辨識，由 10 個人新識別資料集集結而成，共 19000 張圖像，圖像解析度從 `17x39` 至 `169x365`；其中含有 8705 位行人，每位行人具有 61 個二元屬性和 4 多分類屬性；圖像被隨機劃分為 9,500 張用於訓練、1,900 張用於驗證和 7600 張用於測試。
 
     <center> <img src="https://i.imgur.com/2RydrgN.jpg" alt="Composition of PETA datase"></center>
-    <center style="color:Gainsboro;">Composition of PETA datase（圖片來源: <a href="http://mmlab.ie.cuhk.edu.hk/projects/PETA.html" style="color:Gainsboro;">PETA Blog</a>）</center>
+    <center class="imgtext">Composition of PETA datase（圖片來源: <a href="http://mmlab.ie.cuhk.edu.hk/projects/PETA.html" class="imgtext">PETA Blog</a>）</center>
     
     <br>
     
     <center> <img src="https://i.imgur.com/XSt8Am8.jpg" alt="Sample Images in PETA Dataset"></center>
-    <center style="color:Gainsboro;">Sample Images in PETA Dataset（圖片來源: <a href="http://mmlab.ie.cuhk.edu.hk/projects/PETA.html" style="color:Gainsboro;">PETA Blog</a>）</center>
+    <center class="imgtext">Sample Images in PETA Dataset（圖片來源: <a href="http://mmlab.ie.cuhk.edu.hk/projects/PETA.html" class="imgtext">PETA Blog</a>）</center>
 
     <br>
     
     目前的研究多從 PETA 中選出 35 個屬性進行識別，至於確切屬性可以參考下表，或是閱讀 [Dataset 的 ReadMe](https://www.dropbox.com/s/52ylx522hwbdxz6/PETA.zip?dl=0&file_subpath=%2FReadMe.txt) 有較完整描述：
     <center> <img src="https://i.imgur.com/WboUDgM.png?1" alt="Attribute Groups"></center>
-    <center style="color:Gainsboro;">Attribute Groups（圖片來源: <a href="hhttps://blog.csdn.net/Code_Mart/article/details/87721803#t1" style="color:Gainsboro;">不进则退｜CSDN博客 Blog</a>）</center>
+    <center class="imgtext">Attribute Groups（圖片來源: <a href="hhttps://blog.csdn.net/Code_Mart/article/details/87721803#t1" class="imgtext">不进则退｜CSDN博客 Blog</a>）</center>
     
     不過這資料集有個問題是，它只會對同一個行人標註一次，但由於行人是在持續的運動，在運動過程中某些屬性可能會出現、消失、不可見。但在這資料集中，不論任何時間，他們全部擁有相同的屬性。
      
@@ -212,7 +212,7 @@ tags:
     <br>
     
     <center> <img src="https://i.imgur.com/Je60V7m.png" alt="Sample Images in PARSE27K Dataset"></center>
-    <center style="color:Gainsboro;">Sample Images in PARSE27K Dataset（圖片來源: <a href="https://www.vision.rwth-aachen.de/page/parse27k" style="color:Gainsboro;">PARSE27K Blog</a>）</center>
+    <center class="imgtext">Sample Images in PARSE27K Dataset（圖片來源: <a href="https://www.vision.rwth-aachen.de/page/parse27k" class="imgtext">PARSE27K Blog</a>）</center>
     <br>
 
 3. **RAP/RAP-2.0**  
@@ -224,15 +224,15 @@ tags:
      
     比較特別的是 3 個多分類屬性，分別是 viewpoints、occlusions 與 body parts information：
     <center> <img src="https://i.imgur.com/xPna7Rb.png" alt="viewpoints and occlusion of the annotated "></center>
-    <center style="color:Gainsboro;">viewpoints and occlusion of the annotated （圖片來源: <a href="https://arxiv.org/pdf/1603.07054.pdf" style="color:Gainsboro;">RAP v1 Paper</a>）</center>
+    <center class="imgtext">viewpoints and occlusion of the annotated （圖片來源: <a href="https://arxiv.org/pdf/1603.07054.pdf" class="imgtext">RAP v1 Paper</a>）</center>
     <br>
      
     <center> <img src="https://i.imgur.com/2VFoFrI.png" alt="vSamples with body part annotations."></center>
-    <center style="color:Gainsboro;">Samples with body part annotations. （圖片來源: <a href="http://www.rapdataset.com/rapv2.html" style="color:Gainsboro;">RAP v2 Blog</a>）</center>
+    <center class="imgtext">Samples with body part annotations. （圖片來源: <a href="http://www.rapdataset.com/rapv2.html" class="imgtext">RAP v2 Blog</a>）</center>
      
     其餘屬性：
     <center> <img src="https://i.imgur.com/sdKDEYn.png" alt="Overall annotations in the RAP dataset v2.0"></center>
-    <center style="color:Gainsboro;">Overall annotations in the RAP dataset v2.0（圖片來源: <a href="https://ieeexplore.ieee.org/document/8510891" style="color:Gainsboro;">RAP v2 Paper</a>）</center>
+    <center class="imgtext">Overall annotations in the RAP dataset v2.0（圖片來源: <a href="https://ieeexplore.ieee.org/document/8510891" class="imgtext">RAP v2 Paper</a>）</center>
      
     <br>
     RAP 是 2016 年提出的行人屬性辨識資料集，算是截至 2017 年底最大的資料集。現階段所有的 SOTA 都會在 RAP 上測試，並把它當作第一指標。不過這個資料集要下載得填寫[申請單](https://docs.google.com/forms/d/e/1FAIpQLSc-lcbWv_JFTeUYmqig15RQOXHdZlXWbXvi8OigDNWzkYB2xA/viewform)。
@@ -251,7 +251,7 @@ tags:
     | Clothing | tanktop, tshirt, mensuit, longskirt, shortskirt, shortskirt, smallshorts, lowcuttop, swimsuit, weddingdress, bermudashorts |
 
      <center> <img src="https://imgur.com/y2URKQn.png" alt="HAT dataset"></center>
-    <center style="color:Gainsboro;">HAT dataset （圖片來源: <a href="https://jurie.users.greyc.fr/datasets/hat.html" style="color:Gainsboro;">HAT Blog</a>）</center>
+    <center class="imgtext">HAT dataset （圖片來源: <a href="https://jurie.users.greyc.fr/datasets/hat.html" class="imgtext">HAT Blog</a>）</center>
     <br>
 
 5. **APiS dataset**  
@@ -262,10 +262,10 @@ tags:
      
      用行人檢測方法截出行人區域，並刪掉品質不佳的圖像。最後得到 3661 張圖像，每張圖像高度大於 90、寬度大於 35。每位行人帶有11 個二元屬性與 2 個多類別屬性。寫信索取。
     <center> <img src="https://i.imgur.com/N26gCEu.png" alt="APiS dataset"></center>
-    <center style="color:Gainsboro;">APiS dataset （圖片來源: <a href="https://openaccess.thecvf.com/content_iccv_workshops_2013/W10/papers/Zhu_Pedestrian_Attribute_Classification_2013_ICCV_paper.pdf" style="color:Gainsboro;">APiS paper</a>）</center>
+    <center class="imgtext">APiS dataset （圖片來源: <a href="https://openaccess.thecvf.com/content_iccv_workshops_2013/W10/papers/Zhu_Pedestrian_Attribute_Classification_2013_ICCV_paper.pdf" class="imgtext">APiS paper</a>）</center>
     <br>
     <center> <img src="https://i.imgur.com/V3Wcfhn.png" alt="APiS Sample"></center>
-    <center style="color:Gainsboro;">APiS Sample （圖片來源: <a href="https://openaccess.thecvf.com/content_iccv_workshops_2013/W10/papers/Zhu_Pedestrian_Attribute_Classification_2013_ICCV_paper.pdf" style="color:Gainsboro;">APiS paper</a>）</center>
+    <center class="imgtext">APiS Sample （圖片來源: <a href="https://openaccess.thecvf.com/content_iccv_workshops_2013/W10/papers/Zhu_Pedestrian_Attribute_Classification_2013_ICCV_paper.pdf" class="imgtext">APiS paper</a>）</center>
     <br>
 
 
@@ -276,7 +276,7 @@ tags:
     
     好像有提供邊界？
     <center> <img src="https://i.imgur.com/DNE56x2.png" alt="BAP Sample"></center>
-    <center style="color:Gainsboro;">BAP Sample （圖片來源: <a href="https://ieeexplore.ieee.org/document/6126413" style="color:Gainsboro;">BAP paper</a>）</center>
+    <center class="imgtext">BAP Sample （圖片來源: <a href="https://ieeexplore.ieee.org/document/6126413" class="imgtext">BAP paper</a>）</center>
     <br>
     
 7. **PA-100K**  
@@ -287,7 +287,7 @@ tags:
    
 
     <center> <img src="https://i.imgur.com/DXvDqqY.png" alt="PA-100K Sample"></center>
-    <center style="color:Gainsboro;">PA-100K Sample （圖片來源: <a href="http://www.cbsr.ia.ac.cn/users/jwan/papers/TIP2019-PedAttri.pdf" style="color:Gainsboro;">BAP paper</a>）</center>
+    <center class="imgtext">PA-100K Sample （圖片來源: <a href="http://www.cbsr.ia.ac.cn/users/jwan/papers/TIP2019-PedAttri.pdf" class="imgtext">BAP paper</a>）</center>
     <br>
    
 8. **WIDER Attribute Dataset**   
@@ -297,11 +297,11 @@ tags:
     包含了 30 個場景 13,789 張圖像，每張圖像都帶有邊界框，總共有 57524 個框，平均每個張圖像有 4 個以上的框，最多可以容納 20 個人；每個人都有 14 個不同的屬性標記。該資料集分為 5,509 張訓練集、 1,362 張驗證和 6,918 張測試。
     
     <center> <img src="https://i.imgur.com/mUBisPA.jpg" alt="WIDER Attribute Sample"></center>
-    <center style="color:Gainsboro;">WIDER Attribute Sample （圖片來源: <a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERAttribute.html" style="color:Gainsboro;">WIDER Blog</a>）</center>
+    <center class="imgtext">WIDER Attribute Sample （圖片來源: <a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERAttribute.html" class="imgtext">WIDER Blog</a>）</center>
     
     14 種二元屬性如下：      
     <center> <img src="https://i.imgur.com/T4ImrfW.png" alt="Attribute"></center>
-    <center style="color:Gainsboro;">Attribute （圖片來源: <a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_human.pdf" style="color:Gainsboro;">WIDER Paper</a>）</center>
+    <center class="imgtext">Attribute （圖片來源: <a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2016_human.pdf" class="imgtext">WIDER Paper</a>）</center>
     <br>
 
 9. **Market1501-attribute**  
@@ -311,13 +311,13 @@ tags:
     資料集包含了 1,501 個 id 和 21,668 的邊界框，其中 751 個 id 用於訓練、750 個 id 用於測試，分別有 12,936 與 19,732 張圖像。每位行人共有 28 個屬性，其中一個屬性為 image_index，因此僅有 27 個屬性可供訓練。    
     
     <center> <img src="https://imgur.com/o0MtfuN.png" alt="Market1501 Attribut"></center>
-    <center style="color:Gainsboro;">Market1501 Attribute （圖片來源: <a href="https://github.com/vana77/Market-1501_Attribute" style="color:Gainsboro;">Market1501 Github</a>）</center>
+    <center class="imgtext">Market1501 Attribute （圖片來源: <a href="https://github.com/vana77/Market-1501_Attribute" class="imgtext">Market1501 Github</a>）</center>
     <br>
 
     不過注意的是，儘管上下半身服裝分別有 8 、9 個屬性，但對於一種身份，只有一種顏色標記為**是**。
     
     <center> <img src="https://i.imgur.com/m9CvkzV.png" alt="Market150 Sample"></center>
-    <center style="color:Gainsboro;">Market1501 Sample （圖片來源: <a href="https://github.com/vana77/Market-1501_Attribute" style="color:Gainsboro;">Market1501 Github</a>）</center>
+    <center class="imgtext">Market1501 Sample （圖片來源: <a href="https://github.com/vana77/Market-1501_Attribute" class="imgtext">Market1501 Github</a>）</center>
     <br>
 
 10. **DukeMTMC-attribute**  
@@ -326,10 +326,10 @@ tags:
     跟 Market1501 出自同一篇論文，資料集中 1,812 個 id 和 34,183 個邊界框，其中 702 個 id 用於訓練、1,110 個 id 用於測試，分別有 16,522 與 17,661 張圖像。 不算 image_index，每位行人有 24 個屬性可供訓練。
     
     <center> <img src="https://i.imgur.com/oHYvXuo.png" alt="DukeMTMC Attribut"></center>
-    <center style="color:Gainsboro;">DukeMTMC Attribute （圖片來源: <a href="https://github.com/vana77/DukeMTMC-attribute" style="color:Gainsboro;">DukeMTMC Github</a>）</center>
+    <center class="imgtext">DukeMTMC Attribute （圖片來源: <a href="https://github.com/vana77/DukeMTMC-attribute" class="imgtext">DukeMTMC Github</a>）</center>
         
     <center> <img src="https://i.imgur.com/rHU8ZfZ.png" alt="DukeMTMC Sample"></center>
-    <center style="color:Gainsboro;">DukeMTMC Sample （圖片來源: <a href="https://github.com/vana77/DukeMTMC-attribute" style="color:Gainsboro;">DukeMTMC Github</a>）</center>
+    <center class="imgtext">DukeMTMC Sample （圖片來源: <a href="https://github.com/vana77/DukeMTMC-attribute" class="imgtext">DukeMTMC Github</a>）</center>
     <br>
     
 11. **CRP Dataset**  
@@ -342,7 +342,7 @@ tags:
     這資料集有點特別，它是從車內向外側拍行人。資料集包含了 7 支 video 27,754 個邊界框，其中 4 支影片為訓練集，其餘 3 支影片為測試集。每個行人有 4 種標籤屬性年齡、性別、體重和服裝類型，每種標籤下又有不同的 labels:
     
     <center> <img src="https://i.imgur.com/WFtcsNk.png" alt="DukeMTMC Sample"></center>
-    <center style="color:Gainsboro;">DukeMTMC Sample （圖片來源: <a href="https://github.com/vana77/DukeMTMC-attribute" style="color:Gainsboro;">DukeMTMC Github</a>）</center>
+    <center class="imgtext">DukeMTMC Sample （圖片來源: <a href="https://github.com/vana77/DukeMTMC-attribute" class="imgtext">DukeMTMC Github</a>）</center>
     <br>
 
 12. **Clothing Attributes Dataset, CAD** 
@@ -351,7 +351,7 @@ tags:
     圖片來源來自 Sartorialist 和 Flickr，其中包含了 1,856 張圖像，並透過 Amazon Mechanical Turk 發布進行標記，共標記了 26 種屬性，其中 23 種是二元屬性和 3 個多類屬性。  
 
     <center> <img src="https://i.imgur.com/rAQeZh7.png" alt="CA Dataset"></center>
-    <center style="color:Gainsboro;"> CA Dataset（圖片來源: <a href="http://chenlab.ece.cornell.edu/people/Andy/publications/ECCV2012_ClothingAttributes.pdf" style="color:Gainsboro;">CA Dataset 論文</a>）</center>
+    <center class="imgtext"> CA Dataset（圖片來源: <a href="http://chenlab.ece.cornell.edu/people/Andy/publications/ECCV2012_ClothingAttributes.pdf" class="imgtext">CA Dataset 論文</a>）</center>
     
 <br> 
 
@@ -399,7 +399,7 @@ tags:
     所以只好去看看出處的公式...恩看來是打錯了呢 XD
     
     <center> <img src="https://i.imgur.com/U0fVSKe.png" alt="Example-based evaluation*"></center>
-    <center style="color:Gainsboro;"> Example-based evaluation*（圖片來源: <a href="https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tkde13rev.pdf" style="color:Gainsboro;">原論文</a>）</center>
+    <center class="imgtext"> Example-based evaluation*（圖片來源: <a href="https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/tkde13rev.pdf" class="imgtext">原論文</a>）</center>
     <br>
 
 3. **其他指標**  
@@ -420,7 +420,7 @@ tags:
 若獨立處理單一任務很容易忽略這種相關性，可能導致最終性能的調校會遇到瓶頸，通過進行一定程度共享不同任務間的參數與特徵，可能會使原任務的泛化效果更好。而在多任務學習中，主要分成兩種方法： <span class='highlighting'>Hard parameter sharing</span> 與  <span class='highlighting'>Soft parameter sharing</span>。
 
 <center> <img src="https://i.imgur.com/vnCzxiq.png" alt="Multitask Learning 兩種方法"></center>
-<center style="color:Gainsboro;">左、Hard parameter sharing 右、Soft parameter sharing （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">左、Hard parameter sharing 右、Soft parameter sharing （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
 
 <br>
 
@@ -451,7 +451,7 @@ tags:
 若是依照演算法的核心來看，目前 Multilabel Learning 大致可以成兩類：
 
 <center> <img src="https://i.imgur.com/yIZalqZ.png" alt="代表性的多標籤學習算法的分類"></center>
-<center style="color:Gainsboro;">代表性的多標籤學習算法的分類 （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">代表性的多標籤學習算法的分類 （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
 
 1. **問題轉換, Problem Transformation**  
    該方法個核心是<span class='highlighting'>改造資料適應演算法，fit data to algorithm</span>，將 Multilabel  Learning 問題轉換為其它已知的學習問題進行求解。
@@ -501,7 +501,7 @@ tags:
 
 
 <center> <img src="https://i.imgur.com/FSdgNto.png" alt="SThe overall pipeline of DeepSAR and DeepMAR ["></center>
-<center style="color:Gainsboro;">The overall pipeline of DeepSAR and DeepMAR [（圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">The overall pipeline of DeepSAR and DeepMAR [（圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
 <br>
 
 Global Image-based Models，顧名思義就是整張圖下去訓練，不做任的剪裁。這些模型的好處是簡單且直觀，有助於實際應用的推廣，但因缺乏考慮細粒度識別，性能仍然限制。
@@ -540,7 +540,7 @@ Global Image-based Models，顧名思義就是整張圖下去訓練，不做任�
 
 
 <center> <img src="https://i.imgur.com/2wZhJbg.png" alt="Some visualizations of HydraPlus-Net"></center>
-<center style="color:Gainsboro;">Some visualizations of HydraPlus-Net （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">Some visualizations of HydraPlus-Net （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
 <br>
 
 大概是 Attention is all you need，所以在這邊也有試著引入 Attention XD
@@ -558,7 +558,7 @@ Global Image-based Models，顧名思義就是整張圖下去訓練，不做任�
 
 
 <center> <img src="https://i.imgur.com/hOKnc9t.png" alt="The pipeline of JRL of attribute context and correlation"></center>
-<center style="color:Gainsboro;">The pipeline of JRL of attribute context and correlation（圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">The pipeline of JRL of attribute context and correlation（圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
 <br>
 
 在後期一點的模型也開始引入 RNN ，RNN 的優點大概是能夠明確學習與利用背景資訊，但 RNN 訓練起來真的有點很慢。
@@ -575,7 +575,7 @@ Global Image-based Models，顧名思義就是整張圖下去訓練，不做任�
 
 
 <center> <img src="https://i.imgur.com/4gTkvc3.png" alt="The pipeline of AWMT-network"></center>
-<center style="color:Gainsboro;">The pipeline of AWMT-network（圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" style="color:Gainsboro;">論文</a>）</center>
+<center class="imgtext">The pipeline of AWMT-network（圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
 <br>
 
 這一類型的文章真的很難懂，能做這類的人真的超強，看到這麼少的模型就知道：

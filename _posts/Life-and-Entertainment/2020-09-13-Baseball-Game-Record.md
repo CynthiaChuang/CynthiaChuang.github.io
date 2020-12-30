@@ -13,7 +13,7 @@ tags:
 
 <!--more-->
 <center> <img src="https://i.imgur.com/QHyMDMK.png" alt="統一獅隊徽章"></center>
-<center style="color:Gainsboro;">統一獅隊徽章（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E7%B5%B1%E4%B8%807-ELEVEn%E7%8D%85" style="color:Gainsboro;">維基百科</a>）</center>
+<center class="imgtext">統一獅隊徽章（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E7%B5%B1%E4%B8%807-ELEVEn%E7%8D%85" class="imgtext">維基百科</a>）</center>
 <br>
 
 ## 1. 2020-09-11 
