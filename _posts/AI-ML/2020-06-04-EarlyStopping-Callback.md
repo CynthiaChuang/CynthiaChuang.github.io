@@ -5,7 +5,7 @@ is_modified: false
 categories:
 - AI/ML
 tags:
-- tf.keras/keras
+-  Keras/TF.Keras
 --- 
  
 昨天在訓練時，模型無預警的停止訓練，看中止的情況又不像是 OOM 或其他 ERROR 所造成的。因此懷疑是 EarlyStopping 自主中斷的，但...中止條件明明就不應該被觸發才對...

@@ -5,7 +5,7 @@ is_modified: false
 categories:
 - AI/ML
 tags:
-- Pedestrian Attribute Recognition
+-  行人屬性辨識
 - CV
 --- 
 

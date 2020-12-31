@@ -4,7 +4,7 @@ date: 2020-12-21 21:39
 is_modified: false
 categories:
 - AI/ML 
-- Computer-Language/Framework 
+- 程式語言與架構 
 tags:
 - Horovod
 - PyTorch

@@ -6,7 +6,7 @@ categories:
 - AI/ML
 tags:
 - OCR
-- LPR
+- 車牌辨識
 - CV
 --- 
 
