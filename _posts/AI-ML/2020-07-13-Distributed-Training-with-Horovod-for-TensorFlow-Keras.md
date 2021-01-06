@@ -1,7 +1,7 @@
 ---
 title: 【TF.Keras】用 Horovod 進行分散式訓練 
-date: 2020-08-11
-is_modified: false
+date: 2021-01-06 21:14
+is_modified: true
 categories:
 - AI/ML
 - 程式語言與架構
@@ -84,13 +84,13 @@ model.fit(dataset,
           verbose=1 if hvd.rank() == 0 else 0)
 ```
 
-訓練完成後，使用 `hvd.rank() == 0` 來判斷是否為 master，理論上來說只有 master 會負責模型的儲存與其他的輸出。上述完整程式碼請見[Horovod 範例](https://github.com/horovod/horovod/blob/master/examples/tensorflow2_keras_mnist.py)。
+訓練完成後，使用 `hvd.rank() == 0` 來判斷是否為 master，理論上來說只有 master 會負責模型的儲存與其他的輸出。上述完整程式碼請見[Horovod 範例](https://github.com/horovod/horovod/blob/master/examples/tensorflow2/tensorflow2_keras_mnist.py)。
 
 <br><br>  
 
 ## 資料集切分
 
-關於 Keras 的實做，Horovod 提供了三份參考程式碼（ [tf1 keras mnist](https://github.com/horovod/horovod/blob/master/examples/keras_mnist.py)、[tf1 keras mnist advanced](https://github.com/horovod/horovod/blob/master/examples/keras_mnist_advanced.py)、[tf2 keras mnist](https://github.com/horovod/horovod/blob/master/examples/tensorflow2_keras_mnist.py)）。但在這三份程式碼中，關於資料集的分割存在著兩種不同的方式：
+關於 Keras 的實做，Horovod 提供了三份參考程式碼（ [tf1 keras mnist](https://github.com/horovod/horovod/blob/master/examples/tensorflow/tensorflow_keras_mnist.py)、[keras mnist advanced](https://github.com/horovod/horovod/blob/master/examples/keras/keras_mnist_advanced.py)、[tf2 keras mnist](https://github.com/horovod/horovod/blob/master/examples/tensorflow2/tensorflow2_keras_mnist.py)）。但在這三份程式碼中，關於資料集的分割存在著兩種不同的方式：
 1. 切割 **steps_per_epoch**  
     也就是將一個資料集分成 N 份，也就是在同一個 epochs 中，每個節點看的資料是不同的，因此每個節點所需執行的總 epochs 不變。
     
@@ -144,8 +144,9 @@ dataset = dataset.repeat()
 
 ## 更新紀錄
 <details>
-  <summary>最後更新日期：2020-08-11</summary>
+  <summary>最後更新日期：2021-01-06</summary>
   <ul class="timestamp">
+      <li>2021-01-06 更新：更新失效連結</li>
     　<li>2020-08-11 發布</li>
     　<li>2020-07-13 完稿</li>
     　<li>2020-07-02 起稿</li>
