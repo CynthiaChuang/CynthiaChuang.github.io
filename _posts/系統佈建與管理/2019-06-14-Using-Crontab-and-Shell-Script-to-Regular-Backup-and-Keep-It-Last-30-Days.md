@@ -5,7 +5,6 @@ is_modified: false
 categories:
 - 程式語言與架構
 tags:
-- HackMD/CodiMD
 - Shell Script
 - crontab
 - Linux/Unix
