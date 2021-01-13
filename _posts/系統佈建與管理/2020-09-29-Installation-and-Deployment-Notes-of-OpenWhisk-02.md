@@ -689,10 +689,11 @@ $ wsk -i action invoke numpytext --result
     1. 以 [python 為例](https://github.com/apache/openwhisk/blob/master/docs/actions-python.md#packaging-python-actions-with-a-virtual-environment-in-zip-files)，若是有第三方套件，則將所需的 requirements.txt 與程式碼包成 zip 後上傳。
     2. 否，有檔案大小的限制。  
        在之前的 Survey [系統限制](/Installation-and-Deployment-Notes-of-OpenWhisk-01#Actions)時，說明有列出檔案大小僅支援 48MB，因此若壓縮檔超出檔案大小限制，則須改用 docker。
+    
     <br>
     
 3. **支援的編譯語言要能在平台上進行編譯，並能選擇編譯的環境，例如 Java 選擇 JDK 版本，Golang 選擇 Golang 版本**  
-    1. 目前個平台都無法在直接在平台上進行編譯，create action 時必須提供編譯好的結果或是直譯式的原始碼。這段真要做需要 UI 配合。
+    1. 目前各個平台都無法在直接在平台上進行編譯，create action 時必須提供編譯好的結果或是直譯式的原始碼。這段真要做需要 UI 配合。
     2. 如要不同的語言版本必須提供不同版本的 runtime docker，並修改 runtimes.json。  
     
     P.S. 是說文件中有看到， 可以用[直譯的方式](https://openwhisk.apache.org/documentation.html#actions-creating-and-invoking)，直接使用原始碼來建立 action 來執行程式 Golang，但也可以[先行編譯](https://github.com/apache/openwhisk/blob/master/docs/actions-go.md#precompiling-go-sources-offline)。

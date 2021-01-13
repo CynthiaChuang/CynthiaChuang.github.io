@@ -6,7 +6,7 @@ categories:
 - 研讀筆記
 - AI/ML
 tags:
-- 演講紀錄
+- 演講記錄
 --- 
 
 最近聽 [NVIDIA GTC 2020](https://www.nvidia.com/zh-tw/gtc/session-catalog/?search.language=1594320459782004L0mo&tab.catalogtabfields=1600209910618002Tlxt)，順便紀錄下部份場次的筆記。不過有點懶沒有紀錄全部的場次，只紀錄了被指定要分享的場次。
