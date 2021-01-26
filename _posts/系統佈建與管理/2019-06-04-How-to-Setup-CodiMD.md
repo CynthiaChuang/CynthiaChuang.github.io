@@ -1,11 +1,11 @@
 ---
 title: 【CodiMD】安裝踩雷筆記...
-date: 2019-06-04
-is_modified: false
+date: 2021-01-26
+is_modified: true
 categories:
 - 系統佈建與管理
 tags:
-- HackMD/CodiMD
+- HackMD/CodiMD/HedgeDoc
 --- 
 
 說實話我還是搞不懂為何需要建立 CodiMD，不過上面說要建那就來建吧～！
@@ -14,37 +14,37 @@ tags:
 <br> 
 
 ## 先來聊聊 HackMD 與 CodiMD
+
+<center> <img src="https://i.imgur.com/lobcWpo.png" alt="HackMD"></center>
+<center class="imgtext"> HackMD 官網截圖 （圖片來源: <a href="https://hackmd.io/" class="imgtext"> HackMD 官網</a>）</center>
 <br>
 
-![HackMD](https://i.imgur.com/lobcWpo.png)
-<center class="imgtext">   HackMD 官網截圖 （圖片來源: <a href="https://hackmd.io/" class="imgtext"> HackMD 官網</a>）</center>
-
-<br>之前提過 [HackMD](https://hackmd.io/) 是我用過最順手 Markdown 的文字編輯器。而 [CodiMD](https://demo.codimd.org) 其實就是 Open Source 的 HackMD Community Edition。
+之前提過 [HackMD](https://hackmd.io/) 是我用過最順手 Markdown 的文字編輯器。而 [CodiMD](https://demo.codimd.org) 其實就是 Open Source 的 HackMD Community Edition。
 
 CodiMD 之前好像叫做 HackMD CE ，但為了避免命名混搖的困擾，因此中間修改過專案名稱（看 [這裡](https://github.com/hackmdio/codimd/issues/1170) 與 [這裡](https://github.com/hackmdio/codimd/issues/720)），由 HackMD CE 改成了 CodiMD。
 
-但說實話還是很混亂！一些文件與專案還是兩個名字會輪流出現，舊的 repository 的 start 還遠遠超過新的 repository ，看來改名的陣痛期還沒有度過 XD
-
+不過，但說實話還是很混亂，而且是讓人更加的困惑！除了在一些文件與專案兩個名字會輪流出現外，還有另外一個讓人更困惑的是，名為 CodiMD 的 repository 其實是有兩個的，分別由 HackMD EE 與社群所維護的。
 
 <br>
 
 ### 程式碼
-由於上述原因它的程式碼也有分成新舊兩個 repository。且新 repository 目前的 issue 數量較少，有時候需要回去舊 repository 找找。
 
-1. **舊repository**
+由於上述原因它的程式碼是有兩個 repository。
+
+1. **HackMD EE 維護**
     - Source code：[hackmdio/codimd](https://github.com/hackmdio/codimd)
-    - Container： [hackmdio/docker-hackmd](https://github.com/hackmdio/docker-hackmd)
+    - Container： [hackmdio/docker-hackmd](https://github.com/hackmdio/docker-hackmd) / [Docker Deployment](https://hackmd.io/c/codimd-documentation/%2Fs%2Fcodimd-docker-deployment)
 
-<br>
 
-2. **新repository**
+2. **社群維護**
     - Source code：[codimd/server](https://github.com/codimd/server)
     - Container： [codimd/container](https://github.com/codimd/container)
-
 
 <br><br>
 
 ## 安裝步驟
+
+這邊安裝了社群維護 CodiMD
 
 ```shell
 $ git clone https://github.com/codimd/container.git codimd-container
@@ -299,3 +299,14 @@ HackMD / CodiMD 是真的很好用，但說實話建置說明文件偏少（還�
 3. [How To Install Docker Compose on Ubuntu 16.04｜DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04)
 4. [Docker “ERROR: could not find an available, non-overlapping IPv4 address pool among the defaults to assign to the network”｜Stack Overflow](https://stackoverflow.com/questions/43720339/docker-error-could-not-find-an-available-non-overlapping-ipv4-address-pool-am)
 5. [Docker系列教程24-Docker Compose网络设置｜周立的博客 关注Spring Cloud、Docker](http://www.itmuch.com/docker/24-docker-compose-network/)
+
+<br><br> 
+
+## 更新紀錄
+<details>
+  <summary>最後更新日期：2021-01-26</summary>
+  <ul class="timestamp">
+    　<li>2021-01-26 更新：repository 資訊</li>
+    　<li>2019-06-04 發布</li>
+  </ul>
+</details>

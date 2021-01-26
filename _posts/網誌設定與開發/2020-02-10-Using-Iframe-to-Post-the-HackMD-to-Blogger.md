@@ -6,7 +6,7 @@ categories:
 - 網誌設定與開發
 tags:
 - Blogger
-- HackMD/CodiMD
+- HackMD/CodiMD/HedgeDoc
 - HTML
 --- 
 
