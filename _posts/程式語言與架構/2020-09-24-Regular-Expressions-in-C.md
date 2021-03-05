@@ -1,7 +1,7 @@
 ---
 title: 【C 語言】使用 Regular Expressions 
-date: 2020-09-24 23:28
-is_modified: false
+date: 2021-03-05 20:15
+is_modified: true
 categories:
 - 程式語言與架構
 tags:
@@ -46,7 +46,7 @@ int regcomp(regex_t *preg, const char *pattern, int cflags)
     3. **REG_NOSUB**：僅回報匹配成功或失敗。        
     4. **REG_NEWLINE**： 識別換行符號。  
 <br>
-    思考了下，我應該會開 **ERE**，因為我會的**流派**應該算是 <span class="highlighting">PCRE （Perl Compatible Regular Expressions）</span>一派，跟 BRE（Basic Regular Expression，基本型正規表示式）[差異](http://www.greenend.org.uk/rjk/tech/regexp.html）看起來頗多，相較之下 ERE 還稍微相近一點，不過還是有些差異。 
+    思考了下，我應該會開 **ERE**，因為我會的**流派**應該算是 <span class="highlighting">PCRE （Perl Compatible Regular Expressions）</span>一派，跟 BRE（Basic Regular Expression，基本型正規表示式）[差異](http://www.greenend.org.uk/rjk/tech/regexp.html) 看起來頗多，相較之下 ERE 還稍微相近一點，不過還是有些差異。 
  
 <br>
 
@@ -56,7 +56,7 @@ int regcomp(regex_t *preg, const char *pattern, int cflags)
 regex_t preg; // 宣告編譯結果變數
 const char* pattern = "^[a-z0-9_]+@([a-z0-9-]+\\.)+[a-z0-9]+$"; // 定義表示式
 // 編譯，這邊使用 ERE，且不考慮大小寫
-int success = regcomp(&reg, pattern, REG_EXTENDED|REG_ICASE);
+int success = regcomp(&preg, pattern, REG_EXTENDED|REG_ICASE);
 assert(success==0);
 ```
 
@@ -214,7 +214,8 @@ int main(){
 ## 更新紀錄
 <details>
   <summary>最後更新日期：2020-09-24</summary>
-  <ul class="timestamp">
+  <ul class="timestamp">  
+    　<li>2021-03-05 錯誤修正</li>
     　<li>2020-09-24 發布</li>
     　<li>2020-09-09 完稿</li>
     　<li>2020-08-28 起稿</li>
