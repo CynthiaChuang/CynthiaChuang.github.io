@@ -1,6 +1,6 @@
 ---
 title: 【實用 Photoshop 入門到大師】 目錄
-date: 2021-02-01 21:58
+date: 2021-03-08 00:15
 is_modified: false
 categories:
 - 研讀筆記
@@ -34,15 +34,16 @@ tags:
 | 讀完 | 章節名稱                                                                       |
 | ---- |:------------------------------------------------------------------------------ |
 | ☑️  | [01. 界面介紹](/Practical-Photoshop-from-Beginner-to-Master-01) |
-| ☐   | 02. 圖層裡的奧秘                                                            |
+| ☑️   | [02. 圖層裡的奧秘](/Practical-Photoshop-from-Beginner-to-Master-02) |
 | ☐   | 03. 重要觀念 |
-
+   
 <br><br> 
 
 ## 更新紀錄
 <details>
-  <summary>最後更新日期：2021-01-14</summary>
+  <summary>最後更新日期：2021-03-08</summary>
   <ul class="timestamp">
+    　<li>2021-03-08 更新第二章連結</li>
     　<li>2021-01-14 更新第一章連結</li>
     　<li>2020-12-13 起稿</li>
   </ul>
