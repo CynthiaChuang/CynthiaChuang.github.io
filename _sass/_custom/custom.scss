@@ -292,6 +292,56 @@
   }
 }
 
+.post-body mark {
+  background-color: transparent;
+  padding: 2px 1px;
+  border-radius: 5px; 
+  color: $text-color ;  
+  background: linear-gradient(transparent 40%,rgba(255,255,255,0) 50%, $mark-default  75%, $mark-default 90%, transparent 95%);
+  
+  &.warning {
+    background: linear-gradient(transparent 40%, rgba(255,255,255,0) 50%,  $mark-warning  75%, $mark-warning 90%, transparent 95%);
+  }
+
+  &.danger {
+    background: linear-gradient(transparent 40%, rgba(255,255,255,0) 50%,  $mark-danger  75%, $mark-danger 90%, transparent 95%);
+  }    
+
+
+  &.thick {
+    padding: 0px;
+    border-radius: 0px; 
+    background: none;
+    background-color: $mark-default;
+
+    &.warning {
+      background-color: $mark-warning;
+    }
+
+    &.danger {
+      background-color: $mark-danger;
+    }
+  }
+
+  &.under {    
+    padding: 0px;  
+    border-radius: 0px; 
+    background: none;
+    background-color: none;
+    border-bottom: 3px solid $mark-default; 
+
+    &.warning {
+      border-bottom: 3px solid $mark-warning;
+    }
+
+    &.danger {
+      border-bottom: 3px solid $mark-danger;
+    }
+  }
+
+
+}
+
 // --------------------------------------------------
 .post-body .imgtext{
   color: $image-text;   
