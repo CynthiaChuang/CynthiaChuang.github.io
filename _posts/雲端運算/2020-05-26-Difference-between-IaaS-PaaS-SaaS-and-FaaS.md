@@ -27,7 +27,7 @@ tags:
 <center class="imgtext">IaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-iaas/" class="imgtext">Microsoft Azure</a>）</center>
 <br>
 
-Infrastructure as a Service 翻譯為**基礎設施即服務**，一般簡稱 **IaaS**，顧名思義就是 <span class='highlighting'>服務商提供基礎設施作為他們的服務</span>，是一種雲端運算產品。
+Infrastructure as a Service 翻譯為**基礎設施即服務**，一般簡稱 **IaaS**，顧名思義就是 <mark>服務商提供基礎設施作為他們的服務</mark>，是一種雲端運算產品。
 
 在此服務（或稱商品）中，服務商會提供底層/物理層基礎設施，諸如：伺服器、資料中心、伺服器機房、儲存及網路...等，各種使用者所需用來處理、儲存、計算與網路的運算資源。<br>
 
@@ -49,7 +49,7 @@ Infrastructure as a Service 翻譯為**基礎設施即服務**，一般簡稱 **
 
 Platform as a Service 翻譯為**平台即服務**，一般簡稱 **PaaS**，在這項服務中供應商會提供使用者開發與管理所需的平台環境，如此一來，使用者只需要專注在資料處理與應用程式的開發項目...等，免除開發環境設置、相依軟體安裝、安全性、伺服器軟體及備份...等困擾。
  
-因為 PaaS 是基於 IaaS 所提供的服務，因此它也同時具備 IaaS 所帶來的優勢，並提供額外，如：<span class='highlighting'>開發時間減少</span>、<span class='highlighting'>便捷管理應用程式生命週期</span>...等優勢。
+因為 PaaS 是基於 IaaS 所提供的服務，因此它也同時具備 IaaS 所帶來的優勢，並提供額外，如：<mark>開發時間減少</mark>、<mark>便捷管理應用程式生命週期</mark>...等優勢。
  
 <br><br> 
 

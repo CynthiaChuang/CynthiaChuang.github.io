@@ -36,7 +36,7 @@ NTP synchronized: yes
 RTC in local TZ: no
 ```
  
-<br> 正常情況下，若設定台北時間（ +8:00 ），時區代碼應該會顯 <span class='highlighting'>CST</span>（Chungyuan Standard Time，中原標準時間），就像上面那樣，但我顯示的卻是 <span class='highlighting'>UTC</span>：
+<br> 正常情況下，若設定台北時間（ +8:00 ），時區代碼應該會顯 <mark>CST</mark>（Chungyuan Standard Time，中原標準時間），就像上面那樣，但我顯示的卻是 <mark>UTC</mark>：
 ```bash
 Fri Feb 21 01:05:28 UTC 2020
 ``` 

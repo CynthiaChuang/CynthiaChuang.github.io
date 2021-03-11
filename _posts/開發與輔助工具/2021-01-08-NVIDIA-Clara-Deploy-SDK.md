@@ -485,7 +485,7 @@ Argo Workflow 是一個基於 Kubernetes CRD 實現開源工作流程引擎，�
 <center class="imgtext">Argo UI</center>
 <br>
 
-不過 Argo 會將每個 Operator 分別起在不同 Pod 上，而每個 Pod 會需要 2 秒的啟動時間，因此整個 <span class='highlighting'>Pipeline 的啟動時間會取決於 Operator 數目</span>；而在 Clara Orchestration 則是會將所有的 Operator 起在同一個 Pod 上，無論 Operator 的個數，<span class='highlighting'>Pipeline 啟動時間都會是 2 秒</span>。
+不過 Argo 會將每個 Operator 分別起在不同 Pod 上，而每個 Pod 會需要 2 秒的啟動時間，因此整個 <mark>Pipeline 的啟動時間會取決於 Operator 數目</mark>；而在 Clara Orchestration 則是會將所有的 Operator 起在同一個 Pod 上，無論 Operator 的個數，<mark>Pipeline 啟動時間都會是 2 秒</mark>。
 
 因此 NVIDIA 在 [文件](https://docs.nvidia.com/clara/deploy/sdk/Platform/Pipelines/public/docs/operators.html#argo-vs-clara-orchestration)上建議，基於效能的考量，在開發與測試時間可使用 Argo，但在正式部署則應使用 Clara 以追求更高的性能。
 
@@ -518,9 +518,9 @@ Argo Workflow 是一個基於 Kubernetes CRD 實現開源工作流程引擎，�
 > **JobPriority**：Immediate > High > Normal > Low
 
 - **立即優先級（immediate）**：擁有此優先級的 Job 會在單獨的佇列中排隊，在調度其他優先級的 Job 前必須先清空此佇列。
-- **較高優先級（high）**：優先級較高的 Job 會比其他較低的 Job <span class='highlighting'>更常</span>被安排執行。
+- **較高優先級（high）**：優先級較高的 Job 會比其他較低的 Job <mark>更常</mark>被安排執行。
 - **默認優先級（normal）**：默認的優先序。
-- **較低優先級（Low）**：執行的<span class='highlighting'>頻率</span>低於較高優先級的 Job。
+- **較低優先級（Low）**：執行的<mark>頻率</mark>低於較高優先級的 Job。
 
 根據上述的文字看來，除了 immediate 擁有絕對的優先序外，其他的幾個級別都是**執行頻率**的差異。
 

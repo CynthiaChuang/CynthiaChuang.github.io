@@ -101,7 +101,7 @@ model.fit(dataset,
 認真研究下兩種狀況的 dataset 的差別：
 ### 切割 steps_per_epoch
 
-發現這個類型必須要可以控制<span class='highlighting'>每個 epoch step 數目</span>，此外<span class='highlighting'>會盡可能的去打散資料</span>，如 `ImageDataGenerator.flow` ，更甚至 `dataset.repeat().shuffle(10000).batch(128)`，保證每個節點每個 batch 拿到資料內容不盡相同。然後在用steps_per_epoch 去聲明一個 epoch 的總步數，當然這步數比實際小，所以每個節點每個 epoch 只會看到 dataset 的一部分，以達到將一個資料集分成 N 份效果。
+發現這個類型必須要可以控制<mark>每個 epoch step 數目</mark>，此外<mark>會盡可能的去打散資料</mark>，如 `ImageDataGenerator.flow` ，更甚至 `dataset.repeat().shuffle(10000).batch(128)`，保證每個節點每個 batch 拿到資料內容不盡相同。然後在用steps_per_epoch 去聲明一個 epoch 的總步數，當然這步數比實際小，所以每個節點每個 epoch 只會看到 dataset 的一部分，以達到將一個資料集分成 N 份效果。
 
 但這方式隨機性太高，我覺得不能保證整個資料集都被看過，若資料集小則不太適合這樣的切割法。
 

@@ -271,27 +271,8 @@
   }
 }
 
-// highlighting
+// mark
 // --------------------------------------------------
-.post-body .highlighting {
-  padding: 0 2px;
-  white-space: pre-line;
-  border-radius: 2px;
-  background-color: $highlighting-default;
-
-  &.success {
-    background-color: $highlighting-success;
-  }
-
-  &.warning {
-    background-color:$highlighting-warning ;
-  }
-   
-  &.danger {
-    background-color: $highlighting-danger;
-  }
-}
-
 .post-body mark {
   background-color: transparent;
   padding: 2px 1px;
@@ -338,8 +319,6 @@
       border-bottom: 3px solid $mark-danger;
     }
   }
-
-
 }
 
 // --------------------------------------------------

@@ -29,7 +29,7 @@ tags:
     $ mpirun ... python tensorflow_word2vec.py |& grep -v "Read -1"
     ```
 2. **在執行 Docker 時候加上 --privileged**  
-    加上 --privileged 來執行 Docker 就會啟動所謂的<span class='highlighting'>特權容器 (privileged container)</span>，使容器擁有主機完整的 root 權限。
+    加上 --privileged 來執行 Docker 就會啟動所謂的<mark>特權容器 (privileged container)</mark>，使容器擁有主機完整的 root 權限。
     
     但因為擁有主機完整的 root 權限，因此在容器中可以看到所有的 gpu resurce，卻也會導致我限定 gpu 使用的指令無效。
     

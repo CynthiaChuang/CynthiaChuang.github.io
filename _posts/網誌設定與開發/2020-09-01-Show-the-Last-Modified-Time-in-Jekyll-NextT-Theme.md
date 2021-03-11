@@ -72,7 +72,7 @@ tags:
 
 雖然沒有符合預期的原生結果，但還好身為一個工程師，我可以自己動手做，~~至於失敗就是另外一回事了~~。
 
-巡視了下網站，發現時間戳會出現在網站的三處：<span class='highlighting'>文章本身</span>、<span class='highlighting'>首頁</span> 以及 <span class='highlighting'>時間軸</span> 三處。不過實際翻看程式碼，會注意到文章與首頁的時間戳其實共用一個 HTML 的，所以需要修改的地方只有兩處。
+巡視了下網站，發現時間戳會出現在網站的三處：<mark>文章本身</mark>、<mark>首頁</mark> 以及 <mark>時間軸</mark> 三處。不過實際翻看程式碼，會注意到文章與首頁的時間戳其實共用一個 HTML 的，所以需要修改的地方只有兩處。
 
 <div class="alert warning">  
 <div class="head">我更改了 yaml 區域中最後修改時間的字段</div>
@@ -142,7 +142,7 @@ tags:
         考慮到如果 updated_at 為 `false` 的情況， yaml 中可能不會存在該字段，所以先判斷它是否存在，再來套用 Filter。
     
     2. **show**  
-        另外用了一個名為 `show` 的變數來當 flag。一來是因為想盡可能遵守<span class='highlighting'>程式碼不重複</span>的原則，二來是因為 Liquid 的流程控制真的超難寫，有些 Ruby 的語法我在這邊都找不到。:cry:
+        另外用了一個名為 `show` 的變數來當 flag。一來是因為想盡可能遵守<mark>程式碼不重複</mark>的原則，二來是因為 Liquid 的流程控制真的超難寫，有些 Ruby 的語法我在這邊都找不到。:cry:
         
 修改後的程式碼如下：
 
@@ -218,7 +218,7 @@ tags:
 
 另外在時間軸上也藏了一個小小需要改的地方，就是在 archives 頁面上那個年份的分隔。
 
-這邊是定義在 `_includes/archive.html` 中，還滿好找的，上方剛好有一個註解寫 <span class='highlighting'>Show year</span>。一樣幫那行加上個流程控制：
+這邊是定義在 `_includes/archive.html` 中，還滿好找的，上方剛好有一個註解寫 <mark>Show year</mark>。一樣幫那行加上個流程控制：
 
 {% raw %}
 ```html
@@ -239,7 +239,7 @@ tags:
 
 搞定時間顯示後，我還希望文章可以按照最後修改的日期來排序，不然我辛苦改完了不就沒人知道嗎？
 
-而與排序有關的有<span class='highlighting'>時間軸</span>以及<span class='highlighting'>首頁</span>的部分。
+而與排序有關的有<mark>時間軸</mark>以及<mark>首頁</mark>的部分。
 
 ### 時間軸
 
@@ -266,7 +266,7 @@ tags:
 
 最後是首頁的部分，這邊也是我唯一改不動的部分。也不能說改不動，如果你沒有啟動分頁器功能，其實是可以順利完成，但一旦啟動分頁器就 GG 了。
 
-打開 `_includes/index.html` ，會看到原先兩行程式碼分別對應兩種狀況：有無使用<span class='highlighting'>分頁器</span>。原本不打算動這邊的邏輯，直接在最後套上判斷式就好，結果如下：
+打開 `_includes/index.html` ，會看到原先兩行程式碼分別對應兩種狀況：有無使用<mark>分頁器</mark>。原本不打算動這邊的邏輯，直接在最後套上判斷式就好，結果如下：
 
 {% raw %}
 ```html

@@ -25,9 +25,9 @@ tags:
 
 ## 使用 Extend 避免重複造輪子
 
-這邊跟 Java 一樣中使用 _extends_ 作為其擴充父類別的關鍵字，不過它雖然關鍵字是 _extends_ 有加 _s_ ，但實質是<span class='highlighting'>不支援</span>多重繼承的。
+這邊跟 Java 一樣中使用 _extends_ 作為其擴充父類別的關鍵字，不過它雖然關鍵字是 _extends_ 有加 _s_ ，但實質是<mark>不支援</mark>多重繼承的。
  
-實做方式如下，先使用 <span class='highlighting'>Vue.extend</span> 實做要被擴充父類別：
+實做方式如下，先使用 <mark>Vue.extend</mark> 實做要被擴充父類別：
 ```javascript
 // extend  
 var newExtends = Vue.extend({   
@@ -68,7 +68,7 @@ var childTwo = {
 
 <br>
 
-就我自己理解當使用 Extend 擴充父類別時，Object 會被繼承，（如：mounted，computed）。若在子類別的 Object 中宣告與父類別相同名稱的 <span class='highlighting'>變數</span> 或 <span class='highlighting'>函式</span> 名稱，則會 Override 父類別的。是說不曉得有 super 可以用？
+就我自己理解當使用 Extend 擴充父類別時，Object 會被繼承，（如：mounted，computed）。若在子類別的 Object 中宣告與父類別相同名稱的 <mark>變數</mark> 或 <mark>函式</mark> 名稱，則會 Override 父類別的。是說不曉得有 super 可以用？
 
 <br>
 
@@ -84,7 +84,7 @@ var childTwo = {
 
 Vue.js 還有提供 Filter（過濾器）的功能，主要用於處理格式化文字等狀況。filter 可重複使用，一個值可以套用多個 filter。
 
-<br> filter 一樣可以分為 <span class='highlighting'>全域</span> 與 <span class='highlighting'>局部</span>，全域的宣告是在外層使用 <span class='highlighting'>Vue.filter</span>
+<br> filter 一樣可以分為 <mark>全域</mark> 與 <mark>局部</mark>，全域的宣告是在外層使用 <mark>Vue.filter</mark>
 
 ```javascript
 Vue.filter(filterName,function(n){
@@ -92,7 +92,7 @@ Vue.filter(filterName,function(n){
 })
 ```
 
-<br> 而局部宣告是在元件中加入 <span class='highlighting'>filters</span> 的物件
+<br> 而局部宣告是在元件中加入 <mark>filters</mark> 的物件
 ```javascript
 var child = {
    data:function() {
@@ -110,7 +110,7 @@ var child = {
 
 <br>
 
-如要使用 filter 過濾器，則在 Mustache 中在變數後方使用 <span class='highlighting'>「|」（pipe）</span>符號聯集多個 filter，執行時由左向右執行，它會將 pipe 符號左方的結果當作參數傳數入右方的 filter ，所以在撰寫 filter function 時記得宣告參數。
+如要使用 filter 過濾器，則在 Mustache 中在變數後方使用 <mark>「|」（pipe）</mark>符號聯集多個 filter，執行時由左向右執行，它會將 pipe 符號左方的結果當作參數傳數入右方的 filter ，所以在撰寫 filter function 時記得宣告參數。
 
 {% raw %}
 ```javascript
@@ -138,7 +138,7 @@ filters: {
 
 在第四章的進階模板語法介紹中，有提過 [Vue.set()](https://myskilltree.blogspot.com/2019/04/vuejs-04.html#v-for-與其使用細節)，那時說過 Vue 無法探測普通的新增屬性，因此必須使用 **Vue.set( target, key, value )** 強制將資料寫入視圖中，它才能在 UI 上反應。
 
-如過要確認物件的內容是否有被綁定在 DOM 中，可用 console.log 印出 this 確認 Vue 的內容，如果 <span class='highlighting'>物件的元素中不包含 get 與 set 時</span>，下圖上框，代表<span class='highlighting'>資料結構並未被綁定在 DOM 中</span>。
+如過要確認物件的內容是否有被綁定在 DOM 中，可用 console.log 印出 this 確認 Vue 的內容，如果 <mark>物件的元素中不包含 get 與 set 時</mark>，下圖上框，代表<mark>資料結構並未被綁定在 DOM 中</mark>。
  
 ![Imgur](https://i.imgur.com/vrR6i8A.png)
 
@@ -151,7 +151,7 @@ filters: {
 
 ## Mixin 混合其它的元件內容
 
-如果說 extend 是繼承的概念，它會繼承父類別的所有行為。而 <span class='highlighting'>mixin 有點類似 Util 或 Helper</span>，在一旁用物件將元件的功能寫好，讓使用者可以直接程式中宣告 <span class='highlighting'>mixins</span> 後傳入使用（這邊的 _s_ 總算加對了...），而一個元件可以傳入多的物件，需注意傳入的時，需以陣列方式傳入，即：
+如果說 extend 是繼承的概念，它會繼承父類別的所有行為。而 <mark>mixin 有點類似 Util 或 Helper</mark>，在一旁用物件將元件的功能寫好，讓使用者可以直接程式中宣告 <mark>mixins</mark> 後傳入使用（這邊的 _s_ 總算加對了...），而一個元件可以傳入多的物件，需注意傳入的時，需以陣列方式傳入，即：
 
 ```javascript
 mixins:[object1, object2]

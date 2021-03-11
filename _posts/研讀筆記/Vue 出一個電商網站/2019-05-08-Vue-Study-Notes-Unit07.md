@@ -66,7 +66,7 @@ tags:
     ```
     <br>當使用 **var** 來宣告迴圈變數 i 時，會輸出 10次 **這執行第10次**，而非預期中 **這執行第0~9次**。
     
-    這原因主要是<span class='highlighting'>作用域問題</span>，以這個 case 來說，i 並不屬於 for 迴圈的區域變數，而是全域變數（因為外面沒有包 function，因此直接掛到 window 下面了...）。等到 for 迴圈結束後，會從事件佇列中依序執行 setTimeout 中的 function 內容。此時 function 會去找 i 來印出，它只能找到全域變數下 i ，而 i 在迴圈結束後被設成了 10 ，因此會印出 10 次**這執行第10次**。
+    這原因主要是<mark>作用域問題</mark>，以這個 case 來說，i 並不屬於 for 迴圈的區域變數，而是全域變數（因為外面沒有包 function，因此直接掛到 window 下面了...）。等到 for 迴圈結束後，會從事件佇列中依序執行 setTimeout 中的 function 內容。此時 function 會去找 i 來印出，它只能找到全域變數下 i ，而 i 在迴圈結束後被設成了 10 ，因此會印出 10 次**這執行第10次**。
 
     而若是用 let 宣告變數，它的作用域是 block，因此每一次 for 迴圈執行 setTimeout 中的 function 都引用到 for 這個 block 作用域下的 i。不過需要注意的是，因為這樣的引用關係，這些變數 i 所佔的記憶體，在 setTimeout 未執行前都不會被釋放。
     
@@ -112,7 +112,7 @@ let familyAll6=[...groupA,...groupB] //ES6合併陣列
 <br>
 	
 ### **淺複製 (Shallow Copy) V.S. 深複製 (Deep Copy)**  
-JavaScript 的物件或是陣列的儲存方式是記錄記憶體位置，因此當將 groupA 指給 groupB 對 groupB 進行賦值時，是使用<span class='highlighting'>淺複製</span>的方式將 groupA 所記錄的記憶體位置傳給 groupB，最終會導致<span class='highlighting'>當對 groupB 進行操作時， groupA 也會後受到影響</span>，即下圖左。
+JavaScript 的物件或是陣列的儲存方式是記錄記憶體位置，因此當將 groupA 指給 groupB 對 groupB 進行賦值時，是使用<mark>淺複製</mark>的方式將 groupA 所記錄的記憶體位置傳給 groupB，最終會導致<mark>當對 groupB 進行操作時， groupA 也會後受到影響</mark>，即下圖左。
 
 ```javascript
 let groupA = ['小明', '杰倫', '阿姨'];
@@ -122,7 +122,7 @@ console.log(groupA);
 //["小明", "杰倫", "阿姨", "阿明"]
 ```
     
-<br> 為了避免這種影響到互相影響發生，可以改採<span class='highlighting'>深複製</span>的方式（下圖右），借助上一節所提到的<span class='highlighting'>展開語法</span>，將 groupA 值一一取出後，放入一個新的陣列中，處理物件也是相同宣告方法。
+<br> 為了避免這種影響到互相影響發生，可以改採<mark>深複製</mark>的方式（下圖右），借助上一節所提到的<mark>展開語法</mark>，將 groupA 值一一取出後，放入一個新的陣列中，處理物件也是相同宣告方法。
 
 ```javascript
 let groupB = [...groupA]
@@ -137,9 +137,9 @@ let groupB = [...groupA]
 <br>
 	 
 ### **類陣列觀念說明**
-在使用 [Node.childNodes](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/childNodes) 或 [document.querySelectorAll](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll ) 時會回傳包含指定節點的子節點的集合，此集合稱為 <span class='highlighting'>Node List</span>，是種類似陣列的資料結構，但是不能使用陣列的部份方法，因此又被稱為 <span class='highlighting'>類陣列</span>。
+在使用 [Node.childNodes](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/childNodes) 或 [document.querySelectorAll](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll ) 時會回傳包含指定節點的子節點的集合，此集合稱為 <mark>Node List</mark>，是種類似陣列的資料結構，但是不能使用陣列的部份方法，因此又被稱為 <mark>類陣列</mark>。
 
-若要將 Node List 轉成陣列，一樣是使用<span class='highlighting'>展開語法</span>
+若要將 Node List 轉成陣列，一樣是使用<mark>展開語法</mark>
 ```javascript
 let myArray = [...myNodeList]
 ```
@@ -172,7 +172,7 @@ updateEasyCard(10, 50, 100, 50, 5, 1, 1, 1, 500); // 我有 718 元
 <br><br>
 
 ## 解構
-解構全名為<span class='highlighting'>解構賦值</span>，其概念是將右方資料<span class='highlighting'>鏡射</span>到左方。下面舉些應用情境：
+解構全名為<mark>解構賦值</mark>，其概念是將右方資料<mark>鏡射</mark>到左方。下面舉些應用情境：
 ### 將陣列中的的值，賦予到變數上 
 ```javascript
 let family = ['小明', '杰倫', '阿姨', '老媽', '老爸'];
@@ -253,7 +253,7 @@ let{ Ginyu } = GinyuTeam
 
 應用情境：
 ### 合併物件
-當屬性，也就是要傳數的<span class='highlighting'>變數名稱，與 key 值名稱相同</span>時可省略，只寫一個即可。
+當屬性，也就是要傳數的<mark>變數名稱，與 key 值名稱相同</mark>時可省略，只寫一個即可。
 
 ```javascript 
 const Frieza = "弗利沙";
@@ -301,13 +301,13 @@ functionName(){
 
 在[展開與其餘參數](#展開與其餘參數)中說明不定長度參數時，有提過一個（個人認為）JS 比較神奇的特性，就是如果你傳入參數多於你宣告的個數，多餘的部份會變成名為 arguments 的類陣列物件。 
 
-不過，這件事情在使用<span class='highlighting'>箭頭函式</span>時是不成立的，你會直接得到一個 error。
+不過，這件事情在使用<mark>箭頭函式</mark>時是不成立的，你會直接得到一個 error。
 
 > Uncaught ReferenceError: arguments is not defined
 	    at updateEasyCard (arrow_function.html:118)
 	    at arrow_function.html:120
 	    
-<br>另外一點需要注意的是，<span class='highlighting'>兩種的函式所綁定的 this 是不同的</span>，
+<br>另外一點需要注意的是，<mark>兩種的函式所綁定的 this 是不同的</mark>，
 - 傳統函式：依呼叫的方法而定
 - 箭頭函式：綁定到其定義時所在的物件
 

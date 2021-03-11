@@ -45,7 +45,7 @@ tags:
 
 <br>
 
-下方的 Index Terms 有幾個不太熟悉的字彙： <span class='highlighting'>Graph Convolutional Network</span> 與 <span class='highlighting'>Visual Attention</span>。 
+下方的 Index Terms 有幾個不太熟悉的字彙： <mark>Graph Convolutional Network</mark> 與 <mark>Visual Attention</mark>。 
 
 1. **Visual Attention**  
     這好猜，應該就是引入了 Attention，只是我之前不會特地區分是不是用在 CV 還是 NLP，雖然兩種都有看過 XDDD，說到 CV 的 Attention，忽然想到 Grad Cam 的熱力圖。~~史嘉蕾·喬韓森真的很漂亮 :heart_decoration:~~   
@@ -67,7 +67,7 @@ tags:
 
 ## 1. Introduction ＆ Problem Formulation and Challenges
 
-論文一開始先就 <span class='highlighting'>Attribute</span> 與 <span class='highlighting'>Pedestrian Attribute Recognition</span> 定義開始說起。
+論文一開始先就 <mark>Attribute</mark> 與 <mark>Pedestrian Attribute Recognition</mark> 定義開始說起。
 
 ### 1.1 Problem Formulation
 
@@ -102,7 +102,7 @@ tags:
 由於外觀多樣性（appearance diversity）和外觀歧義性，導致類別間差異（intra-class variations）頗大，這編列出了一些在訓練會遇到的問題：
 
 1. **Multi-views**  
-    由於攝影機放在不同的進行監測，所以會產生<span class='highlighting'>不同角度採樣</span>的問題，在加上行人動作變化多端，這使得屬性識別變的更加複雜。
+    由於攝影機放在不同的進行監測，所以會產生<mark>不同角度採樣</mark>的問題，在加上行人動作變化多端，這使得屬性識別變的更加複雜。
 
 2. **Occlusio**  
     人體可能被其他障礙物或是行人遮擋，導致部份屬性被遮蔽，或是引入障礙物的特徵，導致訓練難度增加。如果是障礙物是其他行人，可能還會引入其他人特徵。
@@ -110,7 +110,7 @@ tags:
     另外一個我想到的可能比較偏向實做的問題，一般從大圖剪裁人物圖像出來的時候，不一定會像資料集裁剪的那剛好。有可能裁太小，導致部份特徵被裁到，另如後背包；或是裁太大，納入了太多雜訊，感覺這狀況也跟遮蔽物的情況相似。
  
 3. **Unbalanced Data Distribution**  
-    應該是在說<span class='highlighting'>類別不平均</span>的問題。
+    應該是在說<mark>類別不平均</mark>的問題。
  
 4. **Low Resolution**  
     低解析度問題影像圖像品質。好的攝影機太貴了，沒辦法大量佈置 XDDD
@@ -360,7 +360,7 @@ tags:
 目前常使用的有兩種：
 
 1.  **mean acccuracy (mA)**  
-    $mA$ 分別計算每個**屬性**正負樣本分對的比例，再將兩者平均作為這一個屬性的精準度，最後再將所有屬性取平均做為最後的值 $mA$ 指標。這種以**屬性**下去算的方式，被稱作 <span class='highlighting'>label-based</span> 的評估方式。
+    $mA$ 分別計算每個**屬性**正負樣本分對的比例，再將兩者平均作為這一個屬性的精準度，最後再將所有屬性取平均做為最後的值 $mA$ 指標。這種以**屬性**下去算的方式，被稱作 <mark>label-based</mark> 的評估方式。
     
     具體公式如下： 
 
@@ -371,7 +371,7 @@ tags:
     其中，$L$ 是屬性的數量，$P_i$ 和 $TP_i$ 分別為正樣本數與分對的正樣本數；同理，$N_i$ 和 $TN_i$ 則為負樣本與分對的負樣本。
     
 2. **Example-based evaluation**  
-    但 label-based 的評估方式並<span class='highlighting'>沒有</span>考慮到屬性之間的關聯性，因此提出了以每個樣本為基礎的評估方式：
+    但 label-based 的評估方式並<mark>沒有</mark>考慮到屬性之間的關聯性，因此提出了以每個樣本為基礎的評估方式：
     
     $$
     \begin{aligned}	
@@ -394,7 +394,7 @@ tags:
     
     不過剩下兩個 recall 跟 precision 的公式，我越看越奇怪，$1/2$ 倒底哪來的？  
     
-    以 recall 來說 $\sum$ 後面是很標準定義，即<span class='highlighting'>在原本 positive 的資料中被預測出多少</span>，每個樣本的 recall 相加算平均，怎也沒有 $1/2$ 的事，論文中也沒特地提及這個。
+    以 recall 來說 $\sum$ 後面是很標準定義，即<mark>在原本 positive 的資料中被預測出多少</mark>，每個樣本的 recall 相加算平均，怎也沒有 $1/2$ 的事，論文中也沒特地提及這個。
     
     所以只好去看看出處的公式...恩看來是打錯了呢 XD
     
@@ -403,7 +403,7 @@ tags:
     <br>
 
 3. **其他指標**  
-    除了這兩種外，在部份論文中有會採用 <span class='highlighting'>Receiver Operating Characteristic (ROC)</span> 與 <span class='highlighting'>Area Under the average ROC Curve (AUC)</span> 作為指標。 
+    除了這兩種外，在部份論文中有會採用 <mark>Receiver Operating Characteristic (ROC)</mark> 與 <mark>Area Under the average ROC Curve (AUC)</mark> 作為指標。 
 
 <br><br>
 
@@ -417,7 +417,7 @@ tags:
 
 在現實中，許多事務是相關聯的，例如，在行人屬性中性別和衣服樣式是互相關聯的。
 
-若獨立處理單一任務很容易忽略這種相關性，可能導致最終性能的調校會遇到瓶頸，通過進行一定程度共享不同任務間的參數與特徵，可能會使原任務的泛化效果更好。而在多任務學習中，主要分成兩種方法： <span class='highlighting'>Hard parameter sharing</span> 與  <span class='highlighting'>Soft parameter sharing</span>。
+若獨立處理單一任務很容易忽略這種相關性，可能導致最終性能的調校會遇到瓶頸，通過進行一定程度共享不同任務間的參數與特徵，可能會使原任務的泛化效果更好。而在多任務學習中，主要分成兩種方法： <mark>Hard parameter sharing</mark> 與  <mark>Soft parameter sharing</mark>。
 
 <center> <img src="https://i.imgur.com/vnCzxiq.png" alt="Multitask Learning 兩種方法"></center>
 <center class="imgtext">左、Hard parameter sharing 右、Soft parameter sharing （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
@@ -438,7 +438,7 @@ tags:
 
 目前已有的 Multilabel Learning 問題求解策略大致可以分為以下三類：
 1. **一階策略**  
-    一階策略是最簡單的形式，直接將 Multilabel Learning 分解成 $N$ 個獨立 Binary class Learning 來建構 Multilabel Learning 的模型，這樣的方法好處是<span class='highlighting'>效率高且易實現</span>，但它忽略的屬性之間關係，泛化能力較差，效能也會受影響。
+    一階策略是最簡單的形式，直接將 Multilabel Learning 分解成 $N$ 個獨立 Binary class Learning 來建構 Multilabel Learning 的模型，這樣的方法好處是<mark>效率高且易實現</mark>，但它忽略的屬性之間關係，泛化能力較差，效能也會受影響。
 
 2. **二階策略**  
     該類策略考慮屬性之間的相關性，比如為相關屬性和不相關屬性間的排序關係。這樣的方法在一定程度上察覺了屬性間的相關性，因此泛化性能較佳。
@@ -454,12 +454,12 @@ tags:
 <center class="imgtext">代表性的多標籤學習算法的分類 （圖片來源: <a href="https://arxiv.org/pdf/1901.07474.pdf" class="imgtext">論文</a>）</center>
 
 1. **問題轉換, Problem Transformation**  
-   該方法個核心是<span class='highlighting'>改造資料適應演算法，fit data to algorithm</span>，將 Multilabel  Learning 問題轉換為其它已知的學習問題進行求解。
+   該方法個核心是<mark>改造資料適應演算法，fit data to algorithm</mark>，將 Multilabel  Learning 問題轉換為其它已知的學習問題進行求解。
    
    依照剛剛的求解策略列舉一些代表性演算法，一階方法，該方法將 Multilabel  Learning 學習問題轉化為 Binary Classification 問題求解；二階方法，則是問題轉化校準標籤排名演算法，為**標記排序（label ranking）**，它考慮了成對標籤之間的相關性，然後進行排序；另一個二階方法是分類器鏈演算法，這演算法的基本思想是將問題轉化為二進制分類鏈，每個二進制分類器取決於其鏈中的上一個；高階方法，隨機 k-Labelsets 演算法，該方法將問題轉化為 MultiClass Classification 問題求解，這是個集合分類問題，在每一個集合裡面是一個多分類器，並且多分類器需要學習的分類是所有標籤的子集。
 
 2. **自適應算法, Algorithm Adaptation**  
-    該方法個核心是<span class='highlighting'>改造演算法適應資料，fit algorithm to data</span>，如多標籤KNN，多標籤決策樹，多標籤SVM 。
+    該方法個核心是<mark>改造演算法適應資料，fit algorithm to data</mark>，如多標籤KNN，多標籤決策樹，多標籤SVM 。
 
  
 <br><br>
@@ -511,7 +511,7 @@ Global Image-based Models，顧名思義就是整張圖下去訓練，不做任�
 2. DeepSAR and DeepMAR (ACPR-2015)
 3. MTCNN (TMM-2015)
 
-裡面最經典的方法是 <span class='highlighting'>DeepSAR</span> 與 <span class='highlighting'>DeepMAR</span>，據說是第一篇 CNN 的論文，方法不難。重點是作者在後面幾篇的改進中，弄出了 RAP/RAP-2.0 這兩個資料集。
+裡面最經典的方法是 <mark>DeepSAR</mark> 與 <mark>DeepMAR</mark>，據說是第一篇 CNN 的論文，方法不難。重點是作者在後面幾篇的改進中，弄出了 RAP/RAP-2.0 這兩個資料集。
 
 
 <br>
@@ -583,7 +583,7 @@ Global Image-based Models，顧名思義就是整張圖下去訓練，不做任�
 1.  WPAL-network (BMVC-2017)
 2.  AWMT (MM-2017)
 
-這邊比較經典是 WPAL-network ，他考慮資料的不平衡分佈，並根據訓練集中所有屬性類別上標籤的比例，提出 <span class='highlighting'>weighted cross-entropy loss function</span>，已經廣泛使用在許多行人屬性是別的演算法中。。
+這邊比較經典是 WPAL-network ，他考慮資料的不平衡分佈，並根據訓練集中所有屬性類別上標籤的比例，提出 <mark>weighted cross-entropy loss function</mark>，已經廣泛使用在許多行人屬性是別的演算法中。。
 <br>
 ### 5.6 Curriculum Learning based Algorithms
 
@@ -654,7 +654,7 @@ Curriculum Learning，課程學習，主要思想是模仿人類學習的特點�
 
 ### 7.3 Further Explore the Visual Attention Mechanism
 
-人類感知的一個重要特徵是不會傾向於<span class='highlighting'>一次處理整個場景</span>；人類會選擇性地將注意力集中放在一小部份的空間，並在所需的時間地點來獲取資訊，且會隨時間流逝進行整合。但如何準確有效地定位注意力的關注區域仍然是一個開放的研究問題。
+人類感知的一個重要特徵是不會傾向於<mark>一次處理整個場景</mark>；人類會選擇性地將注意力集中放在一小部份的空間，並在所需的時間地點來獲取資訊，且會隨時間流逝進行整合。但如何準確有效地定位注意力的關注區域仍然是一個開放的研究問題。
 
 <br>
 

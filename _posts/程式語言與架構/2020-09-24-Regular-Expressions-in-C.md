@@ -17,7 +17,7 @@ tags:
 
 ## regex.h 函式庫
 
-用 C 來寫正規表示式第一個碰到的問題是，<span class="highlighting">C 的標準函式庫中並沒有支援正規表示式</span>。
+用 C 來寫正規表示式第一個碰到的問題是，<mark>C 的標準函式庫中並沒有支援正規表示式</mark>。
 
 
 不過還好我的開發環境是 Linux，在現行 Linux 中大多有安裝 POSIX.2，所以可以直接引入 `<regex.h>` 來使用，但如果是 Windows 就得[自食其力](https://stackoverflow.com/questions/8230905/regex-h-for-windows)了。
@@ -46,7 +46,7 @@ int regcomp(regex_t *preg, const char *pattern, int cflags)
     3. **REG_NOSUB**：僅回報匹配成功或失敗。        
     4. **REG_NEWLINE**： 識別換行符號。  
 <br>
-    思考了下，我應該會開 **ERE**，因為我會的**流派**應該算是 <span class="highlighting">PCRE （Perl Compatible Regular Expressions）</span>一派，跟 BRE（Basic Regular Expression，基本型正規表示式）[差異](http://www.greenend.org.uk/rjk/tech/regexp.html) 看起來頗多，相較之下 ERE 還稍微相近一點，不過還是有些差異。 
+    思考了下，我應該會開 **ERE**，因為我會的**流派**應該算是 <mark>PCRE （Perl Compatible Regular Expressions）</mark>一派，跟 BRE（Basic Regular Expression，基本型正規表示式）[差異](http://www.greenend.org.uk/rjk/tech/regexp.html) 看起來頗多，相較之下 ERE 還稍微相近一點，不過還是有些差異。 
  
 <br>
 
@@ -60,7 +60,7 @@ int success = regcomp(&preg, pattern, REG_EXTENDED|REG_ICASE);
 assert(success==0);
 ```
 
-是說 POSIX 體系，<span class="highlighting">沒有</span> `\d` 跟 `\w` 可用，只能寫成 `[a-z0-9]` 。
+是說 POSIX 體系，<mark>沒有</mark> `\d` 跟 `\w` 可用，只能寫成 `[a-z0-9]` 。
  
  
 <br><br>

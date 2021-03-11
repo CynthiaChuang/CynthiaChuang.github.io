@@ -21,7 +21,7 @@ tags:
 <br>
 
 ## 前置閱讀
-與 Openwhisk 最相關的條目就是 <span class='highlighting'>Fass/Serverless</span>，因此在開始前可以先看看 [IBM 微講堂系列 - 《Serverless 應用案例賞析》](/Serverless-Use-Cases-Study-Notes-Contents)，複習下 Fass/Serverless 的概念場景。可以的話，順便玩玩 [IBM Cloud Functions](https://cloud.ibm.com/functions/)，這套是以 Apache OpenWhisk 為基礎所架設 FaaS 平台，可以透過操作 IBM Cloud Functions 對 OpenWhisk 的功能有個概念。
+與 Openwhisk 最相關的條目就是 <mark>Fass/Serverless</mark>，因此在開始前可以先看看 [IBM 微講堂系列 - 《Serverless 應用案例賞析》](/Serverless-Use-Cases-Study-Notes-Contents)，複習下 Fass/Serverless 的概念場景。可以的話，順便玩玩 [IBM Cloud Functions](https://cloud.ibm.com/functions/)，這套是以 Apache OpenWhisk 為基礎所架設 FaaS 平台，可以透過操作 IBM Cloud Functions 對 OpenWhisk 的功能有個概念。
 
 <br>
 
@@ -43,7 +43,7 @@ tags:
 
 有人說 AWS Lambda 是 Serverless 的代名詞，我想這不可否認，畢竟 AWS 是最早推出 Serverless，各廠商推出 Serverless 時的競品絕對有它。但它畢竟不是開源的，因此我們無法直接使用並架設在我們自己的環境。
 
-若說到開源的 Serverless 平台，則是 <span class='highlighting'>OpenWhisk</span> 與 <span class='highlighting'>Kubeless</span> 天下。OpenWhisk 較為成熟且有許多活躍開發者的支持，但相較之下 OpenWhisk 也比 Kubeless 複雜許多、也重複實現了些 Kubernetes 中已經存在的特性（比如自動擴展機制）。
+若說到開源的 Serverless 平台，則是 <mark>OpenWhisk</mark> 與 <mark>Kubeless</mark> 天下。OpenWhisk 較為成熟且有許多活躍開發者的支持，但相較之下 OpenWhisk 也比 Kubeless 複雜許多、也重複實現了些 Kubernetes 中已經存在的特性（比如自動擴展機制）。
  
  
 <div class="alert info"> 
@@ -52,13 +52,13 @@ tags:
 </div>
 <br>
 
-與 AWS Lambda  相同，OpenWhisk 是一個<span class='highlighting'>事件驅動</span>的無狀態的計算模型。<span class='highlighting'>理論上</span>它可以支持任何程式語言，使用者僅需上傳程式碼到 OpenWhisk 中，並設定相對應的觸發事件與處理數據流即可，OpenWhisk 負責處理計算資源的擴展。
+與 AWS Lambda  相同，OpenWhisk 是一個<mark>事件驅動</mark>的無狀態的計算模型。<mark>理論上</mark>它可以支持任何程式語言，使用者僅需上傳程式碼到 OpenWhisk 中，並設定相對應的觸發事件與處理數據流即可，OpenWhisk 負責處理計算資源的擴展。
 
 <br><br> 
 
 
 ## 程式編輯模型
-先來看看 OpenWhisk 程式編輯模型，前面提過它是<span class='highlighting'>事件驅動</span>模型。所謂的事件驅動，顧名思義就是，事件來了才去做一件事情。當事件源觸動觸發器後進入系統，然後在系統中通過規則的匹配去決定要觸發的動作，最終產生所需的結果。
+先來看看 OpenWhisk 程式編輯模型，前面提過它是<mark>事件驅動</mark>模型。所謂的事件驅動，顧名思義就是，事件來了才去做一件事情。當事件源觸動觸發器後進入系統，然後在系統中通過規則的匹配去決定要觸發的動作，最終產生所需的結果。
 
 
 <center> <img src="https://i.imgur.com/a5Wgs5M.png?1" alt="apache OpenWhisk理念"></center>
@@ -84,7 +84,7 @@ tags:
 ### 觸發器 （Trigger）
 而在事件驅動模型中，最先對事件做出反應的是 Trigger，它會對如資料庫的增刪查改、 GitHub 推送新的 commit...等外部事件源進行對應的反應。
 
-不過在 OpenWhisk 中 Trigger 僅是某類別事件的具名頻道，也就是說僅僅是<span class='highlighting'>一個名字</span>。可以說它是對所要反應特定類型事件的變數宣告，實際上必須透過 Feed 來呼叫 Trigger。關於 Feed 我們等等在說，這邊僅需要先知道 OpenWhisk 中 Trigger 其實只是類似一個函數，它必須經由他人呼叫，才能向下執行。
+不過在 OpenWhisk 中 Trigger 僅是某類別事件的具名頻道，也就是說僅僅是<mark>一個名字</mark>。可以說它是對所要反應特定類型事件的變數宣告，實際上必須透過 Feed 來呼叫 Trigger。關於 Feed 我們等等在說，這邊僅需要先知道 OpenWhisk 中 Trigger 其實只是類似一個函數，它必須經由他人呼叫，才能向下執行。
 
 以資料庫更新為例，在 OpenWhisk 之外會有一個 Event provider，由它監聽資料庫。當 provider 監聽到更新事件時，再由它通知 Trigger 資料更新了。
 
@@ -116,7 +116,7 @@ tags:
 <center class="imgtext">Action（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
 <br>
 
-前面提到過<span class='highlighting'>理論上</span> OpenWhisk 可以支持任何程式語言，但會什麼會說是理論上呢？因為 OpenWhisk 其實是有明確列出所能直接支援的語言，包含：[.Net](hhttps://github.com/apache/openwhisk-runtime-dotnet)、 [Go](https://github.com/apache/openwhisk-runtime-go)、 [Java](https://github.com/apache/openwhisk-runtime-java)、 [JavaScript](https://github.com/apache/openwhisk-runtime-nodejs)、 [PHP](https://github.com/apache/openwhisk-runtime-php)、 [Python](https://github.com/apache/openwhisk-runtime-python)、 [Ruby](https://github.com/apache/openwhisk-runtime-ruby)、 [Swift](https://github.com/apache/openwhisk-runtime-swift) 與尚在實驗階段的 [Ballerina](https://github.com/apache/openwhisk-runtime-ballerina) 和 [Rust](https://github.com/apache/openwhisk-runtime-rust)。而未列出的語言，如需求建議書中要求的 C++ ，並無直接支援。
+前面提到過<mark>理論上</mark> OpenWhisk 可以支持任何程式語言，但會什麼會說是理論上呢？因為 OpenWhisk 其實是有明確列出所能直接支援的語言，包含：[.Net](hhttps://github.com/apache/openwhisk-runtime-dotnet)、 [Go](https://github.com/apache/openwhisk-runtime-go)、 [Java](https://github.com/apache/openwhisk-runtime-java)、 [JavaScript](https://github.com/apache/openwhisk-runtime-nodejs)、 [PHP](https://github.com/apache/openwhisk-runtime-php)、 [Python](https://github.com/apache/openwhisk-runtime-python)、 [Ruby](https://github.com/apache/openwhisk-runtime-ruby)、 [Swift](https://github.com/apache/openwhisk-runtime-swift) 與尚在實驗階段的 [Ballerina](https://github.com/apache/openwhisk-runtime-ballerina) 和 [Rust](https://github.com/apache/openwhisk-runtime-rust)。而未列出的語言，如需求建議書中要求的 C++ ，並無直接支援。
 
 但若細看這些語言的支援方式，會發現它其實是採用不同的 [Docker 映像檔](https://hub.docker.com/u/openwhisk)來進行。因此若所慣用的語言不在明列的支援清單中，其實也可以直接提供[自定義 Docker 映像檔](https://github.com/apache/openwhisk-runtime-docker)來達成對該語言使用。
  
@@ -135,13 +135,13 @@ tags:
 剛剛一直說到事件驅動，在這邊事件其實存在著三個概念：
 
 1. **事件源（Event Sources）**  
-    就是產生事件的<span class='highlighting'>來源</span>，如：資料庫、 IoT 設備...等。
+    就是產生事件的<mark>來源</mark>，如：資料庫、 IoT 設備...等。
 
 2. **事件（Event）**  
-    事件源所<span class='highlighting'>產生的事件</span>。例如資料庫的增刪查改、IoT 感應器超出特定溫度、GitHub 推送新的 commit，或是簡單 HTTP 要求...等。
+    事件源所<mark>產生的事件</mark>。例如資料庫的增刪查改、IoT 感應器超出特定溫度、GitHub 推送新的 commit，或是簡單 HTTP 要求...等。
 
 3. **訂閱源（Feed）**  
-    前面提到 Trigger 時提到過，在 OpenWhisk 之外會有一個 <span class='highlighting'>Event provider</span>，由它監聽事件，並通知 Trigger。
+    前面提到 Trigger 時提到過，在 OpenWhisk 之外會有一個 <mark>Event provider</mark>，由它監聽事件，並通知 Trigger。
     
     而在 OpenWhisk 整個系統中扮演 Event provider 角色的是 Feed。前面提過 Trigger 其實是類似一個函數，外部事件的變動與 OpenWhisk 無關，如果 OpenWhisk 想知道這些變動，必須依賴 Feed 來捕獲這些事件並呼叫，才能得知。
     
@@ -297,7 +297,7 @@ OpenWhisk 有一些系統限制，包括一個 Action 可以使用多少記憶�
 <center class="imgtext">Default Limits for Actions（圖片來源: <a href="https://github.com/apache/openwhisk/blob/master/docs/reference.md#actions" class="imgtext">apache/openwhisk｜GitHub</a>）</center>
 <br>
 
-其中 <span class='highlighting'>timeout/memory/logs</span>，這三個參數使用者可以自行調整。 
+其中 <mark>timeout/memory/logs</mark>，這三個參數使用者可以自行調整。 
  
 <br> 
 

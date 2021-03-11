@@ -27,7 +27,7 @@ tags:
 
 <br>
 
-這得先從他們共同的起源—**HackMD** 說起，HackMD 是個主打即時文件協作（Real-time collaboration）的共享筆記工具，聽說它是由一份資訊安全的<span class="highlighting">學校作業</span>誕生的。嘖，大神就是大神，作業寫一寫，就推出了一個這麼棒的產品（來自魯蛇的忌妒 :upside_down_face: 
+這得先從他們共同的起源—**HackMD** 說起，HackMD 是個主打即時文件協作（Real-time collaboration）的共享筆記工具，聽說它是由一份資訊安全的<mark>學校作業</mark>誕生的。嘖，大神就是大神，作業寫一寫，就推出了一個這麼棒的產品（來自魯蛇的忌妒 :upside_down_face: 
 
 後來 HackMD 逐漸成熟穩定後，遂推出了商業版本 **HackMD EE（Enterprise Edition，企業版）**；但同時，團隊也保持開源版本 **HackMD CE（Community Edition，社區版）**，不過後來為了避免兩個版本間的混淆，因此把 HackMD CE 改名成 CodiMD。
 

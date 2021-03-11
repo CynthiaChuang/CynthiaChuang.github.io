@@ -18,7 +18,7 @@ tags:
 <br>
 
 ## 編號規則
-信用卡的編碼規則，相較之下稍微稍微複雜點。根據 [ISO/IEC 7812 標準](https://zh.wikipedia.org/wiki/ISO/IEC_7812)，信用卡一般在 **13~19** 碼，但 Mastercard 旗下似乎有 **12** 碼簽帳金融卡（Debit Card）。而在臺灣比較常見的長度是 <span class="highlighting">16 碼</span>，因此下面在說明多以 16 碼來說明，但不管幾碼編碼規則其實都是相同的。
+信用卡的編碼規則，相較之下稍微稍微複雜點。根據 [ISO/IEC 7812 標準](https://zh.wikipedia.org/wiki/ISO/IEC_7812)，信用卡一般在 **13~19** 碼，但 Mastercard 旗下似乎有 **12** 碼簽帳金融卡（Debit Card）。而在臺灣比較常見的長度是 <mark>16 碼</mark>，因此下面在說明多以 16 碼來說明，但不管幾碼編碼規則其實都是相同的。
 
 <br>
 

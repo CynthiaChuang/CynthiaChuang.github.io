@@ -53,9 +53,9 @@ tags:
 <br>
 
 Function-as-a-Service FaaS，中文翻譯為**函式即服務**，...恩...函式就是一般會在程式碼裡面寫的函式。不過需要注意的是這些函式是
-<span class="highlighting">無狀態</span>、<span class="highlighting">短暫的</span>、且是<span class="highlighting">有限制的</span>。
+<mark>無狀態</mark>、<mark>短暫的</mark>、且是<mark>有限制的</mark>。
 
-除此之外，FaaS 的另外一個設定要點是 <span class="highlighting">API Gateway</span>，它可以將 Serverless 中的函式做為服務暴露出來，讓客戶端可以直接調用這個服務。
+除此之外，FaaS 的另外一個設定要點是 <mark>API Gateway</mark>，它可以將 Serverless 中的函式做為服務暴露出來，讓客戶端可以直接調用這個服務。
 
 <br>
 
@@ -72,7 +72,7 @@ Function-as-a-Service FaaS，中文翻譯為**函式即服務**，...恩...函�
 另外在上一講中還提到了 OpenWhisk 程式編輯模型。
 
 
-OpenWhisk　是一個典型的<span class="highlighting">事件驅動型</span>的程式編輯模型，其中有幾個主要的概念：觸發器（Trigger）、動作（Action）、規則（Rule）與套件（Package）。
+OpenWhisk　是一個典型的<mark>事件驅動型</mark>的程式編輯模型，其中有幾個主要的概念：觸發器（Trigger）、動作（Action）、規則（Rule）與套件（Package）。
 
 我們可以定義規則，通過規則將觸發器與動作關聯起來，因此當某個事件被觸發時，就會執行相對應的動作。
 
@@ -112,7 +112,7 @@ OpenWhisk　是一個典型的<span class="highlighting">事件驅動型</span>�
 
 什麼是 API 經濟？
 
-講師提到，現在開發功能有種用<span class="highlighting">搭積木</span>來實現功能趨勢。換句話說，自己寫的程式越來越少，更多是採用第三方服務。
+講師提到，現在開發功能有種用<mark>搭積木</mark>來實現功能趨勢。換句話說，自己寫的程式越來越少，更多是採用第三方服務。
 
 這樣的開發趨勢，會使得開發人員直接面向整個生態圈打交道 - 不是需要用調用別人的 API ，就是我們實做的 API 被調用。
 
@@ -307,7 +307,7 @@ IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操�
 **action**  
 在開始前先準備一段 action 的程式，課程中的範例是關於資料庫的操作，不過我這邊為了偷懶直接印出來假裝有 insert XD
 
-另外，因為我不想預先編譯，所以挑了<span class="highlighting">直譯式語言</span>來實做，而在 Python 與 JavaScript 兩者之間，我挑了比較熟悉的 Python。
+另外，因為我不想預先編譯，所以挑了<mark>直譯式語言</mark>來實做，而在 Python 與 JavaScript 兩者之間，我挑了比較熟悉的 Python。
 
 
 ```python

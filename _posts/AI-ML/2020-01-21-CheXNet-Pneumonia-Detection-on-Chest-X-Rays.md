@@ -17,7 +17,7 @@ tags:
 
 ## AI 醫療影像
 
-所謂的<span class='highlighting'>醫療影像</span>一直是窺視人體內部結構與組成的主要方法，常見的拍攝方式包括 X 光攝影、超音波影像、電腦斷層掃描（CT）、核磁共振造影（MRI）和心血管造影...等等。
+所謂的<mark>醫療影像</mark>一直是窺視人體內部結構與組成的主要方法，常見的拍攝方式包括 X 光攝影、超音波影像、電腦斷層掃描（CT）、核磁共振造影（MRI）和心血管造影...等等。
 
 不同的拍攝技術會決定影像性質、維度與張數多寡，這些因素也會直接影響深度學習的模型建立與應用場景。
 <br>
@@ -105,14 +105,14 @@ P.S. 這數據因為我刪除過些影像，所以數字可能有出入，但概
 除去資料不平衡外，資料集中還包含部份質量很差的影像，並不建議用於訓練。這部份 Azure 有列出一些[黑名單](https://github.com/Azure/AzureChestXRay/tree/master/AzureChestXRay_AMLWB/Code/src/finding_lungs)，可以參考這些名單將不適用的影像加以排除。
 <br>
 
-但這份資料集最引人討論的並非影像本身，而是它的<span class='highlighting'>標籤</span>。有位放射科醫生 Luke Oakden-Rayner （盧克·奧克登·雷納），這位醫生也曾在 2017 年 5 月的 Nature 上發表關於[利用深度學習技術預測人類壽命的相關研究](https://www.nature.com/articles/s41598-017-01931-W)，是一名同時熟悉深度學習與醫療影像的研究者。
+但這份資料集最引人討論的並非影像本身，而是它的<mark>標籤</mark>。有位放射科醫生 Luke Oakden-Rayner （盧克·奧克登·雷納），這位醫生也曾在 2017 年 5 月的 Nature 上發表關於[利用深度學習技術預測人類壽命的相關研究](https://www.nature.com/articles/s41598-017-01931-W)，是一名同時熟悉深度學習與醫療影像的研究者。
 <br> 
  
 <center> <img src="https://i.imgur.com/GFQFd3T.jpg" alt="纖維化（Fibrosis）"></center>
 <center class="imgtext">纖維化標記錯誤，紅色=明顯錯誤的標籤；橙色=懷疑態度（圖片來源: <a href="https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/?fbclid=IwAR0oc-Zwz4EOPyp_rDvs8i__6ODgjWNqv-LHJ2B0t5KZiEIkwmF_o3hcUsU" class="imgtext">Luke Oakden-Rayner 網誌</a>）</center>
 <br>
 
-在他所提出的[質疑](https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/?fbclid=IwAR0oc-Zwz4EOPyp_rDvs8i__6ODgjWNqv-LHJ2B0t5KZiEIkwmF_o3hcUsU)中，他開宗明義講到：「我認為目前的 ChestXray14 資料集並<span class='highlighting'>不適合</span>用於訓練醫用 AI 系統以進行診斷工作」。
+在他所提出的[質疑](https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/?fbclid=IwAR0oc-Zwz4EOPyp_rDvs8i__6ODgjWNqv-LHJ2B0t5KZiEIkwmF_o3hcUsU)中，他開宗明義講到：「我認為目前的 ChestXray14 資料集並<mark>不適合</mark>用於訓練醫用 AI 系統以進行診斷工作」。
 
 他認為與人類醫生的視覺評估相比，這份資料集中的標籤準確度值得商榷，其標註並不準確或不清楚，且部分標籤屬於醫學上的次要發現，因此認為，無法匹配影像中顯示的疾病，並對這些標籤在臨床上的真實意義與實用性進行討論。
 <br>
@@ -129,7 +129,7 @@ P.S. 這數據因為我刪除過些影像，所以數字可能有出入，但概
 
 會特別提到這件事的原因是，Google 有對社群[開放](https://console.cloud.google.com/storage/browser/gcs-public-data--healthcare-nih-chest-xray-labels/) ChestX-ray14 資料集中所有裁決標籤，以幫助社群對胸部 X 光片進行研究。
 
-但數量比不上原先的資料集大小，僅包含 2,412 張圖像的訓練與驗證資料集，還有 1,962 張圖像的測試集，且與原先的資料集一樣存在<span class='highlighting'>資料傾斜</span>的現象需要克服。
+但數量比不上原先的資料集大小，僅包含 2,412 張圖像的訓練與驗證資料集，還有 1,962 張圖像的測試集，且與原先的資料集一樣存在<mark>資料傾斜</mark>的現象需要克服。
 <br>
 
 | Pathology | train | test |
@@ -269,7 +269,7 @@ The training was done using single Tesla P100 GPU and took approximately 22h.
 
 整體來說，網路架構並沒有的創新，使用的是先前的研究，或許有時間再來複習一次 DenseNet 的[論文](https://arxiv.org/abs/1608.06993)。
 
-另外論文中的這句提到<span class='highlighting'>對於放射科醫生來說，不知道病人先前的病史對於判斷正確有幫助</span>，我還滿驚訝的，照理來說不是資料越多越好？
+另外論文中的這句提到<mark>對於放射科醫生來說，不知道病人先前的病史對於判斷正確有幫助</mark>，我還滿驚訝的，照理來說不是資料越多越好？
 
 <br><br>
 

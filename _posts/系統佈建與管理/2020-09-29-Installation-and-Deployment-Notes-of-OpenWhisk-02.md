@@ -40,7 +40,7 @@ tags:
 既然決定要利用 [Kubernetes](https://kubernetes.io/)，那當然需要先將它部署起來。另外為了簡化 Kubernetes 叢集的部署管理，也安裝了 [Helm](https://helm.sh/)。
 
 ###  Kubernetes ＆ kind
-要弄出測試用的 Kubernetes 小型叢集，最簡單的方法是使用 <span class='highlighting'>Docker-in-Docker</span>，直接在 Docker 上運行 Kubernetes。這邊為了迅速上手使用 <span class='highlighting'>kind</span> 這套工具，可以快速架設多節點的 Kubernetes 叢集環境。
+要弄出測試用的 Kubernetes 小型叢集，最簡單的方法是使用 <mark>Docker-in-Docker</mark>，直接在 Docker 上運行 Kubernetes。這邊為了迅速上手使用 <mark>kind</mark> 這套工具，可以快速架設多節點的 Kubernetes 叢集環境。
 
 對了，在 OpenWhisk 中配置的 Docker 預設須具備至少 4 GB 記憶體和 2 個 virtual CPUs。 
 
@@ -230,7 +230,7 @@ node/{name}-worker2 labeled
 ```
 <br>
 
-:warning: 注意，請把指令中 `{name}` 換成建立叢集所取的名字，以上面的例子來說就是 `kind-cluster`，如果在建立叢集時沒特別命名，則會是預設 `kind`。名字打錯的話，它會跟你說 <span class='highlighting'>NotFound</span> 喔！
+:warning: 注意，請把指令中 `{name}` 換成建立叢集所取的名字，以上面的例子來說就是 `kind-cluster`，如果在建立叢集時沒特別命名，則會是預設 `kind`。名字打錯的話，它會跟你說 <mark>NotFound</mark> 喔！
 
 ```bash
 $  kubectl label node kind-worker openwhisk-role=core

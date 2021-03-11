@@ -79,7 +79,7 @@ p.sample(2000)
 ### 含圖片與標籤的增強
 但通常在在進行模型訓練時，所取得資料不只圖片本身，還會有圖片相對應的標籤，此時 [`Augmentor.Pipeline` ]( https://augmentor.readthedocs.io/en/master/code.html#Augmentor.Pipeline.Pipeline)就不適用，應該改用 [`DataPipeline`](https://augmentor.readthedocs.io/en/master/code.html#Augmentor.Pipeline.DataPipeline)。
 
-但需注意的是， `Pipeline` 所傳入的參數是<span class='highlighting'>圖片位置</span>，但 `DataPipeline` 傳入是<span class='highlighting'>圖片</span>。
+但需注意的是， `Pipeline` 所傳入的參數是<mark>圖片位置</mark>，但 `DataPipeline` 傳入是<mark>圖片</mark>。
 
 ```python
 import cv2
@@ -106,7 +106,7 @@ images = [[np.asarray(Image.open(y)) for y in x] for x in collated_images_and_ma
 ```
 <br>
 
-發現它讀入圖片後，外面有多一層 array，所以當這個步驟結束時，預期的維度會是 3 維，而非我的 2 維。依照這個邏輯，再將圖片放入 `DataPipeline` 前，先<span class='highlighting'>擴展維度</span>：
+發現它讀入圖片後，外面有多一層 array，所以當這個步驟結束時，預期的維度會是 3 維，而非我的 2 維。依照這個邏輯，再將圖片放入 `DataPipeline` 前，先<mark>擴展維度</mark>：
 ```python
 import cv2
 import Augmentor
@@ -126,7 +126,7 @@ p = Augmentor.DataPipeline(batch_imgs, batch_texts)
 
 <br>
 
-最後再取出增強後圖片，與相對應的標籤。別忘了，記得把剛剛擴展維度的<span class='highlighting'>維度降回去</span>：
+最後再取出增強後圖片，與相對應的標籤。別忘了，記得把剛剛擴展維度的<mark>維度降回去</mark>：
 ```python
 batch_imgs, batch_texts = p.sample(batch_size)
 batch_imgs = np.squeeze(batch_imgs, axis=1)
@@ -193,7 +193,7 @@ class CustomizeHSVShifting(Operation):
       return augmented_images
 ```
 
-注意，perform_operation 傳入的會是圖片陣列，而非單張圖片，別被[文件](https://augmentor.readthedocs.io/en/master/userguide/extend.html)中的 <span class='highlighting'>image</span> 這個字給騙了！實做時可以與其他功能的[實做](https://augmentor.readthedocs.io/en/master/_modules/Augmentor/Operations.html#RandomBrightness)進行對照。
+注意，perform_operation 傳入的會是圖片陣列，而非單張圖片，別被[文件](https://augmentor.readthedocs.io/en/master/userguide/extend.html)中的 <mark>image</mark> 這個字給騙了！實做時可以與其他功能的[實做](https://augmentor.readthedocs.io/en/master/_modules/Augmentor/Operations.html#RandomBrightness)進行對照。
 
 <br>
 

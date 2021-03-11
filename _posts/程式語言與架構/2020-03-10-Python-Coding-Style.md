@@ -19,12 +19,12 @@ tags:
 ## Code Lay-out
 
 ### 縮排
-Python 是用縮排來表示區塊的語言，所以最好保持縮排的一致，不然很容易出問題...。尤其是跟 Windows 的開發者 co-work 的時候，這個狀況更明顯，為了避免無謂的 `diff` ，依照 [code style](https://www.python.org/dev/peps/pep-0008/#code-lay-out) 建議改用 <span class='highlighting'>4 個空格取代 Tab</span>，這個可以直接在 IDE 設定，把 Tab 的輸出換成 4 個空格即可。
+Python 是用縮排來表示區塊的語言，所以最好保持縮排的一致，不然很容易出問題...。尤其是跟 Windows 的開發者 co-work 的時候，這個狀況更明顯，為了避免無謂的 `diff` ，依照 [code style](https://www.python.org/dev/peps/pep-0008/#code-lay-out) 建議改用 <mark>4 個空格取代 Tab</mark>，這個可以直接在 IDE 設定，把 Tab 的輸出換成 4 個空格即可。
 
 <br>
 
 ### 單行字數
-guideline 建議 79，只是我通常取整數設 <span class='highlighting'>80</span> 。另外，如果有遇到縮排縮太深，導致字串超過螢幕，必須捲動下方捲才能閱讀的，我會直接換行，不過通常 IDE 會幫你把前面的空格一併記入字數計算  
+guideline 建議 79，只是我通常取整數設 <mark>80</mark> 。另外，如果有遇到縮排縮太深，導致字串超過螢幕，必須捲動下方捲才能閱讀的，我會直接換行，不過通常 IDE 會幫你把前面的空格一併記入字數計算  
 
 ...是說如果縮排縮太深，應該要考慮重構了。
 
@@ -67,13 +67,13 @@ income = (gross_wages
 <br>
 
 ### 空行
-最外層的函數或類別，兩兩之間用<span class='highlighting'>兩行</span>隔開，類別內部的方法則用<span class='highlighting'>單行</span>進行區隔。不過這我老是忘記，都會用自動排版幫忙校正。
+最外層的函數或類別，兩兩之間用<mark>兩行</mark>隔開，類別內部的方法則用<mark>單行</mark>進行區隔。不過這我老是忘記，都會用自動排版幫忙校正。
 
  
 <br>
 
 ### Imports
-<span class='highlighting'>一行一個 Import 模組</span>，除非是用 Wildcard imports 才會把從同一個模組 imports 出來的東西寫在同一行。
+<mark>一行一個 Import 模組</mark>，除非是用 Wildcard imports 才會把從同一個模組 imports 出來的東西寫在同一行。
 
 
 ```python
@@ -82,7 +82,7 @@ import sys
 from subprocess import Popen, PIPE
 ```
  
-<br> 另外 guideline 建議 <span class='highlighting'>import 要分群</span>，每群之間使一行空白分隔，分群規則則按照：
+<br> 另外 guideline 建議 <mark>import 要分群</mark>，每群之間使一行空白分隔，分群規則則按照：
 - 標準函式庫
 - 第三方函式庫
 - 本地端檔案及函式庫引用
@@ -93,7 +93,7 @@ from subprocess import Popen, PIPE
 <br><br>  
 
 ## String Quotes
-在 python 中，字串單引號與雙引號都可以，但我偏愛先<span class='highlighting'>雙引號</span>再單引號。
+在 python 中，字串單引號與雙引號都可以，但我偏愛先<mark>雙引號</mark>再單引號。
 
 
 <br><br>  
@@ -166,7 +166,7 @@ c = (a+b) * (a-b)
 ### 底線開頭的變數
 
 1. `_foo`:  
-    類似 C/C++ 系列的 <span class='highlighting'>protected</span>。無法被直接 import ，也不應該直接呼叫函數存取變數或存取變數，這邊 Python 沒禁止，但還是建議將它視為 protected 變數，不要在外部呼叫。最後與 protected 變數相同可以被子類別繼承。
+    類似 C/C++ 系列的 <mark>protected</mark>。無法被直接 import ，也不應該直接呼叫函數存取變數或存取變數，這邊 Python 沒禁止，但還是建議將它視為 protected 變數，不要在外部呼叫。最後與 protected 變數相同可以被子類別繼承。
     
     雖說是無法被 import ，但若是硬要 import 也不是做不到
     
@@ -176,10 +176,10 @@ c = (a+b) * (a-b)
     ```
 
 2. `__foo__`:  
-    不要用！這是留給 <span class='highlighting'>Python builtin 專用</span>的，用了小心哪天升級了後會爆炸 :bomb:
+    不要用！這是留給 <mark>Python builtin 專用</mark>的，用了小心哪天升級了後會爆炸 :bomb:
     
 3. `__foo`:  
-    這對應到的是 <span class='highlighting'>private</span> 變數。只允許類別本身呼叫，無法被外部成員或是子類別直接操作與呼叫。
+    這對應到的是 <mark>private</mark> 變數。只允許類別本身呼叫，無法被外部成員或是子類別直接操作與呼叫。
 
 
  

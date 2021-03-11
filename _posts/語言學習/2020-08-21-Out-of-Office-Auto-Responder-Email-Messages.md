@@ -27,7 +27,7 @@ tags:
 
 ### 離開時間
 
-然後告知你的<span class='highlighting'>狀況</span>與<span class='highlighting'>離開的時間</span>，敘述一個大慨的情況就好，不用留下太私人的訊息或與公事無關訊息；但時間一定要標清楚。
+然後告知你的<mark>狀況</mark>與<mark>離開的時間</mark>，敘述一個大慨的情況就好，不用留下太私人的訊息或與公事無關訊息；但時間一定要標清楚。
  
 > I am out of the office until 8/30. I am only able to check email sporadically and will reply to your email after I return. <br> 
 > 我直到 8/30 前都不在辦公室。我只能偶爾檢查電子郵件，等到回來後我會回覆您的郵件。

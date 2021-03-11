@@ -26,36 +26,36 @@ tags:
 - **測試集（test）**  
     就像是學測，用來評估你最終的學習結果。
     
-    使用**學測**來比喻，是因為<span class="highlighting">測試集不應該做為參數調整、選擇特徵等依據</span>。這些選擇與調整可以想像成學習方式的調整，但學測已經考完，你不能時光倒轉回到最初調整學習方式。
+    使用**學測**來比喻，是因為<mark>測試集不應該做為參數調整、選擇特徵等依據</mark>。這些選擇與調整可以想像成學習方式的調整，但學測已經考完，你不能時光倒轉回到最初調整學習方式。
     
 <br> 
 
 ### 訓練集（Training Set）
 
-訓練集（Training Set）主要用在訓練階段，用於模型擬合，直接參與了<span class="highlighting">模型參數調整的過程</span>。
+訓練集（Training Set）主要用在訓練階段，用於模型擬合，直接參與了<mark>模型參數調整的過程</mark>。
 <br> 
 
 ### 驗證集（Validation Set）
 
-驗證集（Validation Set）是在訓練過程中，用於評估模型的初步能力與<span class="highlighting">超參數調整的依據</span>。
+驗證集（Validation Set）是在訓練過程中，用於評估模型的初步能力與<mark>超參數調整的依據</mark>。
  
 不過驗證集是非必需的，不像訓練集和測試集。如果不需要調整超參數，就可以不使用驗證集。
 <br> 
 
 ### 測試集（Test Set）
 
-用來評估模型最終的泛化能力。為了能評估模型真正的能力，測試集<span class="highlighting">不應該</span>為參數調整、選擇特徵等依據。
+用來評估模型最終的泛化能力。為了能評估模型真正的能力，測試集<mark>不應該</mark>為參數調整、選擇特徵等依據。
 
 <br><br> 
 
 ## 資料劃分
 
-我個人較常用來劃分資料的方法有兩種：<span class="highlighting">留出法</span> 與 <span class="highlighting">k-fold</span>
+我個人較常用來劃分資料的方法有兩種：<mark>留出法</mark> 與 <mark>k-fold</mark>
 <br> 
 
 ### 留出法（Holdout cross validation）
 
-留出法是按照<span class="highlighting">固定比例</span>將資料集劃分爲訓練集、驗證集、測試集，屬於<span class="highlighting">靜態的</span>劃分方法。
+留出法是按照<mark>固定比例</mark>將資料集劃分爲訓練集、驗證集、測試集，屬於<mark>靜態的</mark>劃分方法。
 
 不過其劃分比例並沒有明確的規定，但有些經驗法則可供參考：
 
@@ -69,7 +69,7 @@ tags:
 
 ### k 折交叉驗證（k-fold cross validation）
 
-另一個常用的是<span class="highlighting">動態的</span> k-fold 劃分方法，這種方式可以降低數據劃分帶來的影響。雖說是動態，不過測試集仍要事前先切出來，通常會保留 60%~80% 當作訓練資料，其餘作測試集。
+另一個常用的是<mark>動態的</mark> k-fold 劃分方法，這種方式可以降低數據劃分帶來的影響。雖說是動態，不過測試集仍要事前先切出來，通常會保留 60%~80% 當作訓練資料，其餘作測試集。
 
 而訓練資料會在訓練過程中被化分成 k 份，每次使用 k 份中的 1 份作爲驗證集，其他 k-1 份作爲訓練集，算出一個 Validation Error。交叉驗證重複 k 次，每個子樣本驗證一次，算出 k 個 Validation Error，最後我們再將這 K 個 Validation Error 做平均，用他們的平均分數來做為我們評斷模型好壞的指標。
  

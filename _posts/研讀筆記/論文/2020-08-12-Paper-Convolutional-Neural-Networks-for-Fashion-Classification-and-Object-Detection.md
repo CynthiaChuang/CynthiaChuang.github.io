@@ -36,7 +36,7 @@ tags:
     - 在服裝風格（Style）分類上準確率有 50.0 %
     - 在服裝屬性（Attribute）分類上準確率有 74.5%
 
-我這邊對於**相似服裝檢索**不感興趣，因此僅專注在服裝類型（Type）與屬性（Attribute）的分類上。是說，說到 Fashion Classification，可以瞄一下 <span class='highlighting'>Fashion MNIST</span> 資料集。
+我這邊對於**相似服裝檢索**不感興趣，因此僅專注在服裝類型（Type）與屬性（Attribute）的分類上。是說，說到 Fashion Classification，可以瞄一下 <mark>Fashion MNIST</mark> 資料集。
 <center> <img src="https://i.imgur.com/oRSeVTN.png" alt=" Fashion MNIST 資料集"></center>
 <center class="imgtext"> Fashion MNIST 資料集（圖片來源: <a href="https://github.com/zalandoresearch/fashion-mnist" class="imgtext">zalandoresearch/ fashion-mnist ｜ github </a>）</center>
 
@@ -54,16 +54,16 @@ tags:
 <br>
 
 並說明了在此領域會遇到的挑戰：
-1. 各類衣服會具有<span class='highlighting'>相似的特徵</span>，如：洋裝下擺與單裙下擺。
-2. 服裝由於材料的的緣故，衣服容易變形，導致<span class='highlighting'>特徵縮放</span>。
-3. 視角與長寬比的不同，容易導致<span class='highlighting'>衣物特徵變形</span>，而看起來不同。
+1. 各類衣服會具有<mark>相似的特徵</mark>，如：洋裝下擺與單裙下擺。
+2. 服裝由於材料的的緣故，衣服容易變形，導致<mark>特徵縮放</mark>。
+3. 視角與長寬比的不同，容易導致<mark>衣物特徵變形</mark>，而看起來不同。
 
 <br><br> 
 
 
 ## 2. Problem Statement
 
-在 [Abstract](#abstract) 中出現的四種分類 Type、Attribute、Object 與 Style，這邊先進行定義。不過 Type 並沒有標註在圖上，該詞僅用於相似服裝檢索，根據上下文推測指的應該是<span class='highlighting'>服裝的風格</span>，如：淑女、學院、中性、蘿莉塔、街頭、簡約...等。
+在 [Abstract](#abstract) 中出現的四種分類 Type、Attribute、Object 與 Style，這邊先進行定義。不過 Type 並沒有標註在圖上，該詞僅用於相似服裝檢索，根據上下文推測指的應該是<mark>服裝的風格</mark>，如：淑女、學院、中性、蘿莉塔、街頭、簡約...等。
 
 <center> <img src="https://i.imgur.com/Qg6EdSw.png" alt="分類任務的摘要"></center>
 <center class="imgtext"> 分類任務的摘要（圖片來源: <a href="http://cs231n.stanford.edu/reports/2015/pdfs/BLAO_KJAG_CS231N_FinalPaperFashionClassification.pdf" class="imgtext">論文</a>）</center>
@@ -81,7 +81,7 @@ Oops! 我好像搞混時間軸了。這篇是 2015 的文章，另外一篇被�
 
 ### 2.1 Clothing Type Classification
 
-服裝類型（Type）分類，是屬於 <span class='highlighting'>multiclass classification</span>，訓練時使用了 [Apparel Classification with Style (ACS)](https://data.vision.ee.ethz.ch/cvl/lbossard/accv12/) 資料集進行訓練，該資料集包含了 89,484 張圖片，主要是集中<span class='highlighting'>上半身</span>衣物的分類，共有 15 個類別。 
+服裝類型（Type）分類，是屬於 <mark>multiclass classification</mark>，訓練時使用了 [Apparel Classification with Style (ACS)](https://data.vision.ee.ethz.ch/cvl/lbossard/accv12/) 資料集進行訓練，該資料集包含了 89,484 張圖片，主要是集中<mark>上半身</mark>衣物的分類，共有 15 個類別。 
 
 <center> <img src="https://i.imgur.com/sfmFXHQ.png" alt="ACS Dataset"></center>
 <center class="imgtext"> ACS Dataset（圖片來源: <a href="http://cs231n.stanford.edu/reports/2015/pdfs/BLAO_KJAG_CS231N_FinalPaperFashionClassification.pdf" class="imgtext">論文</a>）</center>
@@ -97,10 +97,10 @@ Oops! 我好像搞混時間軸了。這篇是 2015 的文章，另外一篇被�
 
 
 
-服裝屬性分類就是分類服裝<span class='highlighting'>顏色</span>、<span class='highlighting'>圖案</span>、<span class='highlighting'>長度</span>...等屬性的問題。這些屬性有些可以用二進制量來表達，如：有無領帶；但有些無法，如：上裝顏色。感覺資料格式有點類似之前在看的 [Multitask classification](/Difference-between-Multiclass-Multilabel-and-Multitask-Problem#multitask-classification)。
+服裝屬性分類就是分類服裝<mark>顏色</mark>、<mark>圖案</mark>、<mark>長度</mark>...等屬性的問題。這些屬性有些可以用二進制量來表達，如：有無領帶；但有些無法，如：上裝顏色。感覺資料格式有點類似之前在看的 [Multitask classification](/Difference-between-Multiclass-Multilabel-and-Multitask-Problem#multitask-classification)。
 
 
-這部份網路訓練時採用的資料集是 [Clothing Attribute (CA) Dataset](http://chenlab.ece.cornell.edu/people/Andy/publications/ECCV2012_ClothingAttributes.pdf)，該資料集包含了 1856 張<span class='highlighting'>上身服裝</span>照片，，共有 26 個類別。 
+這部份網路訓練時採用的資料集是 [Clothing Attribute (CA) Dataset](http://chenlab.ece.cornell.edu/people/Andy/publications/ECCV2012_ClothingAttributes.pdf)，該資料集包含了 1856 張<mark>上身服裝</mark>照片，，共有 26 個類別。 
 
 <center> <img src="https://i.imgur.com/rAQeZh7.png" alt="CA Dataset"></center>
 <center class="imgtext"> CA Dataset（圖片來源: <a href="http://cs231n.stanford.edu/reports/2015/pdfs/BLAO_KJAG_CS231N_FinalPaperFashionClassification.pdf" class="imgtext">論文</a>）</center>

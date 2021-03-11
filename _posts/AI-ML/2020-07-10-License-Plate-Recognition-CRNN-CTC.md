@@ -32,7 +32,7 @@ OCR 為光學字元辨識（Optical Character Recognition）的縮寫，主要�
 
 <br>
 
-細分光學字元辨識系統，可在分成兩個步驟：分別是<span class='highlighting'>文字檢測</span>與<span class='highlighting'>文字識別</span>。
+細分光學字元辨識系統，可在分成兩個步驟：分別是<mark>文字檢測</mark>與<mark>文字識別</mark>。
 - **文字檢測**：  
     顧名思義就是找出哪裡有文字以及文字範圍大小，對應到車牌辨識系統中就是找出車牌的位置並框出車牌。
     
@@ -45,7 +45,7 @@ OCR 為光學字元辨識（Optical Character Recognition）的縮寫，主要�
 
 ### 文字辨識方法
 
-文字辨識的方法依照實做的方式，可區分成 <span class='highlighting'>Two Stage</span> 或 <span class='highlighting'>End To End</span> 兩種。
+文字辨識的方法依照實做的方式，可區分成 <mark>Two Stage</mark> 或 <mark>End To End</mark> 兩種。
 <br> 
 
 Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區域中的字元進行分割，也就是將車牌中的字一個一個擷出來，並將擷出的字元進行正規化，最後透過特徵截取將字元一一進行辨識。
@@ -93,7 +93,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 <center class="imgtext">Network configuration summary（圖片來源: <a href="https://arxiv.org/pdf/1507.05717.pdf" class="imgtext">論文</a>）</center>
 <br>
 
-在此必須提到一件事，根據論文架構表格中，作者將最後後兩層的 pooling size 改為 <span class='highlighting'>1 X 2</span> pooling。有人認為這是為了盡可能不丟失寬度方向的資料，會較適合英文字母的識別（例如非等寬字體中較窄的 i 與 l）。
+在此必須提到一件事，根據論文架構表格中，作者將最後後兩層的 pooling size 改為 <mark>1 X 2</mark> pooling。有人認為這是為了盡可能不丟失寬度方向的資料，會較適合英文字母的識別（例如非等寬字體中較窄的 i 與 l）。
 
 不過在論文作者的[原始碼](https://github.com/bgshih/crnn/blob/f5d41e3355fc4447f77cd6d5e5777b3a160c93cb/model/crnn_demo/config.lua#L68)中，在最後兩層的 pooling size 並非如論文內紅框處設計，[作者表示](https://github.com/bgshih/crnn/issues/6)論文中的 $1 \times 2$，其實是筆誤 XDDD 
 <br>
@@ -113,7 +113,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 
 但此階段的輸出無法直接最為下一階段的，需要經過一次轉換，因為 RNN 所接受的輸入格式應該為 $(timesteps, dim)$，很明顯的維度不對。
 
-在論文中作者將這樣的轉換稱之為 <span class='highlighting'>Map-to-Sequence</span>，不過其實就是做 reshape 變成 $(\frac{W}{4} * 1, 512)$，恩...可以想像成依照寬度將原圖分成 $\frac{W}{4} * 1$ 等分，每等分會有 512 個特徵。因此最後產生就是，原圖從左到右按照順序生成的特徵向量，做為下一階段的輸入。
+在論文中作者將這樣的轉換稱之為 <mark>Map-to-Sequence</mark>，不過其實就是做 reshape 變成 $(\frac{W}{4} * 1, 512)$，恩...可以想像成依照寬度將原圖分成 $\frac{W}{4} * 1$ 等分，每等分會有 512 個特徵。因此最後產生就是，原圖從左到右按照順序生成的特徵向量，做為下一階段的輸入。
 <br>
 
 **Recurrent Layers**  
@@ -127,13 +127,13 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 **Transcription Layer**  
 將從 Recurrent Layers 取的標籤通過去重複、整合等動作得到最終的辨識結果。白話的說就是將 RNN 的輸出做 Softmax 後得到各字元。
 
-值得一提的是，這邊並不是採用常用的 Softmax cross-entropy loss，而是所謂的 <span class='highlighting'>CTC loss（Connectionist Temporal Classification，聯接時間分類）</span>。
+值得一提的是，這邊並不是採用常用的 Softmax cross-entropy loss，而是所謂的 <mark>CTC loss（Connectionist Temporal Classification，聯接時間分類）</mark>。
 
 <br>
 
 ### Connectionist Temporal Classification, CTC
 
-在這邊引入 CTC loss 是為了處理<span class='highlighting'>不定長度序列的對齊問題</span>！
+在這邊引入 CTC loss 是為了處理<mark>不定長度序列的對齊問題</mark>！
 
 在一般使用 Softmax cross-entropy 計算 loss 時，會每一行輸出都對應到一個字元。因此你必須先標出每個字元在圖像中的位置，並調整網路以保證 Recurrent Layers 後所輸出的特徵值中，每一行會剛好對應到一個字元，才能進行訓練。
 

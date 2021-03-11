@@ -53,7 +53,7 @@ Explanation: The answer is `"wke"`, with the length of 3.
 
 <br>
 
-理論上是這樣啦，不過實做上為了效能考量這邊使用了 <span class='highlighting'>HashMap</span> 來記錄，實做步驟如下：
+理論上是這樣啦，不過實做上為了效能考量這邊使用了 <mark>HashMap</mark> 來記錄，實做步驟如下：
 
 1.  初始化一個 HashMap _indexes_ ，用以記錄目前出現過的字元，與其對應的下標。
 

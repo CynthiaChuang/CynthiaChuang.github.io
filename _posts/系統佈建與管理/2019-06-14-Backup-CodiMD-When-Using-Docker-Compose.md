@@ -9,7 +9,7 @@ tags:
 - Docker
 --- 
 
-這是 [安裝完 CodiMD](/How-to-Setup-CodiMD/) 後在執行定期備份時踩到的坑...在使用 [crontab + script 定期備份](/Using-Crontab-and-Shell-Script-to-Regular-Backup-and-Keep-It-Last-30-Days/)時，我百思不得其解，為啥我跑出來的 <span class='highlighting'>backup.sql</span> 會是空的？ 更讓我不解的是，我手動執行 script 的結果卻是正常的！？？？ 
+這是 [安裝完 CodiMD](/How-to-Setup-CodiMD/) 後在執行定期備份時踩到的坑...在使用 [crontab + script 定期備份](/Using-Crontab-and-Shell-Script-to-Regular-Backup-and-Keep-It-Last-30-Days/)時，我百思不得其解，為啥我跑出來的 <mark>backup.sql</mark> 會是空的？ 更讓我不解的是，我手動執行 script 的結果卻是正常的！？？？ 
 
 <!--more-->
 <br><br>
@@ -28,7 +28,7 @@ $ docker-compose exec database pg_dump hackmd -U hackmd > backup.sql
 $ sudo docker-compose exec database pg_dump hackmd -U hackmd > backup.sql
 ```
 
-<br><br> 查了一下相關[討論](https://github.com/docker/compose/issues/2293)，大家是建議最好使用<span class='highlighting'>絕對路徑</span>，因此將 docker-compose 換成 **/usr/local/bin/docker-compose**，但還沒用 :cry: 
+<br><br> 查了一下相關[討論](https://github.com/docker/compose/issues/2293)，大家是建議最好使用<mark>絕對路徑</mark>，因此將 docker-compose 換成 **/usr/local/bin/docker-compose**，但還沒用 :cry: 
 ```shell
 /usr/local/bin/docker-compose exec database pg_dump hackmd -U hackmd > backup.sql
 ``` 
@@ -39,12 +39,12 @@ whoami > log.txt
 whereis >> log.txt
 ```
 
-<br><br> 後來D老大跟我說他試出來了，在指令上加 <span class='highlighting danger'>-T</span> 就正常了：
+<br><br> 後來D老大跟我說他試出來了，在指令上加 <mark class='danger'>-T</mark> 就正常了：
 ```shell
 /usr/local/bin/docker-compose exec -T database pg_dump hackmd -U hackmd > backup.sql
 ``` 
 
-<br>查了一下 -T 是<span class='highlighting'>禁用 TTY</span> ，<span class='highlighting'>docker-compose exec</span> 是預設有啟用 TTY，而 crontab 是沒有預設 TTY（終端設備），所以將 docker-compose exec 加上 -T 就可以。
+<br>查了一下 -T 是<mark>禁用 TTY</mark> ，<mark>docker-compose exec</mark> 是預設有啟用 TTY，而 crontab 是沒有預設 TTY（終端設備），所以將 docker-compose exec 加上 -T 就可以。
 
 不過我還是不太明白，即便預設有啟用 TTY，但 Script 在執行過程並有任何輸出到終端機上，我以為這樣應該不會卡死才對 ＠＠？
 

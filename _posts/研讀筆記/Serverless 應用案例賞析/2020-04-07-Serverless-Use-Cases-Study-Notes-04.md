@@ -136,7 +136,7 @@ tags:
 <br><br>
 
 ## 無服務器機器學習 Serverless Machine Learning
-在討論機器學習與 Serverless 時，還會看到另外一個詞叫做 <span class="highlighting">Serverless Machine Learning</span>。
+在討論機器學習與 Serverless 時，還會看到另外一個詞叫做 <mark>Serverless Machine Learning</mark>。
 
 它指的是開發人員在第三方雲端平台上訓練與部署模型，並進行模型版本管理...等，而不用考慮基礎設施。
 

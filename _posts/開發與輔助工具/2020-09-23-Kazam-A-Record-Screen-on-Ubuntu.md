@@ -61,14 +61,14 @@ $ sudo apt install kazam
 
 它的使用方式相當的簡單，基本上選定錄影範圍後，按下 `Capture` 就可以直接錄影了。不過建議在第一次使用前，先做好基本設定再開始。
 
-依序點選 "檔案" → "偏好設定"，開啟偏好設定視窗。主要要調整或確認的地方有二：General 以及 Screencast，分別調整<span class='highlighting'>聲音</span>與<span class='highlighting'>影像幀數和編碼格式</span>：
+依序點選 "檔案" → "偏好設定"，開啟偏好設定視窗。主要要調整或確認的地方有二：General 以及 Screencast，分別調整<mark>聲音</mark>與<mark>影像幀數和編碼格式</mark>：
 
 <center> <img src="https://i.imgur.com/ycKcj8u.png" alt="Kazam"></center>
 <br>
 
 像音源的部份，一般來說應該會是選擇內部音效，如果另外有裝音效卡的需要換成對應的卡片。像我內建音效卡的輸出是壞的，所以聲音是走另一個 USB 簡易型音效卡出來，所以選了 USB 這個。
 
-另外幀數的部份，幀數直接影響的就是流暢度，我開啟時預設幀數是 15，但查到的網誌是建議幀數至少要 <span class='highlighting'>30</span>。但幀數會與檔案大小成正比。
+另外幀數的部份，幀數直接影響的就是流暢度，我開啟時預設幀數是 15，但查到的網誌是建議幀數至少要 <mark>30</mark>。但幀數會與檔案大小成正比。
 
 
 <br><br> 
@@ -82,7 +82,7 @@ $ sudo apt install kazam
 
 因為我是在錄製操作流程，所以有把滑鼠游標給錄進來，而且為了縮短片長，每當需要長等待的時候我都會按下暫停。這導致游標在右上與畫面中間來滑動，實在讓人眼花瞭亂...。
 
-所以只好上網拜大神，看有沒有<span class='highlighting'>快捷鍵</span>可用，幸運的是還真的讓我找到了：
+所以只好上網拜大神，看有沒有<mark>快捷鍵</mark>可用，幸運的是還真的讓我找到了：
 
 - **開始錄影 (Recording)**：Super+Ctrl+R  
 - **暫停、恢復錄影 (Pause)**：Super+Ctrl+P  
@@ -100,7 +100,7 @@ $ sudo apt install kazam
 
 <br>
 
-後來找到 StackExchange 發現相同的[問題](https://video.stackexchange.com/questions/20162/convert-kazam-video-file-to-a-file-playable-in-windows-media-player)，根據下面的回答，可以使用 <span class='highlighting'>fmpeg</span> 來轉檔，指令如下：
+後來找到 StackExchange 發現相同的[問題](https://video.stackexchange.com/questions/20162/convert-kazam-video-file-to-a-file-playable-in-windows-media-player)，根據下面的回答，可以使用 <mark>fmpeg</mark> 來轉檔，指令如下：
 
 ```bash
 $ sudo apt install ffmpeg

@@ -29,7 +29,7 @@ tags:
 
 <br>
 
-由圖中可以發現架構演變的趨勢，是朝著<span class="highlighting">簡單</span>、<span class="highlighting">便捷</span>與<span class="highlighting">低成本</span>實現<span class="highlighting">商業邏輯</span>（Business Logic）的方向前進。
+由圖中可以發現架構演變的趨勢，是朝著<mark>簡單</mark>、<mark>便捷</mark>與<mark>低成本</mark>實現<mark>商業邏輯</mark>（Business Logic）的方向前進。
 
 從最開始裸機的配置與開發；接著進入 IaaS 飛速發展，在這期間以 OpenStack 為代表的社區逐漸的成長，發展出許多的雲端平台公司；到之後發展出以 docker 為代表的 containers，而使得 Kubernetes 和 Mesos 等容器調度工具廣為人知。
 
@@ -48,7 +48,7 @@ tags:
 
 在裸機的時代，開發人員還需要操心系統的設定與維護；而到了 container 階段，則是已經將執行環境抽離，消除底層系統和基礎架構差異性所帶來的問題。
 
-換句話說，隨著對底層屏蔽的增加，使的開發人員能<span class="highlighting">專注於功能或程式本身的開發設計</span>，加速整個開發流程的推進。
+換句話說，隨著對底層屏蔽的增加，使的開發人員能<mark>專注於功能或程式本身的開發設計</mark>，加速整個開發流程的推進。
 
 <br> 
 
@@ -60,11 +60,11 @@ tags:
 ### 什是 Serverless?
 Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並非實現字面意上的『無伺服器』，而是由第三方雲端計算平台供應商負責後端基礎設施的維護，以服務（aaS）的方式為開發者提供所需功能，例如：認證、授權與資料庫服務等。
 
-簡單地說，這裡所強調的『無伺服器』，指的是我們的<span class="highlighting">程式碼不會明確地被部署在某些特定的軟體或者硬體的伺服器上</span>，不需要在伺服器上持續執行行程以等待 HTTP 請求或 API 調用；是通過某種事件機制來觸發程式碼的執行，此時供應商才會將此服務進行部屬。這樣的架構可以讓開發人員更專注程式碼的運行，而不需要分心管理任何的基礎設施。
+簡單地說，這裡所強調的『無伺服器』，指的是我們的<mark>程式碼不會明確地被部署在某些特定的軟體或者硬體的伺服器上</mark>，不需要在伺服器上持續執行行程以等待 HTTP 請求或 API 調用；是通過某種事件機制來觸發程式碼的執行，此時供應商才會將此服務進行部屬。這樣的架構可以讓開發人員更專注程式碼的運行，而不需要分心管理任何的基礎設施。
 
 <br>
 
-目前已有有些這樣的服務：<span class="highlighting">由第三方供應，且無須安裝、管理和維護，只在需要的時候使用，並按照使用資源計費<span>。
+目前已有有些這樣的服務：<mark>由第三方供應，且無須安裝、管理和維護，只在需要的時候使用，並按照使用資源計費<span>。
 
 例如實務上，有些開發人員為了更專注於商業邏輯相關程式碼的開發，會將與商業邏輯邏輯無關的部份委託給第三方，像是上述所提到的認證、授權與資料庫服務等，這些都是 **Backend-as-a-Service（BaaS）**。
 
@@ -86,7 +86,7 @@ Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並
     - 這些 API 像服務一樣，自動擴展，無需管理。
 
 
-兩者都強調：<span class="highlighting">按需執行、按需擴展、無需管理</span>。這樣的模式是將軟體開發中的複雜性全部抽出，給開發人員更多的自由，並降低開發門檻；但從另一方面來說，這是將複雜性全留給雲端計算平台供應商。
+兩者都強調：<mark>按需執行、按需擴展、無需管理</mark>。這樣的模式是將軟體開發中的複雜性全部抽出，給開發人員更多的自由，並降低開發門檻；但從另一方面來說，這是將複雜性全留給雲端計算平台供應商。
 
 
 <br> 
@@ -139,7 +139,7 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
     大部分 PaaS 應用無法針對每個請求啟動和停止整個應用，而 FaaS 生來就是為了實現這樣的目的。
     
 2. **縮放能力**  
-    兩者在維運方面最大的差異在於<span class="highlighting">縮放能力</span>。對於大部分 PaaS 平台，租戶依然需要考慮縮放，就算將它設置為自動縮放，依然無法在具體請求的層面上進行縮放。但是對於 FaaS 應用，這種問題完全是透明的。
+    兩者在維運方面最大的差異在於<mark>縮放能力</mark>。對於大部分 PaaS 平台，租戶依然需要考慮縮放，就算將它設置為自動縮放，依然無法在具體請求的層面上進行縮放。但是對於 FaaS 應用，這種問題完全是透明的。
     
 <br>
 
@@ -159,7 +159,7 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
     對於使用者來說最重要的是快速響應，因為底層全部被屏蔽了，只需專注商業邏輯的開發，無需煩心操作系統、運行環境、版本相容...等問題。 借助 Serverless，或許只需要幾個小時，來完成新的實做邏輯即即可，不用再去重新配置環境。
     
 2. **無限擴展**  
-   在 Serverless 架構的中，<span class="highlighting">橫向擴展是完全自動的、有彈性的、且由平台供應商所管理</span>，使用者僅需支付您所需要的計算能力。
+   在 Serverless 架構的中，<mark>橫向擴展是完全自動的、有彈性的、且由平台供應商所管理</mark>，使用者僅需支付您所需要的計算能力。
 
 3. **『綠色』計算**  
     想想剛剛水龍頭的例子，就可以理解了。
@@ -181,7 +181,7 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 <br>
 
 
-OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache 的一個頂級項目，也在 IBM 公有雲上有做了驗證。它是一個典型的<span class="highlighting">事件驅動型</span>的程式編輯模型。
+OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache 的一個頂級項目，也在 IBM 公有雲上有做了驗證。它是一個典型的<mark>事件驅動型</mark>的程式編輯模型。
 
  
 <br> 
@@ -193,7 +193,7 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 <center class="imgtext">Apache OpenWhisk理念（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
 <br>
 
-在這邊出現了幾個詞，<span class="highlighting">觸發器 (Trigger)</span>、<span class="highlighting">動作 (Action)</span> 與 <span class="highlighting">規則 (Rule)</span>，這些詞我跟下一節的筆記整理在一起。
+在這邊出現了幾個詞，<mark>觸發器 (Trigger)</mark>、<mark>動作 (Action)</mark> 與 <mark>規則 (Rule)</mark>，這些詞我跟下一節的筆記整理在一起。
  
 <br> 
  
@@ -210,7 +210,7 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 
 觸發器可以對外界數據源，如資料庫的增刪查改、 github 上的 push、issue...等，進行對應的反應。
 
-不過在 OpenWhisk 中觸發器僅某類別事件的具名頻道，換句話說僅是<span class="highlighting">一個名字</span>。觸發器要對反應特定類型事件的宣告，再藉由使用者或是透過事件來源觸發觸發器。
+不過在 OpenWhisk 中觸發器僅某類別事件的具名頻道，換句話說僅是<mark>一個名字</mark>。觸發器要對反應特定類型事件的宣告，再藉由使用者或是透過事件來源觸發觸發器。
 
 以資料庫更新為例，若是事件來源觸發，在 OpenWhisk 之外會有一個 Event provider，由它監聽資料庫。當 provider 監聽到更新事件時，再由它通知 Trigger 資料更新了。
 
@@ -223,7 +223,7 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 
 動作是執行某個特定動作的一段程式碼，它將會在 openwhisk 中執行。使用所選擇的語言來撰寫 Action，或者直接將 Docker 以映像檔提供執行。
 
-Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽取、第三方 API 調用...等，程式寫的出來的都行。但必須注意的是，在 FaaS 中是<span class="highlighting">無狀態</span>的，不應該存在狀態的記錄，而且<span class="highlighting">短時運行</span>的。在 openwhisk 中預設最長執行時間為是 5 分鐘，若超過 5 分鐘則不建議使用 Faas 執行，或是必須在要切成更小的粒度分開執行。
+Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽取、第三方 API 調用...等，程式寫的出來的都行。但必須注意的是，在 FaaS 中是<mark>無狀態</mark>的，不應該存在狀態的記錄，而且<mark>短時運行</mark>的。在 openwhisk 中預設最長執行時間為是 5 分鐘，若超過 5 分鐘則不建議使用 Faas 執行，或是必須在要切成更小的粒度分開執行。
 
 <center> <img src="https://i.imgur.com/URsL9hc.png" alt="Action"></center>
 <center class="imgtext">Action（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>

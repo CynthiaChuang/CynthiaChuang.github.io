@@ -70,7 +70,7 @@ tags:
 
 ### 刪除 30 天前的檔案
 
-這邊使用 find 指令來實做。利用 find 找到符合特定規則的檔案後再使用指令參數 <span class='highlighting'>-exec</span> 來刪除。這邊所指的特定規則，當然是指三十天前的壓縮檔：
+這邊使用 find 指令來實做。利用 find 找到符合特定規則的檔案後再使用指令參數 <mark>-exec</mark> 來刪除。這邊所指的特定規則，當然是指三十天前的壓縮檔：
 
 ```shell
 # only keep 30 days backup
@@ -86,13 +86,13 @@ find ~/codimd_backup -type f -name "*.tgz" -mtime +30
 1. `~/codimd_backup`  ： 要尋找的目標路徑
 2. `-type f`  ： 尋找類型為檔案  
 3. `-name "*.tgz"` ： 尋找檔名為 .tgz 結尾
-4. `-mtime +30`：檔案的<span class='highlighting'>最後修改時間</span>是 30 天以前的
+4. `-mtime +30`：檔案的<mark>最後修改時間</mark>是 30 天以前的
 
 <br><br> exec 後面的 command 是要執行的指令，這執行刪除指令：
 ```shell
 -exec rm -rf {} \;
 ```
-其中 <span class='highlighting'>{}</span> 指的是 find 指令找到的檔案或目錄，而 <span class='highlighting'>\;</span> 是指令的結束符號。
+其中 <mark>{}</mark> 指的是 find 指令找到的檔案或目錄，而 <mark>\;</mark> 是指令的結束符號。
 <br><br>
 
 ### 定期執行
@@ -133,7 +133,7 @@ mkdir -p -- ~/${foldername}
 filename=`ssh -i ~/.ssh/ServerA_key.pem ServerA@HostA ls -t codimd_backup|head -n 1`
 scp -p  -i ~/.ssh/ServerA_key.pem ServerA@HostA:~/codimd_backup/${filename} ~/${foldername}/
 ```
-這邊每天下載最新的備份就好，所以這邊使用了 <span class='highlighting'>ls</span> 並使檔案依照修改時間降序排序， 最後使用使用 <span class='highlighting'>head</span> 取出排序中的第一筆資料，也就是最新的資料，最後使用 <span class='highlighting'>scp</span> 將資料抓下來，指令一樣建議加上 <span class='highlighting'>-p</span> 保留 timestamps 資訊。
+這邊每天下載最新的備份就好，所以這邊使用了 <mark>ls</mark> 並使檔案依照修改時間降序排序， 最後使用使用 <mark>head</mark> 取出排序中的第一筆資料，也就是最新的資料，最後使用 <mark>scp</mark> 將資料抓下來，指令一樣建議加上 <mark>-p</mark> 保留 timestamps 資訊。
 
 <br><br>
 
@@ -164,7 +164,7 @@ expect {
 expect eof"
 ```
 
-這指令與先前的差不多唯一需要注意的是在 <span class='highlighting'>spawn</span> 中需要注意<span class='highlighting'>字元的跳脫</span>，不然就會跟我一樣 de 了好久的 bug ...
+這指令與先前的差不多唯一需要注意的是在 <mark>spawn</mark> 中需要注意<mark>字元的跳脫</mark>，不然就會跟我一樣 de 了好久的 bug ...
 
 <br> 後來雖然抓完蟲，不過還是一氣之下把 ServerB 的改成了[使用 SSH Key-based 的登入驗證方式](/Configuring-SSH-Key-Based-Authentication-on-a-Linux/)，所以程式可以化簡成：
 
@@ -184,10 +184,10 @@ ssh -i ~/.ssh/ServerB_key ServerB@HostB "find $foldername -type f -name *.tgz -m
 ```shell
 diff -q folderA folderB | grep "folderA"| awk 'BEGIN {FS="："}{print $2}' > files.txt
 ```
- 一般來說，如果要找可以 <span class='highlighting'>diff -q</span> ，可以列出哪些檔案只存於 folderA ，哪些檔案又只存於 folderB。取出只存於 folderA 檔案，再用 awk 取出檔名的部份，最後寫檔。
+ 一般來說，如果要找可以 <mark>diff -q</mark> ，可以列出哪些檔案只存於 folderA ，哪些檔案又只存於 folderB。取出只存於 folderA 檔案，再用 awk 取出檔名的部份，最後寫檔。
 
 
-<br> 只是因為目前我的資料夾存在兩台不同的伺服器上，所以必須用到 <span class='highlighting'>process substitution</span> ，但 process substitution 是拿來<span class='highlighting'>暫存檔案</span>用的，如果我用 <span class='highlighting'>diff -q</span> 會行不通，所以稍微換了個方式實做：
+<br> 只是因為目前我的資料夾存在兩台不同的伺服器上，所以必須用到 <mark>process substitution</mark> ，但 process substitution 是拿來<mark>暫存檔案</mark>用的，如果我用 <mark>diff -q</mark> 會行不通，所以稍微換了個方式實做：
 <br> 
 
 ```shell
@@ -202,7 +202,7 @@ scp -p -i~/.ssh/ServerA_key.pem ServerA@ServerA:~/codimd_backup/${line} ~/${fold
 done
 ```
 
-<br>對了，使用 process substitution 時，要改用 <span class='highlighting'>bash</span> 來執行 Script ，不能用 sh，不然會一直收到錯誤訊息：
+<br>對了，使用 process substitution 時，要改用 <mark>bash</mark> 來執行 Script ，不能用 sh，不然會一直收到錯誤訊息：
 >  Syntax error: "(" unexpected
 
 <br><br>

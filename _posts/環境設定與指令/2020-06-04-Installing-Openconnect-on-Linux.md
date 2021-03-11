@@ -28,7 +28,7 @@ tags:
 
 ### GlobalProtect
 
-第一個是台北同仁給的則是  **GlobalProtect**，還很好心的給了安裝文件，可以手把手教你連上需要的機台，但依舊悲劇的是 - <span class="highlighting">沒有 Linux</span>。...奇怪了，台北同仁都不用 Linux 嗎？
+第一個是台北同仁給的則是  **GlobalProtect**，還很好心的給了安裝文件，可以手把手教你連上需要的機台，但依舊悲劇的是 - <mark>沒有 Linux</mark>。...奇怪了，台北同仁都不用 Linux 嗎？
 
 我搭檔只好開始啃 [GlobalProtect Linux 的安裝文檔](https://docs.paloaltonetworks.com/globalprotect/4-1/globalprotect-app-user-guide/globalprotect-app-for-linux.html)，只是他裝好後，試圖進行連接，
  

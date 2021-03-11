@@ -55,7 +55,7 @@ $ ssh 帳號@主機
     sshd:ALL
     ```
         
-    正常情況下，allow 的優先權會<span class='highlighting'>高於</span> deny。所以如果在 `hosts.allow` 這個檔案中有允許放行，並不會被 `hosts.deny` 的設定擋下來。 
+    正常情況下，allow 的優先權會<mark>高於</mark> deny。所以如果在 `hosts.allow` 這個檔案中有允許放行，並不會被 `hosts.deny` 的設定擋下來。 
 
     這樣一來，就完成基本的防護設定了！
 

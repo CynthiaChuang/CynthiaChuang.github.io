@@ -36,7 +36,7 @@ img = cv2.imread(filepath)
 函數從指定的記憶體快取中讀取數據，並把數據解碼成圖像格式；主要用於從網路傳輸數據中恢復出圖像。
 </div>
 
-<br> 看到<span class="highlighting">網路傳輸數據</span>眼睛就亮起來了有沒有！當下就決定把 `cv.imread` 換成 `cv2.imdecod`，並搭配 `numpy` 的`fromstring` 使用字串來建立一個矩陣，完整程式碼如下：
+<br> 看到<mark>網路傳輸數據</mark>眼睛就亮起來了有沒有！當下就決定把 `cv.imread` 換成 `cv2.imdecod`，並搭配 `numpy` 的`fromstring` 使用字串來建立一個矩陣，完整程式碼如下：
 
 ```python
 filestr = request.files['file'].read()

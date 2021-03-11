@@ -22,7 +22,7 @@ tags:
 
 我發現只要我去查 make/let 的相關用法，大家很愛用這句話，我也不免俗的貼一下。
 
-這句話如果翻成中文兩者都是讓，但 make 是<span class='highlighting'>主動</span>讓它發生、或推動讓它發生；而 let 是，<span class='highlighting'>被動</span>地讓事情發生。
+這句話如果翻成中文兩者都是讓，但 make 是<mark>主動</mark>讓它發生、或推動讓它發生；而 let 是，<mark>被動</mark>地讓事情發生。
 
 
 <br><br>
@@ -50,7 +50,7 @@ tags:
 
 ### let
 解釋
-1. to allow something to happen or someone to do something by not doing anything to stop an action or by giving your permission 讓；<span class='highlighting'>允許</span>；准許
+1. to allow something to happen or someone to do something by not doing anything to stop an action or by giving your permission 讓；<mark>允許</mark>；准許
 2. used to show that you accept what is going to happen, although you do not like it 任由
 3. used to say that you wish something to happen very much （表示非常希望）讓…發生
 4. used to express a suggestion or request that includes you and the other person or people （表示建議或請求）讓我們

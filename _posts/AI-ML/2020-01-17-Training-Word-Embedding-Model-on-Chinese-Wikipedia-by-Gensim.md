@@ -40,7 +40,7 @@ $$
 
 而 word2vec 則是 Google 所提出用來實現 word embedding 的一種方法，主要採用了 Skip-Gram 與 CBOW 兩種模型。
 
-在 Skip-Gram 中，一次只輸入一個字，輸出為其前後一定距離內的文字，所以<span class='highlighting'>同一個輸入會有多個輸出</span>；與 Skip-Gram 不同的是，CBOW 是將一段句子的中間字當作輸出為，其左右文字為輸入，所以是<span class='highlighting'>多個輸入一個輸出輸入</span>。
+在 Skip-Gram 中，一次只輸入一個字，輸出為其前後一定距離內的文字，所以<mark>同一個輸入會有多個輸出</mark>；與 Skip-Gram 不同的是，CBOW 是將一段句子的中間字當作輸出為，其左右文字為輸入，所以是<mark>多個輸入一個輸出輸入</mark>。
 
 簡單來說，Skip-Gram 是給定 input word 來預測上下文。而 CBOW 則是給定上下文，反過來預測 input word。
 <br>
@@ -93,7 +93,7 @@ config    : /py3.6/lib/python3.6/site-packages/pyhanlp/static/hanlp.properties <
 ### 下載語料
 在機器學習中，萬事起頭的第一步就是備齊資料，當然訓練詞向量也是。為了訓練出針對特定 domain 但又不失一般性的詞向量，因此必須分別收集 general 與 specific domain 的資料。
 
-這邊 general 的資料是此用<span class='highlighting'>中文的維基百科</span>，因為它資料夠大，也較為全面。維基百科有[最新中文資料](https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2)可供下載，也可以前往[維基百科的資料庫](https://zh.m.wikipedia.org/wiki/Wikipedia:%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD)下載所需要的版本。需要特別注意的是，請選擇 `*-pages-articles.xml.bz2` 形式的語料。
+這邊 general 的資料是此用<mark>中文的維基百科</mark>，因為它資料夠大，也較為全面。維基百科有[最新中文資料](https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2)可供下載，也可以前往[維基百科的資料庫](https://zh.m.wikipedia.org/wiki/Wikipedia:%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD)下載所需要的版本。需要特別注意的是，請選擇 `*-pages-articles.xml.bz2` 形式的語料。
 
 下載完成後，先別急著將下載檔案解壓縮，因為這是一份 1.9G 的 xml 文件，如果不想自己寫 parser 來解析這份文件，請先別衝動！...說的就是我自己 XD 
 <br>
@@ -141,7 +141,7 @@ with open(output, "w") as f:
 ## 訓練前處理
 
 ### 斷詞
-因為 pyhanlp 的預設斷詞是使用簡體中文斷詞，如果想用簡體的斷詞器對繁體的語句進行斷詞，效果不彰，因此必須將語句換成簡體，或改用繁體的斷詞器，這邊是選擇使用<span class='highlighting'>繁體的斷詞器</span>。
+因為 pyhanlp 的預設斷詞是使用簡體中文斷詞，如果想用簡體的斷詞器對繁體的語句進行斷詞，效果不彰，因此必須將語句換成簡體，或改用繁體的斷詞器，這邊是選擇使用<mark>繁體的斷詞器</mark>。
  
 但，想使用繁體的斷詞器必須去你的 pyevn 中的 site-packages 中更改 pyhanlp 的 init 檔案，讓它可以引入繁體的斷詞器：
 

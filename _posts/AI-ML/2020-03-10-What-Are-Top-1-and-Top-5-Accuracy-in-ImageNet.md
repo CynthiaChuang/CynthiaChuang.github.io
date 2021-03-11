@@ -9,7 +9,7 @@ tags:
 - 煉丹常識
 --- 
 
-在 ImageNet 的相關論文中很常見到兩種指標 <span class="highlighting">Top-1</span> 與 <span class="highlighting">Top-5</span> ，記錄下所代表的涵義。  
+在 ImageNet 的相關論文中很常見到兩種指標 <mark>Top-1</mark> 與 <mark>Top-5</mark> ，記錄下所代表的涵義。  
 (我果然不擅長開頭阿:scream_cat:)
  
 <center> <img src="https://i.imgur.com/XeUtj5v.png" alt="模型概覽"></center>

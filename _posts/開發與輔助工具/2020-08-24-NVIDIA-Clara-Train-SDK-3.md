@@ -21,7 +21,7 @@ tags:
 
 ## Overview
 
-我記得上次看到 Clara 好像是 1.0 版吧？那時平台剛發布不久，對於 Clara 的印象就是個<span class='highlighting'>醫療影像平台</span>，它提供研究者一套醫療影像標註工具進行資料標註，並制定了一套標準結構用來使用影像資料進行 AI 訓練。
+我記得上次看到 Clara 好像是 1.0 版吧？那時平台剛發布不久，對於 Clara 的印象就是個<mark>醫療影像平台</mark>，它提供研究者一套醫療影像標註工具進行資料標註，並制定了一套標準結構用來使用影像資料進行 AI 訓練。
 
 不過從近期的改版與報導看來，他們企圖將所有醫療相關的解決方案都整合進 Clara，這是想把 Clara 打造成類似一個**百寶袋**的概念？
 
@@ -51,7 +51,7 @@ tags:
 
 由於基因定序成本不斷下降，從 1,000 萬美元降至 1,000 美元，甚至可望降至 100 美元，其下降速度已經超越摩爾定律（Moore's Law）所預期，但定序後所產生的基因體是個非常龐大的資料來源，需要處理到億級的鹼基對，才能對定序資料進行分析與試驗。這麼龐大資料量處理，使得基因體分析成為定序流程的瓶頸，若想突破這瓶頸，必須找到合適且充裕的算力。
 
-為了吃下這塊大餅，NVIDIA 收購以基因體分析工具（Genome Analysis Toolkit，GATK）為基礎的 Parabricks，它可透過 CUDA 加速基因資料的讀取、序列比對，將相關計算速度提升 <span class='highlighting'>30~50</span> 倍，以降低分析成本，並導入深度學習進行基因變異檢測。
+為了吃下這塊大餅，NVIDIA 收購以基因體分析工具（Genome Analysis Toolkit，GATK）為基礎的 Parabricks，它可透過 CUDA 加速基因資料的讀取、序列比對，將相關計算速度提升 <mark>30~50</mark> 倍，以降低分析成本，並導入深度學習進行基因變異檢測。
 
 <center> <img src="https://i.imgur.com/cg8zG9b.png" alt="基因定序流程"></center>
 <center class="imgtext">基因定序流程（圖片來源: <a href="https://developer.nvidia.com/clara" class="imgtext">NVIDIA</a>）</center>
@@ -100,7 +100,7 @@ tags:
     若是在測試集中取得了不俗的表現，則可以進一步部署在設備端，運用於真實診療環境中進行推斷。若是 AI 在設備端運行良好，可以在進一步將其部署到其他的邊緣設備上。
     
     
-而 Clara for Medical Imaging 所期望的目的則是<span class='highlighting'>簡化</span>與<span class='highlighting'>標準化</span>上述三個步驟，讓開發者更專注於醫學本身的研究。
+而 Clara for Medical Imaging 所期望的目的則是<mark>簡化</mark>與<mark>標準化</mark>上述三個步驟，讓開發者更專注於醫學本身的研究。
 
 <br><br>
 
@@ -145,13 +145,13 @@ tags:
 
 ### Clara Train SDK
 
-最後則是我較為側重的 Clara Train SDK，且在前面所提到的引入深度學習演算法的步驟中，它也占了了不輕的比例。它的功能主要是著重在<span class='highlighting'>資料的標註</span>與<span class='highlighting'>模型訓練</span>。
+最後則是我較為側重的 Clara Train SDK，且在前面所提到的引入深度學習演算法的步驟中，它也占了了不輕的比例。它的功能主要是著重在<mark>資料的標註</mark>與<mark>模型訓練</mark>。
 
 在資料標註的方面，由於醫療的專業需求，導致標註人員的專業門檻較高，且因為工作的精細要求，一組資料標註依精細度不同，需耗費 20-40 分鐘甚至 1-2 小時不等，導致標註成本非常昂貴。（找醫生來標能不貴嗎？:money_with_wings: ）
 
-有鑑於此， NVIDIA 提供了由預先訓練模型、用戶端 API 及伺服器所組成的 <span class='highlighting'>AI 輔助標註機制（AI Assisted Annotation， AIAA）</span>，開發者可以直接藉由此工具對醫療影像進行標註，並降低標註所需的時間。
+有鑑於此， NVIDIA 提供了由預先訓練模型、用戶端 API 及伺服器所組成的 <mark>AI 輔助標註機制（AI Assisted Annotation， AIAA）</mark>，開發者可以直接藉由此工具對醫療影像進行標註，並降低標註所需的時間。
 
-而在訓練方面，NVIDIA 定義了一種名為 <span class='highlighting'>醫學模型檔案（Medical Model Archive， MMAR）</span> 標準結構。它可用於安排在模型開發生命週期中產生的所有工件，以協助開發者快速利用現有的演算法架構與預訓練模型進行遷移訓練或 Fine-Tune。
+而在訓練方面，NVIDIA 定義了一種名為 <mark>醫學模型檔案（Medical Model Archive， MMAR）</mark> 標準結構。它可用於安排在模型開發生命週期中產生的所有工件，以協助開發者快速利用現有的演算法架構與預訓練模型進行遷移訓練或 Fine-Tune。
 
 在近期上線的功能中，多了不少有趣的新功能，不僅能加速標記速度，更引入了聯盟學習（Federated Learning）與 AutoML，降低對資料的需求與參數/模型調整的負荷，下面的章節來看看這些多出來的新功能。
 
@@ -163,7 +163,7 @@ tags:
 
 ## Key Features for AIAA
 
-Clara Train SDK 為了因應手動標註資料的缺點：<span class='highlighting'>速度慢</span>、<span class='highlighting'>繁瑣</span>與<span class='highlighting'>成本高</span>，而推出了 AI assisted Annotation（AIAA），它是由三個部分所組成：
+Clara Train SDK 為了因應手動標註資料的缺點：<mark>速度慢</mark>、<mark>繁瑣</mark>與<mark>成本高</mark>，而推出了 AI assisted Annotation（AIAA），它是由三個部分所組成：
 1. Annotation Client
 2. Annotation Server
 3. Pre-trained / BYOM（Bring Your Own Model）
@@ -291,22 +291,22 @@ MMAR 是 Clara Train SDK 用來安排在開發生命週期中工作的資料結�
 ### Features Overview
 
 對 MMAR 與 `config_train.json` 格式有大致了解後，再回來看看近期的主要更新項目：
-1. <span class='highlighting'>AutoML</span>
+1. <mark>AutoML</mark>
 2. Use negative loss value as the key model validation metric
 3. Automatic Mixed Precision
 4. Determinism
-5. <span class='highlighting'>Smart Cache</span>
-6. <span class='highlighting'>Federated learning</span>
+5. <mark>Smart Cache</mark>
+6. <mark>Federated learning</mark>
 7. Loss functions and models
 8. Novograd
 
-其中較為重要的有<span class='highlighting'>AutoML</span>、 <span class='highlighting'>Smart Cache</span> 與 <span class='highlighting'>Federated learning</span>，這接下來三節會在說明。而其餘的幾個項目，我們先在這邊快速帶過：
+其中較為重要的有<mark>AutoML</mark>、 <mark>Smart Cache</mark> 與 <mark>Federated learning</mark>，這接下來三節會在說明。而其餘的幾個項目，我們先在這邊快速帶過：
 1. **Use negative loss value as the key model validation metric**  
     添加 NegLoss  作為 minimal loss 的 metric value。
 2. **Automatic Mixed Precision**  
     自動混合精度，可以使用半精度進行訓練，但保持以單精度實現的網路精確度。可以減少記憶體的需求，並提升了 3 倍的訓練速度（某些模型）。
 3. **Determinism**  
-    感覺這個功能是為了 debug 用的， deterministic 一詞指的是<span class='highlighting'>輸入相同的輸入會得到相同結果</span>，兩者之間是不變的。Determinism 用在 training 是希望得到相同的模型權重和相同的inference results。
+    感覺這個功能是為了 debug 用的， deterministic 一詞指的是<mark>輸入相同的輸入會得到相同結果</mark>，兩者之間是不變的。Determinism 用在 training 是希望得到相同的模型權重和相同的inference results。
 4. **Loss functions and models ＆ Novograd**  
     就新增了些 losses、 models and optimizer
 
@@ -324,7 +324,7 @@ MMAR 是 Clara Train SDK 用來安排在開發生命週期中工作的資料結�
 
 <br>
 
-而 AutoML 的目的就在於：<span class='highlighting'>如何在最少干預人工下尋找最合適的架構與最優參數</span>。主流的 AutoML 架構中，會有一個 controller 管理整個搜索過程，它會用不同的參數來啟動訓練流程，並收集歷史資料，為下一輪訓練提供進一步的參數建議。在 controller 實做可以透過 RL、進化演算法或是貪婪搜索算法...等來實現，端看實際應用來選擇。
+而 AutoML 的目的就在於：<mark>如何在最少干預人工下尋找最合適的架構與最優參數</mark>。主流的 AutoML 架構中，會有一個 controller 管理整個搜索過程，它會用不同的參數來啟動訓練流程，並收集歷史資料，為下一輪訓練提供進一步的參數建議。在 controller 實做可以透過 RL、進化演算法或是貪婪搜索算法...等來實現，端看實際應用來選擇。
 
 <center> <img src="https://i.imgur.com/bhihV9V.jpg" alt="AutoML controller and network training flow."></center>
 <center class="imgtext">AutoML controller and network training flow.（圖片來源: <a href="https://developer.nvidia.com/blog/powering-automl-enabled-ai-model-training-with-clara-train/" class="imgtext">NVIDIA Developer Blog</a>）</center>
@@ -407,7 +407,7 @@ MMAR 是 Clara Train SDK 用來安排在開發生命週期中工作的資料結�
 2. **縱向聯盟式學習（vertical federated learning）**  
     這適用於樣本重疊多且特徵重疊少的情境，舉例來說像是同一社區不同診別的診所，他們病患重疊性比較高，但資料中的特徵卻不相同。
  
-但在於縱向聯盟中有個大麻煩，就是如果參與者如果越多，會使的它的流程架構就會越複雜，不僅難以執行也不適合推廣。因此在實務上比較常見的會是<span class='highlighting'>橫向聯盟</span>，NVIDIA 所提供的也是這個。
+但在於縱向聯盟中有個大麻煩，就是如果參與者如果越多，會使的它的流程架構就會越複雜，不僅難以執行也不適合推廣。因此在實務上比較常見的會是<mark>橫向聯盟</mark>，NVIDIA 所提供的也是這個。
 
 <center> <img src="https://i.imgur.com/N1LmQQD.png" alt="horizontal federated learning"></center>
 <center class="imgtext">horizontal federated learning（圖片來源: <a href="https://developer.nvidia.com/blog/federated-learning-clara/" class="imgtext">NVIDIA Developer Blog</a>）</center>
@@ -529,14 +529,14 @@ MMAR 是 Clara Train SDK 用來安排在開發生命週期中工作的資料結�
 
 為了減少轉換所造成的開銷，Smart Cache 會將轉換的結果存入記憶體中，提供下一個 step 的使用。不過需要注意的是，有些轉換是具備隨機效果，這部分的轉換不應該存入記憶體中，以免降低訓練效果；唯有相同的輸入恆等於相同結果輸出的轉換步驟，才適合使用放入記憶體。
 
-最有效率的存放方式是存入是由第一個轉換開始算起的 <span class='highlighting'>the longest transformation chain</span>。如此一來在下個 step 中，這些前期的會產生相同結果轉換會被繞過，直接從記憶體讀取，以降低對 IO 和 CPU 的使用。
+最有效率的存放方式是存入是由第一個轉換開始算起的 <mark>the longest transformation chain</mark>。如此一來在下個 step 中，這些前期的會產生相同結果轉換會被繞過，直接從記憶體讀取，以降低對 IO 和 CPU 的使用。
  
 <center> <img src="https://i.imgur.com/ulwBNXx.png" alt="Smart Cache"></center>
 <center class="imgtext">Smart Cache（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nvidia:med:clara:getting_started" class="imgtext">Nvidia</a>）</center>
 
 <br>
 
-但實際上訓練所使用的訓練集是非常的龐大，根本不可能將所有圖片的轉換結果，因此我們必須決定要<span class='highlighting'>保留多少圖片</span>在記憶體內，也就是在實際上記憶體中只保留一個完整資料集的子集，而這個子集會投入此次的 epoch 訓練，這可確保訓練所需的資料隨時可用，從而使 GPU 資源保持繁忙。但若是保留的圖片太少，不僅訓練速度仍受到 IO 速度的影響，訓練效果也會受到影響。
+但實際上訓練所使用的訓練集是非常的龐大，根本不可能將所有圖片的轉換結果，因此我們必須決定要<mark>保留多少圖片</mark>在記憶體內，也就是在實際上記憶體中只保留一個完整資料集的子集，而這個子集會投入此次的 epoch 訓練，這可確保訓練所需的資料隨時可用，從而使 GPU 資源保持繁忙。但若是保留的圖片太少，不僅訓練速度仍受到 IO 速度的影響，訓練效果也會受到影響。
 
 為了能夠遍歷訓練集中的所有圖片，會在制定一個替換比例，逐步替換記憶體中的內容。不過須注意的是，再將記憶體的內容在送入 GPU 之前，仍必須先經過 non-deterministic 轉換序列，將剩下的轉換執行完畢。因此，在訓練進行中，會有另一個 thread 為替換項目進行剩下轉換。一旦一個 epoch 完成，Smart Cache 就會用轉換完成的替換項目替換相同數量的項目。
 
@@ -587,7 +587,7 @@ Batch By Transform 和 Smart Cache 也可同時開啟，將時間進一步的。
 
 #### 效果
 
-最後來看看開了效能優化的結果。先來看看 <span class='highlighting'>GPU 使用率</span>，下圖中各線條所對應的優化調整分別是：
+最後來看看開了效能優化的結果。先來看看 <mark>GPU 使用率</mark>，下圖中各線條所對應的優化調整分別是：
 1. 黑色：BT+cache
 2. 綠色：cache
 3. 紅色：BT

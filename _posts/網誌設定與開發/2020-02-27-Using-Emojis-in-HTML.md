@@ -53,7 +53,7 @@ tags:
 
 
 **備註一下 Unicode 的插入**  
-查到的 Unicode 應該會長 `U+<十六進制數值>` 這樣，但在 HTML 中使用要把它轉換成 <span class="highlighting">HTML Encode</span>。
+查到的 Unicode 應該會長 `U+<十六進制數值>` 這樣，但在 HTML 中使用要把它轉換成 <mark>HTML Encode</mark>。
 
 HTML Encode 它會用 `&` 開始 `;` 結束，然後使用 `#x` 表明是十六進制，因此完整 Unicode 使用 HTML Encode 編碼會變成 `&#x<十六進制數值>;`。當然也可以用十進制來表示，例如：`&#x1F637;` 十進制就成了 `&#128567;`，出來的效果都一樣。
 
@@ -61,7 +61,7 @@ HTML Encode 它會用 `&` 開始 `;` 結束，然後使用 `#x` 表明是十六�
 <br><br> 
 
 ## Copy and Paste
-最後一招大絕招就是<span class="highlighting">複製貼上</span>啦，直接去查表後複製貼上過來就是了 XD
+最後一招大絕招就是<mark>複製貼上</mark>啦，直接去查表後複製貼上過來就是了 XD
 
 
 <br><br> 

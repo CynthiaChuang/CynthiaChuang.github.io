@@ -196,7 +196,7 @@ $alert-default-icon          : "\f0a9";
 <br><br>  
 
 ## Highlighting
-另一種凸顯文字的方式就是<span class="highlighting">用螢光筆</span>畫重點啦。
+另一種凸顯文字的方式就是<mark>用螢光筆</mark>畫重點啦。
 
 <center> <img src="https://i.imgur.com/ZaF6hhZ.png" alt="Highlighting"></center>
 <br>

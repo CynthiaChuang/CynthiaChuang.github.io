@@ -130,7 +130,7 @@ tags:
     
 
 4. **不能運作的狀況**  
-     <span class='highlighting'>不要直接更動 array 的內容</span>，即便透過 console.log 和 Vue 工具看資料都是修改過的，但畫面依然顯示舊資料，因為視圖無更新，無效的改動如下：
+     <mark>不要直接更動 array 的內容</mark>，即便透過 console.log 和 Vue 工具看資料都是修改過的，但畫面依然顯示舊資料，因為視圖無更新，無效的改動如下：
     ```javascript
     // 情境一：直接修改陣列長度（在一般 js 中，表示刪除所有資料）  
     this.arrayData.length = 0;
@@ -142,7 +142,7 @@ tags:
     }
     ```
 
-    <br>因為 <span class='highlighting'>Vue 無法探測普通的新增屬性</span>，它必須用於向響應式對象上添加新屬性，因此必須使用 <span class='highlighting'>Vue.set</span> 強制將資料寫入視圖中：
+    <br>因為 <mark>Vue 無法探測普通的新增屬性</mark>，它必須用於向響應式對象上添加新屬性，因此必須使用 <mark>Vue.set</mark> 強制將資料寫入視圖中：
 
     ```javascript
     Vue.set(this.arrayData, 0, {
@@ -151,7 +151,7 @@ tags:
     })
     ```
 
-	delete 也是相同情況 <span class='highlighting'>Vue.delete( target, key )</span>。
+	delete 也是相同情況 <mark>Vue.delete( target, key )</mark>。
 
 5.  **純數字的迴圈**  
     {% raw %}
@@ -225,13 +225,13 @@ tags:
 3. **v-if v.s v-show**
     根據[教學文章](https://v1-cn.vuejs.org/guide/conditional.html)說明，因為 v-if 是真實的條件渲染，在切換 v-if 區域時，Vue.js 有一個局部編譯/卸載過程，它會確保該區域在切換過程中能合適地銷毀與重建條件塊內的事件監聽器和子組件。
 
-    且 v-if 是<span class='highlighting'>惰性的</span>：如果在初始渲染時條件不成立，就什麼也不做，直到在條件第一次變為成立後才開始局部編譯（編譯會被暫存起來）。
+    且 v-if 是<mark>惰性的</mark>：如果在初始渲染時條件不成立，就什麼也不做，直到在條件第一次變為成立後才開始局部編譯（編譯會被暫存起來）。
 
     相比之下，v-show 元素則是全部會被編譯並保留，只是簡單地基於 CSS 切換，設定 style 為 display:none。
     
     ![Imgur](https://i.imgur.com/gJtpP21.png)
     <br>
-    一般來說，v-if 有更高的切換消耗而 v-show 有更高的初始渲染消耗。因此，<span class='highlighting'>如果需要頻繁切換，則使用 v-show 較好；如果在運行時條件不大可能改變，則使用 v-if 較好</span>。
+    一般來說，v-if 有更高的切換消耗而 v-show 有更高的初始渲染消耗。因此，<mark>如果需要頻繁切換，則使用 v-show 較好；如果在運行時條件不大可能改變，則使用 v-if 較好</mark>。
 
 
 
@@ -242,7 +242,7 @@ tags:
     這是需要主動觸發，且可以多次重複觸發。
     
 2. **Computed：**  
-	是針對我們要輸入到畫面的內容，在輸出前需要做前處理。簡單來說，當資料出現變化需要<span class='highlighting'>改變畫面</span>的 function 放這裡 。
+	是針對我們要輸入到畫面的內容，在輸出前需要做前處理。簡單來說，當資料出現變化需要<mark>改變畫面</mark>的 function 放這裡 。
     
 3. **Watch：**  
 	監控特定變數，當該變數產生變化時，可執行特定事件。
@@ -268,7 +268,7 @@ tags:
 
 ### 事件修飾符
 1. **@click.stop**  
-    可避免<span class='highlighting'>冒泡事件</span>。所謂的冒泡事件是指，點擊事件觸發後在 DOM 裡面傳遞的時會，從子元素不斷往其父元素傳遞，就像泡泡浮上水面一樣。 
+    可避免<mark>冒泡事件</mark>。所謂的冒泡事件是指，點擊事件觸發後在 DOM 裡面傳遞的時會，從子元素不斷往其父元素傳遞，就像泡泡浮上水面一樣。 
 
     所對應的就是 jQuery 中的 **event.stopPropagation()**。
 

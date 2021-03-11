@@ -17,7 +17,7 @@ tags:
 <br> 
 
 ## 情境說明
-嚴格來說，是因為我同時實作<span class='highlighting'>巢狀路由</span>與<span class='highlighting'><a href="https://router.vuejs.org/zh/guide/essentials/passing-props.htmlg">路由組件傳參</a></span>兩件事情，才使得事情變得有些複雜。
+嚴格來說，是因為我同時實作<mark>巢狀路由</mark>與<mark><a href="https://router.vuejs.org/zh/guide/essentials/passing-props.htmlg">路由組件傳參</a></mark>兩件事情，才使得事情變得有些複雜。
 
 ![巢狀路由（嵌套路由）示意圖](https://i.imgur.com/MUt7P2C.png)
 <center class="imgtext"> 巢狀路由示意圖 （圖片來源: <a href="https://router.vuejs.org/zh/guide/essentials/nested-routes.html" class="imgtext">Vue Router 官網</a>）</center>
@@ -27,7 +27,7 @@ tags:
 
 只是在我的應用中，兩個主體內容的 content 元件實作方式除了 Breadcrumbs 與 Title 不同外，其餘幾乎一樣。因此將他們合而為一，再使用一個標記來區分要顯示的 Breadcrumbs 與 Title，似乎是比較好的管理方法。
 
-但因為是有限的標記選擇—不是 Profile 就是 Posts，再加上我也不希望讓使用者修改標記，畢竟若輸入不是這兩個標記時，也算<span class='highlighting'>標題與內文不符</span>了 XDD，因此我直接排除常用的動態路由做法。
+但因為是有限的標記選擇—不是 Profile 就是 Posts，再加上我也不希望讓使用者修改標記，畢竟若輸入不是這兩個標記時，也算<mark>標題與內文不符</mark>了 XDD，因此我直接排除常用的動態路由做法。
 
 
 <br><br>  
@@ -42,7 +42,7 @@ tags:
 
 ### Boolean mode 布林模式 
 
-布林模式的用法是跟<span class='highlighting'>動態路由</span>一併使用的，首先建立一個用來顯示的元件，並設定所需的 props：
+布林模式的用法是跟<mark>動態路由</mark>一併使用的，首先建立一個用來顯示的元件，並設定所需的 props：
 
 ```htmlmixed
 <template>
@@ -72,7 +72,7 @@ export default {
 
 <br> 
 
-接下來再 router/index.js 的檔案中，定義相關路由與一個動態路徑參數，最重要的是<span class='highlighting'> 為你的命名視圖添加 `props` 選項並設置為True</span>。
+接下來再 router/index.js 的檔案中，定義相關路由與一個動態路徑參數，最重要的是<mark> 為你的命名視圖添加 `props` 選項並設置為True</mark>。
 
 此路徑參數將直接傳遞給給該元件，需注意的是，此路徑參數需與元件中所要使用的 props 變數名稱相同，才能順利傳遞。
 
@@ -90,7 +90,7 @@ export default new Router({
 ```
 <br> 
 
-若你的路徑參數與 props 變數名稱不相同，或是路徑參數多於 props 所定義的變數，這些<span class='highlighting'>無法被元件的 prop 所識別且獲取的特性</span>，則可以在 `vm.$attrs` 中查看。
+若你的路徑參數與 props 變數名稱不相同，或是路徑參數多於 props 所定義的變數，這些<mark>無法被元件的 prop 所識別且獲取的特性</mark>，則可以在 `vm.$attrs` 中查看。
 
 <br> 
 
@@ -136,7 +136,7 @@ props: { menu: false, content: true},
 
 ### Object mode 物件模式
 
-若是你的應用情境不需要設定動態路由，或是像我一樣僅需傳送固定參數，則建議使用<span class='highlighting'>物件模式</span>。
+若是你的應用情境不需要設定動態路由，或是像我一樣僅需傳送固定參數，則建議使用<mark>物件模式</mark>。
 
 物件模式，顧名思義就是使用命名視圖中添加 `props` 選項來傳遞物件。且與布林模式一樣，若所傳遞的物件可被 prop 所識別，則會對應到 props 變數反之則會出現在 `vm.$attrs` 中：
 ```javascript

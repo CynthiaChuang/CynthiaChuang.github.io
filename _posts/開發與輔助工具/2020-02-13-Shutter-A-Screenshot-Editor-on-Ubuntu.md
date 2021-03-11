@@ -36,7 +36,7 @@ tags:
 
 不過這還不是最大的問題，當軟體中心重裝後，發現我沒辦法編輯圖片，更確切的說應該是**編輯按鈕不能按**，如果不能編輯圖片我還要你幹麻（翻桌） 
 
-只好森七七地去拜大神了，據大神們說這是因會缺少必要套件，只要把這些套件裝回就行了，不過這些套件已經被從 Ubuntu 18.04 的官方鏡像<span class="highlighting">移除</span>了，因此必須先手動下載：
+只好森七七地去拜大神了，據大神們說這是因會缺少必要套件，只要把這些套件裝回就行了，不過這些套件已經被從 Ubuntu 18.04 的官方鏡像<mark>移除</mark>了，因此必須先手動下載：
 
 ```bash
 $ wget https://launchpad.net/ubuntu/+archive/primary/+files/libgoocanvas-common_1.0.0-1_all.deb

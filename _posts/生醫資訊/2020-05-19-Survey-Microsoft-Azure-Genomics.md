@@ -87,7 +87,7 @@ tags:
 
 
 **簡單來說**  
-MS Genomics 提供儲存與運算空間，讓使用者做無需處理軟硬體維護與更新，就可以執行<span class='highlighting'>次級分析</span>： GATK 標準分析流程。其他的附加價值是突顯在儲存的可靠性、方便性、計算速度與計價方式上。
+MS Genomics 提供儲存與運算空間，讓使用者做無需處理軟硬體維護與更新，就可以執行<mark>次級分析</mark>： GATK 標準分析流程。其他的附加價值是突顯在儲存的可靠性、方便性、計算速度與計價方式上。
 
 上一張他家合作夥伴 [Persistent](https://www.persistent.com/partner-ecosystem/) 的圖，這張圖很的詮釋了 MS Genomics 所提供的服務範圍。下圖中橘色的部份是 Persistent 所提供的服務，可以看出來是針對三級分析與二級分析的輸出結果進行衡量；而鐵灰色的部份則是所提供的服務次級分析的 GATK 最佳 pipeline。
 
@@ -240,7 +240,7 @@ CromwellOnAzure</a>）</center>
 1. [Microsoft Genomics 命令列介面](https://github.com/MicrosoftGenomics/msgen)看來是 MS 包裝好 WDL，但根據說明能改動的似乎不多：
     1. 可將 process_name 參數設定為 gatk4 以改成，以執行 GATK4。
     2. 新增 emit_ref_confidence 參數設定為 gvcf，以輸出 gvcf。
-2. 無法提交<span class='highlighting'>多個個體</span>的 FASTQ 或 BAM 檔案，所以若要分析多個個體資料只能分別下指令。
+2. 無法提交<mark>多個個體</mark>的 FASTQ 或 BAM 檔案，所以若要分析多個個體資料只能分別下指令。
 
 <br>不過跟同事討論了一下，MS 這套 WDL 的設計應該是先前 Survey 的資訊一樣，是為了研究員或臨床醫生這些非資訊背景人員所設計的，所以設計的挺好上手的，但代價就是可以修改的地方不多。
 

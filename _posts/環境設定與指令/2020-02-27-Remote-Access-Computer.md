@@ -10,7 +10,7 @@ tags:
 - SSH
 --- 
 
-最近為了因應疫情變化，HR 提了一項新政策，要考慮分批上班，簡單來說就是 <span class='highlighting'>work from home</span>。  
+最近為了因應疫情變化，HR 提了一項新政策，要考慮分批上班，簡單來說就是 <mark>work from home</mark>。  
   
 我手邊的 OA 設備是可以應付短期需求，但時間一長還是不夠用...，所以把主意打到我的桌機看能不能連回來工作...。
 

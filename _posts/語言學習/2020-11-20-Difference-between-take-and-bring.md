@@ -19,7 +19,7 @@ tags:
 <center> <img src="https://i.imgur.com/GZ93fNX.png" alt="Bring"></center>
 <br> 
 
-根據外師的說法，雖然兩者的單字的中文都是「帶」，但 bring 和 take 其實是不同「<span class='highlighting'>方向</span>」的反義詞。
+根據外師的說法，雖然兩者的單字的中文都是「帶」，但 bring 和 take 其實是不同「<mark>方向</mark>」的反義詞。
 
 以說話的人當基準：
 1. **bring**：表把某個東西從某處**帶來**（from there to here[to you]）

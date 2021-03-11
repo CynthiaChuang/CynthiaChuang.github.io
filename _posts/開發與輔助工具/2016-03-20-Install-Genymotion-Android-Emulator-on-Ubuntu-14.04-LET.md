@@ -39,7 +39,7 @@ tags:
 <br> 
 
 2.  **下載 Virtual Box**   
-下載到合適的 deb 檔後，點選右鍵選單中的<span class="highlighting">以 Ubuntu 軟體中心開啟</span>來安裝即可。
+下載到合適的 deb 檔後，點選右鍵選單中的<mark>以 Ubuntu 軟體中心開啟</mark>來安裝即可。
 
   
 <br>

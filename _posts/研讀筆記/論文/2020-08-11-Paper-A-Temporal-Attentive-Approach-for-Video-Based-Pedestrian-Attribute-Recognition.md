@@ -32,7 +32,7 @@ tags:
 1. **目的**  
     研究 Video-Based PAR，並提出網路架構。
 2. **挑戰**  
-    如何根據<span class='highlighting'>空間和時間建模</span>，並結合兩者進行有效的 Video-Based PAR。
+    如何根據<mark>空間和時間建模</mark>，並結合兩者進行有效的 Video-Based PAR。
 3. **貢獻**  
     1. 提出了基於 CNN 和時間注意力策略的 multi-task 網路架構（a novel multi-task model based on the conventional neural network and temporal attention strategy）。
     2. 重新標註了兩個大型[資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)以用於 Video-Based PAR。
@@ -42,9 +42,9 @@ tags:
 
 ## Introduction
 
-所謂的 Video-Based 指的是同一運動目標的<span class='highlighting'>連續的靜態影像序列</span>。目前在 PAR 的學術研究上有不錯的成果，但主流方法都是基於單一靜態影像來實現的。而實際的監視場景中，用影片，i.e. 連續的靜態影像序列，可能會較佳。 
+所謂的 Video-Based 指的是同一運動目標的<mark>連續的靜態影像序列</mark>。目前在 PAR 的學術研究上有不錯的成果，但主流方法都是基於單一靜態影像來實現的。而實際的監視場景中，用影片，i.e. 連續的靜態影像序列，可能會較佳。 
 
-在 PAR 的模型中，辨識結果高度依賴輸入的圖像，尤其當輸入的單一靜態影像時。如下圖所示，僅靠單一靜態影像（紅色矩形），可能出現<span class='highlighting'>裁切</span>（i.e. 圖 a 的包包）、<span class='highlighting'>難以識別</span>（i.e. 圖 b、c 的裙子與頭髮）和<span class='highlighting'>遮擋</span>的現象（i.e. 圖 d 的下半身），而導致該屬性難以辨識。但若引入序列資料，可以提供強有力的時間線索，以避免上述的狀況。
+在 PAR 的模型中，辨識結果高度依賴輸入的圖像，尤其當輸入的單一靜態影像時。如下圖所示，僅靠單一靜態影像（紅色矩形），可能出現<mark>裁切</mark>（i.e. 圖 a 的包包）、<mark>難以識別</mark>（i.e. 圖 b、c 的裙子與頭髮）和<mark>遮擋</mark>的現象（i.e. 圖 d 的下半身），而導致該屬性難以辨識。但若引入序列資料，可以提供強有力的時間線索，以避免上述的狀況。
 
 <center> <img src="https://i.imgur.com/HEXeWvL.png" alt="Video-Based 和 Image-Based PAR 之間的比較"></center>
 <center class="imgtext">Video-Based 和 Image-Based PAR 之間的比較（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
@@ -88,13 +88,13 @@ MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條�
 
 ### Network Architecture
 
-在 CV 方面，似乎使用遷移學習是起手勢？在這邊作者挑選了<span class='highlighting'>ResNet-50</span>作為骨幹網路，並將最後一個 flatten 層作為 frame-level 的 feature map，然後將網路分成兩個分支分別進行 multi-task learning。
+在 CV 方面，似乎使用遷移學習是起手勢？在這邊作者挑選了<mark>ResNet-50</mark>作為骨幹網路，並將最後一個 flatten 層作為 frame-level 的 feature map，然後將網路分成兩個分支分別進行 multi-task learning。
 
-兩個分支的概念對應到前面所提到的<span class='highlighting'>行為</span>與<span class='highlighting'>身分</span>相關屬性的區份，一個分支會進行動作與姿態的識別，另一個分支會進行行人外觀屬性的識別。
+兩個分支的概念對應到前面所提到的<mark>行為</mark>與<mark>身分</mark>相關屬性的區份，一個分支會進行動作與姿態的識別，另一個分支會進行行人外觀屬性的識別。
 
 這邊將兩種類型屬性區分開，應該是為將兩者的任務參數分開來學習不互相影響與約束。因為這兩種類型的屬性，在學習時會關注特徵不同的部份，這會導致兩種類型屬性對於同一特徵的表示有競爭的情況。
 
-舉例來說，你在跑步又不一定是穿褲子，也有可能是穿裙子，因為兩者並不相關，故應將兩種類型屬性區分；但兩者卻又共用前半部特徵空間，或許是因為會互相影響呈現的方式，例如穿裙子跑步時，步伐可能會與穿褲子時不太一樣，又或者跑步因為下擺劇烈擺動，沒有那麼容易判斷是褲子或裙子。呼應到先前所說的：「<span class='highlighting'>行為相關屬與外觀描述無關，但卻會極大地影響外觀的呈現</span>」。
+舉例來說，你在跑步又不一定是穿褲子，也有可能是穿裙子，因為兩者並不相關，故應將兩種類型屬性區分；但兩者卻又共用前半部特徵空間，或許是因為會互相影響呈現的方式，例如穿裙子跑步時，步伐可能會與穿褲子時不太一樣，又或者跑步因為下擺劇烈擺動，沒有那麼容易判斷是褲子或裙子。呼應到先前所說的：「<mark>行為相關屬與外觀描述無關，但卻會極大地影響外觀的呈現</mark>」。
 
 <center> <img src="https://i.imgur.com/NRMMac1.png" alt="網路架構"></center>
 <center class="imgtext">網路架構（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
@@ -113,7 +113,7 @@ MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條�
 
 在分支中還存在每個屬性判別任務的子分支中，這些子分支是帶有時間注意力機制的小網路。這是為了補全 ResNet-50 無法有效提取時間相關特徵而提出的概念。
 
-在某些幀中，各個屬性可能因為<span class='highlighting'>裁切</span>、<span class='highlighting'>難以識別</span>和<span class='highlighting'>遮擋</span>等現象，無法作為有效的判斷依據。因此不同屬性的識別可能必須依賴不同幀。因而引入時間注意力機制，以產生 `n×1` 的時間注意力向量 $A$ ，用來表示每幀在識別特定屬性中的重要性。然後利用時間注意力向量對每幀的空間特徵進行加權，根據加權後的特徵，得到屬性分類的結果。
+在某些幀中，各個屬性可能因為<mark>裁切</mark>、<mark>難以識別</mark>和<mark>遮擋</mark>等現象，無法作為有效的判斷依據。因此不同屬性的識別可能必須依賴不同幀。因而引入時間注意力機制，以產生 `n×1` 的時間注意力向量 $A$ ，用來表示每幀在識別特定屬性中的重要性。然後利用時間注意力向量對每幀的空間特徵進行加權，根據加權後的特徵，得到屬性分類的結果。
 
 <center> <img src="https://i.imgur.com/8aOEopZ.png" alt="時間注意力機制"></center>
 <center class="imgtext">時間注意力機制（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
@@ -134,7 +134,7 @@ image-based method 這項我實在沒看懂它究竟是出自於哪個方法？
 
 ### Settings
 
-資料集是重新標註 **MARS** 與 **DukeMTMC-VideoReID** 並按照原本訓練/測試集分法，並從資料集中隨機取樣 64 個軌跡，每個軌跡取 6 幀，e.g. $n=6$，並選擇 <span class='highlighting'>Cross Entropy Loss</span> 作為  loss function 、 <span class='highlighting'>Adam</span>  作為  optimizer、 learning rate 取 0.0003。
+資料集是重新標註 **MARS** 與 **DukeMTMC-VideoReID** 並按照原本訓練/測試集分法，並從資料集中隨機取樣 64 個軌跡，每個軌跡取 6 幀，e.g. $n=6$，並選擇 <mark>Cross Entropy Loss</mark> 作為  loss function 、 <mark>Adam</mark>  作為  optimizer、 learning rate 取 0.0003。
 
 段落中有一句話，**與連續採樣策略相比，隨機採樣更適合於時間注意力模型，因為它增加了採樣幀之間的差異**，有點看不懂它的意思，不過看其他人的論文筆記，它的隨機採樣似乎還做了隨機剪裁、水平翻轉...等數據增強，不過這段文字我在論文中沒注意到，或許是在程式碼中的實作細節？
 <br> 

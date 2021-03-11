@@ -9,7 +9,7 @@ tags:
 - VANETs
 --- 
 
-看這篇論文時 [《Intersection-based Routing For Urban Vehicular Communications With Traffic-light Considerations》](https://ieeexplore.ieee.org/document/6155880)，對文中出現的兩個詞 <span class='highlighting'>Greedy forwarding together</span> 與 <span class='highlighting'>Carry-and-forward</span> 感到一點疑惑。
+看這篇論文時 [《Intersection-based Routing For Urban Vehicular Communications With Traffic-light Considerations》](https://ieeexplore.ieee.org/document/6155880)，對文中出現的兩個詞 <mark>Greedy forwarding together</mark> 與 <mark>Carry-and-forward</mark> 感到一點疑惑。
 
 <!--more-->
 <br><br> 

@@ -26,7 +26,7 @@ tags:
 
 <br>
 
-每個 Vue instance 在被創建時都要經過一系列的初始化過程，在這個過程中 Vue 也會運行  <span class='highlighting'>lifecycle hooks</span> 的函數，提供使用者在不同階段添加自己的操作。
+每個 Vue instance 在被創建時都要經過一系列的初始化過程，在這個過程中 Vue 也會運行  <mark>lifecycle hooks</mark> 的函數，提供使用者在不同階段添加自己的操作。
 
 
 上圖中，紅色圓角框的文字，都屬於 Vue 所提供的 lifecycle hooks，呼叫方式如下：

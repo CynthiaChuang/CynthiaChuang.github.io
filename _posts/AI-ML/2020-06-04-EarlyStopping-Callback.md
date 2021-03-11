@@ -47,7 +47,7 @@ tf.keras.callbacks.EarlyStopping(
 
 ### monitor
 
-這參數用來設置監控的數據，可以設置的數據除 `loss` 外，其他可監控的數據會與 <span class="highlighting">metric 所設定的指標相關</span>。
+這參數用來設置監控的數據，可以設置的數據除 `loss` 外，其他可監控的數據會與 <mark>metric 所設定的指標相關</mark>。
 
 例如，我的 metrics 設置如下：
 ```python
@@ -63,11 +63,11 @@ metrics = [
 <br>
 
 ### min_delta
-評斷監控的數據是否有改善標準，唯有當數據變動幅度<span class="highlighting">大於</span> min_delta 才算是有改善。
+評斷監控的數據是否有改善標準，唯有當數據變動幅度<mark>大於</mark> min_delta 才算是有改善。
 <br>
 
 ### patience
-容忍...恩...就是說明你可以容忍在<span class="highlighting">多少個 epoch 內監控的數據都沒有出現改善</span>？patient 的設置會與 min_delta 會相關，一般來說 min_delta 小，patient 可以相對降低；反之，則 patient 加大。
+容忍...恩...就是說明你可以容忍在<mark>多少個 epoch 內監控的數據都沒有出現改善</mark>？patient 的設置會與 min_delta 會相關，一般來說 min_delta 小，patient 可以相對降低；反之，則 patient 加大。
 
 但，一般來說，patient 若設置的太小，可能導致模型在訓練前期，還在全域搜尋時就被迫停止；反之，patient 若太大，也就失去 EarlyStopping 設置的意義了。
 <br>
@@ -79,7 +79,7 @@ metrics = [
 
 ### mode
 
-有 `auto`, `min` 和 `max` 三種設置選擇。用來設定監控的數據的<span class="highlighting">改善方向</span>，如過希望你的監控的數據是越大越好，則設置為 `max`，如：`acc`；反之，若希望數據越小越好，則設定 `min`，如：`loss`。
+有 `auto`, `min` 和 `max` 三種設置選擇。用來設定監控的數據的<mark>改善方向</mark>，如過希望你的監控的數據是越大越好，則設置為 `max`，如：`acc`；反之，若希望數據越小越好，則設定 `min`，如：`loss`。
 
 良心建議這個值一定要設，別用預設的 `auto`，不然就會像我這次一樣停的莫名其妙。
 <br>

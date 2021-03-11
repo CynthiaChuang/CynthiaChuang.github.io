@@ -76,8 +76,8 @@ The key's randomart image is:
 ###  2. 將公開金鑰上傳
 
 產生的金鑰有兩把一把是公開金鑰（Public Key）、一把是私密金鑰（Private Key）。
-1. **公開金鑰（Public Key）**：這把是對外公開的金鑰，之後把它<span class='highlighting'>上傳到伺服器上使用</span>。
-2. **私密金鑰（Private Key）**：這把則是<span class='highlighting'>放在自己電腦</span>的金鑰，它等同於你的密碼，請務必保護好。此外，私鑰在使用時，權限僅能是 `400`、 `600` 或 `700`，否則會出現下列的錯誤訊息：
+1. **公開金鑰（Public Key）**：這把是對外公開的金鑰，之後把它<mark>上傳到伺服器上使用</mark>。
+2. **私密金鑰（Private Key）**：這把則是<mark>放在自己電腦</mark>的金鑰，它等同於你的密碼，請務必保護好。此外，私鑰在使用時，權限僅能是 `400`、 `600` 或 `700`，否則會出現下列的錯誤訊息：
     
     > Permissions for {{filename}}  are too open.<br>
     > It is required that your private key files are NOT accessible by others.<br>

@@ -87,13 +87,13 @@ tags:
 
 回到正題，Feed 它是管理外部事件觸發 Trigger 這件事，包括了創建 Trigger、刪除 Trigger、暫停觸發與取消暫停...等生命週期的動作事件。
 
-在自然界或在限縮到 IT 系統中存在著各式各樣的事件，但嚴格來說，<span class="highlighting">外部事件的變動與 Serverless 無關</span>，如果 Serverless 想知道這些變動進而觸發觸發器，必須依賴 Feed 來捕獲這些事件。
+在自然界或在限縮到 IT 系統中存在著各式各樣的事件，但嚴格來說，<mark>外部事件的變動與 Serverless 無關</mark>，如果 Serverless 想知道這些變動進而觸發觸發器，必須依賴 Feed 來捕獲這些事件。
 
 Feed 主要負責從外部事件來源來接收事件，不管所接收事件原本的資料結構、格式、傳輸協定為何，它最終都能轉換成 Serverless 平台所需的協議與格式。
 
 <br>
 
-可以使用以下三種體系結構模式來創建 Feed：<span class="highlighting">Hook</span>、<span class="highlighting">輪詢（Polling）</span> 和 <span class="highlighting">連接（Connections）</span>。 
+可以使用以下三種體系結構模式來創建 Feed：<mark>Hook</mark>、<mark>輪詢（Polling）</mark> 和 <mark>連接（Connections）</mark>。 
 
 1. **Hook**  
     顧名思義就是鉤子，讓你的服務與另一個服務有掛勾，通過使用另一個服務公開的 Webhook 設定 Feed。在這種結構模式中，Webhook 會被配置在外部伺服器上，它會直接用 URL 來執行 POST 操作觸發器。
@@ -158,7 +158,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 <center class="imgtext">IoT（圖片來源: <a href="https://www..com/cht/xcdoc/cont?xsmsid=0J178110000554951149&sid=0J182351851717589046" class="imgtext">昕奇雲端科技</a>）</center>
 <br>
 
-套句研究所教授說的物聯網就是<span class="highlighting">物物相連的網路</span>，周遭的物理設備可以通過網路（通常是無線網路）相連，比較常被討論的設備包含：
+套句研究所教授說的物聯網就是<mark>物物相連的網路</mark>，周遭的物理設備可以通過網路（通常是無線網路）相連，比較常被討論的設備包含：
 1. 環境感知器（無線感測網路）
 2. 穿戴式設備
 3. 工業界中油電腦控制的設備（智慧工廠）

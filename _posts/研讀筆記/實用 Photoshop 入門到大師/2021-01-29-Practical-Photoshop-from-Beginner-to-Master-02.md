@@ -48,7 +48,7 @@ tags:
 <center  class="imgtext">圖層原理_3D（圖片來源: <a href="https://hahow.in/courses/5b26587f67ff51001e25cf0a/assignments?item=5b34d81791606b001eb9d6e7&panelMode=PLAY_LIST"  class="imgtext">課程教材</a>）</center>
 <br>
 
-除了疊加的規則外，圖層中另一件重要的規則是，當圖層中的圖像若出現**交集**，上方圖層會<span class="highlighting">覆蓋</span>下方圖層。
+除了疊加的規則外，圖層中另一件重要的規則是，當圖層中的圖像若出現**交集**，上方圖層會<mark>覆蓋</mark>下方圖層。
 
 以上面的練習檔為例，因為月亮圖層覆蓋在漸層圖層之上，所以才會在漸層色板呈現月亮，而未交集處仍呈現漸層顏色，如下圖左；若是將圖層反過來，只會看到漸層色板，因為它可以遮擋掉整個月亮，如下圖右。
 

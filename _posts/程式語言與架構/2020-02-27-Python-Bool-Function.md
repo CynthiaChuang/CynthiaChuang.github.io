@@ -36,7 +36,7 @@ bool(1)
 >>> True
 ```
 
-<br>但回頭去查文件發現 <span class="highlighting">bool 其實是 int 的子類別</span>。看到這句話，我大概知道我的判斷式哪邊出錯了，`os.environ.get` 取回來的是<span class="highlighting">字串</span>，而不是整數...
+<br>但回頭去查文件發現 <mark>bool 其實是 int 的子類別</mark>。看到這句話，我大概知道我的判斷式哪邊出錯了，`os.environ.get` 取回來的是<mark>字串</mark>，而不是整數...
 
 
 <br>果然細看可以發現 `bool（）` 只有在下列情況回傳 false 而已，其他狀況都是回傳 true：

@@ -25,7 +25,7 @@ tags:
 2. 質量控制，確定生產的商品是否滿足規格？
 3. 辨識此圖片是貓或狗？
 
-實務上訓練時，標籤通常會標成 `[0] 與 [1]`。另外，在二元分類的 activation 與 loss function 會選擇 <span class='highlighting'>Sigmoid</span> 與 <span class='highlighting'>Binary cross-entropy</span>。
+實務上訓練時，標籤通常會標成 `[0] 與 [1]`。另外，在二元分類的 activation 與 loss function 會選擇 <mark>Sigmoid</mark> 與 <mark>Binary cross-entropy</mark>。
 
 P.S. 是說選 Softmax 也沒關係？因為在二元分類情况下 Softmax 會退化成 Sigmoid。
 
@@ -51,7 +51,7 @@ P.S. 是說選 Softmax 也沒關係？因為在二元分類情况下 Softmax 會
 ```
 <br> 
 
-而此訓練任務的 activation 與 loss function 會選擇 <span class='highlighting'>Softmax</span> 與 <span class='highlighting'>categorical cross-entropy</span>。使用 Softmax 原因在於其輸出值是相互關聯，且其機率的總和始終為 1，因此一旦提升某一類別的機率時，其他類別的機率必須會相對應減少，以符合每個樣本只能被標記一類別的定義。
+而此訓練任務的 activation 與 loss function 會選擇 <mark>Softmax</mark> 與 <mark>categorical cross-entropy</mark>。使用 Softmax 原因在於其輸出值是相互關聯，且其機率的總和始終為 1，因此一旦提升某一類別的機率時，其他類別的機率必須會相對應減少，以符合每個樣本只能被標記一類別的定義。
 
 
 
@@ -75,7 +75,7 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 ```
 <br> 
 
-而 activation 與 loss function 則會選擇 <span class='highlighting'>Sigmoid</span> 與 <span class='highlighting'>binary cross-entropy</span>。使用 Sigmoid 是因為它分別處理各個原始輸出值，使結果相互獨立。
+而 activation 與 loss function 則會選擇 <mark>Sigmoid</mark> 與 <mark>binary cross-entropy</mark>。使用 Sigmoid 是因為它分別處理各個原始輸出值，使結果相互獨立。
 
 
 <br><br> 
@@ -94,7 +94,7 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 **2020-08-12 更新**  
 後來發現如果是在說 Multitask 時，大家會傾向是在說 **Multitask Learning（多任務學習）**。一般的學習，一次只學習一個任務，無論是上述所提到的分類文章或是分類貓狗，他們實際上都只學習一件事，所以稱作 Single Task Learning（單任務學習)。
 
-而多任務學習，則是將多的<span class='highlighting'>相關的（related）<span>任務放在一起學習，在常見的多任務學習網路架構中，他們會共用前半部的參數，以從中習得任務之間的關聯性。
+而多任務學習，則是將多的<mark>相關的（related）<span>任務放在一起學習，在常見的多任務學習網路架構中，他們會共用前半部的參數，以從中習得任務之間的關聯性。
 
 <center> <img src="https://i.imgur.com/94EpzyP.png" alt="Multitask Learning Architecture"></center>
 <center class="imgtext">Multitask Learning Architecture（圖片來源: <a href="https://arxiv.org/pdf/1611.00851.pdf" class="imgtext">論文</a>）</center>

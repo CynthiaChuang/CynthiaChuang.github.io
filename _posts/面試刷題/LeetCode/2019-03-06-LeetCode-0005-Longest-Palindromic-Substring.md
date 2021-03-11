@@ -43,7 +43,7 @@ Output: "bb"
 
 但這樣做，不僅時間複雜度高，且在實做還必須分奇偶長度的回文進行討論，有夠麻煩的。
  
-<br><br> 後來找到一篇關於最長回文子串的[討論](https://www.zhihu.com/question/40965749)，裡面提到不少針對這個問題的演算法與分析，其中有一個被暱稱為<span class='highlighting'>馬拉車演算法</span>的 <span class='highlighting'>Manacher's algorithm</span>，這個方法可以將時間複雜度降到線性，討論中不少人推崇這是計算最長回文子串的最理想方法。
+<br><br> 後來找到一篇關於最長回文子串的[討論](https://www.zhihu.com/question/40965749)，裡面提到不少針對這個問題的演算法與分析，其中有一個被暱稱為<mark>馬拉車演算法</mark>的 <mark>Manacher's algorithm</mark>，這個方法可以將時間複雜度降到線性，討論中不少人推崇這是計算最長回文子串的最理想方法。
 
 關於~~馬拉車~~ Manacher 演算法的介紹可以看看[這篇](https://segmentfault.com/a/1190000003914228#articleHeader3)，實做這題時我也是基於這篇的。
 <br>
