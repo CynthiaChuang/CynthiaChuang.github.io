@@ -1,7 +1,7 @@
 ---
 title: 【技能樹栽種】實作 CSS 凸顯文字內容： Alert 與 Highlighting
-date: 2020-02-09
-is_modified: false
+date: 2021-03-11 21:08
+is_modified: true
 categories:
 - 網誌設定與開發
 - 程式語言與架構
@@ -240,14 +240,15 @@ $highlighting-default              : #e6fcf2;
 ### 使用
 在文句中需畫螢光筆的地方，插入下列程式碼，就可以看到相對應的效果了。
 
-拜託，請幫我畫<span class="highlighting">重點</span>。
+![](https://i.imgur.com/p4BInX7.png)
 
 ```html
 拜託，請幫我畫<span class="highlighting">重點</span>。
 ```
 <br>
 
-拜託，請幫我畫<span class="highlighting warning">重點</span>。
+![](https://i.imgur.com/VDn59fA.png)
+
 
 ```html
 拜託，請幫我畫<span class="highlighting warning">重點</span>。
