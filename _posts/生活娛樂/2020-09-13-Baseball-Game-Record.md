@@ -1,7 +1,7 @@
 ---
 title: 【清單】1000 場現場球賽記錄
-date: 2020-09-24 22:57
-is_modified: false
+date: 2021-08-29 23:15
+is_modified: true
 categories:
 - 生活娛樂
 tags:
@@ -17,7 +17,7 @@ tags:
 <br>
 
 ## 1. 2020-09-11 
-中信 12 : 2 統一 ([中華職棒31年 G191](http://www.cpbl.com.tw/games/box.html?&game_type=01&game_id=191&game_date=2020-09-11&date=2020-09-11&pbyear=2020)) @台南球場
+中信 12 : 2 統一 ([中華職棒31年 G191](https://www.cpbl.com.tw/box?year=2020&kindCode=A&gameSno=191&presentStatus=0)) @台南球場
 
 <center> <img src="https://i.imgur.com/Eco7LjO.png?1" alt="2020-09-11 戰績"></center>
 <br>
@@ -29,11 +29,26 @@ tags:
 <center> <img src="https://i.imgur.com/ZJp60MM.jpg" alt="球票"></center>
 
 <br><br> 
+## 2. 2021-04-02
+味全 0:13 統一 ([中華職棒31年 G32](https://www.cpbl.com.tw/box?year=2021&kindCode=A&gameSno=34))@台南球場
+	 猛威爾 無安打比賽
+
+<center> <img src="https://i.imgur.com/smGhTmZ.png" alt="2021-04-02 戰績"></center>
+<br>
+
+<center> <img src="https://i.imgur.com/X9TmvAd.jpg" alt="球票"></center>
+
+<br>
+
+<center> <img src="https://i.imgur.com/0mPZ6Ik.jpg" alt="無安打比賽見證書"></center>
+
+<br><br> 
 
 ## 更新紀錄
 <details>
-  <summary>最後更新日期：2020-09-24</summary>
+  <summary>最後更新日期：2021-08-29</summary>
   <ul class="timestamp">
+    　<li>2021-08-29 更新</li>
     　<li>2020-09-24 發布</li>
     　<li>2020-09-13 完稿</li>
     　<li>2020-09-13 起稿</li>
