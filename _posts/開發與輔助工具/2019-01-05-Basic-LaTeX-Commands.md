@@ -127,7 +127,7 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|
 |$\sin$|\sin||$\cos$|\cos||$\tan$|\tan| 
-|$\sec$|\sin||$\csc$|\csc||$\cot$|\cot| 
+|$\sec$|\sec||$\csc$|\csc||$\cot$|\cot| 
 |$\arcsin$|\arcsin||$\arccos$|\arccos||$\arctan$|\arctan| 
 |$\sinh$|\sinh||$\cosh$|\cosh||$\tanh$|\tanh|
 |$\exp$|\exp||$\log$|\log||$\ln$|\ln|
