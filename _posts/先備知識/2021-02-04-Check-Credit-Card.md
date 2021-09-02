@@ -14,7 +14,7 @@ tags:
 <!--more-->
 
 <center> <img src="https://i.imgur.com/60gBFeq.jpg?1" alt="信用卡"></center>
-<center style="color:Gainsboro;">信用卡（圖片來源: <a href="https://www.shutterstock.com/zh-Hant/discover/image-footage-music?kw=shutterstock&c3apidt=p15867520243&gclid=Cj0KCQiA0-6ABhDMARIsAFVdQv-8MA9Y7Q9L9uCanv_OyNtEbjV-ydbXQfXYXYP0NkXR6z705PN5MAkaAgBNEALw_wcB&gclsrc=aw.ds" style="color:Gainsboro;">shutterstock</a>）</center>
+<center class="imgtext">信用卡（圖片來源: <a href="https://www.shutterstock.com/zh-Hant/discover/image-footage-music?kw=shutterstock&c3apidt=p15867520243&gclid=Cj0KCQiA0-6ABhDMARIsAFVdQv-8MA9Y7Q9L9uCanv_OyNtEbjV-ydbXQfXYXYP0NkXR6z705PN5MAkaAgBNEALw_wcB&gclsrc=aw.ds" class="imgtext">shutterstock</a>）</center>
 <br>
 
 ## 編號規則
