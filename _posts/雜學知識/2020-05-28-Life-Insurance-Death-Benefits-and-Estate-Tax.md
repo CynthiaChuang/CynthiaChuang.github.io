@@ -3,7 +3,7 @@ title: 保單需要申報遺產嗎？
 date: 2020-05-28
 is_modified: false
 categories:
-- 先備知識
+- 雜學知識
 tags:
 - 法律與行政流程
 ---  
