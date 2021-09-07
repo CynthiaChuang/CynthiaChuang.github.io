@@ -250,10 +250,4 @@ D主管提出關於 VCF annotation 可以歸納出幾項是需要進一步了解
 18. [Variation File Format - Definition and supported options](https://www.ensembl.org/info/website/upload/var.html)。檢自 EnsemblMetazoa (2019-08-28)。
 19. [Annotating VCF Files](https://doc-openbio.readthedocs.io/projects/jannovar/en/master/annotate_vcf.html)。檢自 Jannovar documentation (2019-08-28)。 
 
-<br><br> 
-
-> **本文作者**： 辛西亞．Cynthia  
-> **本文連結**： [辛西亞的技能樹](https://cynthiachuang.github.io/Survey-Ensembl-and-VEP) / [hackmd 版本](https://hackmd.io/@CynthiaChuang/Survey-Ensembl-and-VEP)   
-> **版權聲明**： 部落格中所有文章，均採用 [姓名標示-非商業性-相同方式分享 4.0 國際](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) (CC BY-NC-SA 4.0) 許可協議。轉載請標明作者、連結與出處！
-
  
