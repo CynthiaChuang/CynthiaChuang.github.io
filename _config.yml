@@ -329,9 +329,9 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
-  license: CC BY-NC-SA 3.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  enable: true
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
 
 
 

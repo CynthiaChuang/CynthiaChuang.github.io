@@ -41,3 +41,11 @@ $toc-link-active-color                : $sidebar-highlight;
 $toc-link-active-border-color         : $sidebar-highlight;
 $toc-link-active-current-color        : $sidebar-highlight;
 $toc-link-active-current-border-color : $sidebar-highlight;
+
+// Posts Expand
+// --------------------------------------------------
+$post-copyright : (
+    border-left-color: $green-light,
+    bg: $greendark-lighter ,    
+    color: $greendark-ligh ,
+);

@@ -343,24 +343,12 @@
       {% endunless %}
     </div>
 
-    <div>
-      {% unless is_index %}
-        {% include _macro/post-copyright.html %}
-      {% endunless %}
-    </div>
-
     <footer class="post-footer">
       {% unless is_index %}
 
-
-      <blockquote class="licenses">
-        <p> 
-          <b>本文作者</b>：{{site.author}} <br>
-          <b>本文連結</b>：<a href="{{ post.url }}">{{ post.title }}</a><br>
-          <b>版權聲明</b>：部落格中所有文章，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">姓名標示-非商業性-相同方式分享 4.0 國際</a>
-          (CC BY-NC-SA 4.0) 許可協議。轉載請標明作者、連結與出處！
-        </p>
-      </blockquote>
+      {% if page.copyright != false %}
+        {% include _macro/post-copyright.html %}   
+      {% endif %}
 
       {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false %}
         <div class="post-tags">

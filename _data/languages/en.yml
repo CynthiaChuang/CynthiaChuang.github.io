@@ -39,12 +39,13 @@ post:
   wordcount: Words count in article
   min2read: Reading time
   copyright:
-    author: Post author
-    link: Post link
-    license_title: Copyright Notice
-    license_content: 'All articles in this blog are licensed under
-      <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
-
+      author: 本文作者
+      link: 本文連結
+      license_title: 版權聲明
+      license_content: '除非另有標注，部落格中所有文章，均採用
+        <a href="%s" rel="external nofollow" target="_blank">%s</a> 許可協議。
+        轉載請標明作者、連結與出處！'
+        
 page:
   totally: Totally
   tags: tags
