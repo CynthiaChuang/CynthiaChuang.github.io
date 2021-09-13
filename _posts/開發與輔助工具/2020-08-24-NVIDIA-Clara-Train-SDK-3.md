@@ -21,7 +21,7 @@ tags:
 
 ## Overview
 
-我記得上次看到 Clara 好像是 1.0 版吧？那時平台剛發布不久，對於 Clara 的印象就是個<mark>醫療影像平台</mark>，它提供研究者一套醫療影像標註工具進行資料標註，並制定了一套標準結構用來使用影像資料進行 AI 訓練。
+我記得上次看到 Clara 好像是 1.0 版吧？那時平台剛發布不久，對於 Clara 的印象就是個<mark>醫療影像平台</mark>，它提供研究者一套醫療影像標注工具進行資料標注，並制定了一套標準結構用來使用影像資料進行 AI 訓練。
 
 不過從近期的改版與報導看來，他們企圖將所有醫療相關的解決方案都整合進 Clara，這是想把 Clara 打造成類似一個**百寶袋**的概念？
 
@@ -90,11 +90,11 @@ tags:
 
 最後我們回來看看 Clara 起家立業的醫療影像，這邊先簡單敘述下該項目的工作流程與目的。若在醫療機構中，如果想引入 AI 深度學習演算法，並將其投入應用，大致可分成 3 個步驟：
 
-1. **資料獲取與標註**  
-    資料是 AI 學習所不可或缺的養分。因此如何獲取資料，並就這些資料進行所需的標註，是建構整體系統的關鍵第一步。
+1. **資料獲取與標注**  
+    資料是 AI 學習所不可或缺的養分。因此如何獲取資料，並就這些資料進行所需的標注，是建構整體系統的關鍵第一步。
     
 2. **將資料導入選定的模型訓練**  
-    有了標註完成的資料後，開發者便須將資料導入開發的模型，從無到有進行訓練；或者選擇在該領域或是其他領域的模型進行 Fine-Tune 或遷移學習（Transfer Learning）。當訓練完成後，使用測試集進行檢驗，若是訓練結果無法在測試集上有良好的表現，可能需要調整參數重新訓練。
+    有了標注完成的資料後，開發者便須將資料導入開發的模型，從無到有進行訓練；或者選擇在該領域或是其他領域的模型進行 Fine-Tune 或遷移學習（Transfer Learning）。當訓練完成後，使用測試集進行檢驗，若是訓練結果無法在測試集上有良好的表現，可能需要調整參數重新訓練。
 
 3. **模型部屬**  
     若是在測試集中取得了不俗的表現，則可以進一步部署在設備端，運用於真實診療環境中進行推斷。若是 AI 在設備端運行良好，可以在進一步將其部署到其他的邊緣設備上。
@@ -145,11 +145,11 @@ tags:
 
 ### Clara Train SDK
 
-最後則是我較為側重的 Clara Train SDK，且在前面所提到的引入深度學習演算法的步驟中，它也占了了不輕的比例。它的功能主要是著重在<mark>資料的標註</mark>與<mark>模型訓練</mark>。
+最後則是我較為側重的 Clara Train SDK，且在前面所提到的引入深度學習演算法的步驟中，它也占了了不輕的比例。它的功能主要是著重在<mark>資料的標注</mark>與<mark>模型訓練</mark>。
 
-在資料標註的方面，由於醫療的專業需求，導致標註人員的專業門檻較高，且因為工作的精細要求，一組資料標註依精細度不同，需耗費 20-40 分鐘甚至 1-2 小時不等，導致標註成本非常昂貴。（找醫生來標能不貴嗎？:money_with_wings: ）
+在資料標注的方面，由於醫療的專業需求，導致標注人員的專業門檻較高，且因為工作的精細要求，一組資料標注依精細度不同，需耗費 20-40 分鐘甚至 1-2 小時不等，導致標注成本非常昂貴。（找醫生來標能不貴嗎？:money_with_wings: ）
 
-有鑑於此， NVIDIA 提供了由預先訓練模型、用戶端 API 及伺服器所組成的 <mark>AI 輔助標註機制（AI Assisted Annotation， AIAA）</mark>，開發者可以直接藉由此工具對醫療影像進行標註，並降低標註所需的時間。
+有鑑於此， NVIDIA 提供了由預先訓練模型、用戶端 API 及伺服器所組成的 <mark>AI 輔助標注機制（AI Assisted Annotation， AIAA）</mark>，開發者可以直接藉由此工具對醫療影像進行標注，並降低標注所需的時間。
 
 而在訓練方面，NVIDIA 定義了一種名為 <mark>醫學模型檔案（Medical Model Archive， MMAR）</mark> 標準結構。它可用於安排在模型開發生命週期中產生的所有工件，以協助開發者快速利用現有的演算法架構與預訓練模型進行遷移訓練或 Fine-Tune。
 
@@ -163,7 +163,7 @@ tags:
 
 ## Key Features for AIAA
 
-Clara Train SDK 為了因應手動標註資料的缺點：<mark>速度慢</mark>、<mark>繁瑣</mark>與<mark>成本高</mark>，而推出了 AI assisted Annotation（AIAA），它是由三個部分所組成：
+Clara Train SDK 為了因應手動標注資料的缺點：<mark>速度慢</mark>、<mark>繁瑣</mark>與<mark>成本高</mark>，而推出了 AI assisted Annotation（AIAA），它是由三個部分所組成：
 1. Annotation Client
 2. Annotation Server
 3. Pre-trained / BYOM（Bring Your Own Model）
@@ -173,12 +173,12 @@ Clara Train SDK 為了因應手動標註資料的缺點：<mark>速度慢</mark>
 
 <br>
 
-Clara Train SDK 針對常見的的醫療影像工具，如：MITK、3D Slicer，有開發支援的 Plug-in。此外，還提供了一個 AIAA Client API，能與其他醫療影像顯示進行整合。這些 AIAA Client API 已具備 2D/3D Annotation，並能支援 Deep Extreme cut in 3D（DEXTR3D）的功能，讓使用者可藉由僅標註6個點（每個軸上 2 個），再透過 restful api 方式送至 Annotation Server 生成切割結果。
+Clara Train SDK 針對常見的的醫療影像工具，如：MITK、3D Slicer，有開發支援的 Plug-in。此外，還提供了一個 AIAA Client API，能與其他醫療影像顯示進行整合。這些 AIAA Client API 已具備 2D/3D Annotation，並能支援 Deep Extreme cut in 3D（DEXTR3D）的功能，讓使用者可藉由僅標注6個點（每個軸上 2 個），再透過 restful api 方式送至 Annotation Server 生成切割結果。
  
 <center> <img src="https://i.imgur.com/xnr20ZN.png" alt="DEXTR3D"></center>
 <center class="imgtext">DEXTR3D（圖片來源: <a href="https://docs.nvidia.com/clara/tlt-mi/clara-train-sdk-v3.0/aiaa/overview.html" class="imgtext">Clara Train Application Framework v3.0 documentation</a>）</center>
 
-而 Annotation Server 在收到客戶端的標註結果，會藉由預訓練的模型，或是自定義的模型，進行輔助標記的功能。
+而 Annotation Server 在收到客戶端的標注結果，會藉由預訓練的模型，或是自定義的模型，進行輔助標記的功能。
 
 
 <br>
@@ -190,7 +190,7 @@ Clara Train SDK 針對常見的的醫療影像工具，如：MITK、3D Slicer，
 Akkus, Ziyue Xu, Daguang Xu, Bradley J. Erickson
 <br>
 
-除了 DEXTR3D Model 外，本次 AIAA 新增了 DeepGrow，它可透過 CNN 接收標註前後景的方式，生成切割結果，以協助器官標註。
+除了 DEXTR3D Model 外，本次 AIAA 新增了 DeepGrow，它可透過 CNN 接收標注前後景的方式，生成切割結果，以協助器官標注。
   
 <center> <img src="https://i.imgur.com/R43JgN2.png" alt="DeepGrow"></center>
 <center class="imgtext">DeepGrow（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nvidia:med:clara:getting_started" class="imgtext">NVIDIA</a>）</center>
@@ -199,9 +199,9 @@ Akkus, Ziyue Xu, Daguang Xu, Bradley J. Erickson
 
 感覺有點像是 Photoshop 的魔術棒選取與反向選取的功能。如果用魔術棒選取得結果太大，就用反向選取去扣掉一些範圍；反之若不夠大，就在向外繼續點取，直到框住所要選取的目標為止。
 
-在該篇論文中，可以看到些標註結果。在每一直行為一次標記的操作，左邊四行是對已知器官的標註、右邊兩行則是對未知器官標註；又綠色箭號是標註前景、黃色標註背景。
+在該篇論文中，可以看到些標注結果。在每一直行為一次標記的操作，左邊四行是對已知器官的標注、右邊兩行則是對未知器官標注；又綠色箭號是標注前景、黃色標注背景。
 
-可以看到它透過前景標註來擴大選取範圍，或使用背景標註來去掉部分選取。不過在截圖中，它的背景標註的操作的範圍都有點小，可能要把圖放大一點才能看到它去掉的部分。
+可以看到它透過前景標注來擴大選取範圍，或使用背景標注來去掉部分選取。不過在截圖中，它的背景標注的操作的範圍都有點小，可能要把圖放大一點才能看到它去掉的部分。
   
 <center> <img src="https://i.imgur.com/RkLJnEh.png" alt="Example of interactive segmentation"></center>
 <center class="imgtext">Example of interactive segmentation（圖片來源: <a href="https://arxiv.org/pdf/1903.08205.pdf" class="imgtext">論文</a>）</center>
@@ -214,7 +214,7 @@ Akkus, Ziyue Xu, Daguang Xu, Bradley J. Erickson
 
 <br>
 
-使用這個模型的好處在於可以標註未曾見過器官。以 3D Slicer 為例，在進行標註時，必須先選擇相對應的器官輔助模型，才有辦法協助切割；一旦今天所要標註的器官沒有輔助模型，是無法進行有效的協助的。不過如果有了~~魔術棒~~ DeepGrow，就可標註沒有模型輔助的器官了。
+使用這個模型的好處在於可以標注未曾見過器官。以 3D Slicer 為例，在進行標注時，必須先選擇相對應的器官輔助模型，才有辦法協助切割；一旦今天所要標注的器官沒有輔助模型，是無法進行有效的協助的。不過如果有了~~魔術棒~~ DeepGrow，就可標注沒有模型輔助的器官了。
 
 在 3D Slicer 操作效果如下：
 <center> <img src="https://i.imgur.com/WuntBl0.png" alt="DeepGrow 在 3D Slicer 操作效果"></center>
@@ -222,10 +222,10 @@ Akkus, Ziyue Xu, Daguang Xu, Bradley J. Erickson
 
 <br>
 
-官網中，還貼了張效能的示意圖，號稱可以提升 10x 的標註速度：
+官網中，還貼了張效能的示意圖，號稱可以提升 10x 的標注速度：
 
-<center> <img src="https://i.imgur.com/UXZLQgk.png" alt="標註速度的提升"></center>
-<center class="imgtext">標註速度的提升（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nvidia:med:clara:getting_started" class="imgtext">NVIDIA</a>）</center>
+<center> <img src="https://i.imgur.com/UXZLQgk.png" alt="標注速度的提升"></center>
+<center class="imgtext">標注速度的提升（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nvidia:med:clara:getting_started" class="imgtext">NVIDIA</a>）</center>
 
 <br>
 
@@ -415,7 +415,7 @@ MMAR 是 Clara Train SDK 用來安排在開發生命週期中工作的資料結�
 
 <br>
 
-找了張有標註詳細步驟的架構圖來說明流程，在聯盟式學習基本上就是通過不斷迭代下列步驟來訓練模型：
+找了張有標注詳細步驟的架構圖來說明流程，在聯盟式學習基本上就是通過不斷迭代下列步驟來訓練模型：
 1. 各節點使用各自訓練資料改進目前模型後將更新參數加密發送到伺服器
 2. 伺服器將接收到的參數與其他節點的更新整合參數
 3. 發送模型更新參數到各節點

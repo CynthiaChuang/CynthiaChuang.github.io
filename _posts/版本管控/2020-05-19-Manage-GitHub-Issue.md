@@ -94,7 +94,7 @@ tags:
 <br>
 
 ### <span class="issue-label groups additions"> Additions </span>
-這個標籤 `Feature` 是標註這條 issue 已經在規劃中了。
+這個標籤 `Feature` 是標注這條 issue 已經在規劃中了。
 
 <br><br> 
 

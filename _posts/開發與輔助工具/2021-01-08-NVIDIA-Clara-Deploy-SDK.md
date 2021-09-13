@@ -62,7 +62,7 @@ tags:
 <center class="imgtext">架構圖元素（圖片來源: <a href="https://docs.nvidia.com/clara/deploy/index.html" class="imgtext">SDK 0.7.1 documentation</a>）</center>
 <br>
 
-可以在安裝並啟動 Deploy SDK 後，藉由 `hlem ls` 指令來觀察目前所啟動的 charts。這些被啟動的 charts 可以與架構圖的中的標註一一對應，除了 Triton Inference Server 之外。
+可以在安裝並啟動 Deploy SDK 後，藉由 `hlem ls` 指令來觀察目前所啟動的 charts。這些被啟動的 charts 可以與架構圖的中的標注一一對應，除了 Triton Inference Server 之外。
 
 ```bash
 $ helm ls

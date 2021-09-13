@@ -38,7 +38,7 @@ tags:
 
 此外，AI 在醫學影像領域中，另一個需要克服的困難是資料部份，雖然各大醫療院所在長年累月下累積了大量的醫學影像，但這些影像的儲存方式並非為 AI 應用而設計，且再考慮到不同廠商、機器之間可能會儲存方式的差異，因此必須要進一步整理與提取成可供深度學習使用的資料。
 
-此外還有標註的部份，不論是採用半監督式或是監督式學習都需要進行資料的標註，但請專業人員進行標註不僅成本昂貴，且相當費時，因此如何得到高品質的訓練資料將是訓練過程中的一大挑戰。
+此外還有標注的部份，不論是採用半監督式或是監督式學習都需要進行資料的標注，但請專業人員進行標注不僅成本昂貴，且相當費時，因此如何得到高品質的訓練資料將是訓練過程中的一大挑戰。
  
 <br><br>
 
@@ -50,11 +50,11 @@ tags:
 ### 資料集簡介
 為目前最大規模的肺部 X 光資料集，由 [NIH 美國國立衛生研究院](https://www.nih.gov/news-events/news-releases/nih-clinical-center-provides-one-largest-publicly-available-chest-x-ray-datasets-scientific-community)所提供（[載點](https://nihcc.app.box.com/v/ChestXray-NIHCC)）。
 
-ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影像（約 42G），研究人員對數據採用 NLP 方法從病例報告中提取關鍵字對影像進行標註，1-14 類分別對應 14 種肺部疾病，第 15 類表示未發現疾病。據稱，該數據庫使用 NLP 標註準確率超過 90%。
+ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影像（約 42G），研究人員對數據採用 NLP 方法從病例報告中提取關鍵字對影像進行標注，1-14 類分別對應 14 種肺部疾病，第 15 類表示未發現疾病。據稱，該數據庫使用 NLP 標注準確率超過 90%。
 <br>
 
 <div class="alert info"> 
-關於資料標註的相關研究，請參考 <a href="https://arxiv.org/abs/1705.02315">X. Wang, Y. Peng, L. Lu, Z. Lu, M. Bagheri, and  R.M. Summers. ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases. 2017 </a>。ChestX-ray14 Data 的描述，請看論文的附件 B 。
+關於資料標注的相關研究，請參考 <a href="https://arxiv.org/abs/1705.02315">X. Wang, Y. Peng, L. Lu, Z. Lu, M. Bagheri, and  R.M. Summers. ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases. 2017 </a>。ChestX-ray14 Data 的描述，請看論文的附件 B 。
 </div>
 
 <br>
@@ -66,19 +66,19 @@ ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影�
 中文翻譯對照分別為：肺陷落 / 肺不張、疝氣 / 脫腸、心臟肥大、滲透、實變、腫塊、浮腫 / 水腫、結節、滲出、胸膜增厚、氣腫 / 肺氣腫、肺炎、纖維化、氣胸。
 <br>
 
-先前提過資料集中約有 10 萬張胸部前視圖 X 光影像，每張圖片大小為 1024 * 1024、格式為 PNG，下圖隨機展示些 ChestX-ray14 中的 X 光影像，並搭配額外的標註框，以顯示病灶所在。
+先前提過資料集中約有 10 萬張胸部前視圖 X 光影像，每張圖片大小為 1024 * 1024、格式為 PNG，下圖隨機展示些 ChestX-ray14 中的 X 光影像，並搭配額外的標注框，以顯示病灶所在。
 
 <center> <img src="https://i.imgur.com/CZ53CBj.png" alt="ChestX-ray14"></center>
-<center class="imgtext">ChestX-ray14圖片 + Box 標註（圖片來源: <a href="https://arxiv.org/abs/1705.02315" class="imgtext">ChestX-ray14</a>）</center>
+<center class="imgtext">ChestX-ray14圖片 + Box 標注（圖片來源: <a href="https://arxiv.org/abs/1705.02315" class="imgtext">ChestX-ray14</a>）</center>
 <br>
 
 好吧，說實話就算把病灶框給我，我也看不出差異在哪裡 orz 
 
-另外雖說有 10 萬張胸部前視圖 X 光影像，但只有約 1000 張影像有標註框而已，所以這部份資訊，可能只能來當 test set 確認模型的效能，無法用來參與訓練。
+另外雖說有 10 萬張胸部前視圖 X 光影像，但只有約 1000 張影像有標注框而已，所以這部份資訊，可能只能來當 test set 確認模型的效能，無法用來參與訓練。
 
 <br> 
 
-再來看看影像的標記，會發現這是一個 Multilabel Classification，每張影像都會被標註上一或多種疾病。
+再來看看影像的標記，會發現這是一個 Multilabel Classification，每張影像都會被標注上一或多種疾病。
 
 在印出各個類別的資料個數，會發現除了疾病與疾病間極度不平衡外，如：滲透的影像有近兩萬張，但疝氣只有兩百多張；患病與未患病之間的影響也頗為懸殊，大約是 6 : 4。
 <br>
@@ -114,18 +114,18 @@ P.S. 這數據因為我刪除過些影像，所以數字可能有出入，但概
 
 在他所提出的[質疑](https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/?fbclid=IwAR0oc-Zwz4EOPyp_rDvs8i__6ODgjWNqv-LHJ2B0t5KZiEIkwmF_o3hcUsU)中，他開宗明義講到：「我認為目前的 ChestXray14 資料集並<mark>不適合</mark>用於訓練醫用 AI 系統以進行診斷工作」。
 
-他認為與人類醫生的視覺評估相比，這份資料集中的標籤準確度值得商榷，其標註並不準確或不清楚，且部分標籤屬於醫學上的次要發現，因此認為，無法匹配影像中顯示的疾病，並對這些標籤在臨床上的真實意義與實用性進行討論。
+他認為與人類醫生的視覺評估相比，這份資料集中的標籤準確度值得商榷，其標注並不準確或不清楚，且部分標籤屬於醫學上的次要發現，因此認為，無法匹配影像中顯示的疾病，並對這些標籤在臨床上的真實意義與實用性進行討論。
 <br>
 
 但，針對使用 NLP 挖掘疾病標籤的功效以及導致不良標籤質量的討論，Azure 倒是[認為](https://github.com/Azure/AzureChestXRay#criticisms)，即使標籤很髒，深度學習模型有時仍能夠學到良好的分類性能。
 <br>
 
 ### Google 裁決標籤
-除了直接使用 ChestX-ray 的標籤進行訓練，有些~~財大氣粗~~的研究單位，會結合公開 ChestX-ray 與其他資料集，進行重新標註與 review。
+除了直接使用 ChestX-ray 的標籤進行訓練，有些~~財大氣粗~~的研究單位，會結合公開 ChestX-ray 與其他資料集，進行重新標注與 review。
 
-像是 Google 用來[診斷胸部 X 光片的最新研究](https://ai.googleblog.com/2019/12/developing-deep-learning-models-for.html)，他們不僅引入美國國立衛生研究院的 ChestX-ray14 資料集，還取得自阿波羅醫院的胸部 X 光片，兩資料集總共約 60 萬張圖片。重新標註成 4 個重要的臨床病徵分類，分別是氣胸、結節和腫塊、骨折以及氣腔陰影。
+像是 Google 用來[診斷胸部 X 光片的最新研究](https://ai.googleblog.com/2019/12/developing-deep-learning-models-for.html)，他們不僅引入美國國立衛生研究院的 ChestX-ray14 資料集，還取得自阿波羅醫院的胸部 X 光片，兩資料集總共約 60 萬張圖片。重新標注成 4 個重要的臨床病徵分類，分別是氣胸、結節和腫塊、骨折以及氣腔陰影。
 
-不過雖說重新標註，但由於整體數量過於龐大，還是無法全由人工手動為影像上標籤，必須借助 NLP 擷取關鍵字為影像添加標籤，最後再藉由放射科醫生人工檢視約 37,000 張圖片，以提高資料集標籤的品質。
+不過雖說重新標注，但由於整體數量過於龐大，還是無法全由人工手動為影像上標籤，必須借助 NLP 擷取關鍵字為影像添加標籤，最後再藉由放射科醫生人工檢視約 37,000 張圖片，以提高資料集標籤的品質。
 
 會特別提到這件事的原因是，Google 有對社群[開放](https://console.cloud.google.com/storage/browser/gcs-public-data--healthcare-nih-chest-xray-labels/) ChestX-ray14 資料集中所有裁決標籤，以幫助社群對胸部 X 光片進行研究。
 
@@ -254,13 +254,13 @@ The training was done using single Tesla P100 GPU and took approximately 22h.
 
 <br> 最後來看看預測結果與熱力圖的效果：
 <center> <img src="https://i.imgur.com/kQ2SSuA.png" alt="熱力圖"></center>
-<center class="imgtext"> 由左而右分別是原始圖、熱力圖和標註框</center>  
+<center class="imgtext"> 由左而右分別是原始圖、熱力圖和標注框</center>  
 <br>
 
 隨機選了三組結果，剛好最對應到了三種 case：
 1. 最上面一組圖預測結果是錯的，由熱力圖看來關注點完全不對。
 2. 第二個預測結果是對的，熱力圖的關注點是有點偏，但算是有擦到邊，勉強可以算是有學到？
-3. 第三組圖，算是最完美的 case 了，預測對，熱力圖的關注點也與標註框吻合。
+3. 第三組圖，算是最完美的 case 了，預測對，熱力圖的關注點也與標注框吻合。
 
 
 <br><br>

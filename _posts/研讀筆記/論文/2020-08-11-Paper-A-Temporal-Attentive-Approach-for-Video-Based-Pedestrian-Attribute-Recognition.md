@@ -35,7 +35,7 @@ tags:
     如何根據<mark>空間和時間建模</mark>，並結合兩者進行有效的 Video-Based PAR。
 3. **貢獻**  
     1. 提出了基於 CNN 和時間注意力策略的 multi-task 網路架構（a novel multi-task model based on the conventional neural network and temporal attention strategy）。
-    2. 重新標註了兩個大型[資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)以用於 Video-Based PAR。
+    2. 重新標注了兩個大型[資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)以用於 Video-Based PAR。
 
 
 <br><br> 
@@ -52,33 +52,33 @@ tags:
  
 本文的具體貢獻：  
 1. 第一個利用影片進行行人屬性識別的方法，並引入時間注意力的方法提昇行人屬性識別的準確率。
-2. 重新標註了兩個大型[資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)以用於 Video-Based PAR。
+2. 重新標注了兩個大型[資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)以用於 Video-Based PAR。
 
 <br><br> 
 
 ## Dataset
 
-由於此領域的公開資料集較少，因此作者只好自給自足，對兩個用於行人再識別（ReID）的資料集：**MARS** 和 **DukeMTMC-VideoReID** 進行了重新標註。
+由於此領域的公開資料集較少，因此作者只好自給自足，對兩個用於行人再識別（ReID）的資料集：**MARS** 和 **DukeMTMC-VideoReID** 進行了重新標注。
 
 MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條運動軌跡所組成，是 Market-1501 的擴充集；而 DukeMTMC-VideoReID 的資料則是來自於 8 隻監視器中的 1402 人共 20478 條運動軌跡，是 DukeMTMC-ReID的 的擴充。其中，兩個原始資料集是 Image-Based Dataset，而兩個擴充資料集則是 Video-Based Dataset。
 
-兩個擴充集與原始資料集間，雖皆遵循相同的身分規則，但因 Image-Based 與 Video-Based Dataset 之間的實體不是一對一的對應的，無法直接使用，需要重新標註。另一個需要重新標註的原因是，由於行人在持續的運動，即使是同一個人但在不同的軌跡中，可能某些屬性會出現或消失，因此不能直接按行人的 ID 進行屬性標註，必須檢查當下運動軌跡重新標註屬性。
+兩個擴充集與原始資料集間，雖皆遵循相同的身分規則，但因 Image-Based 與 Video-Based Dataset 之間的實體不是一對一的對應的，無法直接使用，需要重新標注。另一個需要重新標注的原因是，由於行人在持續的運動，即使是同一個人但在不同的軌跡中，可能某些屬性會出現或消失，因此不能直接按行人的 ID 進行屬性標注，必須檢查當下運動軌跡重新標注屬性。
 
 <center> <img src="https://i.imgur.com/WI137nK.png" alt="MARS 中屬性改變的例子"></center>
 <center class="imgtext">MARS 中屬性改變的例子（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
 <br>
 
-重標註後的屬性共有 2 類 14 種共 52 個項目，其中第一類是**行為相關屬性**，這屬性與外觀描述無關，但卻會極大地影響外觀的呈現；第二類則是**身分相關屬性**，可以理解成描述此人所會用到的形容詞。
+重標注後的屬性共有 2 類 14 種共 52 個項目，其中第一類是**行為相關屬性**，這屬性與外觀描述無關，但卻會極大地影響外觀的呈現；第二類則是**身分相關屬性**，可以理解成描述此人所會用到的形容詞。
 
 <div class="alert danger"> 
-<div class="head">關於重標註後的屬性類別數</div>
+<div class="head">關於重標注後的屬性類別數</div>
 論文寫 16 種，但我怎麼算都只有 14 種，因此網誌我寫 14 種。
 </div>
 
-下圖是重標註後 14 種屬性，除運動（Motion）與姿態（Post）是行為相關屬性外，其餘皆是身分相關屬性。
+下圖是重標注後 14 種屬性，除運動（Motion）與姿態（Post）是行為相關屬性外，其餘皆是身分相關屬性。
 
-<center> <img src="https://i.imgur.com/2F56VgW.png" alt="MARS 行人屬性標註"></center>
-<center class="imgtext">MARS 行人屬性標註（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
+<center> <img src="https://i.imgur.com/2F56VgW.png" alt="MARS 行人屬性標注"></center>
+<center class="imgtext">MARS 行人屬性標注（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" class="imgtext">論文</a>）</center>
 
 <br><br> 
 
@@ -134,7 +134,7 @@ image-based method 這項我實在沒看懂它究竟是出自於哪個方法？
 
 ### Settings
 
-資料集是重新標註 **MARS** 與 **DukeMTMC-VideoReID** 並按照原本訓練/測試集分法，並從資料集中隨機取樣 64 個軌跡，每個軌跡取 6 幀，e.g. $n=6$，並選擇 <mark>Cross Entropy Loss</mark> 作為  loss function 、 <mark>Adam</mark>  作為  optimizer、 learning rate 取 0.0003。
+資料集是重新標注 **MARS** 與 **DukeMTMC-VideoReID** 並按照原本訓練/測試集分法，並從資料集中隨機取樣 64 個軌跡，每個軌跡取 6 幀，e.g. $n=6$，並選擇 <mark>Cross Entropy Loss</mark> 作為  loss function 、 <mark>Adam</mark>  作為  optimizer、 learning rate 取 0.0003。
 
 段落中有一句話，**與連續採樣策略相比，隨機採樣更適合於時間注意力模型，因為它增加了採樣幀之間的差異**，有點看不懂它的意思，不過看其他人的論文筆記，它的隨機採樣似乎還做了隨機剪裁、水平翻轉...等數據增強，不過這段文字我在論文中沒注意到，或許是在程式碼中的實作細節？
 <br> 
@@ -177,7 +177,7 @@ Temporal Pooling 應該是指用 ResNet50 當骨架直接做 multi-task 訓練�
     - **異同**：  
     兩者對於輸入的圖像皆有高度依賴性，可能會因為裁切、難以識別和遮擋的現象，導致屬性分類困難。但在 Video-Based 中引入序列資料，添加時間軸資料，能夠提 PAR 的準確率。
     - **挑戰**：
-        1. 公開資料集少，因此本文作者還重新標註了資料庫，如果我們要自己標註自己的資料庫，會所費不貲。但這應該算是 AI/ML 的共同問題。
+        1. 公開資料集少，因此本文作者還重新標注了資料庫，如果我們要自己標注自己的資料庫，會所費不貲。但這應該算是 AI/ML 的共同問題。
         2. 雖然有用 ResNet-50 作為骨幹網路，進行遷移學習，但不同在 Multi-task learning 中，針對不同的任務收斂速率應該會不同，在加上 Temporal-attention，會不會導致難以訓練？
 
 2. **期望能介紹該方面的實做與 STOA**
@@ -187,7 +187,7 @@ Temporal Pooling 應該是指用 ResNet50 當骨架直接做 multi-task 訓練�
     - 比較對象有 [CNN-RNN model](https://ieeexplore.ieee.org/document/7780517) 。
    
 3. **期望能收集現有的資料集**  
-    - 作者有公佈他們重新標註的[資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)，但按照文中訓練時的方法設置訓練與測試集，可能會導致訓練集的資料量遠少於測試集的資料量。
+    - 作者有公佈他們重新標注的[資料集](http://irip.buaa.edu.cn/mars_duke_attributes/index.html)，但按照文中訓練時的方法設置訓練與測試集，可能會導致訓練集的資料量遠少於測試集的資料量。
  
 <br>
 

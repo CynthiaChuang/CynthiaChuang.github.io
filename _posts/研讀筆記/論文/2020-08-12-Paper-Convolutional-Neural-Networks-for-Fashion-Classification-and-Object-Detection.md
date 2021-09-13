@@ -63,7 +63,7 @@ tags:
 
 ## 2. Problem Statement
 
-在 [Abstract](#abstract) 中出現的四種分類 Type、Attribute、Object 與 Style，這邊先進行定義。不過 Type 並沒有標註在圖上，該詞僅用於相似服裝檢索，根據上下文推測指的應該是<mark>服裝的風格</mark>，如：淑女、學院、中性、蘿莉塔、街頭、簡約...等。
+在 [Abstract](#abstract) 中出現的四種分類 Type、Attribute、Object 與 Style，這邊先進行定義。不過 Type 並沒有標注在圖上，該詞僅用於相似服裝檢索，根據上下文推測指的應該是<mark>服裝的風格</mark>，如：淑女、學院、中性、蘿莉塔、街頭、簡約...等。
 
 <center> <img src="https://i.imgur.com/Qg6EdSw.png" alt="分類任務的摘要"></center>
 <center class="imgtext"> 分類任務的摘要（圖片來源: <a href="http://cs231n.stanford.edu/reports/2015/pdfs/BLAO_KJAG_CS231N_FinalPaperFashionClassification.pdf" class="imgtext">論文</a>）</center>
@@ -168,7 +168,7 @@ Pass
 
 ### 3.4. Clothing Object Detection
 
-物件偵測的部份採用 R-CNN 做遷移學習。並用改標註 ground-truth bounding box 的 CF 資料集進行 Fine-Tune。是說有點奇怪，是作者敘述順序放錯嗎？Object Detection 怎會在最後一步？
+物件偵測的部份採用 R-CNN 做遷移學習。並用改標注 ground-truth bounding box 的 CF 資料集進行 Fine-Tune。是說有點奇怪，是作者敘述順序放錯嗎？Object Detection 怎會在最後一步？
 
 
 <br><br> 
