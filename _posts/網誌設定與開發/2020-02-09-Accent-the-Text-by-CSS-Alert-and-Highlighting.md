@@ -259,9 +259,8 @@ $highlighting-default              : #e6fcf2;
 
 <div class="alert info">
 <div class="head">HTML <mark\> Tag</div>
-後來發現用 HTML <mark\> Tag 來改效果會更好，所以又做了另外一篇：  <br>
--【技能樹栽種】HTML <mark\> Tag 實做 Highlighting<br>
-P.S. 網誌完成後再來補連結 <br> 
+後來發現用 HTML 的 mark Tag 來實做效果會更好，所以又做了另外一篇：  <br>
+- <a href="/Mark-Element-is-Used-to-Highlight-Content/">【技能樹栽種】 HTML Mark Tag 實作 Highlighting</a>
 </div>
 
  
