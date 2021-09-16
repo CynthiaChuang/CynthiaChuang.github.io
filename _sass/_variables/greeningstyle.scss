@@ -3,49 +3,86 @@
 // --------------------------------------------------
 
 // Global text color on <body>
-$greendark-darker             : #202220;
-$greendark-dark               : #405a46;
-$greendark-dim                : #414b43;
-$greendark-ligh               : #a7b5a7;
-$greendark-lighter            : #f5faf5;
-$green-dim                    : #6ca903;
-$green-light                  : #b9da7e;
-$green-lighter                : #c3dc99;
+$greendark-darker: #202220;
+$greendark-dark: #405a46;
+$greendark-dim: #414b43;
+$greendark-ligh: #a7b5a7;
+$greendark-lighter: #f5faf5;
+$green-dim: #6ca903;
+$green-light: #b9da7e;
+$green-lighter: #c3dc99;
 
-$h1-color                     : $green-dim;
-$h2-color                     : $green-dim;
-$text-color                   : $greendark-dim;
+$h1-color: $green-dim;
+$h2-color: $green-dim;
+$text-color: $greendark-dim;
 
 // Global link color.
-$link-color                   : $text-color;
-$link-hover-color             : $green-dim ;
-$link-decoration-color        : $grey-light;
-$link-decoration-hover-color  : $link-hover-color;
+$link-color: $text-color;
+$link-hover-color: $green-dim;
+$link-decoration-color: $grey-light;
+$link-decoration-hover-color: $link-hover-color;
 
 // Selection
-$selection-bg                 : $green-light;
-$selection-color              : $text-color;
+$selection-bg: $green-light;
+$selection-color: $text-color;
 
 // image text
-$image-text                 : $greendark-ligh;
+$image-text: $greendark-ligh;
 
 // Sidebar
 // Variables for sidebar section elements.
 // --------------------------------------------------
-$sidebar-highlight                    : $green-dim;
-$sidebar-nav-hover-color              : $green-lighter;
+$sidebar-highlight: $green-dim;
+$sidebar-nav-hover-color: $green-lighter;
 
-$toc-link-hover-color                 : $green-lighter;
-$toc-link-hover-border-color          : $green-lighter;
-$toc-link-active-color                : $sidebar-highlight;
-$toc-link-active-border-color         : $sidebar-highlight;
-$toc-link-active-current-color        : $sidebar-highlight;
-$toc-link-active-current-border-color : $sidebar-highlight;
+$toc-link-hover-color: $green-lighter;
+$toc-link-hover-border-color: $green-lighter;
+$toc-link-active-color: $sidebar-highlight;
+$toc-link-active-border-color: $sidebar-highlight;
+$toc-link-active-current-color: $sidebar-highlight;
+$toc-link-active-current-border-color: $sidebar-highlight;
+
+// alert
+// --------------------------------------------------
+// Primary
+$alert-primary-border: #af679d;
+$alert-primary-bg: #f4eef6;
+$alert-primary-text: $alert-primary-border;
+$alert-primary-hover: #5f3e49;
+$alert-primary-icon: "\f055";
+
+// Info
+$alert-info-border: #5c84a3;
+$alert-info-bg: #eaf5fb;
+$alert-info-text: $alert-info-border;
+$alert-info-hover: #224f74;
+$alert-info-icon: "\f05a";
+
+// Success
+$alert-success-border: #71887e;
+$alert-success-bg: rgb(241, 251, 242);
+$alert-success-text: $alert-success-border;
+$alert-success-hover: #3c783c;
+$alert-success-icon: "\f058";
+
+// Warning
+$alert-warning-border: #be7054;
+$alert-warning-bg: #fff3f1;
+$alert-warning-text: $alert-warning-border;
+$alert-warning-hover: #985d3b;
+$alert-warning-icon: "\f06a";
+
+// Danger
+$alert-danger-border: #bb6e71;
+$alert-danger-bg: #fcf1f2;
+$alert-danger-text: $alert-danger-border;
+$alert-danger-hover: #a3474c;
+$alert-danger-icon: "\f056";
 
 // Posts Expand
 // --------------------------------------------------
-$post-copyright : (
-    border-left-color: $green-light,
-    bg: $greendark-lighter ,    
-    color: $greendark-ligh ,
+$post-copyright: (
+  border-left-color: $green-light,
+  bg: $greendark-lighter,
+  color: $greendark-ligh,
 );
