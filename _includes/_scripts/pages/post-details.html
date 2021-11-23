@@ -1,2 +1,17 @@
 <script type="text/javascript" src="{{ site.js | relative_url }}/src/scrollspy.js?v={{ site.version }}"></script>
 <script type="text/javascript" src="{{ site.js | relative_url }}/src/post-details.js?v={{ site.version }}"></script>
+<script type="text/javascript">
+    document.addEventListener('copy', function (evt) {
+        let text = document.getSelection().toString();
+        if (text) {
+            text = text + "\n\n" 
+            + "=========================================\n"
+            + "{{ __.post.copyright.author | append: __.symbol.colon  | append: site.author }}\n"
+            + "{{ __.post.copyright.link | append: __.symbol.colon  | append: site.url | append: page.url }}\n"
+            + "{{ __.post.copyright.license_title | append: __.symbol.colon  | append: __.post.copyright.license_nolink_content | replace_first: '%s', site.post_copyright.license}}"
+        }  
+        let clipdata = evt.clipboardData || window.clipboardData;        
+        clipdata.setData("text",text);
+        evt.preventDefault();
+    });
+</script>

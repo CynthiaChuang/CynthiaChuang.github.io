@@ -45,6 +45,8 @@ post:
       license_content: 'All articles in this blog are licensed under
         <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.
         Please indicate the author, link and source for reprinting!'
+      license_nolink_content: 'All articles in this blog are licensed under %s  unless stating additionally.
+        Please indicate the author, link and source for reprinting!'
 
 page:
   totally: Totally
@@ -93,3 +95,5 @@ symbol:
   comma: ', '
   period: '. '
   colon: ':'
+
+
