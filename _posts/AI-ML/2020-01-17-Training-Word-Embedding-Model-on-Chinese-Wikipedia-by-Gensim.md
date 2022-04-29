@@ -1,7 +1,7 @@
 ---
 title: 基於 gensim 訓練中文維基詞向量
-date: 2020-01-17
-is_modified: false
+date: 2022-04-28
+is_modified: true
 categories:
 - AI/ML
 tags:
@@ -106,6 +106,7 @@ config    : /py3.6/lib/python3.6/site-packages/pyhanlp/static/hanlp.properties <
  
 ```python
 from gensim.corpora import WikiCorpus
+from tqdm import tqdm
 from pyhanlp import *
 
 def hasUnicodeEncodeError(context):
@@ -186,6 +187,7 @@ TraditionalChineseTokenizer.segment('你好，歡迎在Python中調用HanLP的AP
 
 ```python
 from pyhanlp import *
+from tqdm import tqdm
 import re
 
 def getWordsAndNatures(term):
@@ -204,18 +206,18 @@ def restructuring(line):
 sources=["Sentences_1.txt", "Sentences_2.txt"]      
 output="segment_result.txt"
 
-with open(self.output, "w") as fw:
-    for file in self.sources:
+with open(output, "w") as fw:
+    for file in sources:
         with open(file, 'r') as fr:
             for line in tqdm(fr, desc='segment {0} lines'.format(file)):
                 line = line.strip()
 
                 # （看情境）其他處理-1： 取代 e-mail、取代 url
                 term = HanLP.segment(line)
-                corpus = self.getWordsAndNatures(term)
+                corpus = getWordsAndNatures(term)
                 # （看情境）其他處理-2: 依照詞性取代掉姓名、機關名稱
                 # 其他處理-3: 移除 stop word
-                fw.write(self.restructuring(corpus[0]) + "\n")
+                fw.write(restructuring(corpus[0]) + "\n")
 ```
 <br>
 
@@ -310,3 +312,15 @@ model.most_similar(["日本","東京"], ["美國"], topn= 100)
 )
 9. [中文维基百科语料库词向量的训练｜吴良超的学习笔记](https://wulc.me/2016/10/12/%E4%B8%AD%E6%96%87%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%9A%84%E8%AF%8D%E5%90%91%E9%87%8F%E7%9A%84%E8%AE%AD%E7%BB%83/)
 10. [以 gensim 訓練中文詞向量｜雷德麥的藏書閣](http://zake7749.github.io/2016/08/28/word2vec-with-gensim/) 
+
+
+<br><br>  
+
+## 更新紀錄
+<details>
+  <summary>最後更新日期：2022-04-28</summary>
+  <ul class="timestamp">
+    　<li>2022-04-28 fix 'NameError: name 'self' is not defined'</li>
+    　<li>2020-01-17 發布</li>
+  </ul>
+</details>
