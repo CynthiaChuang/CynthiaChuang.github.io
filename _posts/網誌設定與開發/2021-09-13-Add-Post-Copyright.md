@@ -1,7 +1,7 @@
 ---
 title: "【技能樹栽種】新增版權訊息"
-date: 2021-09-13 22:29
-is_modified: false
+date: 2022-04-30 00:07 
+is_modified: true
 categories:
 - 網誌設定與開發
 - 程式語言與架構
@@ -214,6 +214,11 @@ tags:
 
 發現有些網站除了顯示版權訊息外，還會在你複製網頁內容時，自動加上版權聲明、作者與網址等資訊。下一步如果有空的話，我應該會來研究這個該怎實現，等搞定了再來發網誌嘿～！ 
 
+<div class="alert info"> 
+🤟 喔耶～我完成了 → <a href="https://cynthiachuang.github.io/Copy-Text-to-Clipboard-and-Append-Source-Hyperlink">【技能樹栽種】複製網頁文字時，加上網站的作者與網址</a>
+</div>
+
+
 <br><br> 
 
 ## 參考資料 
@@ -224,8 +229,9 @@ tags:
 
 ## 更新紀錄
 <details>
-  <summary>最後更新日期：2021-09-13</summary>
+  <summary>最後更新日期：2022-04-30</summary>
   <ul class="timestamp">
+    　<li>2022-04-30 更新：複製網頁文字時，加上網站的作者與網址</li>
     　<li>2021-09-13 發布</li>
     　<li>2021-09-13 完稿</li>
     　<li>2021-09-02 起稿</li>
