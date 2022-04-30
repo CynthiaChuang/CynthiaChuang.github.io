@@ -321,6 +321,23 @@
   color: $image-text;   
 }
 
-.post-body .timestamp{
-  line-height:15px ;
+.post-body details.update_stamp{
+  summary {  
+    display:list-item;
+    list-style-position: inside;
+    padding-right: 5px;
+  }
+  ul { 
+    padding-top:0;
+  }
+  ul li{   
+    list-style-type: none; 
+    color: $grey-dim; 
+  }
+  li:before { 
+    content: '\23F1'; 
+    margin-left: -20px; 
+    margin-right: 10px; 
+  } 
 }
+
