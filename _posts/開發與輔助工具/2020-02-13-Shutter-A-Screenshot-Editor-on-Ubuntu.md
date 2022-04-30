@@ -111,12 +111,12 @@ $ sudo rm libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
 
 ## 更新紀錄
 
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-09-14</summary>
-  <ul class="timestamp">
-    　<li>2021-09-14 更新：指令安裝方式、各節標題更改</li>
-    　<li>2021-01-27 更新：新增 在 Ubuntu 18.04 +上安裝</li>
-    　<li>2020-02-13 發布</li>
-    　<li>2020-02-13 完稿</li>
+  <ul>
+    <li>2021-09-14 更新：指令安裝方式、各節標題更改</li>
+    <li>2021-01-27 更新：新增 在 Ubuntu 18.04 +上安裝</li>
+    <li>2020-02-13 發布</li>
+    <li>2020-02-13 完稿</li>
   </ul>
 </details>

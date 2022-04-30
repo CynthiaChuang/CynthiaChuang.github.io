@@ -276,10 +276,10 @@ CromwellOnAzure</a>）</center>
 17. Jenn Roth (2018-04-26)。[Maximizing the value of genomic data in healthcare](https://cloudblogs.microsoft.com/industry-blog/health/2018/04/26/maximizing-the-value-of-genomic-data-in-healthcare/)。檢自 Microsoft Genomics (2020-02-10)。
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-05-19</summary>
-  <ul class="timestamp">
-    　<li>2020-05-19 發表</li>
-    　<li>2020-02-10 完稿</li>
+  <ul>
+    <li>2020-05-19 發表</li>
+    <li>2020-02-10 完稿</li>
   </ul>
 </details>

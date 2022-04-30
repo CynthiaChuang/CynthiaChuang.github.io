@@ -81,11 +81,11 @@ sudo: unable to resolve host ubuntu16-x64
 <br><br>  
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-09-16</summary>
-  <ul class="timestamp">
-    　<li>2021-09-16 發布</li>
-    　<li>2021-09-08 完稿</li>
-    　<li>2021-09-08 起稿</li>
+  <ul>
+    <li>2021-09-16 發布</li>
+    <li>2021-09-08 完稿</li>
+    <li>2021-09-08 起稿</li>
   </ul>
 </details>

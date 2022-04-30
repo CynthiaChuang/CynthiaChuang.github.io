@@ -94,11 +94,11 @@ tags:
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-08-11</summary>
-  <ul class="timestamp">
-    　<li>2020-08-11 發布</li>
-    　<li>2020-06-15 完稿</li>
-    　<li>2020-06-05 起稿</li>
+  <ul>
+    <li>2020-08-11 發布</li>
+    <li>2020-06-15 完稿</li>
+    <li>2020-06-05 起稿</li>
   </ul>
 </details>

@@ -224,11 +224,11 @@ P.S. Augmentor 的安裝與使用可以看[這篇](/Augmentor-Image-Augmentation
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-08-12</summary>
-  <ul class="timestamp">
-    　<li>2020-08-12 發布</li>
-    　<li>2020-07-10 完稿</li>
-    　<li>2020-03-17 起稿</li>
+  <ul>
+    <li>2020-08-12 發布</li>
+    <li>2020-07-10 完稿</li>
+    <li>2020-03-17 起稿</li>
   </ul>
 </details>

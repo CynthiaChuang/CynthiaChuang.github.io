@@ -37,10 +37,10 @@ tags:
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期： 2020-08-14</summary>
-  <ul class="timestamp">
-      <li>2020-08-14 更新 Where is Sci-Hub now? 連結</li>
-    　<li>2018-05-28 發布</li>
+  <ul>
+    <li>2020-08-14 更新 Where is Sci-Hub now? 連結</li>
+    <li>2018-05-28 發布</li>
   </ul>
 </details>

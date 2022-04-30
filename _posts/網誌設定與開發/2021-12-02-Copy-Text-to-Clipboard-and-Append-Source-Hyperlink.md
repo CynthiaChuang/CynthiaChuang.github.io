@@ -138,11 +138,11 @@ document.addEventListener('copy', function (evt) {
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2022-04-29</summary>
-  <ul class="timestamp">
-    　<li>2022-04-29 發布</li>
-    　<li>2021-12-02 完稿</li>
-    　<li>2021-11-23 起稿</li>
+  <ul>
+    <li>2022-04-29 發布</li>
+    <li>2021-12-02 完稿</li>
+    <li>2021-11-23 起稿</li>
   </ul>
 </details>

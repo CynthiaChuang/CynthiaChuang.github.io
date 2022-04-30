@@ -144,10 +144,10 @@ $ systemctl restart sshd
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-01-12</summary>
-  <ul class="timestamp">
-    　<li>2021-01-12 更新：補上重起 sshd 指令</li>
-    　<li>2019-06-13 發布</li>
+  <ul>
+    <li>2021-01-12 更新：補上重起 sshd 指令</li>
+    <li>2019-06-13 發布</li>
   </ul>
 </details>

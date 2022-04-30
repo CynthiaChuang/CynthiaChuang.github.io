@@ -45,12 +45,12 @@ tags:
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-08-29</summary>
-  <ul class="timestamp">
-    　<li>2021-08-29 更新</li>
-    　<li>2020-09-24 發布</li>
-    　<li>2020-09-13 完稿</li>
-    　<li>2020-09-13 起稿</li>
+  <ul>
+    <li>2021-08-29 更新</li>
+    <li>2020-09-24 發布</li>
+    <li>2020-09-13 完稿</li>
+    <li>2020-09-13 起稿</li>
   </ul>
 </details>

@@ -317,10 +317,10 @@ model.most_similar(["日本","東京"], ["美國"], topn= 100)
 <br><br>  
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2022-04-28</summary>
-  <ul class="timestamp">
-    　<li>2022-04-28 fix 'NameError: name 'self' is not defined'</li>
-    　<li>2020-01-17 發布</li>
+  <ul>
+    <li>2022-04-28 fix 'NameError: name 'self' is not defined'</li>
+    <li>2020-01-17 發布</li>
   </ul>
 </details>

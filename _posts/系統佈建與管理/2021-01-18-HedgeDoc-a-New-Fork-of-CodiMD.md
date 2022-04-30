@@ -131,11 +131,11 @@ $ sudo service network-manager restart
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-01-26</summary>
-  <ul class="timestamp">
-    　<li>2021-01-26 發布</li>
-    　<li>2021-01-26 完稿</li>
-    　<li>2021-01-18 起稿</li>
+  <ul>
+    <li>2021-01-26 發布</li>
+    <li>2021-01-26 完稿</li>
+    <li>2021-01-18 起稿</li>
   </ul>
 </details>

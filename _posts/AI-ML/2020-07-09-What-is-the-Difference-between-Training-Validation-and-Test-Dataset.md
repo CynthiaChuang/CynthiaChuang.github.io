@@ -105,12 +105,12 @@ tags:
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-03-10</summary>
-  <ul class="timestamp">
-      <li>2021-03-10 更新：新增圖片、改動留出法英文</li>
-    　<li>2020-08-10 發布</li>
-    　<li>2020-07-09 完稿</li>
-    　<li>2020-06-30 起稿</li>
+  <ul>
+    <li>2021-03-10 更新：新增圖片、改動留出法英文</li>
+    <li>2020-08-10 發布</li>
+    <li>2020-07-09 完稿</li>
+    <li>2020-06-30 起稿</li>
   </ul>
 </details>

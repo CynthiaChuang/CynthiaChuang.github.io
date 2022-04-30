@@ -117,11 +117,11 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期： 2020-08-12</summary>
-  <ul class="timestamp">  
-    　<li>2020-08-12 更新：新增 Multi-task 說明</li>
-    　<li>2020-05-27 發布</li>
-    　<li>2020-05-24 完稿</li>
+  <ul>  
+    <li>2020-08-12 更新：新增 Multi-task 說明</li>
+    <li>2020-05-27 發布</li>
+    <li>2020-05-24 完稿</li>
   </ul>
 </details>

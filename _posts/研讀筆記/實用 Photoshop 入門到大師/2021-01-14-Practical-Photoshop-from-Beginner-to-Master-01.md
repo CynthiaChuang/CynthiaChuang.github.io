@@ -267,11 +267,11 @@ Photoshop 的功能很多，但依照工作性質的不同，會需要使用的�
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-02-01</summary>
-  <ul class="timestamp">
-    　<li>2021-02-01 發布</li>
-    　<li>2021-01-14 完稿</li>
-    　<li>2020-12-13 起稿</li>
+  <ul>
+    <li>2021-02-01 發布</li>
+    <li>2021-01-14 完稿</li>
+    <li>2020-12-13 起稿</li>
   </ul>
 </details>

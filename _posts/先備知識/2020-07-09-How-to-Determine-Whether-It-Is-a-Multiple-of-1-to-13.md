@@ -160,11 +160,11 @@ def is_multiple_of_13(number):
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-08-10</summary>
-  <ul class="timestamp">
-    　<li>2020-08-10 發布</li>
-    　<li>2020-07-09 完稿</li>
-    　<li>2020-07-02 起稿</li>
+  <ul>
+    <li>2020-08-10 發布</li>
+    <li>2020-07-09 完稿</li>
+    <li>2020-07-02 起稿</li>
   </ul>
 </details>

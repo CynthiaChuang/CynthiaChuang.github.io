@@ -48,10 +48,10 @@ PicPick 它也是一款螢幕擷取軟體，可以簡易編輯圖片、畫線/�
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期： 2020-05-26</summary>
-  <ul class="timestamp">
-    　<li>2020-05-26 發布</li>
-    　<li>2020-03-27 完稿</li>
+  <ul>
+    <li>2020-05-26 發布</li>
+    <li>2020-03-27 完稿</li>
   </ul>
 </details>

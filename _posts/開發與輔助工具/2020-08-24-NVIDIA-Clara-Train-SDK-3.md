@@ -631,11 +631,11 @@ Dice 是目標檢測中，比較常用到的衡量指標，範圍從 0 到 1 ，
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-11-12</summary>
-  <ul class="timestamp">
-    　<li>2021-01-12 發布</li>
-    　<li>2020-08-24 完稿</li>
-    　<li>2020-08-20 起稿</li>
+  <ul>
+    <li>2021-01-12 發布</li>
+    <li>2020-08-24 完稿</li>
+    <li>2020-08-20 起稿</li>
   </ul>
 </details>

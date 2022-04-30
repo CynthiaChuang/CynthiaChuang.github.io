@@ -172,11 +172,11 @@ P.S. 寫到這邊才想到，我又不重 CPU 計算的部份，應該開 Multit
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-08-10</summary>
-  <ul class="timestamp">
-    　<li>2020-08-10 發布</li>
-    　<li>2020-06-18 完稿</li>
+  <ul>
+    <li>2020-08-10 發布</li>
+    <li>2020-06-18 完稿</li>
   </ul>
 </details>
 

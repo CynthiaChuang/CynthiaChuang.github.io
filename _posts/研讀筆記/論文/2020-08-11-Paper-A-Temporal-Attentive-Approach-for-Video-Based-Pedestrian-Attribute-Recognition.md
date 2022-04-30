@@ -209,12 +209,12 @@ Temporal Pooling 應該是指用 ResNet50 當骨架直接做 multi-task 訓練�
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-08-13</summary>
-  <ul class="timestamp">
-    　<li>2020-08-13 發布</li>
-    　<li>2020-08-11 完稿</li>
-    　<li>2020-08-10 起稿</li>
+  <ul>
+    <li>2020-08-13 發布</li>
+    <li>2020-08-11 完稿</li>
+    <li>2020-08-10 起稿</li>
   </ul>
 </details>
 

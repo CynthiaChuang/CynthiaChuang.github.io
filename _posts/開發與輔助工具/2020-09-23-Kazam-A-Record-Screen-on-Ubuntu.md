@@ -142,11 +142,11 @@ $ ffmpeg -i input.mp4 -c:v copy -crf 19 output.mkv
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-11-12</summary>
-  <ul class="timestamp">
-    　<li>2020-11-12 發布</li>
-    　<li>2020-09-23 完稿</li>
-    　<li>2020-09-23 起稿</li>
+  <ul>
+    <li>2020-11-12 發布</li>
+    <li>2020-09-23 完稿</li>
+    <li>2020-09-23 起稿</li>
   </ul>
 </details>

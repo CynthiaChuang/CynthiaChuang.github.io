@@ -73,10 +73,10 @@ tags:
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期： 2020-07-28</summary>
-  <ul class="timestamp">
-    　<li>2020-07-28 發布</li>
-    　<li>2020-05-29 完稿</li>
+  <ul>
+    <li>2020-07-28 發布</li>
+    <li>2020-05-29 完稿</li>
   </ul>
 </details>

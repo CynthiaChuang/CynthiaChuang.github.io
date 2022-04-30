@@ -105,11 +105,11 @@ tags:
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-05-19</summary>
-  <ul class="timestamp">
-    　<li>2020-05-19 發表</li>
-    　<li>2020-02-06 完稿</li>
+  <ul>
+    <li>2020-05-19 發表</li>
+    <li>2020-02-06 完稿</li>
   </ul>
 </details>
 

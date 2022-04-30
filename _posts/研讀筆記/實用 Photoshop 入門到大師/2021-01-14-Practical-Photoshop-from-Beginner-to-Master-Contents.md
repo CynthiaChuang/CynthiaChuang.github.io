@@ -40,11 +40,11 @@ tags:
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-03-08</summary>
-  <ul class="timestamp">
-    　<li>2021-03-08 更新第二章連結</li>
-    　<li>2021-01-14 更新第一章連結</li>
-    　<li>2020-12-13 起稿</li>
+  <ul>
+    <li>2021-03-08 更新第二章連結</li>
+    <li>2021-01-14 更新第一章連結</li>
+    <li>2020-12-13 起稿</li>
   </ul>
 </details>

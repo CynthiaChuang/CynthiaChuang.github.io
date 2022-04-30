@@ -303,10 +303,10 @@ HackMD / CodiMD 是真的很好用，但說實話建置說明文件偏少（還�
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-01-26</summary>
-  <ul class="timestamp">
-    　<li>2021-01-26 更新：repository 資訊</li>
-    　<li>2019-06-04 發布</li>
+  <ul>
+    <li>2021-01-26 更新：repository 資訊</li>
+    <li>2019-06-04 發布</li>
   </ul>
 </details>

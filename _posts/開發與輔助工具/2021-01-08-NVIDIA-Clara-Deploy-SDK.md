@@ -737,11 +737,11 @@ Argo Workflow 是一個基於 Kubernetes CRD 實現開源工作流程引擎，�
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-01-18</summary>
-  <ul class="timestamp">
-    　<li>2021-01-18 發布</li>
-    　<li>2021-01-08 完稿</li>
-    　<li>2020-11-09 起稿</li>
+  <ul>
+    <li>2021-01-18 發布</li>
+    <li>2021-01-08 完稿</li>
+    <li>2020-11-09 起稿</li>
   </ul>
 </details>

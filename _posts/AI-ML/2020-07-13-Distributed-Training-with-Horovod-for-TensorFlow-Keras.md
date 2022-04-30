@@ -143,12 +143,12 @@ dataset = dataset.repeat()
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2021-01-06</summary>
-  <ul class="timestamp">
-      <li>2021-01-06 更新：更新失效連結</li>
-    　<li>2020-08-11 發布</li>
-    　<li>2020-07-13 完稿</li>
-    　<li>2020-07-02 起稿</li>
+  <ul>
+    <li>2021-01-06 更新：更新失效連結</li>
+    <li>2020-08-11 發布</li>
+    <li>2020-07-13 完稿</li>
+    <li>2020-07-02 起稿</li>
   </ul>
 </details>

@@ -407,11 +407,11 @@ VAIDIO 是運行在使用者自己的資料中心，並不用將影像上傳到�
 <br><br> 
 
 ## 更新紀錄
-<details>
+<details class="update_stamp">
   <summary>最後更新日期：2020-12-31</summary>
-  <ul class="timestamp">
-    　<li>2020-12-31 發布</li>
-    　<li>2020-11-18 完稿</li>
-    　<li>2020-10-16 起稿</li>
+  <ul>
+    <li>2020-12-31 發布</li>
+    <li>2020-11-18 完稿</li>
+    <li>2020-10-16 起稿</li>
   </ul>
 </details>
