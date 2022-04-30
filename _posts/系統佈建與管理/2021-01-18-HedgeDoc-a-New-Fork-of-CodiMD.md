@@ -33,7 +33,7 @@ tags:
 
 在這期間社群也基於此開源版本進行開發，但小尷尬的是社群版也是沿用了 CodiMD 這個名稱。所以一時間 Github 上存在兩個名為 CodiMD 的儲存庫—**[hackmdio/codimd](https://github.com/hackmdio/codimd)** 與 **[codimd/server](https://github.com/hedgedoc/hedgedoc)**，但說實話這對剛入門的人來說是非常難以理解的。
 
-因此基於種種原因，社群版的 CodiMD 後來更名成為 HedgeDoc，並將 log 換成一隻可愛小刺蝟。
+因此基於種種原因，社群版的 CodiMD 後來更名成為 HedgeDoc，並將 logo 換成一隻可愛小刺蝟。
 
 <br> 
 
