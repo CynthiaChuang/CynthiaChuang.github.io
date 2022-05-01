@@ -1,7 +1,7 @@
 ---
-title: 【臺灣ID驗證系列】 公司統一編號驗證
-date: 2020-12-31 22:12
-is_modified: false
+title: 【臺灣ID驗證系列】公司統一編號驗證
+date: 2022-05-01 00:07
+is_modified: true
 categories:
 - 先備知識
 tags:
@@ -17,6 +17,17 @@ tags:
 <!--more-->
 <center> <img src="https://i.imgur.com/GPyBBgm.jpg?1" alt="公司統一編號"></center>
 <center class="imgtext">公司統一編號</center>
+<br>
+
+<div class="alert warning">
+<div class="head">公司統一編號驗證檢查碼邏輯修正說明</div>
+1. 統一編號預估空號將於 2024 年用罄，故擴增統一編號。<br>
+2. 為相容新舊統一編號，檢查邏輯由可被『10』整除改為可被『5』整除。<br>
+   `Sum%10=0` -> `Sum%5=0` <br>
+3. 預計 <b>2023 年 4 月</b>以後，逐步釋出新統一編號。<br>
+4. 不過是說 2023 年才釋出的編號，我改這麼快幹嘛啦 XD<br>
+</div>
+
 <br><br> 
 
 ## 編號規則
@@ -43,7 +54,13 @@ $$
 $$
 Sum\%10=0，\text{ where }  Sum = \sum_{i=0}^{7}s_i
 $$
+
+不過在 **2023 年 4 月**逐步釋出新的統一編號後，若為相容新舊統一編號，則應檢查數字總和是否為 **5 的倍數**：
  
+$$
+Sum\%5=0，\text{ where }  Sum = \sum_{i=0}^{7}s_i
+$$
+
 <br>
 
 ### 例外：$n_6 = 7$
@@ -84,6 +101,12 @@ $$
 Sum\%10=0 \text{ or } Sum'\%10=0
 $$
 
+一樣若在新版統編釋出後，為相容兩者檢查邏輯則改為：其中一個和為 **5 的倍數**
+
+$$
+Sum\%5=0 \text{ or } Sum'\%5=0
+$$
+
 <br><br> 
 
 ## 程式碼
@@ -94,18 +117,16 @@ $$
 
 <br>
 
-至於其他的驗證只能靠程式了，regexp 派不上用場，對了這次是 C++
+至於其他的驗證只能靠程式了，regexp 派不上用場，對了這次是 C++。偷個懶直接把 checkNumber 拉成變數並設置為 5，就自己視需求要用 10 或 5。
 ```cpp
 #include <regex>
 #include <string>
 #include <iostream>
 using namespace std;
 
-
 bool checkTaxId(string taxId);
 
-int main(int argc, char *argv[]) 
-{
+int main(int argc, char *argv[]){
     int count = 0; 
     while(argv[++count]);
 
@@ -134,7 +155,7 @@ bool checkTaxId(string idStr){
     int idArray[len];
     int weight[] = {1,2,1,2,1,2,4,1};
 
-    int sum;
+    int sum = 0;
     for (int i = 0; i < len; i++){
          // conver char to int 
         idArray[i] = idStr[i] - '0' ;
@@ -143,8 +164,9 @@ bool checkTaxId(string idStr){
         sum += s ;  
     }
 
-    // when s[6]==7, after adding the two, its value will be equal to 10, in this case, 1 or 0 should be used to calculate the sum. But here 10 is used directly to calculate the sum, because if 0 and 10 are used to take the remainder, both are 0; if 1 is taken to take the remainder as 0, it can be reversed that the remainder should be 9.
-    bool isLegal = sum%10==0 || (sum%10==9 && idArray[6]==7);
+    // when s[6]==7, after adding the two, its value will be equal to 10, in this case, 1 or 0 should be used to calculate the sum. But here 10 is used directly to calculate the sum, because if 0 and 10 are used to take the remainder, both are 0; if 1 is taken to take the remainder as 0, it can be reversed that the remainder should be 9.  
+    int checkNumber = 5 ;
+    bool isLegal = sum%checkNumber==0 || ((sum+1)%checkNumber==0 && idArray[6]==7);
 
     if(!isLegal){
         cout << "Fail, 不合法的統編驗證" << endl;   
@@ -159,6 +181,7 @@ bool checkTaxId(string idStr){
 1. 林壽山 (2013-03-17)。[營利事業統一編號邏輯檢查方法](https://superlevin.ifengyuan.tw/%E7%87%9F%E5%88%A9%E4%BA%8B%E6%A5%AD%E7%B5%B1%E4%B8%80%E7%B7%A8%E8%99%9F%E9%82%8F%E8%BC%AF%E6%AA%A2%E6%9F%A5%E6%96%B9%E6%B3%95/) 。檢自 Levin's Blog-林壽山 (2020-10-23)。
 2. hero (2018-11-07)。[營利事業統一編號驗證完全手冊(Javascript,Java,C#,PHP)](http://herolin.webhop.me/entry/is-valid-TW-company-ID/) 。檢自 Hero Think~用手摀住我的嘴 (2020-10-23)。
 3. beethobear (2006-10-30)。[[商用軟體]統一編號檢查碼規則](http://phorum.study-area.org/index.php/topic,11397.html) 。檢自 酷!學園 (2020-10-23)。
+4. 電子發票組 (2021-12-22)。[營利事業統一編號檢查碼邏輯修正說明](https://www.fia.gov.tw/singlehtml/3?cntId=c4d9cff38c8642ef8872774ee9987283) 。檢自 財政部財政資訊中心 (2022-05-01)。 
 
 <br><br> 
 
@@ -166,6 +189,7 @@ bool checkTaxId(string idStr){
 <details class="update_stamp">
   <summary>最後更新日期：2022-05-01</summary>
   <ul>
+    <li>2022-05-01 更新：檢查碼邏輯修正說明</li>
     <li>2022-05-01 更新：檢查碼判別式錯誤修正</li>
     <li>2020-12-31 發布</li>
     <li>2020-10-24 完稿</li>
