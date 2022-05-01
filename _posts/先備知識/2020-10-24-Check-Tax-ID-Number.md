@@ -24,7 +24,7 @@ tags:
 
 
 |Index|$n_0$|$n_1$|$n_2$|$n_3$|$n_4$|$n_5$|$n_6$|$n_7$|
-|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 |權重|1|2|1|2|1|2|4|1|
 |乘積十位數|$t_0$|$t_1$|$t_2$|$t_3$|$t_4$|$t_5$|$t_6$|$t_7$|
 |乘積個位數|$d_0$|$d_1$|$d_2$|$d_3$|$d_4$|$d_5$|$d_6$|$d_7$|
@@ -132,23 +132,19 @@ bool checkTaxId(string idStr){
 
     int len = 8  ;
     int idArray[len];
-
-    // conver char to int 
-    for (int i = 0; i < len; i++){
-        idArray[i] = idStr[i] - '0' ;
-    }
-
-    int s[len];
     int weight[] = {1,2,1,2,1,2,4,1};
- 
+
     int sum;
     for (int i = 0; i < len; i++){
+         // conver char to int 
+        idArray[i] = idStr[i] - '0' ;
         int p = idArray[i] * weight[i];
-        s[i] = p/10 + p%10;
-        sum += s[i] ;   
+        int s = p/10 + p%10;
+        sum += s ;  
     }
 
-    bool isLegal = sum%10==0 || (sum%10==9 && s[6]==7);
+    // when s[6]==7, after adding the two, its value will be equal to 10, in this case, 1 or 0 should be used to calculate the sum. But here 10 is used directly to calculate the sum, because if 0 and 10 are used to take the remainder, both are 0; if 1 is taken to take the remainder as 0, it can be reversed that the remainder should be 9.
+    bool isLegal = sum%10==0 || (sum%10==9 && idArray[6]==7);
 
     if(!isLegal){
         cout << "Fail, 不合法的統編驗證" << endl;   
@@ -168,8 +164,9 @@ bool checkTaxId(string idStr){
 
 ## 更新紀錄
 <details class="update_stamp">
-  <summary>最後更新日期：2020-12-31</summary>
+  <summary>最後更新日期：2022-05-01</summary>
   <ul>
+    <li>2022-05-01 更新：檢查碼判別式錯誤修正</li>
     <li>2020-12-31 發布</li>
     <li>2020-10-24 完稿</li>
     <li>2020-10-23 起稿</li>
