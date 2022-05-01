@@ -5,7 +5,7 @@ is_modified: false
 categories:
 - 生活娛樂
 tags:
--  遊戲
+- 遊戲桌遊
 --- 
 
 不務正業的一篇 XD   

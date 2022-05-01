@@ -5,7 +5,7 @@ is_modified: false
 categories:
 - 語言學習
 tags:
-- 英文學習
+- 英文進修
 --- 
 
 每次寫 commit 是我最痛苦的時候...我對英文真的很不擅長咩  
