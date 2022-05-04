@@ -1,7 +1,8 @@
 {% comment %} list_categories(paginator, prev_text, next_text) {% endcomment %}
 {% capture list_categories %}
   <ul class="category-list">
-    {% for cat_posts in site.categories %}
+    {% assign sort_categories = site.categories | sort %}
+    {% for cat_posts in sort_categories %}
     <li class="category-list-item">
       {% assign cat = cat_posts[0] %}
       {% assign posts = cat_posts[1] %}
