@@ -7,7 +7,7 @@ categories:
 tags:
 - 文獻
 - 基因體學 Genomics
-- Azure
+- Microsoft Azure
 - 自翻譯
 --- 
 
