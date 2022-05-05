@@ -6,7 +6,7 @@ categories:
 - "應用資訊 › 生醫資訊"
 tags:
 - 基因體學 Genomics
-- Azure
+- Microsoft Azure
 --- 
  
 年初的工作要求，小組就四個基因雲端平台： [AWS 基因體雲端運算](https://aws.amazon.com/tw/health/genomics/) 、 [Microsoft Genomics](https://azure.microsoft.com/zh-tw/services/genomics/) 、 [Cloud Life Sciences BETA 版](https://cloud.google.com/life-sciences?hl=zh-tw) 與 [阿里雲 基因數據分析管理](https://cn.aliyun.com/solution/healthcare/Genomics) 分頭進行 survey。
@@ -70,13 +70,12 @@ tags:
      1. 雲端 Burrows-Wheeler Aligner（BWA）以及基因體分析工具（Genome Analysis Toolkit，GATK）。
      2. EB 規模工作負載的資料中心與 HPC 級的 CPU，提供分析時所需的儲存與計算能力。
 
-
  - **使用者付費**  
      可以依需求擴充或縮小規模，只需支付使用到的部分以降低成本。
      
  - **資料管理**  
    1. 資料的操作與保管使用有通過 ISO 認證並遵循 HIPAA 法規 ，確保患者記錄和健康資訊的隱私。
-   2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://gallery.technet.microsoft.com/Azure-A-Practical-Guide-to-5ebdc8bd)。(:cold_sweat:...誰看完了分享一下吧！記錄一下有這東西就好，需要實在回頭看。
+   2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://azure.microsoft.com/en-us/resources/a-practical-guide-to-designing-secure-health-solutions-using-microsoft-azure/)。(:cold_sweat:...誰看完了分享一下吧！記錄一下有這東西就好，需要實在回頭看。
 
 <br>
 
