@@ -1,6 +1,6 @@
 ---
-title: WSL：在 Windows 10 中安裝和使用 Ubuntu 子系統
-date: 2022-05-06 1:43
+title:  WSL：在 Windows 10 中安裝和使用 Ubuntu 子系統
+date: 2022-05-06 02:00
 is_modified: false
 categories:
 - "資訊科技 › 開發與輔助工具"
