@@ -314,6 +314,10 @@
       border-bottom: 3px solid $mark-danger;
     }
   }
+
+  &.bold{
+    font-weight: bold;
+  }
 }
 
 // --------------------------------------------------
