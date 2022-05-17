@@ -70,7 +70,7 @@ $pip install xlrd
 
 至於寫檔的部分我其實偷懶，寫了 CSV 出去，反正給 CSV 我媽他們系統也可以接受。
 
-不過為了寫網誌，還是[稍微看了一下如何寫檔](https://shihs.github.io/blog/python/2019/01/02/Python-%E8%AE%80%E5%8F%96%E8%88%87%E5%AF%AB%E5%85%A5xlsx%E6%AA%94%E6%A1%88/)，算是留個記錄方便日後找查，絕對不是我不想再多裝個函式庫 XDDD    
+不過為了寫網誌，還是[稍微看了一下如何寫檔](https://shihs.github.io/blog/python/2019/01/02/Python-%E8%AE%80%E5%8F%96%E8%88%87%E5%AF%AB%E5%85%A5xlsx%E6%AA%94%E6%A1%88/)，算是留個紀錄方便日後找查，絕對不是我不想再多裝個函式庫 XDDD    
 
 
 ```python

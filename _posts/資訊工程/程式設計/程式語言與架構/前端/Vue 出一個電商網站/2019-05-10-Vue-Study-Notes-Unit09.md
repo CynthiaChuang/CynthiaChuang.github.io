@@ -111,7 +111,7 @@ $ vue init webpack my-project
     main.js 會再 import App.vue 作為 component 使用。
 
 - **App.vue**  
-    這份檔案可以分成三個部份，上方 template 是對應先前學過得 x-template 的部份，script 是 JavaScript 的部份，定義這個元件的行文，而 style 則是 css 的部份。
+    這份檔案可以分成三個部分，上方 template 是對應先前學過得 x-template 的部分，script 是 JavaScript 的部分，定義這個元件的行文，而 style 則是 css 的部分。
 
 <br>
 

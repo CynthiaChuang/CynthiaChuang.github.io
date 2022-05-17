@@ -74,7 +74,7 @@ tags:
      可以依需求擴充或縮小規模，只需支付使用到的部分以降低成本。
      
  - **資料管理**  
-   1. 資料的操作與保管使用有通過 ISO 認證並遵循 HIPAA 法規 ，確保患者記錄和健康資訊的隱私。
+   1. 資料的操作與保管使用有通過 ISO 認證並遵循 HIPAA 法規 ，確保患者紀錄和健康資訊的隱私。
    2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://azure.microsoft.com/en-us/resources/a-practical-guide-to-designing-secure-health-solutions-using-microsoft-azure/)。(:cold_sweat:...誰看完了分享一下吧！記錄一下有這東西就好，需要實在回頭看。
 
 <br>
@@ -88,7 +88,7 @@ tags:
 **簡單來說**  
 MS Genomics 提供儲存與運算空間，讓使用者做無需處理軟硬體維護與更新，就可以執行<mark>次級分析</mark>： GATK 標準分析流程。其他的附加價值是突顯在儲存的可靠性、方便性、計算速度與計價方式上。
 
-上一張他家合作夥伴 [Persistent](https://www.persistent.com/partner-ecosystem/) 的圖，這張圖很的詮釋了 MS Genomics 所提供的服務範圍。下圖中橘色的部份是 Persistent 所提供的服務，可以看出來是針對三級分析與二級分析的輸出結果進行衡量；而鐵灰色的部份則是所提供的服務次級分析的 GATK 最佳 pipeline。
+上一張他家合作夥伴 [Persistent](https://www.persistent.com/partner-ecosystem/) 的圖，這張圖很的詮釋了 MS Genomics 所提供的服務範圍。下圖中橘色的部分是 Persistent 所提供的服務，可以看出來是針對三級分析與二級分析的輸出結果進行衡量；而鐵灰色的部分則是所提供的服務次級分析的 GATK 最佳 pipeline。
 
 <center> <img src="https://i.imgur.com/aVzl6bv.jpg" alt="Persistent Analysis Pipeline" ></center>
 <center class="imgtext"> 灰色底的為 MS Genomics 所提供的服務，橘色底則為 Persistent 所提供的服務  （圖片來源: <a href="https://www.persistent.com/partner-ecosystem/microsoft/genomics-and-azure/" class="imgtext">Persistent Systems</a>）</center>
@@ -102,12 +102,12 @@ MS Genomics 提供儲存與運算空間，讓使用者做無需處理軟硬體�
 
 ### 系統架構
 
-系統架構分成兩部份來看，先看 Microsoft Genomics 內部的架構，接下來再來看整體的工作流程。
+系統架構分成兩部分來看，先看 Microsoft Genomics 內部的架構，接下來再來看整體的工作流程。
 
 
 #### 內部架構
 
-Microsoft Genomics 系統由上而下總共可分為三個部份，分別是：Service Controller、SNAP Engine、SNAP Engine 與次級分析的 pipline - BWA-MEM & GATK HaplotypeCaller。
+Microsoft Genomics 系統由上而下總共可分為三個部分，分別是：Service Controller、SNAP Engine、SNAP Engine 與次級分析的 pipline - BWA-MEM & GATK HaplotypeCaller。
 
 <center> <img src="https://i.imgur.com/qgJIlqx.png" alt="Architecture"></center>
 <center class="imgtext">Microsoft Genomics Architecture（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf" class="imgtext">白皮書</a>）</center>
@@ -137,7 +137,7 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
 
 這是一張 GATK 的標準流程，每個綠色區塊之間都進行了一次讀寫動作。而 SNAP Engine 宣稱它具有一個非同步輸入/輸出子系統，可有效處理大量基因體資料，並排程跨多核心的計算密集型工作並收集結果。
 
-為了盡量減少硬碟讀取次數，他們改良了 pipeline 的流程只進行兩次的讀寫動作，減少了標準 BWA/GATK pipline 中的讀寫次數。
+為了儘量減少硬碟讀取次數，他們改良了 pipeline 的流程只進行兩次的讀寫動作，減少了標準 BWA/GATK pipline 中的讀寫次數。
 
 <center> <img src="https://i.imgur.com/BFgcc8q.png" alt=" Microsoft Genomics Pipeline"></center>
 <center class="imgtext">Microsoft Genomics Pipelin（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf" class="imgtext">白皮書</a>）</center>
@@ -175,12 +175,12 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
 CromwellOnAzure</a>）</center>
 <br>
 
-由找到的流程圖看來，他們後面用的 Cromwell，不過是有經過客製化，稱作[Cromwell on Azure](https://github.com/microsoft/CromwellOnAzure)，搭配 TES 最回後端來調用 Azure Batch 。若是對回服務內部的架構來看，被我暱稱飛天豬+TES的這部份，會對照回 Service Controller。
+由找到的流程圖看來，他們後面用的 Cromwell，不過是有經過客製化，稱作[Cromwell on Azure](https://github.com/microsoft/CromwellOnAzure)，搭配 TES 最回後端來調用 Azure Batch 。若是對回服務內部的架構來看，被我暱稱飛天豬+TES的這部分，會對照回 Service Controller。
 
 <div class="alert warning">
 越寫越不確定 SNAP Engine， 是對照的途中的那一塊。
 
-原本推論，是 Trigger Service 的部份，但後來有覺得的是 compute environment 上的 VM ，因為文件中對它描述的規劃單一樣本於單一機器上流程。
+原本推論，是 Trigger Service 的部分，但後來有覺得的是 compute environment 上的 VM ，因為文件中對它描述的規劃單一樣本於單一機器上流程。
 </div>
 
 至於 WDL 則是下一張會提到的 msgen。

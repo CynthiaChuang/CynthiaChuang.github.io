@@ -76,7 +76,7 @@ torch.cuda.set_device(hvd.local_rank())
 
 ### 3. 依照分散的個數縮放 lr 
 
-文件範例這部份好像沒做，但上方的動作分解有。所以我按照之前做 TensorFlow Keras 的經驗直接用 lr 乘上節點個數。
+文件範例這部分好像沒做，但上方的動作分解有。所以我按照之前做 TensorFlow Keras 的經驗直接用 lr 乘上節點個數。
 
 ```python
 # Build model and dataset
@@ -88,7 +88,7 @@ opt = optim.Adam(model.parameters(), lr=lr*hvd.size())
 ```
 <br>
 
-後來在 [resnet50](https://github.com/horovod/horovod/blob/master/examples/pytorch/pytorch_imagenet_resnet50.py) 中有看到它們實做的學習率調整，看起來是做 warmup ，不過這部份我沒跟著調整了。
+後來在 [resnet50](https://github.com/horovod/horovod/blob/master/examples/pytorch/pytorch_imagenet_resnet50.py) 中有看到它們實做的學習率調整，看起來是做 warmup ，不過這部分我沒跟著調整了。
 
 ```python
 # Horovod: using `lr = base_lr * hvd.size()` from the very beginning leads to worse final
@@ -120,10 +120,10 @@ def adjust_learning_rate(epoch, batch_idx):
 opt = hvd.DistributedOptimizer(opt, named_parameters=model.named_parameters())
 ```
 
-在這邊我遇到的問題是，我有是使用 scheduler 去 reduced learning rate 的部份。我有找到一條  issue，是在討論這個：
+在這邊我遇到的問題是，我有是使用 scheduler 去 reduced learning rate 的部分。我有找到一條  issue，是在討論這個：
 - [Add support for broadcasting learning rate scheduler in PyTorch · Issue #1281 ](https://github.com/horovod/horovod/issues/1281)。
 
-雖然它的狀態是 open，但是程式碼的部份有[合併](https://github.com/horovod/horovod/pull/371/files#diff-b134e260de34b7f653af3c43e362f305L124)回去了，所以我參考他們[測試用的程式碼](https://github.com/horovod/horovod/blob/e4554de96100f5a0e8686cd41cf99a6fe8a71e62/test/test_torch.py#L1506)，把 master 目前的 learning rate 取出後傳到其他節點，其他節點接收到後設定到自己的 optimizer 中。
+雖然它的狀態是 open，但是程式碼的部分有[合併](https://github.com/horovod/horovod/pull/371/files#diff-b134e260de34b7f653af3c43e362f305L124)回去了，所以我參考他們[測試用的程式碼](https://github.com/horovod/horovod/blob/e4554de96100f5a0e8686cd41cf99a6fe8a71e62/test/test_torch.py#L1506)，把 master 目前的 learning rate 取出後傳到其他節點，其他節點接收到後設定到自己的 optimizer 中。
 
 ```python
 optimizer = ...

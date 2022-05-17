@@ -40,7 +40,7 @@ int regcomp(regex_t *preg, const char *pattern, int cflags)
 這個函式有三的參數，分別是：
 1. **preg**： 它的資料格式是 regex_t，用來存放編譯後的結果，所以傳進去的是指標。
 2. **pattern**：這邊傳進我們的表示式，也是傳指標。除此之外，它是個常數。
-3. **cflags**： 這部份是一些參數的設定，可傳入一個或多個（用｜串接）值，可使用的值有：
+3. **cflags**： 這部分是一些參數的設定，可傳入一個或多個（用｜串接）值，可使用的值有：
     1. **REG_EXTENDED**：使用 ERE（Extended Regular Expressions，擴展型正規表示式）模式進行匹配。
     2. **REG_ICASE**：忽略字母大小寫。        
     3. **REG_NOSUB**：僅回報匹配成功或失敗。        
@@ -50,7 +50,7 @@ int regcomp(regex_t *preg, const char *pattern, int cflags)
  
 <br>
 
-回傳值的部份，編譯成功會回傳 0，否則傳回其他值。來個片段看一下：
+回傳值的部分，編譯成功會回傳 0，否則傳回其他值。來個片段看一下：
 ```cpp
 // 比對電子信箱
 regex_t preg; // 宣告編譯結果變數

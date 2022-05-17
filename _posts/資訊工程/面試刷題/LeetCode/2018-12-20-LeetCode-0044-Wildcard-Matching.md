@@ -89,7 +89,7 @@ Output: False
 1. 若 pattern 扣除掉 `*`長度為 0，則回傳 True
 	- 代表 pattern 剩下的整句都是 `*`，因此不用管 string 內容是什麼一定會匹配。
 2. 若 pattern 扣除掉 `*` 長度大於 string 的長度，則回傳 False
-	-  也就是即便 `*` 全用來匹配空字串，仍會有部份 pattern 無法匹配上 string，因為除`*` 外的 pattern 符號都必須匹配一個字元，但目前 pattern 比 string 還長...
+	-  也就是即便 `*` 全用來匹配空字串，仍會有部分 pattern 無法匹配上 string，因為除`*` 外的 pattern 符號都必須匹配一個字元，但目前 pattern 比 string 還長...
 	- 另外 string 長度等於 0 的 case，也包含在這，因此原先判斷式中對於 string 長度為 0 的 case 可以全刪除了。
 
 

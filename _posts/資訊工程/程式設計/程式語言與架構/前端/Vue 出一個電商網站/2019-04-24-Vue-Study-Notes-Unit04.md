@@ -74,7 +74,7 @@ tags:
     class = ['className1','className2']
     ```
     
-    <br>也可以把 array 的部份拉出拉獨立成為一個變數 
+    <br>也可以把 array 的部分拉出拉獨立成為一個變數 
     ```html
     :class = arrayClass 
     
@@ -83,7 +83,7 @@ tags:
     arrayClass = ['className1','className2']
     ```
 
-    備註：checkbox 與 array 資料的綁定方法，請看第二章節中 [Vue 表單與資料的綁定](/Vue-Study-Notes-Unit02#vue-表單與資料的綁定)的部份。<br> <br> 
+    備註：checkbox 與 array 資料的綁定方法，請看第二章節中 [Vue 表單與資料的綁定](/Vue-Study-Notes-Unit02#vue-表單與資料的綁定)的部分。<br> <br> 
 
 4. **綁定行內樣式**  
 	注意原先 CSS 是使用中線命名規則，要改成駝峰式，例如 background-color 改成 backgroundColor，在綁定時可以直接插入物件即可。 

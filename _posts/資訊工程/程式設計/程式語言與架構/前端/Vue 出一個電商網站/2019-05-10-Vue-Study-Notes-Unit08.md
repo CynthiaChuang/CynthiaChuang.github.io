@@ -46,7 +46,7 @@ var newExtends = Vue.extend({
 },
 ```
 
-<br> 在子類別中，去繼承並客製化所需求的部份：
+<br> 在子類別中，去繼承並客製化所需求的部分：
 
 ```javascript
 var childOne = {
@@ -193,7 +193,7 @@ Vue.component('row-component', {
 <br><br>
 
 ## 使用 Directive 開發自己的互動 UI
-先把[文件](https://vuejs.org/v2/guide/custom-directive.html)啃一啃，尤其 [Hook Functions](https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions "Hook Functions") 與 [Directive Hook Arguments](https://vuejs.org/v2/guide/custom-directive.html#Directive-Hook-Arguments "Directive Hook Arguments") 的部份。
+先把[文件](https://vuejs.org/v2/guide/custom-directive.html)啃一啃，尤其 [Hook Functions](https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions "Hook Functions") 與 [Directive Hook Arguments](https://vuejs.org/v2/guide/custom-directive.html#Directive-Hook-Arguments "Directive Hook Arguments") 的部分。
 
 先看一個簡單的範例先
 ```html

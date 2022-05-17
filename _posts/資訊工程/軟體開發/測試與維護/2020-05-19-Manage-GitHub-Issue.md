@@ -77,7 +77,7 @@ tags:
 <br>
 
 ### <span class="issue-label groups error-type"> Error type </span>
-這個標籤會在細分 Problem 的部份，我又分成 `UI`、 `UX`、 `Function`、 `Typo`、 `Incorrect` 與 `dependencies`。其中 `dependencies` 是指第三方函式庫或相依函式庫的問題。
+這個標籤會在細分 Problem 的部分，我又分成 `UI`、 `UX`、 `Function`、 `Typo`、 `Incorrect` 與 `dependencies`。其中 `dependencies` 是指第三方函式庫或相依函式庫的問題。
 
 <br>
 

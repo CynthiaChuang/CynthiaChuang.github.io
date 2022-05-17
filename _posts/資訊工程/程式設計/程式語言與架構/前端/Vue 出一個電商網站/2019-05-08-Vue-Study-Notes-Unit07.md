@@ -111,7 +111,7 @@ let familyAll6=[...groupA,...groupB] //ES6合併陣列
 ```
 <br>
 	
-### **淺複製 (Shallow Copy) V.S. 深複製 (Deep Copy)**  
+### **淺複製 (Shallow Copy) VS. 深複製 (Deep Copy)**  
 JavaScript 的物件或是陣列的儲存方式是記錄記憶體位置，因此當將 groupA 指給 groupB 對 groupB 進行賦值時，是使用<mark>淺複製</mark>的方式將 groupA 所記錄的記憶體位置傳給 groupB，最終會導致<mark>當對 groupB 進行操作時， groupA 也會後受到影響</mark>，即下圖左。
 
 ```javascript
@@ -137,7 +137,7 @@ let groupB = [...groupA]
 <br>
 	 
 ### **類陣列觀念說明**
-在使用 [Node.childNodes](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/childNodes) 或 [document.querySelectorAll](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll ) 時會回傳包含指定節點的子節點的集合，此集合稱為 <mark>Node List</mark>，是種類似陣列的資料結構，但是不能使用陣列的部份方法，因此又被稱為 <mark>類陣列</mark>。
+在使用 [Node.childNodes](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/childNodes) 或 [document.querySelectorAll](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll ) 時會回傳包含指定節點的子節點的集合，此集合稱為 <mark>Node List</mark>，是種類似陣列的資料結構，但是不能使用陣列的部分方法，因此又被稱為 <mark>類陣列</mark>。
 
 若要將 Node List 轉成陣列，一樣是使用<mark>展開語法</mark>
 ```javascript
@@ -155,7 +155,7 @@ let myArray = [...myNodeList]
 2. 不定長度參數必須放在參數列表的最後一個。
 <br>
 
-JavaScript 還有一個（個人認為）比較神奇的特性，如果你傳入參數多於你宣告的個數，多餘的部份會變成名為 arguments 的類陣列物件，我之前學的語言多直接報錯的說... 
+JavaScript 還有一個（個人認為）比較神奇的特性，如果你傳入參數多於你宣告的個數，多餘的部分會變成名為 arguments 的類陣列物件，我之前學的語言多直接報錯的說... 
 ```javascript
 function updateEasyCard() {
    let arg = [...arguments];
@@ -186,7 +186,7 @@ let auntie = family[2];
 let [ming, jay, auntie, mom, dad] = family;
 ```
 
-<br>若要捨棄或略過陣列中部份的值 
+<br>若要捨棄或略過陣列中部分的值 
 
 ```javascript
 // 捨棄尾端的值
@@ -194,7 +194,7 @@ let family = ['小明', '杰倫', '阿姨', '老媽', '老爸'];
 let [ming, jay, auntie] = family ;
 
 // 略過中間的值 
-let [ming, jay, , mom, dad]  =family; // 略過部份不寫變數，但還是要記得留下空間
+let [ming, jay, , mom, dad]  =family; // 略過部分不寫變數，但還是要記得留下空間
 ```
 <br>
 
@@ -299,7 +299,7 @@ functionName(){
 
 ## 箭頭函式與傳統函式
 
-在[展開與其餘參數](#展開與其餘參數)中說明不定長度參數時，有提過一個（個人認為）JS 比較神奇的特性，就是如果你傳入參數多於你宣告的個數，多餘的部份會變成名為 arguments 的類陣列物件。 
+在[展開與其餘參數](#展開與其餘參數)中說明不定長度參數時，有提過一個（個人認為）JS 比較神奇的特性，就是如果你傳入參數多於你宣告的個數，多餘的部分會變成名為 arguments 的類陣列物件。 
 
 不過，這件事情在使用<mark>箭頭函式</mark>時是不成立的，你會直接得到一個 error。
 

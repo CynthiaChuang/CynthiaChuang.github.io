@@ -606,7 +606,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
     
     可以發現錯誤訊息顯示沒有 libstdc++ 的函式庫。拜了下大神，[發現](https://github.com/kohlschutter/junixsocket/issues/33#issuecomment-273255073) openwhisk/dockerskeleton 是 alpine 體系的 docker ，本身**不含 libstdc++.so.6**，所以我如果想執行 C++，必須 build 新的 image 了。
     
-    至於如何如何用 docker 建立 action 可以參考[這份教學](https://github.com/apache/openwhisk/blob/master/docs/actions-docker.md)，這邊紀錄一下 dockerfile：
+    至於如何如何用 docker 建立 action 可以參考[這份教學](https://github.com/apache/openwhisk/blob/master/docs/actions-docker.md)，這邊記錄一下 dockerfile：
     
     ```dockerfile
     # Dockerfile for example whisk docker action

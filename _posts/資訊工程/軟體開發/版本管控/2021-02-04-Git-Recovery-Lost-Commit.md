@@ -18,9 +18,9 @@ tags:
 <center  class="imgtext">求救文（圖片來源: <a href="https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/"  class="imgtext">Taiwan 程式語言讀書會｜Facebook</a>）</center>
 <br><br>
 
-## 所有的操作記錄都保留下來
+## 所有的操作紀錄都保留下來
 
-求救文在下方的留言中，有一位[米一粒](https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/?comment_id=2823410504539867)的留言，他說當你製作提交記錄時，就已經讓記錄進入版本管控中，而 Push 這動作只是將記錄推送遠端數據庫而已。因此，只要有提交過記錄、產生過 Hash，就有機會藉由這筆 Hash 拿回這筆記錄？
+求救文在下方的留言中，有一位[米一粒](https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/?comment_id=2823410504539867)的留言，他說當你製作提交紀錄時，就已經讓紀錄進入版本管控中，而 Push 這動作只是將紀錄推送遠端數據庫而已。因此，只要有提交過記紀錄、產生過 Hash，就有機會藉由這筆 Hash 拿回這筆紀錄？
 
 <br>
 
@@ -36,7 +36,7 @@ fc22a64 (HEAD -> master) HEAD@{3}: commit: commit2
 
 <br>
 
-從記錄看來，依序製作了三個 commit，接下來下了 `rebase` 指令，最後把 HEAD 移動到了 commit2 的位置，也就是我把 commit3 給丟了。好了，重點是第四行，那邊有被刪除的 commit3 的 Hash code！
+從紀錄看來，依序製作了三個 commit，接下來下了 `rebase` 指令，最後把 HEAD 移動到了 commit2 的位置，也就是我把 commit3 給丟了。好了，重點是第四行，那邊有被刪除的 commit3 的 Hash code！
 
 <br><br>
 

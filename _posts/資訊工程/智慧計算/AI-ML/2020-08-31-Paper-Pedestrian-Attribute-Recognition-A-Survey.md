@@ -106,9 +106,9 @@ tags:
     由於攝影機放在不同的進行監測，所以會產生<mark>不同角度採樣</mark>的問題，在加上行人動作變化多端，這使得屬性識別變的更加複雜。
 
 2. **Occlusio**  
-    人體可能被其他障礙物或是行人遮擋，導致部份屬性被遮蔽，或是引入障礙物的特徵，導致訓練難度增加。如果是障礙物是其他行人，可能還會引入其他人特徵。
+    人體可能被其他障礙物或是行人遮擋，導致部分屬性被遮蔽，或是引入障礙物的特徵，導致訓練難度增加。如果是障礙物是其他行人，可能還會引入其他人特徵。
     
-    另外一個我想到的可能比較偏向實做的問題，一般從大圖剪裁人物圖像出來的時候，不一定會像資料集裁剪的那剛好。有可能裁太小，導致部份特徵被裁到，另如後背包；或是裁太大，納入了太多雜訊，感覺這狀況也跟遮蔽物的情況相似。
+    另外一個我想到的可能比較偏向實做的問題，一般從大圖剪裁人物圖像出來的時候，不一定會像資料集裁剪的那剛好。有可能裁太小，導致部分特徵被裁到，另如後背包；或是裁太大，納入了太多雜訊，感覺這狀況也跟遮蔽物的情況相似。
  
 3. **Unbalanced Data Distribution**  
     應該是在說<mark>類別不平均</mark>的問題。
@@ -145,7 +145,7 @@ tags:
 
 ## 2. Benchmarks
 
-這裡介紹了分兩部份一是資料集、二是評估指標。
+這裡介紹了分兩部分一是資料集、二是評估指標。
 
 ### 2.1 Dataset
 
@@ -221,7 +221,7 @@ tags:
     - Blog： [RAP](http://www.rapdataset.com/rapv1.html)/ [RAP 2.0](http://www.rapdataset.com/rapv2.html)
 
 
-    不同於前面兩個資料集，RAP 是屬於真實室內收集的，RAP v1.0 其中包含 41,585 張圖像，圖像解析度為 `36×92` 到 `344×554` 不等，每位行人具有 69 個二元屬性和 3 個多分類屬性；其中 33,268 張圖像用於訓練，其餘用於測試。而 RAPv2.0 是 RAP v1.0 的擴展版，該資料集包含 84,928 張圖像，並加上了個人 ID 的部份。
+    不同於前面兩個資料集，RAP 是屬於真實室內收集的，RAP v1.0 其中包含 41,585 張圖像，圖像解析度為 `36×92` 到 `344×554` 不等，每位行人具有 69 個二元屬性和 3 個多分類屬性；其中 33,268 張圖像用於訓練，其餘用於測試。而 RAPv2.0 是 RAP v1.0 的擴展版，該資料集包含 84,928 張圖像，並加上了個人 ID 的部分。
      
     比較特別的是 3 個多分類屬性，分別是 viewpoints、occlusions 與 body parts information：
     <center> <img src="https://i.imgur.com/xPna7Rb.png" alt="viewpoints and occlusion of the annotated "></center>
@@ -315,7 +315,7 @@ tags:
     <center class="imgtext">Market1501 Attribute （圖片來源: <a href="https://github.com/vana77/Market-1501_Attribute" class="imgtext">Market1501 Github</a>）</center>
     <br>
 
-    不過注意的是，儘管上下半身服裝分別有 8 、9 個屬性，但對於一種身份，只有一種顏色標記為**是**。
+    不過注意的是，儘管上下半身服裝分別有 8 、9 個屬性，但對於一種身分，只有一種顏色標記為**是**。
     
     <center> <img src="https://i.imgur.com/m9CvkzV.png" alt="Market150 Sample"></center>
     <center class="imgtext">Market1501 Sample （圖片來源: <a href="https://github.com/vana77/Market-1501_Attribute" class="imgtext">Market1501 Github</a>）</center>
@@ -404,7 +404,7 @@ tags:
     <br>
 
 3. **其他指標**  
-    除了這兩種外，在部份論文中有會採用 <mark>Receiver Operating Characteristic (ROC)</mark> 與 <mark>Area Under the average ROC Curve (AUC)</mark> 作為指標。 
+    除了這兩種外，在部分論文中有會採用 <mark>Receiver Operating Characteristic (ROC)</mark> 與 <mark>Area Under the average ROC Curve (AUC)</mark> 作為指標。 
 
 <br><br>
 
@@ -641,7 +641,7 @@ Curriculum Learning，課程學習，主要思想是模仿人類學習的特點�
 
 ### 7.1 More Accurate and Efficient Part Localization Algorithm
 
-在部份研究中，會提供人體區域或是姿勢的資訊，來輔助或進行屬性的推測。但這些資訊的準度或是標注方式可以再做進一步的改良。
+在部分研究中，會提供人體區域或是姿勢的資訊，來輔助或進行屬性的推測。但這些資訊的準度或是標注方式可以再做進一步的改良。
 1. 標注方式可以朝向弱監督或是無監督的方向進行。
 2. 標注的精準度的提昇。
 
@@ -655,7 +655,7 @@ Curriculum Learning，課程學習，主要思想是模仿人類學習的特點�
 
 ### 7.3 Further Explore the Visual Attention Mechanism
 
-人類感知的一個重要特徵是不會傾向於<mark>一次處理整個場景</mark>；人類會選擇性地將注意力集中放在一小部份的空間，並在所需的時間地點來獲取資訊，且會隨時間流逝進行整合。但如何準確有效地定位注意力的關注區域仍然是一個開放的研究問題。
+人類感知的一個重要特徵是不會傾向於<mark>一次處理整個場景</mark>；人類會選擇性地將注意力集中放在一小部分的空間，並在所需的時間地點來獲取資訊，且會隨時間流逝進行整合。但如何準確有效地定位注意力的關注區域仍然是一個開放的研究問題。
 
 <br>
 
@@ -721,7 +721,7 @@ Curriculum Learning，課程學習，主要思想是模仿人類學習的特點�
     是第一篇行人屬性辨識的 Survey Paper，有系統說明了整個領域的狀況。對於開發者來說，他羅列該領域所需的基礎認知，並提供了開發所需資料載點（雖然有的載不下來了）方便進行比較。算是還滿結實的敲門磚 XDDD
     
 3. **它有什麼缺陷或不足的地方？**  
-    作者筆誤還滿多，不曉得是不是因為我看的預印本的關係？另外有些資料可能是作者想表達的太多，篇幅又有限，有些部份反倒有些語焉不詳，建議拿關鍵字去查查詳細資料。
+    作者筆誤還滿多，不曉得是不是因為我看的預印本的關係？另外有些資料可能是作者想表達的太多，篇幅又有限，有些部分反倒有些語焉不詳，建議拿關鍵字去查查詳細資料。
     
 4. **看完這本書要做那些行動？**  
     從三個較大的資料集中選一個，另外在挑選一份有 source code 的 SOTA 試試看，實際感受一下。

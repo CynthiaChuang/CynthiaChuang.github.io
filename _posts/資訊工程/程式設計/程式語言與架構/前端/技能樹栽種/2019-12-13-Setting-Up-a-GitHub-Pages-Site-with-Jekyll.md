@@ -23,7 +23,7 @@ tags:
 雖然說是『想玩玩 Jekyll 』而選了 Github Pages，不過其實不懂 Jekyll 也沒差，知道它是一個 Ruby 編寫出來的 framework，讓使用者可以快速的建構出靜態頁面的 blog，並讓使用者可以用 Markdown 來編寫 HTML。有這些知識即可。<br>
 
 ### Git / Github
-要建 Github Pages ，首先當必須有個 [Github](https://github.com/) 帳號，如果不喜歡 Github 也可以考慮用 GitLab pages，兩個的步驟其實是一樣的，就看你喜歡章魚貓還是狐狸了。至於 git 的部份，只要會 commit 跟 push 就夠了（應該?），不會的話可以找[猴子老師](https://backlog.com/git-tutorial/tw/intro/intro1_1.html)學學。對了，git 要記得安裝。
+要建 Github Pages ，首先當必須有個 [Github](https://github.com/) 帳號，如果不喜歡 Github 也可以考慮用 GitLab pages，兩個的步驟其實是一樣的，就看你喜歡章魚貓還是狐狸了。至於 git 的部分，只要會 commit 跟 push 就夠了（應該?），不會的話可以找[猴子老師](https://backlog.com/git-tutorial/tw/intro/intro1_1.html)學學。對了，git 要記得安裝。
 
 p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個網站名稱有點嗆！？還是只有我這認為？不過它真的還滿淺顯易懂的，很適合 git 的入門。<br>
 

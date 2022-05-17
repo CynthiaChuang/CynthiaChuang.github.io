@@ -178,7 +178,7 @@ tags:
 <br><br> 
 
 ## 系統架構
-前面提到是屬於資料流動的部份，接下來看看系統架構的部份：
+前面提到是屬於資料流動的部分，接下來看看系統架構的部分：
 
 <center> <img src="https://i.imgur.com/P4oYa39.png?1" alt="OpenWhisk 系統架構"></center>
 <center class="imgtext">OpenWhisk 系統架構</center>
@@ -202,7 +202,7 @@ Nginx（音：engine X [:speaker:](https://translate.google.com/?hl=zh-TW#view=h
 <br>
 
 ### Step2： Controller
-Controller 可以視為真正處理請求的地方。當通過 Nginx 後，會轉而觸發 Controller，由它來為每個請求進行身份驗證與授權，並將操作指派給 Invoker。
+Controller 可以視為真正處理請求的地方。當通過 Nginx 後，會轉而觸發 Controller，由它來為每個請求進行身分驗證與授權，並將操作指派給 Invoker。
  
 另外有看到資料寫到 Controller 是使用 Scala 語言編寫的 rest api，並基於 Akka 運行時環境和 Spray REST / HTTP 工具箱構建，用於對 OpenWhisk 內部對象的增刪查改（CRUD）和 Action 的調用。
  
@@ -213,14 +213,14 @@ CouchDB 用於儲存一些系統狀態，憑證、namespace、Action、Trigger�
 
 
 在整個 OpenWhisk 架構中，CouchDB 被用在了三個地方：
-1. **身份驗證與授權**   
-    當 Nginx 請求轉發給 OpenWhisk 後，Controller 會從 CouchDB 讀取使用者的身份資料，當確認驗證無誤後，Controller 會再進行下一步處理。
+1. **身分驗證與授權**   
+    當 Nginx 請求轉發給 OpenWhisk 後，Controller 會從 CouchDB 讀取使用者的身分資料，當確認驗證無誤後，Controller 會再進行下一步處理。
 
 2. **取回 Action**  
-    身份驗證通過後，Controller 會從 CouchDB 中加載 Action、 Code...等。
+    身分驗證通過後，Controller 會從 CouchDB 中加載 Action、 Code...等。
     
 3. **儲存結果**  
-    Action 的執行結果也會存回 CouchDB，就是圖中線 8 的部份。
+    Action 的執行結果也會存回 CouchDB，就是圖中線 8 的部分。
   
 
 <center> <img src="https://i.imgur.com/FXuX36T.png?1" alt="Lean OpenWhisk Architecture"></center>

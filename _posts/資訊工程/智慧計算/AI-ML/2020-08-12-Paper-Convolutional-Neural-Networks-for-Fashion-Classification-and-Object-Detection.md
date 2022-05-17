@@ -101,7 +101,7 @@ Oops! 我好像搞混時間軸了。這篇是 2015 的文章，另外一篇被�
 服裝屬性分類就是分類服裝<mark>顏色</mark>、<mark>圖案</mark>、<mark>長度</mark>...等屬性的問題。這些屬性有些可以用二進制量來表達，如：有無領帶；但有些無法，如：上裝顏色。感覺資料格式有點類似之前在看的 [Multitask classification](/Difference-between-Multiclass-Multilabel-and-Multitask-Problem#multitask-classification)。
 
 
-這部份網路訓練時採用的資料集是 [Clothing Attribute (CA) Dataset](http://chenlab.ece.cornell.edu/people/Andy/publications/ECCV2012_ClothingAttributes.pdf)，該資料集包含了 1856 張<mark>上身服裝</mark>照片，，共有 26 個類別。 
+這部分網路訓練時採用的資料集是 [Clothing Attribute (CA) Dataset](http://chenlab.ece.cornell.edu/people/Andy/publications/ECCV2012_ClothingAttributes.pdf)，該資料集包含了 1856 張<mark>上身服裝</mark>照片，，共有 26 個類別。 
 
 <center> <img src="https://i.imgur.com/rAQeZh7.png" alt="CA Dataset"></center>
 <center class="imgtext"> CA Dataset（圖片來源: <a href="http://cs231n.stanford.edu/reports/2015/pdfs/BLAO_KJAG_CS231N_FinalPaperFashionClassification.pdf" class="imgtext">論文</a>）</center>
@@ -156,7 +156,7 @@ Pass
 
 ### 3.2. Clothing Attribute Classification
 
-屬性分類的部份，它使用 AlexNet 作為基礎，後接 26 個 Softmax 層，進行分類。標準的 Multi-task learning 的網路架構。
+屬性分類的部分，它使用 AlexNet 作為基礎，後接 26 個 Softmax 層，進行分類。標準的 Multi-task learning 的網路架構。
    
 <center> <img src="https://i.imgur.com/ZXCao4H.png" alt="Clothing Attribute Classification"></center>
 <center class="imgtext"> Clothing Attribute Classification（圖片來源: <a href="http://cs231n.stanford.edu/reports/2015/pdfs/BLAO_KJAG_CS231N_FinalPaperFashionClassification.pdf" class="imgtext">論文</a>）</center>
@@ -169,7 +169,7 @@ Pass
 
 ### 3.4. Clothing Object Detection
 
-物件偵測的部份採用 R-CNN 做遷移學習。並用改標注 ground-truth bounding box 的 CF 資料集進行 Fine-Tune。是說有點奇怪，是作者敘述順序放錯嗎？Object Detection 怎會在最後一步？
+物件偵測的部分採用 R-CNN 做遷移學習。並用改標注 ground-truth bounding box 的 CF 資料集進行 Fine-Tune。是說有點奇怪，是作者敘述順序放錯嗎？Object Detection 怎會在最後一步？
 
 
 <br><br> 

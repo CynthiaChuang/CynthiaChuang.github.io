@@ -66,7 +66,7 @@ Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並
 
 目前已有有些這樣的服務：<mark>由第三方供應，且無須安裝、管理和維護，只在需要的時候使用，並按照使用資源計費<span>。
 
-例如實務上，有些開發人員為了更專注於商業邏輯相關程式碼的開發，會將與商業邏輯邏輯無關的部份委託給第三方，像是上述所提到的認證、授權與資料庫服務等，這些都是 **Backend-as-a-Service（BaaS）**。
+例如實務上，有些開發人員為了更專注於商業邏輯相關程式碼的開發，會將與商業邏輯邏輯無關的部分委託給第三方，像是上述所提到的認證、授權與資料庫服務等，這些都是 **Backend-as-a-Service（BaaS）**。
 
 也有的將整個程式運行環境給託管出去的，將開發出來的函式直接放動雲端去當作服務在調用，也就是 **Function-as-a-Service（FaaS）**。
 
@@ -78,7 +78,7 @@ Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並
 這邊整理兩種服務的特性：
 
 - **Function-as-a-Service（FaaS）**  
-    - 片段程式碼，按需執行、按需擴展、無需管理任何基礎設施相關部份。	
+    - 片段程式碼，按需執行、按需擴展、無需管理任何基礎設施相關部分。	
     - 事件驅動行計算。函式被事件觸發或是被 HTTP 請求調用。	
 
 - **Backend-as-a-Service（BaaS）**  
@@ -223,7 +223,7 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 
 動作是執行某個特定動作的一段程式碼，它將會在 openwhisk 中執行。使用所選擇的語言來撰寫 Action，或者直接將 Docker 以映像檔提供執行。
 
-Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽取、第三方 API 調用...等，程式寫的出來的都行。但必須注意的是，在 FaaS 中是<mark>無狀態</mark>的，不應該存在狀態的記錄，而且<mark>短時運行</mark>的。在 openwhisk 中預設最長執行時間為是 5 分鐘，若超過 5 分鐘則不建議使用 Faas 執行，或是必須在要切成更小的粒度分開執行。
+Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽取、第三方 API 調用...等，程式寫的出來的都行。但必須注意的是，在 FaaS 中是<mark>無狀態</mark>的，不應該存在狀態的紀錄，而且<mark>短時運行</mark>的。在 openwhisk 中預設最長執行時間為是 5 分鐘，若超過 5 分鐘則不建議使用 Faas 執行，或是必須在要切成更小的粒度分開執行。
 
 <center> <img src="https://i.imgur.com/URsL9hc.png" alt="Action"></center>
 <center class="imgtext">Action（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>

@@ -13,7 +13,7 @@ tags:
 - 工具安裝與部署
 --- 
 
-繼上次的 [NVIDIA Clara Train SDK 3.0](/NVIDIA-Clara-Train-SDK-3) 的 Survey 工作後，這次來看看 Clara 組成的另外一個部份 **Deploy SDK**。
+繼上次的 [NVIDIA Clara Train SDK 3.0](/NVIDIA-Clara-Train-SDK-3) 的 Survey 工作後，這次來看看 Clara 組成的另外一個部分 **Deploy SDK**。
 
 <!--more-->
 <center> <img src="https://i.imgur.com/XeFIJGt.jpg?2" alt="Clara"></center>
@@ -32,7 +32,7 @@ tags:
 
 <br>
 
-我們上次有對 [Train SDK](/NVIDIA-Clara-Train-SDK-3) 進行 servery，而這次我們來看看 Clara 組成的另外一個部份 **Deploy SDK**。
+我們上次有對 [Train SDK](/NVIDIA-Clara-Train-SDK-3) 進行 servery，而這次我們來看看 Clara 組成的另外一個部分 **Deploy SDK**。
 
 近年來，智慧醫院、智慧醫療...等名詞的興起與普遍，象徵著醫療機構逐漸開始運用資訊及通訊科技，並將 AIoT 逐漸導入醫院。在這其中數千種 AI 模型將會被融合進醫院的工作流程中。
 
@@ -53,7 +53,7 @@ tags:
 <center class="imgtext">DNVIDIA Clara Deploy Architecture（圖片來源: <a href="https://docs.nvidia.com/clara/deploy/index.html" class="imgtext">SDK 0.7.1 documentation</a>）</center>
 <br>
 
-整個生態系統可以從**使用者**與**開發者**的角度出發，將系統分成 Platform 與 Application 兩個部份，在本章節中會先介紹 Platform 。
+整個生態系統可以從**使用者**與**開發者**的角度出發，將系統分成 Platform 與 Application 兩個部分，在本章節中會先介紹 Platform 。
 
 <br>
 
@@ -81,7 +81,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
 稍微對應並說明一下每個 chart 的角色與用途：
 
 1. **clara**  
-    這對應到的是架構圖中的 Platform Server。它是整個 SDK 的核心部份，負責控制 Workflow、Payloads、Pipelines、Jobs...等方面。另外其中的 Results Service，是用於追蹤所有 Pipelines 產生的所有結果，並負責與 Pipelines 和外部設備的 Services 溝通。  
+    這對應到的是架構圖中的 Platform Server。它是整個 SDK 的核心部分，負責控制 Workflow、Payloads、Pipelines、Jobs...等方面。另外其中的 Results Service，是用於追蹤所有 Pipelines 產生的所有結果，並負責與 Pipelines 和外部設備的 Services 溝通。  
     
     <center> <img src="https://i.imgur.com/0I4kTlX.png?1" alt="Platform Server"></center>
     <center class="imgtext">Platform Server（圖片來源: <a href="https://docs.nvidia.com/clara/deploy/index.html" class="imgtext">SDK 0.7.1 documentation</a>）</center>

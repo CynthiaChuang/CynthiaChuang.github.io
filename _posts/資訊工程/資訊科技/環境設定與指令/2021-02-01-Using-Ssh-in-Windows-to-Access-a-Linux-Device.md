@@ -59,7 +59,7 @@ tags:
 
 ## 執行連線
 
-既然前面都提到了 PuTTY 與 OpenSSH 兩種連線方式，因此這邊分兩個部份來介紹：
+既然前面都提到了 PuTTY 與 OpenSSH 兩種連線方式，因此這邊分兩個部分來介紹：
 
 ### PuTTY
 
@@ -73,7 +73,7 @@ tags:
     <center> <img src="https://i.imgur.com/V8UNQzK.png?1" alt="選擇要轉換的金鑰"></center>
     <br>
 2. **設定 SSH 金鑰**  
-    完成資訊設定後，接下來設定 SSH 金鑰，先將 Category (類別) 切換到 Connection (連線)，並展開 SSH 選擇 Auth (身份驗證)。
+    完成資訊設定後，接下來設定 SSH 金鑰，先將 Category (類別) 切換到 Connection (連線)，並展開 SSH 選擇 Auth (身分驗證)。
     
     在右邊窗格中，點擊 Browse，指定選擇 `*.ppk`。最後點擊 Open，進行連線。
 

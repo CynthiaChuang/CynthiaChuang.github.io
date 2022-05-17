@@ -79,7 +79,7 @@ find ~/codimd_backup -type f -name "*.tgz" -mtime +30 -exec rm -rf {} \;
 ```
 <br>
 
-指令可以分成兩部份：
+指令可以分成兩部分：
 ```shell
 # only keep 30 days backup
 find ~/codimd_backup -type f -name "*.tgz" -mtime +30
@@ -185,7 +185,7 @@ ssh -i ~/.ssh/ServerB_key ServerB@HostB "find $foldername -type f -name *.tgz -m
 ```shell
 diff -q folderA folderB | grep "folderA"| awk 'BEGIN {FS="："}{print $2}' > files.txt
 ```
- 一般來說，如果要找可以 <mark>diff -q</mark> ，可以列出哪些檔案只存於 folderA ，哪些檔案又只存於 folderB。取出只存於 folderA 檔案，再用 awk 取出檔名的部份，最後寫檔。
+ 一般來說，如果要找可以 <mark>diff -q</mark> ，可以列出哪些檔案只存於 folderA ，哪些檔案又只存於 folderB。取出只存於 folderA 檔案，再用 awk 取出檔名的部分，最後寫檔。
 
 
 <br> 只是因為目前我的資料夾存在兩台不同的伺服器上，所以必須用到 <mark>process substitution</mark> ，但 process substitution 是拿來<mark>暫存檔案</mark>用的，如果我用 <mark>diff -q</mark> 會行不通，所以稍微換了個方式實做：
@@ -194,7 +194,7 @@ diff -q folderA folderB | grep "folderA"| awk 'BEGIN {FS="："}{print $2}' > fil
 ```shell
 diff <(ssh -i ~/.ssh/ServerA_key.pem ServerA@ServerA  "ls codimd_backup|sort") <(ssh -i ~/.ssh/ServerB_key ServerB@ServerB  "ls codimd_backup|sort") | grep "^<" | awk '{print $2}' > files.txt
 ```
-先使用 process substitution 分別列出兩台伺服器上的檔案並排序，然後使用 diff 比較兩份暫存檔的內容，濾出僅存於 ServerA 檔案，再用 awk 取出檔名的部份，最後寫檔。
+先使用 process substitution 分別列出兩台伺服器上的檔案並排序，然後使用 diff 比較兩份暫存檔的內容，濾出僅存於 ServerA 檔案，再用 awk 取出檔名的部分，最後寫檔。
 
 <br> 最後在依序從檔案中讀出要下載的檔名，並依序下載：
 ```shell

@@ -103,7 +103,7 @@ var app2 = new Vue({
 ![MVVM](https://i.imgur.com/0b3Lz16.png)
 <center class="imgtext">Model View View Model（圖片來源: <a href="https://zh.wikipedia.org/wiki/MVVM" class="imgtext">維基百科</a>）</center>
 
-<br> Vue 是一種受到 [MVVM（Model–view–viewmodel）](https://zh.wikipedia.org/wiki/MVVM) 啟發的架構。實際上寫程式碼時，並不會寫到 VM 的部份，只需要寫 Model 即可。在資料變動的同時 VM 就會去控制視圖的話，反之，若從 UI 更改相關資料， VM 則會通知 Model 改寫資料   
+<br> Vue 是一種受到 [MVVM（Model–view–viewmodel）](https://zh.wikipedia.org/wiki/MVVM) 啟發的架構。實際上寫程式碼時，並不會寫到 VM 的部分，只需要寫 Model 即可。在資料變動的同時 VM 就會去控制視圖的話，反之，若從 UI 更改相關資料， VM 則會通知 Model 改寫資料   
 
 <br> 將 data 中的字串綁定至 DOM 上可使用下列方法：
 
@@ -433,7 +433,7 @@ Vue.component('元件名稱', {
    template: `html 語法`  
 ```
 
-<br><br>component 的元件名稱，這個元件名稱會是我們在 html 中所使用的元素標籤，按官方 style guide 建議元件名稱盡量採用組合字，不使用一個單字，避免原生元素標籤衝突。
+<br><br>component 的元件名稱，這個元件名稱會是我們在 html 中所使用的元素標籤，按官方 style guide 建議元件名稱儘量採用組合字，不使用一個單字，避免原生元素標籤衝突。
 
 而 component 內部的寫法，其實與一般 Vue 元件寫法是一致的，唯一需要特別注意的是 data 在 component 內部是以 **function** 來回傳物件內容。
 
@@ -451,8 +451,8 @@ Vue.component('元件名稱', {
 2. [ ]  不是
 
 **問題 3： Vue 的應用程式資料**
-1. [x]  盡量不用預先定義
-2. [ ]  盡量可能的預先定義
+1. [x]  儘量不用預先定義
+2. [ ]  儘量可能的預先定義
 
 
 <br><br>

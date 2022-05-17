@@ -11,7 +11,7 @@ tags:
 - 演講
 --- 
 
-最近聽 [NVIDIA GTC 2020](https://www.nvidia.com/zh-tw/gtc/session-catalog/?search.language=1594320459782004L0mo&tab.catalogtabfields=1600209910618002Tlxt)，順便紀錄下部份場次的筆記。不過有點懶沒有紀錄全部的場次，只紀錄了被指定要分享的場次。
+最近聽 [NVIDIA GTC 2020](https://www.nvidia.com/zh-tw/gtc/session-catalog/?search.language=1594320459782004L0mo&tab.catalogtabfields=1600209910618002Tlxt)，順便記錄下部分場次的筆記。不過有點懶沒有記錄全部的場次，只記錄了被指定要分享的場次。
 
 <!--more-->
 <center> <img src="https://i.imgur.com/zwd11TS.png" alt="Nvidia GTC 2020"></center>

@@ -201,7 +201,7 @@ Photoshop 的功能很多，但依照工作性質的不同，會需要使用的�
 
 畫面的右邊則是面版/工作區，講師建議先保持**圖層**、**色版**、**路徑**與**內容**四個面板，另外網友建議可以保留**色票**，之後其他面板就可以關掉了，有需要在開啟，否則：
 <div class="blockquote-center">
-盡量保持你的工作區域越乾淨越好。
+儘量保持你的工作區域越乾淨越好。
 </div>
 
 <center> <img src="https://i.imgur.com/6pY7yBI.png" alt="Photoshop 介面"></center>
@@ -230,7 +230,7 @@ Photoshop 的功能很多，但依照工作性質的不同，會需要使用的�
     
     <br>
 
-    另外，紀錄一個不小心玩出來的移動影像的方法：
+    另外，記錄一個不小心玩出來的移動影像的方法：
     1. 垂直移動：`PageUP`/ `PageDown`
     2. 平滑垂直移動：`Shift` + `PageUP` /  `Shift` + `PageDown`
     3. 水平移動： `Ctrl` + `PageUP`/  `Ctrl` + `PageDown`

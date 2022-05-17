@@ -13,7 +13,7 @@ tags:
 --- 
 
 最近終於想到要來還債了，明明修了這門課，但卻老是不乖乖上課，現在來還債了 orz  
-這堂課有分上下，上集是[數學的部份](https://www.coursera.org/learn/ntumlone-mathematicalfoundations)，下集則是討論演算法的部份（應該是吧，還沒修課，不太確定...）
+這堂課有分上下，上集是[數學的部分](https://www.coursera.org/learn/ntumlone-mathematicalfoundations)，下集則是討論演算法的部分（應該是吧，還沒修課，不太確定...）
 
 <!--more-->
 ## 機器學習基石 - 數學基礎 

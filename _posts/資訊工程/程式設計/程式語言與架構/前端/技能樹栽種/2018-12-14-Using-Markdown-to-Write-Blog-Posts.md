@@ -70,7 +70,7 @@ tags:
 <br><br>
 
 ## 定義 Markdown 各標籤的 CSS 文件
-前面說過 Blogger 不支援 Markdown，即便 StackEdit 可以將文章轉成 HTML 在 Blogger 上發布，但部份標籤的 CSS 仍需要定義。<br>
+前面說過 Blogger 不支援 Markdown，即便 StackEdit 可以將文章轉成 HTML 在 Blogger 上發布，但部分標籤的 CSS 仍需要定義。<br>
 
 
 ### 程式碼高亮標識
@@ -90,9 +90,9 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 <br>
 
 ### KaTeX
-另外數學符號的顯示部份是使用 [KaTeX](https://khan.github.io/KaTeX/) 來渲染的，據說與 MathJax 相比，它的速度載入數度更快，但犧牲的就是它能支援的符號較少。
+另外數學符號的顯示部分是使用 [KaTeX](https://khan.github.io/KaTeX/) 來渲染的，據說與 MathJax 相比，它的速度載入數度更快，但犧牲的就是它能支援的符號較少。
 
-原本我是想載入 MathJax 就好，但 Stackedit 轉出的 CSS 標籤中，有部份 MathJax 無法識別，所以還是只能載入 KaTeX。
+原本我是想載入 MathJax 就好，但 Stackedit 轉出的 CSS 標籤中，有部分 MathJax 無法識別，所以還是只能載入 KaTeX。
 
 一樣是在範本的HTML的 ``<head>`` 與 ``</head>`` 中添加：
 
@@ -132,9 +132,9 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 <link href='https://miaochien.github.io/MyBlogger/template/css_template/markDown.css?raw=1' rel='stylesheet'  type='text/css'/>
 ```
 
-除了上面幾個必須個別調整的標籤外，其他的標籤我本想直接套用在[這篇文章](http://map-testing.blogspot.com/2016/08/hello_23.html)找到的 CSS 文件。但還是因為深色背景的關係，必須修改他的 [CSS 的部份](https://miaochien.github.io/MyBlogger/template/css_template/markDown.css?raw=1)，避免文字被背景吃掉。
+除了上面幾個必須個別調整的標籤外，其他的標籤我本想直接套用在[這篇文章](http://map-testing.blogspot.com/2016/08/hello_23.html)找到的 CSS 文件。但還是因為深色背景的關係，必須修改他的 [CSS 的部分](https://miaochien.github.io/MyBlogger/template/css_template/markDown.css?raw=1)，避免文字被背景吃掉。
 
-但說是修改，其實我只取出所以他的 ``table``、``blockquote`` 兩部份出來改顏色跟文字大小而已，因為我還滿滿意目前這個主體的 CSS 設定的 XD
+但說是修改，其實我只取出所以他的 ``table``、``blockquote`` 兩部分出來改顏色跟文字大小而已，因為我還滿滿意目前這個主體的 CSS 設定的 XD
 
 
 <br><br> 

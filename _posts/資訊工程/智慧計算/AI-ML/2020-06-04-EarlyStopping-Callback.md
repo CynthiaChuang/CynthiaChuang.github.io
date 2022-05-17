@@ -19,7 +19,7 @@ tags:
 
 在談 EarlyStopping 前，先來談談 Callbacks 本身好了。Callbacks 可用來指定在 train/predict/test 的 epoch 或 batch 的前後進行，如存檔特定，等操作。
 
-部份 Callbacks 的操作觸發與否會由監控的數據變化來決定，有的則是會在指定時刻皆會觸發。
+部分 Callbacks 的操作觸發與否會由監控的數據變化來決定，有的則是會在指定時刻皆會觸發。
 
 
 以我常用的 Callbacks 為例：EarlyStopping、ReduceLROnPlateau，會由監控數據來決定觸發與否；TensorBoard、ModelCheckpoint 則是會在指定的頻率進行動做。

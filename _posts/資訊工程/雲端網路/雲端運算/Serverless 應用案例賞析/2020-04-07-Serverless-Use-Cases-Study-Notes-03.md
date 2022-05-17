@@ -43,7 +43,7 @@ tags:
 
 <br>
 
-在上一堂課集中講解了 API 的部份，這一堂則會專注在事件驅動。
+在上一堂課集中講解了 API 的部分，這一堂則會專注在事件驅動。
  
  
 以人類來比喻事件驅動，是指通過嗅覺、視覺、味覺、聽覺或者觸覺感知事物，傳遞給大腦，指揮身體作出反應。而在電腦世界中則是，各種設備、感知器，甚至應用程式與系統都會產生各種事件，這些事件交由電腦處理，並引發後續響應動作。
@@ -245,7 +245,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 真實案例這邊我就跳過了，感覺跟前面有些雷同，我就不重複寫了。
  
-另外 Demo 的部份，可以直接看看這兩份文件
+另外 Demo 的部分，可以直接看看這兩份文件
 - [让智慧冰箱能够请求替换件 - IBM Developer](https://developer.ibm.com/cn/patterns/power-smart-fridge/)
 - [通过 OpenWhisk 和 Watson IoT 提供主动客户服务](https://github.com/IBM/ibm-cloud-functions-serverless-iot-openfridge/blob/master/README-cn.md)
 

@@ -19,7 +19,7 @@ tags:
  
 <div class="alert warning">
 <div class="head">翻譯交雜</div>
-對 Bioinformatics 實在很不熟，許多專有名詞中國翻譯與臺灣翻譯交雜，我會盡量附上對應的英文方便日後找尋。
+對 Bioinformatics 實在很不熟，許多專有名詞中國翻譯與臺灣翻譯交雜，我會儘量附上對應的英文方便日後找尋。
 </div>
 
 
@@ -46,12 +46,12 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
 ### 其他資料庫
 除外 [Ensembl 資料庫](http://asia.ensembl.org/index.html)外，還有 NCBI (National Center for Biotechnology information）所提供的 [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) 以及 UCSC 與其他資料庫，e.g. UniProt，前三者（在某些文章中）並列目前三大資料庫。
   
-如果對三者的介紹有興趣可以看看這篇：[《NCBI, UCSC, Ensembl, Uniprot, 一次学完统统不要钱》](http://www.sohu.com/a/161725404_170798)，要不要錢我是不知道啦，~~反正我的 WeChat 救不回來了~~，反正它前面公開的部份有稍微說到三個的資料庫差異，我只需要先對它們有個概念就好。
+如果對三者的介紹有興趣可以看看這篇：[《NCBI, UCSC, Ensembl, Uniprot, 一次学完统统不要钱》](http://www.sohu.com/a/161725404_170798)，要不要錢我是不知道啦，~~反正我的 WeChat 救不回來了~~，反正它前面公開的部分有稍微說到三個的資料庫差異，我只需要先對它們有個概念就好。
 
 <br><br>
  
 ## Ensembl 資料庫網站操作
-在 Ensembl  資料庫網站想進行資料查詢，可藉由物種、基因名稱、基因位置與疾病名稱...等。這邊挑了兩種不同類型的搜尋結果做記錄。
+在 Ensembl  資料庫網站想進行資料查詢，可藉由物種、基因名稱、基因位置與疾病名稱...等。這邊挑了兩種不同類型的搜尋結果做紀錄。
 
 <br>
 
@@ -98,7 +98,7 @@ BRCA2 是由 HGNC（ HUGO Gene Nomenclature Committee，人類基因命名委員
 人類基因命名委員會，顧名思義就是為人類基因進行命名的。由於 HUGO 是國際權威的權威機構，因此多數資料庫都會引入它的命名與 ID ，方便跨資料庫進行搜尋。
  
 <br>2. **再看看 HGNC Symbol 右方的 <mark>ENSG00000139618</mark>**  
-這跟下方的 <mark>Ensembl version</mark> 是同一組編碼。是給 HGNC Symbol 在 Ensembl 中的一個編號，由五個部份所組成：  
+這跟下方的 <mark>Ensembl version</mark> 是同一組編碼。是給 HGNC Symbol 在 Ensembl 中的一個編號，由五個部分所組成：  
 
 1. **ENS**  
 用來闡明這是一個 Ensembl ID。
@@ -108,14 +108,14 @@ BRCA2 是由 HGNC（ HUGO Gene Nomenclature Committee，人類基因命名委員
 用來註明這是一個基因、外顯子或是蛋白質家族...等。對照表 [Feature prefixes](https://asia.ensembl.org/info/genome/stable_ids/prefixes.html) 在這。
 4. **唯一的 11 碼數字**
 5. **版本號**  
-在小數點之後的數字是版號，為了維持 stable，Ensembl ID 盡量不會變動，因此在基因資料發生一些小的改動食指會去變動最後的版號。不過，如果整個基因整體模式都變動的話，還是會重新分配一個 ID。
+在小數點之後的數字是版號，為了維持 stable，Ensembl ID 儘量不會變動，因此在基因資料發生一些小的改動食指會去變動最後的版號。不過，如果整個基因整體模式都變動的話，還是會重新分配一個 ID。
 
 <br>3. **往下看到 <mark>Description</mark>**  
 這行其實有兩項資訊。前面的 **BRCA2 DNA repair associated** ，其實是 HGNC [批准的全基因名稱](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101)，對應於上面的 HGNC Symbol。  
 
 而後面的 **HGNC:1101**，則是 HGNC 分配的基因編號。雖然 HGNC Symbol 的可讀性較高，但在資料處理時一般會說建議使用 HGNC ID 作為唯一標識符。因為有時候 HGNC 會對一些已經命名過的基因進行重新審查和命名，以確保新的基因命名在描述基因功能方面更加的準確，但 HGNC ID 卻是固定不變的。
  
-<br>4. **最後看 <mark>Gene Synonyms</mark> 的部份**  
+<br>4. **最後看 <mark>Gene Synonyms</mark> 的部分**  
 前面 HGNC 會對一些已經命名過的基因重新命名，而此時舊有的名稱就會被當作同義詞來使用。
 
 <br>剩下的資訊就比較好懂了，如基因位置，就不贅述的。  
@@ -220,13 +220,13 @@ D主管提出關於 VCF annotation 可以歸納出幾項是需要進一步了解
 
 4. **通常生技領域在做完 vcf annotation, 後續會如何應用? 是交給專業醫生去看? 還是有相關分析工具可以協助產生報告？**  
 
-    報告部份跑完就會產生一份 HTML 檔 其中對於 vcf annotation 有完整的資料統計。
+    報告部分跑完就會產生一份 HTML 檔 其中對於 vcf annotation 有完整的資料統計。
 
 
 <br><br>
 
 ## 小結
-這是過了一陣子才整理的資料，總比不上 Survey 立刻整理來的詳細，而且我記得我有跑數據，偏偏找不到數據了。不過沒魚蝦也好，好歹也是留個記錄。
+這是過了一陣子才整理的資料，總比不上 Survey 立刻整理來的詳細，而且我記得我有跑數據，偏偏找不到數據了。不過沒魚蝦也好，好歹也是留個紀錄。
 
  
 <br><br>

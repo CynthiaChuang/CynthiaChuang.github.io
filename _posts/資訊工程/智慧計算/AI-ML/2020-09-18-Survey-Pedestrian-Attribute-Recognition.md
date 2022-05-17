@@ -85,11 +85,11 @@ tags:
 
 不過這些問題，其實不專屬於行人屬性辨識，更像是辨識領域中共同的問題。很多問題如光源、模糊、障礙物遮擋...等問題，之前在做車牌辨識的時候就曾遇過類似的問題的。
 
-但有部份問題在該領域確實會被放大，例如：Multi-views 與 Occlusion，不同視角的選擇這領域中，很可能導致部份屬性的消失或遮擋。
+但有部分問題在該領域確實會被放大，例如：Multi-views 與 Occlusion，不同視角的選擇這領域中，很可能導致部分屬性的消失或遮擋。
 
 另外在遮擋問題，人體可能是被其他障礙物或是行人遮擋，可能導致在訓練時引入障礙物的特徵，更甚至其他人特徵。
 
-此外就是低解析度的問題，主要是因為行人屬性辨識的圖像來源會是監視器，容易產生低解析度品質的圖像（因為好的監視器太貴了，沒辦法大量佈置 XDDD）。但部份屬性因為顆粒度小，低解析度的成像會對辨識造成困難。
+此外就是低解析度的問題，主要是因為行人屬性辨識的圖像來源會是監視器，容易產生低解析度品質的圖像（因為好的監視器太貴了，沒辦法大量佈置 XDDD）。但部分屬性因為顆粒度小，低解析度的成像會對辨識造成困難。
     
 <br>
 
@@ -97,7 +97,7 @@ tags:
 除了上述共有的問題外，根據幾篇論文跟文章，列出了些專屬於這領域的問題：
  
 1. **類別間差異（intra-class variations）大**  
-     部份屬性由於外觀多樣性（appearance diversity），例如：包包種類繁多，和外觀歧義性（appearance ambiguity），例如：placket 跟 solid ，導致單一類別間差異頗大。
+     部分屬性由於外觀多樣性（appearance diversity），例如：包包種類繁多，和外觀歧義性（appearance ambiguity），例如：placket 跟 solid ，導致單一類別間差異頗大。
      
     <center> <img src="https://i.imgur.com/JC1ESan.png?1" alt=" placket 跟 solid "></center>
     <center class="imgtext">左： placket 右：solid）（圖片來源: 左: <a href="https://www.beautifulhalo.com/mens-simple-long-sleeves-half-button-placket-loose-fit-solid-color-linen-shirt-p-407928.html" class="imgtext">Beautifulhalo</a>、右:<a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fshopee.tw%2F%25E5%259B%259E%25E8%25B3%25BC%25E7%258E%2587%25E8%25B6%2585%25E9%25AB%2598%25EF%25BC%258C%25E8%25B6%2585%25E4%25BA%25BA%25E6%25B0%25A3%25E6%258E%25A8%25E8%2596%25A6-%25E7%2599%25BD%25E8%25A5%25AF%25E8%25A1%25AB-%25E7%2594%25B7-(%25E5%258F%25B0%25E7%2581%25A3%25E7%258F%25BE%25E8%25B2%25A8-%25E6%259C%2589%25E5%258F%25A3%25E8%25A2%258B)%25E4%25B8%258A%25E7%258F%25AD%25E6%2597%258F%25E7%2599%25BD%25E8%25A5%25AF%25E8%25A1%25AB-%25E9%2595%25B7%25E8%25A2%2596-mcps20-i.6368458.662654313&psig=AOvVaw3v5kCwmoCUStkFuUqkBW-1&ust=1597301305337000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjDl5qJlesCFQAAAAAdAAAAABAD" class="imgtext">蝦皮購物</a>）</center>
@@ -147,7 +147,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
 <br><br> 
 
 ##  Benchmarks
-這裡介紹了分兩部份：一是資料集、二是評估指標。
+這裡介紹了分兩部分：一是資料集、二是評估指標。
 
 ### Dataset
 前面提過，行人屬性辨識的標注含蓋了兩種不同級別的標籤：**低級屬性**與**高級屬性**，不過看完資料集，覺得這些屬性可以再分成兩類：
@@ -216,7 +216,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
     
     其中 $N$ 是所有樣本數， $Y_i$ 是第 $i$ 個樣本中 ground truth 為 positive 的 label，$f(x)$ 則是第 $i$ 個樣本中預測結果為 true 的 label。
     
-    看公式基本上就是 recall 跟 precision 的變形，變化比較大的是 accuracy 的部份，按公式來看，可以表示成：
+    看公式基本上就是 recall 跟 precision 的變形，變化比較大的是 accuracy 的部分，按公式來看，可以表示成：
 
     $$
     Acc_{exam} = \cfrac{1}{N}  \sum^N_{i=1}(\cfrac{TP}{TP+FP+FN})  \\    
@@ -225,7 +225,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
     原先公式中的 TN 全被剔除了，這應該是為了因應 Multilabel 中為 0 資料較多，所特地處理了，因此算出來的分數會比原公式的還低。
     
 3. **其他指標**  
-    除了這兩種外，在部份論文中有會引入 Multilabel 中常見 <mark>Receiver Operating Characteristic （ROC）</mark> 與 <mark>Area Under the average ROC Curve （AUC）</mark> 作為一般指標。
+    除了這兩種外，在部分論文中有會引入 Multilabel 中常見 <mark>Receiver Operating Characteristic （ROC）</mark> 與 <mark>Area Under the average ROC Curve （AUC）</mark> 作為一般指標。
 
 <br><br> 
  
@@ -255,7 +255,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
 
 與其他電腦視覺任務的發展史雷同，在 CNN 之後出現了 RNN-based 與 CNN-RNN-based 的方法。在 RNN-based 中，會藉由上下文的訊息建立 LSTM 網路，使得上下文的資訊可以傳到後續的特徵提取過程。不同屬性間的關聯，也可以用 LSTM 保存上一個屬性以供後面使用，或是透過聯合訓練的方式來進行。
 
-此外針對標籤不平衡，有部份研究會對於 loss 權重做調整，以得到較好的擬合效果。
+此外針對標籤不平衡，有部分研究會對於 loss 權重做調整，以得到較好的擬合效果。
 
 <br>
 
@@ -304,7 +304,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
 
 其中比較對象的 FC6-cc，表示使用第六層 Fully Connected Layer 的特徵向量，而最後兩碼分別表示訓練與測試所是用資料集，會有 `o`、 `c` 、 `m` 三種，分別表示遮擋、未遮擋與混合的資料集三種。
 
-結果表明，不同的視角確實會影響到部份屬性的識別，例如：背包使用背面視角判斷的準確度最高、長短袖的判斷則是側面的準確度較高。
+結果表明，不同的視角確實會影響到部分屬性的識別，例如：背包使用背面視角判斷的準確度最高、長短袖的判斷則是側面的準確度較高。
 
 <br>
 
@@ -342,7 +342,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
 <center class="imgtext">HP-Net 網路架構（圖片來源: <a href="https://arxiv.org/abs/1709.09930" class="imgtext">HP-Net 論文 </a>）</center>
 <br>
 
-網路可以分成 Main Net （M-net）與  Attentive Feature Net （AF-net） 兩個部份。
+網路可以分成 Main Net （M-net）與  Attentive Feature Net （AF-net） 兩個部分。
 1.  **Main Net**  
     這是個單純的 CNN 架構，實做方式是採用 inception_v2，包含了 3 個 inception block。
 
@@ -380,7 +380,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
 
 <br>
 
-就網路本身它是由 Encoder 與 Decoder 兩個 RNN 構成，文中將這兩個 RNN 稱為 Intra-Person Attribute Contex 與 Inter-Attribute Correlation。而行人間上下文的部份就由 Inter-Person Similarity Context 負責。
+就網路本身它是由 Encoder 與 Decoder 兩個 RNN 構成，文中將這兩個 RNN 稱為 Intra-Person Attribute Contex 與 Inter-Attribute Correlation。而行人間上下文的部分就由 Inter-Person Similarity Context 負責。
 
 1. **Intra-Person Attribute Context**  
     這邊將行人圖像依垂直方向分成 $m$ 等分，在上圖中 $m=6$，將這 6 等分視為不同 time step，依時序依序輸入 LSTM，最終得到 hidden states 與輸出值 $z$。用這樣的提取方式可以獲取體內上下文的關係。

@@ -139,7 +139,7 @@ function verifyId(id) {
 console.log(verifyId("4311-4656-0640-6131"));
 ```
 
-這組程式碼能加 log 的地方也只有長度檢查的部份，所以就不再寫一版有 log 的了。是說原本想寫 Clojure，不過 Clojure 還不是很熟練，邊寫還要邊查語法，有點太花時間了，改天再來補 Clojure 的程式碼好了。
+這組程式碼能加 log 的地方也只有長度檢查的部分，所以就不再寫一版有 log 的了。是說原本想寫 Clojure，不過 Clojure 還不是很熟練，邊寫還要邊查語法，有點太花時間了，改天再來補 Clojure 的程式碼好了。
 
 <br><br> 
 
