@@ -4,8 +4,10 @@ date: 2022-05-06 02:18
 is_modified: false
 categories:
 - "資訊科技 › 環境設定與指令"
+- "雲端網路 › 資訊安全"
 tags:
 - Linux/Unix
+- 密碼
 --- 
 
 剛剛看到 google 提示今天是**世界密碼日**，當下決定來發篇跟密碼相關的網誌。所以翻出之前在搞伺服器時留下來的筆記，筆記內容 IT 也貢獻了不少，不過內容雜亂無序，希望最後整理完的時候今天還沒有過 XD
@@ -19,7 +21,7 @@ tags:
 <br>
 
 <center> <img src="https://i.imgur.com/W5gU1lT.png" alt="世界密碼日"></center>
-<center  class="imgtext">世界密碼日（圖片來源: <a href="[世界密碼日，零極為網絡安全保駕護航！](https://twgreatdaily.com/4z85DXIBd4Bm1__YOkhy.html)"  class="imgtext">今日頭條</a>）</center>
+<center  class="imgtext">世界密碼日（圖片來源: <a href="https://twgreatdaily.com/4z85DXIBd4Bm1__YOkhy.html"  class="imgtext">今日頭條</a>）</center>
 <br>
 
 
