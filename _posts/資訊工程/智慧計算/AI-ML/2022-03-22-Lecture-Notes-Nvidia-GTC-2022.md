@@ -18,7 +18,7 @@ tags:
 <!--more-->
 
 <center> <img src="https://i.imgur.com/GafrKch.png" alt=""></center>
-<center style="color:Gainsboro;">Nvidia GTC 2022（圖片來源: <a href="https://www.nvidia.com/zh-tw/gtc/" style="color:Gainsboro;">NVIDIA</a>）</center>
+<center class="imgtext">Nvidia GTC 2022（圖片來源: <a href="https://www.nvidia.com/zh-tw/gtc/" class="imgtext">NVIDIA</a>）</center>
 
 <br>
 
