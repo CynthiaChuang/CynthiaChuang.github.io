@@ -215,12 +215,12 @@ Among remaining phenotypes, 48 are cases and 41 are controls.
 
 ### 過濾
 Missingness per individual --mind 0.1 >10% 排除  ###樣本缺失率   
-Missingness per marker --geno 0.1 > 10% 排除  ###點位缺失率  
+Missingness per marker --geno 0.1 > 10% 排除  ###位點缺失率  
 Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率  
 
 <br>
 
-1. 樣本缺失率 +點位缺失率  
+1. 樣本缺失率 +位點缺失率  
 	```bash
 	$ plink --bfile wgas1 --missing --out miss_stat
 	```
@@ -246,7 +246,7 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
 	```
 
 	.imiss : 樣本缺失率  
-	.lmiss : 點位缺失率  
+	.lmiss : 位點缺失率  
     <br>
 
  2. 最小等位基因頻率  
