@@ -43,7 +43,7 @@ whoami > log.txt
 whereis >> log.txt
 ```
 
-<br><br> 後來D老大跟我說他試出來了，在指令上加 <mark class='danger'>-T</mark> 就正常了：
+<br><br> 後來D大跟我說他試出來了，在指令上加 <mark class='danger'>-T</mark> 就正常了：
 ```shell
 /usr/local/bin/docker-compose exec -T database pg_dump hackmd -U hackmd > backup.sql
 ``` 
