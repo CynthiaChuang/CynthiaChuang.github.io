@@ -1,5 +1,5 @@
 ---
-title: 公司統一編號驗證
+title: ID驗證系列｜公司統一編號驗
 date: 2022-05-01 00:07
 is_modified: true
 categories:
@@ -15,9 +15,10 @@ tags:
 不過統編的資料有點少，所有的資料看來都出自同一個地方。 
 
 <!--more-->
-<center> <img src="https://i.imgur.com/GPyBBgm.jpg?1" alt="公司統一編號"></center>
-<center class="imgtext">公司統一編號</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/GPyBBgm.jpg?1" alt="公司統一編號">
+    公司統一編號
+</p>
 
 <div class="alert warning">
 <div class="head">公司統一編號驗證檢查碼邏輯修正說明</div>
@@ -28,7 +29,7 @@ tags:
 4. 不過是說 2023 年才釋出的編號，我改這麼快幹嘛啦 XD<br>
 </div>
 
-<br><br> 
+
 
 ## 編號規則
 目前現行的統編是 **8 個數字**。在驗證時，會將其乘上相對應的權重分別得到每個位元乘積的十位與個位數的：
@@ -61,7 +62,6 @@ $$
 Sum\%5=0，\text{ where }  Sum = \sum_{i=0}^{7}s_i
 $$
 
-<br>
 
 ### 例外：$n_6 = 7$
 不過上述的計算過程中，會有一個例外情況，就是當 $n_6 = 7$ 時，當其乘上對應權重 $4$ 後，會得到：
@@ -107,7 +107,7 @@ $$
 Sum\%5=0 \text{ or } Sum'\%5=0
 $$
 
-<br><br> 
+
 
 ## 程式碼
 這次驗證規則有點瑣碎，regexp 只能用來驗證是否為數字與長度。
@@ -175,7 +175,8 @@ bool checkTaxId(string idStr){
     return isLegal;
 }
 ```
-<br><br> 
+
+
 
 ## 參考資料 
 1. 林壽山 (2013-03-17)。[營利事業統一編號邏輯檢查方法](https://superlevin.ifengyuan.tw/%E7%87%9F%E5%88%A9%E4%BA%8B%E6%A5%AD%E7%B5%B1%E4%B8%80%E7%B7%A8%E8%99%9F%E9%82%8F%E8%BC%AF%E6%AA%A2%E6%9F%A5%E6%96%B9%E6%B3%95/) 。檢自 Levin's Blog-林壽山 (2020-10-23)。
@@ -183,7 +184,7 @@ bool checkTaxId(string idStr){
 3. beethobear (2006-10-30)。[[商用軟體]統一編號檢查碼規則](http://phorum.study-area.org/index.php/topic,11397.html) 。檢自 酷!學園 (2020-10-23)。
 4. 電子發票組 (2021-12-22)。[營利事業統一編號檢查碼邏輯修正說明](https://www.fia.gov.tw/singlehtml/3?cntId=c4d9cff38c8642ef8872774ee9987283) 。檢自 財政部財政資訊中心 (2022-05-01)。 
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

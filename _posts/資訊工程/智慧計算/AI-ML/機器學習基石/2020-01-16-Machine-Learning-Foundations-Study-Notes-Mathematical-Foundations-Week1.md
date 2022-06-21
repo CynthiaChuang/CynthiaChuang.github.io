@@ -16,8 +16,6 @@ tags:
 2. 機器學習簡介
 
 <!--more-->
-<br>
-
 ## 什麼是機器學習?
 簡單來說，就是希望用電腦來模擬或者模仿類似學習的過程。
 
@@ -27,7 +25,7 @@ tags:
 
 具體的來定義，我們將電腦所觀察的東西稱為<mark>資料</mark>；所學習的技巧，實際上是某一種<mark>表現的增進</mark>；而所謂的內化則是中間的<mark>訓練</mark>與逼近過程。
 
-<br><br>
+
 
 ## 什麼情況適用機器學習?
 在現實不是所有情境都適用於機器學習，教授認為應符合下列三個關鍵才適用：
@@ -47,15 +45,16 @@ tags:
     這是重點阿！沒有資料就什麼都不用玩了...XD
 
 
-<br><br>
+
 
 ## 符號定義
 以銀行核發信用卡為例，銀行使用機器學習目的是學習如何核發信用卡，能讓它獲利或是服務評比最好。 
 
-<center> <img src="https://i.imgur.com/pnpAk7a.png" alt="The Learning Model"></center>
-<center class="imgtext">The Learning Model（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/1YgVk/components-of-machine-learning" class="imgtext">課程截圖</a>）</center>
-<br>
-
+<p class="illustration">
+    <img src="https://i.imgur.com/The Learning Model.png" alt="《Then Comes the Sun》專輯封面">
+    The Learning Model（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/1YgVk/components-of-machine-learning">課程截圖</a>）
+</p>
+ 
  
 1. **Input**  
     $x \in X$ ，在這個例子中有的就是顧客申請書上的相關資料，例如：年齡、性別、年收入、信用資料、貸款...等。
@@ -86,12 +85,11 @@ tags:
 
 總結來說機器學習整個流程就是，從資料出發經由模型得到一個 Hypothesis $g$，這個 $g$ 期望上能盡可能接近 $f$。而模型是由學習演算法 $A$ 與用來進行預測的公式合集 $H$ 所組成。
 
-<br><br>
+
 
 ## 與相關領域的關係
 再次重申機器學習的定義：資料經由模型得到一個 Hypothesis $g$ ，且 $g$ 越接近越好 $f$。 
 
-<br>
 
 ### 資料探勘 Data Mining
 一個簡單的定義，資料探勘是希望使用非常大量的資料，去找出一些有趣或有用的性質。
@@ -102,18 +100,15 @@ tags:
 
 若資料探勘所找出來的性質與機器學習想做的有相關，機器學習或許可以藉由資料探勘所找出的性質，來找出更好的 Hypothesis。也就是說可以用資料探勘的工具，來幫助機器學習做得更好 ；反之亦然，也可以用機器學習的工具，來幫助在資料探勘裡面找出有趣的東西。
 
-<br>
 
 ### 人工智慧 Artificial Intelligence
 定義上，是希望電腦表現出一個具有 intelligent behavior 的行為，例如：下棋、自動駕駛。在理解上可以視機器學習是實現人工智慧的一種方法，以下棋的例子來說，我們可以透過給定大量的棋譜，經由設計演算法，讓機器從中學到如何下棋。
 
- <br>
  
 ### 統計 Statistics
 統計是想要用資料來推論一些未知的事情。而在機器學習中 $g$ 是我們從資料中所推論的結果，$f$ 則是未知的事情，以這個方向來說，統計實際上是實現機器學習的一種方法。些微的差異是，機器學習中的演算法會更重視過程（怎麼樣算出來），而不只是結果。
  
 
-<br><br>
 
 ## 其他連結
 1. [機器學習基石筆記目錄](/Machine-Learning-Foundations-Study-Notes-Contents/)

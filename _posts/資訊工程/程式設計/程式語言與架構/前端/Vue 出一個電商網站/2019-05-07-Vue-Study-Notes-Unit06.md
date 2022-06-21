@@ -27,7 +27,8 @@ tags:
 11. 測驗：Vue 元件測驗
 
 <!--more-->
-<br>
+
+
 
 ## 元件概念介紹
 1. 元件可獨立運作且可重複使用。
@@ -41,10 +42,8 @@ tags:
 5. SPA（single page application）也是透過元件製作。
 
 
-<br><br>
 
 ## 使用 x-template 建立元件
-
 在 [02. 基礎 Vue 概述](/Vue-Study-Notes-Unit02) 時，介紹過 component 的註冊方法，如下：
 
 ```html
@@ -145,10 +144,8 @@ Vue.component(tagName, options)
 ```
 
 
-<br><br>
 
 ## 使用 function return 建構資料格式 
-
 在 component 的 data 必須是一個<mark>函數</mark>，因此必須使用 function return 才能正常運作。
 
 這是為了確保每個 instance 可以維護一份<mark>獨立的拷貝物件</mark>，避免修改一個 instance 的數值後影響到其他所有的 instance。
@@ -163,7 +160,6 @@ Vue.component(‘counter-component’, {
 ```
 
 
-<br><br>
 
 ## props 基本觀念
 props 為<mark>父元件向子元件</mark>傳遞資料的方式。在子元件中設定所要傳入的變數名稱，在 HTML 中使用該元件時使用該變數名稱即可將資料傳入。
@@ -186,16 +182,12 @@ props 為<mark>父元件向子元件</mark>傳遞資料的方式。在子元件�
 <br>
 
 傳遞資料的方式又可分成兩種：**靜態傳遞**、**動態傳遞**。
-
  - **靜態傳遞**：就是直接傳入字串。
  - **動態傳遞**：就是用 v-bind 的方式傳入父元件中的 data。
 
 
 
-<br><br>
-
 ## props 使用上的注意事項
-
 1. **單向數據流**  
     Vue 在不同 component 間強制使用<mark>單向數據流</mark>，父元件可以向子元件傳遞數據，但是子元件<mark>不能直接修改</mark>父元件的狀態。不然你會得到下列的錯誤訊息：
 
@@ -212,11 +204,9 @@ props 為<mark>父元件向子元件</mark>傳遞資料的方式。在子元件�
 3. **維持狀態與生命週期**  
     如果你在不想每次都呼叫 create ，就使用在 [05. Vue 的生命週期](/study-notes/computer-language/framework/2019/04/24/Vue-Study-Notes-Unit05/) 提到的 **\<keep-alive\>**。
 
- 
-<br><br>
+
 
 ## props 型別及預設值
-
 ```javascript
 props: {       
    propA: Number,
@@ -239,7 +229,6 @@ props: {
 - 傳入值：若是直接 hard code 值，傳入轉成宣告的型態，如果轉得過去的話...如果轉不過去，它就會傳入系統所判定的型態，然後...再丟 Warnning 給你。
  
 
-<br><br>
 
 ## emit 向外層傳遞事件
 資料由子元件向外層傳遞，先看個完整程式碼，程式的目的是透過子元件 button-counter 去累加父元件的變數 cash 。
@@ -321,12 +310,9 @@ props: {
 
 
 
-<br><br>
-
 ## Slot 元件插槽
-
 在一般情況下若直接在子元件標籤內新增內容的話會被模版直接替換，而看不到輸入的內容。因此若想讓父元件替換子元件部分內容，或想讓元件可以依各頁面需求進行客製化，應該使用 <mark>slot</mark>。
-<br>
+
 
 ### 單個插槽（Single Slot）
 若 component 中只有一個位置可供替換，那麼使用 Single Slot 即可。使用方式只需在 component 的 template 中使用 ``<slot>...</slot>`` 定義可被替換的段落。
@@ -346,7 +332,7 @@ props: {
 ```
 
 component 的 template 中設置的預設內容，只有在子元件標籤內沒有提供內容時才會被渲染。
-<br>
+
 
 ### 具名插槽（Named Slots）
 若 component 中提供多個位置可以替換，應使用具名插槽（Named Slots），template 中的 slot 需使用 **name** 屬性決定配置的內容。沒有 name 的插槽將成為預設插槽，匹配不到的內容會放置在此；若沒有默認插槽，匹配不到的內容會被捨棄。
@@ -372,22 +358,19 @@ component 的 template 中設置的預設內容，只有在子元件標籤內沒
 
 > 依照[文件](https://cn.vuejs.org/v2/guide/components-slots.html)看來應該只是將要插入的方式由 **slot="slotName"** 改成 **v-slot:slotName** 即可，但需要特別注意下 Vue 版本必須為 2.6 版以後才可以順利使用新語法。（千萬別像我拿舊的 Vue來測試新版語法...蠢死了QAQ）
 
-<br><br>
+
 
 ## 使用 is 動態切換元件
-
 個人覺得這跟 :class 的用法類似，唯一不同的是 :class 是切換使用的 class，而 :is 則是切換使用的 component。
 
 
-<br><br>
 
 ## 元件 章節作業
 [codepen](https://codepen.io/cynthiachuang/pen/jobbaN)
 
-<br><br>
+
 
 ## 測驗：Vue 元件測驗
-
 **問題 1：Vue 的元件中，外部資料要傳入到內層，要使用何種方式？**  
 1. [x] props  
 2. [ ] emit  
@@ -422,13 +405,10 @@ return {}
 
 
 
-
-<br><br>
-
 ## 其他連結
 1. [【Vue.js 學習筆記】00. 目錄](/study-notes/computer-language/framework/2019/04/18/Vue-Study-Notes-Contents/)
 
-<br><br>
+
 
 ## 參考資料
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)

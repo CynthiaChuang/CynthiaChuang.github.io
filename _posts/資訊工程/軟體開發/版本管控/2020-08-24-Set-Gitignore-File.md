@@ -13,10 +13,9 @@ tags:
 這時可以設定忽略的規則來過濾上傳的文件。
 
 <!--more-->
-<br><br> 
+
 
 ## 新增過濾腳本
-
 如果有不想放進去的檔案，只需要可以在專案中的 `.gitignore` 設置忽略規則即可。
 
 檔案不存在？那就新增它吧！
@@ -25,10 +24,9 @@ tags:
 $ touch .gitignore
 ```
 
-<br><br> 
+
 
 ## 內容寫法
-
 有了檔案就可以開始編輯內容了：
 
 ```bash
@@ -65,10 +63,9 @@ models/
 - `[]` : 表示匹配中括弧內的任一個字元
 - `!` : 則是用來表示追蹤特定文件，有可能在前面規則中過濾掉了某個資料夾，但該資料夾下某個文件卻是要追蹤的，就可以用 `!`
 
-<br><br> 
+
  
 ## 過濾已追蹤的檔案
-
 `.gitignore` 的過濾效果只會在 Untracked 的檔案上顯示效果，若你這檔案已經列入版本控制，也就是之前被 commit 過了，則不受 `.gitignore` 檔案控制。
 
 如果想讓這已經列管的檔案被忽略，可以先解除版制的追踪
@@ -87,14 +84,12 @@ $ git rm -r --cached .
 
 
 
-<br><br> 
-
 ## 參考資料 
 1. Fleschier (2018-10-30)。[gitignore的使用及写法](https://fleschier.github.io/2018/10/27/gitignore-learning/) 。檢自 Fleschier 渐寒๑ (2020-07-21)。
 2. 高見龍。[【狀況題】有些檔案我不想放在 Git 裡面…](https://gitbook.tw/chapters/using-git/ignore.html) 。檢自 為你自己學 Git (2020-07-21)。
 2. github。[A collection of useful .gitignore templates](https://github.com/github/gitignore) 。檢自 gitignore (2020-07-21)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

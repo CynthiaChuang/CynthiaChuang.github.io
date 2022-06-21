@@ -34,14 +34,14 @@ $ git commit -m "temporarily"
 $ git reset HEAD^
 ```
 
-<br><br>
+
+
 ## 2. git stash
 除了 commit 之後再拆這個方法外，也可以使用 git 的指令，將檔案放到<mark>暫存區</mark>裡面：
 
-<br>
+
 
 ### push / save
-
 ```shell
 $ git stash
 
@@ -65,7 +65,7 @@ $ git stash -u
 
 最後一個 `git stash save` 在文件中寫明它不推薦使用該參數，與 `git stash push` 最大的不同是它不支援路徑參數。
 
-<br>
+
 
 ### list / show
 當你完成其他工作完後，想把暫存區的工作進度時找回來時，可以先用 `list`，看看暫存區有那工作：
@@ -83,7 +83,6 @@ stash@{1}: WIP on master: 3a9842d
 $ git stash show -p stash@{0}
 ```
 
-<br>
 
 ### pop / drop
 若確定所要回復的工作進度時，就可以使用 `pop` 來恢復工作進度
@@ -98,7 +97,6 @@ $ git stash drop stash@{1}
 ```
 
  
-<br><br> 
 
 ## 參考資料 
 1. [Git｜git-stash Documentation](https://git-scm.com/docs/git-stash)

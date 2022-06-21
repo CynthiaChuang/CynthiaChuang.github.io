@@ -52,7 +52,7 @@ Output: True
 
 **Related Topics:**`String`、`Stack`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是在驗證括號是否成對，看到這種題目第一反應就是用 **Stack**：
@@ -127,7 +127,7 @@ class Solution:
       return stack == []
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

@@ -35,12 +35,11 @@ Explanation: The array represents the integer 4321.
 
 **Related Topics:**`Array`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題也是逐位相加的的題目，不同的是這題加數固定是 1，所以要考慮的情況會簡單很多。關於這題我想到兩種做法，在 LeetCode 上跑起來效能差不多。
 
-<br>
 
 ### 想法1
 第一種想法是將加數當做進位數 carry ，使用迴圈依序取值與進位數相加，若相加結果大於 10 則繼續進位。最後回傳時，若進位數仍大於 1 ，則將其插入陣列前方。
@@ -65,7 +64,6 @@ class Solution:
       return digits if carry == 0 else [carry] + digits 
 ```
 
-<br>
 
 ### 想法2
 另一個想法則是，判斷尾數是否為 9 ，因為在加數為 1 情況下，唯一會啟動進位情況只有 (9,1) 這種組合。因此遇到 9 就回填 0 ，直到遇到第一個非 9 的數字，將其加 1 後中斷迴圈。回傳時，需檢查最高位是否為 0，若為 0 則在前方補上一個 1。
@@ -99,7 +97,7 @@ class Solution:
       return [1] + [0] * digit_len if index == -1 else digits[:index] + [digits[index]+1] + [0] * (digit_len-index-1)
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

@@ -21,14 +21,12 @@ tags:
 </div>
 
 <!--more-->
-<br><br>
-
 ## 0. Abstract
 人類基因體定序的成本已從十年前的數百萬美元大幅下降至一千美元。這使得研究計劃能夠對數十萬人進行定序[^Sequence]，而臨床研究也可以將對患者的基因體進行定序作為他們治療標準流程的一部分。基因體定序的巨大進步還需仰賴大量的資料儲存和計算能力，因為每個基因體[^genomes]都是大約 60 Gb 的壓縮資料，且通常每小時需要耗費約一千個 CPU 來處理。
   
 Microsoft Azure 雲端運算服務憑藉著可靠性、安全性、全球資料儲存與計算服務，非常適合用來滿足此需求。此外， Microsoft Azure 上的 Microsoft Genomics service 提供了一種易於用來分析基因體的 Web 服務，其速度比標準分析基因體的管線[^pipeline]快上幾倍。這項服務遵循的是由麻省理工和哈佛大學共同創立的 Broad 研究所所建立關於一致性和準確性的最佳做法[^best-practices]，這也是基因體分析的業界標準[^de-facto]。Microsoft Genomics service 由於其速度、準確性和簡便性，使其在癌症、罕見疾病、人群健康和精密醫學領域有廣泛的應用。
 
-<br><br> 
+
 
 ## 1. Introduction
 正常人細胞中的 DNA 由 23 對染色體所組成，加起來總共有 64 億個鹼基對（以及其他一些片段，如線粒體DNA[^mtDNA]）。每個鹼基對使用字母 A、C、T 或 G 表示，用以識別每個位置的特定核苷酸。由於成對的染色體非常相似，因此在排序時通常會將它們排列在一起，從編號 1 的染色體（最大）到 22 號染色體，然後是 X＆Y 性別染色體，依序排列成 32 億個位置[^locations]。由於人類 DNA 的個體差異相對較小（通常為1000個定位中的有1個左右的差別），因此我們通常將待測的人類 DNA 與參考基因體進行比較，該參考基因體是基於第一個人類基因體計劃結果所得的複合基因體。
@@ -53,7 +51,7 @@ Microsoft Azure 雲端運算服務憑藉著可靠性、安全性、全球資料�
  
 無論要做哪種三級分析，都必須先進行次級分析。次級分析中的比對和變異點偵測步驟都非常依賴計算資源，因為它們需要處理大量資料並執行複雜的計算。二次分析的標準工具有用於比對的 Burrows-Wheeler Aligner（BWA）及由麻省理工和哈佛大學共同創立的 Broad 研究所開發用於變異點偵測的 Genome Analysis Toolkit（GATK）。從開始讀取定序儀的原始資料到生成比對完定序片段和變異位點偵測文件，一般版本的工具需要一天才能在 16 核心伺服器上處理完 30 倍的全基因體樣本。
  
-<br><br> 
+
 
 ## 2. Microsoft Genomics
 由於不斷擴大規模、複雜性與基因體學的安全需求，使得 Microsoft Azure 雲端運算服務成為搬遷的最理想的人選。Microsoft Azure 擁有位於世界各地的資料中心，其儲存與計算能力能滿足存放與分析未來幾年內要定序的數十萬個基因體的需求。此外，Microsoft Azure 有通過全球主要的安全和隱私認證，如：ISO 27001，並制定符合 HIPAA 法規的安全操作標準用以處理個人健康資料。
@@ -61,7 +59,7 @@ Microsoft Azure 雲端運算服務憑藉著可靠性、安全性、全球資料�
 為使 Microsoft Azure 成為基因體學最佳的雲端運算服務，Microsoft Genomics 開發了一種優化的輔助分析服務，可以在幾小時內處理 30x 基因體，而不需要花費一天或以上的時間來處理。 Microsoft Genomics Service 包含一個經過優化的高效能引擎，可以讀取較大的基因體資料文件，並使用多核心進行處理、排序並對結果進行過濾，最後再將過濾結果寫回。該引擎協調 BWA 與 GATK HaplotypeCaller 的變異位點偵測操作以實現最大吞吐量。此外，它還整合其他一些標準基因體管線中較為簡易的部分，如：重複標記（Duplicate Marking）、定序質量分數重新校正（Base Quality Score Recalibration，BQSR）與索引（indexing）。從單一樣本的原始資料讀取、定序片段比對到變異點偵測，該引擎在一台多核心伺服器上可以在幾個小時以內完成。
  
 Microsoft Genomics service controller 管理雲端運算服務中分佈在機器集區（pools of machines）裡的一批基因體的處理。它維護傳入請求的佇列，將它們分發到運行基因體引擎的伺服器，並監視其性能與進度，最後評估結果。它確保服務在安全的 Web Service API 的後方可以可靠且安全地大規模運行。客戶端無需處理複雜的軟硬體維護與更新，並且可以快速且有效地執行精確的 GATK 標準分析流程。其分析結果可以輕鬆連接到三級分析和與機器學習服務，如：Azure 上的 Microsoft R Server。
-<br>
+
 
 ### 2.1 Client Architecture
 Microsoft Genomics 客戶端（msgen）是 Python 實做的前端用以連接 web service。它可以像標準的 Python 函式庫一樣，在 Windows 或 Linux 直接 python pip 函式庫管理器（`pip install msgen`）。 
@@ -76,12 +74,12 @@ Microsoft Genomics 客戶端（msgen）是 Python 實做的前端用以連接 we
 之後，你就可以調用 msgen 客戶端來啟動處理流程，並監視進度，直到處理完成。最終比對完定序片段的 BAM 檔案與變異點偵測後的 VCF.GZ 檔案，會被放置在指定輸出 Azure Storage 中。 使用者可以輕鬆整合到現有工作流程中。
 
 
-<br>
-
 ### 2.2 Service Architecture
 Microsoft Genomics service 在 Azure 中負責處理基因體資料。整個系統架構由幾層組成，如圖 1 所示：
  
-<center> <img src="https://i.imgur.com/qgJIlqx.png" alt="Architecture"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/qgJIlqx.png" alt="Architecture">
+</p>
  
 1. **服務控制層，service control layer**  
     用於接收 API 請求，安排工作佇列以及管理 Azure Batch 中跨機器集區的執行。
@@ -97,7 +95,7 @@ Microsoft Genomics service 在 Azure 中負責處理基因體資料。整個系�
     
 5. **優化的 AVX2 程式**  
     針對計算密集型演算法（例如：Smith-Waterman 序列比對）和用於單倍體評估的成對隱藏馬可夫模型（Pair Hidden Markov Model）。
-<br>
+
 
 #### 2.1.1  Service Controller
 Service Controller 是個具有可執行後端服務的分佈式 C＃ 網路應用程式。前端接受來自 Azure API 管理的客戶端請求，並將它放置在工作佇列中。Azure Web Job application 會為佇列中每個項目進行排程與監控 Azure Batch 任務。當 Azure Batch 執行任務時，service executable 下載參考資料和輸入文件，並執行 SNAP 引擎以進行比對和變異點偵測，再將結果寫入文件流回到 Azure Storage，最後報告完成情況。整個應用遵循 Azure 在安全性、合規性、審核和監視的方面最佳實踐流程，例如：所有客戶端和應用程式機密均保存在 Azure Key Vault 中以提供保護。
@@ -106,19 +104,22 @@ Service Controller 是個具有可執行後端服務的分佈式 C＃ 網路應�
 #### 2.1.2  SNAP Engine
 SNAP Engine 是基於 Microsoft Research 與 UC Berkeley AMPLab 合作開發的的高性能 SNAP short read aligner。但此版本不使用 SNAP alignment 演算法，而是使用更廣泛的 BWA MEM 比對器來取代。它擁有一個高性能的非同步輸入/輸出子系統，可以有效地處理大量的基因體數據。它還包括一個高效的系統，用於排程跨多核心的計算密集型工作並收集結果。為了儘量減少額外的硬碟讀取次數，通過該框架的總體資料流只在兩個步驟間進讀取和寫入數據，而不是像標準 BWA / GATK 管線中所要求的半打或以上的讀寫次數。
 
-<center><img src="https://i.imgur.com/fq0zMBR.png" alt=" Standard BWA/GATK Pipeline"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/fq0zMBR.png" alt="Standard BWA/GATK Pipeline">
+</p>
   
 第一階段會同時跨所有核心批次大量比對定序片段，並在進行前處理時不依賴任何的排序，例如：收集用來做定序質量分數重新校正的統計資料。然後，將定序片段依序批次寫入中間文件。第二階段將所有批次合併到一個定序片段的 single fully-sorted stream 中，並完成前/後處理步驟：應用 BQSR 統計信息，標記重複項，構建 BAM 索引以及壓縮 BAM 文件。在編寫 BAM 文件的同時，此階段還協調了幾個 GATK 流程來進行變異位點偵測，識別潛在變異位點附近的激活區域，並僅將那些定序片段直接輸送到 HaplotypeCaller 中以提高效率。由於排序是 IO 密集型的，而變異位點偵測是 CPU 密集型的，因此可以有效地平衡機器資源的整體使用
 
-<center> <img src="https://i.imgur.com/BFgcc8q.png" alt=" Microsoft Genomics Pipeline"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/BFgcc8q.png" alt="Microsoft Genomics Pipeline">
+</p>
 
 
 #### 2.1.3  BWA-MEM & GATK HaplotypeCaller
 Microsoft Genomics 使用 BWA 的 opensource 版本和 Broad 研究所發布的 GATK 許可版本並對其進行了優化和加速，以在 Microsoft Azure 雲端服務上運行。BWA MEM 和 GATK HaplotypeCaller 程式碼的大部分保持不變，以保持與標準 pipelines 的兼容性。 只需進行少量更改即可將它們融合到整個管線中：BWA MEM 被製成一個函式庫、HaplotypeCaller 被修改為接受預先計算好的激活區域作為標準input中。此外，重複標記、來自 Picard校正演算法和 GATK 已經改由 C ++ 實做，且被應用在當資料流通過引擎時去最大程度地減少不必要的 I/O。
 
 這些程式中的大部分時間都花在了兩個低階層計算的 Kernel：SmithWaterman 與 PairHMM 上。這些已使用 Intel AVX2 向量指令進行了高度優化，比標準版本運行速度明顯提高。該初始版本計劃支持 GATK 3.5，並會根據客戶需求隨時間增加對其他版本的支持。管線可以選擇生成 gVCF 文件，該文件可以在多個樣本中合併以進行聯合基因分型。
-<br>
+
 
 ###  2.3 Performance
 通過彈性分配 Microsoft Azure 雲端運算服務中的資源， Microsoft Genomics service 的整體體系結構可以擴展至平行處理數百或數千個基因體。每個基因體分別在單個高容量虛擬機上執行，以最大化吞吐量並最小化每次執行時的通訊和存儲開銷。前/後處理步驟盡可能平行運行，以減少 end-to-end 的處理時間。
@@ -126,16 +127,17 @@ Microsoft Genomics 使用 BWA 的 opensource 版本和 Broad 研究所發布的 
 標準的 GATK 分析流程管線中通常按順序執行每個步驟。每個步驟都必須讀入上一步生成的文件，因此必須等待它完成。如圖 2 所示，若將工作依基因體的不同區域分進行劃分，則在一個步驟中就會存在平行性可能（例如：分別在每個染色體上運行 MarkDuplicates）。
   
 Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，將每次讀寫中的許多不同處理步驟組合在一起，並且平行處理許多區域，以最大效率，如 圖3所示。
-  
-<br>
+
 
 ###  2.3 Concordance
 陣亡！ 這部分先欠著，反正內容大抵上就是說準確度不輸標準流程、但速度快很多之類的。
 
-<center> <img src="https://imgur.com/fvnLx0K.png" alt="举白旗的兔子"></center>
-<center class="imgtext">舉白旗，陣亡！（圖片來源: <a href="http://616pic.com/sucai/1yqiqp69z.html" class="imgtext">图精灵</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/fvnLx0K.png" alt="举白旗的兔子">
+    舉白旗，陣亡！（圖片來源: <a href="http://616pic.com/sucai/1yqiqp69z.html">图精灵</a>）
+</p>
 
-<br><br>
+
 
 ## 小結
 真的好難翻，明明看得懂但翻成中文怎麼也不順 Orz  
@@ -143,7 +145,7 @@ Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，�
 
 翻到後面都忘了寫註解了，而且整篇排版超級亂的... orz
 
-<br><br>
+
 
 ## 參考資料 
 1. 活躍星系核 (2012-09-21)。[全球化視野下的基因體學](https://pansci.asia/archives/27710)。檢自 PanSci 泛科學 (2020-01-30)。 

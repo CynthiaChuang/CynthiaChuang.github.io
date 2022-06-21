@@ -14,17 +14,15 @@ tags:
 不過本來就應該避免把密碼 Hard Code 在程式碼當中啦，當初有確定這份 Script 只有我要用，不會出我電腦，才放心用 Hard Code 的。但現在既然有可能出我電腦，還是用金鑰做認證登錄比較保險。
 
 <!--more-->
-<br> 
+
 
 ## SSH Key-based 登入驗證
-
 SSH Key-based 登入驗證方式的正式名稱應該叫 — **SSH 公開金鑰認證（Public Key Authentication）**，設定完成後就可以免密碼登入了。
 
 基本上就兩個步驟：
 1. 產生 SSH 登入用的金鑰
 2. 將產生的 Pub key 放到伺服器的 `authorized_keys` 清單中
 
-<br>
 
 ### 1. 產生金鑰
 先切換到 `~/.ssh` 目錄下，通常金鑰都會收集起放在這個目錄下。若該目錄不存在，就自己建一個，並設定正確的權限：
@@ -55,7 +53,7 @@ $ ssh-keygen
 
 <br>
 
-最後看到 fingerprint 與 randomart ，就代表產生成功了
+最後看到 fingerprint 與 randomart ，就代表產生成功了。
 ```bash
 Your identification has been saved in /home/username/.ssh/tn_key. 
 Your public key has been saved in /home/username/.ssh/tn_key.pub.
@@ -71,10 +69,8 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-<br>
 
-###  2. 將公開金鑰上傳
-
+### 2. 將公開金鑰上傳
 產生的金鑰有兩把一把是公開金鑰（Public Key）、一把是私密金鑰（Private Key）。
 1. **公開金鑰（Public Key）**：這把是對外公開的金鑰，之後把它<mark>上傳到伺服器上使用</mark>。
 2. **私密金鑰（Private Key）**：這把則是<mark>放在自己電腦</mark>的金鑰，它等同於你的密碼，請務必保護好。此外，私鑰在使用時，權限僅能是 `400`、 `600` 或 `700`，否則會出現下列的錯誤訊息：
@@ -114,10 +110,8 @@ $ ssh user@host
 $ vi .ssh/authorized_keys #把複製的 ssh-rsa 貼上
 ```
 
-<br>
 
 ### 3. 停用密碼認證登入
-
 如果公開金鑰認證設定完成後，想關閉密碼登入的方式，可以修改伺服器上的  `/etc/ssh/sshd_config` 的設定
 ```diff
 # Change to no to disable tunnelled clear text passwords
@@ -134,14 +128,14 @@ $ systemctl restart sshd
 
 是說我有點好奇，如果把 PasswordAuthentication 跟 PubkeyAuthentication 同時設成 no 會出現什麼狀況？但我慫（台語），而且機台在遠端，所以沒敢嘗試，要是搞壞就真的 GG 了  (つ﹏⊂)
 
-<br><br> 
+
 
 ## 參考資料 
 1. Tsung (2005-12-28)。[ssh keygen 免輸入密碼](https://blog.longwin.com.tw/2005/12/ssh_keygen_no_passwd/)。檢自 Tsung's Blog (2019-06-13)。
 2. G. T. Wang (2014-05-18)。[SSH 公開金鑰認證：不用打密碼登入 Linux 設定教學，安全又方便](https://blog.gtwang.org/linux/linux-ssh-public-key-authentication/)。檢自 G. T. Wang (2019-06-13)。
 5. 程序新视界 (2018-01-18)。[Linux ssh 重启无效_程序新视界](https://blog.csdn.net/wo541075754/article/details/79092281)。檢自 CSDN博客 (2021-01-08)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -12,9 +12,10 @@ tags:
 - OpenWhisk
 --- 
 
-<center> <img src="https://i.imgur.com/EXCq2WM.png" alt="投影片封面"></center>
-<center class="imgtext">投影片封面（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-01.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/EXCq2WM.png" alt="投影片封面">
+    投影片封面（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-01.pdf">課程講義</a>）
+</p>
   
 本堂課程為此系列的第一講，主要來探討 Serverless 在 API 經濟中可以產生怎樣的作用。
 
@@ -29,14 +30,12 @@ tags:
 </div>
 
 
-<br><br>
 
 ## 回顧
-
 開始前先來複習一下 **Serverless要點** 與 **OpenWhisk 程式編輯模型**。
 
-### Serverless 要點
 
+### Serverless 要點
 - [第一堂課程筆記 - Serverless](/Serverless-Use-Cases-Study-Notes-01/#serverless-要點)
   
 上一堂課有介紹到 Serverless 存在兩種類型的服務： Function-as-a-Service（FaaS） 與 Backend-as-a-Service（BaaS）。
@@ -57,16 +56,15 @@ Function-as-a-Service FaaS，中文翻譯為**函式即服務**，...恩...函�
 
 除此之外，FaaS 的另外一個設定要點是 <mark>API Gateway</mark>，它可以將 Serverless 中的函式做為服務暴露出來，讓客戶端可以直接調用這個服務。
 
-<br>
 
 ### OpenWhisk 程式編輯模型
-
 在本堂課主要會利用 Serverless 無狀態、短暫的、有限制的特點，來看看它在 API 經濟中的作用。
 - [第一堂課程筆記 - OpenWhisk 程式編輯模型](/Serverless-Use-Cases-Study-Notes-01/#openwhisk-%E7%A8%8B%E5%BC%8F%E7%B7%A8%E8%BC%AF%E6%A8%A1%E5%9E%8B)
  
-<center> <img src="https://i.imgur.com/lZP3G5P.png" alt="Apache OpenWhisk 程式編輯模型"></center>
-<center class="imgtext">Apache OpenWhisk 程式編輯模型（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/lZP3G5P.png" alt="Apache OpenWhisk 程式編輯模型">
+    Apache OpenWhisk 程式編輯模型（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf">課程講義</a>）
+</p>
 
 
 另外在上一講中還提到了 OpenWhisk 程式編輯模型。
@@ -78,9 +76,9 @@ OpenWhisk　是一個典型的<mark>事件驅動型</mark>的程式編輯模型�
 
 而套件就是把一系列相關的觸發器、動作和規則關聯在一起。例如：Apache OpenWhisk 的 [alarms package](https://github.com/apache/openwhisk-package-alarms) 就是一個還滿好用的套件。
 
-<br><br>
 
-##  典型應用場景
+
+## 典型應用場景
 由於它的技術特點，因此存在一些典型的應用場景：
 
 1. **資料庫的增刪查改的事件響應**  
@@ -100,16 +98,13 @@ OpenWhisk　是一個典型的<mark>事件驅動型</mark>的程式編輯模型�
 5. **系統之間交互的橋樑**  
    因為其輕量的特性，可以用來作為系統間的溝通橋樑。例如：程式更新去觸發 Jekyll 的更新。
  
-<br><br>
 
-##  API
 
+## API
 既然本堂課的副標題叫 **《Serverless 在 API 經濟中的應用》**，當然得稍微介紹下 API。
 
-<br>
 
-###  API 經濟 
-
+### API 經濟 
 什麼是 API 經濟？
 
 講師提到，現在開發功能有種用<mark>搭積木</mark>來實現功能趨勢。換句話說，自己寫的程式越來越少，更多是採用第三方服務。
@@ -118,10 +113,8 @@ OpenWhisk　是一個典型的<mark>事件驅動型</mark>的程式編輯模型�
 
 而所謂 API 經濟，指的是通過 Open API 把後臺的資料、資源...等能力，開放提供第三方人員有償或是無償使用，這樣的開放可以直接對企業利潤帶來引響，或是擴大自身在生態圈影響力，並且很快的完成創新。
 
-<br>
 
-###  開放 API
- 
+### 開放 API 
 開放 API　＝　公開 API　＝　Open API　＝　共通性資料存取應用程式介面
 
 上面四個名詞我最熟悉的是第三個，不過它們指得同一件事：
@@ -133,18 +126,16 @@ OpenWhisk　是一個典型的<mark>事件驅動型</mark>的程式編輯模型�
 
 <br> 在 API 經濟之下，越來越多的企業通過 API 將自己企業的功能和數據開放出去供別人調用，從而給企業本身帶來直接的價值。可是很多情況下，企業已有的功能不適合直接暴露給外部使用戶，需要考慮相關認證的機制以及隱私資料遮蔽，做一定的限制和修改。
 
-<br>
 
 ### Serverless 平台實現 Open API
-
 若不採用 Serverless 來實現 Open API，必須先分配個 VM 或 container，然後設定操作系統、執行環境，並上傳程式碼，接下來 7 * 24 等待著。等待前端調用，如果前端調用來了，處理資料丟到後端，再等待後端返回後，增加處裡丟還給前端。
  
 除機器必須 7 * 24 運轉外，上線必須花費時間設定相關作業，這些都造成相關服務的提供者開發及維運上的困難。
 
-<br>
-<center> <img src="https://i.imgur.com/8GXYW5F.png" alt="Serverless 平台實現 Open API  架構"></center>
-<center class="imgtext">Serverless 平台實現 Open API 架構（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-1.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/8GXYW5F.png" alt="Serverless 平台實現 Open API  架構">
+    Serverless 平台實現 Open API 架構（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-1.pdf">課程講義</a>）
+</p>
 
 上圖是使用 Serverless 平台實現 Open API 的架構，從左向右看，分別是互聯網、防火牆、API Gateway、 FaaS 與要存取的內部系統。
 
@@ -162,31 +153,26 @@ API Gateway 這邊主要負責安全性、流量管理、拜訪與響應的策�
 使用 Serverless 用的話，可以節省了資源（至少不用 7 * 24 運轉？）
 
 
-<br>
 
 ## 場景示例
-
-<center> <img src="https://i.imgur.com/4rc6ZLU.png" alt="數據訪問 API"></center>
-<center class="imgtext">數據訪問 API（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-1.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/4rc6ZLU.png" alt="數據訪問 API">
+    數據訪問 API（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-1.pdf">課程講義</a>）
+</p>
 
 課程這邊講師舉了好幾個場景示例，不過有點懶沒有將它們一一打出來。
 
 不過基本上就是藉由網路通過 API Gateway 去請求 FaaS，而 FaaS 接到請求後執行相對應的程式，再將結果返回給使用者。
 
-<!--more-->
-<br><br>
+
 
 ## 操作示範
-
 這節我能做的操作跟講師不太一樣，她在這章節所使用的是 **OpenWhisk CLI**，但這部分在 IBM 上的操作文件整個不見了！
 
 因此就算從 github 把 [OpenWhisk CLI](https://github.com/apache/incubator-openwhisk-cli/releases) 下載下來，我也不清楚該如何將 wsk CLI 跟 IBM	Function 做連接，再加上有考慮自己架個 OpenWhisk 來試試看，所以 wsk CLI 的使用就決定向後推了 XD
 
-<br>
 
 ### 環境準備
-
 1. IBM cloud 帳號
 2. 安裝 IBM Cloud Developer Tools 
 3. 配置 CLI
@@ -242,8 +228,6 @@ IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操�
     ```shell
     $ docker exec -ti [ID] /bin/sh
     ```
-      
-    
 
 <br>
 
@@ -294,13 +278,9 @@ IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操�
     ```shell
     $ ibmcloud fn list
     ```
- 
- 
 
-<br>
 
 ### CLI 操作
-
 這堂課主要是在說 API 操作的部分，所以我也依照講師的授課內容，先找相對應的指令。至於其他的指令，我在酌情要貼測試結果還是文件就好。
  
 
@@ -431,24 +411,23 @@ def main(args):
       "command": "INSERT INTO catdb VALUES( CC , black )"
     }
     ```
- 
-<br>
+
 
 ### 高級 API gateway
-
 不過使用 Openwisk 沒有流量控制、安全性...等功能，必須依賴安裝其他第三方 API 來控管。
 
 不過 IBM Function 倒是另外提供這些功能，但必須從 UI 來控制就是了。
-<center> <img src="https://i.imgur.com/9MZkFFQ.png" alt="高級 API gateway"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/9MZkFFQ.png" alt="高級 API gateway">
+</p>
 
 
-<br><br> 
 
 ## 其他連結
 1. [Serverless 應用案例賞析筆記目錄](/Serverless-Use-Cases-Study-Notes-Contents)
 2. 課程內容：影片（[IBM片源](https://mediacenter.ibm.com/media/1_u1ucwcoh) 、[youku教育片源](http://v.youku.com/v_show/id_XMzg2MzU5MDY4NA==.html)）/ [講義](https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-01.pdf) / [Blog](https://mp.weixin.qq.com/s/XElPa20WYxdXnprh3ygEiQ)
 
-<br><br> 
+
 
 ## 參考資料 
 1. (2020-03-26)。[Using IBM Cloud Developer Tools from a Docker Container](https://cloud.ibm.com/docs/cli/reference/bluemix_cli?topic=cloud-cli-using-idt-from-docker) 。檢自 IBM Cloud Docs (2020-04-08)。

@@ -59,13 +59,12 @@ Output: False
 
 **Related Topics:**`String`、`Backtracking`、`Dynamic Programming`、`Greedy`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 有點像是第十題的 [Regular Expression Matching](/LeetCode-0010-Regular-Expression-Matching/)，不過符號的意義不太一樣，這邊使用的 `?` 表示一個萬用字元， `*` 則是表示多個萬用字元。
 
 
-<br>
 ### 遞迴
 跟 Regular Expression 相比最大的差異應該是 `*` 的用法。在 Regular Expression 中 `*` 不可能單獨存在，必定會跟跟在某個字元後面，在產生 subpattern 時要特別注意；但在這題中 `*` 可以單獨存在，subpatter 應該只有 pattern 或 pattern[1:] 兩種。
 
@@ -127,10 +126,8 @@ class Solution:
 ```
 總算可以過了，但說實話效能不是很好，跑出了 1096 ms、40.91 %的成績，還有非常大的改進空間。
 
-<br>
 
 ### 雙指標
-
 原本是在找 Dynamic Programming 的解法，但連續找到兩篇說用 DP 會 TLE，說要改用雙指標回溯，所以我決定也來寫寫看：
 1. 初始化兩個指標 s_index 與 p_index，分別指向 string 與 pattern 的字首
 2. 判斷 s_index 是否小於 string 長度
@@ -176,12 +173,11 @@ class Solution(object):
 
 效能好上不少，136 ms、 83.93% 
 
-<br>
 
 ### Dynamic Programming & Greedy Algorithm
 是說看標籤應該還可以用 Dynamic Programming 跟 Greedy Algorithm 來解題，先欠著回頭再來研究 XD
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

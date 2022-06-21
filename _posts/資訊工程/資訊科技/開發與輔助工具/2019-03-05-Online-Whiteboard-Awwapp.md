@@ -13,11 +13,13 @@ tags:
 
 <!--more-->
 <br>
+
 不過，我們 team 似乎從來沒讓它發揮過正常功能（笑），我們每次用到最後都變成協作塗鴉 XD
 
-![Awwapp](https://i.imgur.com/6ybHXBt.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/6ybHXBt.png" alt="Awwapp">
+</p>
 
-<br>
 
 以上不正經介紹完畢，想看正經的介紹的請往這裡走<br>
 → 🤓 [Awwapp 觸控靈敏線上共用白板，免註冊電腦平板手機立即可用｜電腦玩物](https://www.playpcesor.com/2017/05/awwapp-A-Web-Whiteboard-App.html)

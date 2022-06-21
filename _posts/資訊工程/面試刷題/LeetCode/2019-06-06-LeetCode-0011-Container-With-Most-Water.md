@@ -27,7 +27,7 @@ Output: 49
 
 **Related Topics:** `Array`、`Two Pointers`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 給定一組長短不一的隔板，並指定其放置位置，從中挑其中的兩塊板，使得板子之間能裝最多的水。
@@ -56,7 +56,7 @@ class Solution:
       return area
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

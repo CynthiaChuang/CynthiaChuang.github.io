@@ -12,8 +12,6 @@ tags:
 那天在 Windows 做完筆記，準備上傳到 Github Page 時，發現我無法執行 `git add .`，並出現了 LF / CRLF 轉換的錯誤訊息 - `LF will be replaced by CRLF`，告訴我要把 LF 換行符號轉換成 CRLF。
 
 <!--more-->
-<br> 
-
 ## 問題描述與釐清
 看到錯誤訊息時，就猜到是因為欲提交的文件中存在 LF 的換行符號，但在 Windows 所使用的換行符號是 CRLF，再加上我有設定 **safecrlf 為 true**，是**不允許提交有 LR 與 CRLF 混合的檔案**的，因此 git 直接拒絕我將檔案註冊到索引裡：
 ```shell
@@ -26,10 +24,10 @@ $ git config --global core.autocrlf true
 ```
 
 
-<br>
 
 ## 解決辦法
 為什麼會出現 LR 我還是不得其解，不過對於這條錯誤訊息倒是很好解：
+
 
 ### 1. 關掉 safecrlf
 剛剛提過，由於我將 safecrlf 設為 true，是不允許提交有 LR 與 CRLF 混合的檔案的，所以被 git 給拒絕了。因此網路上一派解法是直接把 safecrlf 關掉。
@@ -42,7 +40,7 @@ $ git config --global core.safecrlf false
 $ git config --global core.safecrlf false
 ```
 
-不過我個人不希望檔案中有 LR 與 CRLF 混合，這在跨平台合作的情況下會是個悲劇...我就被同事坑過...在提交時會滿江紅一片阿(哭 <br>
+不過我個人不希望檔案中有 LR 與 CRLF 混合，這在跨平台合作的情況下會是個悲劇...我就被同事坑過...在提交時會滿江紅一片阿(哭
 
 
 ### 2. 使用指令或編譯器
@@ -52,7 +50,7 @@ $ tr "\n\r" "\r" < input.file > output.file
 ```
 這條指令的意思是：「將 input.file 中的 \n\r 字串，轉換成 \r 後，寫到 output.file 去」，在只有一份檔案需要轉換的情況，下這條指令是最迅速的，只是可惜的是...我找不到它在 Dos 中相對應的指令 ~~（好吧！我承認我懶得找）~~ <br>
 
-另一種是使用編譯器，我記得 **NodePad++** 做得到，可是我現在改用 VS Code，原本以為更改它的 **files:eol** 設定就可以了，但 git 還是把我擋下來了 QAQ<br>
+另一種是使用編譯器，我記得 **NodePad++** 做得到，可是我現在改用 VS Code，原本以為更改它的 **files:eol** 設定就可以了，但 git 還是把我擋下來了 QAQ
 
 
 ### 3. 此用 DOS2UNIX
@@ -70,9 +68,9 @@ $ tr "\n\r" "\r" < input.file > output.file
 4. 處理完成後，再把剛剛搬進去的 UNIX2DOS.exe 和 UNIX2DOS.c 程式刪除，別不小心放進 git 裡面了。
 
 
-<br><br>
 
 ## 補充紀錄
+
 
 ### 1. core.autocrlf 
 根據 core.autocrlf 的設置規則與建議。
@@ -102,7 +100,7 @@ $ git config --global core.safecrlf false
 後來在[Seven是為了紀念賽虎的這篇](https://www.jianshu.com/p/2a46dfd3705a)查到解釋：
 > 當 core.autocrlf 為 true 或者 input 時，算激活了 eol，此時如果 core.safecrlf 為 true，git 檢查 crlf 轉換是否正常，比如 Windows 平台，core.autocrlf 設置為 true，如果工作區的文件中含有 LF，git 就會拒絕，因為 true的情況下，git 認為工作區應該都是 CRLF 才對啊。
 
-<br><br>
+
 
 ## 總結
 簡單來說，若在 window 環境建議設置
@@ -120,7 +118,6 @@ $ git config --global core.safecrlf true
 <br> 若遇到 `fatal:LF would be replaced by CRLF` 或 `fatal:CRLF would be replaced by LF` 直接按照錯誤訊息要求，將檔案中錯誤的換行符號替換掉。
 
 
-<br><br>
 
 ## 參考資料 
 1. [通过阅读git-config文档理解Git如何使用autocrlf、safecrlf、eol和.gitattributes处理line-ending｜简书](https://www.jianshu.com/p/2a46dfd3705a)

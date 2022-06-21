@@ -14,7 +14,7 @@ tags:
 每每遇用到這狀況就要找 google，所以還是決定自己做一份對照表...至少下次還需要 search 時是為自己貢獻流量 XDDD 
 
 <!--more-->
-<br><br>  
+
 
 ## 常用對照表
 
@@ -31,7 +31,6 @@ tags:
 | mv [來源] [目的] | ren [來源] [目的] | 移動檔案與目錄或更名 | 
 
 
-<br><br> 
 
 ## 參考資料 
 1. [Unix 與 MS-DOS 指令對照表](http://163.28.10.78/content/primary/info_edu/cy_sa/LinuxY/cmd/dos2unixcmd.htm)

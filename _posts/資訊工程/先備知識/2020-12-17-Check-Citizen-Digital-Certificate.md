@@ -1,5 +1,5 @@
 ---
-title: 自然人憑證編號驗證
+title: ID驗證系列｜自然人憑證編號驗證
 date: 2020-12-31 23:16
 is_modified: false
 categories:
@@ -15,9 +15,12 @@ tags:
 這次來寫寫自然人憑證編號驗證。
 
 <!--more-->
-<center> <img src="https://i.imgur.com/Vbkap1k.png?1" alt="自然人憑證"></center>
-<center class="imgtext">自然人憑證（圖片來源: <a href="https://www.hshalu.taichung.gov.tw/1898437/post" class="imgtext">臺中市沙鹿區戶政事務所</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/Vbkap1k.png?1" alt="自然人憑證">
+    自然人憑證（圖片來源: <a href="https://www.hshalu.taichung.gov.tw/1898437/post">臺中市沙鹿區戶政事務所</a>）
+</p>
+
+
 
 ## 編號規則
 自然人憑證編號的規則頗簡單：
@@ -26,7 +29,6 @@ tags:
 - 後 14 碼為數字
 
 
-<br><br>
 
 ## 程式碼
 如果用 Regular Expression 來實做還挺簡單的： 

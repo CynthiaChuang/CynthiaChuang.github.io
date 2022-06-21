@@ -16,8 +16,6 @@ tags:
 記錄一下，改天搞不好派的上用場？
 
 <!--more-->
-<br><br> 
-
 ## 實做步驟
 1. 先準備一份 HackMD 文件，注意權限問題。
 2. 複製 HackMD 的固定網址，應該會長這樣：  
@@ -35,12 +33,12 @@ tags:
     </iframe>
     ```
 
-<br><br> 
+
  
 ## 小結 
 貼上是貼上了啦，不過 HackMD 的白底跟我 Blogger 的黑底反差超大，有點突兀，看來要慎選主題。
 
-<br><br> 
+
 
 ## 參考資料 
 1. sam-liaw (2020-01-21)。[覺得 Google 的 Blogger 不太順手?透過 HTML 的 iframe 移花接木 HackMD](hhttps://sam1221.blogspot.com/2020/01/google-blogger-html-iframe-hackmd.html) 。檢自 sam (2020-02-10)。

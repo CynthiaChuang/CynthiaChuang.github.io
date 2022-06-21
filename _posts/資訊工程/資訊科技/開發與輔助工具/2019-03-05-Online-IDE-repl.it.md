@@ -19,5 +19,9 @@ repl.it 使用上相當地簡單，也支援相當多語言（至少比我會的
 <br> 
 
 是說，我進入編譯器第一件事就是把 theme 換成 dark XD
-![repl.it](https://i.imgur.com/v8g7iQs.png)
+
+<p class="illustration">
+    <img src="https://i.imgur.com/v8g7iQs.png" alt="repl.it">
+</p>
+ 
  

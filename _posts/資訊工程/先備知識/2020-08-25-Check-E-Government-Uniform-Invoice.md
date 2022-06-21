@@ -1,5 +1,5 @@
 ---
-title: 電子發票手機條碼驗證
+title: ID驗證系列｜電子發票手機條碼驗證
 date: 2020-09-24 23:13
 is_modified: false
 categories:
@@ -15,12 +15,14 @@ tags:
 先挑常用的**電子發票條碼**練身手。
 
 <!--more-->
-<center> <img src="https://i.imgur.com/dN9tdi6.jpg" alt="電子發票手機條碼"></center>
-<center class="imgtext">電子發票手機條碼（圖片來源: <a href="https://einvoice.nat.gov.tw/APCONSUMER/BTC500W/" class="imgtext">電子發票整合服務平台</a>）</center>
-<br><br> 
+<p class="illustration">
+    <img src="https://i.imgur.com/dN9tdi6.jpg" alt="電子發票手機條碼">
+    電子發票手機條碼（圖片來源: <a href="https://einvoice.nat.gov.tw/APCONSUMER/BTC500W/">電子發票整合服務平台</a>）
+</p>
+
+
 
 ## 編號規則
-
 目前現行的電子發票共通性載具一共有 **8 碼**，包括第一個字元的 `/` 與 7 個英數字符號，其中合法的英數字符號包含：
 - 0-9
 - A-Z
@@ -32,7 +34,6 @@ tags:
 </div>
 
 
-<br><br> 
 
 ## 程式碼
 規則出乎意料的簡單，一條 Regular Expression 就可以解決了。
@@ -102,12 +103,11 @@ public static boolean verifyEgui(String egui){
 我看以後這系列就拿來複習其他語言的語法好了，不然除了 Python 其他語言我都快忘光了，下次來寫 C 跟 C++ 好了。
 
 
-<br><br> 
 
 ## 參考資料 
 1. [什麼是手機條碼？如何申請電子發票手機條碼？](https://www.powerweb.tw/modules/qna/V121.html) 。檢自 POWERWEB 虛擬主機網頁空間 (2020-08-24)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

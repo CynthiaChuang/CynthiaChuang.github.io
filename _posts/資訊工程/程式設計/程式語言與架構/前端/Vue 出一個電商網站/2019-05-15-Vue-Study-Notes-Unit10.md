@@ -23,16 +23,14 @@ tags:
 7. 自定義切換路由方法
 
 <!--more-->
-<br>
 
 ## 使用 Vue Router 及配置路由文件
 
 Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過網址，決定要顯示的頁面。而非傳統網頁，一個網址就是一個頁面。使用時所輸入網址內容，會在前端程式判定所輸入的條件轉譯成搜尋條件，返回相對應的網頁。
 
-<br> 
+
 
 ### 安裝與配置流程
-
 0. **事前準備**  
     請先閱讀[參考文件](https://router.vuejs.org/zh/)
 
@@ -86,7 +84,9 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 	```
 	<br>我自己在練習的時候在這步驟卡好久，一直得到下面 error
 
-    ![Imgur](https://i.imgur.com/xjcYc56.png)
+	<p class="illustration">
+	  <img src="https://i.imgur.com/xjcYc56.png">
+	</p>
 
 	<br>找了一陣子才發現，我一開始寫的時候是用 
     ```javascript
@@ -127,13 +127,10 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
 6. **測試**  
     在網址中加上 Hello，就可連到所定義的元件。<br>
- 
 
 
-<br><br>
 
 ## 新增路由路徑及連結
-
 這邊會試著加入一個分頁，並新增一個導覽列來切換兩個分頁
 
 0. **引入 [Bootstrap](https://getbootstrap.com)**  
@@ -271,16 +268,16 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 	PS. 是說如果覺得 Navbar 不貼頂很奇怪，可以修改下面的 style，把 **margin-top** 移除掉。
 	
 
-<br><br>
 
 ## 製作巢狀路由頁面
-
-![巢狀路由（嵌套路由）示意圖](https://i.imgur.com/MUt7P2C.png)
-<center class="imgtext"> 巢狀路由（嵌套路由）示意圖 （圖片來源: <a href="https://router.vuejs.org/zh/guide/essentials/nested-routes.html" class="imgtext">Vue Router 官網</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/MUt7P2C.png" alt="巢狀路由（嵌套路由）示意圖">
+    巢狀路由（嵌套路由）示意圖 （圖片來源: <a href="https://router.vuejs.org/zh/guide/essentials/nested-routes.html">Vue Router 官網</a>）
+</p>
 
 巢狀路由比較適合用在，只變換主體內容的元件其餘元件（如上方 Navbar）不變的情況。這樣可以專心撰寫主體內容的元件，並大幅減少重複其餘元件的重複撰寫。
-<br><br>
+
+<br>
 
 1. **實作個頁面**  
     試著在剛剛製作出來 page.vue 中加上 **\<router-view\>** ，並新增另外三個子原元件。 
@@ -349,27 +346,23 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 	- Card1：/Page
 	- Card2：/Page/card2
 	- Card3：/Page/card3
-		
-	
 
-<br><br>
+
 
 ## 使用動態路由切換頁面 Ajax 結果
-
 一種滿常見的應用情境，尤其在如商品、新聞...等，大量使用相同版型的應用場景中最常使用。在使用時會設定特定的匹配模式，將符合該匹配模式的路由，全都導向特定同個元件。
 
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/9JZRISV.png" alt="博客來商品頁">
+    博客來商品頁 （圖片來源:  <a href="https://www.books.com.tw">博客來</a>）
+</p>
 
-![博客來商品頁 ](https://i.imgur.com/9JZRISV.png)
-<center class="imgtext"> 博客來商品頁 （圖片來源:  <a href="https://www.books.com.tw" class="imgtext">博客來</a>）</center>
-<br>
-
-
-以博客來為例，在商品介紹頁中皆使用了相同版型，並仔細觀察相對應的網址，可以發現網址皆為 https://www.books.com.tw/products/商品ID 的樣式。
+以博客來為例，在商品介紹頁中皆使用了相同版型，並仔細觀察相對應的網址，可以發現網址皆為 `https://www.books.com.tw/products/商品ID` 的樣式。
 
 在 Vue 中這樣的情況可以採用動態路由來實做，將符合 products/:id 這樣的路由，全導向特定商品介紹的元件，而實際載入的商品資料由 id 來控制。
 
 <br>
+
 這邊以使個人資料卡為例
 
 0. **安裝 vue-axios**  
@@ -397,8 +390,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
     <br>
 
-2. **實作資料讀取**
-
+2. **實作資料讀取**  
     回到卡片元件中，使用 vue-axios 去讀取 [user](https://randomuser.me/documentation) 的資料。
     ```javascript
     created(){
@@ -419,17 +411,15 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
 
 
-<br><br>
-
 ## 命名路由，同一個路徑載入兩個頁面元件
-
-![website structure](https://i.imgur.com/deMmnkG.png)
-<center class="imgtext"> website structure （圖片來源:  <a href="https://commons.wikimedia.org/wiki/File:Plan_html_5.png" class="imgtext">wikimedia</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/deMmnkG.png" alt="website structure">
+    website structure （圖片來源:  <a href="https://commons.wikimedia.org/wiki/File:Plan_html_5.png">wikimedia</a>）
+</p>
 
 如果時候想同時（同級）展示多個元件，例如建置一個 layout 時，會存在 sidebar 、 header 、 footer ...等元件，這時可以使用命名路由來載入，即在 layout 中添加命名 router-view。
 
-一般來說，如果router-view沒有設置名字，那麼預設為 ``default``。
+一般來說，如果router-view沒有設置名字，那麼預設為 `default`。
 
 ```html
 <template>
@@ -458,15 +448,13 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 }
 ```
 
-<br><br>
+
 
 ## Vue Router 參數設定
 自己看[文件](https://router.vuejs.org/zh/api/#routes)
 
-<br><br>
 
 ## 自定義切換路由方法
-
 除了前面課程所教過使用聲明式 router-link 進行路由切換外，也可以使用[文件](https://router.vuejs.org/zh/api/#router-aftereach)中提供的其他方法進行跳轉。
 
 需注意的是，在實務中要使用文件所提到 method ，如：``router.push``，需加上前綴變成 ``this.$router.push`` 才能成功調用。
@@ -478,8 +466,8 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 >因此外部資源會被掛載到 vue 內  
 >就可以使用 this 來呼叫這些資源（包含 router 及接下來的 axios 都是這個概念）
 
+<br>
 
-<br><br> 
 文件中常用的 method 如下：
 - **router.push**  
 跳轉到指定路由，並將此動作加到跳轉紀錄中。如果使用 stack 來想像這個行為，就是一個 Push into the history stack 的概念。
@@ -504,20 +492,15 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 PS. stack 中用到的名稱可以參考 [Stack: 以Array與Linked list實作](http://alrightchiu.github.io/SecondRound/stack-yi-arrayyu-linked-listshi-zuo.html)
 
 
-<br><br>
-
 ### 其他設定檔
 還會出現如：.babelrc 、 .postcssrc ...等設定檔。
 
-<br><br>
 
 ## 其他連結
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
-<br><br>
 
 ## 參考資料
-
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)
 2. [Vue router 實戰｜《Chris 技術筆記》](https://dwatow.github.io/2018/05-20-vuejs/vue-router-action/)
 3. [node.js - npm 安装参数中的 --save-dev 是什么意思｜SegmentFault 思否](https://segmentfault.com/q/1010000000403629)

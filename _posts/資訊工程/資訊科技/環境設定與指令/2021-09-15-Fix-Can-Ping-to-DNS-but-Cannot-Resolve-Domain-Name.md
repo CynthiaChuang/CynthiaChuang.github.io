@@ -13,14 +13,14 @@ tags:
 直到這次我必須通過特定張網卡來使用 VPN，結果發現我的這張網卡能 Ping 到 DNS 卻無法解析域名，因此我才會出不去 Orz
 
 <!--more-->
+<p class="illustration">
+    <img src="https://i.imgur.com/lzj5l3g.png" alt="連線不到的小恐龍">
+    離線小恐龍 跑酷遊戲（圖片來源: <a href="chrome://dino/">chrome</a>）
+</p>
 
-<center> <img src="https://i.imgur.com/lzj5l3g.png" alt="連線不到的小恐龍"></center>
-<center  class="imgtext">離線小恐龍 跑酷遊戲（圖片來源: <a href="chrome://dino/"  class="imgtext">chrome</a>）</center>
 
-<br><br>
 
 ## 修改 /etc/resolv.conf  
-
 一開始我們直接修改 `/etc/resolv.conf` ：
 ```bash
 $ sudo vi /etc/resolv.conf
@@ -64,10 +64,8 @@ PING google.com (142.251.43.14) 56(84) bytes of data.
 </div>
 
 
-<br><br>
 
 ## 修改 /etc/resolvconf/resolv.conf.d/head
-
 所以查了下網路，發現應該要更改：
 ```bash
 $ sudo vi /etc/resolvconf/resolv.conf.d/head
@@ -99,14 +97,13 @@ nameserver 1.1.1.1
 OK，打完收工！
 
 
-<br><br> 
 
 ## 參考資料 
 1. 凍仁翔 (2008-02-24)。[Ubuntu 網路設定 - DNS](http://note.drx.tw/2008/02/ubuntu-dns.html?m=1)。檢自 凍仁的筆記 (2019-01-04)。
 2. lengye7 (2019-03-29)。[ubuntu18.04直接更改/etc/resolv.conf修改nameserver重启被重置解决方法](https://blog.csdn.net/lengye7/article/details/88877867)。檢自 lengye7的博客｜CSDN博客 (2019-01-04)。
 3. weixin_39832875 (2021-01-17)。[ubuntu 能解析域名但ping不通_Ubuntu 能ping通DNS 地址 无法解析域名](https://blog.csdn.net/weixin_39832875/article/details/113022802)。檢自 weixin_39832875的博客｜CSDN博客 (2019-01-04)。
 
-<br><br>  
+
 
 ## 更新紀錄
 <details class="update_stamp">

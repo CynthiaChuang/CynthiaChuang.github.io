@@ -1,5 +1,5 @@
 ---
-title: 信用卡卡號驗證
+title: ID驗證系列｜信用卡卡號驗證
 date: 2021-03-07 22:59
 is_modified: false
 categories:
@@ -11,11 +11,14 @@ tags:
 --- 
 
 趁著演講者在講些五四三的時候，來補我的不務正業系列，這次來看看信用卡卡號驗證。
-<!--more-->
 
-<center> <img src="https://i.imgur.com/60gBFeq.jpg?1" alt="信用卡"></center>
-<center class="imgtext">信用卡（圖片來源: <a href="https://www.shutterstock.com/zh-Hant/discover/image-footage-music?kw=shutterstock&c3apidt=p15867520243&gclid=Cj0KCQiA0-6ABhDMARIsAFVdQv-8MA9Y7Q9L9uCanv_OyNtEbjV-ydbXQfXYXYP0NkXR6z705PN5MAkaAgBNEALw_wcB&gclsrc=aw.ds" class="imgtext">shutterstock</a>）</center>
-<br>
+<!--more-->
+<p class="illustration">
+    <img src="https://i.imgur.com/60gBFeq.jpg?1" alt="信用卡">
+    信用卡（圖片來源: <a href="https://www.shutterstock.com/zh-Hant/discover/image-footage-music?kw=shutterstock&c3apidt=p15867520243&gclid=Cj0KCQiA0-6ABhDMARIsAFVdQv-8MA9Y7Q9L9uCanv_OyNtEbjV-ydbXQfXYXYP0NkXR6z705PN5MAkaAgBNEALw_wcB&gclsrc=aw.ds">shutterstock</a>）
+</p>
+
+
 
 ## 編號規則
 信用卡的編碼規則，相較之下稍微稍微複雜點。根據 [ISO/IEC 7812 標準](https://zh.wikipedia.org/wiki/ISO/IEC_7812)，信用卡一般在 **13~19** 碼，但 Mastercard 旗下似乎有 **12** 碼簽帳金融卡（Debit Card）。而在臺灣比較常見的長度是 <mark>16 碼</mark>，因此下面在說明多以 16 碼來說明，但不管幾碼編碼規則其實都是相同的。
@@ -106,14 +109,10 @@ tags:
     $$ 
     
     餘數為 0，表為有效卡號。
- 
-    
-    
 
-<br><br> 
  
+
 ## 程式碼
-
 ```javascript
 function verifyId(id) {
     id =  id.replace(/-/g,"").trim();
@@ -141,7 +140,7 @@ console.log(verifyId("4311-4656-0640-6131"));
 
 這組程式碼能加 log 的地方也只有長度檢查的部分，所以就不再寫一版有 log 的了。是說原本想寫 Clojure，不過 Clojure 還不是很熟練，邊寫還要邊查語法，有點太花時間了，改天再來補 Clojure 的程式碼好了。
 
-<br><br> 
+
 
 ## 參考資料 
 1. 協同撰寫。[發卡行識別碼](https://zh.wikipedia.org/wiki/%E5%8F%91%E5%8D%A1%E8%A1%8C%E8%AF%86%E5%88%AB%E7%A0%81)。檢自 維基百科 (2021-02-04)。
@@ -152,7 +151,7 @@ console.log(verifyId("4311-4656-0640-6131"));
 6. 支付圈 (2017-05-02)。[銀行卡號編碼規則](https://kknews.cc/finance/85jp284.html)。檢自 每日頭條 (2021-02-04)。
 7. 溫子豪 (2016-08-22)。[解開信用卡卡號秘密　檢查碼輕鬆算防偽卡](https://www.cardu.com.tw/news/detail.php?nt_pk=4&ns_pk=30424)。檢自 卡優新聞網 (2021-02-04)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

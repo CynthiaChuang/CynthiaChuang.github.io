@@ -37,7 +37,7 @@ Output: 0
 
 **Related Topics:**`Hash Table`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 還滿簡單的一題，連想都不太需要想。題目翻譯成白話文是這樣的，給定兩個字串 J 與 S，檢查字串 S 中有多少字元屬於字串 J。不用管它寶石還石頭啦 XD
@@ -61,7 +61,8 @@ class Solution:
    def numJewelsInStones(self, J, S):
       return(sum(map(J.count,S)))
 ```
-<br><br>
+
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

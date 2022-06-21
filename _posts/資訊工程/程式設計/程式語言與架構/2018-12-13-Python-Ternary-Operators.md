@@ -19,12 +19,10 @@ tags:
 
 在 Python 中沒有 `?:` ，而是類似 `if...else` 的寫法
 
-```shell
+```python
 若判斷為真執行區塊 if 判斷式 else 若判斷為假執行區塊
 ```
 
-
-<br><br> 
 
 ## 參考資料 
 1. [6. Ternary Operators｜Python Tips 0.1 documentation](https://book.pythontips.com/en/latest/ternary_operators.html)

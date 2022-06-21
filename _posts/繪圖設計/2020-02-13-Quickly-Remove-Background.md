@@ -15,14 +15,13 @@ tags:
 <!--more-->
 <br><br> 
 
-
 [removebg](https://www.remove.bg/zh) 超強，不用用筆刷，上傳圖片直接去背給你 XDDD 
 
-<center> <img src="https://i.imgur.com/g8jk21I.png" alt="removebg"></center>
- 
+<p class="illustration">
+    <img src="https://i.imgur.com/g8jk21I.png" alt="removebg">
+</p>
 
- 
-<br><br> 
+
 
 ## 參考資料 
 1. 宇恩 (2018-12-22)。[五秒就能幫照片去背！『 Remove.bg 』免費線上去背網站 超值得一試｜網站](https://agirls.aotter.net/post/54641) 。檢自 電獺少女 (2019-01-04)。

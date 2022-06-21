@@ -16,18 +16,18 @@ tags:
 前後試過痞客邦、Blogger、Medium、Github Pages...，各有各的優缺點，但其實都不怎麼滿意，最後挑了Github Pages 主要是想玩玩 Jekyll 順便練習一下前端 XD
 
 <!--more-->
-<br> 
 
 ## 背景知識
 ### Jekyll 
-雖然說是『想玩玩 Jekyll 』而選了 Github Pages，不過其實不懂 Jekyll 也沒差，知道它是一個 Ruby 編寫出來的 framework，讓使用者可以快速的建構出靜態頁面的 blog，並讓使用者可以用 Markdown 來編寫 HTML。有這些知識即可。<br>
+雖然說是『想玩玩 Jekyll 』而選了 Github Pages，不過其實不懂 Jekyll 也沒差，知道它是一個 Ruby 編寫出來的 framework，讓使用者可以快速的建構出靜態頁面的 blog，並讓使用者可以用 Markdown 來編寫 HTML。有這些知識即可。
+
 
 ### Git / Github
 要建 Github Pages ，首先當必須有個 [Github](https://github.com/) 帳號，如果不喜歡 Github 也可以考慮用 GitLab pages，兩個的步驟其實是一樣的，就看你喜歡章魚貓還是狐狸了。至於 git 的部分，只要會 commit 跟 push 就夠了（應該?），不會的話可以找[猴子老師](https://backlog.com/git-tutorial/tw/intro/intro1_1.html)學學。對了，git 要記得安裝。
 
-p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個網站名稱有點嗆！？還是只有我這認為？不過它真的還滿淺顯易懂的，很適合 git 的入門。<br>
+p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個網站名稱有點嗆！？還是只有我這認為？不過它真的還滿淺顯易懂的，很適合 git 的入門。
 
-<br>
+
 
 ## 建置步驟
 ### 1. 新增專案
@@ -48,14 +48,13 @@ p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個�
 $ ruby -v
 ruby 2.5.5p157 (2019-03-15 revision 67260) [x64-mingw32]
 ```
-<br>
 
 ### 3. 安裝 Jekyll
 Ruby 版本確認無誤後，就可以接著安裝 Jekyll 了
 ```sh
 $ gem install jekyll
 ```
-<br> 	
+	
 
 ### 4. 建立 Jekyll 的網站
 接下來將專案（e.g. myblog 資料夾）設為 Jekyll 的網站，由於我的專案中已經存在些檔案，所以我在指令的後面加上 **force** 避免覆蓋。網站設置完時，它會動配置一組預設主題 - [minima](https://github.com/jekyll/minima)。
@@ -67,7 +66,8 @@ $ jekyll new myblog  --force
 $ cd myblog
 $ jekyll serve
 ```
-編譯結果可在瀏覽器輸入 [http://localhost:4000](http://localhost:4000) 後查看。若可以順利執行，就將這次的 diff 進行 commit 後送上 github了。<br> 	
+編譯結果可在瀏覽器輸入 [http://localhost:4000](http://localhost:4000) 後查看。若可以順利執行，就將這次的 diff 進行 commit 後送上 github了。
+
 
 ### 5. debug啦
 不過通常我做事都沒這順利...果不其然，當我執行 jekyll serve 時，結果出現下列錯誤訊息：
@@ -112,10 +112,12 @@ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-2.0.2/lib/bundler/resolver.rb:287
 ```sh
 $ bundle install
 ```
-<br><br>
+
+
 
 ## 主題更換
 如果不喜歡預設的 minima 的話，可以試著改寫 css 弄出自己獨一無二的 style。但如果你跟我一樣懶的話，那就考慮直接套用現成的主題來進行修改：
+
 
 ### 1. 挑選主題
 網路上現成的主題還滿多的，可以直接在 google 上搜尋 **jekyll theme** 就會套出一堆網站了，像我是在 [Jekyll Themes](http://jekyllthemes.org/) 上來進行挑選，挑了三個樣式較為簡潔的樣板，分別是：
@@ -123,7 +125,8 @@ $ bundle install
 - [Lanyon ](https://github.com/poole/lanyon) :   [Demo](http://lanyon.getpoole.com)
 - [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next):   [Demo](https://simpleyyt.com/jekyll-theme-next/)
 
-<br>其實有點大同小異啦，最後挑了第三個 jekyll-theme-next。運氣不錯，它還附有[安裝教學](http://theme-next.simpleyyt.com/getting-started.html)，可以直接照著做就好，不過因為剛剛我已經把專案建好了我就不學它 git clone project 來執行 jekyll serve，而是直接複製貼上了 XD <br>
+<br>其實有點大同小異啦，最後挑了第三個 jekyll-theme-next。運氣不錯，它還附有[安裝教學](http://theme-next.simpleyyt.com/getting-started.html)，可以直接照著做就好，不過因為剛剛我已經把專案建好了我就不學它 git clone project 來執行 jekyll serve，而是直接複製貼上了 XD
+
 
 ###  2. 重新安裝相依性
 主題套用完成後，因為各各主題所使用的套件不同，所以必需重新安裝相依性。
@@ -142,7 +145,7 @@ To install the missing version, run `gem install bundler:1.17.1`
 $ bundle update --bundler
 $ bundle install
 ```
-<br>
+
 
 ### 3. 網站預覽
 相依性檔案重新安裝完成後，就可以再次進行預覽，但我在這邊遇到點問題：
@@ -166,7 +169,7 @@ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.17.1/lib/bundler/runtime.rb:319
 ```sh
 $ bundle exec jekyll server
 ```	
-<br>
+
 
 ### 4. 繼續debug
 反正，我每次安裝從來沒有一次照著說明書就可以安裝完成的（嘆
@@ -204,7 +207,8 @@ jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 
 @charset "UTF-8";
 ```
-<br><br>
+
+
 
 ## 撰寫文章
 歷經千辛萬苦終於把網站弄起來了！之後只要將新寫好的 Markdown  文章，放在 `_posts`  資料夾下，文章就會顯示在網站上。不過要注意以下幾點：
@@ -231,12 +235,11 @@ jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 	> 目前我使用 jekyll-theme-next 測試 categories 無法接受中文，一旦使用中文，會導致找不到該頁面，而導向 404 Page ([#63](https://github.com/Simpleyyt/jekyll-theme-next/issues/63))
 
 
-<br>
 
 ## 後記
 不過雖然把 Github Pages 建起來了，不過都沒怎麼更新，主要是它的預覽實在有點麻煩，我不能在行動裝置或非本人的電腦進行，有點小苦惱，再加上後來有找到用 Markdown 寫 Blogger 的方法，所以還是以 Blogger 為主~~（雖然那邊也是在長草）~~。
 
-<br>
+
 
 ## 參考資料 
 1. [ Jekyll 介紹 ｜卡斯伯 Blog - 前端，沒有極限](https://wcc723.github.io/jekyll/2014/01/04/what-is-jekyll/)

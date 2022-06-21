@@ -15,8 +15,6 @@ tags:
 **只能來硬的了 XDDD**
 
 <!--more-->
-<br><br>
-
 ## 強制更新遠端分支
 其實只要一條指令就可以將`git-rebase`後的 commit 給送上遠端。
 
@@ -24,9 +22,10 @@ tags:
 $ git push -f origin <rbranch>:<lbranch> 
 ```
 
-<center> <img src="https://miro.medium.com/max/500/0*XaLzNzYkA6PZjbl9.jpg" alt="危險的 force 指令"></center>
-<center class="imgtext">危險的 force 指令（圖片來源: <a href="https://estl.tech/a-gentler-force-push-on-git-force-with-lease-fb15701218df" class="imgtext">Engineering Tomorrow’s Systems</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/vyQ5HpJ.png" alt="危險的 force 指令">
+    危險的 force 指令（圖片來源: <a href="https://estl.tech/a-gentler-force-push-on-git-force-with-lease-fb15701218df">Engineering Tomorrow’s Systems</a>）
+</p>
 
 **使用前請注意！**`-f` 是個非常危險的指令，它可以無視一切先來後到的規則，讓你的 commit，直接取代線上所有內容。不是讓團隊進度付之一炬，不然就是像這些 Jenkins 的開發人員一樣[不小心強制更新了 150 多個 github repos](https://groups.google.com/forum/#!searchin/jenkinsci-dev/force$20push/jenkinsci-dev/-myjRIPcVwU/mrwn8VkyXagJ)。真的做了你應該會被組員拖去套麻布袋 XD
 <br>
@@ -42,9 +41,11 @@ $ git push -f origin <rbranch>:<lbranch>
 
 做完才想到一件事。我是一個人開發沒錯，但我在兩台機器上都有程式碼，所以另一台的 repo 怎麼辦？
 
+
+
 ## 強制覆蓋本地的分支
 在開始抓程式碼覆蓋前，請先確認沒有要保存的程式或 commit，一旦執行了這些都會不見的！
-<br>
+
 
 ### git pull
 對相應`git push`，`pull`當然也有相對應的強制指令：
@@ -59,7 +60,6 @@ $ git pull --force origin <rbranch>:<lbranch>
 
 似乎是需要完全指定分支才行。
 
-<br>
 
 ### git reset
 如過上面一招不行還有另外一招組合技，先取回遠端數據庫的最新歷史紀錄
@@ -77,7 +77,7 @@ $ git reset --hard origin/master
 $ git pull origin master
 ```
 
-<br><br> 
+
 
 ## 參考資料 
 1. 高見龍 (2017)。[【狀況題】聽說 git push -f 這個指令很可怕，什麼情況可以用它呢？](https://gitbook.tw/chapters/github/using-force-push.html) 。檢自 為你自己學 Git (2020-02-07)。

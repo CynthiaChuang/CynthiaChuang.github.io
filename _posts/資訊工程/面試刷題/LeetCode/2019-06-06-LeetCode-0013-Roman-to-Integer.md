@@ -72,7 +72,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 **Related Topics:** `Math`、`String`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 在羅馬數字的規則中有一條，若是左邊的數字比右邊小，則這個位數的值為右減左。其他情況下則需要把羅馬數至相對應的值相加。
@@ -93,7 +93,7 @@ class Solution:
          return result
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

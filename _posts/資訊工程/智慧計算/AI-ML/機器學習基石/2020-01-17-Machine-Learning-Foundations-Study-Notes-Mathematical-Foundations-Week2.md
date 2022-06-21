@@ -17,31 +17,29 @@ tags:
 <br>
 
 ## 上週回顧
-
 [上週課程](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1)提到，在機器學習中存在一個 Learning Algorithm $A$ 與一個假說集合 Hypothesis Set $H$，$A$ 在觀察餵入的資料集合 $D$ 後，會從假說集合挑選一個最符合的 $g$ ，這個 $g$ 會在最後應用階段時，被使用來進行分類。
 
 本週延續上週核發信用卡的例子，發不發卡是一個二元分類問題，使用者資料 $x$ 最終經由 $g$ 後，會得到 $y$，也就是 Yes（發卡）或 No（不發卡）結果。
 
-<br><br>
+
 
 ## 感知器 Perceptron
-
 開始上課前，我先岔開查了<mark>感知器（Perceptron）</mark> 這個詞所代表的意思與定義。
 
 感知器這個名詞緣起於類神經網路時期，這個演算法的概念跟真實的生物神經元傳遞訊號的機制類似。
 
-<center> <img src="http://pic.baike.soso.com/p/20140122/20140122141220-1597040664.jpg" alt="神經元結構"></center>
-<center class="imgtext">神經元結構（圖片來源: <a href="https://blog.csdn.net/aws3217150/article/details/46316007" class="imgtext">CarlXie-CSDN博客</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/mXQvWYG.png" alt="神經元結構">
+    神經元結構（圖片來源: <a href="https://blog.csdn.net/aws3217150/article/details/46316007">CarlXie-CSDN博客</a>）
+</p>
 
 生物的神經細胞可被視為只有兩種狀態的機器 — 激動時為『是』，而未激動時為『否』。而其狀態，取決於所接收到的輸入訊息，及輸入訊息的強度。當強度超過了某個門檻值時，細胞體會激動產生電脈衝，透過軸突發送訊息給下一個神經元。
 
 如果不管生物學上的例子，感知器其實就是一種二元線性分類器（Linear Binary Classifiers），唯有當輸入的訊息符合標準或門檻值時，才會觸發下一個動作（發卡）。
 
-<br><br>
+
 
 ## Perceptron Hypothesis Set
-
 在發卡的例子中，銀行可能掌握了用戶各種屬性資料，如年齡、性別、年收入、負債、工作經歷...等情況。而每位使用者的資料可以向量來表示：
 
 $$
@@ -89,7 +87,8 @@ sign(x) =  \left\{
 \right .
 $$
 
-<br><br>
+<br>
+
 為簡化數學式的表示，可針對數學符號再做進一步的化簡：
 
 $$
@@ -105,42 +104,37 @@ $$
 
 個人經驗雖然兩者意義上相同，但在實務上偏向使用矩陣運算，因為矩陣運算的可以藉由 GPU 使用 CUDA 來加速。
 
-<br><br>
+
 
 ### Perceptrons in $R^2$
-
 為可視化，我們將感知器使用在二維平面上，即表示只使用兩種條件，例如：年收入與負債兩種，若使用越多條件會映射到更高維度的空間。
 
 因此 $h(x)$ 可表示成 $sign(w_0 + w_1x_1+w_2x_2)$，因為 $sign$ 是以 0 為分界線的函數，因此可設 $w_0 + w_1x_1+w_2x_2=0$ ，該式恰是一條直線方程式，而不同權重 $W$ 會對應到不同的直線。
 
 若將平面上個點依照線段來劃分，所有的點會分落在線段兩側，一側為正另一側為負。而我們期望的目標是能找到一條直線 ，剛好能將不同的 Label 劃分開來。
 
-<center> <img src="https://i.imgur.com/JD6GGY3.png" alt="Perceptrons in R^2"></center>
-<center class="imgtext">Perceptrons in R^2（圖片來源: <a href="coursera.org/learn/ntumlone-mathematicalfoundations/lecture/GNlJL/perceptron-learning-algorithm-pla" class="imgtext">課程截圖</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/JD6GGY3.png" alt="Perceptrons in R^2">
+    Perceptrons in R^2（圖片來源: <a href="coursera.org/learn/ntumlone-mathematicalfoundations/lecture/GNlJL/perceptron-learning-algorithm-pla">課程截圖</a>）
+</p>
 
 因為感知器的實做其實是藉由一條直線方程，來劃分平面上所有點，因此只能作為一個二元線性分類器（Linear Binary Classifiers）。
 
-<br><br>
+
 
 ## Perceptron Learning Algorithm (PLA)
-
 在上一節中，我們可得知感知器中 Hypothesis Set 的所有可能集合 $H$，也就是平面上所有的直線。一旦有了 $D$ 與 $H$ 後，我們就可以藉由機器學習演算法來挑選最適合的線段。
 
-<br>
 
 ### 何謂最適合的線段?
-
 之前提過，機器在觀察餵入的資料會從 Hypothesis Set $H$ 中學到一函數 Hypothesis $g$ ，期望上我們希望 $g$ 越接近 Target function $f$ 越好。但之前也提過，我們並不知曉 $f$ 到底長怎樣。因此實做時根本不可能與 $f$  相互比較。
 
 但我們可使用餵入的資料來協助找到最好的 $g$ ，先忽略錯誤標記及存在雜訊的情況下，我們可以假設所輸入的資料 $x$ 在經由 $f(x)$ 後，可以得到一輸出結果 $y$。 如果我們可以從 $H$ 中找到一條 $g$ ，對每個點其輸出結果與 $f$ 完全一致，我們則認為 $g$ 是個不錯的結果。
 
 因此在這邊對於合適線段的定義應該是，<mark>找到一條只直線 $g$，使資料集中所有點的分類結果與本身的 Label 一致</mark>。
 
-<br>
 
 ### 如何找到最適合的線段?
-
 若在 Hypothesis Set $H$ 不大的情況下，可以每條線段逐一檢查。但在平面上的線段是無窮多的，根本不可能一一檢查。
 
 因此這邊採用逐漸修正的方式，在取得一條初始線段 $g_0$ 的情況下，經過不斷的錯誤修正，對線段進行平移旋轉等操作，最終能找到一條 $g_f$ ，這就是 Perceptron Learning Algorithm (PLA) 演算法的核心。
@@ -151,10 +145,8 @@ $$
 $W$ 其實是直線方程的法向量
 </div>
 
-<br>
 
 ### PLA 演算法
-
 具體演算法流程如下：
 1. 初始化權重 $W$ 為 $W_0$，設定 $W_0$ = 0
 2. 按序或隨機遍歷所有資料，也就是二維平面上所有的點，找出分類結果與真實標籤不符的資料：
@@ -169,11 +161,10 @@ $$
 W_{t+1} \leftarrow W_t + Y_{n(t)}X_{n(t)} 
 $$
 
-<br>
-
-<center> <img src="https://i.imgur.com/Q5wRz1x.png" alt="向量修正"></center>
-<center class="imgtext">向量修正（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/GNlJL/perceptron-learning-algorithm-pla" class="imgtext">課程截圖</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/Q5wRz1x.png" alt="向量修正">
+    向量修正（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/GNlJL/perceptron-learning-algorithm-pla">課程截圖</a>）
+</p>
 
 如果 $sign()=-1$，但是 $y=+1$，也就是说 $W$ 和  $X$ 的夾角過大，需要使 $W$ 向  $X$ 靠攏，即左圖。
 
@@ -184,15 +175,16 @@ $$
 1. 這演算法何時會停下來？
 2. 如果停下來，找到的 $g_f$ 真的接近 $f$ 嗎？
 
-<br><br>
+
 
 ## Guarantee of PLA
-
 PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的（linear separable）</mark>，也就是說平面上必須至少存在一條線的，並且使的線的一側全為藍點，另一側全為紅點。
-<br>
-<center> <img src="https://lh3.googleusercontent.com/proxy/Ye7LGG-0fNVwehCXHyoR4HYxpSCVFKqx5kUnOeWyJhV3Aeen6nqY7-Omqw99UYiy6f9x=w1200-h630-p-k-no-nu" alt="線性可分"></center>
-<center class="imgtext">線性可分（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/XckQ1/guarantee-of-pla" class="imgtext">課程截圖</a>）</center>
-<br>
+
+<p class="illustration">
+    <img src="https://i.imgur.com/ModWTsc.png" alt="線性可分">
+    線性可分（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/XckQ1/guarantee-of-pla">課程截圖</a>）
+</p>
+
 
 ### [證明] PLA 會停止運行
 ##### `TODO: 證明改成英文的， LaTeX 搭中文好醜` 
@@ -336,10 +328,9 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
 
     從最後一條式子看來T是有上限的，因此在線性可分的情況下，<mark>PLA 最終會停止</mark>。
  
-<br><br>
+
 
 ## Non-Separable Data
-
 PLA 演算法的優缺點相當清楚，優點是簡易實做，可以適用於任何維度，缺點是<mark>資料必須是線性可分的</mark>，可是是否為線性可分通常<mark>無法事前得知</mark>。即使資料是線性可分的，但因為時間複雜度高，執行時間也會耗費相當久。
 <br>
 
@@ -365,10 +356,9 @@ $$
 
 3. 執行前，請先設定中止條件，如:執行次數、錯誤點少於多少時停止...等。  
 
-<br><br>
+
 
 ## 課堂測驗
-
 **Q1 . Assume that each email is represented by the frequency of keyword occurrence, and output +1 indicates a spam. Which keywords below shall have large positive weights in a**
 
 1. [ ] coffee, tea, hamburger, steak  
@@ -407,29 +397,23 @@ $$
 3. [ ] pocket on    $D$   returns a better  $g$  in approximating  ff  than PLA  
 4. [ ] pocket on    $D$   returns a worse  $g$  in approximating  ff  than PLA  
 
- 
 
-<br><br>
 
 ## 其他連結
-
 1. [機器學習基石筆記目錄](/Machine-Learning-Foundations-Study-Notes-Contents/)
     
 
-<br><br>
 
 ## 參考資料
-
 1. [感知器｜維基百科](https://zh.wikipedia.org/wiki/%E6%84%9F%E7%9F%A5%E5%99%A8)
 2. [FUNcLogs: 感知學習演算法(Perceptron Learning Algorithm)｜白話說明](http://function1122.blogspot.com/2010/10/perceptron-learning-algorithm.html)
 3. [[資料分析&機器學習] 第3.2講：線性分類-感知器(Perceptron) 介紹｜Yeh James – Medium](https://medium.com/@yehjames/%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E7%AC%AC3-2%E8%AC%9B-%E7%B7%9A%E6%80%A7%E5%88%86%E9%A1%9E-%E6%84%9F%E7%9F%A5%E5%99%A8-perceptron-%E4%BB%8B%E7%B4%B9-84d8b809f866)
 4. [Linear separability｜Wikipedia](https://en.wikipedia.org/wiki/Linear_separability)
 5. [投影屏15页的constant如何推导出？｜coursera](https://www.coursera.org/learn/ntumlone-mathematicalfoundations/discussions/weeks/2/threads/2LLNA2XXEeeA2A7nkPb23A)    
 
-<br><br>
+
 
 ## 參考筆記
-
 1. [机器学习基石笔记2——在何时可以使用机器学习(2)｜杜少 - 博客园](http://www.cnblogs.com/ymingjingr/p/4271761.html)
 2. [机器学习基石笔记2——在何时可以使用机器学习（2）｜Deribs4 - 博客园](https://www.cnblogs.com/Deribs4/p/5399759.html)
 3. [听课笔记（第二讲）： Perceptron-感知机 (台湾国立大学机器学习基石）｜豆瓣](https://www.douban.com/note/319669984/)

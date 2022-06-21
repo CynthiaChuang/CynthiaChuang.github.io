@@ -42,13 +42,11 @@ Output: False
 
 **Related Topics:**`Dynamic Programming`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是要將題目給定的句子拆解成字典中的單字。第一個想到的就是我最愛的暴力法，拆、拆、拆就對了！
 
-
-<br>
 
 ### 遞迴
 也就是暴力解，想法很簡單，就是把句子拆成前後兩句下去查，一旦有一種拆法可以查的到就回傳 True，否則回傳 False。當然為了避免大量重複計算，例外用 HashTable 記錄查過得結果，解法如下：
@@ -94,7 +92,6 @@ class Solution:
 ```
 但果不期然，效率有點差跑出了個 740 ms, 1.20%  的成績，摸摸鼻子改寫 DP 去。
 
-<br>
 
 ### Dynamic Programming
 這題大概是難得我這幾天整理的題目中，DP 解終於不是欠著的題目了 XDDD
@@ -118,7 +115,6 @@ class Solution:
 ```
 這效能果然好上不少，跑出了 68 ms, 15.49% 的成績。
 
-<br>
 
 ### Dynamic Programming 改進版
 看到我的 code 雖然有比上次進步，但其實無條件進位也才 16% 而已，有些好奇前面 code是怎樣的，所以手賤點了前段班的 code 出來看。
@@ -144,7 +140,8 @@ class Solution:
                               break 
             return dp[0]
 ```
-<br><br>
+
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

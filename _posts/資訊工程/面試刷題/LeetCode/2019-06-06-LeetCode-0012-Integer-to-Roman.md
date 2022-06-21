@@ -72,7 +72,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 **Related Topics:** `Math`、`String`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 厄... 解法有點偷懶，我直接 hard code 一張對照表，把所有可能的組合列出，在依序找出數字中包含的最大的可轉化為羅馬數字的數字。例如 1994，最大可轉換數字是 1000 ，減去 1000 後接下來依序可轉換數字為 900 、90、4，因此最後輸出 MCMXCIV。
@@ -140,7 +140,7 @@ class Solution:
       return result
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

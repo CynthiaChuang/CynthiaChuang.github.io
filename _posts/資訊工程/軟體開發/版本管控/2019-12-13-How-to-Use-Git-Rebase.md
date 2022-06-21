@@ -11,8 +11,6 @@ tags:
 記錄一下自己常用的 `git-rebase` 的用法。
 
 <!--more-->
-<br><br> 
-
 ## 情境假設
 假設目前 git log 存在多筆 commit ， A → B → C → D → E， e 是目前最新的 commit ，也就是 HEAD。
 
@@ -44,7 +42,7 @@ pick <E 的 commitId> <E 的 commit 內容>
 
 在文字編輯器以看到好幾個指令，需依照目的來挑選指令，這邊列一下我常做的操作：
 
-<br><br> 
+
 
 ## 修改 commits message
 這是我最常做的，在要修正的 commit 前的 `pick` 換成 `r` 或 `reword`：
@@ -54,7 +52,7 @@ r <C 的 commitId> <C 的 commit 內容>
 
 接著就會回到一般 commit 的編輯畫面，將新的 commits message 打完存檔、退出就行了。
 
-<br><br> 
+
 
 ## 合併 commits
 我這比較常用在開發一個比較大的 function 時。我會將每一步測試完後，先用 commit 暫存起來，當整體功能開發完成後，再把合併成一個完整的 commit。
@@ -79,7 +77,7 @@ s <D 的 commitId> <E 的 commit 內容>
 
 把舊的 commit message 註解掉後，輸入新的 commit message 後存檔、退出。此時用 `git log` 就能看到新的 commit 了。
 
-<br><br> 
+ 
 
 ## 修改 commits 中 tracked 的檔案
 這個通常我是用來修正未上傳前 commit 中的檔案，例如錯別字修正的狀況。在這情況下，在要修正的 commit 前改為 `e` 或 `edit`。
@@ -107,7 +105,7 @@ $ git rebase --continue
 
 回頭使用 `git diff` 檢查下檔案的差異，就會看到原本的 commit 中多了剛剛修改的內容。
 
-<br><br> 
+
 
 ## 修改 commits 的作者資訊
 這件之前在《[【Git】修改 Git commits 的作者資訊](/Change-the-Git-Commit-Author-for-the-Specific-Commits/)》，這算是 edit 模式的另一種應用？

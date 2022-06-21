@@ -23,9 +23,11 @@ tags:
 8. 測驗 2： ES6 小測驗
 
 <!--more-->
-<br>
+
+
 
 ## 使用 let 與 const 宣告變數
+
 
 ### let 與 var 
 
@@ -76,11 +78,12 @@ tags:
 3. **重複命名**  
     var 同個區塊上重複命名沒關係，而 let 同個區塊上**不能**重複命名。
  
+
 ### const
 const 是宣告常數用，一旦宣告就不能更改。
 
 不過若是宣告物件，由於物件本身的記錄方式是記錄參考值，因此物件內的屬性是可以被修改，但是重新指定一個新的物件給常數的話還是會跳錯。
-<br>
+
 
 ### 額外問題，不使用 let，如何印出正確答案
 答：用[立即函式](http://www.victsao.com/blog/81-javascript/287-javascript-function-iife)傳入 i ，製造一個更小的作用域，讓 console.log 引用。
@@ -95,9 +98,10 @@ for (var   i = 0; i < 10; i++) {
    }(i))
 }
 ``` 
-<br><br>
+
 
 ## 展開與其餘參數 
+
 
 ### **展開語法**  
 用 `...` 將陣列中的值一個個取出來再 return 回去
@@ -109,7 +113,7 @@ let groupB = ['老媽', '老爸'];
 let familyAll5 = groupA.concat(groupB) //ES5合併陣列  
 let familyAll6=[...groupA,...groupB] //ES6合併陣列
 ```
-<br>
+
 	
 ### **淺複製 (Shallow Copy) VS. 深複製 (Deep Copy)**  
 JavaScript 的物件或是陣列的儲存方式是記錄記憶體位置，因此當將 groupA 指給 groupB 對 groupB 進行賦值時，是使用<mark>淺複製</mark>的方式將 groupA 所記錄的記憶體位置傳給 groupB，最終會導致<mark>當對 groupB 進行操作時， groupA 也會後受到影響</mark>，即下圖左。
@@ -130,12 +134,12 @@ let groupB = [...groupA]
 
 不過我個人偏好使用 lodash 函式庫的 cloneDeep，比較直覺，尤其當你的變數存在物件中包物件的情況時。
 
-<br>
-
-![Shallow and Deep Copying](https://i.imgur.com/wIERqmP.png)
-<center class="imgtext"> Shallow and Deep Copying （圖片來源: <a href="https://www.cs.utexas.edu/~scottm/cs307/handouts/deepCopying.htm" class="imgtext">utexas</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/wIERqmP.png" alt="Shallow and Deep Copying">
+    Shallow and Deep Copying （圖片來源: <a href="https://www.cs.utexas.edu/~scottm/cs307/handouts/deepCopying.htm">utexas</a>）
+</p>
 	 
+
 ### **類陣列觀念說明**
 在使用 [Node.childNodes](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/childNodes) 或 [document.querySelectorAll](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll ) 時會回傳包含指定節點的子節點的集合，此集合稱為 <mark>Node List</mark>，是種類似陣列的資料結構，但是不能使用陣列的部分方法，因此又被稱為 <mark>類陣列</mark>。
 
@@ -144,7 +148,6 @@ let groupB = [...groupA]
 let myArray = [...myNodeList]
 ```
 
-<br>
 
 ### **其餘參數**
 就是不定長度參數的宣告，在 Python 中是使用 ``*args``、Hava 中是使用 ``int... nums``，而在 JavaScript 中的宣告有點類似 Java 是使用 ``...nums``，傳入的結果會是一個名為 nums 的陣列。
@@ -169,10 +172,12 @@ updateEasyCard(0); // 我有 0 元
 updateEasyCard(10, 50, 100, 50, 5, 1, 1, 1, 500); // 我有 718 元
 ```
  
-<br><br>
+
 
 ## 解構
 解構全名為<mark>解構賦值</mark>，其概念是將右方資料<mark>鏡射</mark>到左方。下面舉些應用情境：
+
+
 ### 將陣列中的的值，賦予到變數上 
 ```javascript
 let family = ['小明', '杰倫', '阿姨', '老媽', '老爸'];
@@ -196,7 +201,7 @@ let [ming, jay, auntie] = family ;
 // 略過中間的值 
 let [ming, jay, , mom, dad]  =family; // 略過部分不寫變數，但還是要記得留下空間
 ```
-<br>
+
 
 ### 變數交換
 ```javascript
@@ -204,7 +209,7 @@ let Goku = "悟空";
 let Ginyu = "基紐";
 [Goku,Ginyu] = [Ginyu,Goku]
 ```
-<br>
+
 
 ### 將字串拆解成字元
 ```javascript 
@@ -219,7 +224,7 @@ let [...c]=str ;
 // 或是
 let c = str.split("")
 ```
-<br>
+
 
 ### 從物件中取值並附與新的變數名稱 
 ```javascript
@@ -234,7 +239,7 @@ let{ Ginyu: leader } = GinyuTeam
 // 若不賦予新的變數名稱，則直接使用Ginyu
 let{ Ginyu } = GinyuTeam 
 ```
-<br>
+
 
 ### 預設值
 可先給予各變數一個預設值，若在進行解構賦值時，沒有傳入值，會直接採用預設值。
@@ -247,11 +252,12 @@ let{ Ginyu } = GinyuTeam
     // ming = 阿明, jay = '杰倫'
     ```
 
-<br><br>
 
-##  縮寫
 
+## 縮寫
 應用情境：
+
+
 ### 合併物件
 當屬性，也就是要傳數的<mark>變數名稱，與 key 值名稱相同</mark>時可省略，只寫一個即可。
 
@@ -281,9 +287,9 @@ new Vue({
   template: '<App/>',  
   components: { App }});
 ```
-<br>
 
-###  物件函式縮寫
+
+### 物件函式縮寫
 下列兩段 function 的是相同的
 ```javascript
 functionName: function(){
@@ -295,10 +301,9 @@ functionName(){
 }
 ``` 
 
-<br><br>
+
 
 ## 箭頭函式與傳統函式
-
 在[展開與其餘參數](#展開與其餘參數)中說明不定長度參數時，有提過一個（個人認為）JS 比較神奇的特性，就是如果你傳入參數多於你宣告的個數，多餘的部分會變成名為 arguments 的類陣列物件。 
 
 不過，這件事情在使用<mark>箭頭函式</mark>時是不成立的，你會直接得到一個 error。
@@ -315,10 +320,9 @@ functionName(){
 
 PS. 我記得這是講師的網誌！？
 
-<br><br>
+
 
 ## 字串模板 Template String
-
 使用反引號加錢字號 \$，就可以在 string 中引用變數，避免做字串串接。
 ```javascript
 // 一般字串  
@@ -344,9 +348,11 @@ let superNewString=
  ${people.map((person)=>`<li>我叫作${person.name}</li>`).join('')}\\</ul>`
 ```
 {% endraw %}
-<br><br>
+
+
 
 ## 常用陣列方法 
+
 
 ### **forEach**
 forEach 顧名思義是對陣列的每個元素做操作，它是一個 _in-place_ 的方法，不會回傳新的值，直接在原陣列上做修改。是說實做上很少傳那的 array。
@@ -356,20 +362,26 @@ people.forEach((item, index, array) => {
 })
 ```
 
+
 ### **map**
 這個方法會建立一個新的陣列，其內容為原陣列的每個元素經由函式運算後所回傳的結果之集合。
+
 
 ### **filter**
 由原陣列中濾出符合條件的元素所構成的新陣列。
 
+
 ### **find**
 只會回傳第一個滿足所提供條件的元素的值。
+
 
 ### **every**
 它會檢查陣列中，是否所有元素皆符合所提供條件。
 
+
 ### **some**
 它會檢查陣列中，是否存在任意元素符合所提供條件。
+
 
 ### **reduce**
 這是一個累加器，它會將陣列中每項元素由左至右送入函數進行運算後回傳單一值。
@@ -386,10 +398,9 @@ const max = people.reduce((prev,item,idex)=>{
 },0)
 ```
 
-<br><br>
+
 
 ## 測驗 2：ES6 小測驗
-
 **問題 1： const 是宣告一個常數，宣告後的變數不能隨意修改。  但是 const 所宣告的如果是物件變數，則物件內的屬性可隨意修改？**  
 1. [x] 對  
 2. [ ] 不對，就說不能亂改了，還想挑戰我  
@@ -424,13 +435,11 @@ var aa = {
 2. [x] 不對，現在 JavaScript 已經可以使用這類型的陣列方法。   
 
 
-<br><br>
 
 ## 其他連結
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 
-<br><br>
 
 ## 參考資料
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)

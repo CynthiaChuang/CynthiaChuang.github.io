@@ -14,8 +14,6 @@ tags:
 因為自製的[Alert 與 Highlighting](/Accent_the_Text_by_CSS_Alert_and_Highlighting/)，沒辦法用 Shortcodes 插入，只好另找解法了。
 
 <!--more-->
-<br><br> 
-
 ## 使用圖片插入
 看了一下使用 Shortcodes 所編譯出來的 HTML 程式，發現最終是變成了圖片，像這樣：
 
@@ -31,7 +29,7 @@ tags:
 
 <br>這種方式出來的圖片較固定，不像其他的方式有可能隨瀏覽器變化。
 
-<br><br> 
+
 
 ## 使用 Unicode
 記得 Emoji 本來就是種 Unicode，直接輸入使用應該可以才對~賓果 🎉
@@ -58,13 +56,11 @@ tags:
 HTML Encode 它會用 `&` 開始 `;` 結束，然後使用 `#x` 表明是十六進制，因此完整 Unicode 使用 HTML Encode 編碼會變成 `&#x<十六進制數值>;`。當然也可以用十進制來表示，例如：`&#x1F637;` 十進制就成了 `&#128567;`，出來的效果都一樣。
 
 
-<br><br> 
 
 ## Copy and Paste
 最後一招大絕招就是<mark>複製貼上</mark>啦，直接去查表後複製貼上過來就是了 XD
 
 
-<br><br> 
 
 ## 參考資料 
 1. [📙 Emojipedia — 😃 Home of Emoji Meanings 💁👌🎍😍](https://emojipedia.org/)。檢自 Emojipedia (2020-02-27)。 

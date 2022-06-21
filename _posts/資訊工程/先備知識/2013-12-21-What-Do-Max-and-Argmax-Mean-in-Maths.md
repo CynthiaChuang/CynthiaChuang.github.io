@@ -13,7 +13,8 @@ tags:
   
 在看論文的過程中發現，arg / argmax 在數學式中反覆出現，為了能順利看下去，只好來拜大神。
 <!--more-->
-<br><br> 
+
+
 
 ## 常見的數學表示
 
@@ -45,12 +46,11 @@ tags:
     同理 $arg min$ 會回傳最小值所對應的輸入值。
 
 
-<br><br> 
 
 ## 參考資料 
 1. Unknown (2009-04-21)。[arg 和 arg max](https://kevingo75.blogspot.com/2009/04/arg-arg-max.html) 。檢自 I am here. (2013-12-21)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -16,14 +16,12 @@ tags:
 為了較為系統的學習 Vue 所以購買了 Udemy 上，六角學院的課程 - 《[Vue 出一個電商網站](https://www.udemy.com/vue-hexschool/)》，針對這門課程，做了個讀書筆記。
 
 <!--more-->
-<br>
 
 ## [01. 相關資源與工具設置](/Vue-Study-Notes-Unit01)
 1. [Vue 官方文件](/Vue-Study-Notes-Unit01#Vue-官方文件)
 2. [開發工具](/Vue-Study-Notes-Unit01#開發工具)
 3. [網頁除錯工具](/Vue-Study-Notes-Unit01#網頁除錯工具)
 
-<br>
 
 ## [02. 基礎 Vue 概述](/Vue-Study-Notes-Unit02)
 - [應用程式建立](/Vue-Study-Notes-Unit02#應用程式建立)
@@ -39,7 +37,6 @@ tags:
 - [元件基礎概念](/Vue-Study-Notes-Unit02#元件基礎概念)
 - [練習測驗 1：基礎章節測驗](/Vue-Study-Notes-Unit02#練習測驗-1基礎章節測驗)
 
-<br>
 
 ## [03. 製作一個 Todo List 來小試身手吧](/Vue-Study-Notes-Unit03)
 1. [套用版型及建立代辦事項列表的資料](/Vue-Study-Notes-Unit03#套用版型及建立代辦事項列表的資料)
@@ -48,7 +45,6 @@ tags:
 4. [雙擊修改資料內容](/Vue-Study-Notes-Unit03#雙擊修改資料內容)
 5. [刪除項目補充說明](/Vue-Study-Notes-Unit03#刪除項目補充說明)
 
-<br>
 
 ## [04. 進階模板語法介紹](/Vue-Study-Notes-Unit04/)
 1. [模板資料細節說明](/Vue-Study-Notes-Unit04/#模板資料細節說明)
@@ -60,13 +56,11 @@ tags:
 7. [v-on 的頁面操作細節](/Vue-Study-Notes-Unit04/#v-on-的頁面操作細節)
 9. [章節作業](/Vue-Study-Notes-Unit04/#章節作業)
 
-<br>
 
 ## [05. Vue 的生命週期](/Vue-Study-Notes-Unit05/)
 1. [Vue 生命週期](/Vue-Study-Notes-Unit05/#Vue-生命週期)
 2. [練習測驗 2：生命週期章節小測驗](/Vue-Study-Notes-Unit05/#練習測驗-2生命週期章節小測驗) 
 
-<br>
 
 ## [06. Vue.js 元件](/Vue-Study-Notes-Unit06/)
 1.  [元件概念介紹](/Vue-Study-Notes-Unit06/#元件概念介紹) 
@@ -81,7 +75,6 @@ tags:
 10.  [元件 章節作業](/Vue-Study-Notes-Unit06/#元件-章節作業) 
 11. [測驗：Vue 元件測驗](/Vue-Study-Notes-Unit06/#測驗vue-元件測驗) 
 
-<br>
 
 ## [07. JavaScript ES6](/Vue-Study-Notes-Unit07/)
 1. [使用 let 與 const 宣告變數](/Vue-Study-Notes-Unit07/#使用-let-與-const-宣告變數) 
@@ -93,7 +86,6 @@ tags:
 7. [常用陣列方法](/Vue-Study-Notes-Unit07/#常用陣列方法)
 8. [測驗 2： ES6 小測驗](/Vue-Study-Notes-Unit07/#測驗-2es6-小測驗) 
 
-<br>
 
 ## [08. Vue 常用 API](/Vue-Study-Notes-Unit08/)
 1. [使用 Extend 避免重複造輪子](/Vue-Study-Notes-Unit08/#使用-extend-避免重複造輪子)
@@ -102,7 +94,6 @@ tags:
 4. [Mixin 混合其它的元件內容](/Vue-Study-Notes-Unit08/#mixin-混合其它的元件內容) 
 5. [使用 Directive 開發自己的互動 UI](/Vue-Study-Notes-Unit08/#使用-directive-開發自己的互動-ui)
 
-<br>
 
 ## [09. Vue Cli 的建置與運作原理](/Vue-Study-Notes-Unit09/)
 1.  [為什麼要學 Vue Cli](/Vue-Study-Notes-Unit09/#為什麼要學-vue-cli) 
@@ -112,7 +103,6 @@ tags:
 5.  [Webpack 腳本介紹 及 自定義環境變數](/Vue-Study-Notes-Unit09/#webpack-腳本介紹-及-自定義環境變數) 
 6.  [安裝套件在 Vue Webpack 中](/Vue-Study-Notes-Unit09/#安裝套件在-vue-webpack-中) 
 
-<br>
 
 ## [10. Vue Router](/Vue-Study-Notes-Unit10/)
 1. [使用 Vue Router 及配置路由文件](/Vue-Study-Notes-Unit10/#使用-vue-router-及配置路由文件)
@@ -124,18 +114,13 @@ tags:
 7. [自定義切換路由方法](/Vue-Study-Notes-Unit10/#自定義切換路由方法)
 
 
-<br>
-
 ## 11. Vue 出一個電商網站
 
-<br>
 
 ## 12. Vue Cli 3.0
 
-<br>
 
 ## 13. Vuex 管理大型網站資料狀態
 
-<br>
 
 ## 14. 線上問答會實戰內容

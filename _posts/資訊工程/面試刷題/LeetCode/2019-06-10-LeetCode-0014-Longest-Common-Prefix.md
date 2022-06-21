@@ -36,7 +36,7 @@ All given inputs are in lowercase letters  `a-z`.
 
 **Related Topics:** `String`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是要找出最長共同字首，最直覺的方法是兩兩相比，所以這邊使用了遞迴，把它拆成兩組後兩相比較後，可得到共同字首。
@@ -95,7 +95,7 @@ class Solution:
       return prfix
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

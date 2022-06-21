@@ -15,10 +15,9 @@ tags:
 最偷懶的狀況下，我會把資料會被切分成測試集（training）跟訓練集（test）兩種。不過一般來說，標準的資料劃分會分成三種，分別是：訓練集（training）、驗證集（validation）和測試集（test）。
 
 <!--more-->
-<br><br> 
+
 
 ## 資料集定義
-
 先舉個例來描述三個數據集：
 
 - **訓練集（training)**  
@@ -30,33 +29,27 @@ tags:
     
     使用**學測**來比喻，是因為<mark>測試集不應該做為參數調整、選擇特徵等依據</mark>。這些選擇與調整可以想像成學習方式的調整，但學測已經考完，你不能時光倒轉回到最初調整學習方式。
     
-<br> 
 
 ### 訓練集（Training Set）
-
 訓練集（Training Set）主要用在訓練階段，用於模型擬合，直接參與了<mark>模型參數調整的過程</mark>。
-<br> 
+
 
 ### 驗證集（Validation Set）
-
 驗證集（Validation Set）是在訓練過程中，用於評估模型的初步能力與<mark>超參數調整的依據</mark>。
  
 不過驗證集是非必需的，不像訓練集和測試集。如果不需要調整超參數，就可以不使用驗證集。
-<br> 
+
 
 ### 測試集（Test Set）
-
 用來評估模型最終的泛化能力。為了能評估模型真正的能力，測試集<mark>不應該</mark>為參數調整、選擇特徵等依據。
 
-<br><br> 
+
 
 ## 資料劃分
-
 我個人較常用來劃分資料的方法有兩種：<mark>留出法</mark> 與 <mark>k-fold</mark>
-<br> 
+
 
 ### 留出法（Holdout method）
-
 留出法是按照<mark>固定比例</mark>將資料集劃分爲訓練集、驗證集、測試集，屬於<mark>靜態的</mark>劃分方法。
 
 不過其劃分比例並沒有明確的規定，但有些經驗法則可供參考：
@@ -68,10 +61,10 @@ tags:
 
 另外若是需調整超參數量少，可以適當減少驗證集的資料量，分配更多給訓練集。
 
-<center> <img src="https://i.imgur.com/EzCJTJV.png" alt="留出法"></center>
-<center class="imgtext">留出法（圖片來源: <a href="https://blog.csdn.net/lanchunhui/article/details/50522424"  class="imgtext">CSDN博客</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/EzCJTJV.png" alt="留出法">
+    留出法（圖片來源: <a href="https://blog.csdn.net/lanchunhui/article/details/50522424">CSDN博客</a>）
+</p>
 
 <div class="alert info">
 <div class="head">oldout cross validation / Holdout method</div>
@@ -80,18 +73,19 @@ tags:
 另外說到維基百科，在 Holdout method 的中文翻譯是直接翻成 Holdout 驗證，不過我覺得留出法這個名字非常的形象，因此我這邊還是保留了這個翻譯。
 </div>
 
-<br> 
+
 
 ### k 折交叉驗證（k-fold cross validation）
-
 另一個常用的是<mark>動態的</mark> k-fold 劃分方法，這種方式可以降低數據劃分帶來的影響。雖說是動態，不過測試集仍要事前先切出來，通常會保留 60%~80% 當作訓練資料，其餘作測試集。
 
 而訓練資料會在訓練過程中被化分成 k 份，每次使用 k 份中的 1 份作爲驗證集，其他 k-1 份作爲訓練集，算出一個 Validation Error。交叉驗證重複 k 次，每個子樣本驗證一次，算出 k 個 Validation Error，最後我們再將這 K 個 Validation Error 做平均，用他們的平均分數來做為我們評斷模型好壞的指標。
 
-<center> <img src="https://i.imgur.com/4ubxxws.png" alt="k 折交叉驗證"></center>
-<center class="imgtext">k 折交叉驗證（圖片來源: <a href="https://blog.csdn.net/lanchunhui/article/details/50522424"  class="imgtext">CSDN博客</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/4ubxxws.png" alt="k 折交叉驗證">
+    k 折交叉驗證（圖片來源: <a href="https://blog.csdn.net/lanchunhui/article/details/50522424">CSDN博客</a>）
+</p>
 
-<br><br> 
+
 
 ## 參考資料 
 1. CHEN TSU PEI (2019-12-17)。[機器學習怎麼切分資料：訓練、驗證、測試集. 訓練集、驗證集、測試集分別代表什麼含義，又該怎麼劃分](https://medium.com/nlp-tsupei/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E6%80%8E%E9%BA%BC%E5%88%87%E5%88%86%E8%B3%87%E6%96%99-%E8%A8%93%E7%B7%B4-%E9%A9%97%E8%AD%89-%E6%B8%AC%E8%A9%A6%E9%9B%86-f5a92576d1aa) 。檢自 NLP-trend-and-review｜Medium (2020-06-30)。
@@ -103,7 +97,6 @@ tags:
 7. Inside_Zhang (2016-01-15)。[cross-validation：从 holdout validation 到 k-fold validation](https://blog.csdn.net/lanchunhui/article/details/50522424)。檢自 鏈聞 CSDN博客 (2021-03-10)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

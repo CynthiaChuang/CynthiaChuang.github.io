@@ -70,7 +70,6 @@ CMD python /workspace/inference_server.py
 ```
 
 
-<br><br> 
 
 ## 參考資料 
 1. yeasy 。[使用 Dockerfile 定制镜像](https://yeasy.gitbooks.io/docker_practice/image/build.html) 。檢自 Docker —— 从入门到实践 (2020-03-02)。

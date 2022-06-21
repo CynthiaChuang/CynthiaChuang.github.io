@@ -21,19 +21,22 @@ tags:
 
 - **Step1：確認硬碟是否滿載**  
     不過我也不確定這是不是 root cause，但系統又進不去了，所以決定先進 Recovery Mode。
-    <center> <img src="https://i.imgur.com/8knMlcs.png" alt="進入 Recovery Mode"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/8knMlcs.png" alt="進入 Recovery Mode">
+    </p>
     
     選擇 root 選項並輸入密碼：
-    <center> <img src="https://i.imgur.com/l55nGN7.png" alt="root 選項"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/l55nGN7.png" alt="root 選項">
+    </p>
     
     看了下硬碟的佔用情況：
     ```bash
     $ df –lh 
     ```
-    <center> <img src="https://i.imgur.com/BtWNLaj.png" alt="硬碟的佔用情況"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/BtWNLaj.png" alt="硬碟的佔用情況">
+    </p>
     
     果然滿載了，雖然百思不得其解，不過既然是硬碟滿了，那就刪掉冗餘的軟體與檔案就好啦～！
     
@@ -49,9 +52,9 @@ tags:
     <br>
     
     不想下指令的話，剛剛 UI 上有一個 clean 的選項也能達到類似的效果：
-    <center> <img src="https://i.imgur.com/WtjAZvG.png" alt="clean 的選項"></center>
-       
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/WtjAZvG.png" alt="clean 的選項">
+    </p>
     
 - **Step3：刪除大文件**   
     可透過 `du` 指令，如：`du -h max-depth=1  /usr/` 或 `du -shx /*`，不然也可以土法煉鋼用 `ls -lhS` 將檔案由從大到小順序，一層一層地去找出大檔案。
@@ -77,11 +80,11 @@ tags:
     <br>
     
 ...這才是我的正常應得使用量咩，剛剛到底發生了啥事阿！
-<center> <img src="https://i.imgur.com/Hrv4vHV.png" alt="清理後硬碟的佔用情況"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/Hrv4vHV.png" alt="清理後硬碟的佔用情況">
+</p>
 
 
-
-<br><br> 
 
 ## 參考資料 
 1. cskywit (2019-07-24)。[【问题解决】/dev/sda6:clean xxx/xxx files, xxx/xxx blocks_寸先生的AI道路-程序员宝宝_ubuntu强制关机后无法进入](https://www.cxybb.com/article/cskywit/97142880)。檢自 寸先生的AI道路｜CSDN博客 (2021-09-07)。
@@ -90,10 +93,8 @@ tags:
 4. LIEYz (2020-10-15)。[ubuntu磁盘满导致无法开机](https://blog.csdn.net/qq_18998145/article/details/109091091)。檢自 LIEY｜CSDN博客 (2021-09-07)。
 5. 三铜钱 (2021-05-16)。[Linux系统盘满了无法启动系统,linux 系统运行久了，硬盘满了如何处理呢？](https://blog.csdn.net/weixin_33402252/article/details/116985928?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.essearch_pc_relevant&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.essearch_pc_relevant)。檢自 三铜钱的博客｜CSDN博客 (2021-09-07)。
 6. 吴小白呢 (2021-08-09)。[Linux之解决磁盘耗尽导致系统无法启动](https://blog.csdn.net/xiaobai316/article/details/119535325?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.essearch_pc_relevant&spm=1001.2101.3001.4242)。檢自 xiaobai316的博客｜CSDN博客 (2021-09-07)。
- 
 
 
-<br><br>  
 
 ## 更新紀錄
 <details class="update_stamp">

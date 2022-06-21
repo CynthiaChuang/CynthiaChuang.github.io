@@ -67,7 +67,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 
 **Related Topics:** `Math`、`String`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是要將給定的字串轉成數字，字串轉數字不難，但討厭的是傳進來的字串有太多的整可能，例如：空格、正負號、非數字字元...等。
@@ -133,7 +133,6 @@ class Solution:
 <br>執行速度由 **44 ms / 83.62 %** 提升到 **40 ms / 92.02 %** 。
 
 
-<br><br>
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

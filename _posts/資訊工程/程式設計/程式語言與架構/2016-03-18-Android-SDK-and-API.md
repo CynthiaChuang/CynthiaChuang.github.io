@@ -12,10 +12,10 @@ tags:
  
 最後順便整理一下 Android API Level 與 SDK 的版本對照表。
 <!--more-->
-<br> 
+
+
 
 ## API (Application Programming Interface，應用程式介面)
-
 API 是一個讓開發者能夠存取 Library 裡面的 functions/methods 的介面，而無須了解 function 是怎麼運作、被實作的。  
       
 就我自己舉例，API 是個公司的對外窗口，裡面的 Library 則是不同 team，而 functions / methods 而則是 team 裡面的 RD，每個人可以執行不同工作，當我需要有人幫我寫程式，就去公司的對外窗口（API）去下單，之後只要等著收程式就好，你不管是哪個 team 幫你生出來的。自己舉的例子或許不是很恰當，不過大概就是類似的邏輯概念。  
@@ -26,17 +26,19 @@ API 是一個讓開發者能夠存取 Library 裡面的 functions/methods 的介
     
 -   API 就是皮卡丘，提供鋼鐵尾巴跟雷電兩種技能給你呼叫。你不用為什麼皮卡丘會發電，也不用研究尾巴為什麼會變鋼鐵，反正你只要說，**"上吧皮卡丘，使用雷電"**。 皮卡丘是 API 提供界面給你呼叫技能的函式庫。 
 
-    ![上吧皮卡丘](https://imgur.com/8Hn06ql.jpg)
-    <center class="imgtext"> 上吧皮卡丘，使用雷電（圖片來源: <a href="https://agirls.aotter.net/post/52299" class="imgtext">電獺少女</a>）</center> 
+    <p class="illustration">
+        <img src="https://i.imgur.com/8Hn06ql.png" alt="上吧皮卡丘">
+        上吧皮卡丘，使用雷電（圖片來源: <a href="https://agirls.aotter.net/post/52299">電獺少女</a>）
+    </p>
 
-<br><br>
+
 
 ## SDK (Software Development Kit，軟體開發工具包)
 是用來幫一個 **產品** 或 **平台** 開發應用程式的工具組，由產品的廠商提供給開發者使用的，通常是某一家廠商針對某一平台、系統或硬體所發布出來用以開發應用程式的工具組，在這個工具包裡面，可能包含了各式各樣的開發工具，模擬器、API 等。  
       
 例如：Android 針對不同的版號有不同的 SDK，因此在 Android Studio 進行開發時需要針對你的平台安裝不同的 SDK，而在 SDK 會提供相對應 API 以供使用。  
-      
-<br><br>
+
+
 
 ## Android API Level 與 SDK 的版本對照表
 目前市面上常見的是 API15 以上的機種，所以這邊就從 15 開始列，N 的部分就先不列了。  
@@ -51,9 +53,9 @@ API 是一個讓開發者能夠存取 Library 裡面的 functions/methods 的介
 |API-20          |Android 4.4W–4.4W.2            |KitKat, with wearable extensions|
 |API-21          |Android 5.0-5.0.2              |Lollipop                     |
 |API-22          |Android 5.1–5.1.1              |Lollipop                     |    
-|API-23          |Android 6.0–6.0.1              |Marshmallow                  |   
-       
-<br><br>
+|API-23          |Android 6.0–6.0.1              |Marshmallow                  |
+
+
 
 ## 參考資料
 1. [[Dev] IDE, API, SDK, Library 基本術語解釋｜Andro Chen 陳俊安的開發筆記](http://androchen.logdown.com/posts/2014/04/13/api-sdk-library)

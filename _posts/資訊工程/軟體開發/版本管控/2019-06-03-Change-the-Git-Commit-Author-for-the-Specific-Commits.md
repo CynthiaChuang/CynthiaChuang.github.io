@@ -16,12 +16,15 @@ tags:
 <br>
 
 還好找到了這篇 [修改 Git commits 的作者資訊](https://yulun.me/2014/git-tips-change-author-and-email-in-previous-commits/) ，雖然情境不太一樣，人家是回家加班寫 code，我是上班時間~~摸魚~~進修，不過目的都是一樣的都是修改 Git commits 的作者資訊。
-<br>
+
+
 
 ## 修改 Git commits 的作者資訊
+
+
 ### 1. 情境
 假設目前 git log 存在多筆 commit ， A → B → c → d → e， e 是目前最新的 commit ，也就是 HEAD。
-其中大小寫字母屬於不同作者提交的 commit。以我的案例來說，大寫是我私人帳號、小寫的則是我公司帳號。<br>
+其中大小寫字母屬於不同作者提交的 commit。以我的案例來說，大寫是我私人帳號、小寫的則是我公司帳號。
 
 
 ### 2. 指令
@@ -67,7 +70,6 @@ tags:
 6. 接下來會進入下一個被修改 commit ，也就是 d，重覆進行 <mark>步驟 3、4、5</mark>，直到所有 commit 被修改完成。
 
 
-<br><br>
 
 ## 修改專案的作者資訊
 不過每次這樣改有點麻煩，畢竟我剛剛是重覆執行了<mark>二十次</mark>阿！
@@ -79,7 +81,6 @@ $ git config user.email "YOUR EMAIL"
 ```
 
 
-<br><br> 
 
 ## 參考資料 
 1. [修改 Git commits 的作者資訊｜Somewhere I Belong](https://yulun.me/2014/git-tips-change-author-and-email-in-previous-commits/) 

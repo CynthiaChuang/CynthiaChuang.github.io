@@ -31,7 +31,7 @@ Additionally, a double period ("..") moves up a directory, so it cancels out wha
 
 **Related Topics:**`String`、`Stack`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是要將給定的路徑進行簡化，路徑中可能會出現的元素有三種分別是 `.` 、 `..` 及 folder 或 file（先假裝他們是吧，不然我也不知道怎麼稱呼他們XD）
@@ -45,7 +45,6 @@ Additionally, a double period ("..") moves up a directory, so it cancels out wha
 
 另外需要處理的就是正規化左斜線，去除冗餘的斜線。
 
-<br>
 
 ## Stack
 這題可以使用 stack 來實做，依照上面的解題邏輯：遇到 `.` 就跳過、 `..` 就pop，若非以上兩者就 push 進 stack，整題實做流程如下：
@@ -103,7 +102,7 @@ class Solution:
 ```
 跑出來的效能果然進步許多，52 ms, 49.56% ，雖然還是沒有過半...
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

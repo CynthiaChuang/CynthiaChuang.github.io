@@ -22,7 +22,7 @@ tags:
 #!/bin/bash
 ```
 
-<br>
+
 
 ## 步驟分解
 咳，回頭正經的，這篇文章目的可以拆解成三個動作：
@@ -32,7 +32,7 @@ tags:
 
 另外執行完備份，為了避免這台機器掛掉連同備份一起不見，最後在做一個異地的備份
 
-<br>
+
 
 ### 備份
 1. 先準備一個含 timestamp 的資料夾吧，方便做檔案的管理
@@ -67,10 +67,9 @@ tags:
     ```shell
     tar zcvf ${foldername}.tgz ${foldername}
     ```
-<br><br>
+
 
 ### 刪除 30 天前的檔案
-
 這邊使用 find 指令來實做。利用 find 找到符合特定規則的檔案後再使用指令參數 <mark>-exec</mark> 來刪除。這邊所指的特定規則，當然是指三十天前的壓縮檔：
 
 ```shell
@@ -94,7 +93,7 @@ find ~/codimd_backup -type f -name "*.tgz" -mtime +30
 -exec rm -rf {} \;
 ```
 其中 <mark>{}</mark> 指的是 find 指令找到的檔案或目錄，而 <mark>\;</mark> 是指令的結束符號。
-<br><br>
+
 
 ### 定期執行
 Script 寫完之後最後就是讓它定期執行了，這邊直接使用 crontab 指令即可，設定方式還算是單純，只是需要稍微注意一下執行者權限與絕對路徑...等等
@@ -114,13 +113,15 @@ $ crontab -e
 0 0 * * * sh /home/user/codimd_backup.sh
 ```
 意思就是每天 0 點時執行 codimd_backup.sh 這個 Script。
-<br><br>
+
 
 ### 異地備份
 原本我的想法很簡單，用 scp 將備份的檔案從 CodiMD 的伺服器（簡稱 ServerA）送到備份用的伺服器（簡稱 ServerB）就好。偏偏遇到一個有點尷尬的問題，ServerA 在外網，而 ServerB 在內網，兩邊是互相 ping 不到的。最後沒辦法只好先貢獻我的電腦當跳板 (´_ゝ`)
 
-<br> 所以整體步驟就變成需要先 Download 再 Upload 了：
 <br>
+
+所以整體步驟就變成需要先 Download 再 Upload 了：
+
 
 #### Download
 我一樣先建立一個資料夾，等等放從 CodiMD 的伺服器抓下來的備份
@@ -136,7 +137,6 @@ scp -p  -i ~/.ssh/ServerA_key.pem ServerA@HostA:~/codimd_backup/${filename} ~/${
 ```
 這邊每天下載最新的備份就好，所以這邊使用了 <mark>ls</mark> 並使檔案依照修改時間降序排序， 最後使用使用 <mark>head</mark> 取出排序中的第一筆資料，也就是最新的資料，最後使用 <mark>scp</mark> 將資料抓下來，指令一樣建議加上 <mark>-p</mark> 保留 timestamps 資訊。
 
-<br><br>
 
 ### Upload
 最後再將抓下來資料送到 ServerB 
@@ -150,7 +150,7 @@ expect eof"
 ```
 
 這邊麻煩的一點是，ServerB 是用密碼登入的...，所以我還得寫一個自動登入的 Script，只好邊查 expect 的[語法](https://blog.51cto.com/zyp88/1615029)邊湊出一版。
-<br><br>
+
 
 ### 刪除 30 天前的檔案
 最後我一樣希望 ServerB 備儲檔案別無限制儲存下去，所以我一樣希望它刪除 30 天前（或許 60 天？）的檔案。這邊我稍微猶豫了一下這件事是要在跳板這台機器下 Script ，還是在 ServerB 另外起一個 Script ，最後我決定偷懶跟著目前的 Script 一起做。
@@ -176,7 +176,7 @@ scp -i ~/.ssh/ServerB_key  -r -p ${foldername} ServerB@HostB:~/
 # only keep 30 days backup
 ssh -i ~/.ssh/ServerB_key ServerB@HostB "find $foldername -type f -name *.tgz -mtime +30 -exec    rm -rf {} \; " 
 ```
-<br><br>
+
 
 ### （補充）找出只存於 ServerA 的檔案並下載
 後來想到一件事，我的電腦偶而會關機，所以為了以防異地備份的檔案有少，將 Download 最新的檔案，改成 Download 不在 ServerB 中的所有檔案。
@@ -206,7 +206,7 @@ done
 <br>對了，使用 process substitution 時，要改用 <mark>bash</mark> 來執行 Script ，不能用 sh，不然會一直收到錯誤訊息：
 >  Syntax error: "(" unexpected
 
-<br><br>
+
 
 ## 參考資料
 1. [第十二章、學習 Shell Scripts｜鳥哥的 Linux 私房菜](http://linux.vbird.org/linux_basic/0340bashshell-scripts.php)

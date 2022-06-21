@@ -44,7 +44,7 @@ P     I
 
 **Related Topics:** `String`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 基本上這題就是在找規律，有點麻煩的說...
@@ -104,7 +104,7 @@ class Solution:
     return result
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

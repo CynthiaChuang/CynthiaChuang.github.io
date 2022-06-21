@@ -54,10 +54,7 @@ whereis >> log.txt
 
 
 
-<br><br>
-
 ## 參考資料
-
 1. [Crontab can't execute docker-compose commands｜Issue #2293 · docker/compose](https://github.com/docker/compose/issues/2293)
 2. [docker-compose with crontab｜Stack Overflow](https://stackoverflow.com/questions/30905697/docker-compose-with-crontab)
 3. [【操作系统】Crontab运行相关问题以及解决方法｜【 无线技术运营 】 (本专栏是http://wireless.qzone.qq.com的镜像) - CSDN博客](https://blog.csdn.net/wireless_tech/article/details/6417996)

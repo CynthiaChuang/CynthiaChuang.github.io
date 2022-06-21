@@ -11,8 +11,6 @@ tags:
 最近在 survey 一些東西，注意到各網站都有屬於它們的白皮書，讓我有點好奇它的定義到底是什麼，又有那些顏色的皮書，所以就有了這篇。
 
 <!--more-->
-<br><br> 
-
 ## 皮書
 通常與顏色詞組合成一個固定短語，其中顏色詞多指其封皮顏色，如：白皮書、紅皮書...等。
 
@@ -24,20 +22,22 @@ tags:
 
 
 舉例來說：我隨便搜尋黃皮書後，所跳出來的物理參考書：
-<center> <img src="https://i.imgur.com/bNuX5WZ.jpg?1" alt="張鎮麟黃皮書"></center>
-<center class="imgtext">用顏色指稱該書籍的例子（圖片來源: <a href="https://www.books.com.tw/products/0010226718?sloc=main" class="imgtext">carousell</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/bNuX5WZ.jpg?1" alt="張鎮麟黃皮書">
+    用顏色指稱該書籍的例子（圖片來源: <a href="https://www.books.com.tw/products/0010226718?sloc=main">carousell</a>）
+</p>
 
 
-<br><br>
 
 ## 白皮書
 白皮書是最早使用**皮書**一詞的，最早起源於英美政府，因用白色羊皮作封面而得名，專指<mark>政府發布的重要文件和報告</mark>，或是<mark>具有權威性的報告書或指導性文本</mark>作品。
 
 白皮書一般被視為政府對國民正式發布資訊和政策的手段，如必須定期向全民公布的國防白皮書，即[國防報告](https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%98%B2%E5%A0%B1%E5%91%8A%E6%9B%B8)，世界各國皆會定期或不定期發表國防白皮書。
 
-<center> <img src="https://i.imgur.com/QQDsotJ.jpg?1" alt="國防報告書"></center>
-<center class="imgtext">國防報告書（圖片來源:國家網路書店 <a href="https://www.govbooks.com.tw/books/69766" class="imgtext">97年</a>、<a href="https://www.govbooks.com.tw/books/123353" class="imgtext">108年</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/QQDsotJ.jpg?1" alt="國防報告書">
+    國防報告書（圖片來源:國家網路書店 <a href="https://www.govbooks.com.tw/books/69766">97年</a>、<a href="https://www.govbooks.com.tw/books/123353">108年</a>）
+</p>
 
 但實際上，世界國的文件分別有其慣用的顏色，如：葡萄牙白色的白皮書、英國的藍皮書、西班牙的紅皮書、法國的黃皮書、意大利的綠皮書。
 
@@ -47,16 +47,19 @@ tags:
 
 <br> 但，自 1990 年代初以來，白皮書一詞不再局限於官方文件，部分企業使用白皮書一詞作為<mark>公司產品或服務的相關文件的正式名稱</mark>，算是另外一種意義上的官方文件，雖然此官方非彼官方啦 XDDDD
 
-<center> <img src="https://i.imgur.com/0PW7mcn.jpg" alt="企業白皮書"></center>
-<center class="imgtext">企業白皮書（圖片來源:截圖自 <a href="https://aws.amazon.com/tw/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc" class="imgtext">AWS</a>、<a href="https://azure.microsoft.com/zh-tw/services/genomics/" class="imgtext">MS Ａzure</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/0PW7mcn.jpg?1" alt="企業白皮書">
+    企業白皮書（圖片來源:截圖自 <a href="https://aws.amazon.com/tw/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc">AWS</a>、<a href="https://azure.microsoft.com/zh-tw/services/genomics/">MS Ａzure</a>）
+</p>
 
-<br><br>
+
 
 ## 藍皮書
 當然不是在說這個 XDDD，題外話原本想看這部美劇的，但聽說先期評價不怎好，我還是等第二季的評價出來在決定要不要看好了 XD
-<center> <img src="https://i.imgur.com/SgJA3ee.jpg?1" alt="藍皮書計劃Project Blue Book"></center>
-<center class="imgtext">藍皮書計劃 Project Blue Book（圖片來源: <a href="https://forum.gamer.com.tw/C.php?bsn=60481&snA=4027" class="imgtext">巴哈姆特</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/SgJA3ee.jpg?1" alt="藍皮書計劃 Project Blue Book">
+    藍皮書計劃 Project Blue Book（圖片來源: <a href="https://forum.gamer.com.tw/C.php?bsn=60481&snA=4027">巴哈姆特</a>）
+</p>
 
 拉回來繼續，在國外藍皮書一般是用來指<mark>年鑑</mark>、<mark>採購指南</mark>或其他<mark>統計與資訊的彙編</mark>，例如美國的《The Blue Book of Building and Construction》，是一本列載了建設公司訊息的買家指南、英國的《Colonial Blue Books》，則是記載每年英國從的每個殖民地所收集各種各樣的詳細資料。
 
@@ -66,40 +69,44 @@ tags:
 
 另外也[有人](https://kknews.cc/zh-tw/news/zapz3na.html)將 SOP 視為藍皮書，是將年度操作經驗寫作文件的解釋嗎？ 
 
-<br><br>
+
 
 ## 紅皮書 
 紅色有威脅、警戒的意思，因此報告書一般用於<mark>警示危機</mark>。最有名的紅皮書大概是這本《國際自然保護聯盟瀕危物種紅色名錄》：
 
-<center> <img src="https://i.imgur.com/RWlVCB2.gif" alt="國際自然保護聯盟瀕危物種紅色名錄"></center>
-<center class="imgtext">國際自然保護聯盟瀕危物種紅色名錄（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%87%AA%E7%84%B6%E4%BF%9D%E8%AD%B7%E8%81%AF%E7%9B%9F%E7%80%95%E5%8D%B1%E7%89%A9%E7%A8%AE%E7%B4%85%E8%89%B2%E5%90%8D%E9%8C%84" class="imgtext">維基百科</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/RWlVCB2.jpg" alt="國際自然保護聯盟瀕危物種紅色名錄">
+    國際自然保護聯盟瀕危物種紅色名錄（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%9A%9B%E8%87%AA%E7%84%B6%E4%BF%9D%E8%AD%B7%E8%81%AF%E7%9B%9F%E7%80%95%E5%8D%B1%E7%89%A9%E7%A8%AE%E7%B4%85%E8%89%B2%E5%90%8D%E9%8C%84">維基百科</a>）
+</p>
 
 多數的書籍都是相似的示警概念，台灣的環境資訊協會也有出版這樣的書籍：
-<center> <img src="https://i.imgur.com/aR5Epg0.jpg?2" alt="2017台灣維管束植物紅皮書名錄"></center>
-<center class="imgtext">2017台灣維管束植物紅皮書名錄（圖片來源: <a href="https://e-info.org.tw/node/210852" class="imgtext">台灣環境資訊協會</a>）</center>
-<br>
-
+<p class="illustration">
+    <img src="https://i.imgur.com/aR5Epg0.jpg?2"  alt="2017台灣維管束植物紅皮書名錄">
+    2017台灣維管束植物紅皮書名錄（圖片來源: <a href="https://e-info.org.tw/node/210852">台灣環境資訊協會</a>）
+</p>
 
 此外，在英國的紅皮書還用於官員名冊、貴族名錄和宮廷指南，有點類似剛剛提到的[藍皮書](#藍皮書)定義。但就如稍早提過的，各色書皮在不同的國家有不同的用法，只是不曉得為啥找到的資料都拿英國做例子，搞的英國好像格外的與眾不同 XDDD
 
 <br> 如果你去看紅皮書的[英文維基百科條目](https://en.wikipedia.org/wiki/Red_Book)，寫在第一條的會是中國的《毛澤東語錄》，這應該只是按書籍顏色指稱而已。
  
 
-<br><br>
 
 ## 黃皮書 
 黃皮書指的<mark>警告性報告書</mark>，一般用於<mark>專家對某領域中的問題所作的分析和預測</mark>，如中國著的《2007年：世界經濟形勢分析與預測》用來分析世界經濟形勢一書。
-<center> <img src="https://i.imgur.com/DJzTp1i.jpg?1" alt="2006~2007年：世界經濟形勢分析與預測"></center>
-<center class="imgtext">2006~2007年：世界經濟形勢分析與預測（圖片來源: <a href="https://www.books.com.tw/products/CN10092757" class="imgtext">博客來</a>）</center>
-<br>
+
+<p class="illustration">
+    <img src="https://i.imgur.com/DJzTp1i.jpg?1" alt="2006~2007年：世界經濟形勢分析與預測">
+    2006~2007年：世界經濟形勢分析與預測（圖片來源: <a href="https://www.books.com.tw/products/CN10092757">博客來</a>）
+</p>
 
 <br> 不過一般說黃皮書，其實多代指 **<mark>國際預防接種證明書</mark>**（International Certificate of Vaccination or Prophylaxis），是指由各國的衛生機關依照世界衛生組織的規定及證明書格式所核發的預防接種證明書。部分國家規定入出境旅客應提供特定疫苗之國際預防接種證明書，旅客必須提早接種疫苗，並且取得證明書。
 
-<center> <img src="https://imgur.com/5jSFshO.png" alt="國際預防接種證明書"></center>
-<center class="imgtext">國際預防接種證明書（圖片來源: <a href="https://www.cdc.gov.tw/Category/ListContent/WWlwdlIzM2IzMksrZHNNSTJlSXJJZz09?uaid=UnNINXFvNGttYmZKZlU1UHJvQ09UUT09" class="imgtext">衛生福利部疾病管制署</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/5jSFshO.jpg" alt="國際預防接種證明書">
+    國際預防接種證明書（圖片來源: <a href="https://www.cdc.gov.tw/Category/ListContent/WWlwdlIzM2IzMksrZHNNSTJlSXJJZz09?uaid=UnNINXFvNGttYmZKZlU1UHJvQ09UUT09">衛生福利部疾病管制署</a>）
+</p>
 
-<br><br>
+
 
 ## 綠皮書 
 《牛津英漢詞典》將綠皮書定義為「<mark>為了鼓勵討論而發布的政府提案的初步報告</mark>」。在歐盟、大英國協、香港與美國地區，綠皮書是政府就某一重要政策或議題而正式發表的<mark>諮詢文件</mark>，其中所包含的議題通常還處於討論階段，沒有明確的結論。
@@ -118,30 +125,32 @@ P.S. 中國的兩份我找不到後續的討論資料，也有可能是沒公開
 
 找到比較偏向這個定義的報告，或許是國際自然保護聯盟在 2014 澳洲舉行世界保護區大會，推出《綠皮書》（Green List），它是用來表彰受到良好管理的保護區的成功。這應該有符合樂觀前景的定義？
 
-<br> 最後，亂入推一下這部電影
-<center> <img src="https://i.imgur.com/Er92FVq.jpg?1" alt="幸福綠皮書海報"></center>
-<center class="imgtext">幸福綠皮書海報（圖片來源: <a href="http://ntnuyouth.org/?p=13757" class="imgtext">師大青年報</a>）</center>
-<br> 
+<p class="illustration">
+    <img src="https://i.imgur.com/Er92FVq.jpg?1"  alt="幸福綠皮書海報">
+    幸福綠皮書海報（圖片來源: <a href="http://ntnuyouth.org/?p=13757">師大青年報</a>）
+</p>
 
 恩...是說[《黑人駕駛綠皮書》](https://zh.wikipedia.org/wiki/%E9%BB%91%E4%BA%BA%E9%A9%BE%E9%A9%B6%E7%BB%BF%E7%9A%AE%E4%B9%A6)，這算定義二還定義三？
 
-<br><br>
+
 
 ## 黑皮書 
 黑皮書一般用於<mark>對某領域發表的批評或批評性闡述</mark>，例如：1998 年的《資本主義黑皮書》，是一本講述資本主義的罪行的書籍、1943 年《波蘭猶太人黑皮書》，則是波蘭猶太難民和移民協會關於波蘭猶太人大屠殺的聲明。
 
 黑皮書在國際上罕見。因為 BLACK BOOK 在英語中通常是指**黑名單**或**記過簿**，所以英語國家避免使用黑皮書。
 
-<br><br>  
+
     
 ## 橘皮書 / 橙皮書
 橘皮書一般帶有<mark>預警</mark>，記載需要<mark>引起注意的內容</mark>，像是 FDA 出版的《Approved Drug Products with Therapeutic Equivalence Evaluations》（具有治療等效性評價的批准藥品）、《聯合國危險貨物運輸建議書》又稱聯合國橘皮書，是有關危險貨物運輸法規的最高指導原則。這些書籍都是屬於橘皮書。
 
-<center> <img src="https://i.imgur.com/BGaY19w.jpg?1" alt="聯合國危險貨物運輸建議書"></center>
-<center class="imgtext">聯合國危險貨物運輸建議書（圖片來源: <a href="https://www.amazon.com/Recommendations-Transport-Dangerous-Goods-Regulations/dp/9211391369" class="imgtext">amazon</a>）</center>
-  
-<br><br>  
-    
+<p class="illustration">
+    <img src="https://i.imgur.com/BGaY19w.jpg?1"   alt="聯合國危險貨物運輸建議書">
+    聯合國危險貨物運輸建議書（圖片來源: <a href="https://www.amazon.com/Recommendations-Transport-Dangerous-Goods-Regulations/dp/9211391369">amazon</a>）
+</p>
+
+
+   
 ## 其他
 還有其他一些比較少見的的顏色，如灰皮書、紫皮書、褐皮書，但這些似乎都沒有較為明確的定義。
 
@@ -156,14 +165,14 @@ P.S. 中國的兩份我找不到後續的討論資料，也有可能是沒公開
 
 P.S. 原本想放圖片的，但我覺得嚇到自己機會比較大，所以還是別放了 orz...
  
-<br><br>  
+ 
 
 ## 小記
 這篇莫名其妙寫超長的...參考資料資料也大概是我寫網誌以來最長的一篇...這篇明明是打算來當雜記寫的...orz
 
 而且，參考資料看起來實在太長短不一有點礙眼，換成 APA 格式好了。
 
-<br><br> 
+
 
 ## 參考資料 
 1. 協同撰寫。[皮書](https://zh.wikipedia.org/wiki/%E7%9A%AE%E4%B9%A6)。檢自 維基百科 (2019-01-03)。

@@ -17,25 +17,30 @@ tags:
 <!--more-->
 <br>
 
-<center> <img src="https://i.imgur.com/iIagdGC.png" alt="Paypal brand"></center>
-<center  class="imgtext">Paypal （圖片來源: <a href="https://www.paypal.com/tw/webapps/mpp/home"  class="imgtext">Paypal</a>）</center>
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/iIagdGC.png" alt="Paypal brand">
+    Paypal （圖片來源: <a href="https://www.paypal.com/tw/webapps/mpp/home" >Paypal</a>）
+</p>
+
+
 
 ## 找回帳號之路
 接下來我按照我的時間線記錄我的處理過程，如果有同病相憐的人可以直接跳到[利用盜號者的信箱重設密碼](#利用盜號者的信箱重設密碼)的章節，希望會對你有幫助！
 
-<br>
 
 ### 從 mail 中立即通知
 回到當我看到這封信的時候，我立刻意識不妙，我速即點擊信中的的「**立即通知**」。但...令我想吐血的是，如果我想通知 PayPal，首先得<mark class="bold">登入</mark>我的帳號。想當然爾，我已經登入不了...
 
-<center> <img src="https://i.imgur.com/GwLnys1.png" alt="你已將新的電子郵件地址新增至 PayPal 帳戶"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/GwLnys1.png" alt="你已將新的電子郵件地址新增至 PayPal 帳戶">
+</p>
 
 就在我每次試圖登入時，就會跑出錯誤訊息，告知我「**資料不正確，請重試**」，看來這條路<mark class="bold">暫時</mark>行不通了...
 
-<center> <img src="https://i.imgur.com/kopan5J.png" alt="資料不正確"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/kopan5J.png" alt="資料不正確">
+</p>
 
-<br>
 
 ### 點擊忘記密碼
 會說暫時行不通是因為我此時有點拿不準，是我記錯密碼，還是發生什麼狀況。
@@ -45,9 +50,11 @@ tags:
 2. 它從帳號中將我的信箱給踢掉了
 
 不過通常都是第二個啦...
-<center> <img src="https://i.imgur.com/khjHMou.png" alt="沒有帳戶與我的信箱相關聯"></center>
 
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/khjHMou.png" alt="沒有帳戶與我的信箱相關聯">
+</p>
+
 
 ### 回報問題並試圖聯繫 PayPal
 既然確定進不去，我下一個反應就是聯繫客服幫忙，我從官網找到幾個途徑：
@@ -67,7 +74,6 @@ tags:
 3. **FB上傳送訊息**  
    最後我只好從 FB 上去找客服，不過他只提供英語支援，而且他不是及時支援，我這邊晚上 8 點聯絡他，直到 12 點多才收到回覆。
    
-<br>
 
 ### 利用盜號者的信箱重設密碼
 就在我急不可待地等候回覆時，我找到了 Allee 的[文章](https://vocus.cc/article/61271450fd8978000152a173)，發現可以利用盜號者的信箱來重設密碼。
@@ -76,12 +82,13 @@ tags:
 
 不過這方法僅限於對方沒有換掉你的手機號碼，如果連手機號碼都被變更的話，就真的只能等到星期一才能致電客服了...，不過我懷疑如果真得等到那個時候，我還能找回我的帳戶嗎？
  
-<br><br>
+
 
 ## 找回帳號之後...
-<center> <img src="https://imgur.com/0AA8xCZ.png" alt="幸運的"></center>
-<center  class="imgtext">幸運的（圖片來源: <a href="https://www.lnka.tw/html/topic/17919.html"  class="imgtext">靈匣</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/0AA8xCZ.png" alt="幸運的">
+    幸運的（圖片來源: <a href="https://www.lnka.tw/html/topic/17919.html">靈匣</a>）
+</p>
 
 必須說，我是比較幸運的，雖然被盜但我並沒有任何的損失，也沒有奇怪的交易紀錄。想了下我會如此幸運的原因：
 1. 我其中現金不多，而且台幣的提款又比較麻煩，可能來不及？
@@ -89,19 +96,16 @@ tags:
 
 總之，不管可能的原因，最終我很幸運地沒有任何損失！
 
-<br>
 
 ### 盜刷申訴
 如果拿回帳戶後，你不幸地發現有奇怪的交易紀錄，就必須儘快地向 Paypal **提出申訴和中止交易**。不過 Paypal 具體會怎麼處理我並不清楚，或許知道的人可以告訴我一下？
 
 除了向 Paypal 提出申訴外，還需要緊急通知**發卡銀行**客服，表示非本人刷卡，並將該筆交易列為爭議款項。不過需要注意的是，每間銀行處理爭議帳款的時間不盡相同，所以當有不明的交易紀錄務必馬上提出申訴。理論上，事後銀行也會發行新卡給持卡人，畢竟舊的信用卡資料已經外洩。
 
-<br>
 
 ### 清除信用卡資料
 確認完交易紀錄後，我第一個動作將信用卡資料給刪掉。之後我應該也會乖乖得在每次使用後就刪掉信用卡...
 
-<br>
 
 ### 交易安全設定
 除了刪掉信用卡外，我還跑到`設定`中的`交易安全`，設定了安全認證，我設定了兩種認證，分別是**2 步驟認證**與**密碼提示問題**。2 步驟認證是指登入時除了密碼之外，會透過 Authenticator App 取得單次用安全代碼，對了，我這邊用的 Authenticator App 是 Google Authenticator。
@@ -115,14 +119,13 @@ tags:
 - [如何變更我的 PayPal 帳戶密碼和密碼提示問題？](https://www.paypal.com/tw/smarthelp/article/FAQ1440)
 
 
-<br><br> 
 
 ## 參考資料 
 1. Allee (2021-08-26)。[網路時代的帳戶管理術！Paypal帳戶被盜的處理與預防](https://vocus.cc/article/61271450fd8978000152a173)。檢自 方格子 (2022-05-18)。
 2. [如何聯絡 PayPal 台灣客戶服務？](https://www.paypal.com/tw/smarthelp/article/%E5%A6%82%E4%BD%95%E8%81%AF%E7%B5%A1-paypal-%E5%8F%B0%E7%81%A3%E5%AE%A2%E6%88%B6%E6%9C%8D%E5%8B%99%EF%BC%9F-faq1920)。檢自 PayPal (2022-05-18)。
 3. [聯絡我們](https://www.paypal.com/tw/smarthelp/contact-us)。檢自 PayPal (2022-05-18)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

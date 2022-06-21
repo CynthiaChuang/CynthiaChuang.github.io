@@ -9,15 +9,17 @@ tags:
 --- 
 
 我需要我的無線網路阿，但我只能看到 WIFI 列表，但沒有任何一個熱點可以連線的，試過各種方法都只能得到`啟動失敗`的錯誤訊息。無奈之下，只能將作業系統從 Ubuntu 18.04 升級成 Ubuntu 20.04 :cry: 
+業系統從 Ubuntu 18.04 升級成 Ubuntu 20.04 :cry: 
 
 <!--more-->
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/wTWEMpR.jpg" alt="Ubuntu 20-04 Official Logo">
+    Ubuntu 20-04 Official Logo（圖片來源: <a href="https://www.ubuntufree.com/download-ubuntu-20-04-lts/ubuntu-20-04-official-logo/">Ubuntu Free</a>）
+</p>
 
-<center> <img src="https://i.imgur.com/wTWEMpR.jpg" alt="Ubuntu 20-04 Official Logo"></center>
-<center  class="imgtext">Ubuntu 20-04 Official Logo（圖片來源: <a href="https://www.ubuntufree.com/download-ubuntu-20-04-lts/ubuntu-20-04-official-logo/"  class="imgtext">Ubuntu Free</a>）</center>
-<br>
 
-# 升級做法
+
+## 升級做法
 - **Step1：更新伺服器**  
     首先先從取得更新伺服器的套件檔案清單來檢查可以升級的版本，並更新套件。
     ```bash
@@ -52,10 +54,8 @@ tags:
     ```
     幸運的話，就會開始升級了。
 
-<br><br>
 
-# 錯誤排除
-
+## 錯誤排除
 不過想當然爾，安裝過程中怎麼可能不出包 XDDD 當我按下後立刻跳出錯誤訊息：
 > Checking for a new Ubuntu release Please install all available updates for your release before upgrading
 
@@ -63,14 +63,14 @@ tags:
 
 它告訴必須把所有的更新先做完才可以，只好回頭處理剛剛的錯誤訊息：
 
-```
+```bash
 處理時發生錯誤：/var/cache/apt/archives/docker.io_20.10.7-0ubuntu1~18.04.1_amd64.deb
 ```
 
 <br>
 
 我還以為是安裝檔損壞了，所以先嘗試刪除損壞的安裝檔後，重新更新系統：
-```
+```bash
 $ sudo dpkg --remove --force-remove-reinstreq docker.io_20.10.7-0ubuntu1~18.04.1_amd64
 $ sudo apt-get update
 ```
@@ -78,10 +78,8 @@ $ sudo apt-get update
 <br>
 
 不過依舊跳出錯誤訊息，但細細研究錯誤訊息發現解法就寫在第一行了，不過我忘了複製訊息，大意是某個資料夾在 20 時不再使用，請確認無容器在使用後將它刪除，所以直接照做即可，最後更新後直接升級，大約等 2~3 小時，就可以享受 Ubuntu 20.04 了！ :+1:
- 
 
 
-<br><br> 
 
 ## 參考資料 
 1. ethan (2019-03-16)。[Ubuntu 更新與升級](https://project.zhps.tp.edu.tw/ethan/2019/03/ubuntu-%E6%9B%B4%E6%96%B0%E8%88%87%E5%8D%87%E7%B4%9A/)。檢自 Ethan's 學習筆記 (2021-09-03)。

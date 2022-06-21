@@ -40,14 +40,13 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 **Related Topics:**`Dynamic Programming`、`Backtracking`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這提示要求將 array 中的數字右旋 _k_ 位，簡單來說，就是將所有的數字向後移動 _k_ 位，而末尾 out of index 的部分則移到開頭。
 
 這題說麻煩的部分是它最後希望我們提出三種不同實做的方法，另外要提供一種只需要 _O(1)_ 空間的解法，這會花比較多時間。
 
-<br>
 
 ### 解法1 
 最先想到的解法，就是使用 for 迴圈執行 _k_，每次迴圈執行時，記住最後一個數字後，將其他數字向後位移一位，再將所記住的數字放回開頭。
@@ -76,7 +75,6 @@ nums = [nums[n-1]] + nums[:-1]
 
 最後果不其然 **Time Limit Exceeded**。
 
-<br>
 
 ### 解法2
 另外想到基於解法1的解是直接將前 _n-k_ 個向後移動 _k_ 位，最後在將對後 _k_ 移動到開頭。這樣時間複雜度會降成 _O(n)_ ，但空間複雜度也會變成 _O(n)_ 。
@@ -99,7 +97,6 @@ class Solution:
 **Runtime: 68 ms, faster than  46.18%  of  Python3  online submissions forRotate Array.
 Memory Usage: 13.4 MB, less than  5.04%  of  Python3  online submissions for  Rotate Array.**
 
-<br>
 
 ### 解法3
 第三個解法是從網路上找來的，有點類似翻轉 String 的方法，它先將前 _n-k_ 個數字翻轉，再把後 _k_ 個數字翻轉，最後將整個陣列都翻轉過來，就可以得到答案了。
@@ -129,7 +126,8 @@ class Solution:
          start += 1
          end -= 1
 ```
-<br><br>
+
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

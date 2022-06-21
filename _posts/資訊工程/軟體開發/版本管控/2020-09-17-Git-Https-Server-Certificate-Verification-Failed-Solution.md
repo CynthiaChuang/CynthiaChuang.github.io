@@ -12,10 +12,9 @@ tags:
 最近在上 code 老是遇到憑證問題，雖然可以加環境變數來跳過，但三不五時就來一次實在有點討厭，來找找有沒有一勞永逸的辦法。
 
 <!--more-->
-<br>
+
 
 ## 問題
-
 ```bash
 $ git push -u origin master
 fatal: unable to access 'https://my.git.com:port/user_name/project.git/':
@@ -26,10 +25,9 @@ server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.c
 1. 略過或關閉 SSL 憑證檢查。
 2. 告訴系統該伺服器可以信任。
 
-<br><br>
+
 
 ## 略過或關閉 SSL 憑證檢查
-
 如果你信任該伺服器，可以直接設定環境變數，讓 git 略過憑證的驗證：
 
 ```bash
@@ -44,10 +42,9 @@ git config --global http.sslVerify false
 
 這種解法比較像是閉上眼不管了，憑證問題依然沒有解決，而且像這樣永久略過會讓 SSL 少一層防護，因此不是很想這麼做。
 
-<br><br>
+
 
 ## 匯入伺服器憑證
-
 比較標準的作法應該是要匯入伺服器憑證，告訴系統該伺服器可以信任。在 [Office 指南](https://officeguide.cc/git-https-server-certificate-verification-failed-solution/)這個部落格，找到了份 script，可以直接做到這件事。
 
 建立一個 script
@@ -73,20 +70,19 @@ sudo bash -c "echo -n | openssl s_client -showcerts -connect $hostname:$port \
 
 
 最後執行 script
-```
+```bash
 $ bash import_ssl.sh
 ```
 
 理論上之後對同一台 git 伺服器的憑證應該不會再出現相同的錯誤訊息了，至少我到目前為止暫時沒出現過了。
 
 
-<br><br> 
 
 ## 參考資料 
 1. EdmundChen (2017-12-11)。[git错误error: server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none](https://www.jianshu.com/p/7d599bdf370a) 。檢自 简书 (2020-09-17)。
 2. [Git 透過 HTTPS 連線失敗：server certificate verification failed 解決方式](https://officeguide.cc/git-https-server-certificate-verification-failed-solution/) 。檢自 Office 指南 (2020-09-17)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

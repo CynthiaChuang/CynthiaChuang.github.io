@@ -14,10 +14,10 @@ tags:
 
 <!--more-->
 
-<center> <img src="https://i.imgur.com/7Vg8auj.png" alt="picpick homepage"></center>
-<center class="imgtext">Homepage（圖片來源: <a href="https://picpick.app/zh-tw/" class="imgtext">Picpick</a>）</center>
- 
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/7Vg8auj.png" alt="picpick homepage">
+    Homepage（圖片來源: <a href="https://picpick.app/zh-tw/">pxhere</a>）
+</p>
 
 以前在大學時做報告截圖慣用的是 [FastStone Capture](https://www.faststone.org/FSCaptureDetail.htm) ，雖然新版本（>5.6）開始收費，但其實還舊版（<=5.6）的就很夠用了。
 
@@ -25,20 +25,21 @@ tags:
 
 之後用 prtSc + 小畫家撐了一陣子後，受不了而去下載了 [Snagit](https://www.techsmith.com/download/snagit/)，體感上跟 Shutter 操作很類似，一度想花錢買了，不過考慮我一年可能用個沒幾次，就還是算了。
 
-<center> <img src="https://i.imgur.com/LP7aUck.png" alt="picpick download page"></center>
-
-<br> 
+<p class="illustration">
+    <img src="https://i.imgur.com/LP7aUck.png" alt="picpick download page">
+</p>
 
 好，廢話結束 XD
 
 PicPick 它也是一款螢幕擷取軟體，可以簡易編輯圖片、畫線/框、箭頭、加入文字、螢光筆都有，非常符合我的需求。而且它有提供免費下載。
 
-<center> <img src="https://i.imgur.com/ZGdG3co.png" alt="picpick download page"></center>
-<br> 
+<p class="illustration">
+    <img src="https://i.imgur.com/ZGdG3co.png" alt="picpick download page">
+</p>
 
 至於操作上 Windows 的使用者應該會非常的熟悉，它的介面設計非常的 Windows，而且還有繁中語系可選，應該會非常好上手。
 
-<br><br> 
+
 
 ## 參考資料 
 1. 不來恩 (2020-03-02)。[FastStone Capture v9.3 抓圖軟體！（繁體中文+免費版）](https://briian.com/5713/) 。檢自 重灌狂人 (2020-03-27)。
@@ -46,7 +47,7 @@ PicPick 它也是一款螢幕擷取軟體，可以簡易編輯圖片、畫線/�
 3. PSERIC (2019)。[PicPick 全功能免費螢幕擷取軟體，內建編輯器和各項實用工具](https://free.com.tw/picpick/) 。檢自 免費資源網路社群 (2020-03-27)。
 4. 手機二師兄(2018-07-19)。[截圖軟體哪個好？8款免費截圖軟體下載推薦](https://kknews.cc/zh-tw/digital/2l8488r.html)。檢自 每日頭條 (2020-03-27)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

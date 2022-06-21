@@ -12,17 +12,15 @@ tags:
 
 <!--more-->
 
-<br><br>
 
 ## 行數計算
-
-<center> <img src="https://images.pexels.com/photos/1329296/pexels-photo-1329296.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="計數"></center>
-<center class="imgtext">計數（圖片來源: <a href="https://www.pexels.com/zh-tw/@magda-ehlers-pexels" class="imgtext">Magda Ehlers | pexels</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://images.pexels.com/photos/1329296/pexels-photo-1329296.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="計數">
+    計數（圖片來源: <a href="https://www.pexels.com/zh-tw/@magda-ehlers-pexels">Magda Ehlers | pexels</a>）
+</p>
 
 
 ### readlines
-
 計算行是最簡單、直覺的方法當然是用 `readlines()`：
 
 ```python
@@ -51,11 +49,7 @@ print (count, (endtime - start))
 一份檔案的讀取時間約：**4.602344036102295** 秒。
 
 
-<br>
-
-
 ### readline
-
 除了用 `readlines()`，也可以用 `readline()`：
 ```python
 start = time.time()
@@ -72,10 +66,8 @@ print (count, (endtime - start))
 ```
 一份檔案的讀取時間約：**4.239390134811401** 秒，看起來稍稍快一點？
 
-<br>
 
-### read
- 
+### read 
 Python 讀檔三寶除了 `readline()` 和 `readlines()` 外，有個 `read()`，接下來試試用 `read()`。不過 `read()` 讀進來的也是整份文件，為了不讓記憶體爆掉，也是設了 chunks size。
 
 ```python
@@ -96,10 +88,8 @@ print ((endtime - start))
 
 組長問我用 `rb` 跟 `r` 來取檔案速度到底差多少？反正也就點工，趁出去吃飯的時候，順便跑了下。出來結果一份檔案要  **16.770071983337402** 秒，是用 `rb` 模式讀取時間的 4 倍。
  
-<br>
 
 ### 迭代器
-
 是說，BufferedReader 本身就是一個迭代器物件(iterator)，拿它來算行數也行。
 
 ```python
@@ -129,10 +119,9 @@ endtime = time.time()
 print (endtime - start)
 ```
 
-<br><br>
+
 
 ## Multiprocess
-
 看來 5G 檔案，4 秒左右是極限了。所以我把主意打到了 Multiprocess 上，雖然不一定又作用，畢竟讀寫頭順著不寫應該會比較快？
 
 網路上看到現成的，我就不自己寫了：
@@ -164,12 +153,12 @@ print (count, (endtime - start))
 以一份檔案 4 秒讀取時間來算，187 份檔案預計會花上 12.5 分鐘。而，實測結果花了 **10.3** 分鐘。  
 P.S. 寫到這邊才想到，我又不重 CPU 計算的部分，應該開 Multithread 就好，不用開到 Multiprocess。
 
-<br><br> 
+
 
 ## 參考資料 
 1. vmele (2017-12-06)。[optimization - Optimize file and number line count in Pytho](https://stackoverflow.com/questions/47637617/optimize-file-and-number-line-count-in-python) 。檢自 Stack Overflow (2020-06-18)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

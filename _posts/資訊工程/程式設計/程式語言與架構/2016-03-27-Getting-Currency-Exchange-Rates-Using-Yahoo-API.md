@@ -23,12 +23,11 @@ Yahoo! 財務 API 服務，該服務已停止並且不再起作用。<br>
  2. 透過 HttpURLConnection class 將資料以 Json 型態取下並顯示在手機上。
 
 
-<br><br>
 
 ## 資料獲取
 
-### 1. Yahoo API 提供的 URL 分析
 
+### 1. Yahoo API 提供的 URL 分析
 點擊這個的 URL 會得一份 CSV 檔案，文件內容會是新臺幣兌美金的匯率。  
 
 [http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=c4l1&s=TWDUSD=x](http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=c4l1&s=TWDUSD=x)  
@@ -44,7 +43,6 @@ Yahoo! 財務 API 服務，該服務已停止並且不再起作用。<br>
     http://download.finance.yahoo.com/d/quotes.csv?e=.csv&f=c4l1&s=TWDUSD=x,TWDJPY=x
     ```
 
-<br>
 
 ### 2. 轉成JSON檔
 接下來要將 CSV 檔轉成 JSON，只要透過 Yahoo 所提供的 [csv parser](https://developer.yahoo.com/yql/console/?q=select%20%252a%20from%20csv%20where%20url%253D%2522http%253A%252F%252Ffinance.yahoo.com%252Fd%252Fquotes.csv%253Fe%253D.csv%2526f%253Dc4l1%2526s%253DEURUSD%253DX%252CGBPUSD%253DX%2522%23h=select%2520%252a%2520from%2520csv%2520where%2520url%253D%2522http%253A//finance.yahoo.com/d/quotes.csv%253Fe%253D.csv%2526f%253Dc4l1%2526s%253DUSDEUR%253DX%2522%253B)，將第一步的 URL 轉換成 YQL（Yahoo Query Language）格式的 URL 即可。  
@@ -56,18 +54,16 @@ select * from csv where url='上面獲得 csv檔的url'
 按下 test 按鈕，即可得到對應 JSON檔的新 URL。
       
     
-<br>
-
 ### 3. 取得全部幣別 
-
 因為我希望使用下拉式的方式讓使用者選擇原始幣別與兌換幣別，避免輸入錯誤的可能，所以我必須先取得一份全部幣別。       
       
 透過這個 [URL](http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json) 就可以取得所有幣別 JSON 檔，只是上面只有代碼，沒有貨幣全稱，不過還好規範命名規則是走 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)，還是有辦法知道，麻煩了點就是。  
     
-<br><br>
+
 
 ## 實作
 大概了解資料的處理流程後，就可以回到程式中來實做了。
+
 
 ### 1. 在程式中獲取 JSON 資料
 在要讀取匯率資料的地方貼上，下列程式碼，如此就可以取得 JSON 檔。
@@ -81,7 +77,6 @@ BufferedReader in = new BufferedReader(isr);
 String line = in.readLine();
 ```
 
-<br>
       
 ### 2. 解析 JSON 檔內容  
 讀到資料就像下面這麼一大串，不過這樣其實很不好看，所以我會用 [JSON 的排版器](http://www.bodurov.com/JsonFormatter/)排一下，好看一下該怎麼拆。
@@ -123,24 +118,23 @@ String line = in.readLine();
 
 所以像上面這一串所要取出的順序是這一串物件中 → query 物件 → results 物件 → row 陣列，最後在取出每個 index 中所包含的物件，而物件中的元素 col0、col1 分別對應到兌換幣別（美金）的代碼與匯率。  
 
-<br><br>
+
 
 ## 踩雷
-
 基本上做到上面就完成大概了，只是實際執行的時候，會跳出下面兩個 error。
+
 
 ### 1. android.os.NetworkOnMainThreadException
 查了一下，這個是因為我把網路的活動跑在 main Thread 上，貼心過頭 Google 大神告訴你，你的 APP 可能會因為等待網路活動的回應太久，而被系統強制關閉。 
 
 解決的方式只要開新的執行緒就好，不管是用 Thread、 Handle、 AsynTask 都行，別讓它跑在 main Thread 上就行。
  
-<br>
  
 ### 2. android.system.ErrnoException: android_getaddrinfo failed: EACCES (Permission denied)
 
 另一個會收到的是這個，主要是告訴你 uses-permission 忘了開，只要去 AndroidManifest.xml 中添加即可  
   
-<br><br>
+
 
 ## 參考資料
 1. [Android行動裝置網路程式應用｜ITs通訊](http://newsletter.ascc.sinica.edu.tw/news/read_news.php?nid=2665)

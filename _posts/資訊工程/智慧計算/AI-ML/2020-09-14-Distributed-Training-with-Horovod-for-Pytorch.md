@@ -14,26 +14,22 @@ tags:
 繼上次用 [Horovod 做為 TensorFlow 分散式深度學習框架](/Distributed-Training-with-Horovod-for-TensorFlow-Keras)後，我這次如願改寫 PyTorch 了，雖然是另外一個案子...。
 
 <!--more-->
-<br>
+
 
 ## Horovod 使用
-
 一樣直接拿著[文件](https://horovod.readthedocs.io/en/stable/pytorch.html#horovod-with-pytorch)直接上了，大致可以分成 5 個步驟，這跟 TensorFlow Keras 倒是滿像的：
 
-### 1. 初始化
 
+### 初始化
 ```python
 import horovod.torch as hvd
 
 # Initialize Horovod
 hvd.init()
 ```
- 
 
-<br> 
 
-### 2. 為每個節點設置一個 GPU
-
+### 為每個節點設置一個 GPU
 ```python
 torch.cuda.set_device(hvd.local_rank())
 ```
@@ -72,10 +68,8 @@ if hvd.rank() == 0:
 torch.cuda.set_device(hvd.local_rank())
 ```     
 
-<br> 
 
-### 3. 依照分散的個數縮放 lr 
-
+### 依照分散的個數縮放 lr 
 文件範例這部分好像沒做，但上方的動作分解有。所以我按照之前做 TensorFlow Keras 的經驗直接用 lr 乘上節點個數。
 
 ```python
@@ -110,11 +104,9 @@ def adjust_learning_rate(epoch, batch_idx):
    for param_group in optimizer.param_groups:
       param_group['lr'] = args.base_lr * hvd.size() * args.batches_per_allreduce * lr_adj
 ```
-<br>
-
-### 4. 將 optimizer 包裝到 hvd.DistributedOptimizer 中
 
 
+### 將 optimizer 包裝到 hvd.DistributedOptimizer 中
 ```python
 # Horovod: add Horovod DistributedOptimizer.
 opt = hvd.DistributedOptimizer(opt, named_parameters=model.named_parameters())
@@ -138,9 +130,8 @@ for epoch in range(10):
    optimizer.param_groups[0]['lr'] = lr
 ```
 
-<br>
 
-### 5.  Broadcast
+### 5. Broadcast
 最後廣播給其他節點。
 
 ```python
@@ -149,14 +140,13 @@ hvd.broadcast_parameters(model.state_dict(), root_rank=0)
 hvd.broadcast_optimizer_state(optimizer, root_rank=0)
 ```
 
-<br><br>
+
 
 ## 資料集切分
 
 最後是資料集切分，這邊我直接仿照[上次的作法](/Distributed-Training-with-Horovod-for-TensorFlow-Keras)採用分 epochs 數的作法。
 
 
-<br><br> 
 
 ## 參考資料 
 1. [Horovod with PyTorch](https://horovod.readthedocs.io/en/stable/pytorch.html#horovod-with-pytorch) 。檢自 Horovod documentation (2020-09-14)。
@@ -168,7 +158,7 @@ hvd.broadcast_optimizer_state(optimizer, root_rank=0)
 7. [Added PyTorch support for restoring optimizer state on model load and broadcast by tgaddair · Pull Request #371](https://github.com/horovod/horovod/pull/371/files#diff-b134e260de34b7f653af3c43e362f305L124)。檢自 horovod/horovod ｜ github (2020-09-14)。
 8. [test_torch.py](https://github.com/horovod/horovod/blob/e4554de96100f5a0e8686cd41cf99a6fe8a71e62/test/test_torch.py)。檢自 horovod/horovod ｜ github (2020-09-14)。
  
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -16,17 +16,14 @@ tags:
 1. 設定密碼複雜度
 2. 強迫使用者登入更換密碼
 
-
 <!--more-->
-<br>
-
-<center> <img src="https://i.imgur.com/W5gU1lT.png" alt="世界密碼日"></center>
-<center  class="imgtext">世界密碼日（圖片來源: <a href="https://twgreatdaily.com/4z85DXIBd4Bm1__YOkhy.html"  class="imgtext">今日頭條</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/W5gU1lT.png" alt="世界密碼日">
+    世界密碼日（圖片來源: <a href="https://twgreatdaily.com/4z85DXIBd4Bm1__YOkhy.html">今日頭條</a>）
+</p>
 
 
 ## 設定密碼複雜度
-
 你知道每年五月的第一個星期四是**世界密碼日**嗎？很好，我也不知道，直到今天才知道 XD 反正這個節日就是提醒你關心下自己的密碼是否安全。
 
 根據 Microsoft 的[密碼原則建議](https://docs.microsoft.com/zh-tw/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide)可以朝兩個方向強化密碼強度：
@@ -36,25 +33,21 @@ tags:
 2. **更換密碼天數**：  
    設定幾天後強制使用者換密碼，如 90 天一換。
 
-<br>
 
 ### Step1、安裝套件
-
 在 Ubuntu 中密碼強度檢查的功能，是透過 `libpam-pwquality` 這個套件來強制設定密碼的最低複雜度，以避免弱密碼的出現。所以一開始需先安裝該套件：
 
-```
+```bash
 $ sudo apt install libpam-pwquality
 ```
 
-<br>
 
 ### Step2、設定密碼複雜度
-
 安裝完後，編輯 `/etc/pam.d/common-password` 設定檔來設定密碼複雜度
 
-```
+```bash
 $ vim /etc/pam.d/common-password
-# here are the per-package modules (the "Primary" block)
+$ here are the per-package modules (the "Primary" block)
 password   requisite   pam_pwquality.so retry=3
 password	[success=1 default=ignore]	pam_unix.so obscure use_authtok try_first_pass sha512
 ...
@@ -63,12 +56,12 @@ password	[success=1 default=ignore]	pam_unix.so obscure use_authtok try_first_pa
 <br>
 
 找到以下這一行 pam_pwquality.so 的設定值：
-```
+```bash
 password   requisite   pam_pwquality.so ....
 ```
 
 我這邊直接把它改成：
-```
+```bash
 password   requisite   pam_pwquality.so retry=3 minlen=15 maxrepeat=3 difok=4 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1 reject_username enforce_for_root
 ```
 
@@ -106,36 +99,30 @@ password   requisite   pam_pwquality.so retry=3 minlen=15 maxrepeat=3 difok=4 uc
    
 7. **`enforce_for_root`**  
    設定 root 管理者亦需遵守密碼規定。說實話管理者往往是最不遵守密碼規定的 XD
-   
 
-<br>
 
 ### Step3、禁止使用過往密碼
-
 另一個~~討厭~~常見的功能是禁止使用過往用過密碼，這功能一樣透過編輯 `/etc/pam.d/common-password` ，找到以下這一行 pam_unix.so 的設定值：
-```
+```bash
 $ password	[success=1 default=ignore]	pam_unix.so obscure use_authtok try_first_pass sha512
 ```
 
 在尾端加上 `remember=3`，表不與前三次密碼相同：
-```
+```bash
 $ password	[success=1 default=ignore]	pam_unix.so obscure use_authtok try_first_pass sha512 remember=5
 ```
 
-<br><br>
+
 
 ## 設定更換密碼天數
-
 強化密碼強度的另一個方向則是設定密碼有效期限，迫使使用者定期更新密碼。
 
-<br>
 
 ### Step1、設定密碼有效期限  
-
 可透過編輯 `/etc/login.defs` 設定密碼有效期限：
 
-```
-# vim /etc/login.defs
+```bash
+$ vim /etc/login.defs
 PASS_MAX_DAYS   90
 PASS_MIN_DAYS   10
 PASS_MIN_LEN    15
@@ -151,38 +138,35 @@ PASS_WARN_AGE   7
  
 若時間的變動超過 `PASS_MAX_DAYS`，則登入時會要求使用者更新密碼並遵循新的密碼規則。但必須注意的是，這裡設定只會**套用在之後新建的帳號**。若要修改使現有使用者，需另外使用 `chage` 指令來進行變更。
 
-<br>
 
 ### Step2、設定現有使用者密碼有效期限  
-
 剛剛的設定只會套用在新使用者身上，但對於現有使用者於要額外指令變更：
 
-```
+```bash
 $ sudo apt install chage
 ```
 
 安裝完後，使用指令來更新天數設定：
  
-```
+```bash
 $ sudo chage --maxdays 90 <user>
 $ sudo chage --mindays 10 <user>
 $ sudo chage --warndays 7 <user>
 ```
 
-<br><br>
+
 
 ## 強迫使用者登入更換密碼  
-
 常見情境是我們生成亂數密碼給使用者，然後請使用者第一次登入時修改密碼，或是當我更新密碼複雜度時，請舊有使用者改密碼遵循新的密碼規則。這功能可以用剛剛的 `chage` 來達成：
 
-```
+```bash
 $ chage --lastday 0 <user>
 $ chage -d 0 <user>
 ```
 
 這樣會直接把它的到期日期設定成 1970/01/01，強迫它過期。
 
-<br><br> 
+
 
 ## 參考資料     
 1. (2022/03/08)。[密碼原則建議](https://docs.microsoft.com/zh-tw/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide)。檢自 Microsoft Docs (2022-05-05)。
@@ -197,7 +181,7 @@ $ chage -d 0 <user>
 10. osc_v1ao43h5 (2020-12-16)。[Linux 系統密碼策略設定](https://www.mdeditor.tw/pl/gpHY/zh-tw)。檢自 MdEditor (2022-05-05)。
 11. [chage(1): change user password expiry info](https://linux.die.net/man/1/chage)。檢自 Linux man page (2022-05-05)。
 
-<br><br>  
+
 
 ## 更新紀錄
 <details class="update_stamp">

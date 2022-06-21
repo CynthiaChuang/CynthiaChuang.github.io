@@ -24,7 +24,8 @@ tags:
  
 
 <!--more-->
-<br>
+
+
 
 ## 模板資料細節說明
 {% raw %}
@@ -38,10 +39,8 @@ tags:
 {% endraw %}
 
 
-<br><br>
 
 ## 動態切換 ClassName 及 Style 多種方法
-
 1. **直接傳入物件**  
     ```html
     :class = "{'className1':判斷式1,'className2':判斷式2}"
@@ -57,7 +56,9 @@ tags:
     :class = objectClass
     ```
 
-    <br>若是想在 HTML 中變更 objectClass 內容，可以使用下列方式來讀取及修改。
+    <br>
+    
+    若是想在 HTML 中變更 objectClass 內容，可以使用下列方式來讀取及修改。
     ```html
     bjectClass.rotate 
     
@@ -100,10 +101,9 @@ tags:
 5.  **Prefix**   
 	不需要手動加上 Prefix ，它會自動依照每個瀏覽器版本需求自動加上。
 
-<br><br>
+
 
 ## v-for 與其使用細節
-
 1. **陣列與物件（key value pair）**  
 	都可以使用 v-for 來執行。但兩者取出索引指略有不同，在陣列取出索引的是 index，而物件的取出索引是 key 值，或稱物件的屬性。
     
@@ -118,7 +118,9 @@ tags:
     <br>
     舉例來說，下圖是資料反轉前後的對照圖，可以看到資料反轉，但輸入框不會隨數據項順序改變而一起變動：
     
-    ![Imgur](https://i.imgur.com/l5tkc02.png)
+    <p class="illustration">
+        <img src="https://i.imgur.com/l5tkc02.png">
+    </p>
 
     一般來說，這樣的默認模式效能較好，且在資料展示的場景中並不會有這個困擾。但若子元素間存在相依性、存在與使用者互動的場景、或是依賴臨時的 DOM 狀態，則不推薦使用就地複用模式。
     
@@ -178,13 +180,10 @@ tags:
 
 7. **v-for 與 v-if**
     我之前整理過了，請參考： [02. 基礎 Vue 概述 #v-for 動態產生多筆資料於畫面上](/Vue-Study-Notes-Unit02#v-for-動態產生多筆資料於畫面上)
- 
- 
 
-<br><br>
+
 
 ## v-if 與其使用細節 
-
 1.  **v-if, v-else, v-else-if**  
     這還好不難想像，有 if 就會有 else if 跟 else。通常的是這三個應該是實作在相鄰元素上，如果在程式碼上相隔的太遠，個人建議就要考慮一下是否有需要重構了。
 
@@ -204,7 +203,9 @@ tags:
 	
 	<br>因為兩個模板使用了相同的元素，**input** 不會被替換掉，僅僅是替換了它的 **placeholder** 。但是一旦你在輸入框輸入文字，就會出現下面的情況：
 	
-	![Imgur](https://i.imgur.com/UKtfhdO.png)
+    <p class="illustration">
+        <img src="https://i.imgur.com/UKtfhdO.png">
+    </p>
 	
 	<br>為了使完整渲染，可在輸入框元素加上 key ，一旦 key 不同就會重新渲染。注意這邊 key 只加在輸入框上，因此 label  依舊會被重複使用。
 	
@@ -229,13 +230,13 @@ tags:
 
     相比之下，v-show 元素則是全部會被編譯並保留，只是簡單地基於 CSS 切換，設定 style 為 display:none。
     
-    ![Imgur](https://i.imgur.com/gJtpP21.png)
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/gJtpP21.png">
+    </p>
+
     一般來說，v-if 有更高的切換消耗而 v-show 有更高的初始渲染消耗。因此，<mark>如果需要頻繁切換，則使用 v-show 較好；如果在運行時條件不大可能改變，則使用 v-if 較好</mark>。
 
 
-
-<br><br>
 
 ## Computed 與 Watch
 1. **Method：**  
@@ -248,10 +249,8 @@ tags:
 	監控特定變數，當該變數產生變化時，可執行特定事件。
 
 
-<br><br>
 
 ## 表單細節操作
-
 修飾符號
 1. **v-model.lazy**  
     不是處於監視狀態，而是當輸入框失去 focus 才會觸發。
@@ -262,9 +261,10 @@ tags:
 3. **v-model.trim**  
     自動過濾輸入的首尾空格。
 
-<br><br>
+
 
 ## v-on 的頁面操作細節
+
 
 ### 事件修飾符
 1. **@click.stop**  
@@ -284,7 +284,6 @@ tags:
 
 <br> PS. 稍微找了一下相關資料，弄懂事件傳遞傳遞過程：[【Vue.js】DOM 的事件傳遞機制： capture 與 propagation](/DOM-Phases-of-Event-Capture-and-Propagation/)
 
-<br>
 
 ### 按鍵修飾符
 1. **.keyCode**  
@@ -297,7 +296,7 @@ tags:
 
 3. **按下相應按鍵時才觸發鼠標或鍵盤事件的監聽器**  
     .ctrl, .alt, .shift, .meta。 例如：``@keyup.shift.enter``，必須同時按下 shift 及 enter 才會觸發。
-<br>
+
 
 ### 滑鼠修飾符
 1. **.left**  
@@ -310,23 +309,18 @@ tags:
     只當點擊鼠標中鍵時觸發。 
 
 
-<br><br> 
 
 ## 章節作業
-
 交作業：[github](https://github.com/CynthiaChuang/vue-exercise/tree/master/Hw2-Template)、[codepen](https://codepen.io/cynthiachuang/pen/WWaRoo)
 
-<br><br>  
+
 
 ## 其他連結
-
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 
-<br><br>
 
 ## 參考資料
-
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)
 2. [API (v-html)｜Vue.js](https://vuejs.org/v2/api/index.html#v-html)
 3. [List Rendering｜Vue.js](https://vuejs.org/v2/guide/list.html#key)

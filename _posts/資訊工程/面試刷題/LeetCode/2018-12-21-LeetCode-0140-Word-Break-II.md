@@ -51,7 +51,7 @@ Output: []
 
 **Related Topics:**`Dynamic Programming`、`Backtracking`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 第二個例子，腦中瞬間出現這個旋律（想被洗腦的[這邊走](https://www.youtube.com/watch?v=Ct6BUPvE2sM)），上一題還沒注意到的說 XDDD
@@ -60,9 +60,6 @@ Output: []
 
 忽然覺得他的眼神有點鄙視......是我錯覺嗎( ˘•ω•˘ ) 
 
-
-
-<br>
 
 ### 遞迴
 好了，先別管古坂大魔王了，LeetCode 大魔王處理先。像這種找所有可能的題目，首先想到的是遞迴，更別說我在寫程式的時候，第一 round 偏好用暴力法，暴力法的雖然效能都不是很好，但它的寫法較為簡潔，適合拿來釐清思路，等寫出一個可以 round 的版本，我才會開始做效率的改進。這種作法有好有壞啦，端看大家的習慣怎樣。
@@ -104,14 +101,13 @@ class Solution(object):
             return res
 ```
 
-<br>
 
 ### DAG
 話說在寫這題的時候，越寫越覺得超級像中文斷詞的，只是不需要做到最後一步，在中間就可以回傳中間產物了。以 [Jieba](https://github.com/fxsjy/jieba) 斷詞演算法（雖然我慣用的斷詞API不是 Jieba XDDD）來說，他在第一個步驟會建立 Trie 與 DAG 資料結構，快速算出所有合法的切分組合，就只需要做到這裡就好，第二部分的統計模型計算可以先忽略它。
 
 我有按照個想法時做了一版，但...它目前還只是個屍體而已... Orz
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

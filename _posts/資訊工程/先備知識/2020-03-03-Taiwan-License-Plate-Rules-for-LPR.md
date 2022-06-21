@@ -23,43 +23,36 @@ tags:
 
 <!--more-->
 
-<br><br>
-
 ## 前言 
-
 因為車牌是有<mark>地域性</mark>的，各國車牌的字型、格式、顏色...等都不盡相同。雖然我不需要進行字模比對，但還是需要掌握這些規則，作為訓練特徵或 post-processing 的校正流程。
 
 如果對車牌的演變或細節有興趣的，可以關注這個 [歐沃車牌情報站](https://www.facebook.com/TaiwanLicensePlate/) 這個粉絲團，或者是他的 Medium [車牌研究報告](https://medium.com/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A) ，關於這些這位作者考察得很詳細，不過可惜因為健康因素，最近都沒有更新 :crying_cat_face: 
 
-<center> <img src="https://i.imgur.com/UNz6ZLZ.jpg" alt="日本車牌"></center>
-<center class="imgtext">日本車牌（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%BB%8A%E8%BC%9B%E8%99%9F%E7%89%8C" class="imgtext">維基百科</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/UNz6ZLZ.png" alt="日本車牌">
+    日本車牌（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%BB%8A%E8%BC%9B%E8%99%9F%E7%89%8C">維基百科</a>）
+</p>
 
 
-<br><br> 
 
 ## 目前車牌
-
 距離新式第八代車牌啟用至今已經七年多了...時間還真快阿...（莫名的感嘆起來了...
 
 由於七換八沒有實施全面換發，因此目前是採兩代車牌並行使用的做法。車牌字元由<mark>英文字母與阿拉伯數字混用</mark>（不計入軍、試、臨、使...等特殊車牌），若僅依照 `-` 進行區分，共有 `2-4`、`4-2`、`2-2`、`3-2`、`2-3`、`3-3` 與 `3-4`，共 <mark>7 種格式</mark>，長度由 <mark>4 到 7</mark> 不等。
 
 當然這些車牌是有搭配不同的車種使用，這邊先不考慮這個，因為預期執行完車牌定位後，拿到資料會是車牌本身。不過，也可以先用物件偵測，取得車種資料作為額外資訊，或許可以幫助提辨識效率。
 
-<br>
+
 
 ### 第七代
-
 第七代車牌行之有年，應該也是臺灣車牌史上使用最久的一代。但因其歷史悠久(?)，歷經車輛數目的大幅增加，再加上各種奇怪政令導致車牌樣式五花八門。（有興趣的看看這幾篇：[簡介](https://medium.com/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A-1-%E5%8F%B0%E7%81%A3%E7%AC%AC7%E4%BB%A3%E9%80%9A%E7%94%A8%E8%BB%8A%E8%BC%9B%E8%99%9F%E7%89%8C%E7%B0%A1%E4%BB%8B-2a0cf7414c75)、[演進 I](https://medium.com/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A-3-%E5%8F%B0%E7%81%A3%E7%AC%AC7%E4%BB%A3%E9%80%9A%E7%94%A8%E8%BB%8A%E8%BC%9B%E8%99%9F%E7%89%8C%E7%B7%A8%E7%A2%BC%E6%BC%94%E9%80%B2-i-d74999cc9750)、[演進 II](https://medium.com/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A-4-%E5%8F%B0%E7%81%A3%E7%AC%AC7%E4%BB%A3%E9%80%9A%E7%94%A8%E8%BB%8A%E8%BC%9B%E8%99%9F%E7%89%8C%E7%B7%A8%E7%A2%BC%E6%BC%94%E9%80%B2-ii-2194daa0ebf4)）
 
-
-
-<center> <img src="https://i.imgur.com/aFibpWd.gif" alt="第七代各車種號牌繪圖範例"></center>
-<center class="imgtext">第七代各車種號牌繪圖範例（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7#cite_note-2" class="imgtext">維基百科</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/aFibpWd.gif" alt="第七代各車種號牌繪圖範例">
+    第七代各車種號牌繪圖範例（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7#cite_note-2">維基百科</a>）
+</p>
 
 #### 外觀
-
 **1. 尺寸**：  
 先看看外觀的部分，第七代外觀尺寸是 `320 * 150` 、 `250 * 140` 、 `260 * 150`  與 `320 * 150` 四種，分別常見於自小客車、機車、重機與拖車和電動車上。
 
@@ -75,17 +68,15 @@ tags:
 
 不過因為文字本身特性，與第六代相比，本來就缺少了些特徵點，這也導致第七代的車牌特別容易偽造與修改。這也反應到訓練過程中，導致當車牌被遮擋時，訓練難會變得艱難。
 
-<center> <img src="https://i.imgur.com/BRsKmiY.png" alt="第六代與第七代號牌數字例示"></center>
-<center class="imgtext">第六代與第七代號牌數字例示（圖片來源: <a href="https://medium.com/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A-1-%E5%8F%B0%E7%81%A3%E7%AC%AC7%E4%BB%A3%E9%80%9A%E7%94%A8%E8%BB%8A%E8%BC%9B%E8%99%9F%E7%89%8C%E7%B0%A1%E4%BB%8B-2a0cf7414c75" class="imgtext">車牌研究報告 Medium</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/BRsKmiY.png"  alt="第六代與第七代號牌數字例示">
+    第六代與第七代號牌數字例示（圖片來源: <a href="https://medium.com/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A/%E8%BB%8A%E7%89%8C%E7%A0%94%E7%A9%B6%E5%A0%B1%E5%91%8A-1-%E5%8F%B0%E7%81%A3%E7%AC%AC7%E4%BB%A3%E9%80%9A%E7%94%A8%E8%BB%8A%E8%BC%9B%E8%99%9F%E7%89%8C%E7%B0%A1%E4%BB%8B-2a0cf7414c75">車牌研究報告 Medium</a>）
+</p>
 
 P.S. 我真的覺得臺灣歷代車牌中，第六代的字體最好看。 :heart_decoration: 
 
 
-<br>
-
 #### 編碼格式
-
 在七代車牌字元長度若不計算分隔符號的話為 4 到 6，有 `2-4`、`4-2`、`3-2`、`2-3`、`3-3` 與 `2-2` 共六種格式。
 
 <br> 先來整理 `2-4` 或 `4-2` 這格式。這種 6 碼的編碼格式是給小客車來使用，但這 2 種編碼格式又可延伸出 4 種排列組合...。
@@ -103,29 +94,26 @@ P.S. 我真的覺得臺灣歷代車牌中，第六代的字體最好看。 :hear
 
 <br> 最後在根據報導與介紹，有發生過 `B` 與 `8` 以及 `D` 與 `0` 被誤判的狀況，所以當預測結果出來時，若在數字區，出現 `B` 與 `D` 或許可以考慮用 `8` 或 `0` 還替換。
 
-<center>...</center>
-
-<br>
 
 ### 第八代
-
 第八代是目前主要的發行車牌，可在細分八代一式與八代二式，這等等在說。八代在推行之初有點像是急就章，不像七代在設計編碼時還做了大量研究與民意調查，雖然後來還是搞出一堆問題，不過好歹還是有做，但八代的編碼則是直接就在原格式中<mark>加了一位區段碼</mark>敷衍了事。
 
 不過我想原本八代的特點應該在防偽，它們原先設計有三道防偽關卡，第一是分別是左上角的雷射標籤、車牌中間的浮水印，最後則是字體上的細刻。還要搭配車身的識別貼，看來能夠有效防止車牌的偽造及偷竊。
 
-<center> <img src="https://i.imgur.com/11HVwgn.jpg" alt="印度最新版(2008年)統一號牌"></center>
-<center class="imgtext">印度最新版(2008年)統一號牌（圖片來源: <a href="http://khalidhazmi.hatenablog.com/entry/TW06" class="imgtext">KH的車牌研究日記</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/11HVwgn.jpg"  alt="印度最新版(2008年)統一號牌">
+    印度最新版(2008年)統一號牌（圖片來源: <a href="http://khalidhazmi.hatenablog.com/entry/TW06">KH的車牌研究日記</a>）
+</p>
 
 整體來說有點像是現在印度車牌的前身，當然沒有這麼多碼，印度這字元數也太多了吧 XDDD 但可惜的是，八代車牌唯一的優點，因為防偽技術的製作部分涉嫌綁標爭議，後來胎死腹中，只留下滿滿缺點（殘念
 
-<center> <img src="https://i.imgur.com/QpTaHe9.gif" alt="第八代各車種號牌繪圖範例"></center>
-<center class="imgtext">第八代各車種號牌繪圖範例（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7#cite_note-2" class="imgtext">維基百科</a>）</center>
-
+<p class="illustration">
+    <img src="https://i.imgur.com/QpTaHe9.gif"  alt="第八代各車種號牌繪圖範例">
+    第八代各車種號牌繪圖範例（圖片來源: <a href="https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7#cite_note-2">維基百科</a>）
+</p>
 
 
 #### 外觀
-
 **1. 尺寸**：  
 一樣先看尺寸的部分，由於編碼擴增一碼，但字體寬度及鑄具排版不變的情況下，導致車牌寬度變寬為 `380 * 160` 、 `300 * 150` 、 `310 * 160` 與 `380 * 160` 四種，分別常見於自小客車、機車、重機與拖車和電動車上。 
 
@@ -141,27 +129,29 @@ P.S. 我真的覺得臺灣歷代車牌中，第六代的字體最好看。 :hear
 <br> **3. 字體**：  
 八代的字體為了防止偽造，因此改用了澳洲字體，但澳洲字體屬於比例字體，每個字的寬度有所差別；且臺灣是採用等寬字體鑄模，因此部分字元有<mark>內縮</mark>的的狀況，例如：M，這樣的內縮會導致特徵不清楚，在解析度低或是斜角度的照片，會增加辨識的困難度。
 
-<center> <img src="https://imgur.com/JBmsSY8.png" alt="第七代與第八代字型對照"></center>
-<center class="imgtext">第七代與第八代字型對照（圖片來源: 待補）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/JBmsSY8.png"  alt="第七代與第八代字型對照">
+    第七代與第八代字型對照（圖片來源: 待補）
+</p>
 
 說是防偽，我懷疑選擇澳洲字體的原因只是為了讓 3 跟 8 有明顯區別，免得有人遮一半變造？ 但個人覺得 0 跟 8 還是很好改阿...而且 0 跟 C 更好改。
 
 七八代文字的相異特徵不算多，尤其是八代澳洲字體。對於機器學習來說，要它學習分辨八代澳洲字體的 3 跟 5 是件非常吃力的任務，從下圖可以發現這兩者只差了一個頸部筆劃，一束一撇的差異而已，但對於機器進行特徵提取的時候，這兩個幾乎是同一件事情，再加上 CNN 存在平移不變性，使得辨識難度大大提昇。
 
-<center> <img src="https://i.imgur.com/4bLIE9H.png" alt="澳洲車牌 3和5的差異"></center>
-<center class="imgtext">澳洲車牌 3和5的差異（圖片來源: <a href="https://www.tteia.org.tw/magazine/index.php?download_id=380" class="imgtext">臺灣電信月刊</a>）</center>
-<br>
- 
+<p class="illustration">
+    <img src="https://i.imgur.com/4bLIE9H.png" alt="澳洲車牌 3和5的差異">
+    澳洲車牌 3和5的差異（圖片來源: <a href="https://www.tteia.org.tw/magazine/index.php?download_id=380">臺灣電信月刊</a>）
+</p>
+
 <br> 說到這個就不得不抱怨一下，為啥不換成六代的字型，辨識度比較高，也可以避免 3 與 8 的問題？若說是不想使用重複字型，且又想從現有字型當基底...德國車牌字體就是個不錯的選擇阿...每個字都有獨立特徵，不怕修改、變造與遮擋...當然車牌全擋了還是沒有救 XD 
  
-<center> <img src="https://i.imgur.com/B38GxCZ.png" alt="德國車牌字體"></center>
-<center class="imgtext">德國車牌字體（圖片來源: <a href="https://dailycold.tw/4961/%E9%9B%A3%E4%BB%A5%E5%A1%97%E6%94%B9%E7%9A%84%E5%BE%B7%E5%9C%8B%E8%BB%8A%E7%89%8C%E5%AD%97%E9%AB%94/" class="imgtext">每日一冷</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/B38GxCZ.png"  alt="德國車牌字體">
+    德國車牌字體（圖片來源: <a href="https://dailycold.tw/4961/%E9%9B%A3%E4%BB%A5%E5%A1%97%E6%94%B9%E7%9A%84%E5%BE%B7%E5%9C%8B%E8%BB%8A%E7%89%8C%E5%AD%97%E9%AB%94/">每日一冷</a>）
+</p>
  
 
-#### 編碼格式
- 
+#### 編碼格式 
 這邊分成一、二式來討論。
 
 <br> 在八代一式車牌字元長度若不計算分隔符號的話為 <mark>5 到 7</mark>，有 `3-4` 、 `3-3` 與 `2-3`  共六種格式。這套制度因歷時較短，所以目前現況都還符合設計之初的規劃。各規格對應的字元順序分別為 `英英英-數數數數`、 `英英英-數數數` 與 `英英-數數數`。
@@ -170,9 +160,10 @@ P.S. 我真的覺得臺灣歷代車牌中，第六代的字體最好看。 :hear
 
 在七代時，因為所有車種的編碼格式不同（車牌長短不同），所以在監理系統上可以正常運作，但在八代中，如下圖，汽機車是採同一種編碼格式，編碼區間又相同，導致監理系統運作出錯。因此八代一式在運作初期開錯單的新聞時有所聞...一部分也是這個原因...
 
-<center> <img src="https://i.imgur.com/7IQ17KJ.jpg" alt="第八代通用車輛號牌編碼表"></center>
-<center class="imgtext">第八代通用車輛號牌編碼表（圖片來源: <a href="https://www.thb.gov.tw/page?node=92d4a6e2-9afb-464d-a2eb-2be8d26d8d89" class="imgtext">交通部公路總局</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/7IQ17KJ.png"  alt="第八代通用車輛號牌編碼表">
+    第八代通用車輛號牌編碼表（圖片來源: <a href="https://www.thb.gov.tw/page?node=92d4a6e2-9afb-464d-a2eb-2be8d26d8d89">交通部公路總局</a>）
+</p>
 
 為什麼會說是只有一部分的原因，仔細觀察八代一式的編碼表碼會發現，它除了自身衝突外，它還跟上一代的編碼起衝突...八代一式的自用大貨車跟七代的機車編碼是重疊在一起的。真搞不懂，這麼明顯的錯誤怎麼會讓它立法通過的...
 
@@ -184,26 +175,20 @@ P.S. 我真的覺得臺灣歷代車牌中，第六代的字體最好看。 :hear
 
 但實做上，由於七代與八代一式的規則混雜在一起，因此再做後處理時可能僅能針對 `3-4` 這個編碼格式進行處理而已。
 
-<br><br> 
+
 
 ## 備註
-
 如果所設計的系統有錯誤處理或信心度不足的處理流程，可以考慮在引入[禁用英文字母部分](https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7#%E7%9B%B8%E9%97%9C%E8%AD%B0%E9%A1%8C)，當預測結果出現在這列表中就打到錯誤處理流程去...
 
 
-<br><br> 
 
 ## 附件
+<p class="illustration">
+    <img src="https://i.imgur.com/I9Bj7iv.png"  alt="原型式、新式、「一車一號」新編碼方式號牌區分對照表">
+    原型式、新式、「一車一號」新編碼方式號牌區分對照表（圖片來源: <a href="https://www.thb.gov.tw/page?node=92d4a6e2-9afb-464d-a2eb-2be8d26d8d89">交通部公路總局</a>）
+</p>
 
 
-<center> <img src="https://i.imgur.com/I9Bj7iv.png" alt="原型式、新式、「一車一號」新編碼方式號牌區分對照表"></center>
-<center class="imgtext">原型式、新式、「一車一號」新編碼方式號牌區分對照表（圖片來源: <a href="https://www.thb.gov.tw/page?node=92d4a6e2-9afb-464d-a2eb-2be8d26d8d89"  class="imgtext">交通部公路總局</a>）</center>
-<br>
-
-  
-
-
-<br><br> 
 
 ## 參考資料 
 1. 鄉下老師 (2018-07-07)。[車牌辨識當然是有地域性的](http://blog.udn.com/yccsonar/113103293) 。檢自 鄉下老師 - udn部落格 (2020-03-03)。

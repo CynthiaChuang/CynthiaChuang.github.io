@@ -18,14 +18,15 @@ tags:
 [前一篇](/Installation-and-Deployment-Notes-of-OpenWhisk-01)大概看了下基本的系統架構與限制後，這篇開始試著安裝 OpenWhisk。
 
 <!--more-->
-<br>
+
 
 ## Deploys anywhere
 從 [Openwhisk 官網](http://openwhisk.incubator.apache.org/)上看到，OpenWhisk 可以利用一些常見的 Container 框架，例如： Kubernetes and OpenShift, Mesos and Compose 快速部屬。
 
-<center> <img src="http://openwhisk.apache.org/images/illustrations/OW-Deployments.png" alt="The Learning Model"></center>
-<center class="imgtext">Deploys anywhere（圖片來源: <a href="http://openwhisk.apache.org/" class="imgtext">Openwhisk</a>）</center>
-<br>
+<p class="illustration">
+    <img src="http://openwhisk.apache.org/images/illustrations/OW-Deployments.png" alt="The Learning Model">
+    Deploys anywhere（圖片來源: <a href="http://openwhisk.apache.org/" >Openwhisk</a>）
+</p>
 
 從 Apache 的 [Githib](https://github.com/apache) 上，找到了幾份部屬的教學：
 - [Kubernetes](https://github.com/apache/openwhisk-deploy-kube)
@@ -35,19 +36,22 @@ tags:
 
 研究了一下安裝難度與實際需要部屬的環境考量，最終決定挑 Kubernetes 來快速部屬。
  
-<br><br>
+
 
 ## 前置安裝
 既然決定要利用 [Kubernetes](https://kubernetes.io/)，那當然需要先將它部署起來。另外為了簡化 Kubernetes 叢集的部署管理，也安裝了 [Helm](https://helm.sh/)。
+
 
 ###  Kubernetes ＆ kind
 要弄出測試用的 Kubernetes 小型叢集，最簡單的方法是使用 <mark>Docker-in-Docker</mark>，直接在 Docker 上運行 Kubernetes。這邊為了迅速上手使用 <mark>kind</mark> 這套工具，可以快速架設多節點的 Kubernetes 叢集環境。
 
 對了，在 OpenWhisk 中配置的 Docker 預設須具備至少 4 GB 記憶體和 2 個 virtual CPUs。 
 
-<center> <img src="https://i.imgur.com/Ncg5fgi.png" alt="kind"></center>
-<center class="imgtext">kind（圖片來源: <a href="https://github.com/kubernetes-sigs/kind" class="imgtext">kind｜GitHub</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/Ncg5fgi.png" alt="kind">
+    kind（圖片來源: <a href="https://github.com/kubernetes-sigs/kind">kind｜GitHub</a>）
+</p>
+
 
 #### Step 1、安裝 kind
 按照 [kind 安裝文件](https://github.com/kubernetes-sigs/kind)的說明，安裝 kind 的方法有二：
@@ -66,7 +70,6 @@ go version go1.14 linux/amd64
 $ GO111MODULE="on" go get sigs.k8s.io/kind@v0.7.0  
 ```
 
-<br>
 
 #### Step 2、建立 Kubernetes 叢集
 安裝完 kind 後，就可以進行叢集的配置。這個的配置難度不高，基本上按照[設置文件](https://github.com/apache/openwhisk-deploy-kube/blob/master/docs/k8s-kind.md)就可以完成。
@@ -104,7 +107,6 @@ kubectl cluster-info --context kind-kind-cluster
 
 Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/#community 🙂
 ```
-<br>
 
 
 #### Step 3、 Kubernetes 叢集確認
@@ -173,12 +175,12 @@ users:
 $ kind delete cluster --name kind-cluste
 ```
 
-<br>
 
 ### Helm
-<center> <img src="https://i.imgur.com/hR6ZGds.png?1" alt="Helm"></center>
-<center class="imgtext">Helm（圖片來源: <a href="https://medium.com/@C.W.Hu/kubernetes-helm-chart-tutorial-fbdad62a8b61f" class="imgtext">Cheng-Wei Hu｜Medium</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/hR6ZGds.png?1" alt="Helm">
+    Helm（圖片來源: <a href="https://medium.com/@C.W.Hu/kubernetes-helm-chart-tutorial-fbdad62a8b61f">Cheng-Wei Hu｜Medium</a>）
+</p>
 
 另外一個需要先安裝的工具是 [Helm](https://github.com/helm/helm)，它是一個管理設定檔的工具，可以簡化 Kubernetes 叢集上應用程式的部署和管理。此外 OpenWhisk 中的 Helm chart 也需要 Helm 3。
 
@@ -201,12 +203,11 @@ Environment variables:
 ...（略）
 ```
 
-<br><br>
+
  
 ## 部署
 有了 K8S 叢集與 Helm 後，就可以使用 Helm 將 OpenWhisk 部署到 K8S 叢集上了，這邊依照文件的四個部屬動作來進行：
 
-<br>
 
 ### Step 1. 初始化叢集設定
 在[前置配置 Kubernetes 叢集](#Step-2、建立-Kubernetes-叢集)時，我們在 `kind-cluster.yaml` 中宣告了三個節點，其中一個節點作為 control-plane，另外兩個節點作為 worker：
@@ -238,7 +239,6 @@ $  kubectl label node kind-worker openwhisk-role=core
 Error from server (NotFound): nodes "kind-worker" not found
 ```
  
-<br>
 
 ### Step 2. 定義 yaml
 要配置 OpenWhisk，首先需要定義一個 `mycluster.yaml` 來指定一些入口訊息和其他的系統配置。不過，在此之前需要先用下列指令確定輔助節點的 internalIP：
@@ -264,7 +264,7 @@ invoker:
 nginx:
   httpsNodePort: 31001
 ```
-<br>
+
 
 ### Step 3. 使用 Helm Chart 配置 
 準備好 `mycluster.yaml` 後，就可以使用 Helm 來將 OpenWhisk 部署到 Kubernetes 集群。在開始前，先建立個 namespace 名為 `openwhisk`：
@@ -317,8 +317,7 @@ $ helm status owdev -n openwhisk
 ```
 
 不過，其實這兩個值是在 `mycluster.yaml` 中所定義的 `apiHostName` 與 `apiHostPort`。
- 
-<br>
+
 
 ### Step 4. 配置 wsk CLI. 
 配置完 Helm Chart 後，就可以通過設置 auth 和 apihost 配置 wsk，以告訴 wsk CLI 如何連接到 OpenWhisk。不過開始配置前要先安裝完 [wsk CLI](https://github.com/apache/openwhisk-cli)。
@@ -331,7 +330,7 @@ ok: whisk API host set to 172.17.0.4:31001
 $ wsk property set --auth 23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP
 ok: whisk auth set. Run 'wsk property get --auth' to see the new value.
 ```
-<br>
+
 
 ### Step 5. 驗證 OpenWhisk 部署  
 安裝完成後，就可以進行驗證了：
@@ -403,13 +402,16 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
 <br>
 
 它會給出一個測試結果：
-<center> <img src="https://i.imgur.com/47SoEgK.png" alt="測試結果"></center>
-<center class="imgtext">測試結果</center>
 
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/47SoEgK.png" alt="測試結果">
+</p>
+
+
 
 ## 測試
 這邊試著建立觸發器（Trigger）、動作（Action）與規則（Rule）。
+
 
 ### action
 1. **action with python**  
@@ -634,7 +636,6 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
 5. **action with other**  
     至於其他與研究不一一嘗試嘗試了，可以直接從 [Openwhisk 官方文件](https://openwhisk.apache.org/documentation.html#actions-creating-and-invoking)中了解其他內建語言的基礎用法。
 
-<br>
 
 ### 第三方函式庫
 忽然想到如果如果有相依函式庫的怎麼辦？如果是編譯語言應該連同相依函式庫一起傳入應該可行，但是直譯語言就必須來找找了。還好最後有找到[文件](https://github.com/apache/openwhisk/blob/master/docs/actions-python.md#packaging-python-actions-with-a-virtual-environment-in-zip-files)。
@@ -664,9 +665,10 @@ $ wsk -i action invoke numpytext --result
 }
 ```
  
-<br><br>
+
 
 ## 其他
+
 
 ### CouchDB 
 在上一章 Survey [整體系統架構](/Installation-and-Deployment-Notes-of-OpenWhisk-01#系統架構)時，有提到 CouchDB，不過啟動過程中完全沒有看到它的蹤影。
@@ -675,12 +677,11 @@ $ wsk -i action invoke numpytext --result
 
 是說在文件中有提到，如果不想用 CouchDB，另一個選擇則是 Cloudant。但沒記錯的話 Cloudant 是 IBM 家的產品？所以其實等於沒有選擇...
 
-<br>
 
 ### Redis
 另外因為目前配置沒有設定 [Redis](https://github.com/apache/openwhisk-deploy-kube/blob/master/docs/configurationChoices.md#using-an-external-redis)，是用在 API Gateway 也就是 NGINX 會使用到它，不過現階段沒有特別去處理它，如果真要上限，這部分也要額外配置。
 
-<br><br> 
+
 
 ## 評估
 1. **需支援不同的程式語言，包含：Go、Java、Python、C++、C、C# 與 Bash**  
@@ -709,7 +710,7 @@ $ wsk -i action invoke numpytext --result
     IBM 是根據每秒每個 GB 的記憶體收費的，每秒的執行對每個 GB 的配置記憶體收費為 0.000017，所以在設定 action 時，可以配置執行工作所需的最大記憶體，就可以進一步降低成本。  
     
     在這邊可以利用相關指令，分別取得每次的執行時間與 limit 資訊：   
-    ```shell
+    ```shell=
     $ wsk activation list -i 
     $ wsk action get [action_name] -i
     ```
@@ -717,7 +718,7 @@ $ wsk -i action invoke numpytext --result
 
 6. **每個函數設定不同的資源用量限制，例如：RAM 或是 CPU**     
     在 `wsk action create` 的參數中，有些相關的 flag 可以用：    
-    ```
+    ```shell=
     $ wsk action create --help
     create a new action
     Usage:
@@ -731,8 +732,9 @@ $ wsk -i action invoke numpytext --result
     <br>
 
 7. **每個相關功能進行監控**    
-    <center> <img src="https://i.imgur.com/LGWTKrb.png" alt="監控"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/LGWTKrb.png" alt="監控">
+    </p>
 
     這是 IBM 的 UI 界面，界面中的活動摘要、活動時間都可以從 `wsk activation list` 取得
    ```shell
@@ -772,8 +774,6 @@ $ wsk -i action invoke numpytext --result
     除了更新的功能，但是編譯語言的更新還是需要重新編譯。
     
 
-<br><br> 
-
 
 ## 小結
 媽呀！終於告一段落！  
@@ -781,7 +781,6 @@ $ wsk -i action invoke numpytext --result
 雖然沒有寫得很詳細，很多東西沒有寫到，不過算是告一個段落了。
 
 
-<br><br> 
 
 ## 參考資料 
 1. [Openwhisk 官網](http://openwhisk.incubator.apache.org/) 。檢自 Openwhisk (2020-09-29)。
@@ -802,7 +801,6 @@ $ wsk -i action invoke numpytext --result
 16. Chanwit Kaewkasi [Docker for Serverless Applications: Containerize and orchestrate functions using OpenFaas, OpenWhisk, and Fn](https://books.google.com.tw/books?id=_d5YDwAAQBAJ&pg=PA120&lpg=PA120&dq=openwhisk+apigateway+redis&source=bl&ots=nT2aTGxuu-&sig=ACfU3U0NiWTKbgNqf4hqsvrP4iN3e94Gig&hl=zh-TW&sa=X&ved=2ahUKEwjuxYLdtPboAhWIbN4KHTfHC8YQ6AEwBHoECAsQPw#v=onepage&q=openwhisk%20apigateway%20redis&f=false)。檢自  Google 圖書 (2020-11-16)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -13,18 +13,21 @@ tags:
   
 不過每次重來一次都得找一次補釘還真麻煩！受不了每次都要重找補釘，我還是自己記錄一下吧：)
   
-<center> <img src="https://i.imgur.com/9uRiqjZ.jpg" alt="Witcher 2 加強版"></center>
-<center class="imgtext">Witcher 2 加強版（圖片來源: <a href="https://store.steampowered.com/app/20920/The_Witcher_2_Assassins_of_Kings_Enhanced_Edition/" class="imgtext">steam</a>）</center>
-
 <!--more-->
-<br><br> 
+
+<p class="illustration">
+    <img src="https://i.imgur.com/9uRiqjZ.jpg" alt="Witcher 2 加強版">
+    Witcher 2 加強版（圖片來源: <a href="https://store.steampowered.com/app/20920/The_Witcher_2_Assassins_of_Kings_Enhanced_Edition/">steam</a>）
+</p> 
+
+
 
 ## x64系統啟動失敗
-
 是說 steam 上的巫師 2 真的不打算修一下這個 bug 嗎？這條 bug 是 2015 年就有的吧，都五年多了耶！
 
-<center> <img src="https://i.imgur.com/ztrCZ4K.png" alt="x64系統啟動失敗"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/ztrCZ4K.png" alt="x64系統啟動失敗">
+</p>
 
 查到解法有二： 
 1.  變更成**波蘭文**  
@@ -32,26 +35,25 @@ tags:
 2.  **base_scripts.dzip**  
     下載[修正錯誤檔](http://www.mediafire.com/download/5p7jc0axfx04omo/The_witcher_2_ErrorsFix.zip)，然後將檔案覆蓋掉原本的 **The Witcher 2\CookedPC\base_scripts.dzip** 即可正常啟動
 
-<br><br> 
+
 
 ## 字型修改
 另一個必做的修正是字型修改，巫師2中文字型真是慘不忍睹，字型實在太細了，玩的眼睛很累。
 
 好像[找的資源](https://forum.gamer.com.tw/Co.php?bsn=07364&sn=10709)多數雅黑體的，但我實在不愛雅黑體，由於它是簡中的字型包，所以在繁中表現上有點差強人意。它的字元的高度不一致，導致畫面凌亂、不整齊。這會逼瘋處女座的 XDDD
 
-<center> <img src="https://i.imgur.com/n1LCpWm.png" alt="微軟正黑體 (上) 和 微軟雅黑體 (下) 來顯示的結果"></center>
-<center class="imgtext">微軟正黑體 (上) 和 微軟雅黑體 (下) 來顯示的結果（圖片來源: <a href="https://louis925.wordpress.com/2018/03/29/%E8%AB%8B%E4%B8%8D%E8%A6%81%E7%94%A8%E5%BE%AE%E8%BB%9F%E9%9B%85%E9%BB%91%E9%AB%94%E4%BE%86%E9%A1%AF%E7%A4%BA%E5%8F%B0%E7%81%A3%E5%8D%80%E7%9A%84%E7%B9%81%E9%AB%94%E5%AD%97/" class="imgtext">稚空's Blog</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/n1LCpWm.png" alt="微軟正黑體 (上) 和 微軟雅黑體 (下) 來顯示的結果">
+    微軟正黑體 (上) 和 微軟雅黑體 (下) 來顯示的結果（圖片來源: <a href="https://louis925.wordpress.com/2018/03/29/%E8%AB%8B%E4%B8%8D%E8%A6%81%E7%94%A8%E5%BE%AE%E8%BB%9F%E9%9B%85%E9%BB%91%E9%AB%94%E4%BE%86%E9%A1%AF%E7%A4%BA%E5%8F%B0%E7%81%A3%E5%8D%80%E7%9A%84%E7%B9%81%E9%AB%94%E5%AD%97/" >稚空's Blog</a>）
+</p>
 
 還好後面有找到 [Adoltw 阿特魯所提供的儷黑體](https://www.ptt.cc/bbs/Steam/M.1392644855.A.476.html)與 [Clavius 提供思源黑體](https://steamcommunity.com/sharedfiles/filedetails/?id=402934070)的字型檔，不然我就要來研究怎麼自製字型了 XD，這邊記錄一下儷黑體的更換步驟：
 1. 下載[字體](http://www.mediafire.com/download/8i313kxns6045ds/The_witcher_2_ZH_Fonts.zip) 得到 **cfonts.swf** 及 **fonts_zh.swf** 兩個檔案，並放到 <b>the witcher 2\CookedPC\globals\gui\ </b> 下，其中 cfonts.swf 主要影響介面中的小字體
 2. 另外將 **fonts.csv** 放在 <b>the witcher 2\CookedPC\globals\gui\fonts  </b>  目錄下
 
-<br><br> 
+
 
 ## 其他修正
-
 有興趣的可以看看 [xone 的這篇](https://m.gamer.com.tw/forum/Co.php?bsn=7364&snB=29588)，他提供了一些包含
 1. 遊戲團隊提供的各項戰鬥修正/更新/再平衡檔案包
 2. 額外的繁體中文修正檔
@@ -65,7 +67,7 @@ tags:
 
 但不曉得是我下載的版本翻譯有修正過了是不是，目前玩起來感覺還好？所以就暫時不打算換了。
 
-<br><br> 
+
 
 ## 攻略
 最後記錄一下一些攻略的連結
@@ -83,7 +85,7 @@ tags:
 12. [《巫师2：刺客之王》详细图文攻略-第一章 - 巫师2：刺客之王攻略｜游久单机游戏频道](http://pcgame.uuu9.com/gonglue/201105/373507_5.shtml)
 13. [《巫師2》超詳細支線全攻略](https://www.gamewikia.com/guide/100042)
 
-<br><br> 
+
 
 ## 參考資料 
 1. Clavius (2015-03-06)。[更換字體為思源黑體](https://steamcommunity.com/sharedfiles/filedetails/?id=402934070) 。檢自 Steam 社群 (2020-06-15)。
@@ -91,7 +93,7 @@ tags:
 3. AviLun 艾維倫 (2015-06-05)。[【二代】《巫師2：加強版》修改字體傻瓜包(新增預覽圖)](https://forum.gamer.com.tw/Co.php?bsn=07364&sn=10709) 。檢自 巫師 The Witcher 系列 哈啦板 - 巴哈姆特 (2020-06-15)。
 4. xone (2015-06)。[【情報】巫師2加強版 啟動失敗/字體修正/戰鬥平衡MOD及各項修正檔[更新2]](https://m.gamer.com.tw/forum/Co.php?bsn=7364&snB=29588) 。檢自 巫師 The Witcher 系列 哈啦板 - 巴哈姆特 (2020-06-15)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

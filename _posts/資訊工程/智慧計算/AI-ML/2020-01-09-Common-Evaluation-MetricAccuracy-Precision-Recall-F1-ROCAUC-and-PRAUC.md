@@ -14,7 +14,6 @@ tags:
 當評估（Evaluation）一個模型的好壞時，不能總是依靠體感來挑選，因此需要一些量化指標去判定它的好壞。常見的量化指標有 **Accuracy**、**Precision**、**Recall** 與 **F1-Measure**。有時也會使用 **ROC-AUC** 與 **PR-AUC** 還評估在相同資料集下的表現結果。
 
 <!--more-->
-<br> 
 
 ## 名詞定義
 假定一個具體場景作為例子：
@@ -29,19 +28,18 @@ tags:
 |       | 50 人 | 50 人 |
 
 <br> 依此假定情境，我們可以先來定義 **True Positives**、**True Negatives**、**False Positives**、**False Negatives** 這四個名詞解釋。
-<br>
+
 
 ### **TP，True Positives**   
 其中第一個 True，表示分類正確，第二個 Positives 表示在此次篩檢將此檢體歸為 Positives，也就是被診出罹患流感的狀況。因此，True Positives 就是**診斷正確，且此人被診斷為有病**，簡單來說就是，<mark>病人被診出罹患流感</mark>。在本情境中共有 16 人。
-<br>
+
 
 ### **TN，True Negatives**   
 同理，第二個 Negatives 表示此次篩檢將此檢體<mark>未</mark>被診出罹患流感的狀況。因此，True Negatives 就是**診斷正確，且此人被診斷為正常**，換句話說就是，<mark>正常人沒有診出患病</mark>。在本情境中共有 36 人。
-<br>
+
 
 ### **FP，False Positives**
 其中第一個 False，表示分類錯誤。因此，False Positives 就是**診斷錯誤，且此人被診斷為有病**，也就是，<mark>正常人被誤診成罹患流感</mark>。在本情境中共有 34 人。
-<br>
 
 
 ### **FN，False Negatives**
@@ -50,7 +48,8 @@ tags:
 <br><br>
 
 接下來各個指標的計算，都是基於 TP、TN、FP、FN 這四種狀況進行排列組合：
-<br>
+
+
 
 ## Accuracy
 中文譯作<mark>準確率</mark>，其定義是：對於給定的測試資料集，分類器正確分類的樣本數與總樣本數之比。白話來說就是，<mark>模型預測正確數量所佔整體的比例</mark>。
@@ -60,7 +59,6 @@ tags:
 $$
 Accuracy =\cfrac{TP+TN}{TP+TN+FP+FN}
 $$
-
 
 <br>
 
@@ -77,13 +75,14 @@ $$
 以罕見疾病檢測來說，有 100 個樣本，有 99 位是 Negative（未患病），只有 1 個 Positive（患病）。假設現在有一模型，針對所有樣本預測輸出全是 Negative，則此模型的 Accuracy 高達 $\frac{99}{100} = 0.99$。Accuracy 雖高，但這個模型幾乎報廢不能使用的。
 
 
-<br><br>
 
 ## Precision
 先來張經典圖，方便大家想像：
-<center> <img src="https://i.imgur.com/1MKvczU.png" alt="Precision and recall"></center>
-<center class="imgtext">Precision and recall（圖片來源: <a href="https://en.wikipedia.org/wiki/Precision_and_recall" class="imgtext">維基百科</a>）</center>
-<br>
+
+<p class="illustration">
+    <img src="https://i.imgur.com/1MKvczU.png" alt="Precision and recall">
+    Precision and recall（圖片來源: <a href="https://en.wikipedia.org/wiki/Precision_and_recall">維基百科</a>）
+</p>
 
 在 Accuracy 不具參考價值的狀況下，就會採用 Precision 和 Recall 兩個指標，這兩個指標都是專注被預測為 Positive 的資料，但卻又各有所好。
 
@@ -107,7 +106,7 @@ $$
 
 在一般的應用中，如果更在乎的是預測出來的結果，就可以採用這個指標。看到的一個例子是<mark>門禁系統</mark>，它更在乎的是有否讓未經許可的人進去（也就是 FP 越小越好）
 
-<br><br>
+
 
 ## Recall
 以 Recall 則被譯為<mark>召回率</mark>。我的理解是它是原本是 Positive 的資料，它能夠召回多少，也就是說<mark>在原本 Positive 的資料中被預測出多少</mark>。
@@ -130,7 +129,7 @@ $$
 
 如果你的應用場景更偏向在意是否觸及了所有的 Positive case，例如：廣告投放它更在意的是你是否觸及了所有的潛在客戶（Positive case），寧可錯殺也不放過 XDDD
 
-<br><br>
+
 
 ## F1-score
 不過一般來說，這兩個指標通常不可兼得。如果你的模型夠貪婪，想預測出更多的  Ground Truth 為 Positive 的例子，那們它可能會發生誤判，雖然產生較高的 Recall，但也導致 Precision 下降。反之，若是模型都保守地預測，那麼 Precision 或許會很高，但 Recall 就會相對較低。
@@ -165,7 +164,7 @@ $$
 F_\beta = (\beta^2 + 1) * \cfrac{PR}{\beta^2*P+R}
 $$
 
-<br><br>
+
 
 ## ROC-AUC （Area Under Curve） 
 也就是指 ROC 曲線下方的面積，在說明 AUC 前我們先看看 ROC 空間，這個空間就是以 False Positive Rate 為 X 軸，True Positive Rate 為 Y 軸，其公式定義如下：
@@ -177,9 +176,10 @@ $$
 
 <br> 因此在空間中若存在一點離<mark>左上角越近</mark>的點預測準確率越高。反之，離右下角越近的點，預測越不準。
 
-<center> <img src="https://i.imgur.com/G5CdWgG.png" alt="ROC Space"></center>
-<center class="imgtext">ROC空間的4個例子（圖片來源: <a href="https://zh.m.wikipedia.org/zh-tw/ROC%E6%9B%B2%E7%BA%BF" class="imgtext">維基百科</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/G5CdWgG.png" alt="ROC Space">
+    ROC空間的4個例子（圖片來源: <a href="https://zh.m.wikipedia.org/zh-tw/ROC%E6%9B%B2%E7%BA%BF">維基百科</a>）
+</p>
 
 以這張圖為例，用 A、B 與 C 三不同的模型進行預測，並將結果繪製在 ROC 上，依此圖判斷最好的結果是 A 模型，反之，最糟糕的預測是 C 模型甚至劣於隨機分類。
 
@@ -207,13 +207,13 @@ $$
 不過雖說 ROC-AUC 可以不受資料變動或是不平衡的影響，但不平衡的資料可本身就有較高的初始值，在使用時要特別注意。
 
 
-<br><br>
+
 ## PR-AUC
 另外還有一個曲線，就是以 Recall 為 X 軸，Pecision 為 Y 軸，曲不同的閾值所畫的曲線。
 
 同樣的，也是線下面積越大越好，或是說曲線越靠近<mark>右上角</mark>越好。
 
-<br><br> 
+
 
 ## 參考資料 
 1. [Precision and recall｜Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall)

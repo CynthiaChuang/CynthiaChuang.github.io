@@ -22,10 +22,9 @@ IS_MULTI_GPU = bool(os.environ.get("IS_MULTI_GPU",0))
 
 <br> 但卻發現我這個 flag 每次都是 true，導致 flag 有設跟沒設是一樣 :expressionless:
 
-<br><br> 
+
 
 ##  bool() 
-
 這個函數最廣為人知的用法大概是：
 
 ```python
@@ -112,7 +111,7 @@ IS_MULTI_GPU = os.environ.get("MULTI_GPU", 0) == "1"
 ```
 <br> 最後嚴格要求當輸入為字串 `1` 時，才會啟動這個 flag。
 
-<br><br> 
+
 
 ## 參考資料 
 1. Chinmoy Lenka 。[bool() in Python](https://www.geeksforgeeks.org/bool-in-python/) 。檢自 GeeksforGeeks (2020-02-27)。

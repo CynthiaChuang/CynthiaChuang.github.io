@@ -13,7 +13,8 @@ tags:
 在實作匯率 App 時，我想讓 App 預先載入使用者最常使用及查詢的貨幣，讓使用者有比較好的 UX，只是到底怎麼定義使用者最常使用及查詢的貨幣，讓我有點傷透腦筋。
 
 <!--more-->
-<br> 
+
+
 
 ## 使用者最常使用及查詢的貨幣?
 一開始，是有想說透過 GPS 取得使用者所在位置，然後取得所在位置的幣別，作為最常使用的貨幣，想說你都在當地應該會用那邊的貨幣吧？
@@ -26,7 +27,7 @@ tags:
 
 原本是想說，有沒有辦法在得知預設幣別後，去找出這個國家最常兌換的貨幣，例如臺灣最常查詢日幣、美金、人民幣...，只是 servey 不到可用的 API，所以目前只好先寫死固定的貨幣，之後再來修正吧 QAQ
 
-<br><br> 
+
 
 ## 取得所在（預設）地點的貨幣
 在這邊使用了兩個類別，分別是 [Locale](http://developer.android.com/intl/zh-cn/reference/java/util/Locale.html) 及 [Currency](http://developer.android.com/intl/zh-tw/reference/java/util/Currency.html)
@@ -42,7 +43,7 @@ new  Locale("en", "US", "POSIX")
 
 先不管 variant 的部分，目前我想取出的是 **國家** 這項資訊：
  
- 1. **取出預設位置**
+1. **取出預設位置**
 	```java
 	// 取得預設的語言環境
 	Locale mDefault = Locale.getDefault()
@@ -53,7 +54,7 @@ new  Locale("en", "US", "POSIX")
 	```
 	<br>
  
- 2. **取得該位置所對應貨幣代碼**  
+2. **取得該位置所對應貨幣代碼**  
 	在 [Currency](https://www.tutorialspoint.com/java/util/currency_getinstance.htm) 中提供了一個 function，可藉由傳入 Locale 參數取得到該 Locale 國家所對應的貨幣，一旦得知該貨幣，就可取出得該貨幣的代碼。
 	
 	```java

@@ -18,13 +18,12 @@ tags:
 3. 無法寫入的資料，用 set 搞定他
 4. Mixin 混合其它的元件內容
 5. 使用 Directive 開發自己的互動 UI
- 
 
 <!--more-->
-<br>
+
+
 
 ## 使用 Extend 避免重複造輪子
-
 這邊跟 Java 一樣中使用 _extends_ 作為其擴充父類別的關鍵字，不過它雖然關鍵字是 _extends_ 有加 _s_ ，但實質是<mark>不支援</mark>多重繼承的。
  
 實做方式如下，先使用 <mark>Vue.extend</mark> 實做要被擴充父類別：
@@ -77,11 +76,9 @@ var childTwo = {
 在 <a herf="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super">mozilla</a> 有看到 super 的用法，但在使用時它一直報錯，懷疑與 Vue 本身有關係，詢問講師後得到的回答是：<b>「沒辦法使用super，這邊 extend 是 VUE API，所以與 ES6 Class Extend 是沒有關聯的」</b>。
 </div>
 
- 
-<br><br>
+
 
 ## Filter 自訂畫面資料呈現格式
-
 Vue.js 還有提供 Filter（過濾器）的功能，主要用於處理格式化文字等狀況。filter 可重複使用，一個值可以套用多個 filter。
 
 <br> filter 一樣可以分為 <mark>全域</mark> 與 <mark>局部</mark>，全域的宣告是在外層使用 <mark>Vue.filter</mark>
@@ -132,25 +129,24 @@ filters: {
 ```
 {% endraw %}
 
-<br><br>
+
 
 ## 無法寫入的資料，用 set 搞定它
-
 在第四章的進階模板語法介紹中，有提過 [Vue.set()](https://myskilltree.blogspot.com/2019/04/vuejs-04.html#v-for-與其使用細節)，那時說過 Vue 無法探測普通的新增屬性，因此必須使用 **Vue.set( target, key, value )** 強制將資料寫入視圖中，它才能在 UI 上反應。
 
 如過要確認物件的內容是否有被綁定在 DOM 中，可用 console.log 印出 this 確認 Vue 的內容，如果 <mark>物件的元素中不包含 get 與 set 時</mark>，下圖上框，代表<mark>資料結構並未被綁定在 DOM 中</mark>。
  
-![Imgur](https://i.imgur.com/vrR6i8A.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/vrR6i8A.png">
+</p>
 
 <br> 未被綁定在 DOM 的資料，雖然 log 或 tool 上看到的資料內容可能正確，但並不會觸發 UI 的更新。
 
 不過 get 與 set 似乎只有物件才有，其他變數型態如 String、boolean 並沒有，似乎沒有其他方式可以觀察。...不過好像也不用觀察...直接看有沒有在 data 裡面就好了 XD
 
 
-<br><br> 
 
 ## Mixin 混合其它的元件內容
-
 如果說 extend 是繼承的概念，它會繼承父類別的所有行為。而 <mark>mixin 有點類似 Util 或 Helper</mark>，在一旁用物件將元件的功能寫好，讓使用者可以直接程式中宣告 <mark>mixins</mark> 後傳入使用（這邊的 _s_ 總算加對了...），而一個元件可以傳入多的物件，需注意傳入的時，需以陣列方式傳入，即：
 
 ```javascript
@@ -190,7 +186,7 @@ Vue.component('row-component', {
 );
 ```
 
-<br><br>
+
 
 ## 使用 Directive 開發自己的互動 UI
 先把[文件](https://vuejs.org/v2/guide/custom-directive.html)啃一啃，尤其 [Hook Functions](https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions "Hook Functions") 與 [Directive Hook Arguments](https://vuejs.org/v2/guide/custom-directive.html#Directive-Hook-Arguments "Directive Hook Arguments") 的部分。
@@ -223,13 +219,10 @@ Vue.directive('focus', {
 
 
 
-<br><br>
-
 ## 其他連結
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 
-<br><br>
 
 ## 參考資料
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)

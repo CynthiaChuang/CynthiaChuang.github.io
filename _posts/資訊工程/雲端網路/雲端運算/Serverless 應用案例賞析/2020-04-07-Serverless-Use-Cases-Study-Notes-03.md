@@ -13,9 +13,10 @@ tags:
 - 物聯網 IoT
 --- 
 
-<center> <img src="https://i.imgur.com/I9XGCWZ.png" alt="投影片封面"></center>
-<center class="imgtext">投影片封面（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-02.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/I9XGCWZ.png" alt="投影片封面">
+    投影片封面（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-02.pdf">課程講義</a>）
+</p>
   
 這星期介紹 serverless 在物聯網的應用。
 
@@ -27,11 +28,9 @@ tags:
 一樣文件中出現的 IBM 文件連結若無法顯示或不存在，可以試著把 doc 語系換成英文後，再重新連結一次試試看。
 </div>
 
-<br><br>
+
  
 ## 回顧
-
-
 發現講師很厲害，每次的回顧都講得很雷同，應該有寫稿？所以細節直接[第二堂課程筆記](/Serverless-Use-Cases-Study-Notes-02#回顧)就好，我就不再複製貼上了。
 
 
@@ -50,9 +49,10 @@ tags:
 
 其實當我了解這概念的時候發現它真的很適合用來在 IoT 中應用。在 IoT 中，各類感知器會收集大量的資料，這些資料會被送往某個 Sink/Coordinator 或後端儲存。當資料達到特定條件或閥值時，會被認定為產生特定動作或事件，而這樣的事件又觸發程式進行處理，操控設備做出響應。IoT 整個過程與 Serverless 的事件驅動過程不謀而合。
 
-<center> <img  height="100" src="https://i.imgur.com/S5xaGmF.jpg" alt="IoT 應用"></center>
-<center class="imgtext">IoT （圖片來源: <a href="https://pixy.org/97299/f" class="imgtext">pixy</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/S5xaGmF.jpg" alt="IoT 應用">
+    IoT （圖片來源: <a href="https://pixy.org/97299/f">pixy</a>）
+</p>
 
 在將 Serverless 使用到 IoT 應用中，我們可以定義事件、規則和動作，使得事件被及時處理，設備及時響應，還可以使用 FaaS 對收集上來的資料進行格式轉化和索引，使得存儲資料可以更容易被獲取和分析，也可以使用定時呼叫對一段時間內收集的資料做分析和歸檔，甚至可以將 Serverless 平台可以延伸到邊緣計算環境中，這種方式將使得在雲端和邊緣使用統一的方法進行動態數據的處理成為可能。
  
@@ -60,10 +60,7 @@ tags:
 
 
  
-<br><br>
- 
 ## Feed (資訊來源/訂閱源)
-
 雖然講師認為這是回顧，但其實之前只在說明[觸發器 (Trigger)](/Serverless-Use-Cases-Study-Notes-01#OpenWhisk-程式編輯模型)提過 Event provider 的概念。
 
 那時說到，在 OpenWhisk 中觸發器僅某類別事件的具名頻道，在 OpenWhisk 之外會有一個 Event provider，由它監聽事件。當 provider 監聽到更新事件時，再由它通知 Trigger。
@@ -78,12 +75,12 @@ tags:
  
 個人覺得是提到的 Event provider 與這次說的 Feed 是類似的啦 XD
 
-<br>
 
 ### 簡介
-<center> <img src="https://i.imgur.com/1g4VI6S.png" alt="Feed "></center>
-<center class="imgtext">Feed （圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-02.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/1g4VI6S.png" alt="Feed ">
+    Feed （圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-02.pdf">課程講義</a>）
+</p>
 
 回到正題，Feed 它是管理外部事件觸發 Trigger 這件事，包括了創建 Trigger、刪除 Trigger、暫停觸發與取消暫停...等生命週期的動作事件。
 
@@ -124,12 +121,9 @@ Feed 主要負責從外部事件來源來接收事件，不管所接收事件原
     總覺的翻成連接有點詞不達意。不過它的意思是，若上面兩種都無法達成你的需求，例如你每次 Pooling 的時間較長不符合 FaaS 短暫的需求，那就可能需要起一個單獨的服務用於保持與 Feed 的持續連接。
 
     不過這個做起來感覺會非常麻煩，IBM 說它們 Cloudant changes 就是用這個做，晚點再來找找他們實做方式好了，先知道有這麼一個結構模式可以用來創建 Feed 就好。 
- 
- 
-<br>
 
-### Feed and Trigger 的差異
-     
+
+### Feed and Trigger 的差異     
 在找資料了時候[看到的](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-triggers#triggers_difference)，貼過來補充一下。
 
 這邊寫到 Feed 和 Trigger 雖是緊密相關的，但在技術上是不同的概念。
@@ -148,15 +142,12 @@ Cloud Functions 處理流入系統的**事件**。不過 Cloud Functions 是基�
 Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便捷方法。Feed 是全部屬於某個 Trigger 的事件的 stream。預先安裝的套件、可安裝的套件以及你自己定義的套件可能包含 Feed。Feed 通過 Feed 操作進行控制，該操作用於處理組成 Feed 的事件流的創建、刪除、暫停和恢復組成。Feed 操作通常通過使用管理通知的 REST API 與產生事件的外部服務進行交互。
  
 
+## Internet of Things（IoT,物聯網） 
+<p class="illustration">
+    <img src="https://i.imgur.com/VBmiORr.png" alt="IoT">
+    IoT（圖片來源: <a href="https://www..com/cht/xcdoc/cont?xsmsid=0J178110000554951149&sid=0J182351851717589046">昕奇雲端科技</a>）
+</p>
 
-<br>
-
-## Internet of Things（IoT,物聯網）
-
- 
-<center> <img src="https://i.imgur.com/VBmiORr.png" alt="IoT"></center>
-<center class="imgtext">IoT（圖片來源: <a href="https://www..com/cht/xcdoc/cont?xsmsid=0J178110000554951149&sid=0J182351851717589046" class="imgtext">昕奇雲端科技</a>）</center>
-<br>
 
 套句研究所教授說的物聯網就是<mark>物物相連的網路</mark>，周遭的物理設備可以通過網路（通常是無線網路）相連，比較常被討論的設備包含：
 1. 環境感知器（無線感測網路）
@@ -166,10 +157,8 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 依照[維基百科](https://zh.wikipedia.org/wiki/%E7%89%A9%E8%81%94%E7%BD%91)所提到的，物聯網的應用領域主要包括：運輸和物流領域、工業製造、健康醫療領域範圍、智慧環境（家庭、辦公、工廠）領域、個人和社會領域等。
 
-<br>
 
 ### IoT 應用特點
-
 1. **異構的大數據**  
     由於感測器數量繁多，且種類不盡相同，例如在環境感知應用中，可能會灑上成千上萬個感測器用於收集溫濕度...等資料，由於感測器會不間斷的收集環境資料，且每種設備回報的資料結構又都不盡相同。
     
@@ -187,13 +176,11 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
     在物聯網中邊緣節點因為成本的考量，恩...畢竟很多感測器灑出去就拿不回來，想想那荒山野嶺要拿的回來還真難，更別說還有些感測器是放水流的...，因此它們計算能力通常不強，儲存空間也不大，所以通常會將繁複的運算送到後端來進行。
 
 
-<br>
-
 ### 典型應用架構
-
-<center> <img src="https://i.imgur.com/opaee1R.png" alt="IoT 典型應用架構"></center>
-<center class="imgtext">IoT 典型應用架構（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/opaee1R.png" alt="IoT 典型應用架構">
+    IoT 典型應用架構（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf">課程講義</a>）
+</p>
 
 稍微解釋這張圖，圖片最左端的是終端設備與 Gateway，它們最終透過 MQTT 將資料送往 IoT 平台，這個 IoT 平台會轉手資料送往消息中樞上去， 通過這個消息中樞會將資料路由到不同的系統與平台上去，例如：後端存儲平台、Stream分析平台...等。而送往後端存儲平台可以再串接數據分析格式化...等等。
 
@@ -203,9 +190,10 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 
 **A. 輸入資料處理**
-<center> <img src="https://i.imgur.com/W7QJKgk.png" alt="輸入數據處理"></center>
-<center class="imgtext">輸入數據處理（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/W7QJKgk.png" alt="輸入數據處理">
+    輸入數據處理（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf">課程講義</a>）
+</p>
 
 在消息進入 IoT 平台後，被消息中樞獲取後，Feed 可以去監聽 kafka 上的消息取得新進入的原始數據，轉交進入 OpenWhisk 平台進行如格式轉換、資料過濾、保存...等操作，處理完畢後在放到消息中樞的另一個 topic 上，讓它將資料轉交不同的系統與平台。
 
@@ -214,35 +202,36 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 <br>
 
 **B. 資料存儲後的處理**
-<center> <img src="https://i.imgur.com/7SN8fWE.png" alt="資料存儲後的處理"></center>
-<center class="imgtext">資料存儲後的處理（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/7SN8fWE.png" alt="資料存儲後的處理">
+    資料存儲後的處理（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf">課程講義</a>）
+</p>
 
 也可以應用在，當 Feed 監聽到資料已經進入實體儲存時，我們可以去調用第三方服務去做分析、資料增強、與外部資料合併，也可以使用一個定期任務進行匯總，或把資料倒到機器學習的訓練集裡面去，並進行 re-train。
 
 <br>
 
 **C. Data stream 檢測**
-<center> <img src="https://i.imgur.com/FyK3nRn.png" alt="Data stream 檢測"></center>
-<center class="imgtext">Data stream 檢測（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/FyK3nRn.png" alt="Data stream 檢測">
+    Data stream 檢測（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf">課程講義</a>）
+</p>
 
 在另外一個也可以放到 Data stream 裡面，在這邊資料流會不斷的通過，可以當它通過時去檢查資料是否錯誤，或是當通過流數或資料超過了閥值，則觸發相對應的動作，例如在車載的應用中，某個時間資料流數目超過閥值，表車輛數目繁多可能造成壅塞，所以把號誌改為綠燈希望舒緩阻塞情況。
 
 <br>
 
 **D. 邊緣計算上的 Serverless能力**
-<center> <img src="https://i.imgur.com/r1Jjqyc.png" alt="Data stream 檢測"></center>
-<center class="imgtext">Data stream 檢測（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/r1Jjqyc.png" alt="Data stream 檢測">
+    Data stream 檢測（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-0.pdf">課程講義</a>）
+</p>
 
 最後這是一個待發展的趨勢，針對邊緣計算環境如 Gateway，提供基礎的資料處理能力，使之擁有統一的事件驅動能力。
  
 
-<br><br>
 
 ## 真實案例與實做
-
 真實案例這邊我就跳過了，感覺跟前面有些雷同，我就不重複寫了。
  
 另外 Demo 的部分，可以直接看看這兩份文件
@@ -253,13 +242,11 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 
  
-<br><br> 
-
 ## 其他連結
 1. [Serverless 應用案例賞析筆記目錄](/Serverless-Use-Cases-Study-Notes-Contents)
 2. 課程內容：影片（[IBM片源](https://mediacenter.ibm.com/media/03_Serverless+%E5%9C%A8%E7%89%A9%E8%81%94%E7%BD%91%E9%A2%86%E5%9F%9F%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/1_9u4hn9xd) 、[youku教育片源](https://v.youku.com/v_show/id_XMzg4MTM4MDEzNg==.html?spm=a2hzp.8253869.0.0)）/ [講義](https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-02.pdf) / [Blog](https://mp.weixin.qq.com/s/mDjTDcV-V25YRXbSFLNYyg)
 
-<br><br> 
+
 
 ## 參考資料 
 1. IBM开源技术 (2018-10-16)。[Serverless应用场景之二：物联网](https://mp.weixin.qq.com/s/mDjTDcV-V25YRXbSFLNYyg) 。檢自 IBM开源技术 微信(2020-04-09)。
@@ -268,5 +255,3 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 4. Justin Lee (2019-09-24)。[LINE Bot 系列文 — 什麼是 Webhook?](https://medium.com/@justinlee_78563/line-bot-%E7%B3%BB%E5%88%97%E6%96%87-%E4%BB%80%E9%BA%BC%E6%98%AF-webhook-d0ab0bb192be) 。檢自 Justin Lee - Medium (2020-04-09)。
 5. (2020-03-09)。[Creating triggers for events](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-triggers) 。檢自 IBM Cloud (2020-03-25)。
 6. (2020-03-09)。[Cloud Functions CLI](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cli-plugin-functions-cli#cli_action_create&locale=en) 。檢自 IBM Cloud (2020-03-25)。
-
-

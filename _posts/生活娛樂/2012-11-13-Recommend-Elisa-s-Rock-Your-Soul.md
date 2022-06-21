@@ -15,10 +15,11 @@ tags:
 <!--more-->
 <br>
 
-<center> <img src="https://imgur.com/thdMrqs
-.jpg" alt="《Then Comes the Sun》專輯封面"></center>
-<center class="imgtext">《Then Comes the Sun》專輯封面（圖片來源: <a href="https://en.wikipedia.org/wiki/Then_Comes_the_Sun" class="imgtext">Wikipedia</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/thdMrqs.png" alt="《Then Comes the Sun》專輯封面">
+    《Then Comes the Sun》專輯封面（圖片來源: <a href="https://en.wikipedia.org/wiki/Then_Comes_the_Sun">Wikipedia</a>）
+</p>
+
 
 
 ## 歌手介紹
@@ -48,10 +49,8 @@ tags:
 
 歌曲在 Elisa 溫暖動人的嗓音演繹下顯得十分特別，於一般的流行女聲完全不同 Elisa 的版本延續了她一貫的風格。Luce 和 Almeno Tu Nell’Universo 似乎是義大利語的歌曲，舒緩的配樂和 Elisa 動人的演繹，雖然聽不明白歌詞，卻讓人再三回味~~！
 
-<br><br>
 
 ### 歌詞
-
 ```
 The more I think, the less I see
 when I'm able to walk 
@@ -110,7 +109,7 @@ and the sun
 and the sun 
 ```
 
-<br><br> 
+
 
 ## 參考資料 
 1. [Then Comes the Sun｜Wikipedia](https://en.wikipedia.org/wiki/Then_Comes_the_Sun)

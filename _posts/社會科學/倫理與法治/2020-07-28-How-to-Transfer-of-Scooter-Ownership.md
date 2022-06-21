@@ -11,14 +11,14 @@ tags:
 這兩天在辦理機車過戶，不過網路上查到的資料不盡相同（主要是強制險的部分），決定記錄一下這次的流程。
 
 <!--more-->
-<center> <img src="https://i.imgur.com/BaZKyrR.jpg" alt="機車過戶囉"></center>
-<center class="imgtext">機車過戶囉（圖片來源: <a href="https://pxhere.com/zh/photo/501153" class="imgtext">Picpick</a>）</center>
- 
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/BaZKyrR.jpg" alt="機車過戶囉">
+    機車過戶囉（圖片來源: <a href="https://pxhere.com/zh/photo/501153">Picpick</a>）
+</p>
+
 
 
 ## 事前準備資料
-
 根據[台南監理站](https://www.facebook.com/311145242353662/posts/992655494202630/)提供的資訊，在前往監理站前，應該備妥下列資料：
 
 1. 新舊車主身分證
@@ -30,16 +30,14 @@ tags:
 
 結果姊姊叫我資料帶著直接去監理站就好，<mark>不用先處理保險</mark>，所以我就拿 <mark>我名字(舊車主)</mark> 的保險卡直接，是說新的保險好像沒有實體保險卡了，所以可能要去產險公司網站下載強制險的<mark>電子式證明</mark>，我看有人說最好印出來喔。
 
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/A2slaec.jpg" alt="臺南監理站">
+    臺南監理站（圖片來源: <a href="https://www.facebook.com/%E8%87%BA%E5%8D%97%E7%9B%A3%E7%90%86%E7%AB%99-311145242353662/"> 臺南監理站 | Facebook</a>）
+</p>
 
-<center> <img src="https://i.imgur.com/A2slaec.jpg" alt="臺南監理站"></center>
-<center class="imgtext">臺南監理站（圖片來源: <a href="https://www.facebook.com/%E8%87%BA%E5%8D%97%E7%9B%A3%E7%90%86%E7%AB%99-311145242353662/" class="imgtext"> 臺南監理站 | Facebook</a>）</center>
- 
 
-<br><br>
 
 ## 監理站當天流程
-
 因為我車是五年內的車，所以不需要再做臨時檢驗。但，如果你的車已經<mark>超過五年</mark>，則需要把機車騎到監理所站檢驗做[過戶臨檢](https://www.thb.gov.tw/page?node=77523aa5-9397-47bd-998e-6d61a89731c6)（免費）。
 
 另外若有交通違規案件，請先繳清（如果是台南監理站的話，可以先上二樓交通局繳納）。
@@ -64,13 +62,12 @@ tags:
 一切完成後就可拿到新車主名字的行照啦。
 
  
-<br><br> 
 
 ## 參考資料 
 1. 臺南監理站 (2017-03-27)。[〈監理你問我答—機車過戶篇〉](https://www.facebook.com/311145242353662/posts/992655494202630/) 。檢自 臺南監理站 ｜ Facebook (2020-05-29)。
 2. Fanny (2019-01-31)。[如何辦理汽機車過戶](https://medium.com/@fannylin0201/%E5%A6%82%E4%BD%95%E8%BE%A6%E7%90%86%E6%B1%BD%E6%A9%9F%E8%BB%8A%E9%81%8E%E6%88%B6-b0af21f0bad7) 。檢自 Fanny - Medium (2020-05-29)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -16,9 +16,11 @@ tags:
 但無論了解與否，都不妨礙我們知道一件事 — 它已經影響我們的判讀，或許我們可以從其他的指標來做推測，但總歸沒有直接判讀來的簡單。
 
 <!--more-->
-<br><br> 
+<br>
 
 回歸正題，這兩筆資料 **not set** 與 **not provided** 到底是如何形成的呢？
+
+
 
 ## not set
 not set 這個選項在搜尋總覽的關鍵字中占據了榜首（至少我的幾筆資料中都是此），它出現的情況也非常的多樣化，但總歸一句就是在訪問的過程中並<mark>沒有使用到任何的關鍵字</mark>，也因此無法提供任何關鍵字資料了。
@@ -29,7 +31,7 @@ not set 這個選項在搜尋總覽的關鍵字中占據了榜首（至少我的
 
 另外，若是將網頁另存或是加入到我的最愛，再經此拜訪，也會被歸到 not set 的項目中。
 
-<br><br>
+
 
 ## not provided
 若說前述是 Google Analytcis 的無心之過，那麼 **not provided** 的出現就是 Google <mark>有意為之</mark>的了。
@@ -43,7 +45,7 @@ not set 這個選項在搜尋總覽的關鍵字中占據了榜首（至少我的
 
 理論上，Google 可以讓 Google Analytics 解密然後記錄這些詞，實際上也是可行的，因為聽說 Google AdWords 的使用者仍然可以看到詳細的關鍵字數據。
 
-<br><br> 
+
 
 ## 參考資料 
 1. [Google Analytcis的(not set)與(not provided)是什麼？｜跟著工作熊玩賺部落格](http://www.blogfuntw.com/2012/11/analytics-not-set-provided/) 

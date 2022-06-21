@@ -17,22 +17,21 @@ tags:
 <!--more-->
 老樣子我把採坑的過程都寫了下來，如果只想知道最後的結果就直接拉到底吧。
 
-<br>
+
 
 ## 剪貼簿 DOM 事件
-
 既然行為牽扯到複製與貼上，我第一個反應就是翻翻跟剪貼簿相關的 DOM 事件類型，果然找到一些可以用事件分別是：`copy` 跟 `paste`。想了下我的應用情境，我應該是要在它複製時，加上版權訊息，畢竟執行貼上時應該已經離開這個網站了，不會再次觸發 DOM 事件。
 
 這簡單用 EventListenter 就好： 
 
-```
+```javascript
 document.addEventListener('copy', function (evt) {
     // ToDo: append source hyperlink
 });
 ```
 
 另外, 這樣寫法也行：
-```
+```javascript
 document.body.oncopy = function () {
     setTimeout( function () {
         // ToDo: append source hyperlink
@@ -40,15 +39,16 @@ document.body.oncopy = function () {
 }
 ```
         
-<br><br>
+
 
 ## 取得複製並修改文字
+
 
 ### 取得文字
 根據找到的資料，剪貼簿的資料儲存在 `clipboardData` 物件中，可以藉由 `getData()` 方法並傳入指定資料格式以取得數據：
 
 	 
-```
+```javascript
 document.addEventListener('copy', function (evt) {
     let text = clipboardData.getData("text/plain");
     console.log(text);
@@ -59,11 +59,12 @@ document.addEventListener('copy', function (evt) {
 
 不過，這樣直接硬幹似乎有點問題，我遲遲沒看到應該出現的 log，反而出現 Error：
 
-<center> <img src="https://i.imgur.com/TXuMHLr.png" alt="Error"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/TXuMHLr.png" alt="Error">
+</p>
 
 細看了下[介紹](https://www.cnblogs.com/xiaohuochai/p/5882902.html)，原來是瀏覽器的問題。文件中有提到，`clipboardData` 這個物件，在 IE 中是屬於 window 物件的屬性；但對於其他瀏覽器來說，此物件是屬於 event 的屬性。所以我嘗試改寫了剛剛程式，多了個判斷式：
-```
+```javascript
 document.addEventListener('copy', function (evt) {
     let clipdata = evt.clipboardData || window.clipboardData;
     let text = clipdata.getData("text/plain");
@@ -80,32 +81,33 @@ document.addEventListener('copy', function (evt) {
 <br>
 
 最後終於找到一個可用的寫法：
-```
+```javascript
 document.addEventListener('copy', function (evt) {
     let text = navigator.clipboard.readText();
     console.log(text);
 });
 ```
 但這個只能在 Chrome 上運作，而且即便在 Chrome 上也必須先得到使用者允許授權才能讀取：
-<center> <img src="https://i.imgur.com/kUxMiy7.png" alt="使用者允許授權"></center>
 
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/kUxMiy7.png" alt="使用者允許授權">
+</p>
+
+<br>
 
 所以我換了個想法，改用了 `document.getSelection`。不同於前面的實作方法，是從剪貼簿中取值，在進行複製前有一個必備的前行動作–<mark>反白</mark>，這個方法就是將反白的文字取出。
-```
+```javascript
 document.addEventListener('copy', function (evt) {
     let text = document.getSelection().toString();
     console.log(text);
 });
 ```
 
-<br>
 
 ### 修改文字
-
 搞定文字取出後，下一步就是對文字動手腳後回填。這部分就真的得仰賴剪貼簿 `clipboardData` 了，還好這個時候它沒有跟我鬧脾氣，順利回填了：
 
-```
+```javascript
 document.addEventListener('copy', function (evt) {
     let text = document.getSelection().toString();
     if (text) {
@@ -121,7 +123,7 @@ document.addEventListener('copy', function (evt) {
 
 就此，功能終於搞定了！(灑花)
 
-<br><br>
+
 
 ## 參考資料 
 1. 小火柴的蓝色理想 (2016-09-18)。[深入理解DOM事件类型系列第四篇——剪贴板事件](https://www.cnblogs.com/xiaohuochai/p/5882902.html)。檢自 博客园 (2021-11-23)。
@@ -134,7 +136,6 @@ document.addEventListener('copy', function (evt) {
 8. MaxLeeBK (2021-09-25)。[那些被忽略但很好用的 Web API / Clipboard](https://ithelp.ithome.com.tw/articles/10271977?sc=iThomeR)。檢自 iT 邦幫忙 (2021-12-02)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

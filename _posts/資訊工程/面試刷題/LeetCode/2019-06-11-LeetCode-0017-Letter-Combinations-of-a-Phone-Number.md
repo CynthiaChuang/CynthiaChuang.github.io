@@ -12,9 +12,10 @@ Given a string containing digits from  `2-9` inclusive, return all possible lett
 
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 
-<br>
+<p class="illustration">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" alt="repl.it">
+</p>
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
 <!--more-->
 <br>
 
@@ -32,7 +33,7 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
 **Related Topics:** `String`、`Backtracking`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這一題是要求字母的組合，在電話鍵盤上 2-9 分別對應到不同的字母，題目會給定一串數字，找出這串數字所有可能的字母組合。
@@ -61,7 +62,7 @@ class Solution:
       return results
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

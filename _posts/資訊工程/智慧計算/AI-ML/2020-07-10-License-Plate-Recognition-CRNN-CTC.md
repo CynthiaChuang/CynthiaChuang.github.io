@@ -16,18 +16,18 @@ tags:
 前一陣子的工作成果紀錄。文章內容及架構是基於同事的投影片進行擴充與刪減而成，雖然同事整理過了，但畢竟自己整理過才是自己的咩 :smile:。
 
 <!--more-->
-<br><br>  
+
 
 ## Optical Character Recognition, OCR
-
 OCR 為光學字元辨識（Optical Character Recognition）的縮寫，主要目的是將文字資料的圖像檔案進行分析辨識處理，取得文字及版面資訊。
 
-### 基本辨識流程
 
+### 基本辨識流程
 一般來說，一套完整的辨認系統通常包含三部分：影像掃描器（Image scanner）、光學字元辨認軟/硬體以及輸出介面（Output interface）。
 
-<center> <img src="https://i.imgur.com/CoO98Wb.png" alt="two stage flow"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/CoO98Wb.png" alt="two stage flow">
+</p>
 
 以超速照相為例，會先透過影像掃描器，即攝影機或是照相機拍下超速車輛，再並將圖片送往光學字元辨識軟體，也就是我們的車牌辨識系統，得到超速車輛的車牌，最後再把此車牌號碼送往罰單的系統，開出一張超速罰單，此步驟對應到就是流程中的輸出介面。
 
@@ -42,42 +42,40 @@ OCR 為光學字元辨識（Optical Character Recognition）的縮寫，主要�
 - **文字辨識**：  
     是對定位出的文字區域進行辨識，一般狹義的 OCR 指的是這一部分，本文也是專注在這一部分。
 
-<center> <img src="https://i.imgur.com/bRpsT8T.png" alt="two stage flow"></center>
-
-<br> 
+<p class="illustration">
+    <img src="https://i.imgur.com/bRpsT8T.png" alt="two stage flow">
+</p>
 
 ### 文字辨識方法
-
 文字辨識的方法依照實做的方式，可區分成 <mark>Two Stage</mark> 或 <mark>End To End</mark> 兩種。
 <br> 
 
 Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區域中的字元進行分割，也就是將車牌中的字一個一個擷出來，並將擷出的字元進行正規化，最後透過特徵截取將字元一一進行辨識。
 
-<center> <img src="https://i.imgur.com/irrsatm.png?1" alt="two stage flow"></center>
-<center class="imgtext">文字檢測 + 文字辨識(Two Stage) 辨識流程（圖片來源: <a href="https://sites.google.com/site/cs0991326/home/che-pai-bian-shi" class="imgtext">Google 協作平台</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/irrsatm.png?1" alt="two stage flow">
+    文字檢測 + 文字辨識(Two Stage) 辨識流程（圖片來源: <a href="https://sites.google.com/site/cs0991326/home/che-pai-bian-shi">Google 協作平台</a>）
+</p>
 
 而另一種 end to end 的方式則不需要進行字元分割，是一步到位的辨識方法。它會直接將擷取出的整份車牌送入神經網路中學習。
 
 兩相比較，前者多建立資料庫來進行比對，資料多寡並不會影響準確率，全倚賴特徵擷取的規則，但計算上較簡單。反之，後者的準確率受資料量影響，但計算較為複雜。
 
-<br><br> 
+
 
 ## CRNN
-
 說到車牌，之前[提過](/Taiwan-License-Plate-Rules-for-LPR)臺灣目前車牌是採兩代車牌並行使用的做法。目前流通的車牌總共有 `2-4`、 `4-2`、 `2-2`、 `3-2`、 `2-3`、 `3-3` 與 `3-4`  共 7 種格式，長度由 4 到 7 不等。
 
 
 考慮到不定長度的狀況，最後決定採用 [CRNN](https://arxiv.org/pdf/1507.05717.pdf)，將文字辨識轉為序列問題，透過 DCNN（深度卷積網絡）串接 RNN 的模型架構，對圖片進行文字識別。
 
-<br>
 
 ### 網路基本架構
-<center> <img src="https://i.imgur.com/jLmg7u1.png" alt="CRNN OCR Network Architecture
-"></center>
-<center class="imgtext">CRNN OCR Network Architecture
-（圖片來源: <a href="https://arxiv.org/pdf/1507.05717.pdf" class="imgtext">論文</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/jLmg7u1.png" alt="CRNN OCR Network Architecture">
+    CRNN OCR Network Architecture
+（圖片來源: <a href="https://arxiv.org/pdf/1507.05717.pdf">論文</a>）
+</p>
 
 根據上圖架構 CRNN 模型主要可以分成三個部分：
 1. Convolutional Layers
@@ -91,28 +89,29 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 
 在將圖片餵進網路之前，需要對圖片做前處理，在原始的網路架構中，僅接受 `W x 32 (寬 x 高)` 的灰階圖片，因此輸入尺寸為 $(width, height, channel)=(W, 32, 1)$。當讀入圖片後，會經由使用 VGG 概念而採用的大量 $3 \times 3$ Conv 及 $2 \times 2$ pooling 所構成的網路，最終會得到此圖的特徵向量。
 
-
-<center> <img src="https://i.imgur.com/EpQEZpo.png" alt="Network configuration summary"></center>
-<center class="imgtext">Network configuration summary（圖片來源: <a href="https://arxiv.org/pdf/1507.05717.pdf" class="imgtext">論文</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/EpQEZpo.png" alt="Network configuration summary">
+    Network configuration summary（圖片來源: <a href="https://arxiv.org/pdf/1507.05717.pdf">論文</a>）
+</p>
 
 在此必須提到一件事，根據論文架構表格中，作者將最後後兩層的 pooling size 改為 <mark>1 X 2</mark> pooling。有人認為這是為了盡可能不丟失寬度方向的資料，會較適合英文字母的識別（例如非等寬字體中較窄的 i 與 l）。
 
 不過在論文作者的[原始碼](https://github.com/bgshih/crnn/blob/f5d41e3355fc4447f77cd6d5e5777b3a160c93cb/model/crnn_demo/config.lua#L68)中，在最後兩層的 pooling size 並非如論文內紅框處設計，[作者表示](https://github.com/bgshih/crnn/issues/6)論文中的 $1 \times 2$，其實是筆誤 XDDD 
-<br>
 
-<center> <img src="https://i.imgur.com/ykx0PYw.png" alt=""></center>
-<center class="imgtext">（圖片來源: <a href="https://github.com/bgshih/crnn/issues/6" class="imgtext">bgshih/crnn</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/ykx0PYw.png" alt="">
+    （圖片來源: <a href="https://github.com/bgshih/crnn/issues/6">bgshih/crnn</a>）
+</p>
 
 但根據我同事的實驗，在我們的資料集上使用 $1 \times 2$ 的 pooling size，表現確實比使用 $2 \times 2$ 好，這算是美麗的誤會嗎？
 
 
 因此我們決定當作沒看到筆誤這件事，仍舊按照論文中這張表格進行實作。當過完所有的 Maxpooling 後，寬度為 $W	\div 2^2$ ，高度為 $H \div 2^4$，在過最一層 $2 \times 2$ Conv，且 padding size 為 0（padding = ‘VALID’），最終輸出尺寸為 $(\frac{W}{4}, 1, 512)$。
   
-<center> <img src="https://i.imgur.com/FMOuqrN.png" alt="Convolutional Layers"></center>
-<center class="imgtext">Convolutional Layers（圖片來源: <a href="https://arxiv.org/pdf/1507.05717.pdf" class="imgtext">論文</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/FMOuqrN.png" alt="Convolutional Layers">
+    Convolutional Layers（圖片來源: <a href="https://arxiv.org/pdf/1507.05717.pdf">論文</a>）
+</p>
 
 但此階段的輸出無法直接最為下一階段的，需要經過一次轉換，因為 RNN 所接受的輸入格式應該為 $(timesteps, dim)$，很明顯的維度不對。
 
@@ -132,25 +131,25 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 
 值得一提的是，這邊並不是採用常用的 Softmax cross-entropy loss，而是所謂的 <mark>CTC loss（Connectionist Temporal Classification，聯接時間分類）</mark>。
 
-<br>
 
 ### Connectionist Temporal Classification, CTC
-
 在這邊引入 CTC loss 是為了處理<mark>不定長度序列的對齊問題</mark>！
 
 在一般使用 Softmax cross-entropy 計算 loss 時，會每一行輸出都對應到一個字元。因此你必須先標出每個字元在圖像中的位置，並調整網路以保證 Recurrent Layers 後所輸出的特徵值中，每一行會剛好對應到一個字元，才能進行訓練。
 
-<center> <img src="https://i.imgur.com/fi6mMeg.png?1" alt="one column mapping to one char"></center>
-<center class="imgtext">上層輸出的特徵值必須每一行對應到一個字元，才能進行訓練（圖片來源: <a href="https://www.cnblogs.com/skyfsm/p/10335717.html" class="imgtext">冠军的试炼</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/fi6mMeg.png?1" alt="one column mapping to one char">
+    上層輸出的特徵值必須每一行對應到一個字元，才能進行訓練（圖片來源: <a href="https://www.cnblogs.com/skyfsm/p/10335717.html">冠军的试炼</a>）
+</p>
 
 但在實務上，若要額外標注每個字元位置會比單純標記字元，多出 5 倍以上的時間，耗時又費工。且由於車牌字元長度不定、照片角度不一、字寬不等、字型也有所差別，想讓每一行會剛好對應到一個字元，幾乎不可能。
 
 但若忽略這個問題，直接對 Recurrent Layers 輸出進行序列分類，可能會出現冗餘資訊，如一個字母被連續識別兩次。遇到這情況又不可直接去除重複的字母，因為原始文字可能本來就存在連續重複字元，如：cook、geek、hello。
 
-<center> <img src="https://i.imgur.com/FuIOQqa.png" alt="直接序列分類可能會出現冗餘資訊"></center>
-<center class="imgtext">直接序列分類可能會出現冗餘資訊（圖片來源: <a href="http://fancyerii.github.io/books/ctc/" class="imgtext">李理的博客</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/FuIOQqa.png" alt="直接序列分類可能會出現冗餘資訊">
+    直接序列分類可能會出現冗餘資訊（圖片來源: <a href="http://fancyerii.github.io/books/ctc/">李理的博客</a>）
+</p>
 
 那如何針對每一幀進行對齊與識別？幸運的是，這問題在語音辨識中已有所研究。這是因為每個人語速不一，因此導致語音分幀結果和標籤對齊的挑戰。
 
@@ -164,22 +163,24 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 </div>
 <br>
 
-<center> <img src="https://i.imgur.com/JTaLcpw.png" alt="直接序列分類可能會出現冗餘資訊"></center>
-<center class="imgtext">直接序列分類可能會出現冗餘資訊（圖片來源: <a href="http://fancyerii.github.io/books/ctc/" class="imgtext">李理的博客</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/JTaLcpw.png" alt="直接序列分類可能會出現冗餘資訊">
+    直接序列分類可能會出現冗餘資訊（圖片來源: <a href="http://fancyerii.github.io/books/ctc/">李理的博客</a>）
+</p>
 
 實做過程中須注意的是，CTC 存在著 Blank 的概念，可以想像成序列剛好位於字與字之間的空白，因此在設計 Recurrent Layers 的輸出時會保留一個維度給 Blank，Blank 本身並不影響輸出結果，在輸出時 Blank 會被視為無意義字元給濾掉，但在計算每條路徑的機率時會將納入計算。
 
-<center> <img src="https://i.imgur.com/JxSAKwO.png" alt="直接序列分類可能會出現冗餘資訊"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/JxSAKwO.png" alt="直接序列分類可能會出現冗餘資訊">
+</p>
 
-<br><br> 
+
 
 ## CRNN 實作
-
 在實做方面我們參考了 [CRNN-Keras](https://github.com/qjadud1994/CRNN-Keras) 的實做。但我們針對我們資料集，我們將輸入的圖像改成了彩色圖片，不做額外優化 baseline 分數約為 94.69%。
 
-### 優化與改善
 
+### 優化與改善
 我們分別針對資料本身、前處理、模型與後處理做了些嘗試與調整，這些調整約提昇了 3.37%，準確度由 94.69% 來到了 98.06%。
 <br> 
 
@@ -208,7 +209,6 @@ P.S. Augmentor 的安裝與使用可以看[這篇](/Augmentor-Image-Augmentation
 其他嘗試 ResNet、[CRNN12](https://sci-hub.tw/10.1007/978-981-13-1733-0_9)、[STN(Spatial Transformer Networks)](https://zhuanlan.zhihu.com/p/37110107)，不過最終模型實驗的改善都先擱置了。
 
 
-<br><br> 
 
 ## 參考資料 
 1. PLUSTEK 公司 (2009-09-12)。[什麼是 OCR?](http://www.fuji.com.tw/posts/1889) 。檢自 蘋果網 (2020-03-17)。
@@ -224,7 +224,7 @@ P.S. Augmentor 的安裝與使用可以看[這篇](/Augmentor-Image-Augmentation
 11. 左左左左想 (2017-07-30)。[语音识别：深入理解CTC Loss原理](https://blog.csdn.net/Left_Think/article/details/76370453)。檢自 CSDN博客 (2020-06-03)。
 12. lili on。[CTC理论和实战](http://fancyerii.github.io/books/ctc/)。檢自 李理的博客 (2020-07-10)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

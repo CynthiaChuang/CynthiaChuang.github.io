@@ -15,14 +15,11 @@ tags:
 所以在猶豫完改不改分類之後，我決定搞個大的：直接<mark>移除網址中的類別</mark>，還順便把<mark>時間也移了</mark>！
 
 <!--more-->
-<br><br>  
-
 ## 如何修改網址：Permalink
 在 Jekyll 中，靜態網址的格式制定是由 <mark>Permalink</mark> 這個參數所控制，可以直接在 `_config.yml` 檔案中修改，也可以在每篇文章的 `yaml metadata block` 中配置。
 
 我這邊為了一勞永逸所以是採用修改 `_config.yml` 檔案的方式。
 
-<br><br> 
 
 ## Permalink 的參數
 若按照我先前的網址格式，在 config 中會是這樣的呈現：
@@ -57,7 +54,6 @@ permalink: /:title/
 
 <br> 好了，到這邊就修改完全部文章的網址了。剩下的工作就是把之前引用的舊網址全部改掉了!
 
-<br><br> 
 
 ## 參考資料 
 1. Permalinks。檢自 [Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/permalinks/) (2020-02-07)。

@@ -16,7 +16,6 @@ tags:
 
 <!--more-->
 
-<br>
 
 ## Highlighting
 先來回顧下之前的實做方式。所要做的設定有二，分別是設定**螢光筆顏色**與 **CSS 本體**：
@@ -54,18 +53,18 @@ tags:
 ```
 
 出來的效果會像是這樣：
-
-![](https://i.imgur.com/ZaF6hhZ.png)
-
-
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/ZaF6hhZ.png">
+</p>
 
 
 
 ## Mark
 但後來發現，其實不用著麼麻煩，在 HTML 用中有個 [`<mark>`](https://www.w3schools.com/tags/tag_mark.asp) 的標籤 (Tag)，而且它實做出來的效果似乎更好，至少它要打的字更少 XDDD
 
-![](https://i.imgur.com/nRHhI77.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/nRHhI77.png">
+</p>
 
 ```html
 拜託，請幫我畫<mark>重點</mark>。
@@ -88,10 +87,10 @@ $mark-danger: #ffb6c1;
 ### 外觀
 好了，搞定顏色後，我另外一件想做的事 - 就是換定螢光筆的外觀。在使用螢光筆的時候，比起粗的那端，我更喜歡使用細的那邊，所以決定來做版細的螢光筆，並將它設為預設的樣式。
 
-<center> <img src="https://i.imgur.com/anDnWNi.png" alt="螢光筆粗細"></center>
-<center class="imgtext">螢光筆粗細（圖片來源: <a href="https://2ru.co/product/%E6%9C%AC%E8%89%B2%E5%8E%9F%E5%93%81%E4%BA%94%E8%89%B2%E9%9B%99%E9%A0%AD%E7%B2%97%E7%B4%B0%E8%9E%A2%E5%85%89%E7%AD%86%E7%B5%84-1%E5%85%A5/"  class="imgtext">鉺曘文具</a>）</center>
-<br>
-
+<p class="illustration">
+    <img src="https://i.imgur.com/anDnWNi.png" alt="螢光筆粗細">
+    螢光筆粗細（圖片來源: <a href="https://2ru.co/product/%E6%9C%AC%E8%89%B2%E5%8E%9F%E5%93%81%E4%BA%94%E8%89%B2%E9%9B%99%E9%A0%AD%E7%B2%97%E7%B4%B0%E8%9E%A2%E5%85%89%E7%AD%86%E7%B5%84-1%E5%85%A5/">鉺曘文具</a>）
+</p>
 
 #### 粗螢光筆
 在做細螢光筆之前，先來做做簡單的粗螢光筆，只要修改 `background-color` 顏色即可。不過因為打算預設樣式是細的，所以我這邊多加了個 `class` 選擇器：
@@ -122,9 +121,9 @@ $mark-danger: #ffb6c1;
 
 漸層色的設置會將上半設置為透明、讓顏色集中在下半。可以透過調整各層的百分比，調整螢光筆的粗細：
 
-<center> <img src="https://i.imgur.com/sgafaxg.png?1" alt="漸層色"></center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/sgafaxg.png?1" alt="漸層色">
+</p>
 
 ```sass
 linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $mark-default 90%, transparent 95%);
@@ -150,7 +149,6 @@ linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $m
   }    
 ```
 
-<br>
 
 #### 簽字筆
 以前在做筆記時，除了畫螢光筆外，另外一種作記號的方式就是<mark>劃線</mark>。想說既然要做了，就順便把功能給補上。
@@ -177,15 +175,14 @@ linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $m
 }
 ```
 
-<br>
 
 ### 使用
-
 在文句中需畫螢光筆的地方，插入下列程式碼，就可以看到相對應的效果了。
 
 #### 細螢光筆
-
-![](https://i.imgur.com/OvvX9zp.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/OvvX9zp.png">
+</p>
 
 ```html
 拜託，請幫我畫<mark>重點</mark>。
@@ -193,11 +190,11 @@ linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $m
 拜託，請幫我畫<mark class="danger">重點</mark>。
 ```
 
-<br>
 
 #### 粗螢光筆
-
-![](https://i.imgur.com/l2Dqlmf.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/l2Dqlmf.png">
+</p>
 
 ```html
 拜託，請幫我畫<mark class="thick">重點</mark>。
@@ -205,11 +202,11 @@ linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $m
 拜託，請幫我畫<mark class="thick danger">重點</mark>。
 ```
  
-<br>
 
 #### 簽字筆
-
-![](https://i.imgur.com/GM3SN8M.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/GM3SN8M.png">
+</p>
 
 
 ```html
@@ -218,9 +215,7 @@ linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $m
 拜託，請幫我畫<mark class="under danger">重點</mark>。
 ```
 
- 
 
-<br><br> 
 
 ## 參考資料 
 1. [HTML mark Tag](https://www.w3schools.com/tags/tag_mark.asp)。檢自 W3Schools (2021-03-10)。
@@ -229,7 +224,6 @@ linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $m
 4. MDN contributors (2020-11-16)。[linear-gradient](https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient())。檢自 MDN (2021-03-10)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

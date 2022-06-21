@@ -33,7 +33,7 @@ trie.search("app");     // returns true
 
 **Related Topics:**`Trie`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 相見恨晚的一題阿，我面試時就是考這題的概念，可惜太久沒寫 Tree ，也沒用 Python 寫過 Tree，面試實作時超級卡的 Orz
@@ -93,12 +93,13 @@ class Trie:
       is_exist, _ = self.find(prefix)
       return is_exist
 ```
-<br><br>
+
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)
 
-<br><br>
+
 
 ## 參考資料 
 1. [大量 String 資料結構 : Trie｜演算法筆記](http://www.csie.ntnu.edu.tw/~u91029/String.html#6)

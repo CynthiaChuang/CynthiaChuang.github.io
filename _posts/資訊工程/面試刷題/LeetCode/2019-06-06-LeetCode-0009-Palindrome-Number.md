@@ -42,7 +42,7 @@ Coud you solve it without converting the integer to a string?
 
 **Related Topics:** `Math`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 既然是判斷回文，那麼直覺作法就是比頭尾是否相同，如果轉字串實做會變得很簡單，所以我就直接做 Follow up 要求了。
@@ -79,7 +79,7 @@ class Solution:
 
 
 <br><br>
-除比頭尾外，另一個想法是翻轉後兩數直接相比，個人推測這種方法的效能應該會比較好
+除比頭尾外，另一個想法是翻轉後兩數直接相比，個人推測這種方法的效能應該會比較好。
 
 ```python
 class Solution:
@@ -100,7 +100,7 @@ class Solution:
 ```
 <br> 果然效能好很很多，從 **88 ms/60.57 %** 提升到 **56 ms/ 99.10%** 。
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

@@ -25,12 +25,12 @@ Given `1->2->3->4`, you should return the list as `2->1->4->3`.
 
 **Related Topics:** `Linked List`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是要以兩個節點為一組翻轉鏈結串列，難度不高，但很容易把自己搞暈頭轉向，建議先畫圖輔助會比較清楚。
 
-<br>
+
 
 ## 迭代
 這個的想法比較簡單，就是兩兩指標交換，不過在交換時需要注意下交換的順序，不然很容易把指標搞丟了。
@@ -55,7 +55,7 @@ class Solution:
       return dummy_head.next
 ```
 
-<br>
+
 
 ## 遞迴
 想說迭代做的到的，應該也可以用遞迴來實做。實做時，先交換最後兩個，再依序向前交換。
@@ -73,7 +73,7 @@ class Solution:
       return node            
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

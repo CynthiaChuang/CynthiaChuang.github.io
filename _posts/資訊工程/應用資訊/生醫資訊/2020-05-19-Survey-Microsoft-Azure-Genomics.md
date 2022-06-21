@@ -15,14 +15,13 @@ tags:
 
 <!--more-->
 
-<br><br> 
 
 ## 基因定序流程
+<p class="illustration">
+    <img src="https://i.imgur.com/SCrZi7c.jpg" alt="DNA">
+    DNA（圖片來源: <a href="https://pixabay.com/">Pixabay</a>）
+</p>
 
-<center> <img src="https://i.imgur.com/SCrZi7c.jpg" alt="DNA"></center>
-<center class="imgtext">DNA（圖片來源: <a href="https://pixabay.com/" class="imgtext">Pixabay</a>）</center>
-
-<br> 
 在開始之前，我們先提提基因定序的流程。一般來說，從採檢到生物樣本到最終提出變異報告，可分成三個階段。
 
 這裡採用 MS 在 [Genomics 白皮書](https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf)中的分類定義：
@@ -45,22 +44,24 @@ tags:
     
 這階段取決於分析的目的以及臨床醫生或研究人員的總體方法，此階段使用了各種各樣的工具和資料庫。
     
-<center> <img src="https://i.imgur.com/Z4o4ubJ.png" alt="Analysis Pipeline"></center>
-<center class="imgtext">Analysis Pipeline（圖片來源: <a href="https://academic.oup.com/clinchem/article/61/1/124/5611448" class="imgtext">Bioinformatics for Clinical Next Generation Sequencing</a>）</center>
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/Z4o4ubJ.png" alt="Analysis Pipeline">
+    Analysis Pipeline（圖片來源: <a href="https://academic.oup.com/clinchem/article/61/1/124/5611448">Bioinformatics for Clinical Next Generation Sequencing</a>）
+</p>
 
 不過，這分類不是絕對的，比較像業界的潛規則（de facto standard）。就有曾經看過把 Annotation 列在次級分析的步驟中，例如：MS Azure 就在自家提供的 Databricks [文件中](https://docs.microsoft.com/zh-tw/azure/databricks/applications/genomics/)描述 Genomics 的操作步驟時，就將它給列在次級分析。
 
-    
-<center> <img src="https://imgur.com/IC5TYvY.png" alt="Analysis Pipeline"></center>
-<center class="imgtext">MS 其他服務就把它分在次級分析（圖片來源: <a href="https://docs.microsoft.com/zh-tw/azure/databricks/applications/genomics/" class="imgtext">MS Azure Databricks </a>）</center>
+<p class="illustration">
+    <img src="https://imgur.com/IC5TYvY.png" alt="Analysis Pipeline">
+    MS 其他服務就把它分在次級分析（圖片來源: <a href="https://docs.microsoft.com/zh-tw/azure/databricks/applications/genomics/">MS Azure Databricks</a>）
+</p>
 
-<br><br>
 
 
 ## Microsoft Genomics
 
 回頭來看這次的主角 - Microsoft Genomics，按照官網的簡介稍微回顧下： 
+
 
 ### 簡介
  - **目標客群**  
@@ -77,12 +78,10 @@ tags:
    1. 資料的操作與保管使用有通過 ISO 認證並遵循 HIPAA 法規 ，確保患者紀錄和健康資訊的隱私。
    2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://azure.microsoft.com/en-us/resources/a-practical-guide-to-designing-secure-health-solutions-using-microsoft-azure/)。(:cold_sweat:...誰看完了分享一下吧！記錄一下有這東西就好，需要實在回頭看。
 
-<br>
-
-<center> <img src="https://i.imgur.com/EsOa8j3.png" alt="Microsoft Genomics"></center>
-<center class="imgtext">Microsoft Genomics（圖片來源: <a href="https://azure.microsoft.com/zh-tw/services/genomics/" class="imgtext">Microsoft Azure 截圖</a>）</center>
-
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/EsOa8j3.png" alt="Microsoft Genomics">
+    Microsoft Genomics（圖片來源: <a href="https://azure.microsoft.com/zh-tw/services/genomics/">Microsoft Azure 截圖</a>）
+</p>
 
 
 **簡單來說**  
@@ -90,28 +89,29 @@ MS Genomics 提供儲存與運算空間，讓使用者做無需處理軟硬體�
 
 上一張他家合作夥伴 [Persistent](https://www.persistent.com/partner-ecosystem/) 的圖，這張圖很的詮釋了 MS Genomics 所提供的服務範圍。下圖中橘色的部分是 Persistent 所提供的服務，可以看出來是針對三級分析與二級分析的輸出結果進行衡量；而鐵灰色的部分則是所提供的服務次級分析的 GATK 最佳 pipeline。
 
-<center> <img src="https://i.imgur.com/aVzl6bv.jpg" alt="Persistent Analysis Pipeline" ></center>
-<center class="imgtext"> 灰色底的為 MS Genomics 所提供的服務，橘色底則為 Persistent 所提供的服務  （圖片來源: <a href="https://www.persistent.com/partner-ecosystem/microsoft/genomics-and-azure/" class="imgtext">Persistent Systems</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/aVzl6bv.jpg" alt="Persistent Analysis Pipeline">
+    灰色底的為 MS Genomics 所提供的服務，橘色底則為 Persistent 所提供的服務（圖片來源: <a href="https://www.persistent.com/partner-ecosystem/microsoft/genomics-and-azure/">Persistent Systems</a>）
+</p>
 
-// 在看看要塞哪裡
-<center> <img src="https://i.imgur.com/jjZ8wwi.png" alt="Persistent Analysis Pipeline" ></center>
-<center class="imgtext">Microsoft Genomics Service（圖片來源: <a href="https://www.microsoft.com/en-us/genomics/" class="imgtext">Microsoft Genomics</a>）</center>
-<br>
+// 再看看要塞哪裡
+<p class="illustration">
+    <img src="https://i.imgur.com/jjZ8wwi.png" alt="Persistent Analysis Pipeline">
+    Microsoft Genomics Service（圖片來源: <a href="https://www.microsoft.com/en-us/genomics/">Microsoft Genomics</a>）
+</p>
 
 
 ### 系統架構
-
 系統架構分成兩部分來看，先看 Microsoft Genomics 內部的架構，接下來再來看整體的工作流程。
 
 
 #### 內部架構
-
 Microsoft Genomics 系統由上而下總共可分為三個部分，分別是：Service Controller、SNAP Engine、SNAP Engine 與次級分析的 pipline - BWA-MEM & GATK HaplotypeCaller。
 
-<center> <img src="https://i.imgur.com/qgJIlqx.png" alt="Architecture"></center>
-<center class="imgtext">Microsoft Genomics Architecture（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf" class="imgtext">白皮書</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/qgJIlqx.png" alt="Architecture">
+    Microsoft Genomics Architecture（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf">白皮書</a>）
+</p>
 
 
 **Service Controller**  
@@ -131,17 +131,19 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
 
 ~~(...恩，所以把 SNAP 核心演算法弄掉了，為啥還叫 SNAP Engine？)~~
 
-<center><img src="https://i.imgur.com/fq0zMBR.png" alt=" Standard BWA/GATK Pipeline"></center>
-<center class="imgtext">Standard BWA/GATK Pipeline（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf" class="imgtext">白皮書</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/fq0zMBR.png" alt=" Standard BWA/GATK Pipeline">
+    Standard BWA/GATK Pipeline（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf">白皮書</a>）
+</p>
 
 這是一張 GATK 的標準流程，每個綠色區塊之間都進行了一次讀寫動作。而 SNAP Engine 宣稱它具有一個非同步輸入/輸出子系統，可有效處理大量基因體資料，並排程跨多核心的計算密集型工作並收集結果。
 
 為了儘量減少硬碟讀取次數，他們改良了 pipeline 的流程只進行兩次的讀寫動作，減少了標準 BWA/GATK pipline 中的讀寫次數。
 
-<center> <img src="https://i.imgur.com/BFgcc8q.png" alt=" Microsoft Genomics Pipeline"></center>
-<center class="imgtext">Microsoft Genomics Pipelin（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf" class="imgtext">白皮書</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/BFgcc8q.png" alt=" Microsoft Genomics Pipeline">
+    Standard BWA/GATK Pipeline（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf">白皮書</a>）
+</p>
 
 可以看到改良後的 pipeline 分成兩個階段，在第一階段是跨所有核心進行大量批次定序片段比對，並進行前處理時不依賴任何的排序，例如：收集用來做定序質量分數重新校正的統計資料。然後，將定序片段依序批次寫入中間文件。
 
@@ -156,7 +158,6 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
 <br>
 
 **BWA-MEM & GATK HaplotypeCaller**   
-
 先提一下 HaplotypeCaller 的核心操作就是四步：
 
 1. 尋找激活區域，就是和參考基因體不同部分較多的區域
@@ -167,13 +168,12 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
 在這 BWAMEM 和 GATK HaplotypeCaller 程式碼的大部分保持不變，以保持與標準 pipelines 的兼容性。僅進行少量修改預先計算的激活區域通過 pipelines 輸入到標準 input 中，也就是上述提到的第一步驟，這步驟沒有相依性可以拆開來做。
 
 
-<br>
-
 #### 整體的工作流程
-<center> <img src="https://i.imgur.com/Vtv8sER.png" alt="Microsoft Azure workflow"></center>
-<center class="imgtext">Microsoft Azure workflow（圖片來源: <a href="https://github.com/microsoft/CromwellOnAzure" class="imgtext">
-CromwellOnAzure</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/Vtv8sER.png" alt="Microsoft Azure workflow">
+    Microsoft Azure workflow（圖片來源: <a href="https://github.com/microsoft/CromwellOnAzure">
+CromwellOnAzure</a>）
+</p>
 
 由找到的流程圖看來，他們後面用的 Cromwell，不過是有經過客製化，稱作[Cromwell on Azure](https://github.com/microsoft/CromwellOnAzure)，搭配 TES 最回後端來調用 Azure Batch 。若是對回服務內部的架構來看，被我暱稱飛天豬+TES的這部分，會對照回 Service Controller。
 
@@ -186,10 +186,7 @@ CromwellOnAzure</a>）</center>
 至於 WDL 則是下一張會提到的 msgen。
 
 
-<br> 
-
 ### 執行 Microsoft Genomics 服務
-
 其實這邊有如果需要以直接看 MS Genomics 的[官方文件](https://docs.microsoft.com/zh-tw/azure/genomics/quickstart-run-genomics-workflow-portal)。若是想要看圖文手把手教學，可以看看這篇《[次世代定序二次分析 Microsoft Azure Genomics](https://medium.com/@102316115/%E6%AC%A1%E4%B8%96%E4%BB%A3%E5%AE%9A%E5%BA%8F%E4%BA%8C%E6%AC%A1%E5%88%86%E6%9E%90microsoft-azure-genomics-77f2cc4994b6)》。
 <br>
 
@@ -205,7 +202,6 @@ CromwellOnAzure</a>）</center>
     是安裝 Python 2 不是 Python 3，兩者不相容。     
     </div>
 
-<br>
 
 #### 執行步驟
 1. 設定：
@@ -233,7 +229,6 @@ CromwellOnAzure</a>）</center>
         $ msgen list -f c:\temp\config.txt
         ```
 
-<br>
 
 #### 注意與限制
 1. [Microsoft Genomics 命令列介面](https://github.com/MicrosoftGenomics/msgen)看來是 MS 包裝好 WDL，但根據說明能改動的似乎不多：
@@ -245,7 +240,6 @@ CromwellOnAzure</a>）</center>
 
 看起來整套的核心就是，Controller 的 Batch 監控與 Engine 的用跨多核心的計算密集型工作排程並結果回收，其實這兩區塊要刻應該也是可以，但工會非常的大。這邊應該有辦法可以不借助 msgen 自己撰寫 WDL 才對(不負責任猜測。 
 
-<br>
  
 ## 使用案例
 這邊就不寫了，直接看這份《[Partnering to Advance Clinical Genomics](http://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-ebook-PartneringToAdvanceClinicalGenomics.pdf)》 。
@@ -253,7 +247,6 @@ CromwellOnAzure</a>）</center>
 就目前看來最多人使用的 AWS > Azure > google。
 
 
-<br><br> 
 
 ## 參考資料 
 1. 李建興 (2018-03-01)。[基因定序也要上雲，微軟發表基於Azure的Microsoft Genomics](https://www.ithome.com.tw/news/121565) 。檢自 iThome (2020-02-10)。
@@ -273,6 +266,8 @@ CromwellOnAzure</a>）</center>
 15. Amazon Web Services (2018-07-02)。[Accelerating Analytics for the Future of Genomics](https://www.slideshare.net/AmazonWebServices/accelerating-analytics-for-the-future-of-genomics)。檢自 SlideShare (2020-02-10)。
 16. Brannann (2019-07-29)。[次世代定序二次分析Microsoft Azure Genomics](https://medium.com/@102316115/%E6%AC%A1%E4%B8%96%E4%BB%A3%E5%AE%9A%E5%BA%8F%E4%BA%8C%E6%AC%A1%E5%88%86%E6%9E%90microsoft-azure-genomics-77f2cc4994b6)。檢自 Brannann - Medium (2020-02-10)。
 17. Jenn Roth (2018-04-26)。[Maximizing the value of genomic data in healthcare](https://cloudblogs.microsoft.com/industry-blog/health/2018/04/26/maximizing-the-value-of-genomic-data-in-healthcare/)。檢自 Microsoft Genomics (2020-02-10)。
+
+
 
 ## 更新紀錄
 <details class="update_stamp">

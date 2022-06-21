@@ -12,22 +12,23 @@ tags:
 - OpenWhisk
 --- 
 
-<center> <img src="https://i.imgur.com/Wn0R9Lh.png" alt="投影片封面"></center>
-<center class="imgtext">投影片封面（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/Wn0R9Lh.png" alt="投影片封面">
+    投影片封面（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
   
 本堂課程作為此系列的準備課程，針對不了解 Serverless 的人，介紹 Serverless 概念、特點以及 Open Source Serverless 平台 Apache OpenWhisk 和基於它實做的企業版本 IBM Functions 的概況。
-
 <!--more-->
-<br><br>
+
+
 
 ## 雲端計算的發展趨勢
 在課程一開始先帶我們來回顧雲端計算的發展趨勢。
 
-<center> <img src="https://i.imgur.com/kB72EtC.png" alt="雲端計算的發展趨勢"></center>
-<center class="imgtext">雲端計算的發展趨勢（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/kB72EtC.png" alt="雲端計算的發展趨勢">
+    雲端計算的發展趨勢（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
 由圖中可以發現架構演變的趨勢，是朝著<mark>簡單</mark>、<mark>便捷</mark>與<mark>低成本</mark>實現<mark>商業邏輯</mark>（Business Logic）的方向前進。
 
@@ -54,8 +55,6 @@ tags:
 
 而在最近幾年的技術中，又將粒度再次縮小，提出了所謂的 Function as a Service（FaaS），也就是 Serverless，試圖讓開發人員程從系統、運行環境、軟體相依性等複雜的環境中解脫。
 
-
-<br> 
 
 ### 什是 Serverless?
 Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並非實現字面意上的『無伺服器』，而是由第三方雲端計算平台供應商負責後端基礎設施的維護，以服務（aaS）的方式為開發者提供所需功能，例如：認證、授權與資料庫服務等。
@@ -89,8 +88,6 @@ Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並
 兩者都強調：<mark>按需執行、按需擴展、無需管理</mark>。這樣的模式是將軟體開發中的複雜性全部抽出，給開發人員更多的自由，並降低開發門檻；但從另一方面來說，這是將複雜性全留給雲端計算平台供應商。
 
 
-<br> 
-
 ### Serverless 要點
 Serverless 僅是一個概念，目前還沒有一個普遍公認的權威的定義，但此概念所要實現的目標表達就是：
 <div class="blockquote-center"> 無需管理、按需執行、按需擴展、按使用來計費 </div>
@@ -108,10 +105,10 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 
 另外，講師提到一件事 Serverless 雖然包含了兩種服務概念 FaaS 與 BaaS，不過在講解中多會集中在 FaaS，這點在多數的文章中也是。因為 BaaS 這邊複雜度在提供此服務的開發者那邊，對於我們來說會用就好。因此在提到 Serverless 時大家多著墨在 FaaS 這塊。
 
-<br> 
-<center> <img src="https://i.imgur.com/D1N30gv.jpg?1" alt="感應式水龍頭"></center>
-<center class="imgtext">感應式水龍頭（圖片來源: <a href="https://www.amazon.com/-/es/inoxidable-lavabo-el%C3%A9ctrico-autom%C3%A1tico-dom%C3%A9stico/dp/B07SZMPPBH" class="imgtext">Amazon</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/D1N30gv.jpg?1" alt="感應式水龍頭">
+    感應式水龍頭（圖片來源: <a href="https://www.amazon.com/-/es/inoxidable-lavabo-el%C3%A9ctrico-autom%C3%A1tico-dom%C3%A9stico/dp/B07SZMPPBH">Amazon</a>）
+</p>
 
 
 課程中講師提到關於水龍頭與計算資源的比喻：
@@ -121,7 +118,6 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 
 而 Serverless 則像是使用了感應式水龍頭，手伸出去了，資源才會被調用執行，結束後資源就自動停用。
  
-<br>
 
 ### FaaS 與 PaaS 的比較  
 在第一次看到 FaaS 的觀念時，覺得它像是更專注提供某種功能的 PaaS，所以查了一下兩者的比較。
@@ -152,7 +148,6 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 
 最後附上一篇兩者的比較： [FaaS、PaaS 和无服务器体系结构的优势](https://www.infoq.cn/article/2016/06/faas-serverless-architecture)
 
-<br>
 
 ### Serverless 架構的優點  
 1. **快速開發/快速響應**  
@@ -170,41 +165,34 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 5. **費用用低**  
     在降低成本上包含了兩個方面，即基礎設施的成本和人員（運營/開發）的成本。
 
-  
-<br><br> 
- 
+
 
 ## Opensource Serverless 平台 - Apache OpenWhisk
-
-<center> <img src="https://i.imgur.com/uAXvRH6.png" alt="Apache OpenWhisk Icon"></center>
-<center class="imgtext">Apache OpenWhisk（圖片來源: <a href="https://landscape.cncf.io/license=open-source" class="imgtext">CNCF Cloud</a>）</center>
-<br>
-
+<p class="illustration">
+    <img src="https://i.imgur.com/uAXvRH6.png" alt="Apache OpenWhisk Icon">
+    Apache OpenWhisk（圖片來源: <a href="https://landscape.cncf.io/license=open-source">CNCF Cloud</a>）
+</p>
 
 OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache 的一個頂級項目，也在 IBM 公有雲上有做了驗證。它是一個典型的<mark>事件驅動型</mark>的程式編輯模型。
 
- 
 <br> 
 
 事件驅動顧名思義就是，事件來了才去做一件事情。以講師給的流程圖為例：  
 當事件源觸動觸發器後進入系統，然後在系統中通過規則的匹配去決定要觸發的動作，最終產生所需的結果。通常來說，輸入與輸出的的資料格式都是 Json。
 
-<center> <img src="https://i.imgur.com/a5Wgs5M.png?1" alt="apache OpenWhisk理念"></center>
-<center class="imgtext">Apache OpenWhisk理念（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/a5Wgs5M.png?1" alt="apache OpenWhisk 理念">
+    Apache OpenWhisk 理念（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
 在這邊出現了幾個詞，<mark>觸發器 (Trigger)</mark>、<mark>動作 (Action)</mark> 與 <mark>規則 (Rule)</mark>，這些詞我跟下一節的筆記整理在一起。
  
-<br> 
- 
 
 ### OpenWhisk 程式編輯模型
-
-<center> <img src="https://i.imgur.com/lZP3G5P.png" alt="Apache OpenWhisk 程式編輯模型"></center>
-<center class="imgtext">Apache OpenWhisk 程式編輯模型（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-<br>
-
-
+<p class="illustration">
+    <img src="https://i.imgur.com/lZP3G5P.png" alt="Apache OpenWhisk 程式編輯模型">
+    Apache OpenWhisk 程式編輯模型（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
 **觸發器 (Trigger)**  
 
@@ -214,10 +202,10 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 
 以資料庫更新為例，若是事件來源觸發，在 OpenWhisk 之外會有一個 Event provider，由它監聽資料庫。當 provider 監聽到更新事件時，再由它通知 Trigger 資料更新了。
 
-<center> <img src="https://i.imgur.com/XznGAql.png" alt="Trigger"></center>
-<center class="imgtext">Trigger（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-<br>
-
+<p class="illustration">
+    <img src="https://i.imgur.com/XznGAql.png" alt="Trigger">
+    Trigger（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
 **動作 (Action)**  
 
@@ -225,25 +213,27 @@ OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache
 
 Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽取、第三方 API 調用...等，程式寫的出來的都行。但必須注意的是，在 FaaS 中是<mark>無狀態</mark>的，不應該存在狀態的紀錄，而且<mark>短時運行</mark>的。在 openwhisk 中預設最長執行時間為是 5 分鐘，若超過 5 分鐘則不建議使用 Faas 執行，或是必須在要切成更小的粒度分開執行。
 
-<center> <img src="https://i.imgur.com/URsL9hc.png" alt="Action"></center>
-<center class="imgtext">Action（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/URsL9hc.png" alt="Action">
+    Action（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
 **動作序列 / 動作串 (Sequence)**  
+
 全稱是 Action Sequence，這並不在講師的講義中，僅出現在講解過程中出現。
 
 動作序列顧名思義，就是把一系列的動作鏈結來。它是一串按順序呼叫的動作，其中某個動作的輸出會傳遞為下一個動作的輸入，達到動作重複使用的目的。 
 
 <br>
 
-
 **規則 (Rule)**  
+
 規則會建立觸發器與動作（序列）的關聯。每次觸發觸發器時，規則都會使用觸發事件作為輸入，並呼叫關聯的動作（序列）。使用適當的規則集時，單一觸發器事件可能會呼叫多個動作，也可能會呼叫動作以作為多個觸發程式的事件的回應。
 
- 
-<center> <img src="https://i.imgur.com/hJtcgqJ.png" alt="Rule"></center>
-<center class="imgtext">Rule（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/hJtcgqJ.png" alt="Rule">
+    Rule（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
 **套件 (Package)**
 
@@ -252,112 +242,108 @@ Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽�
 這邊講師沒多說，不過 [IBM 的名詞解釋](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-about#cloud-functions-) 舉了個例子：
 > 使用 IBM Cloudant 變更資訊來源所建立的觸發程式，會將服務配置成在每次修改文件或將其新增至 IBM Cloudant 資料庫時發動觸發程式。套件中的動作代表服務提供者可設為可用的可重複使用邏輯，如此，開發人員可以使用服務作為事件來源，以及呼叫該服務的 API。
 
-<br>
-
-<center> <img src="https://i.imgur.com/rherSKn.png" alt="Package "></center>
-<center class="imgtext">Package （圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/rherSKn.png" alt="Package">
+    Package （圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
 最後來貼張漂亮的流程圖：
+<p class="illustration">
+    <img src="https://i.imgur.com/bdt17VM.png" alt="OpenWhisk 流程示例">
+    OpenWhisk 流程示例（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
-<center> <img src="https://i.imgur.com/bdt17VM.png" alt="OpenWhisk 流程示例"></center>
-<center class="imgtext">OpenWhisk 流程示例（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
-
-
-<br>
 
 ### Apache OpenWhisk 的部署方式
-
 Apache OpenWhisk 的部屬看理來很簡單，只要支援 docker 的設備都可以安裝，Apache 已將相關內容都把包成 docker image。相關配置步驟可以看這兩份官方的說明文件：[文件1](https://openwhisk.apache.org/documentation.html#openwhisk_deployment)、[文件2](https://github.com/apache/openwhisk#quick-start)
 
 ...不過有沒有真的這麼簡單，可能要頭洗下去才知道。
 
+<p class="illustration">
+    <img src="https://i.imgur.com/JtiWH57.png" alt="Apache OpenWhisk的部署方式">
+    Apache OpenWhisk的部署方式（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf">課程講義</a>）
+</p>
 
-<center> <img src="https://i.imgur.com/JtiWH57.png" alt="Apache OpenWhisk的部署方式"></center>
-<center class="imgtext">Apache OpenWhisk的部署方式（圖片來源: <a href="https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf" class="imgtext">課程講義</a>）</center>
 
-<br><br>
 
 ## IBM Functions
-
 先前提過 OpenWhisk 有在 [IBM 公有雲](https://cloud.ibm.com/functions/)上有做了驗證，所以這邊講師就示範了在公有雲上的簡單操作。
 
-<br>
 
 ### 建立 Action
-
 1. 從入口處點選**開始建立**  
-    <center> <img src="https://i.imgur.com/Pl7SdIK.png" alt="開始建立"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/Pl7SdIK.png" alt="開始建立">
+    </p>
 
 2. 選擇**建立動作**  
-    <center> <img src="https://i.imgur.com/CIqK3tZ.jpg" alt="建立 Action"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/CIqK3tZ.jpg" alt="建立 Action">
+    </p>
 
 3. 建立**套件**  
     這步驟非必須，這邊只是試著操作。
-    <center> <img src="https://i.imgur.com/LACIoTX.jpg" alt="建立 Package"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/LACIoTX.jpg" alt="建立 Package">
+    </p>
     
-
 4. 為動作命名，並引入剛剛所創建的套件  
     這邊為了測試方便，運行環境直接選擇 **Node.js**
-    <center> <img src="https://i.imgur.com/b3gprKB.jpg" alt="建立 Package"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/b3gprKB.jpg" alt="建立 Package">
+    </p>
     
 5. 建立後會出現 Node.js 的程式碼作為動作的執行細節  
     再依照實際要執行的動作進行修改，完成後可以試著點選**呼叫**，查看動作執行後的結果。
-    <center> <img src="https://i.imgur.com/5EheU6x.jpg" alt="定義動作細節"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/5EheU6x.jpg" alt="定義動作細節">
+    </p>
     
     也可以透過 curl 來呼叫
     ```shell
     $ curl -u API-KEY -X POST https://us-south.functions.cloud.ibm.com/api/v1/namespaces/id%40dgmail.com/actions/test/hello?blocking=true
     ```
 
-    
-    
-<br>
 
 ### 建立 Trigger
-
 1. 從入口處點選**開始建立**  
-    <center> <img src="https://i.imgur.com/Pl7SdIK.png" alt="開始建立"></center>
-    <br>
+    <p class="illustration">
+       <img src="https://i.imgur.com/Pl7SdIK.png" alt="開始建立">
+    </p>
     
-
-2. 選擇**建立觸發程式**  
-    <center> <img src="https://i.imgur.com/8X3Iavi.png" alt="建立 Trigger"></center>
-    <br>    
+2. 選擇**建立觸發程式**   
+    <p class="illustration">
+       <img src="https://i.imgur.com/8X3Iavi.png" alt="建立 Trigger">
+    </p>  
 
 3. 設定定時式的觸發器  
-    這邊先簡單設定一個定時觸發的觸發器  
-    <center> <img src="https://i.imgur.com/ynmDXKW.jpg" alt="建立定時觸發器"></center>
-    <br>    
+    這邊先簡單設定一個定時觸發的觸發器    
+    <p class="illustration">
+       <img src="https://i.imgur.com/ynmDXKW.jpg" alt="建立定時觸發器">
+    </p>      
     
 4. 設定觸發時間  
-    這邊使用 cron 的方式設定每 20 秒觸發  
-    <center> <img src="https://i.imgur.com/HlLkZXe.jpg" alt="建立每 20 秒觸發"></center>
-    <br>    
-    
+    這邊使用 cron 的方式設定每 20 秒觸發    
+    <p class="illustration">
+       <img src="https://i.imgur.com/HlLkZXe.jpg" alt="建立每 20 秒觸發">
+    </p>   
     
 5. 查看  
     完成與 action 的連接後，可到監視查看。
-        <center> <img src="https://i.imgur.com/2gfcm2n.jpg" alt="監視"></center>
-    <br>
+    <p class="illustration">
+       <img src="https://i.imgur.com/2gfcm2n.jpg" alt="監視">
+    </p>   
     
     應該會看到 trigger 每 20 秒被觸發，接著執行 action 。  
     P.S. Oops，我現在才發現 every20 打錯了，不過也來不及了...
 
 
-<br><br> 
 
 ## 其他連結
 1. [Serverless 應用案例賞析筆記目錄](/Serverless-Use-Cases-Study-Notes-Contents)
 2. 課程內容：影片（[IBM片源](https://mediacenter.ibm.com/media/1_7hu9nbk8) 、[youku教育片源](https://v.youku.com/v_show/id_XMzg0MTI3NTE3Ng==.html)）/ [講義](https://github.com/dWChina/ibm-opentech-ma/blob/master/serverless-use-cases/Serverless-00.pdf) / [Blog](https://mp.weixin.qq.com/s/p0bImKuYSz2FPfdMvTt06Q)
 
-<br><br> 
+
 
 ## 參考資料 
 1. 费良宏 (2017-01-18)。[从IaaS到FaaS—— Serverless架构的前世今生](https://aws.amazon.com/cn/blogs/china/iaas-faas-serverless/) 。檢自 亚马逊AWS官方博客 (2020-03-25)。

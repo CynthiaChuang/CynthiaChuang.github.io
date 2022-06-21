@@ -17,7 +17,8 @@ tags:
 不過這一兩年接觸到了 <mark>[Markdown](https://markdown.tw/)</mark>，它的語法可以減少不少排版的時間，所以最近又興起了把網誌撿回來的念頭，希望這次可以持之以恆阿...
 
 <!--more-->
-<br> 
+
+
 
 ## 在 Blogger 寫 Markdown
 不過想把網誌撿回來好像也沒有那麼的容易？ <mark>因為 Blogger 不支援 Markdown！</mark> 還好網路上有不少人有相同需求，感謝他們的分享，我只需要複製貼上就好 XD。
@@ -50,13 +51,14 @@ tags:
 但這份 code 在我這邊有點水土不服，因為我之前改過 CSS，結果出來的效果沒有人家來的好看。而且說真的，在 Blogger 中寫 Markdown 的體驗不是很好...
 
 
-<br><br>
 
 ## 用 Stackedit 發布至 Blogger 
-![Stackedit](https://stackedit.io/res-min/img/logo.svg)
-<center class="imgtext">   Stackedit Icon （圖片來源: <a href="https://stackedit.io/" class="imgtext">Stackedit官網</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/JcHJJGW.png" alt="Stackedit Icon">
+    Stackedit Icon （圖片來源: <a href="https://stackedit.io/">Stackedit官網</a>）
+</p>
 
-<br> 在 google 的時候，偶然發現有 [StackEdit](https://stackedit.io/)  工程師在 [Stack Exchange](https://webapps.stackexchange.com/questions/40737/markdown-for-blogger) 上~~自薦枕蓆~~。原本它是沒有特別吸引我，因為同為 Markdown 的文字編輯器，目前我 [HackMD](https://hackmd.io/) 使用得正順手，並沒有想換掉它的想法，而且 HackMD 還是繁中界面的哩！ <br><br>
+在 google 的時候，偶然發現有 [StackEdit](https://stackedit.io/)  工程師在 [Stack Exchange](https://webapps.stackexchange.com/questions/40737/markdown-for-blogger) 上~~自薦枕蓆~~。原本它是沒有特別吸引我，因為同為 Markdown 的文字編輯器，目前我 [HackMD](https://hackmd.io/) 使用得正順手，並沒有想換掉它的想法，而且 HackMD 還是繁中界面的哩！ <br><br>
 
 
 >  Amongst others, you can **post to Blogger.**
@@ -67,7 +69,6 @@ tags:
  
 關於從 StackEdit 發表的 Blogger的教學，可參考： [使用 StackEdit 發布至 Blogger ~ Open Jiang](http://jeffyon.blogspot.com/2015/05/stackedit-bloggermd.html)
 
-<br><br>
 
 ## 定義 Markdown 各標籤的 CSS 文件
 前面說過 Blogger 不支援 Markdown，即便 StackEdit 可以將文章轉成 HTML 在 Blogger 上發布，但部分標籤的 CSS 仍需要定義。<br>
@@ -87,7 +88,6 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 <!-- highlight.js Additions END -->
 ``` 
 
-<br>
 
 ### KaTeX
 另外數學符號的顯示部分是使用 [KaTeX](https://khan.github.io/KaTeX/) 來渲染的，據說與 MathJax 相比，它的速度載入數度更快，但犧牲的就是它能支援的符號較少。
@@ -109,7 +109,6 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 <!-- KaTeX Additions END-->
 ```
 
-<br>
 
 ### Mermaid
 如果有製作流程圖的需求，則需要再導入 [Mermaid](https://mermaidjs.github.io/) 的函數庫。但它的黑色文字會被我的深色背景吃掉，導致看不清楚，所以我另外取出它的 [CSS檔](https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.forest.css)，配合我的背景來進行修改。
@@ -125,7 +124,6 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 <!-- Mermaid Additions END--> 
 ```
 
-<br>
 
 ### 其他標籤
 ```html
@@ -137,7 +135,6 @@ Highlight 的功能，所以 Blogger 這邊也需要導入相對應的函式庫�
 但說是修改，其實我只取出所以他的 ``table``、``blockquote`` 兩部分出來改顏色跟文字大小而已，因為我還滿滿意目前這個主體的 CSS 設定的 XD
 
 
-<br><br> 
 
 ## 參考資料 
 1. [在 blogger 貼漂亮 code 的方法（使用 markdown 和 prettyprint）｜卡卡米的記憶體](http://etrex.blogspot.com/2017/03/blogger-code-markdown-prettyprint.html)

@@ -15,22 +15,25 @@ tags:
 我目前 Github Page 採用的主題是 [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next) ，我很喜歡這個主題。但唯一讓我不滿意的大概就是沒有凸顯內容文字的手段，只好自食其力了！
 
 <!--more-->
-<br><br>  
+
 
 ## Alert
 先上張結果圖，實作了六種顏色，分別為 default、primary、info、success、warning、danger。
   
-<center> <img src="https://imgur.com/7TPANGR.png" alt="Blog Alert"></center>
-<br>
+<p class="illustration">
+    <img src="https://imgur.com/7TPANGR.png" alt="Blog Alert">
+</p>
 
 個人倒是很少用  default 與 primary。另外，Alert 左方的 icon 與上方的header，可以由撰寫者自己決定開或不開。
-<br>
+
 
 ### 實作
 在實作時我參考了 kanboo.github.io 的[程式碼](https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl)，雖然網站外觀看起來很相似，但它是用的是另外一套網誌框架 - [hexo](https://hexo.io/zh-tw/)，所以那份程式碼不能直接移植 So sad :crying_cat_face: 
 <br>
 
 不過看了一下沒有很難做，所以仿照這份程式做了一份：
+
+
 #### 1. 顏色
 在開始前，先來設定外觀顏色。在 [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next) 中客製化的顏色設定會統一放在 `\_sass\_variables\custom.scss` 中。
 
@@ -162,7 +165,6 @@ $alert-default-icon          : "\f0a9";
 }
 ```
 
-<br>
 
 ### 使用
 在文章中需要的地方，插入下列程式碼，就可以看到相對應的效果了。
@@ -193,16 +195,16 @@ $alert-default-icon          : "\f0a9";
 ```
 
 
-<br><br>  
 
 ## Highlighting
-另一種凸顯文字的方式就是<mark>用螢光筆</mark>畫重點啦。
+另一種凸顯文字的方式就是==用螢光筆==畫重點啦。
 
-<center> <img src="https://i.imgur.com/ZaF6hhZ.png" alt="Highlighting"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/ZaF6hhZ.png" alt="Highlighting">
+</p>
+
 
 雖然我準備了四隻螢光筆，但其實我只用過一隻 XDDD 而且這樣一列才發現，一跟二的顏色太相近了。算了，之後要用其他顏色的時候再來調整。
-<br>
 
 
 ### 實作
@@ -215,7 +217,7 @@ $alert-default-icon          : "\f0a9";
 // highlighting  colors
 $highlighting-default              : #e6fcf2;
 ```
-<br>
+
 
 #### 2. 本體
 再回到 `\_sass\_custom\custom.scss` 中設定本體。 如果不算 warning 選擇器的部分，程式碼只有四行而已。
@@ -235,19 +237,22 @@ $highlighting-default              : #e6fcf2;
 }
 ```
 
-<br>
 
 ### 使用
 在文句中需畫螢光筆的地方，插入下列程式碼，就可以看到相對應的效果了。
 
-![](https://i.imgur.com/p4BInX7.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/p4BInX7.png" alt="Highlighting">
+</p>
 
 ```html
 拜託，請幫我畫<span class="highlighting">重點</span>。
 ```
 <br>
 
-![](https://i.imgur.com/VDn59fA.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/VDn59fA.png" alt="Highlighting">
+</p>
 
 
 ```html
@@ -256,15 +261,13 @@ $highlighting-default              : #e6fcf2;
 
 <br>
 
-
 <div class="alert info">
 <div class="head">HTML <mark\> Tag</div>
 後來發現用 HTML 的 mark Tag 來實做效果會更好，所以又做了另外一篇：  <br>
 - <a href="/Mark-Element-is-Used-to-Highlight-Content/">【技能樹栽種】 HTML Mark Tag 實作 Highlighting</a>
 </div>
 
- 
-<br><br> 
+
 
 ## 參考資料 
 1. [themes note.styl](https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl)。檢自 kanboo/kanboo.github.io (2019-12-16)。
@@ -273,7 +276,7 @@ $highlighting-default              : #e6fcf2;
 4. MDN contributors (2019-12-20)。[:not()](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)。檢自 MDN web docs (2020-02-09)。
 5. [CSS white-space 属性](https://www.w3school.com.cn/cssref/pr_text_white-space.asp)。檢自 W3school (2020-02-09)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

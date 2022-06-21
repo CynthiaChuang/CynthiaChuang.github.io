@@ -39,12 +39,11 @@ Explanation: The answer is `"wke"`, with the length of 3.
 
 **Related Topics:** `Hash Table`、`String`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是給定一個字串，從中找出一最長子字串，且子字串中不包含重複字元。
 
-<br>
 
 ### Sliding Window
 我這題使用 Sliding Window 來解，一開始將 ```start``` 與 ```end``` 指標指在起始位置（ index=0 ），每輪 ```end``` 指標移動一格納入一個新的字元，在納入新字元後，檢查新字元是否已經存於 Window 中。
@@ -79,7 +78,7 @@ class Solution:
       return max_len 
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

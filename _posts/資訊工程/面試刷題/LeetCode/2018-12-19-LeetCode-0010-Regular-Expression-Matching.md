@@ -67,12 +67,11 @@ Output: false
 
 **Related Topics:**`Backtracking`、`Dynamic Programming`、`String`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是要實作一個簡易的 Regular Expression 的 Parser，僅支援 a-z、`.` 和 `*`，題目也限定了輸入會是這幾個字元，所以可以先不用考慮其他字元的情況。
 
-<br>
 
 ### 遞迴
 這題我最先想到的是使用遞迴來解，只是判斷的情況有些瑣碎。實作步驟如下：
@@ -135,7 +134,6 @@ class Solution:
 
 果然效能好多了，Runtime: 52 ms, faster than  99.53% 
 
-<br>
 
 ### Dynamic Programming
 是說寫完地回後很高興要切下一題的時候，才後知後覺的想到，我剛剛應該是挑了 DP  的標籤要練習阿 XDDD
@@ -165,14 +163,10 @@ class Solution:
 
 
 
-
-<br><br>
-
 ## 參考資料 
 1. [9-lines 16ms C++ DP Solutions with Explanations](https://leetcode.com/problems/regular-expression-matching/discuss/5684/9-lines-16ms-c-dp-solutions-with-explanations)
 
 
-<br><br>
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

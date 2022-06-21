@@ -1,5 +1,5 @@
 ---
-title: Augmentor：影像數據增強工具庫
+title: Augmentor：影像資料增強工具庫
 date: 2020-01-15
 is_modified: false
 categories:
@@ -17,13 +17,11 @@ tags:
 記錄一下最近使用的影像資料增強工具 - [Augmentor](https://augmentor.readthedocs.io/en/master/)，可用來做訓練圖像生成與雜訊添加...等
 
 <!--more-->
-
-<br> 
-
 ## 簡介
-<center> <img src="https://i.imgur.com/thTW1NE.png" alt="AugmentorLogo"></center>
-<center class="imgtext">   Augmentor Logo （圖片來源: <a href="https://github.com/taki0112/Augmentor" class="imgtext">Augmentor</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/thTW1NE.png" alt="AugmentorLogo">
+    Augmentor Logo （圖片來源: <a href="https://github.com/taki0112/Augmentor">Augmentor</a>）
+</p>
 
 根據[文件簡介](https://augmentor.readthedocs.io/en/master/#augmentor)，Augmentor 是一個 Python Package，用於幫助機器學習任務的影像增強與生成。它主要是一種資料增強工具，但也提供了些基本的影像預處理功能。
 
@@ -36,7 +34,7 @@ tags:
 
 ↑ 以上全出自於 [Augmentor文件](https://augmentor.readthedocs.io/en/master/index.html)， Google 翻譯友情贊助 XDDD
 
-<br><br> 
+
 
 ## 安裝
 我是透過 pip 安裝，所以還挺簡單，一條指令就搞定：
@@ -45,7 +43,7 @@ tags:
 $ pip install Augmentor
 ```
 
-<br> 
+
 
 ## 使用方法
  
@@ -77,7 +75,7 @@ p.rotate(probability=0.5, max_left_rotation=4, max_right_rotation=4)
 p.sample(2000)
 ```
 
-<br>
+
 
 ### 含圖片與標籤的增強
 但通常在在進行模型訓練時，所取得資料不只圖片本身，還會有圖片相對應的標籤，此時 [`Augmentor.Pipeline` ]( https://augmentor.readthedocs.io/en/master/code.html#Augmentor.Pipeline.Pipeline)就不適用，應該改用 [`DataPipeline`](https://augmentor.readthedocs.io/en/master/code.html#Augmentor.Pipeline.DataPipeline)。
@@ -137,10 +135,8 @@ batch_imgs = np.squeeze(batch_imgs, axis=1)
 
 如此出來的增強影像，看起來正常多了。
 
-<br>
 
 ### 自定義增強器
-
 說到增強，我想讓我的模型多看看不同色調下的圖片，所以翻了翻文件，好不容易找到 [`HSVShifting`](https://augmentor.readthedocs.io/en/master/code.html#Augmentor.Operations.HSVShifting)，結果竟然...
 
 <br><font color="#f00">CURRENTLY NOT IMPLEMENTED.</font>
@@ -154,7 +150,6 @@ batch_imgs = np.squeeze(batch_imgs, axis=1)
 只好來研究如何[自定義增強器](https://augmentor.readthedocs.io/en/master/userguide/extend.html)
 
 #### 建立一個新的操作子類別
-
 在建立一個新的操作子類別時，有四個地方需要注意的
 
 1. 子類別要繼承 [`Operation`](https://augmentor.readthedocs.io/en/master/code.html#Augmentor.Operations.Operation)。
@@ -198,10 +193,8 @@ class CustomizeHSVShifting(Operation):
 
 注意，perform_operation 傳入的會是圖片陣列，而非單張圖片，別被[文件](https://augmentor.readthedocs.io/en/master/userguide/extend.html)中的 <mark>image</mark> 這個字給騙了！實做時可以與其他功能的[實做](https://augmentor.readthedocs.io/en/master/_modules/Augmentor/Operations.html#RandomBrightness)進行對照。
 
-<br>
 
 #### 將操作子類別加到 pipeline 中
-
 呼叫 [`add_operation`](https://augmentor.readthedocs.io/en/master/code.html#Augmentor.Pipeline.Pipeline.add_operation) 來進行添加：
 
 ```python
@@ -210,12 +203,8 @@ p.add_operation(CustomizeHSVShifting(probability=0.5, max_h_shift=330, min_h_shi
 
 如此一來就將自定義的增加入 pipeline。
  
-
-
-
  
-<br><br> 
-
+ 
 ## 參考資料 
 1. [Augmentor 0.2.6 documentation｜Augmentor](https://augmentor.readthedocs.io/en/master/)
 2. [taki0112/Augmentor: Image augmentation library in Python for machine learning.｜GitHub](https://github.com/taki0112/Augmentor)

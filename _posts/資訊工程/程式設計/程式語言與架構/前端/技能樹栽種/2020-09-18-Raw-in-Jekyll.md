@@ -12,7 +12,7 @@ tags:
 在前一陣分享了些前端的程式碼，但發現分享的程式碼只要涉及了大括號，都渲染失敗，無一例外，而且還會從終端機收到 Liquid 的錯誤訊息。
 
 <!--more-->
-<br>
+
 
 ## 問題描述
 在用 Markdown 寫網誌時，文本的內容只要像下面涉及大括號全都會渲染失敗，還會跳出錯誤訊息：
@@ -23,7 +23,6 @@ tags:
 {% endraw %}
 
 
-<br><br> 
 
 ## 解決方法
 有嘗試過在大括號前後加上 `\` 進行跳脫，但還是不起作用：
@@ -49,13 +48,13 @@ tags:
 
 搞定！成功渲染出來了！
 
-<br><br> 
+
 
 ## 參考資料 
 1. Nicolas Molina (2016-07-19)。[markdown — 在Jekyll的markdown代码块中转换双花括号](https://www.it-swarm.asia/zh/markdown/%e5%9c%a8jekyll%e7%9a%84markdown%e4%bb%a3%e7%a0%81%e5%9d%97%e4%b8%ad%e8%bd%ac%e6%8d%a2%e5%8f%8c%e8%8a%b1%e6%8b%ac%e5%8f%b7/1047233674/) 。檢自 it-swarm.asia (2020-09-18)。
 2. 吕毅 (2018-08-12)。[转义，解决花括号在 Jekyll 被识别成 Liquid 代码的问题](https://blog.walterlv.com/post/jekyll/raw-in-jekyll.html) 。檢自 walterlv (2020-09-18)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

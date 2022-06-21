@@ -24,7 +24,7 @@ Explanation: 342 + 465 = 807.
 
 **Related Topics:**`Linked List`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題不算難，就是兩個數字做相加，進位的話向後放，需要注意的就是兩個數字長度不相同以及最高位進位的情況。
@@ -65,7 +65,6 @@ class Solution:
 ```
 
 
-<br><br>
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

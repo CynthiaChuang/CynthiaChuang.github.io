@@ -18,10 +18,12 @@ tags:
 ↑ 其實一點也不是老樣子，已經很久沒有打網誌了，最近愛上手寫 XDDD
 
 <!--more-->
-<br><br>  
+
+
 
 ## 安裝步驟
-基本上安裝還頗簡單，而且 Ubuntu 有圖形化介面，真的不行還可以下載安裝 XDDD <br>
+基本上安裝還頗簡單，而且 Ubuntu 有圖形化介面，真的不行還可以下載安裝 XDDD
+
 
 ### 1. 安裝 JDK
 雖然 Ubuntu 有內建 Openjdk，但聽說 Android Studio 比較喜歡(?) Oracle 的 JDK，所以我還是另外裝了 JDK8
@@ -35,7 +37,7 @@ $ sudo apt-get install oracle-java8-installer oracle-java8-set-default;
 ```shell
 $ java  -version
 ```
-<br>
+
 
 ### 2. 安裝Android Studio
 ```shell
@@ -43,7 +45,7 @@ $ sudo apt-add-repository ppa:paolorotolo/android-studio
 $ sudo apt-get update
 $ sudo apt-get install android-studio
 ```
-<br>
+
 
 ### 3.執行初始化安裝設定
 ```shell
@@ -56,7 +58,8 @@ $ /opt/android-studio/bin/studio.sh
 <a href="/Add-Applications-to-Ubuntu-Launcher/">【Linux】將應用程式加到 Ubuntu 的 Launcher 捷徑</a>
 </div>
 
-<br><br>
+
+
 ## 再次重灌時...
 我這次重新安裝不幸遇到了點小問題，稍微記錄一下，這次再安裝的時候跳出了  <mark>Unable to install Android Studio</mark> 的錯誤訊息，有點晴天霹靂阿，不幸得重灌就算了，竟然還出狀況！！！！
 
@@ -71,7 +74,7 @@ $ sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
 
 安裝完成後，重新執行初始化安裝設定，讓它重新啟動安裝程序，就 OK 了！！！
 
-<br><br>
+
 
 ## 參考資料
 - [How to install Android Studio on Ubuntu 15.04 / CentOS 7∥B N Poornima｜LinOxide](https://linoxide.com/tools/install-android-studio-ubuntu-15-04-centos-7/)

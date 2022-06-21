@@ -11,16 +11,17 @@ tags:
 那天在社團看到一篇[求救文](https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/)，內容主旨是這樣的，求救者把花費六小時所撰寫的 commit，在還沒 push 前就把它給 drop 掉了（允悲 :joy: 
   
 不過幫他哀弔完之後，我也想知道怎麼把 commit，因為我很怕下一個做這蠢事就是我 XDDD
+
 <!--more-->
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/Rq9W4dg.png" alt="求救文內文">
+    求救文（圖片來源: <a href="https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/">Taiwan 程式語言讀書會｜Facebook</a>）
+</p>
 
-<center> <img src="https://i.imgur.com/Rq9W4dg.png" alt="求救文內文"></center>
-<center  class="imgtext">求救文（圖片來源: <a href="https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/"  class="imgtext">Taiwan 程式語言讀書會｜Facebook</a>）</center>
-<br><br>
 
-## 所有的操作紀錄都保留下來
 
-求救文在下方的留言中，有一位[米一粒](https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/?comment_id=2823410504539867)的留言，他說當你製作提交紀錄時，就已經讓紀錄進入版本管控中，而 Push 這動作只是將紀錄推送遠端數據庫而已。因此，只要有提交過記紀錄、產生過 Hash，就有機會藉由這筆 Hash 拿回這筆紀錄？
+## 所有的操作記錄都保留下來
+求救文在下方的留言中，有一位[米一粒](https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/?comment_id=2823410504539867)的留言，他說當你製作提交紀錄時，就已經讓紀錄進入版本管控中，而 Push 這動作只是將紀錄推送遠端數據庫而已。因此，只要有提交過紀錄、產生過 Hash，就有機會藉由這筆 Hash 拿回這筆紀錄？
 
 <br>
 
@@ -38,10 +39,9 @@ fc22a64 (HEAD -> master) HEAD@{3}: commit: commit2
 
 從紀錄看來，依序製作了三個 commit，接下來下了 `rebase` 指令，最後把 HEAD 移動到了 commit2 的位置，也就是我把 commit3 給丟了。好了，重點是第四行，那邊有被刪除的 commit3 的 Hash code！
 
-<br><br>
+
 
 ## 恢復 commit
-
 在得知被刪除的 commit 的 Hash code 後，就可以透過 `git reset` 來還原了：
 
 ```bash
@@ -65,14 +65,13 @@ fc22a64 HEAD@{4}: commit: commit2
 
 歐耶～！把 commit 找回來了！
 
-<br><br> 
+
 
 ## 參考資料 
 1. Calos。[GIT 遺失 commit 後的恢復方法](https://caloskao.org/git-recovery-lost-commit/) 。檢自 Calos's Blog (2021-02-04)。
 2. 洧杰 (2019-11-17)。[git reflog - 還原大招](https://w3c.hexschool.com/git/10bf7677) 。檢自 W3HexSchool (2021-02-04)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

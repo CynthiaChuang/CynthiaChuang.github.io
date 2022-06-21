@@ -25,14 +25,13 @@ return [0, 1].
 
 **Related Topics:** `Hash Table`、`Array`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這一題算是 LeetCode 中的 Hello World 吧，網路上還流傳著**平生不識 TwoSum，刷盡 LeetCode 也枉然**這句話呢，可見這題是多麼的廣為人知(?)
 
 簡單來說這題是要從給定陣列中找出兩個數字，其總和為給定的 target，最後返回這兩個數字的索引值。每題必定只有一個解，且每個數字並不會被重複使用。
 
-<br>
 
 ### 暴力法
 最直覺想到的當然是暴力法，但果不其然 **Time Limit Exceeded**，畢竟用暴力法的時間複雜度是 $O(n^2)$。
@@ -56,7 +55,7 @@ class Solution:
 
          raise RuntimeError("No two sum solution") 
 ```
-<br>
+
 
 ### 雜湊表（Hash table)
 既然暴力法時間複雜度爆表，那就拿空間換取時間吧！另外設立一個 HashMap 儲存走訪過的結果，當一個數字進來後去檢查差值是否存在 HashMap 中，若存在則回傳結果，實做步驟如下：
@@ -78,7 +77,7 @@ class Solution:
          keys[value] = idx
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

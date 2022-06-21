@@ -22,7 +22,10 @@ tags:
 
 除了 UI 拖拉製作方式外，我也試過用 Mermaid 來畫，但只要流程一複雜，我就會寫到懷疑人生...。最後還是人家推薦我使用 draw.io，才解決我的困擾 XD
 
-![draw.io](https://i.imgur.com/v2ozFhZ.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/v2ozFhZ.png" alt="draw.io">
+</p>
+
 
 <br>
 

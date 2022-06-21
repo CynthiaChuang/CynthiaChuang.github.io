@@ -20,14 +20,16 @@ Deploy SDK Part2！
 但是說這篇真的拖有夠久的，產出速度比不上待寫文章的新增速度，結果草稿越積越多 Orz
 
 <!--more-->
-<center> <img src="https://i.imgur.com/HMTDUR7.png" alt="安裝篇"></center>
-<center class="imgtext">安裝篇 （圖片來源: <a href="https://meet.bnext.com.tw/blog/view/10124" class="imgtext">Meet創業小聚</a>）</center>
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/HMTDUR7.png" alt="安裝篇">
+    安裝篇 （圖片來源: <a href="https://meet.bnext.com.tw/blog/view/10124">Meet創業小聚</a>）
+</p>
 
 按照[文件](https://docs.nvidia.com/clara/deploy/ClaraInstallation.html)看來安裝步驟似乎不難，不過按照以往經驗看來成不成功要看人品與緣份 XDDD
 
-## 系統需求
 
+
+## 系統需求
 在文件一開始列了落落長的系統需求，除了一些基本硬體需求外，還有指定了 K8S、 Helm 與 Docker 的版號：
 - **Kubernetes 1.15.4**
 - **Docker 19.03.1**
@@ -37,14 +39,14 @@ Deploy SDK Part2！
 如果系統中未安裝這些需求，可以不用先行安裝，等等安裝時會幫忙一併安裝；但如果安裝的版號不合，可能需要先行移除，否則它們會跳過安裝。
 
 
-<br><br>
 
 ## 安裝步驟
 上張圖說明一下 Deploy SDK 的安裝流程：
 
-<center> <img src="https://i.imgur.com/9Wb8F1x.png" alt="安裝流程"></center>
-<center class="imgtext">安裝流程 （圖片來源: <a href="https://docs.nvidia.com/clara/deploy/ClaraInstallation.html" class="imgtext">SDK 0.7.1 documentation</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/9Wb8F1x.png" alt="安裝流程">
+    安裝流程 （圖片來源: <a href="https://docs.nvidia.com/clara/deploy/ClaraInstallation.html">SDK 0.7.1 documentation</a>）
+</p>
 
 1. **下載並安裝 bootstrap**  
     首先先登入 [NGC](https://ngc.nvidia.com/catalog/collections?orderBy=modifiedDESC&pageNumber=0&query=&quickFilter=collections&filters=)，找到 [Clara Deploy Bootstrap](https://ngc.nvidia.com/catalog/resources/nvidia:clara:clara_bootstrap/performance) 並進行下載與解壓縮：
@@ -90,13 +92,17 @@ Deploy SDK Part2！
     
     這邊你須要拿到一把 `NGC_API_KEY`。這次就必須一定要登入 NGC 了，登入後點選右上角頭像選單中的 `Setup`，並選擇 `Generate API Key` 
     
-    <center> <img src="https://i.imgur.com/AqM4tPS.png" alt="Generate API Key"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/AqM4tPS.png" alt="Generate API Key">
+    </p>
+
     
     進入頁面後，會右上方有個 Generate API Key 的按鈕，點擊後就會產生 `NGC_API_KEY` 了。
     
-    <center> <img src="https://i.imgur.com/PFMeczB.png" alt="Generate API Key-2"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/PFMeczB.png" alt="Generate API Key-2">
+    </p>
+
 
     完成後回到終端輸入下列指令，可以考慮 `orgteam` 使用預設值就好，：
     ```bash
@@ -137,9 +143,10 @@ Deploy SDK Part2！
 4. **啟動 Helm Chart**   
    在上一篇提到 [Helm Charts](/NVIDIA-Clara-Deploy-SDK#Helm-Charts) 時有提過，除了 Triton Inference Server 之外的 charts，都可以藉由這步驟啟動。 
     
-    <center> <img src="https://i.imgur.com/LgA32Ff.png" alt="NVIDIA Clara Deploy Architecture"></center>
-    <center class="imgtext">DNVIDIA Clara Deploy Architecture（圖片來源: <a href="https://docs.nvidia.com/clara/deploy/index.html" class="imgtext">SDK 0.7.1 documentation</a>）</center>
-    <br>
+    <p class="illustration">
+    <img src="https://i.imgur.com/LgA32Ff.png" alt="NVIDIA Clara Deploy Architecture">
+    DNVIDIA Clara Deploy Architecture（圖片來源: <a href="https://docs.nvidia.com/clara/deploy/index.html">SDK 0.7.1 documentation</a>）
+    </p>
 
     因為 platform 的下載在剛剛測試 clara 的指令時已經順道完成了，所以這邊就直接啟動。
     ```bash
@@ -196,10 +203,9 @@ Deploy SDK Part2！
     NAME: clara-console
     ```
 
-<br><br>
+
     
 ## 驗證安裝
-
 如果一切順利的話，跑完上面算是安裝完成了，你可以試著下 `hlem ls` 指令來觀察目前所啟動的 charts：
 
 ```bash
@@ -230,16 +236,12 @@ clara-render-server        clara-renderer-0.7.1-2008.1
 * elasticsearch-master-1
 
 
-<br><br>
 
 ## 觀察 Pod 的變化
-
-
 提到啟動的 Pod，有點好奇在每個 Chart 啟動時，會啟動的 Pod 有哪些。所以把整個 Clara 卸掉，重新安裝一次並觀察 Pod 的變化。
  
 
-1. **安裝前**  
-    
+1. **安裝前**        
     ```bash
     $ kubectl get all
     NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
@@ -250,8 +252,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     ```
     <br>
     
-2. **clara platform start**
-
+2. **clara platform start**  
     ```bash
     $ kubectl get all    
     NAME                                                 READY   STATUS    RESTARTS   AGE
@@ -287,8 +288,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     <br>
     
     
-3. **clara dicom start**
-
+3. **clara dicom start**  
     ```bash
     $ kubectl get all       
     NAME                                                 READY   STATUS    RESTARTS   AGE
@@ -334,8 +334,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     <br>
     
 
-4. **clara render start**   
-
+4. **clara render start**    
     ```bash
     $ kubectl get all    
      kubectl get all    
@@ -386,8 +385,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     ```
     <br>
 
-5. **clara monitor start**
-
+5. **clara monitor start**  
     ```bash
     $ kubectl get all          
     NAME                                                       READY   STATUS             RESTARTS   AGE
@@ -462,7 +460,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     ```
     <br>
 
-6. **clara console start**
+6. **clara console start**  
     ```bash
     $ kubectl get all                                                             
 
@@ -546,15 +544,12 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     statefulset.apps/elasticsearch-master   2/2     36m
 
     ```
-    <br>
-
 
 <br>
 
 當然，如果像我這個白目的安裝就沒有那順利了...
     
 ## 錯誤嘗試：部屬 Clara Platform 與 啟動 Helm Chart
-
 在環境要求的部分，對我來說比較麻煩的是 Kubernetes 與 Helm 的版號，因為我的伺服器環境是與組員共用，所以一開始我決定保留同事需要的環境來硬幹，試試能不能安裝成功，如果真的不行再來嘗試退版安裝。
 
 所以這段如果只是要完成 Deploy SDK 安裝的可以跳過，這邊只是因為我的一時興起所產生的錯誤紀錄而已，當然如果想看我怎麼焦頭爛額的可以繼續往下拉。
@@ -787,7 +782,6 @@ NAME: clara-monitor-server
 ```
 
 
-<br><br> 
 
 ## 參考資料 
 1. [Clara Deploy Platform](https://ngc.nvidia.com/catalog/collections/nvidia:claradeployplatform)。檢自 NVIDIA NGC (2021-02-02)。
@@ -805,7 +799,7 @@ NAME: clara-monitor-server
 14. Zz Chen (2018-07-03)。[Helm 部署在 GKE 上的權限問題](https://medium.com/smalltowntechblog/helm-tiller-%E9%83%A8%E7%BD%B2%E5%9C%A8-gke-%E4%B8%8A%E7%9A%84%E6%AC%8A%E9%99%90%E5%95%8F%E9%A1%8C-a016f703372e)。檢自 smalltowntechblog｜Medium (2021-02-02)。
 15. MengYun (2019-10-27)。[Not responding when running “clara render start”](https://forums.developer.nvidia.com/t/not-responding-when-running-clara-render-start/158049)。檢自 NVIDIA Developer Forums (2021-02-02)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

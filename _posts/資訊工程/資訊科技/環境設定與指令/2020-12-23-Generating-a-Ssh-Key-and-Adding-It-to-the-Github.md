@@ -16,18 +16,20 @@ tags:
 
 > **[GitHub] Deprecation Notice**  
 > Basic authentication using a password to Git is deprecated and will soon no longer work. Visit https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information around suggested workarounds and removal dates.
- 
-<br>
 
-##  配置 GitHub 金鑰
+
+
+## 配置 GitHub 金鑰
 之前在使用 [SSH Key-based 登入](/Configuring-SSH-Key-Based-Authentication-on-a-Linux/)時，有稍微提過 SSH 認證與設置的步驟，在這邊的流程也不例外：
 
 1. 產生金鑰對。
 2. 將產生的 Pub key 放到遠端倉庫，也就是我們的 GitHub。
 
-<center> <img src="https://i.imgur.com/XkG1sE2.png" alt="SSH 連線運作方式"></center>
-<center class="imgtext">SSH 連線運作方式（圖片來源: <a href="https://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html" class="imgtext">Sébastien Saunier</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/XkG1sE2.png" alt="SSH 連線運作方式">
+    SSH 連線運作方式（圖片來源: <a href="https://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html">Sébastien Saunier</a>）
+</p>
+
 
 ### 產生金鑰對
 我習慣所有的金鑰對收集起放在 `~/.ssh` 這個目錄下。若該目錄不存在，就自己建一個，並設定正確的權限：
@@ -100,7 +102,6 @@ The key’s randomart image is:
 +----[SHA256]-----+
 ```
 
-<br>
 
 ### 設定金鑰代理
 這個步驟是給有設定金鑰密碼的人，如果你有設定密碼，但又不想每次使用金鑰就要輸入一次，你可以考慮設定金鑰代理：
@@ -111,8 +112,6 @@ $ ssh-add ~/.ssh/github_key
 
 如果你沒有設定密碼，或是像我一樣不想起一個 agent 在背景跑，寧願每次輸入密碼的，可以跳過這個步驟。
 
-
-<br>
 
 ### 新增公鑰到你的遠端倉庫
 產生的金鑰有兩把，一把是**公鑰（Public Key）**、一把是**私鑰（Private Key）**。
@@ -132,18 +131,20 @@ $ ssh-add ~/.ssh/github_key
 2. **新增金鑰**：  
     接下來登陸你的 GitHub 帳號，點選你的頭像 → `Settings` 。
     
-    <center> <img src="https://i.imgur.com/jJ6XpEQ.png?1" alt="Settingsl"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/jJ6XpEQ.png?1" alt="Settingsl">
+    </p>
     
     左欄點選 `SSH and GPG keys`  →  `New SSH key`。
     
-    <center> <img src="https://i.imgur.com/rjIhVFM.png" alt="Settingsl"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/rjIhVFM.png" alt="Settingsl">
+    </p>
     
     最後把剛剛複製下來的公鑰，貼在下方，並為這把金鑰取個方便管理的名字。
-    
-    <center> <img src="https://i.imgur.com/pmGdEeE.png" alt="Settingsl"></center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/pmGdEeE.png" alt="Settingsl">
+    </p>
     
 3. **連線測試**  
     完成金鑰上傳後，驗證下這組金鑰是不是正常工作，如果一切正常，應該會看到下面的訊息：
@@ -191,7 +192,6 @@ $ ssh-add ~/.ssh/github_key
     ```        
     
  
-<br><br>
 
 ## 更改連線協議
 完成金鑰的產生與配置後，必須更改連線的協議，否則即便配置 SSH，還是會走 https 的傳輸協定。
@@ -221,15 +221,16 @@ $ git remote set-url origin git@github.com:user_name/project.git
 
 完成後，可以試著上傳 commit，並查看金鑰的使用狀況，應該會發現金鑰有了使用紀錄：
 
-<center> <img src="https://i.imgur.com/T0MzThW.png" alt="The Learning Model"></center>
+<p class="illustration">
+    <img src="https://i.imgur.com/T0MzThW.png" alt="The Learning Model">
+</p>
 
-<br><br> 
+
 
 ## 在 Window 使用 SSH 金鑰
-
 基本上所有動作跟在 Linux 一樣，唯一的差異就是在 SSH 金鑰存放的位置是在 `c:/Users/user_name/.ssh`。
 
-<br><br> 
+
 
 ## 參考資料 
 1. [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) 。檢自 GitHub Docs (2020-12-22)。
@@ -239,7 +240,7 @@ $ git remote set-url origin git@github.com:user_name/project.git
 5. Mike Mazur (2009-08-06)。[ssh - How do I change my private key passphrase?](https://serverfault.com/questions/50775/how-do-i-change-my-private-key-passphrase) 。檢自 Server Fault (2020-12-22)。
 6. 冰海 (2018-01-14)。[github提示Permission denied (publickey)，如何才能解决？ - 冰海的回答](https://www.zhihu.com/question/21402411/answer/295576230)。檢自 知乎 (2020-12-22)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -17,17 +17,16 @@ tags:
 2. 練習測驗 2：生命週期章節小測驗
 
 <!--more-->
-<br>
+
+
 
 ## Vue 生命週期
-
-![Imgur](https://i.imgur.com/vDihCVx.png)
-<center class="imgtext"> Lifecycle-Diagram（圖片來源: <a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram" class="imgtext">Vue.js</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/vDihCVx.png">
+    Lifecycle-Diagram（圖片來源: <a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram">Vue.js</a>）
+</p
 
 每個 Vue instance 在被創建時都要經過一系列的初始化過程，在這個過程中 Vue 也會運行  <mark>lifecycle hooks</mark> 的函數，提供使用者在不同階段添加自己的操作。
-
 
 上圖中，紅色圓角框的文字，都屬於 Vue 所提供的 lifecycle hooks，呼叫方式如下：
 ```javascript
@@ -71,37 +70,45 @@ Uncaught TypeError: this.myMethod is not a function`
 ```
 之類的錯誤。
 
-<br>
+
 
 ### 各階段介紹
+
 
 #### **beforeCreate**
 剛完成初始化，此階段資料尚未產生，理論上此階段別進行操作資料，但也不是沒辦法啦 → [vue怎么在beforeCreate里获取data](https://segmentfault.com/q/1010000012331476)。不過人家最後也說了...**實際情況中從來沒遇到過需要在組件還沒初始化就去拿 data 的**...
 
+
 #### **created**
 數據觀測後所產生的 hook，從此階段開始才能對資料做操作。
+
 
 #### **beforeMount**
 編譯完模板後會被觸發，但此階段尚未將模板掛載到 HTML 的 DOM 元素上。
 
+
 #### **mounted**
 直到此階段才將 template 整個掛載到 HTML 上，這時候才能進行一些 HTML 的操作。假如有載入 jQuery，要到這步驟才能操作 HTML 的 DOM 元素。
+
 
 #### **beforeUpdate**
 在元件建立起來後，它會因為資料變動的關係而觸發 beforeUpdate 並進行重新繪製。
 
+
 #### **updated**
 直到資料重新繪製完成後，會再觸發 updated。
 
+
 #### **beforeDestroy** 與 **destroyed**
 分別會在銷毀元件前後觸發。
+
 
 #### **deactivated** 與 **activated**
 一般元件，如：v-if，不想每次切換條件判斷式就被 destroy 並摧毀該元件上所記錄的資料，導致下次更改判斷式後就必須重新走一次 created 流程。
 
 此時就可以使用 **\<keep-alive\>** 來維持資料狀態，避免被 destroy。當組件在 \<keep-alive\>  內被切換，它的 deactivated 和 activated 這兩個 lifecycle hooks 函數將會被對應執行。
 
-<br><br>
+
 
 ## 練習測驗 2：生命週期章節小測驗
 **問題 1：生命週期中，如果我們要透過 Ajax 讀取資料，至少到哪個階段才能正確運作？**  
@@ -116,13 +123,12 @@ Uncaught TypeError: this.myMethod is not a function`
 2. [x] 在 v-if 判斷隱藏後，資料也不會消失。  
 3. [ ] 重複切換出現的時候，一樣會進入 create  的生命週期。  
 
-<br><br>  
+
 
 ## 其他連結
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 
-<br><br>
 
 ## 參考資料
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)

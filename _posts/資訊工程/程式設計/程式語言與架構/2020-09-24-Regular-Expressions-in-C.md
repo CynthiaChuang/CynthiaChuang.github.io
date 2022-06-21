@@ -13,10 +13,9 @@ tags:
 不過最大的坑應該是...我幹麻選 C 阿，都 4、5 年沒碰了。
 
 <!--more-->
-<br>
+ 
 
 ## regex.h 函式庫
-
 用 C 來寫正規表示式第一個碰到的問題是，<mark>C 的標準函式庫中並沒有支援正規表示式</mark>。
 
 
@@ -27,10 +26,8 @@ tags:
 在使用 regex.h 進行開發時，一般會有三個步驟：**編譯**、 **匹配**、 **釋放**，三個步驟分別對應到四個常用函式中的其中三個：`regcomp()`、 `regexec()`、 `regfree()`，剩下一個是錯誤處理 `regerror()`。
 
 
-<br><br>
 
 ## 編譯：regcomp()
-
 這個是把指定的表示式 `pattern` 編譯成特定的資料格式 `regex_t` ，在下一個階段會使用編譯後的結果 `preg` 進行匹配。
 
 ```cpp
@@ -62,11 +59,9 @@ assert(success==0);
 
 是說 POSIX 體系，<mark>沒有</mark> `\d` 跟 `\w` 可用，只能寫成 `[a-z0-9]` 。
  
- 
-<br><br>
+
 
 ## 匹配：regexec()
-
 編譯好後就可以把目標字串放進去匹配了。
 
 ```cpp
@@ -114,11 +109,9 @@ else if (status == 0){  // 匹配
 }
 ```
 
- 
-<br><br>
+
 
 ## 釋放：regfree()
-
 把空間釋放放掉。
 
 ```cpp
@@ -131,7 +124,7 @@ void regfree (regex_t *preg)
 regfree(&reg);
 ```
 
-<br><br>
+
 
 ## 錯誤處理： regerror()
 當執行 `regcomp` 或 `regexec` 產生錯誤的時候，就可以調用這個函數返回錯誤訊息的字串。
@@ -154,10 +147,9 @@ regerror(status, &preg, msgbuf, sizeof(msgbuf));
 printf("error: %s\n", msgbuf);
 ```
 
-<br><br>
+
 
 ## 程式範例
-
 把上面的程式碼，整合起來：
 
 ```cpp
@@ -199,7 +191,6 @@ int main(){
 ```
 
 
-<br><br> 
 
 ## 參考資料 
 1. 陈止风 (2017-02-06)。[c regex 用法](https://blog.csdn.net/yingzinanfei/article/details/54893394) 。檢自 陈止风的博客｜CSDN博客 (2020-08-28)。
@@ -209,7 +200,6 @@ int main(){
 5. elbort (2012-09-04)。[c语言 正则表达式可编译c文件](https://blog.csdn.net/elbort/article/details/7943317) 。檢自 elbort的专栏 ｜ CSDN博客 (2020-08-28)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

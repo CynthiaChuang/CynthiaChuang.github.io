@@ -28,14 +28,12 @@ tags:
 </div>
 
 
-<br><br> 
 
 ## 參考資料 
 1. PSERIC (2017)。[推倒知識高牆！Sci-Hub 免費下載千萬篇期刊論文電子全文](https://free.com.tw/sci-hub/)。檢自 免費資源網路社群 (2018-05-25)。
 2. Citationsy (2020-02-02)。[Sci-Hub: Download Research Papers and Scientific Articles for free](https://citationsy.com/blog/download-research-papers-scientific-articles-free-scihub/)。檢自 Citationsy (2020-02-08)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

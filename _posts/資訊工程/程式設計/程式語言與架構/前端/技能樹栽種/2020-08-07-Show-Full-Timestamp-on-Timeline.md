@@ -22,15 +22,16 @@ tags:
 
 只是改改時間格式而已還頗快...至少比寫這篇網誌快 XD，開始前先來看看原本的時間軸這樣：
 
-<center> <img src="https://imgur.com/lSxk5nt.png"></center>
+<p class="illustration">
+    <img src="https://imgur.com/lSxk5nt.png">
+</p>
 
-<br><br>
 
 ## 在時間軸上顯示完整日期
 實做過程可以細分成兩個步驟：
 
-### Step1、更改時間格式
 
+### Step1、更改時間格式
 時間軸上的每個物件是定義在 `_includes/_macro/post-collapse.html` 中，找到一個 `post.date`，而後面的 pipleline 所接的就是所顯示的時間格式，把它換成你需要的格式就好。
 
 原本程式碼
@@ -53,10 +54,10 @@ tags:
 </time>
 ```
 {% endraw %}
-<br>
+
+
 
 ### Step2、更改字體大小
-
 不過原本顯示的數字從 4 碼變成了 8 碼實在有點擠，思考了一下，決定改字體大小好了，不調整 UI 了。
 
 
@@ -73,9 +74,11 @@ tags:
 ```
 
 改完結果如下
-<center> <img src="https://imgur.com/Du36sTn.png" ></center>
+<p class="illustration">
+    <img src="https://imgur.com/Du36sTn.png">
+</p>
 
-<br><br> 
+
 
 ## 參考資料 
 <div class="alert info"> 
@@ -83,7 +86,7 @@ tags:
 此次修改請參考此 <a href="https://github.com/CynthiaChuang/CynthiaChuang.github.io/commit/5cd5dc871594a5d7a43b971f1bb2e9b6cf889356">commit</a>
 </div>
 
-<br><br> 
+ 
 
 ## 更新紀錄
 <details class="update_stamp">

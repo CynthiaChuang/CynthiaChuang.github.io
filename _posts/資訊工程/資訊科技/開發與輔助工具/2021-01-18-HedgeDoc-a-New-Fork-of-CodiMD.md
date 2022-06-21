@@ -14,21 +14,22 @@ tags:
 有天 PM 找了詢問關於 CodiMd 的新功能 **[Image Lightbox Support](https://hackmd.io/@codimd/release-notes/%2F%40codimd%2Fv2_2_0#Image-Lightbox-Support)**，並拜託我測試下這個功能。不過，當我用了上次的[安裝方法](/How-to-Setup-CodiMD)升級後，出現的卻是一個名為 **HedgeDoc** 頁面，著實嚇了我一跳。
 
 <!--more-->
-<center> <img src="https://i.imgur.com/sOg1sTf.png?1" alt="HedgeDoc"></center>
-<center  class="imgtext">HedgeDoc（圖片來源: <a href="https://demo.hedgedoc.org/"  class="imgtext">HedgeDoc Demo</a>）</center>
+<p class="illustration">
+<img src="https://i.imgur.com/sOg1sTf.png?1" alt="HedgeDoc">
+HedgeDoc（圖片來源: <a href="https://demo.hedgedoc.org/">HedgeDoc Demo</a>）
+</p>
 
-<br>
+
 
 ## 變更歷史
-
 認真回顧了下，它們兩個的[恩怨情仇](https://github.com/hackmdio/codimd/issues/1219)（！？），總結來說就是社群被原本開發團隊氣到（？），因此重新取名、換了 logo，並且使用 TypeScript 重新撰寫了 **HedgeDoc**。
 
 還是一頭霧水？正常，它們歷經了好幾次的變更與命名，這真的會把人搞暈。
 
-<center> <img src="https://i.imgur.com/uAhfGhq.jpg?1" alt="把人搞暈了"></center>
-<center  class="imgtext">把人搞暈了（圖片來源: <a href="https://www.pexels.com/zh-tw/photo/4458420/"  class="imgtext">Yan｜Pexels</a>）</center>
-
-<br>
+<p class="illustration">
+<img src="https://i.imgur.com/uAhfGhq.jpg?1" alt="把人搞暈了">
+把人搞暈了（圖片來源: <a href="https://www.pexels.com/zh-tw/photo/4458420/">Yan｜Pexels</a>）
+</p>
 
 這得先從他們共同的起源—**HackMD** 說起，HackMD 是個主打即時文件協作（Real-time collaboration）的共享筆記工具，聽說它是由一份資訊安全的<mark>學校作業</mark>誕生的。嘖，大神就是大神，作業寫一寫，就推出了一個這麼棒的產品（來自魯蛇的忌妒 :upside_down_face: 
 
@@ -45,14 +46,15 @@ tags:
 <div class="blockquote-center">
 HedgeDoc 是 CodiMD 的社群驅動分支，而後者是 HackMD 的開源版本。
 </div>
- 
-<center> <img src="https://i.imgur.com/FqoEzbr.jpg" alt="HedgeDoc History"></center>
-<center  class="imgtext">HedgeDoc History（圖片來源: <a href="https://hedgedoc.org/history/"  class="imgtext">HedgeDoc 官網</a>）</center>
 
-<br><br>
+<p class="illustration">
+    <img src="https://i.imgur.com/FqoEzbr.jpg" alt="HedgeDoc History">
+    HedgeDoc History（圖片來源: <a href="https://hedgedoc.org/history/">HedgeDoc 官網</a>）
+</p>
+
+
 
 ## HedgeDoc
-
 因為我之前所使用的 [Container](https://github.com/codimd/container) 是由社群所維護的，因此升級完後才會跑出那隻可愛的小刺蝟，出來的網站就像 [Demo 網站](https://demo.hedgedoc.org/)這樣。
 
 HedgeDoc 的安裝步驟在之前的[《安裝踩雷筆記…》](/How-to-Setup-CodiMD)有介紹過，這邊就不再複述了。不過還是附上程式碼與 Container：
@@ -63,13 +65,14 @@ HedgeDoc 的安裝步驟在之前的[《安裝踩雷筆記…》](/How-to-Setup-
 
 對了，那刺蝟真的好可愛 :heart_eyes: ，害我對 HedgeDoc 愛不釋手...
 
-<center> <img src="https://i.imgur.com/WDNpZ7v.png" alt="可愛的小刺蝟"></center>
-<center  class="imgtext">可愛的小刺蝟（圖片來源: <a href="https://pixabay.com/zh/photos/hedgehog-cute-animal-little-nature-1215140/"  class="imgtext">Pixabay</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/WDNpZ7v.png" alt="可愛的小刺蝟">
+    可愛的小刺蝟（圖片來源: <a href="https://pixabay.com/zh/photos/hedgehog-cute-animal-little-nature-1215140/">Pixabay</a>）
+</p>
 
-<br><br>
+
 
 ## CodiMd
-
 不過，從那張歷史分支圖看來，兩邊的開發紀錄已經分開了。而 PM 所要求的功能的圖片放大縮小功能， 是 Hackmd 團隊底下所維護的 CodiMd 才有，所以還是得來看看怎安裝。
 
 
@@ -122,7 +125,6 @@ $ sudo service network-manager restart
 打完收工！理論上 DB 跟 Volume 也要處理，但 PM 只是要先嘗試新功能，所以也就不著急配置，先丟給 PM 玩玩，有需要再來處理吧。
 
 
-<br><br> 
 
 ## 參考資料 
 1. [CodiMD - release-notes](https://hackmd.io/@codimd/release-notes/) 。檢自 HackMD (2021-01-18)。
@@ -131,7 +133,6 @@ $ sudo service network-manager restart
 4. HedgeDoc developers。[HedgeDoc History](https://demo.hedgedoc.org/)。檢自 HedgeDoc - Markdown 協作筆記 (2021-01-18)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

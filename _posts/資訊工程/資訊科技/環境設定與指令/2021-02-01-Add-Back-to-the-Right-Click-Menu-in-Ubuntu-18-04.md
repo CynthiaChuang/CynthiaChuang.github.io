@@ -11,7 +11,7 @@ tags:
 唉唉唉，為啥我升完級後，我右鍵的新增文件不見了！！！！雖然可以透過終端機下 `touch` 也可以達成目的，但要這樣來回切換實在有點麻煩，看看有沒有辦法把它加回來好了。
 
 <!--more-->
-<br>
+
 
 ## 通過 UI 新增新文件
 拜了下大神，發現要把它用回來的方法來挺簡單了，在 Nautilus（Ubuntu 預設的檔案瀏覽器）中，它會去讀取家目錄下的模板資料夾，並將資料夾中檔案做為右鍵選單的選項。說起來很神奇，但其實只要 2 個步驟就可以完成了：
@@ -37,13 +37,14 @@ tags:
     $ touch "文字檔案"
     ```
     這時打開右鍵選項，就會發現我的新增檔案回來了！！！（喜極而泣
-    
-    <center> <img src="https://i.imgur.com/BTQlTPB.png" alt="新增檔案"></center>
-    <br>
+
+    <p class="illustration">
+    <img src="https://i.imgur.com/BTQlTPB.png" alt="新增檔案">
+    </p>
     
     如果你要新增任何或移除任何文件類型，只要在資料夾新增或移除對應的文件即可。
 
-<br><br> 
+
 
 ## 參考資料 
 1. OpenView (2019-08-18)。[小技巧：Ubuntu 18.04中為滑鼠右鍵菜單添加「新建文件」選項](https://kknews.cc/zh-tw/code/99nx3e8.html) 。檢自 每日頭條 (2020-02-01)。
@@ -51,7 +52,6 @@ tags:
 3. Karim Buzdar (2018-12-04)。[Add “New Document” back to the right-click menu in Ubuntu 18.04](https://vitux.com/add-new-document-back-to-the-right-click-menu-in-ubuntu-18-04/) 。檢自 VITUX (2020-02-01)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

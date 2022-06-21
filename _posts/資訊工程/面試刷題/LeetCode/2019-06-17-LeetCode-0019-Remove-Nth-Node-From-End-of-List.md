@@ -31,12 +31,11 @@ After removing the second node from the end, the linked list becomes 1->2->3->5.
 
 **Related Topics:**`Linked List`、`Two Pointers`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題讓我們移除鏈結串列中倒數第 N 個節點，且題目中限定了 N 是一定是有效的，也就是說 N 一定是鏈結串列中的節點，因此可以省略些檢查步驟。
 
-<br>
 
 ### remove
 一開始的想法很簡單，當尋訪到指定的 node 時就將它跳過，但因為題目的 n 指的是從後方數來，而單向的鏈結串列只能從前向後走，因此必須先計算要移除的 node 從前方數來的 index，也就是 $len(鏈結串列) - n$。
@@ -145,7 +144,6 @@ class Solution:
 ```
 
 
-<br><br>
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

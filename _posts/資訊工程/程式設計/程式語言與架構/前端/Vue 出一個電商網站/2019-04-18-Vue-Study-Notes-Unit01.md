@@ -15,16 +15,15 @@ tags:
 這邊先列出在第一階段學習過程中，所會使用到相關資源與工具。
 
 <!--more-->
-<br>
+
+
 
 ## Vue 官方文件
-
 [官網](https://vuejs.org/index.html)上有提供相關[文件](https://vuejs.org/v2/guide/)可供學習。
 
-<br><br>
+
 
 ## 開發工具
-
 課程中講師使用的是 [Visual Studio Code](https://code.visualstudio.com/) 搭配延展模組 [vue](https://marketplace.visualstudio.com/items?itemName=jcbuisson.vue)、[Vue 2 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets) 與 [Preview on Web Server](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server)。
 
 其中，vue 與 Vue 2 Snippets 是提供 Vue 的 Highlight 與 Snippets 功能，算是第二階段才會使用的的工具主要作用在 .vue 檔上。
@@ -42,10 +41,8 @@ command 'extension.launch' not found
 不過因為之前是使用 Android Studio 與 IntelliJ IDEA 這 JetBrains 系列的 IDE，所以我開發環境可能會選擇同系列的 [Webstorm](https://www.jetbrains.com/webstorm/)。
 
 
-<br><br>
 
 ## 網頁除錯工具
-
 因為 Vue.js 是以資料驅動的一種架構，因此開發過程需要觀察當時資料是否符合預期。
 
 除了直接透過 console 觀察資料外，也可以透過 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 來觀察甚至修改資料，相關操作可以看這篇[教學](https://flaviocopes.com/vue-devtools/)。
@@ -59,16 +56,14 @@ Vue.config.devtools = false;
 Vue.config.debug = false;
 ```
 
-<br><br>
+
 
 ## 其他連結
-
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
-<br><br>
+
 
 ## 參考資料
-
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)
 2. [Vue.js｜Vue.js](https://vuejs.org/index.html)  
 3. [Vue.js DevTools Tutorial](https://flaviocopes.com/vue-devtools/)

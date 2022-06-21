@@ -30,10 +30,7 @@ tags:
 
 
 <!--more-->
-<br><br>
-
 ## 全基因體關聯分析 （GWAS） 
-
 全基因體關體分析（Genome Wide Association Study）是指在人類全基因體範圍內找出存在的序列變異，即單核苷酸多態性（SNP），從中篩選出與疾病相關的 SNPs。
 
 白話一點的說法就是，先決定一個想研究的性狀/疾病，然後去找到兩群人，一群有這性狀/疾病，另外一群做對照。考慮可能的混淆因素，並比對這兩群人所有/可能的 SNPs，最後依照基因型頻率分布來找到與該性狀/疾病相關的遺傳位點。之後的應用可以在搭配醫療資料的大數據分析，以進行疾病預防及治療...等。
@@ -43,10 +40,8 @@ tags:
 在 GWAS 常用演算法有三種常用：BLINK、FarmCPU 和 PLINK，不過這三種演算法偏向統計方法的改進，這篇的目的就是為了 Survey 這些工具。
 
 
-<br><br>
 
 ## 相關閱讀
-
 不過考慮到我對這些流程一無所知，在開始玩這些工具之前先去閱讀了相關的論文，以及工具的介紹：
 1. [Iterative Usage of Fixed and Random Effect Models for Powerful and Efficient Genome-Wide Association Studies](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005767)
 2. [BLINK: A Package for Next Level of Genome Wide Association Studies with Both Individuals and Markers in Millions](https://academic.oup.com/gigascience/article/8/2/giy154/5238723) 
@@ -55,20 +50,16 @@ tags:
 3. [一种交替运用固定效应和随机效应模型优化全基因组关联分析的算法开发](http://tow.cnki.net/kcms/detail/detail.aspx?filename=1016156134.nh&dbcode=CRJT_CDFD&dbname=CDFDTOTAL&v=)  
     P.S. 挑這一篇單純就只是看它的一些名詞解釋
 
-<br>
   
 ### Fixed and random model Circulating Probability Unification（FarmCPU）
-
 GWAS 分析一直飽受兩個問題的困擾：大量的 false positives 和 false negatives，False positives 由群體結構和個體之間的親緣關係矩陣造成的。
 
 將群體結構作為固定效應加入到一般線性模型中或者同時將群體結構作為固定效應，親緣關係矩陣作為隨機效應加在混合線性模型中可以很好的控制 false positives ，但混合線性模型會導致兩種效應變量與待檢測位點之間的混雜問題，從而降低了模型對關聯位點的檢測效力，造成了一定程度的 false negatives。
 
 Fixed and random model Circulating Probability Unification （FarmCPU） 是為了解決混合線性模型中存在的混雜問題，通過交替使用一個固定效應模型（FEM）和一個隨機效應模型（REM）來解決模型，更好地控制模型混雜問題，顯著提高了統計功效和運算速度。 
 
-<br>
 
 ### BLINK
-
 BLINK 有能與混合線性模型相比的控制 false positives 能力，但需要更少的複雜計算時間，幾乎與一般線性模型的線性計算時間複雜度相匹配。
 
 在 FarmCPU 中，它將混合線性模型分離成固定效應模型（FEM）與隨機效應模型（REM），然後迭代地使用它們。但隨機效應模型（REM）計算成本計算成本較高，所以 BLINK，使用貝氏訊息準則  (Bayesian Information Criteria, BIC)將隨機效應模型替換為固定效應模型。
@@ -89,7 +80,7 @@ BLINK 有能與混合線性模型相比的控制 false positives 能力，但需
 執行：GUI 版本：[iPat](http://zzlab.net/iPat/)、command 版本：[BLINKC](http://zzlab.net/blink/index.html)
 P.S.、都是張志武實驗做的
 
-<br><br>
+
 
 ## PLINK
 ### 常見格式型別
@@ -158,22 +149,18 @@ PLINK軟體輸入檔案的常見格式型別：
 	3. Irregularly-formatted PLINK text files
  
  
-<br><br>
-
 
 ### 輸入過濾
+<p class="illustration">
+    <img src="https://i.imgur.com/wrWwbSe.png" alt="GWAS 粗略流程圖">
+    GWAS 粗略流程圖（圖片來源: <a href="https://zhuanlan.zhihu.com/p/72490817">知乎</a>）
+</p>
 
-<center> <img src="https://pic2.zhimg.com/80/v2-b494eaba88bea07b1b8fb40b35f44e6d_hd.jpg" alt="GWAS 粗略流程圖"></center>
-<center class="imgtext">GWAS 粗略流程圖（圖片來源: <a href="https://zhuanlan.zhihu.com/p/72490817" class="imgtext">用plink做一套GWAS分析 - 知乎</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/0xx5gzW.png" alt="GWAS基本分析内容">
+    GWAS基本分析内容（圖片來源: <a href="https://www.jianshu.com/p/70164cce947c">簡書</a>）
+</p>
 
-
-<center> <img src="https://i.imgur.com/0xx5gzW.png" alt="GWAS基本分析内容"></center>
-<center class="imgtext">GWAS基本分析内容（圖片來源: <a href="https://www.jianshu.com/p/70164cce947c" class="imgtext">GWAS基本分析内容 - 簡書</a>）</center>
-<br>
-
-
-<br>
 
 ### 準備
 ```
@@ -211,7 +198,6 @@ Among remaining phenotypes, 48 are cases and 41 are controls.
 --make-bed to wgas1.bed + wgas1.bim + wgas1.fam ... done.
 ```
 
-<br>
 
 ### 過濾
 Missingness per individual --mind 0.1 >10% 排除  ###樣本缺失率   
@@ -466,8 +452,6 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
 
 
 
-<br><br> 
-
 ## 參考資料 
 1. 研之有物│中央研究院 (2018/05/18)。[全基因組分析能讓我們知道多少事？](https://kknews.cc/zh-tw/science/yarmxxa.html) 。檢自 PanSci 泛科學 (2020-03-03)。
 2. 知乎日報 (2016-12-20)。[聽起來很厲害的「全基因組關聯分析」，能算命嗎？](https://kknews.cc/zh-tw/science/yarmxxa.html) 。檢自 每日頭條 (2020-03-03)。
@@ -488,7 +472,3 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
 18. Ochi (2017-01-04)。[plink进行GWAS分析](http://blog.sina.com.cn/s/blog_80572f5d0102x8fj.html))。檢自 Ochi - 新浪博客 (2020-03-03)。
 19. [bcftools](https://samtools.github.io/bcftools/bcftools.html)。檢自 bcftools (2020-03-03)。
 20. [PLINK assoc input: can it be two vcf files case/control?](https://www.biostars.org/p/355804/)。檢自 biostars (2020-03-03)。
- 
- 
- 
- 

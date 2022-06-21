@@ -14,13 +14,13 @@ tags:
 說實話我還是搞不懂為何需要建立 CodiMD，不過上面說要建那就來建吧～！
 
 <!--more-->
-<br> 
+
 
 ## 先來聊聊 HackMD 與 CodiMD
-
-<center> <img src="https://i.imgur.com/lobcWpo.png" alt="HackMD"></center>
-<center class="imgtext"> HackMD 官網截圖 （圖片來源: <a href="https://hackmd.io/" class="imgtext"> HackMD 官網</a>）</center>
-<br>
+<p class="illustration">
+<img src="https://i.imgur.com/lobcWpo.png" alt="HackMD">
+HackMD 官網截圖 （圖片來源: <a href="https://hackmd.io/"> HackMD 官網</a>）   
+</p>
 
 之前提過 [HackMD](https://hackmd.io/) 是我用過最順手 Markdown 的文字編輯器。而 [CodiMD](https://demo.codimd.org) 其實就是 Open Source 的 HackMD Community Edition。
 
@@ -28,10 +28,8 @@ CodiMD 之前好像叫做 HackMD CE ，但為了避免命名混搖的困擾，�
 
 不過，但說實話還是很混亂，而且是讓人更加的困惑！除了在一些文件與專案兩個名字會輪流出現外，還有另外一個讓人更困惑的是，名為 CodiMD 的 repository 其實是有兩個的，分別由 HackMD EE 與社群所維護的。
 
-<br>
 
 ### 程式碼
-
 由於上述原因它的程式碼是有兩個 repository。
 
 1. **HackMD EE 維護**
@@ -43,10 +41,9 @@ CodiMD 之前好像叫做 HackMD CE ，但為了避免命名混搖的困擾，�
     - Source code：[codimd/server](https://github.com/codimd/server)
     - Container： [codimd/container](https://github.com/codimd/container)
 
-<br><br>
+
 
 ## 安裝步驟
-
 這邊安裝了社群維護 CodiMD
 
 ```shell
@@ -59,7 +56,6 @@ $ docker-compose up
  
 但是事情通常都是沒有這麼簡單的，我有那一次安裝環境照著指令輸完就過的？每次都會踩到一堆坑 QAQ
  
-<br>
 
 ### 問題1：docker-compose 未安裝
 一開始的問題是因為我沒有裝過 **docker-compose**，因此一開始會出現未安裝的提示，所以照著 Ubuntu 的提示安裝了 **docker-compose** 
@@ -101,7 +97,6 @@ $ docker-compose --version
 docker-compose version 1.25.0-rc1, build 8552e8e2
 ```
 
-<br>
 
 ### 問題2： could not find an available, non-overlapping IPv4 address
 不過 docker-compose 安裝完，我還是不能跑 Orz，這次錯誤訊息換成了：
@@ -143,9 +138,9 @@ networks:
 如果有人裝雙網卡且試過前面的指令都不行的，或許也可以試試看著個方法？
 
 
-<br><br>
 
 ## 維護
+
 
 ### 備份與還原
 若要執行備份指令的，直接下
@@ -243,7 +238,6 @@ ERROR:  relation "notes_shortid" already exists
 
 需要注意的是，在複製 volume 必須確保 database 已經停止，不然資料可能會不一致，因此管理者還是推薦用文件的備份方法 。
 
-<br>
 
 ### 軟體升級
 ```shell
@@ -273,28 +267,23 @@ $ docker-compose up ## turn on
 
 問題不大，直接照 [issue](https://github.com/hackmdio/codimd/issues/1159) 所說的，修改 config.json 即可。
 
-<br>
 
-###  使用者管理
-
+### 使用者管理
 超蠢的一件事，我剛註冊完帳號回頭就忘了我自己的密碼，偏偏 UI 上又沒有忘記密碼的選項 Orz，只好去[問問](https://github.com/codimd/container/issues/34)，還好一條指令就搞定了。
 ```bash
 $ docker-compose exec codimd ./bin/manage_users --reset <mail address>
 ```
 
 
-<br>
-
-###  環境配置
+### 環境配置
 CodiMD 環境配置有兩種方法一是配置 [Environment variables](https://github.com/codimd/server/blob/master/docs/configuration-env-vars.md)，或是使用 [Config file](https://github.com/codimd/server/blob/master/docs/configuration-config-file.md)
 
-<br><br>
+
 
 ## 小記
 HackMD / CodiMD 是真的很好用，但說實話建置說明文件偏少（還是我太弱了！？），建置上相當的不方便。但管理者相當的熱心，回覆都還滿熱心且迅速的，如果有問題可以直接到 [論壇](https://community.codimd.org/) 提問。
 
 
-<br><br>
 
 ## 參考資料 
 1.  [CodiMD Documentation｜HackMD](https://hackmd.io/c/codimd-documentation/%2Fs%2Fcodimd-documentation) 
@@ -303,7 +292,7 @@ HackMD / CodiMD 是真的很好用，但說實話建置說明文件偏少（還�
 4. [Docker “ERROR: could not find an available, non-overlapping IPv4 address pool among the defaults to assign to the network”｜Stack Overflow](https://stackoverflow.com/questions/43720339/docker-error-could-not-find-an-available-non-overlapping-ipv4-address-pool-am)
 5. [Docker系列教程24-Docker Compose网络设置｜周立的博客 关注Spring Cloud、Docker](http://www.itmuch.com/docker/24-docker-compose-network/)
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

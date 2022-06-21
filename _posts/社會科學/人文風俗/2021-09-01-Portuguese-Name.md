@@ -16,12 +16,14 @@ tags:
 > *我的上帝是你*
 
 <!--more-->
-<center> <img src="https://i.imgur.com/tG9KLxl.png" alt="無語的C羅、超甜的小C羅♡"></center>
-<center class="imgtext">無語的C羅、超甜的小C羅♡（圖片來源: <a href="https://www.youtube.com/watch?v=c5vvTiZtP7s" class="imgtext">YouTube</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/tG9KLxl.png" alt="無語的C羅、超甜的小C羅♡">
+    無語的C羅、超甜的小C羅♡（圖片來源: <a href="https://www.youtube.com/watch?v=c5vvTiZtP7s">YouTube</a>）
+</p>
+
+
 
 ## 關於名字的疑惑
-
 小C羅的全名應該是**小克里斯蒂亞諾·羅納度·多斯桑托斯（Cristiano Ronaldo dos Santos Jr）**，不過他在影片中一直把自己的全名講錯成克里斯蒂亞諾·桑托斯（Cristiano Santos）。
 
 影片看到這我想說，小朋友這麼說好像也不算錯！？他只說了 First Name 跟 Last Name，把 Middle Name 全省了，雖然不是全名，但好歹也算是他的名字？不過看C羅反應好像也不太對，不然也不會出現這句話：
@@ -29,36 +31,37 @@ tags:
 > It's not Cristiano Santos boy. <br>
 > *不是 Cristiano Santos 阿，兒子。*
 
-<center> <img src="https://i.imgur.com/zgl9M6U.png" alt="不是 Cristiano Santos 阿"></center>
-<center class="imgtext">不是 Cristiano Santos 阿（圖片來源: <a href="https://www.youtube.com/watch?v=c5vvTiZtP7s" class="imgtext">YouTube</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/zgl9M6U.png" alt="不是 Cristiano Santos 阿">
+    不是 Cristiano Santos 阿（圖片來源: <a href="https://www.youtube.com/watch?v=c5vvTiZtP7s">YouTube</a>）
+</p>
 
 我的另一個問題則是在影片中出現的另一句話：
 
 > It's not. You don't have Aveiro. <br>
 > *不是啦。你沒有阿維羅。*
 
-
-<center> <img src="https://i.imgur.com/MLV3WiL.png" alt="你沒有阿維羅"></center>
-<center class="imgtext">你沒有阿維羅（圖片來源: <a href="https://www.youtube.com/watch?v=c5vvTiZtP7s" class="imgtext">YouTube</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/MLV3WiL.png" alt="你沒有阿維羅">
+    你沒有阿維羅（圖片來源: <a href="https://www.youtube.com/watch?v=c5vvTiZtP7s">YouTube</a>）
+</p>
 
 我知道阿維羅是C羅姓氏，他的全名是**克里斯蒂亞諾·羅納度·多斯桑托斯·阿維羅（Cristiano Ronaldo dos Santos Aveiro）**，我這時才注意到他兒子不是繼承他的姓氏，而是中間名？但這個中間名又是小C羅姓氏 ＠＠？
 
 看到這我決定搞懂葡萄牙人的命名系統！
  
-<br><br>
+
  
 ## 名字組成
-
 首先，先來搞懂葡萄牙人名的組成與結構。就找到的資料看來，葡萄語命名系統非常靈活，靈活到有點讓人頭痛 :anguished:。
 
 通常來說，他們姓名通常由一或兩個名字和一到四個姓氏組成所組成，姓氏分別出自父母任一方或雙方的世系，排序習慣上母系在前、父系在後。
 
 以C羅的名字來說，他的全名並不是我之前以為的 `First Name + Middle Name + Last Name` 這種格式，而是非常傳統的葡萄牙的格式，擁有兩段名字、首姓、與次姓，其中首姓來自母親、次姓來自父親：
 
-<center><img src="https://i.imgur.com/6P1sHyp.png" alt="C羅姓名格式"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/6P1sHyp.png" alt="C羅姓名格式">
+</p>
 
 1. **名字**  
     與大部分西歐地區一樣，葡語的全名即以名字起頭。
@@ -80,9 +83,10 @@ tags:
     
     超複雜的有沒有！！  
     
-    <center> <img src="https://i.imgur.com/ExQSEAG.png" alt="超崩潰的C羅"></center>
-    <center class="imgtext">超崩潰的C羅（圖片來源: <a href="https://sports.ltn.com.tw/news/breakingnews/2556724" class="imgtext">自由體育</a>）</center>
-    <br>
+    <p class="illustration">
+        <img src="https://i.imgur.com/ExQSEAG.png" alt="超崩潰的C羅">
+        超崩潰的C羅（圖片來源: <a href="https://sports.ltn.com.tw/news/breakingnews/2556724">自由體育</a>）
+    </p>
     
     就我目前的理解，如果在寫全名或是簡稱時，應該寫作「多斯桑托斯」，表這是桑托斯家的克里斯蒂亞諾；但在指稱呼姓氏時，則只用「桑托斯」，畢竟沒有後面的名詞了，也就不用把他變成形容詞了。
     
@@ -122,11 +126,10 @@ B. Cristiano R. S. Aveiro
 2. 路易斯·菲利浦·瑪德拉·卡埃羅·菲戈（Luís Filipe Madeira Caeiro Figo），他取姓氏**菲戈**做為通稱。
 2. 魯伊·曼努埃爾·塞薩爾·科斯塔（Rui Manuel César Costa），通常簡稱為**魯伊·科斯塔**。
 3. 克里斯蒂亞諾·羅納度·多斯桑托斯·阿維羅（Cristiano Ronaldo dos Santos Aveiro），則是用**克里斯蒂亞諾·羅納度**。
- 
-<br><br>
+
+
 
 ## 姓氏繼承
-
 搞懂後姓名格式後，來研究小C羅的姓氏為何是桑托斯，而不是阿維羅。
 
 前面研究格式有提到幾點：
@@ -135,9 +138,10 @@ B. Cristiano R. S. Aveiro
 
 有沒有發現它其實沒有規定小孩的姓氏必須繼承自雙親中的哪一位甚至是哪一個姓氏，所以你要給小孩哪個姓氏都行，只是習慣上大家都會給最末姓。
 
-<center> <img src="https://i.imgur.com/ef9htfx.png" alt="算數學啦"></center>
-<center class="imgtext">算數學啦（圖片來源: <a href="https://www..com/en/search?q=mathematics" class="imgtext">pxfuel</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/ef9htfx.png" alt="算數學啦">
+    算數學啦（圖片來源: <a href="https://www..com/en/search?q=mathematics">pxfuel</a>）
+</p>
 
 好了最基本的規則就這幾條，接下來我用在 [wikiwand](wikiwand.com/zh-hant/葡萄牙语人名) 看到的例子，來做排列組合問題，開始！
 
@@ -167,11 +171,12 @@ B. Cristiano R. S. Aveiro
 
 最後來個福利照 🧡
 
-<center> <img src="https://images.chinatimes.com/newsphoto/2017-11-17/1024/20171117004429.jpg" alt="The Learning Model"></center>
-<center  class="imgtext">C羅與小C羅的合照（圖片來源: <a href="https://www.instagram.com/cristiano/"  class="imgtext">IG</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/DOzX40q.jpg" alt="The Learning Model">
+    C羅與小C羅的合照（圖片來源: <a href="https://www.instagram.com/cristiano/">IG</a>）
+</p>
 
-<br><br> 
+
 
 ## 參考資料 
 1. (2019-10-09)。[葡萄牙人姓名的组成方式是怎么来的？](http://www.51aiyu.com/?p=37605)。檢自 西安富克斯葡萄牙留学移民第一品牌 (2021-08-30)。
@@ -184,7 +189,7 @@ B. Cristiano R. S. Aveiro
 13. 温兴兵 (2018-06-29)。[从C罗的名字看葡萄牙人巴西人起名](https://zhuanlan.zhihu.com/p/38440205)。檢自 知乎 (2021-09-01)。
 14. PortugueseEmbassy (2017-07-20)。[葡萄牙人的姓名長度堪稱世界最長](https://read01.com/zh-tw/Bnn3K8N.html#.YS9OBo4zZPZ)。檢自 壹讀 (2021-09-01)。
  
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

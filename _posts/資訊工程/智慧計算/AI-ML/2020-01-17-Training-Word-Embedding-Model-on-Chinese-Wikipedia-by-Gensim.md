@@ -20,7 +20,7 @@ tags:
 
 為了方便操作，這邊採用的是使用 python 的函式庫 —  [gensim](https://radimrehurek.com/gensim/) 來實作，文章裡所有的程式碼都會傳上 github...如果找不到那肯定是我拖延症又發作了XD
 
-<br><br>
+
 
 ## Word Embedding 
 先來看看 Word Embedding，又名詞向量，是指將文字的語意用一組向量來表示，其概念是出自於 Bengio 的 《A Neural Probabilistic Language Model》（論文：[原文](http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)、[筆記](https://medium.com/%E7%A8%8B%E5%BC%8F%E5%B7%A5%E4%BD%9C%E7%B4%A1/a-neural-probabilistic-language-model-%E8%AB%96%E6%96%87%E7%AD%86%E8%A8%98-61f4c5cecee7)）。
@@ -31,12 +31,11 @@ tags:
 $$
 \overrightarrow{King} - \overrightarrow{Man} +  \overrightarrow{Woman} \approx \overrightarrow{Queen}
 $$
- 
-<br>
 
-<center> <img src="https://i.imgur.com/9weAgyi.jpg" alt="word vector"></center>
-<center class="imgtext">word vector（圖片來源: <a href="https://flashgene.com/archives/48063.html" class="imgtext">闪念基因</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/9weAgyi.jpg" alt="word vector">
+    word vector（圖片來源: <a href="https://flashgene.com/archives/48063.html">闪念基因</a>）
+</p>
 
 
 而 word2vec 則是 Google 所提出用來實現 word embedding 的一種方法，主要採用了 Skip-Gram 與 CBOW 兩種模型。
@@ -58,10 +57,9 @@ $$
 
 - 只想訓練一份詞向量的，就往下看吧
 
-<br><br>
+
 
 ## 函式庫安裝
-
 在開始之前，先把 gensim 安裝起來，只要一條指令：
 
 ```shell
@@ -87,9 +85,10 @@ data 1.6.8: /py3.6/lib/python3.6/site-packages/pyhanlp/static/data <br>
 config    : /py3.6/lib/python3.6/site-packages/pyhanlp/static/hanlp.properties <br>
 </div>
 
-<br><br>
+
 
 ## 取得語料
+
 
 ### 下載語料
 在機器學習中，萬事起頭的第一步就是備齊資料，當然訓練詞向量也是。為了訓練出針對特定 domain 但又不失一般性的詞向量，因此必須分別收集 general 與 specific domain 的資料。
@@ -97,7 +96,7 @@ config    : /py3.6/lib/python3.6/site-packages/pyhanlp/static/hanlp.properties <
 這邊 general 的資料是此用<mark>中文的維基百科</mark>，因為它資料夠大，也較為全面。維基百科有[最新中文資料](https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2)可供下載，也可以前往[維基百科的資料庫](https://zh.m.wikipedia.org/wiki/Wikipedia:%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD)下載所需要的版本。需要特別注意的是，請選擇 `*-pages-articles.xml.bz2` 形式的語料。
 
 下載完成後，先別急著將下載檔案解壓縮，因為這是一份 1.9G 的 xml 文件，如果不想自己寫 parser 來解析這份文件，請先別衝動！...說的就是我自己 XD 
-<br>
+
 
 ### 解析語料
 在 gensim 中有提供 API 可以直接調用，以取出文章的標題和內容。
@@ -138,9 +137,10 @@ with open(output, "w") as f:
 1. 每個 token，依序做一次繁簡轉換。
 2. 檢查轉換的結果是否符合編碼，若結果符合則留下，反之則保留轉換前的輸入。
  
-<br><br>
+
 
 ## 訓練前處理
+
 
 ### 斷詞
 因為 pyhanlp 的預設斷詞是使用簡體中文斷詞，如果想用簡體的斷詞器對繁體的語句進行斷詞，效果不彰，因此必須將語句換成簡體，或改用繁體的斷詞器，這邊是選擇使用<mark>繁體的斷詞器</mark>。
@@ -220,7 +220,7 @@ with open(output, "w") as fw:
                 # 其他處理-3: 移除 stop word
                 fw.write(restructuring(corpus[0]) + "\n")
 ```
-<br>
+
 
 ### 其他前處理
 如果有注意到，在上段程式碼中我留了三個其他處理的註解，這邊可以取決你的應用是否希望將它換成特定的標籤，例如將對話中的 e-mail 或 url 換成 `#EMAIL#`、`#URL#` 等標籤，使斷詞結果更符合我們預期，或是可以依照詞性取代掉姓名、機關名稱，使最後訓練出來詞向量可以集中這些詞性的詞，但這樣的修改有好有壞就是了。
@@ -228,18 +228,16 @@ with open(output, "w") as fw:
 最後一個註解是移除 [stop word](https://zh.wikipedia.org/wiki/%E5%81%9C%E7%94%A8%E8%AF%8D)，中文翻作停用詞，這些詞極其普遍，但與其他詞相比它並沒有什麼實際含義，如：阿、呀。這些詞的移除可以加強單詞的上下文關係，理論上有助於詞向量的訓練。
 
 除了上述的前處理外，在程式碼看不到的部分，我還對 Hanlp 的字典進行調整，引入了[內政資料開放平臺](https://data.moi.gov.tw/)的資料，並使用 Hanlp 內建的[新詞挖掘](https://github.com/hankcs/HanLP/wiki/%E6%96%B0%E8%AF%8D%E8%AF%86%E5%88%AB)的功能，使它的斷詞結果更符合臺灣的對話情境。
-<br>
+
 
 ### Out-of-Vocabulary Words，即 OOV
-
 斷詞處理的最後一段，我們設置一個詞頻的門檻值，針對低詞頻的詞將使用 `#UNK#` 這個標籤來取代。這是因為這些低頻詞由於缺乏足夠數量的語料，訓練出來的詞向量往往效果不佳，也可同時訓練出一組詞向量用以表示詞彙表中不存在的詞。
 
 這邊就不分享替換 OOV 的程式碼了，我這邊暫時使用暴力法來實做，先將斷詞結果讀入，並計算每個詞出現次數，最後將低於門檻值的詞換成 UNK 標籤，再將結果寫出。只是這樣實做流程耗時又耗空間，還有待改進 orz...
 
-<br><br>
+
 
 ## 訓練詞向量
-
 最後就是訓練詞向量啦！程式碼很簡單就幾行而已，但麻煩的是超參數的調整只能按你的應用，慢慢實驗來調整。
 
 
@@ -276,10 +274,9 @@ model.save(model_name)
 5. **min_count**  
     指一個詞出現的次數若小於 min_count，則拋棄不參與訓練。
 
-<br><br>
+
 
 ## 訓練詞結果
-
 訓練完成了，那就來試試下面的結果！
 
 ```python
@@ -298,10 +295,9 @@ model.similarity("棒球","全壘打")
 model.most_similar(["日本","東京"], ["美國"], topn= 100)                  
 ```
 
-<br><br>
+
 
 ## 參考資料 
-
 1. [word2vec和word embedding有什么区别?｜知乎](https://www.zhihu.com/question/53354714)
 2. [DeepNLP的表示学习·词嵌入来龙去脉·深度学习（Deep Learning）·自然语言处理（NLP）·表示（Representation）｜Mr.Scofield-CSDN博客](https://blog.csdn.net/scotfield_msn/article/details/69075227)
 3. [A Neural Probabilistic Language Model](http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf)
@@ -315,7 +311,7 @@ model.most_similar(["日本","東京"], ["美國"], topn= 100)
 10. [以 gensim 訓練中文詞向量｜雷德麥的藏書閣](http://zake7749.github.io/2016/08/28/word2vec-with-gensim/) 
 
 
-<br><br>  
+
 
 ## 更新紀錄
 <details class="update_stamp">

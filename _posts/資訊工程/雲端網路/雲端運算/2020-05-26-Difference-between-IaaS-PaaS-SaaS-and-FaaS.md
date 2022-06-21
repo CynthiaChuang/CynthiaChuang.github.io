@@ -14,17 +14,16 @@ tags:
 最近（或該說前一陣子？）在看 FasS/Serverless 相關文章，順帶提一提一些 SaaS、PaaS 與 IaaS。
 
 <!--more-->
-
-<center> <img src="https://i.imgur.com/Aj0HhN7.jpg" alt="IaaS、PaaS、SaaS 與自行架構比較。"></center>
-<center class="imgtext">IaaS、PaaS、SaaS 與自行架構比較。（圖片來源: <a href="https://www.ionos.com/digitalguide/server/know-how/caas-container-as-a-service-service-comparison/" class="imgtext">IONOS</a>）</center>
-
-<br><br> 
+<p class="illustration">
+    <img src="https://i.imgur.com/Aj0HhN7.jpg" alt="IaaS、PaaS、SaaS 與自行架構比較。">
+    IaaS、PaaS、SaaS 與自行架構比較。（圖片來源: <a href="https://www.ionos.com/digitalguide/server/know-how/caas-container-as-a-service-service-comparison/">IONOS</a>）
+</p>
 
 ## Infrastructure as a Service，IaaS
-
-<center> <img src="https://i.imgur.com/ljyHR1Y.png" alt="IaaS"></center>
-<center class="imgtext">IaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-iaas/" class="imgtext">Microsoft Azure</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/ljyHR1Y.png" alt="IaaS">
+    IaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-iaas/">Microsoft Azure</a>）
+</p>
 
 Infrastructure as a Service 翻譯為**基礎設施即服務**，一般簡稱 **IaaS**，顧名思義就是 <mark>服務商提供基礎設施作為他們的服務</mark>，是一種雲端運算產品。
 
@@ -37,33 +36,30 @@ Infrastructure as a Service 翻譯為**基礎設施即服務**，一般簡稱 **
 此外，IaaS 通常可提供高可用性、商務持續性與災害復原等服務，避免資料因天災或人禍而損毀或中斷。
 
 
-<br><br> 
 
 ## PaaS
-
-<center> <img src="https://i.imgur.com/XKLsrUQ.png" alt="PaaS"></center>
-<center class="imgtext">PaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-paas/" class="imgtext">Microsoft Azure</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/XKLsrUQ.png" alt="PaaS">
+    PaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-paas/">Microsoft Azure</a>）
+</p>
 
 Platform as a Service 翻譯為**平台即服務**，一般簡稱 **PaaS**，在這項服務中供應商會提供使用者開發與管理所需的平台環境，如此一來，使用者只需要專注在資料處理與應用程式的開發項目...等，免除開發環境設置、相依軟體安裝、安全性、伺服器軟體及備份...等困擾。
  
 因為 PaaS 是基於 IaaS 所提供的服務，因此它也同時具備 IaaS 所帶來的優勢，並提供額外，如：<mark>開發時間減少</mark>、<mark>便捷管理應用程式生命週期</mark>...等優勢。
  
-<br><br> 
+
 
 ## SaaS
-
-<center> <img src="https://i.imgur.com/J0otbOf.png" alt="SaaS"></center>
-<center class="imgtext">SaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-saas/" class="imgtext">Microsoft Azure</a>）</center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/J0otbOf.png" alt="SaaS">
+    SaaS（圖片來源: <a href="https://azure.microsoft.com/zh-tw/overview/what-is-saas/">Microsoft Azure</a>）
+</p>
 
 Software as a Service 翻譯為**軟體即服務**，簡稱 **SaaS**。它可以讓使用者透過網際網路和瀏覽器等媒介，提供使用者所需軟體服務，最常見的如：電子郵件、日曆...等。
 
 使用者無須購買、安裝、更新或維護任何硬體、中介軟體，即可以使用該軟體，且資料放在雲端，基本上只要裝置可以連網，幾乎可以從世界各地存取應用程式，是目前日常生活中最常接觸到的服務。
 
-<br><br> 
+
 
 ## FaaS
 Function as a Service，這部分去可以看看[之前的筆記](/Serverless-Use-Cases-Study-Notes-01#什是-serverless)，這是將整個程式運行環境給託管出去的，將開發出來的函式直接放動雲端去當作服務在調用，特點有：
@@ -76,9 +72,7 @@ Function as a Service，這部分去可以看看[之前的筆記](/Serverless-Us
 無需管理、按需執行、按需擴展、按使用來計費
 </div>
 
- 
 
-<br><br> 
 
 ## 參考資料 
 1.  (2017-09-01)。[Iaas、Pass、Saas 傻傻分不清楚](https://dotblogs.com.tw/007_Lawrence/2017/08/21/155203) 。檢自 我想與您們分享我的點點滴滴 點部落 (2020-03-19)。
@@ -88,7 +82,7 @@ Function as a Service，這部分去可以看看[之前的筆記](/Serverless-Us
 5. (2019-08-01)。[Iaas、Paas、Saas 哪種適合您的需求?](https://accord-tec.com.tw/iaas%E3%80%81paas%E3%80%81saas-%E5%93%AA%E7%A8%AE%E9%81%A9%E5%90%88%E6%82%A8%E7%9A%84%E9%9C%80%E6%B1%82/) 。檢自 台灣雅閣科技  (2020-03-19)。
 8. [何謂 IaaS？](https://azure.microsoft.com/zh-tw/overview/what-is-iaas/) 。檢自 Microsoft Azure (2020-03-19)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

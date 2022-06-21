@@ -24,9 +24,12 @@ tags:
 
 先來看看成品長怎樣
 
-![Imgur](https://i.imgur.com/UTcNeft.png)
+<p class="illustration">
+    <img src="https://i.imgur.com/UTcNeft.png">
+</p>
 
-<br><br>
+
+
 ## 套用版型及建立代辦事項列表的資料
 作業模板：[傳送門](https://codepen.io/Wcc723/pen/VXRWyg)
 
@@ -62,19 +65,19 @@ tags:
 10. **避免加入空的任務**  
 建議可以針對輸入的內容去刪除前後的空格，並判斷是否為空字串，避免加入空字串。
 
-<br><br>
+
 
 ## 刪除陣列上的特定資料
-
 1. **新增函式並與刪除按鈕綁定**    
     建立所需函式 deleteTask 並與 delete icon 使用 `v-on` 進行綁定。使的點擊 delete icon 時，可以觸發該函式。
 
 2. **實做 deleteTask 函式**  
     可以使用 **array.splice** 刪除陣列中指定的元素，但其指定方式是使用 index ，因此必須知道欲刪除元素的 index。 Index 可以在進行 v-for 迴圈時取得，並與 item 一併傳入。
     
-<br><br>
+
 
 ## 製作頁籤分類的功能
+
 
 ### 刪除線效果
 在顯示任務名稱的 label 標籤上添加 class 的動態切換
@@ -82,12 +85,14 @@ tags:
 ```html
 :class="{'completed':item.completed}"
 ```
-<br>
+
 
 ### 頁簽功能
 頁簽功能分成兩部分來實做，一是上方頁簽切換，二是下方資料切換。
 
-<br>先實做上方頁簽切換的部分
+<br>
+
+先實做上方頁簽切換的部分
 1.  **新增變數**  
     新增三個變數 `allItem` 、 `processing` 與 `done`，分別對應到 card-header 的三個分頁全部、進行中、已完成。另外宣告一個變數 `visibilityTab` ，並將該值初始化為 **allItem**，此變數用來記錄目前使用者正在查看的頁簽。
     
@@ -104,8 +109,9 @@ tags:
     ```
     一旦 `visibilityTab` 指向自己，`:class` 的判斷式就會為真，因此就會為該頁簽加上渲染效果。
 
-　　
-<br> 下方資料切換
+<br> 
+
+下方資料切換
 1.  **動態過濾陣列內容**  
     因為我們不希望修改原始 `todoList` 中的資料，因此實做時會希望回傳一個新的過濾後陣列。且因為我們希望在不同頁簽會回傳不同的陣列，因此我們會在 computed 中實作該函數 `filteredList` 。
     
@@ -134,7 +140,7 @@ tags:
     }
     ```
 
-<br><br>
+
 
 ## 雙擊修改資料內容
 1. **在 UI 上實做輸入框架**  
@@ -170,13 +176,12 @@ tags:
     使用 `doneEdit(item)` 來實做完成輸入事件，當按下 enter 後，將 item 中的 TaskName 指定為 cacheTaskName 內容，並清空 cacheTask、cacheTaskName。
 
 
-<br><br>
 
 ## 刪除項目補充說明  
-
 之前實做刪除時，是採用傳入陣列 index、並刪除所傳入 index 元素，但在 filtered 後的陣列中內容元素所在 index 與之在原始陣列中的 index 有異。
 
 如果直接刪除所傳入 index 會出現誤刪的情況，因此改利用傳入 id 反查該筆資料在原始陣列中正確的位置，然後在進行刪除。
+
 <br>
 
 課程中在實做時方法有二，一是使用 **array.forEach** ，當遇到 id 同時就記錄下目前的 index，最後在刪除所記錄下的 index：
@@ -192,7 +197,9 @@ removeItem: function(item){
 },
 ```
 
-<br>不過個人更偏好第二種方法：
+<br>
+
+不過個人更偏好第二種方法：
 ```javascript
 removeItem: function(item){
    let removeId = this.todos.findIndex((todo) => {
@@ -203,17 +210,12 @@ removeItem: function(item){
 ```
 
 
-<br><br>
 
 ## 其他連結
-
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
-
 2. 實戰體驗：[github](https://github.com/CynthiaChuang/vue-exercise/tree/master/Hw1-TodoList)、[codepen](https://codepen.io/cynthiachuang/pen/dLjPed)
 
  
-<br><br> 
 
 ## 參考資料
-
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)

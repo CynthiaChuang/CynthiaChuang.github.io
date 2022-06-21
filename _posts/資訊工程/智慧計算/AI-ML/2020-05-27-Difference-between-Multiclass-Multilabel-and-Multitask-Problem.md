@@ -9,14 +9,15 @@ tags:
 - 煉丹常識
 --- 
 
-<center> <img src="https://i.imgur.com/elR7EfU.png" alt="Multilabel Classification"></center>
-<center class="imgtext">Multilabel Classification（圖片來源: <a href="https://suhitaghosh10.github.io/EurLexClassification/" class="imgtext">EurLex classification </a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/elR7EfU.png" alt="MultiLabel Classification">
+    Multilabel Classification（圖片來源: <a href="https://suhitaghosh10.github.io/EurLexClassification/">EurLex classification </a>）
+</p>
   
 最近在糾結 Multiclass 與 Multilabel 的區別，順便頭疼他們該採用的 activation 與 loss function。
 
 <!--more-->
-<br><br> 
+
 
 ## Binary classification
 在開始前，我們先提提最常見的 Binary classification 二元分類，也就是學習 Yes/No 。
@@ -30,7 +31,7 @@ tags:
 
 P.S. 是說選 Softmax 也沒關係？因為在二元分類情况下 Softmax 會退化成 Sigmoid。
 
-<br><br> 
+
 
 ## Multiclass classification
 而 Multiclass classification 多類別分類。顧名思義，在此類型的分類任務中，會具有兩個以上類別的分類任務，但每個樣本只能被標記為一個類別。
@@ -50,18 +51,16 @@ P.S. 是說選 Softmax 也沒關係？因為在二元分類情况下 Softmax 會
 貓=0, 狗=1, 熊=2
 [[0], [1], [2]]
 ```
-<br> 
 
 而此訓練任務的 activation 與 loss function 會選擇 <mark>Softmax</mark> 與 <mark>categorical cross-entropy</mark>。使用 Softmax 原因在於其輸出值是相互關聯，且其機率的總和始終為 1，因此一旦提升某一類別的機率時，其他類別的機率必須會相對應減少，以符合每個樣本只能被標記一類別的定義。
 
 
 
-<br><br> 
-
 ## Multilabel classification
-<center> <img src="https://i.imgur.com/SiUMrKl.png" alt="Multilabel Classification"></center>
-<center class="imgtext">Multilabel Classification（圖片來源: <a href="https://gombru.github.io/2018/05/23/cross_entropy_loss/" class="imgtext">Raúl Gómez blog</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/SiUMrKl.png" alt="Multilabel Classification">
+    Multillabel Classification（圖片來源: <a href="https://gombru.github.io/2018/05/23/cross_entropy_loss/">Raúl Gómez blog</a>）
+</p>
  
 Multilabel classification 多標籤分類任務，在此訓練任務中存在著兩個以上類別，但每個類別之間並不互斥。
 
@@ -74,12 +73,10 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
  [0 0 1 1]
  [0 0 0 0]]
 ```
-<br> 
 
 而 activation 與 loss function 則會選擇 <mark>Sigmoid</mark> 與 <mark>binary cross-entropy</mark>。使用 Sigmoid 是因為它分別處理各個原始輸出值，使結果相互獨立。
 
 
-<br><br> 
 
 ## Multitask classification
 最後一個 Multitask classification，這是我在找資料過程中發現的。在這類型的訓練任務中一樣存在著兩個以上類別，且每個類別之間並不互斥，但與 Multilabel 不同的地方在於每個類別的存在兩種以上的可能。
@@ -97,14 +94,12 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 
 而多任務學習，則是將多的<mark>相關的（related）<span>任務放在一起學習，在常見的多任務學習網路架構中，他們會共用前半部的參數，以從中習得任務之間的關聯性。
 
-<center> <img src="https://i.imgur.com/94EpzyP.png" alt="Multitask Learning Architecture"></center>
-<center class="imgtext">Multitask Learning Architecture（圖片來源: <a href="https://arxiv.org/pdf/1611.00851.pdf" class="imgtext">論文</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/94EpzyP.png" alt="Multitask Learning Architecture">
+    Multitask Learning Architecture（圖片來源: <a href="https://arxiv.org/pdf/1611.00851.pdf">論文</a>）
+</p>
 
 
-
-
-<br><br> 
 
 ## 參考資料 
 1. [Multilabel classification format](https://scikit-learn.org/stable/modules/multiclass.html#multilabel-classification-format) 。檢自 scikit-learn (2020-05-21)。
@@ -115,7 +110,7 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
 6. Anu (2019-02-10)。[What is the difference between Multitask and Multiclass learning](https://stats.stackexchange.com/a/391805)。檢自 Cross Validated - StackExchange (2020-05-21)。
 7. 深度学习于NLP (2017-06-06)。[模型汇总-14 多任务学习-Multitask Learning概述](https://zhuanlan.zhihu.com/p/27421983)。檢自 知乎 (2020-08-12)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

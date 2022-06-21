@@ -16,7 +16,8 @@ tags:
 
 是說，後面部分有點亂，是不是應該把這篇拆成兩篇
 <!--more-->
-<br>
+
+
 
 ## 目錄
 1.  [二元運算號](#二元運算號)
@@ -36,16 +37,14 @@ tags:
 15.  [公式對齊](#公式對齊)
 
 <br> 
+
 > **Warning**<br>
 > 下列指令前後應該皆用 **\$\$** 包圍，告訴編譯器這邊是應該用 mathjax 來渲染。<br>
 >  `$$ 指令 $$`
 
 
 
-<br><br>
-
 ## 二元運算號
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$+$|+||$-$|-||$\pm$|\pm||$\mp$|\mp|
@@ -57,10 +56,8 @@ tags:
 |$\circ$|\circ||$\bullet$|\bullet||$\diamond$|\diamond|
 $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 
-<br><br>
 
 ## 二元關係符號
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|
 |$<$|<||$>$|>||$=$|=|
@@ -81,11 +78,7 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 
 
 
-
-<br><br>
-
 ## 邏輯符號
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---| 
 |$\forall$|\forall||$\exists$|\exists||$\nexists$|\nexists| 
@@ -95,10 +88,9 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\land$|\land||$\wedge$|\wedge||$\curlywedge$|\curlywedge|
 |$\bigwedge$|\bigwedge|
 
-<br><br>
+
 
 ## 上標、下標及Head
-
 |預覽|指令|.|預覽|指令|
 |---|---|---|---|---|
 |$a^b$|a^b||$a_t$|a_t|
@@ -110,10 +102,9 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\overrightarrow{ab}$|\overrightarrow{ab}||$\overleftarrow{ab}$|\overleftarrow{ab}|
 |$\widehat{abc}$|\widehat{abc}||$\overset{\frown} {ab}$|\overset{\frown} {ab}|
 
-<br><br>
+
 
 ## 大尺寸運算符號
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$\sum$|\sum||$\bigcap$|\bigcap||$\bigcup$|\bigcup||$\biguplus$|\biguplus|
@@ -121,10 +112,9 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\bigotimes$|\bigotimes||$\bigoplus$|\bigoplus||$\bigwedge$|\bigwedge||$\bigvee$|\bigvee|
 |$\int$|\int||$\oint$|\oint|
 
-<br><br>
+
 
 ## 標準函式符號
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|
 |$\sin$|\sin||$\cos$|\cos||$\tan$|\tan| 
@@ -136,27 +126,24 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\inf$|\inf||$\max$|\max||$\min$|\min|
 |$\deg$|\deg||$\arg$|\arg||$\gcd$|\gcd|
 
-<br><br>
+
 
 ## 根號與分數
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$\surd$|\surd||$\sqrt{2}$|\sqrt{2}||$\sqrt[n]{}$|\sqrt[n]{}||$\sqrt[3]{2}$|\sqrt[3]{2}|
 |$\frac{2}{4}$|\frac{2}{4}||$\tfrac{2}{4}$|\tfrac{2}{4}||$\cfrac{2}{4}$|\cfrac{2}{4}|
 
-<br><br>
+
 
 ## 二項式係數
-
 |預覽|指令|.|預覽|指令|
 |---|---|---|---|---|
 |$\dbinom{n}{r}$|\dbinom{n}{r}||$\binom{n}{n-r}$|\binom{n}{n-r} |
 
-<br><br>
+
 
 ## 箭號
-
 |預覽|指令|.|預覽|指令|
 |---|---|---|---|---|
 |$\leftarrow$|\leftarrow||$\rightarrow$|\rightarrow|
@@ -177,10 +164,8 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\swarrow$|\swarrow||$\nwarrow$|\nwarrow|
 
 
-<br><br>
 
 ## 分隔符號
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$($|(||$)$|)||$[$|[||$]$|]|
@@ -188,19 +173,19 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\lfloor$|\lfloor||$\rfloor$|\rfloor||$\lceil$|\lceil||$\rceil$|\rceil|
 |$\vert$|\vert||$\Vert$|\Vert||$/$|/||$\backslash$|\backslash|
 
-<br><br>
+
+
 ## 希臘字母
-
-**大寫字母**
-
+**大寫字母**   
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$\Gamma$|\Gamma||$\Delta$|\Delta||$\Lambda$|\Lambda||$\Xi$|\Xi|
 |$\Pi$|\Pi||$\Sigma$|\Sigma||$\Upsilon$|\Upsilon||$\Phi$|\Phi|
 |$\Psi$|\Psi||$\Omega$|\Omega|
 
-<br>**小寫字母**
+<br>
 
+**小寫字母**   
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$\alpha$|\alpha||$\beta$|\beta||$\gamma$|\gamma||$\delta$|\delta|
@@ -212,11 +197,10 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\upsilon$|\upsilon||$\phi$|\phi||$\varphi$|\varphi||$\chi$|\chi|
 |$\psi$|\psi||$\omega$|\omega|
  
-<br><br>
+
+
 ## 陣列與方程式
-
-**陣列**
-
+**陣列**   
 $$\begin{matrix}
 a+b & c     & 9   \\
 5   & x^2+y & 3   \\
@@ -249,8 +233,7 @@ z & v
 
 .
 
-**真值表**
-
+**真值表**   
 $$\begin{array}{|c|c||c|} a & b & S \\
 \hline
 0&0&1\\
@@ -271,8 +254,7 @@ $$\begin{array}{|c|c||c|} a & b & S \\
 
 .
 
-**方程組**
-
+**方程組**   
 $$\begin{cases}
 3x + 5y +  z \\
 7x - 2y + 4z \\
@@ -288,28 +270,24 @@ $$\begin{cases}
 \end{cases}
 ```
 
-<br><br>
 
 ## 空格
-
 |效果說明|指令|預覽|.|效果說明|指令|預覽|.|效果說明|指令|預覽|
 |---|---|---|---|---|---|---|---|---|---|---|
 | 大空格 | \ |  $a\  b$| | 兩個quad空格|\qquad | $a\qquad b$|| 没有空格||  $ab$|
 |中空格 | \\; |$a\;b$|| 一個quad空格 |\quad|$a\quad b$ ||  緊貼 | \\! | $a\!b$|
 |小空格 |\\, |$a\,b$ || 換行|\\\\|$a\\ b$
 
-<br><br>
+
 
 ## 書寫時, 英文字體顯示
-
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$if$|if||$\text{ if }$|\text{ if } ||$\mathbb{R}$|\mathbb{R}||$\mathrm{C}$|\mathrm{C}|
 
-<br><br>
+
 
 ## 公式對齊
-
 $$
 \begin{aligned}		
 	a &= b + c \\
@@ -325,7 +303,7 @@ $$
 \end{aligned}
 ```
 
-<br><br> 
+
 
 ## 參考資料
 1.  [TeX / LaTeX 數學模式符號指令](http://bcc16.ncu.edu.tw/7/latex/math_tex/)

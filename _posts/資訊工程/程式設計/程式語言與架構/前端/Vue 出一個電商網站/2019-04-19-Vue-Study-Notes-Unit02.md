@@ -26,7 +26,8 @@ tags:
 12. 元件基礎概念
 
 <!--more-->
-<br>
+
+
 
 ## 應用程式建立
 
@@ -46,12 +47,15 @@ var app = new Vue({
 </script>
 ```
 {% endraw %}
-<br>其中 el 是應用程式與 Vue 綁定的方法，綁定時不定要用 id 綁定，可綁定 class :
+<br>
+
+其中 el 是應用程式與 Vue 綁定的方法，綁定時不定要用 id 綁定，可綁定 class :
 ```html
 <div id='app'> 改成 <div class='app'>
 el: '.app',    改成  el: '.app',
 ```
 <br>
+
 需注意的是 Vue 一次只能綁定一個元素，因此即便改用 class 重複的 class，也無法顯示相對應的 text。與 id 一樣具有唯一性，因此建議使用 id 。
 
 另外需要特別注意的是，Vue 是不支援巢狀的應用程式，它會直接報錯給你看！
@@ -97,15 +101,19 @@ var app2 = new Vue({
 後面章節會介紹透過 <b>Webpack 編譯</b>，才會看到使用 export default 的相關方法進行初始化。
 </div>
 
-<br><br>
+
+
 ## 雙向綁定的資料 與 MVVM 的概念
+<p class="illustration">
+    <img src="https://i.imgur.com/0b3Lz16.png" alt="MVVM">
+    Model View View Model（圖片來源: <a href="https://zh.wikipedia.org/wiki/MVVM">維基百科</a>）
+</p>
 
-![MVVM](https://i.imgur.com/0b3Lz16.png)
-<center class="imgtext">Model View View Model（圖片來源: <a href="https://zh.wikipedia.org/wiki/MVVM" class="imgtext">維基百科</a>）</center>
+Vue 是一種受到 [MVVM（Model–view–viewmodel）](https://zh.wikipedia.org/wiki/MVVM) 啟發的架構。實際上寫程式碼時，並不會寫到 VM 的部分，只需要寫 Model 即可。在資料變動的同時 VM 就會去控制視圖的話，反之，若從 UI 更改相關資料， VM 則會通知 Model 改寫資料   
 
-<br> Vue 是一種受到 [MVVM（Model–view–viewmodel）](https://zh.wikipedia.org/wiki/MVVM) 啟發的架構。實際上寫程式碼時，並不會寫到 VM 的部分，只需要寫 Model 即可。在資料變動的同時 VM 就會去控制視圖的話，反之，若從 UI 更改相關資料， VM 則會通知 Model 改寫資料   
+<br> 
 
-<br> 將 data 中的字串綁定至 DOM 上可使用下列方法：
+將 data 中的字串綁定至 DOM 上可使用下列方法：
 
 {% raw %}
 1. **Mustache 語法**：  
@@ -133,10 +141,8 @@ v-text 和 Mustache 語法起到的效果是一樣的。同樣的，動態修改
 </div>
 
 
-<br><br>
 
 ## v-bind 動態屬性指令
-
 v-text 與 v-html 也是屬於 Vue 指令的一種，更多的的指令可以看官方的 [API 文件](https://vuejs.org/v2/api/#Directives)，就我個人經驗 **v-** 開頭幾乎都是。
 
 v-bind 是用來更新 html 上的屬性使用的，例如：
@@ -159,10 +165,9 @@ var app = new Vue({
  
 另外在後面章節有提到，<mark>v-bind:src='imgSrc'</mark> 可縮寫成  <mark>:src='imgSrc'</mark>。
 
-<br><br>
+
 
 ## v-for 動態產生多筆資料於畫面上
-
 v-for 可以基於原始資料多次渲染指定元素，必須搭配特定語法 **alias in expression** 來使用，有點類似 **for each** 的用法。
 {% raw %}
 ```html
@@ -194,10 +199,8 @@ var app = new Vue({
 2.  根據 [style guide](https://vuejs.org/v2/style-guide/)，不建議 **v-for** 與 **v-if** 一起使用時，如有這種狀況建議使用 **computed** 屬性，讓其回傳過濾後的列表。
  
  
-<br><br>
 
 ## 使用 v-on 來操作頁面行為
-
 用於實做互動功能，主要用來綁定事件監聽器，被綁定的方法需宣告於 methods 物件中。需注意的是若想在方法中調用 data 或其他方法時，需要加上 **this** ，this 所指向的則是當前 DOM。
 
 {% raw %}
@@ -228,15 +231,17 @@ var app = new Vue({
 {% endraw %} 
 
 
-<br>另外在後面章節有提到， <mark>v-on:click="reverseText"</mark> 可縮寫成 <mark>@click="reverseText"</mark>。
+<br>
 
-<br><br>
+另外在後面章節有提到， <mark>v-on:click="reverseText"</mark> 可縮寫成 <mark>@click="reverseText"</mark>。
+
+
 
 ## 預先定義資料狀態的重要性
-
 在 Vue 中若要操作它的資料，必須要<mark>先定義好它的資料結構</mark>。若未事先定義，將無法綁定資料內容，會得到該變數 is not define 的錯誤。且事前定義資料有利於程式的程式的維護，並有助於提升可讀性。
 
 <br>
+
 不過那天寫程式時被同事提醒，忘了在 data 定義該變數，但卻發現 UI 參考的到，資料也可以進行操作。稍微檢查了一下，發現是因為是在 created 時有進行過一次初始化的動作。
 
 請教老師這是為什麼，助教給了下列的回覆，沒有吃得透徹，想說等等上完所有內容再回頭理解這句話：
@@ -256,10 +261,9 @@ var app = new Vue({
 學到後面的時候再回看這個問題，發現我當初的測試有誤，雖然在 UI 中可以顯示第一次 newText 的賦值結果，但之後的 newText 的值更新都不會反應在 UI 上了。
 </div>
 
-<br><br>
+
 
 ## 透過修飾符，讓 v-on 操作更簡單
-
 Vue 的官網中有一句話：<mark>方法只有純粹的數據邏輯，而不是去處理 DOM 事件細節</mark>。因此雖然可以在事件處理程序中調用 event 的相關操作，但還是建議使用 <mark>事件修飾符</mark> 處理了 DOM 事件的細節，讓事件處理專注於程式邏輯的撰寫。
 
 關於 v-on 所提供的事件修飾符詳見[官網文件](https://vuejs.org/v2/guide/events.html#Event-Modifiers)，舉例來說，若想移除元素預設行為可用：
@@ -271,7 +275,9 @@ reverseText(event) {
    ...
 }
 ```
-<br>或是直接使用事件修飾符
+<br>
+
+或是直接使用事件修飾符
 ```html
 v-on:click.prevent="reverseText"
 ```
@@ -282,10 +288,8 @@ v-on:click.prevent="reverseText"
 PS. 看影片時發現一個很酷的功能，在 VSCode 中輸入 br * 20 ，就會新增 20 個 \<br\> 。
  
  
-<br><br>
 
 ## :class 動態切換 className
-
 ```html
 <div id="app">
    <div class="box" :class= "{'rotate': isTransform }"></div>
@@ -314,15 +318,16 @@ var app = new Vue({
 }
 ```
 
-<br> 簡單來說就是
+<br> 
+
+簡單來說就是
 ```html
 v-bind:class="{ '要加入的className': '判斷式'}"
 ```
  
-<br><br>
+
 
 ## computed 運算功能
-
 computed 內的 function 內容，<mark>所相依的資料有產生變動時會被觸發時，重新運算結果呈現於畫面上</mark>。
 
 這邊 reverseText 一旦偵測到相依 this.text 資料有變動，也就是使用者於輸入框輸入文字時，v-model 就會改變 text 的內容，而 text 一旦改變就會觸發 reverseText 重新計算後並顯示於畫面上，因此可以及時得到反轉的結果。 
@@ -349,22 +354,21 @@ var app = new Vue({
 </script>
 ```
 {% endraw %} 
-<br>而在[使用 v-on 來操作頁面行為](#使用-v-on-來操作頁面行為)一章中，我們使用 ``v-on:click="reverseText2"`` ，這邊綁定 reverseText2 則是一個 methods，methods 是互動函式，**需要觸發才會運作**。
+<br>
 
+而在[使用 v-on 來操作頁面行為](#使用-v-on-來操作頁面行為)一章中，我們使用 ``v-on:click="reverseText2"`` ，這邊綁定 reverseText2 則是一個 methods，methods 是互動函式，**需要觸發才會運作**。
 
 就我理解，若希望 UI 顯示隨資料立即更新，就用 computed，若是由其他東西觸發再來更新 UI 的，則是使用 methods。
  
-<br><br>
+
 
 ## Vue 表單與資料的綁定
 
 #### 1. **string 與 input、textarea 的雙向綁定**  
 在元素直接使用 v-model 綁定 string 。
-<br>
 
 #### 2. **boolean 與 （單一）checkbox 的雙向綁定**  
 （單一）checkbox 預設值為 boolean，在 checkbox 用 v-model 綁定 boolean 後，checkbox 的勾選狀態改變，綁定 boolean 會隨之變為相對應 true/false 狀態。
-<br>
 
 #### 3. **array 與 checkbox-array 的雙向綁定**  
 在儲值的 array 與  checkbox-array 相互綁定後，當勾選任意選項後，改選項值會被加入儲值的 array。
@@ -394,11 +398,10 @@ checkboxArray = []
    <label class="form-check-label" for="check4">牛</label>
 </div>
 ```
-<br>
 
 #### 4. **string 與 single radio 的雙向綁定**  
 在 string 與  single radio  相互綁定後，string 記錄目前選定元素的 value。一樣相同 name 的 radio 必須綁定同一個 string。 
-<br>
+
 
 #### 5. **string 與 selected 的雙向綁定**  
 在 string 與 selected  相互綁定後，string 記錄目前選定 option 的 value。option 放在首項，表示這是 default 值，若 default 值在引導使用者下拉後，就不讓使用者再次選取此選項，可以在 option 的屬性中加上 disabled 。<br>
@@ -412,17 +415,19 @@ selected = "" ;
 </select>
 ```
 
-<br><br>
+
 
 ##  元件基礎概念
-
 每一個 Vue 元件都可以獨立儲存自己的狀態。為避免因使用同一個變數而造成狀態混淆的狀況，會將它細分成各個元件，在元件獨立控制自己的狀態。
  
 來一張經典的：
-![Organizing Components](https://i.imgur.com/1a2KVgb.png)
-<center class="imgtext">components（圖片來源: <a href="https://vuejs.org/v2/guide/components.html#Organizing-Components" class="imgtext">Vue.js</a>）</center>
+
+<p class="illustration">
+    <img src="https://i.imgur.com/1a2KVgb.png" alt="Organizing Components">
+    components（圖片來源: <a href="https://vuejs.org/v2/guide/components.html#Organizing-Components">Vue.js</a>）
+</p>
 　　
-<br>定義 component 的方法如下：
+定義 component 的方法如下：
 ```javascript
 Vue.component('元件名稱', {
    data: function () {   
@@ -433,12 +438,13 @@ Vue.component('元件名稱', {
    template: `html 語法`  
 ```
 
-<br><br>component 的元件名稱，這個元件名稱會是我們在 html 中所使用的元素標籤，按官方 style guide 建議元件名稱儘量採用組合字，不使用一個單字，避免原生元素標籤衝突。
+<br>
+
+component 的元件名稱，這個元件名稱會是我們在 html 中所使用的元素標籤，按官方 style guide 建議元件名稱儘量採用組合字，不使用一個單字，避免原生元素標籤衝突。
 
 而 component 內部的寫法，其實與一般 Vue 元件寫法是一致的，唯一需要特別注意的是 data 在 component 內部是以 **function** 來回傳物件內容。
 
 
-<br><br>
 
 ##  練習測驗 1：基礎章節測驗
 **問題 1： v-bind 是用來綁定動態資料，那麼 v-on 指令是用來綁定什麼？**
@@ -455,13 +461,11 @@ Vue.component('元件名稱', {
 2. [ ]  儘量可能的預先定義
 
 
-<br><br>
 
 ## 其他連結
 1. [【Vue.js 學習筆記】00. 目錄](/Vue-Study-Notes-Contents/)
 
 
-<br><br> 
 
 ## 參考資料
 1. [六角學院-Vue 出一個電商網站｜Udemy](https://www.udemy.com/vue-hexschool/)

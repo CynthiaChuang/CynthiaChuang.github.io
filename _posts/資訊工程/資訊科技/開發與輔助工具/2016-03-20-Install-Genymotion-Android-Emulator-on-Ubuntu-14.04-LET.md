@@ -17,62 +17,71 @@ tags:
 <!--more-->
 <br> 
 
-<center class="imgtext"> <img src="https://i.imgur.com/TTwPWQc.png"  /></center>
-<center class="imgtext">   genymotion_eyecatch （圖片來源: <a href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.testrisk.com%2F2016%2F03%2Fmobile-application-testing-change-host.html&psig=AOvVaw2T8Xe4HV0w8PKGv0dXUWqA&ust=1597463854717000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDayN7mmesCFQAAAAAdAAAAABAD" class="imgtext">testrisk</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/TTwPWQc.png">
+    genymotion_eyecatch （圖片來源: <a href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.testrisk.com%2F2016%2F03%2Fmobile-application-testing-change-host.html&psig=AOvVaw2T8Xe4HV0w8PKGv0dXUWqA&ust=1597463854717000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDayN7mmesCFQAAAAAdAAAAABAD">testrisk</a>）
+</p>
 
-<br>
+
 
 ## 安裝步驟
+
 
 ### 1. 安裝 Oracle Virtual Box
 因為我是在 Ubuntu 上開發，所以必須先安裝 Oracle Virtual Box 才能安裝 Genymotion：
 
 1. **下載 Virtual Box**   
-來到 [Virtual Box 官網]( https://www.virtualbox.org/)後，點選 Downloads 頁面，選擇 VirtualBox 的版號與作業系統，在依照你作業系統的版本選擇適合的 deb 檔下載。
+    來到 [Virtual Box 官網]( https://www.virtualbox.org/)後，點選 Downloads 頁面，選擇 VirtualBox 的版號與作業系統，在依照你作業系統的版本選擇適合的 deb 檔下載。
 
     在 Ubuntu14.04 LET 中，這兩個選項我分別選擇：
     1. VirtualBox 5.0.16 for Linux hosts 
     2. Ubuntu 14.04 ("Trusty") / 14.10 ("Utopic") / 15.04 ("Vivid") AMD64
-    <br>    
-    ![](https://i.imgur.com/FxNSO6O.png)
-    <br> 
-    ![](https://i.imgur.com/psZKhX0.png)
+    <p class="illustration">
+    <img src="https://i.imgur.com/FxNSO6O.png">
+    </p>    
+    
+    <p class="illustration">
+    <img src="https://i.imgur.com/psZKhX0.png">
+    </p>    
+
 <br> 
 
 2.  **下載 Virtual Box**   
-下載到合適的 deb 檔後，點選右鍵選單中的<mark>以 Ubuntu 軟體中心開啟</mark>來安裝即可。
+    下載到合適的 deb 檔後，點選右鍵選單中的<mark>以 Ubuntu 軟體中心開啟</mark>來安裝即可。
 
   
-<br>
-
 ### 2.  安裝 Genymotion
 [Genymotion](https://www.genymotion.com/) 有提供免費版的模擬器進行下載，但必須先註冊，所以建議在一開始先註冊再進行其他動作，避免在過程中跳掉。
 
 1. **註冊 Genymotion 帳號**   
 
 2. **下載 Genymotion**   
-註冊完帳號後，先回到首頁，點選首頁正中間的 choose paln 按鈕，選擇個人的免費版本，即 Individual 中 BASIC 標籤，點選 Get started 開始下載。
+    註冊完帳號後，先回到首頁，點選首頁正中間的 choose paln 按鈕，選擇個人的免費版本，即 Individual 中 BASIC 標籤，點選 Get started 開始下載。
 
-    ![](https://i.imgur.com/87aYyrA.png)
+    <p class="illustration">
+        <img src="https://i.imgur.com/87aYyrA.png">
+    </p>
+
+    <p class="illustration">
+        <img src="https://i.imgur.com/IjSSoLr.png">
+    </p>
     
-    
-    ![](https://i.imgur.com/IjSSoLr.png)
    <br>  
       
 2. **安裝 Genymotion**   
-啟動終端機，先切換到下載的檔案（genymotion-2.6.0-linux_x64.bin）所在的目錄，再輸入下列兩條指令：
+    啟動終端機，先切換到下載的檔案（genymotion-2.6.0-linux_x64.bin）所在的目錄，再輸入下列兩條指令：
 	```shell
 	$ chmod +x genymotion-2.6.0-linux_x64.bin
 	$ ./genymotion-2.6.0-linux_x64.bin
 	``` 
-	![](https://i.imgur.com/TVMBBxb.png)
-<br> 
+    <p class="illustration">
+    <img src="https://i.imgur.com/TVMBBxb.png">
+    </p>
+    <br> 
 
-4.  **執行**   
-當安裝完成後，會在資料夾中多了一個名為 genymotion 的資料夾，進入點擊 genymotion 執行檔，即可執行。
+3.  **執行**   
+    當安裝完成後，會在資料夾中多了一個名為 genymotion 的資料夾，進入點擊 genymotion 執行檔，即可執行。
 
-    
-<br>
 
 ### 3.  設定 Virtual machine
 1. **設定新的機器**   
@@ -87,8 +96,6 @@ tags:
 4. **執行**   
    最後讓它 run run 看能不能執行。
 
-      
-<br>
 
 ### 4. debug 時間...
 關於執行時的錯誤訊息，我收過三種，不過嚴格說來我弄掉的只有第一個，其他兩個我也還有點莫名其妙：  
@@ -107,44 +114,45 @@ tags:
 	$ sudo apt-get install virtualbox
 	```
 
-<br><br>
+
 
 ## 使用方法
-
 安裝完 Genymotion 後，最重要的就是讓它可以在 Android Studio 中使用啦～
+
 
 ### 1. 開啟 plugins 
 在 Android Studio中，依序點選 File → Settings lugins→ plugins → Browse repositories
 
- ![](https://i.imgur.com/IOsQGu2.png)
-    
-<br>
+<p class="illustration">
+<img src="https://i.imgur.com/jVCII63.png">
+</p>
+
 
 ### 2. 安裝 Genymotion plugins
 在搜尋攔輸入 Genymotion 後就會跳出，然點選安裝即可。 
 
-![](https://i.imgur.com/Ej5Qzlo.png)
-  
-<br>
+<p class="illustration">
+<img src="https://i.imgur.com/Ej5Qzlo.png">
+</p>
+
     
 ### 3. 設定路徑  
 安裝完 plugins 後重新啟動 Android Studio 就會發現多了Genymotion 的圖示。
 
-![](https://i.imgur.com/vDtPD51.png)
+<p class="illustration">
+<img src="https://i.imgur.com/vDtPD51.png">
+</p>
 
 點選後進入設定路徑，將路徑設定為剛剛 genymotion 執行檔所在的目錄即可，這樣下次執行時就會看到有模擬器可選了。
 
-  
 
-<br><br>
 
-## 小記
-  
+## 小記  
 安裝完後才想到，我用的是免費版，所以公司用途不在授權範圍內 QAQ，所以還是要想辦法處理掉 KVM 問題，不然叫公司買 Business 版？？
 
-<br><br>
 
-##  參考資料
+
+## 參考資料
 1. [How to Install Genymotion Android Emulator in Ubuntu Linux｜Youtube](https://www.youtube.com/watch?v=k3MSTD9SLy4)
 2. [Virtualization not enabled in BIOS?｜Stack Overflow](http://stackoverflow.com/questions/27884846/virtualization-not-enabled-in-bios)
 3. [[Android] Android Studio 安裝 Genymotion 模擬器｜阿斌的筆記](http://aiur3908.blogspot.tw/2015/04/android-android-studio-genymotion.html)

@@ -12,24 +12,23 @@ tags:
 記錄一下我自己的 Python Coding Style，最近都照專案原本的 Coding Style 在寫，還是記錄一下，免得忘了自己 Style。
 
 <!--more-->
-<center> <img src="https://i.imgur.com/8znl2lD.jpg" alt="Coding Style"></center>
-<center class="imgtext">Coding Style（圖片來源: <a href="https://www.orientation-education.com/metier/developpeur-informatique" class="imgtext">orientation</a>）</center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/8znl2lD.jpg" alt="Coding Style">
+    Coding Style（圖片來源: <a href="https://www.orientation-education.com/metier/developpeur-informatique">orientation</a>）
+</p>
+
+
 
 ## Code Lay-out
-
 ### 縮排
 Python 是用縮排來表示區塊的語言，所以最好保持縮排的一致，不然很容易出問題...。尤其是跟 Windows 的開發者 co-work 的時候，這個狀況更明顯，為了避免無謂的 `diff` ，依照 [code style](https://www.python.org/dev/peps/pep-0008/#code-lay-out) 建議改用 <mark>4 個空格取代 Tab</mark>，這個可以直接在 IDE 設定，把 Tab 的輸出換成 4 個空格即可。
 
-<br>
 
 ### 單行字數
 guideline 建議 79，只是我通常取整數設 <mark>80</mark> 。另外，如果有遇到縮排縮太深，導致字串超過螢幕，必須捲動下方捲才能閱讀的，我會直接換行，不過通常 IDE 會幫你把前面的空格一併記入字數計算  
 
 ...是說如果縮排縮太深，應該要考慮重構了。
 
-
-<br>
 
 ### 換行與對齊
 當變數名稱太長或是參數太多，導致需要換行的時候，如果有第一個參數，對齊第一個參數；如果沒有，就縮排一次。
@@ -64,17 +63,12 @@ income = (gross_wages
 ```
 
 
-<br>
-
 ### 空行
 最外層的函數或類別，兩兩之間用<mark>兩行</mark>隔開，類別內部的方法則用<mark>單行</mark>進行區隔。不過這我老是忘記，都會用自動排版幫忙校正。
 
- 
-<br>
 
 ### Imports
 <mark>一行一個 Import 模組</mark>，除非是用 Wildcard imports 才會把從同一個模組 imports 出來的東西寫在同一行。
-
 
 ```python
 import os
@@ -90,13 +84,10 @@ from subprocess import Popen, PIPE
 不過我通常第一跟第二項都混成一群了...
 
 
-<br><br>  
 
 ## String Quotes
 在 python 中，字串單引號與雙引號都可以，但我偏愛先<mark>雙引號</mark>再單引號。
 
-
-<br><br>  
 
 ## Whitespace in Expressions and Statements
 與分隔符號及表達式間不用空白。
@@ -128,7 +119,7 @@ def complex(real, imag = 0.0):
 
 不過我發現，如果有指定參數型態的話，IDE 又會建議加上空白 @@
 
-```
+```python
 Yes:
 def complex(real, imag: float = 0.0):
         pass
@@ -138,8 +129,6 @@ def complex(real, imag:float=0.0):
         pass
 ```
 
-    
-    
 
 <br> 但我會在低優先權的運算子兩邊加上空白。
 ```python
@@ -150,7 +139,7 @@ hypot2 = x*x + y*y
 c = (a+b) * (a-b)
 ```
 
-<br><br>  
+
 
 ## Naming Conventions
 
@@ -161,10 +150,8 @@ c = (a+b) * (a-b)
 4. Methods and functions：packages：小蛇式命名法
 5. Local variables：小蛇式命名法
 
-<br>
 
 ### 底線開頭的變數
-
 1. `_foo`:  
     類似 C/C++ 系列的 <mark>protected</mark>。無法被直接 import ，也不應該直接呼叫函數存取變數或存取變數，這邊 Python 沒禁止，但還是建議將它視為 protected 變數，不要在外部呼叫。最後與 protected 變數相同可以被子類別繼承。
     
@@ -182,18 +169,13 @@ c = (a+b) * (a-b)
     這對應到的是 <mark>private</mark> 變數。只允許類別本身呼叫，無法被外部成員或是子類別直接操作與呼叫。
 
 
- 
- 
-<br><br> 
 
 ## Linter
-
 我慣用的 IDE 有兩個，分別是 Intellij IDEA 與 vscode。
 
 如果在 Intellij IDEA 我通常會依賴內建自動排版來挑整一些縮排，並提供一些提示；但若在 vscode 我則是會額外安裝 [Pylint](https://www.pylint.org/) 來輔助。
 
- 
-<br><br> 
+
 
 ## 參考資料 
 1. [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) 。檢自 Python (2020-03-06)。

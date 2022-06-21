@@ -14,18 +14,23 @@ tags:
 
 <!--more-->
 <br> 
+
 其實還滿簡單，
 1. 依序點擊 File → Settings → Editor → TODO 
 2. 打開 TODO 設定頁面，點擊 Patterns 區域右上方的 + 號
 3. 新增一個 pattern
 
-<br>截圖如下：
+<br>
 
-![WebStorm](https://i.imgur.com/c3x90TW.png)
+截圖如下：
 
-<br> 基本上這個設定方式是用 IntelliJ 系列的 IDE 都適用，例如：Android Studio、WebStorm...等。
+<p class="illustration">
+    <img src="https://i.imgur.com/c3x90TW.png" alt="WebStorm">
+</p>
 
-<br><br> 
+基本上這個設定方式是用 IntelliJ 系列的 IDE 都適用，例如：Android Studio、WebStorm...等。
+
+
 
 ## 參考資料 
 1. [Android Studio 必备技巧：TODO 用法及自定义 TODO｜ruicbAndroid](https://blog.csdn.net/My_TrueLove/article/details/72857949)

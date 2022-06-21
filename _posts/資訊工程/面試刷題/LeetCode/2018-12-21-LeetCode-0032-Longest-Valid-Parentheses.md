@@ -28,12 +28,11 @@ Explanation: The longest valid parentheses substring is `"()()"`
 
 **Related Topics:**`String`、`Stack`、`Dynamic Programming`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題算是  [Valid Parentheses](/LeetCode-0020-Valid-Parentheses/) 的進階版，不過還是可以用 Stack 來解決。
 
-<br>
 
 ### Stack
 由於我需要知道知道它們之間的距離，所以推入 stack 時我除了記錄括號外，也記錄他們的索引值。
@@ -64,7 +63,6 @@ class Solution:
       return max_valid
 ```
 
-<br>
 
 ### Dynamic Programming
 Po 文前打 Tag 時才發現，這題的標籤是 DP 反而沒有 Stack 耶～！  
@@ -73,8 +71,6 @@ Po 文前打 Tag 時才發現，這題的標籤是 DP 反而沒有 Stack 耶～�
 DP 參考作法 → [傳送門](https://leetcode.com/articles/longest-valid-parentheses/)
 
 
-
-<br><br>
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

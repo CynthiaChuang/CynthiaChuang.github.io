@@ -24,7 +24,7 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 **Related Topics:** `Array`、`Two Pointers`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這基本上是 [3Sum](/LeetCode-0015-3Sum/) 的變形，唯一不同的不再是回傳陣列，而是回傳最接近的總和。另外數字相同應該可以不用管，所以我先把它拔掉了。
@@ -130,7 +130,6 @@ class Solution:
 改良的效果有點出乎意料，比我想像好很多從  **176 / 27.85%**   提升到  **28 / 100%**  。
 
 
-<br><br>
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

@@ -12,9 +12,10 @@ tags:
 最近部門為了落實更高強度的資安政策，因此針對伺服器的管理多做了限制。
 
 <!--more-->
-<center> <img src="https://i.imgur.com/9bjRUwP.png" alt="close"></center>
-<center class="imgtext">close（圖片來源: <a href="https://kknews.cc/zh-hk/news/5n5rpb8.html" class="imgtext">每日頭條</a>）</center>
-<br>
+<p class="illustration">
+<img src="https://i.imgur.com/9bjRUwP.png" alt="close">
+close（圖片來源: <a href="https://kknews.cc/zh-hk/news/5n5rpb8.html">每日頭條</a>）
+</p>
 
 一般來說，若要連線至遠端的伺服器，可以使用 SSH 這個指令：
 
@@ -34,10 +35,9 @@ $ ssh 帳號@主機
 
 當然不只這些限制啦，還有 Linux 系統的密碼策略要設定，不過我這個打算另外開一篇，這篇就只專注在與 SSH 連線設定的部分。
    
-<br><br> 
+
 
 ## 限制登入網段
-
 適當的限制網段是有其必要性的，因此這邊來限制能夠登入伺服器的網段！  
 這邊我們是打算用設置白名單的方式，也就是除了明文允許的網段外，其他的一律禁止。
 
@@ -59,10 +59,9 @@ $ ssh 帳號@主機
 
     這樣一來，就完成基本的防護設定了！
 
-<br><br> 
 
-## 改用公開金鑰認證
- 
+
+## 改用公開金鑰認證 
 關於改用公開金鑰認證這件事，之前在[《設定 Linux 使用 SSH Key-based 登入驗證方式》](/Configuring-SSH-Key-Based-Authentication-on-a-Linux)，已經寫過了這邊就不再重複了，總之可以分成 4 個步驟：
 
 1. 本地端產生金鑰
@@ -70,10 +69,9 @@ $ ssh 帳號@主機
 3. 啟用金鑰登入並停用密碼認證登入
 4. 最後重起 sshd
  
-<br><br> 
+
 
 ## 禁止 root 管理者以 SSH 登入
-
 會禁止 root 的原因有幾個：
 1. `root` 這個帳號名稱是眾所皆知的，在帳號已知的情況下，只要破解密碼即可登入了，如此一來很容易遭受暴力法嘗試破解。
 2. 無法追蹤與稽核相關修改與操作，因為在系統紀錄上都是 root。
@@ -92,7 +90,6 @@ Linux 伺服器的預設是允許 root 管理者帳號遠端登入的，若要�
 $ systemctl restart sshd
 ```
 
-<br><br>
 
 
 ## 參考資料 
@@ -106,7 +103,6 @@ $ systemctl restart sshd
 8. Weithenn (2017-10-24)。[CentOS 7.4 基礎設定 (6) - 禁止 Root 帳號本機及 SSH 遠端登入](https://www.weithenn.org/2017/10/centos-74-journey-part06.html)。檢自 不自量力 の Weithenn (2021-01-08)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">

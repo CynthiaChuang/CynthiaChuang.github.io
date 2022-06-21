@@ -36,7 +36,7 @@ Output: 21
 
 **Related Topics:** `Math`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 這題是要翻轉整數，如果直接當字串用 slice 就可以輕鬆解決，在加上 python 幾乎沒有 overflow 的問題，所以過程中也不用特地處理，回傳做個判斷就好，就是要注意一下正負問題而已，喔...還有尾數為 0 的狀況...
@@ -81,7 +81,6 @@ class Solution:
 ```
 
 
-<br><br>
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

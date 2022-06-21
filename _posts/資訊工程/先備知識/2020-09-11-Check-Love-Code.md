@@ -1,5 +1,5 @@
 ---
-title: 電子發票捐贈碼驗證
+title: ID驗證系列｜電子發票捐贈碼驗證
 date: 2020-09-24 23:25
 is_modified: false
 categories:
@@ -13,12 +13,15 @@ tags:
 
 ID 驗證系列第三彈！     
 處理完[電子發票條碼](/Check-E-Government-Uniform-Invoice)後，順便來處理捐贈碼。果然壓力大的時候來做雜事最抒壓了 XDDD 
+
 <!--more-->
 
-<center> <img src="https://i.imgur.com/Fl4uKtL.png?1" alt="捐贈碼"></center>
-<center class="imgtext">捐贈碼（圖片來源: <a href="https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ601W.htmll" class="imgtext">課電子發票整合服務平台</a>）</center>
+<p class="illustration">
+    <img src="https://i.imgur.com/Fl4uKtL.png?1" alt="捐贈碼">
+    捐贈碼（圖片來源: <a href="https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ601W.htmll">課電子發票整合服務平台</a>）
+</p>
 
-<br><br> 
+
 
 ## 編號規則
 捐贈碼的規則頗簡單：
@@ -26,7 +29,6 @@ ID 驗證系列第三彈！
 - 由純數字所組成
 
 
-<br><br>
 
 ## 程式碼
 用 Regular Expression 
@@ -114,12 +116,11 @@ int main(){
 難得兩個長度差不多 XDDD，通常 regex 會簡潔很多。
 
 
-<br><br> 
 
 ## 參考資料 
 1. (2017-12-05)。[手機條碼、自然人憑證條碼與捐贈碼檢核規則](https://www.cetustek.com.tw/news.php?id=186) 。檢自 鯨躍科技有限公司官方網站 (2020-08-28)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -23,7 +23,7 @@ Output: 1->1->2->3->4->4
 
 **Related Topics:** `Linked List`
 
-<br><br>
+
 
 ## 解題邏輯與實作
 因為題目給的是兩個有序的鏈結串列，所以這題只須兩個指針分別指向給定的陣列，將節點值較小的添加到新的鏈結串列，添加完後將指標移往下一個節點，直到兩鏈結串列的節點都被添加到新的鏈結串列為止。
@@ -49,7 +49,7 @@ class Solution:
       return dummy.next
 ```
 
-<br><br>
+
 
 ## 其他連結
 1. [【LeetCode】0000. 解題目錄](/LeetCode-0000-Contents/)

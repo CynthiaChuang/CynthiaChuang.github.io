@@ -13,10 +13,9 @@ tags:
 那天被 Designer 要求錄製相關操作以做為製作 Demo 影片的素材。但之前錄影的工具都只適用在 Windows 上，我還沒試過在 Ubuntu 上錄影呢。 
 
 <!--more-->
-<br><br> 
+
 
 ## 安裝
-
 我先試著在網路上找了適用於 Ubuntu 上錄影工具，最後找到了這篇 [15 個最佳的螢幕錄製工具推薦](https://kknews.cc/zh-tw/code/gm4bj5e.html)，文中列出了 15 種工具，有需求的人可以逐一試試。
 
 從這列表中，我相中了 Kazam，因為它可以透過 apt-get 或 apt 來安裝：
@@ -35,11 +34,10 @@ $ sudo apt-get upgrade kazam
 
 升級完版本顯示為 `1.4.5` ，這[看起來](https://launchpad.net/kazam)是他們的最新版本沒錯，不過開發團隊看起來很久沒有更新了，最後 release 時間停在 2014.08.18。
 
-<center> <img src="https://i.imgur.com/StG6H1x.png" alt="Kazam timeline"></center>
-<center class="imgtext">timeline（圖片來源: <a href="https://launchpad.net/kazam/+series" class="imgtext">Kazam Screencaster</a>）</center>
-
-<br>
-
+<p class="illustration">
+    <img src="https://i.imgur.com/StG6H1x.png" alt="Kazam timeline">
+    timeline（圖片來源: <a href="https://launchpad.net/kazam/+series">Kazam Screencaster</a>）
+</p>
 
 但我這在 [Fygul Hether](http://fygul.blogspot.com/2019/04/kazam.html) 的介紹文章中發現，如果用[非官方的 PPA](https://launchpad.net/~sylvain-pineau/+archive/ubuntu/kazam)，版本似乎會到 1.5.3，並多出了些新功能，有需要的可以試試看，這邊只做紀錄：
 
@@ -48,38 +46,36 @@ $ sudo add-apt-repository ppa:sylvain-pineau/kazam
 $ sudo apt update
 $ sudo apt install kazam
 ```
- 
 
-<br><br> 
+
 
 ## 使用操作
-
 打開軟體會發現它有提供錄影與截圖的功能，不過之前有找到個還滿順手的軟體 - [Shutter](/Shutter-A-Screenshot-Editor-on-Ubuntu)，所以就暫時不先玩截圖的功能了，僅專注在錄影功能上。
 
-<center> <img src="https://i.imgur.com/woxvwPh.png" alt="Kazam"></center>
-
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/woxvwPh.png" alt="Kazam">
+</p>
 
 它的使用方式相當的簡單，基本上選定錄影範圍後，按下 `Capture` 就可以直接錄影了。不過建議在第一次使用前，先做好基本設定再開始。
 
 依序點選 "檔案" → "偏好設定"，開啟偏好設定視窗。主要要調整或確認的地方有二：General 以及 Screencast，分別調整<mark>聲音</mark>與<mark>影像幀數和編碼格式</mark>：
 
-<center> <img src="https://i.imgur.com/ycKcj8u.png" alt="Kazam"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/ycKcj8u.png" alt="Kazam">
+</p>
 
 像音源的部分，一般來說應該會是選擇內部音效，如果另外有裝音效卡的需要換成對應的卡片。像我內建音效卡的輸出是壞的，所以聲音是走另一個 USB 簡易型音效卡出來，所以選了 USB 這個。
 
 另外幀數的部分，幀數直接影響的就是流暢度，我開啟時預設幀數是 15，但查到的網誌是建議幀數至少要 <mark>30</mark>。但幀數會與檔案大小成正比。
 
 
-<br><br> 
 
 ## 快捷鍵
-
 基本上啟動後，icon 會出現在右上角，錄影途中可以點擊 icon 展開選單，來暫停或是中止錄影。
 
-<center> <img src="https://i.imgur.com/XBR0Ues.png" alt="Kazam"></center>
-<br>
+<p class="illustration">
+    <img src="https://i.imgur.com/XBR0Ues.png" alt="Kazam">
+</p>
 
 因為我是在錄製操作流程，所以有把滑鼠游標給錄進來，而且為了縮短片長，每當需要長等待的時候我都會按下暫停。這導致游標在右上與畫面中間來滑動，實在讓人眼花瞭亂...。
 
@@ -91,10 +87,8 @@ $ sudo apt install kazam
 - **結束 Kazam (Quit)**：Super+Ctrl+Q
 
 
-<br><br> 
 
 ## 無法在 Windows 上播放
-
 另外一個遇到的麻煩是，我錄出來的 mp4 影片在 Windows 上不能播放，也不能說是完全不能播放，如果是用 Chrome 可以播，但若改用其他的播放器就 GG 了。
 
 查了一下好像是解碼器的問題，[xueliang2007](https://blog.csdn.net/qq_31806429/article/details/78832902) 說可以透過 [HandBrake](https://handbrake.fr/downloads.php) 這套軟體來轉檔。不過這是套 Windows 的軟體，我不可能直接把影片丟給 Designer 叫他們自己安裝軟體轉檔，他們應該會直接退件給我。（雖然這個想法讓我很心動！）
@@ -130,7 +124,6 @@ $ ffmpeg -i input.mp4 -c:v copy -crf 19 output.mkv
 是說，ffmpeg 好像也能用來錄影，但是我找不到只錄製特定區域或單一視窗的功能，只好放棄用這套了。
 
 
-<br><br> 
 
 ## 參考資料 
 1. Linux學習教程 (2019-08-04)。[ubuntu 15個最佳的螢幕錄製工具推薦](https://kknews.cc/zh-tw/code/gm4bj5e.html) 。檢自 每日頭條 (2020-09-23)。
@@ -140,7 +133,6 @@ $ ffmpeg -i input.mp4 -c:v copy -crf 19 output.mkv
 5. Gyan (2016-12-17)。[screen casting - convert KAZAM video file to a file, playable in windows media player](https://video.stackexchange.com/a/20164) 。檢自 Stack Exchange (2020-09-23)。
 
 
-<br><br> 
 
 ## 更新紀錄
 <details class="update_stamp">
