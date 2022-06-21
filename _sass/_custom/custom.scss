@@ -324,7 +324,7 @@
 .post-body .imgtext{
   color: $image-text;   
 }
-
+ 
 .post-body details.update_stamp{
   summary {  
     display:list-item;
@@ -343,5 +343,32 @@
     margin-left: -20px; 
     margin-right: 10px; 
   } 
+}
+
+.post-body .illustration {
+  a {
+    color: $image-text;   
+  }
+  img {
+    display:block; 
+    margin:auto auto 5px auto;
+  }  
+
+  color: $image-text;   
+  text-align:center;      
+  margin:30px 0px;
+  line-height:30px;
+}
+
+.post-body h2{
+  margin-top: 84px;
+}
+   
+.post-body h3{
+  margin-top: 60px;
+}
+   
+.post-body h4, h5{
+  margin-top: 48px;
 }
 
