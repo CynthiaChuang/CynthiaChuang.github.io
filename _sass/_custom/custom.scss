@@ -273,6 +273,7 @@
   padding: 2px 1px;
   border-radius: 5px; 
   color: $text-color ;  
+  font-weight: bold;
   background: linear-gradient(transparent 40%,rgba(255,255,255,0) 50%, $mark-default  75%, $mark-default 90%, transparent 95%);
   
   &.warning {
