@@ -166,7 +166,7 @@ scheme: Mist
 # ---------------------------------------------------------------
 font:
   enable: true
-
+ 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
   host: //fonts.googleapis.com
 
@@ -462,7 +462,7 @@ gitalk:
 #google_site_verification:
 
 # Google Analytics
-google_analytics: UA-175298752-1
+#google_analytics:
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
