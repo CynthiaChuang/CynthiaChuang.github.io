@@ -299,7 +299,7 @@ Clara Discovery 是 NVIDIA Clara Train 4.0 所新增的項目，忘記誰跟我�
 
     <p class="illustration">
         <img src="https://imgur.com/ljGko6C.png" alt="解出分子結構儀器">
-        解出分子結構儀器（左、中圖片來源: <a href="https://chemistry.cycu.edu.tw/%E9%97%9C%E6%96%BC%E6%9C%AC%E7%B3%BB/%E7%92%B0%E5%A2%83%E5%8F%8A%E8%B3%87%E6%BA%90/%E8%B2%B4%E9%87%8D%E5%84%80%E5%99%A8/" class="imgtext">中原大學化學系</a>、右圖片來源:<a href="https://research.sinica.edu.tw/tsai-ming-daw-cryo-electron-microscope/">中央研究院研之有物</a>）
+        解出分子結構儀器（左、中圖片來源: <a href="https://chemistry.cycu.edu.tw/%E9%97%9C%E6%96%BC%E6%9C%AC%E7%B3%BB/%E7%92%B0%E5%A2%83%E5%8F%8A%E8%B3%87%E6%BA%90/%E8%B2%B4%E9%87%8D%E5%84%80%E5%99%A8/">中原大學化學系</a>、右圖片來源:<a href="https://research.sinica.edu.tw/tsai-ming-daw-cryo-electron-microscope/">中央研究院研之有物</a>）
     </p>
 
 另一個得到獲得蛋白質結構的方式是透過**蛋白質結構資料庫**，但這些資料庫雖有提供分子結構，實質上這些結構仍只是模型。在現實中蛋白質是動態的，每個原子的 X, Y, Z 位置都會隨著時間與環境而變動並非一成不變的，因此需具備結構生物學知識，來理解蛋白質結構資料庫中「分子結構」的真實意義。   
