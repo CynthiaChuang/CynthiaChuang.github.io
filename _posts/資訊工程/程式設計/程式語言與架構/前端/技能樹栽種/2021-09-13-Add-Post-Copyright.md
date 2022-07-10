@@ -207,7 +207,8 @@ tags:
 ## 下一步
 發現有些網站除了顯示版權訊息外，還會在你複製網頁內容時，自動加上版權聲明、作者與網址等資訊。下一步如果有空的話，我應該會來研究這個該怎實現，等搞定了再來發網誌嘿～！ 
 
-<div class="alert info"> 
+
+<div class="alert primary no-icon"> 
 🤟 喔耶～我完成了 → <a href="https://cynthiachuang.github.io/Copy-Text-to-Clipboard-and-Append-Source-Hyperlink">【技能樹栽種】複製網頁文字時，加上網站的作者與網址</a>
 </div>
 

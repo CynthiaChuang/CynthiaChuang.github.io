@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 .no-found-page {
-  font-family:" Noto Sans TC","Noto Sans TC", "Noto Sans TC","PingFang SC","Microsoft YaHei","sans-serif"; 
+  font-family: "Noto Sans TC","PingFang SC","Microsoft YaHei","sans-serif"; 
   background-color: #fff;
   width: 500px;
   height: 300px;
@@ -322,10 +322,6 @@
 }
 
 // --------------------------------------------------
-.post-body .imgtext{
-  color: $image-text;   
-}
- 
 .post-body details.update_stamp{
   summary {  
     display:list-item;
@@ -373,3 +369,6 @@
   margin-top: 48px;
 }
 
+.task-list-item-checkbox {
+  margin-right: 10px;
+}
