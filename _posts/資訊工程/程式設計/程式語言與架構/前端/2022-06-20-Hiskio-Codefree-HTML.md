@@ -172,7 +172,7 @@ HTML 文件結構是一種**巢狀結構（Nested Structure）**，好像又有�
 
 
 ## 單元 5、網頁基本架構  `<html>` `<head>` `<body>`
-網頁的基本結構，應至少具備 `<html>`、`<head>`、`<body>` 這三個標籤元素才能正常顯示運作。一份正常的 HTML 網頁呈現的樣子如下：
+網頁的基本結構，應至少具備 `<html>`、`<head>`、`<body>` 這三個標籤元素才能正常顯示運作。一份正常的 HTML 網頁呈現的樣子如下：
 
 <p class="illustration">
     <img src="https://i.imgur.com/kYq6AuG.png" alt="完整 HTML 架構">
