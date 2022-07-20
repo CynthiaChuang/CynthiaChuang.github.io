@@ -3,7 +3,7 @@ title: '解决 docker Warning: Error loading config.json'
 date: 2020-02-18
 is_modified: false
 categories:
-- "資訊科技 › 環境設定與指令"
+- "資訊科技 › 開發與輔助工具"
 tags:
 - Docker
 - Linux/Unix

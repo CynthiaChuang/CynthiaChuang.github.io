@@ -3,8 +3,7 @@ title: 使用 Dockerfile 設定 Container 時區
 date: 2020-02-18
 is_modified: false
 categories:
-- "資訊科技 › 環境設定與指令"
-- "雲端網路 › 雲端運算"
+- "資訊科技 › 開發與輔助工具"
 tags:
 - Docker
 - Dockerfile

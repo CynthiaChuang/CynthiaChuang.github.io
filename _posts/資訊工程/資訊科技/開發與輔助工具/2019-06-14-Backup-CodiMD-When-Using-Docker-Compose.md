@@ -8,6 +8,7 @@ categories:
 tags:
 - HackMD/CodiMD/HedgeDoc
 - Docker
+- Docker-Compose
 - Linux/Unix
 - 協同合作工具
 - 工具安裝與部署
