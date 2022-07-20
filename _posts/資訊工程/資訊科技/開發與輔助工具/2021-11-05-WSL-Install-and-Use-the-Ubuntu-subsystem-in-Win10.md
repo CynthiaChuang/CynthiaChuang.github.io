@@ -1,7 +1,7 @@
 ---
 title:  WSL：在 Windows 10 中安裝和使用 Ubuntu 子系統
-date: 2022-05-06 02:00
-is_modified: false
+date: 2022-07-20 01:58
+is_modified: true
 categories:
 - "資訊科技 › 開發與輔助工具"
 tags:
@@ -77,6 +77,11 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
     https://aka.ms/wslstore       
     如果看到提示訊息代表安裝成功，可以開始來安裝所需要德 Linux 發行。
     ```
+    <p class="paragraph-spacing"></p> 
+    <div class="alert primary no-icon"> 
+    🤟 補充 WSL2 安裝方式 → <a href="https://cynthiachuang.github.io/Install-Docker-in-WSL2/#安裝-wsl2">安裝 WSL2</a>
+    </div>
+
 <p class="paragraph-spacing"></p> 
 
 3. **安裝 Linux 發行**  
@@ -218,8 +223,9 @@ $ wsl --unregister Ubuntu20.04
 
 ## 更新紀錄
 <details class="update_stamp">
-  <summary>最後更新日期：2022-05-06</summary>
+  <summary>最後更新日期：2022-07-20</summary>
   <ul>
+    <li>2022-07-20 更新：附上 WSL2 安裝連結</li>
     <li>2022-05-06 發布</li>
     <li>2021-11-09 完稿</li>
     <li>2021-11-05 起稿</li>
