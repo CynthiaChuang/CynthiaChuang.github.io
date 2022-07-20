@@ -21,7 +21,7 @@ tags:
 這星期介紹 serverless 在物聯網的應用。
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="alert warning">
 <div class="head">文中的 IBM 文件連結</div>
@@ -40,7 +40,7 @@ tags:
 無需管理、按需執行、按需擴展、按使用來計費
 </div>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 在上一堂課集中講解了 API 的部分，這一堂則會專注在事件驅動。
  
@@ -88,7 +88,7 @@ tags:
 
 Feed 主要負責從外部事件來源來接收事件，不管所接收事件原本的資料結構、格式、傳輸協定為何，它最終都能轉換成 Serverless 平台所需的協議與格式。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 可以使用以下三種體系結構模式來創建 Feed：<mark>Hook</mark>、<mark>輪詢（Polling）</mark> 和 <mark>連接（Connections）</mark>。 
 
@@ -104,7 +104,7 @@ Feed 主要負責從外部事件來源來接收事件，不管所接收事件原
      1. <a href="https://developer.github.com/v3/orgs/hooks/#receiving-webhooks">Organization Webhooks | GitHub Developer Guide</a> <br> 
      2. <a href="https://kknews.cc/code/l3qen3e.html">用github的webhooks實現項目自動化構建</a> <br> 
     </div>
-    <br>
+    <p class="paragraph-spacing"></p>
 
  
 2. **Polling（輪詢）**  
@@ -114,7 +114,7 @@ Feed 主要負責從外部事件來源來接收事件，不管所接收事件原
     <div class="head">Webhook 與 Polling</div>
      可以看看<a href="https://medium.com/@justinlee_78563/line-bot-%E7%B3%BB%E5%88%97%E6%96%87-%E4%BB%80%E9%BA%BC%E6%98%AF-webhook-d0ab0bb192be">這篇</a>餐廳與外送員的例子。
     </div>   
-    <br> 
+    <p class="paragraph-spacing"></p> 
     
 
 3. **Connections（連接）**  
@@ -131,12 +131,12 @@ Feed 主要負責從外部事件來源來接收事件，不管所接收事件原
 **Cloud Functions**  
 Cloud Functions 處理流入系統的**事件**。不過 Cloud Functions 是基於 Apache OpenWhisk 實做的企業版本，所以這句話應該可以理解成 OpenWhisk 處理流入系統的**事件**（！？）
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Trigger**  
 指某類事件的名稱。每個事件屬於恰好一個 Trigger；若用比喻的方式來說明，Trigger 類似於基於主題的發布訂閱系統中的主題。規則則用來指示每當來自 Trigger 的事件到達時，就觸發 Trigger 所搭載的 action。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Feed**  
 Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便捷方法。Feed 是全部屬於某個 Trigger 的事件的 stream。預先安裝的套件、可安裝的套件以及你自己定義的套件可能包含 Feed。Feed 通過 Feed 操作進行控制，該操作用於處理組成 Feed 的事件流的創建、刪除、暫停和恢復組成。Feed 操作通常通過使用管理通知的 REST API 與產生事件的外部服務進行交互。
@@ -184,7 +184,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 稍微解釋這張圖，圖片最左端的是終端設備與 Gateway，它們最終透過 MQTT 將資料送往 IoT 平台，這個 IoT 平台會轉手資料送往消息中樞上去， 通過這個消息中樞會將資料路由到不同的系統與平台上去，例如：後端存儲平台、Stream分析平台...等。而送往後端存儲平台可以再串接數據分析格式化...等等。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 而在這樣應用架構中，Serverless 可以應用在圖中的 ABCD 四處，這邊就這四種場景進行介紹。
 
@@ -199,7 +199,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 簡單來說，就是資料在進入後端系統前的前處理。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **B. 資料存儲後的處理**
 <p class="illustration">
@@ -209,7 +209,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 也可以應用在，當 Feed 監聽到資料已經進入實體儲存時，我們可以去調用第三方服務去做分析、資料增強、與外部資料合併，也可以使用一個定期任務進行匯總，或把資料倒到機器學習的訓練集裡面去，並進行 re-train。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **C. Data stream 檢測**
 <p class="illustration">
@@ -219,7 +219,7 @@ Feed 是一種可以配置外部事件源來觸發 OpenWhisk 訂製事件的便�
 
 在另外一個也可以放到 Data stream 裡面，在這邊資料流會不斷的通過，可以當它通過時去檢查資料是否錯誤，或是當通過流數或資料超過了閥值，則觸發相對應的動作，例如在車載的應用中，某個時間資料流數目超過閥值，表車輛數目繁多可能造成壅塞，所以把號誌改為綠燈希望舒緩阻塞情況。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **D. 邊緣計算上的 Serverless能力**
 <p class="illustration">

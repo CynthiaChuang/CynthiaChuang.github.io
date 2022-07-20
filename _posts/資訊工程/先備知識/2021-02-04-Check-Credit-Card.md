@@ -23,7 +23,7 @@ tags:
 ## 編號規則
 信用卡的編碼規則，相較之下稍微稍微複雜點。根據 [ISO/IEC 7812 標準](https://zh.wikipedia.org/wiki/ISO/IEC_7812)，信用卡一般在 **13~19** 碼，但 Mastercard 旗下似乎有 **12** 碼簽帳金融卡（Debit Card）。而在臺灣比較常見的長度是 <mark>16 碼</mark>，因此下面在說明多以 16 碼來說明，但不管幾碼編碼規則其實都是相同的。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 長達 16 碼的信用卡卡號，其實是由 3 部分所組成的，以一張卡號為 `4311-4656-0640-6131` 的 Visa 信用卡為例：
 
@@ -54,7 +54,7 @@ tags:
     </tr>
     </tbody>
 </table>
-<br>
+<p class="paragraph-spacing"></p>
 
 - **發卡機構代碼（Issuer Identification Numbers，IIN）**  
     IIN 有時被稱為銀行識別號碼（Bank Identification Number，BIN），這是用來辨別卡片的主要資訊，由 [行業標識碼（Major Industry Identifier，MII）](https://zh.wikipedia.org/wiki/ISO/IEC_7812#%E8%A1%8C%E4%B8%9A%E6%A0%87%E8%AF%86%E7%AC%A6)為首所組成的 **6 碼**數字。 
@@ -69,7 +69,7 @@ tags:
     顧名思義就是用檢查這組信用卡的卡號真偽的一個數字，由 [Luhn 演算法](https://zh.wikipedia.org/wiki/Luhn%E7%AE%97%E6%B3%95)計算所得出。
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 在找資料的時候發現，有些文章的檢查規則是照著 Luhn 演算法的生成規則一步步計算的，但我想檢查不是生成，有些動作可以適度的化簡：
 

@@ -21,7 +21,9 @@ $ date
 Fri Feb 21 09:03:40 CST 2020
 ```
 
-<br> 或是
+<p class="paragraph-spacing"></p> 
+
+或是
 
 ```bash
 $ timedatectl
@@ -34,12 +36,16 @@ NTP synchronized: yes
 RTC in local TZ: no
 ```
  
-<br> 正常情況下，若設定台北時間（ +8:00 ），時區代碼應該會顯 <mark>CST</mark>（Chungyuan Standard Time，中原標準時間），就像上面那樣，但我顯示的卻是 <mark>UTC</mark>：
+<p class="paragraph-spacing"></p> 
+
+正常情況下，若設定台北時間（ +8:00 ），時區代碼應該會顯 <mark>CST</mark>（Chungyuan Standard Time，中原標準時間），就像上面那樣，但我顯示的卻是 <mark>UTC</mark>：
 ```bash
 Fri Feb 21 01:05:28 UTC 2020
 ``` 
 
-<br> 難怪 log 印出來的時間怎看怎麼彆扭 orz
+<p class="paragraph-spacing"></p> 
+
+難怪 log 印出來的時間怎看怎麼彆扭 orz
  
 
 
@@ -79,7 +85,9 @@ RUN TZ=Asia/Taipei \
     && dpkg-reconfigure -f noninteractive tzdata 
 ```
 
-<br> 但實際在 build 的時候會發現， 跑到 `apt-get install tzdata` 這行時，終端機就會跑出互動訊息要求設定時區。
+<p class="paragraph-spacing"></p> 
+
+但實際在 build 的時候會發現， 跑到 `apt-get install tzdata` 這行時，終端機就會跑出互動訊息要求設定時區。
 
 
 後來[查到](https://askubuntu.com/a/1013396)，如果不想讓 dpkg 出現互動訊息，要設定環境變數：
@@ -88,14 +96,14 @@ RUN TZ=Asia/Taipei \
 DEBIAN_FRONTEND=noninteractive
 ```
  
-<br> 
+<p class="paragraph-spacing"></p> 
 
 只是我覺得將這變數用 `ENV` 來宣告，應該會留個坑，之後不小心又會坑到自己（對於如何坑自己非常的有經驗！
 
 還好在閱讀[文件](https://docs.docker.com/engine/reference/builder/#env)時，注意到在關於 ENV 的最後寫了句：
 > **Note**: Environment persistence can cause unexpected side effects. For example, setting ENV DEBIAN_FRONTEND noninteractive may confuse apt-get users on a Debian-based image. To set a value for a single command, use RUN \<key\>=\<value\> \<command\>.
 
-<br>
+<p class="paragraph-spacing"></p>
 
 最後依照提示整個設定改成了：
 ```dockerfile
@@ -108,7 +116,7 @@ RUN TZ=Asia/Taipei \
     && dpkg-reconfigure -f noninteractive tzdata 
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 改完後進行 docker image 重 build，注意看的話應該會在過程中閃過：
 

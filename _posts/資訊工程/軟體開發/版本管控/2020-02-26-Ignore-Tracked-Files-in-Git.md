@@ -20,7 +20,9 @@ $ git rm --cached filename
 $ git rm -r --cached foldername   
 ```
 
-<br> 若是要解除多個的話，則可以直接把所有檔案追蹤，這樣比較快：
+<p class="paragraph-spacing"></p> 
+
+若是要解除多個的話，則可以直接把所有檔案追蹤，這樣比較快：
 ```bash
 $ git rm -r --cached .
 ```

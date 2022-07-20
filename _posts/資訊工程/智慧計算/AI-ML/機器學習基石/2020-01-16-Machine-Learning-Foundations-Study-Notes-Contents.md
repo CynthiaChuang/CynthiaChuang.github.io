@@ -24,7 +24,7 @@ tags:
 - [符號定義](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#符號定義)
 - [與相關領域的關係](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week1#與相關領域的關係)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 ### [第二週筆記：Learning to Answer Yes/No](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2)
 - [感知器 Perceptron](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#感知器-perceptron)
@@ -34,7 +34,7 @@ tags:
 - [Non-Separable Data](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2?view#non-separable-data)
 - [課堂測驗](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week2#課堂測驗)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 ### [第三週筆記：Types of Learning](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3)
 -  [Learning with Different Output Space](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-output-space)
@@ -43,7 +43,7 @@ tags:
 -  [Learning with Different Input Space](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#learning-with-different-input-space)
 - [課堂測驗](/Machine-Learning-Foundations-Study-Notes-Mathematical-Foundations-Week3#課堂測驗)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 ### 第四週筆記：Feasibility of Learning
 ### 作業一
@@ -53,7 +53,7 @@ tags:
 ### 第八週筆記 
 ### 作業二
 
-<br>
+<p class="paragraph-spacing"></p>
 
 ## 機器學習基石 下 
 [課程傳送門](https://www.coursera.org/learn/ntumlone-algorithmicfoundations)

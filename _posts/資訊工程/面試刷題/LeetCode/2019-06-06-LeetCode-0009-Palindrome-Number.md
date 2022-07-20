@@ -11,7 +11,7 @@ tags:
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 **Example 1:**
 ```
@@ -33,12 +33,12 @@ Input: 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ```
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 >**Follow up:**
 Coud you solve it without converting the integer to a string?
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:** `Math`
 
@@ -47,7 +47,9 @@ Coud you solve it without converting the integer to a string?
 ## 解題邏輯與實作
 既然是判斷回文，那麼直覺作法就是比頭尾是否相同，如果轉字串實做會變得很簡單，所以我就直接做 Follow up 要求了。
 
-<br> 取尾數比較常見使用 mod (%) 即可。但取最高數的頭則比較麻煩，以 20001 為例，想取出最高位數，則必須計算 20001 // 10000 ，而除數 10000，其實可以換成這樣表示 $10^{len(被除數)-1}$ 。但另一個問題是，被除數是 int 沒有 len 這個函數，因此實際計算時改用迴圈計算被除數除以 10 直到小於 10 的次數，即為 len(被除數)-1 的值。
+<p class="paragraph-spacing"></p> 
+
+取尾數比較常見使用 mod (%) 即可。但取最高數的頭則比較麻煩，以 20001 為例，想取出最高位數，則必須計算 20001 // 10000 ，而除數 10000，其實可以換成這樣表示 $10^{len(被除數)-1}$ 。但另一個問題是，被除數是 int 沒有 len 這個函數，因此實際計算時改用迴圈計算被除數除以 10 直到小於 10 的次數，即為 len(被除數)-1 的值。
 
 最後比較結束後，會將比較數字（e.g. 20001）去頭尾，並將除數（10000）除以 100 ，因為這個除數是對應比較數字長度，我將比較數字去頭尾，因此除數也必須至少有兩位數。
 
@@ -73,12 +75,14 @@ class Solution:
 
       return True		
 ```
-<br> 一開始的判斷是判斷兩種 case：
+<p class="paragraph-spacing"></p> 
+
+一開始的判斷是判斷兩種 case：
 1. 是否為負數，若是負數則不可能是回文
 2. 判斷尾數使否為 0，因為最高位數不可為 0 ，因此若尾數為 0 則不可能是回文，當然必須排除掉 0 本身。
 
+<p class="paragraph-spacing"></p>
 
-<br><br>
 除比頭尾外，另一個想法是翻轉後兩數直接相比，個人推測這種方法的效能應該會比較好。
 
 ```python
@@ -98,7 +102,9 @@ class Solution:
 
       return res
 ```
-<br> 果然效能好很很多，從 **88 ms/60.57 %** 提升到 **56 ms/ 99.10%** 。
+<p class="paragraph-spacing"></p> 
+
+果然效能好很很多，從 **88 ms/60.57 %** 提升到 **56 ms/ 99.10%** 。
 
 
 

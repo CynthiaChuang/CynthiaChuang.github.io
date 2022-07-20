@@ -14,7 +14,6 @@ tags:
 偶然註冊的一個線上課程平台，發現他們有些免費的課程可上。剛好有幾門課當初都是我自學的，現在有機會就來看看系統的學習。
 
 <!--more-->
-<br>
 
 <p class="illustration">
     <img src="https://i.imgur.com/ibijtxL.png" alt="Hiskio Codefree">
@@ -112,7 +111,7 @@ HTML 是由**標籤（tags）** 與 **內容（content）** 2 個部份所組成
 </p>咦？好像多了什麼東西</p>  
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 訂正完後長這樣：
 ```html
@@ -147,7 +146,7 @@ HTML 文件結構是一種**巢狀結構（Nested Structure）**，好像又有�
         <h3>我是子層，正在找一個 div 父層，幫幫我</h3>
     </div>
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
 2. **幫 `<h3>` 新增一個子層 `<p>`，並寫下「Hello HiSKIO」。**
     ```html
@@ -276,7 +275,7 @@ HTML 文件結構是一種**巢狀結構（Nested Structure）**，好像又有�
     效果：<del>加上刪除線</del>
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 這幾個標籤在 HTML5 可被視為特殊指標。在 HTML5 比過往更強調不同標籤的**語意（Semantic Elements）**，也就是說這些樣式標籤<mark>不僅僅是視覺的記號，也有語意層次的標</mark>記，能幫助搜尋引擎，更理解網站的內容，使搜尋結果更加貼切。
 
@@ -327,7 +326,7 @@ HTML 文件結構是一種**巢狀結構（Nested Structure）**，好像又有�
         </div>  
     </body>    
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **為芋頭牛奶項目變成粗體字**   
     ```html
     <body>
@@ -346,7 +345,7 @@ HTML 文件結構是一種**巢狀結構（Nested Structure）**，好像又有�
         </div>  
     </body>
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 3. **把貢丸湯項目加上`<mark>`**  
     ```html
     <body>
@@ -453,7 +452,7 @@ HTML 中的標籤具有屬性，而這些屬性可以藉由各種方式去**設�
 </body>
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另外一些常用在切版的標籤有 `<div>` `<p>` 與 `<span>`。
 
@@ -543,7 +542,7 @@ HTML 中的標籤具有屬性，而這些屬性可以藉由各種方式去**設�
         <li>鍵盤</li>
     </ul>
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **有序列表（Ordered List）**：`<ol>` 和 `<li>`  
     如果想要使用有序列表，只需要將 `<ul>` 換成 `<ol>` 即可。
 
@@ -657,7 +656,7 @@ HTML 中的標籤具有屬性，而這些屬性可以藉由各種方式去**設�
     - [ ] `<head>` 標籤是整個網頁最內層的標籤
     - [ ] 網頁並沒有固定的基本結構，有多個 `<body>` `<head>`都是正常的狀況
     
-    <br>
+    <p class="paragraph-spacing"></p>
 
 2. **選出下列錯誤的選項**  
     - [ ] 使用錯誤的HTML標籤，容易導致後續網頁製作上出現多問題
@@ -665,28 +664,28 @@ HTML 中的標籤具有屬性，而這些屬性可以藉由各種方式去**設�
     - [x] HTML 絕對都是成對的存在
     - [ ] HTML5 可以用來製作網頁遊戲
 
-    <br>
+    <p class="paragraph-spacing"></p>
 
 3. **關於HTML標籤屬性的描述下列何者正確？**
     - [ ] id 與 class 屬性只能用於容器標籤
     - [x] 每種標籤會有不同的屬性可以利用
     - [ ] 標籤屬性會以問號來做屬性賦值 例如：width?30px
 
-    <br>
+    <p class="paragraph-spacing"></p>
 
 4. **選出正確的描述**
     - [ ] 有序列表會使用 `<ul>` 標籤實現
     - [x] `<ol>`要再搭配 `<li>` 才能正常呈現列表的樣貌
     - [ ] 無序列表會使用 `<ol>` 標籤實現
 
-    <br>
+    <p class="paragraph-spacing"></p>
     
 5. **選出錯誤的描述**
     - [ ] `<video>` 標籤需要有src 屬性以及連結才能顯示影片
     - [x] `<iframe>` 跟 `<video>` 擁有同樣的功能
     - [ ] `<iframe>` 可以將網頁在另一網頁裡面
 
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 當你的進度條跑到 100% 後，你就會收到這張圖，恭喜你完成課程啦！
 

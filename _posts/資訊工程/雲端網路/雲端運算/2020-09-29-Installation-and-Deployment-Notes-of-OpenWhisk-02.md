@@ -87,7 +87,7 @@ nodes:
       containerPort: 31001
 - role: worker
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 完成 ymal 檔撰寫後，就可以使用 kind 指令開始配置 Cluster，其中指令中的 `--name` 如果沒有指定，預設會是 `kind`：
 ```bash
@@ -115,7 +115,7 @@ Have a question, bug, or feature request? Let us know! https://kind.sigs.k8s.io/
 $ kind get clusters
 kind-cluster
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 如果用 `docker ps` 來觀察目前啟動的 container，也會發現多了 3 個。另外，試試看 `create` 指令中最後一個步驟的提示，可以看到一些詳細資料：
 
@@ -124,7 +124,7 @@ $ kubectl cluster-info --context kind-kind-cluster
 Kubernetes master is running at https://127.0.0.1:32778
 KubeDNS is running at https://127.0.0.1:32778/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 在網路上找尋安裝資訊的時候，看到有些指令提示中會多出 `export KUBECONFIG` 的指令，
 ```bash
@@ -142,7 +142,7 @@ kubectl cluster-info
   
 看[文字說明](https://kubernetes.io/docs/tasks/tools/install-kubectl/#verifying-kubectl-configuration)，這條指令像是配置 kubectl 使用的。我這邊指令提示中沒出現這行，我有點不確定是因為 kind 版本的關係，或者是因為之前同仁在這台機台有配置過 kubectl？
   
-<br>
+<p class="paragraph-spacing"></p>
  
 除了上述資訊外，還有一個 `kubectl config view`，也可以用來查看配置結果：
 ```bash
@@ -167,7 +167,7 @@ users:
     client-certificate-data: REDACTED
     client-key-data: REDACTED
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 小插曲，第一次建立的時候，我發現我 cluster 拼錯成 cluste，只好把錯的叢集刪掉重新建立：
 
@@ -230,7 +230,7 @@ node/{name}-worker labeled
 $ kubectl label node {name}-worker2 openwhisk-role=invoker
 node/{name}-worker2 labeled
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 :warning: 注意，請把指令中 `{name}` 換成建立叢集所取的名字，以上面的例子來說就是 `kind-cluster`，如果在建立叢集時沒特別命名，則會是預設 `kind`。名字打錯的話，它會跟你說 <mark>NotFound</mark> 喔！
 
@@ -273,7 +273,7 @@ nginx:
 $ kubectl create namespace openwhisk
 namespace/openwhisk created
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 然後[下載 openwhisk-deploy-kube](https://github.com/apache/openwhisk-deploy-kube.git)，並確認專案中資料夾 `helm/openwhisk` 是否存在。若存在，就可以直接透過指令安裝 OpenWhisk 的 Chart。其中指令中的 `owdev` 是 release name，`openwhisk` 則是我們上一個步驟中所建立的 namespace：
 
@@ -309,7 +309,7 @@ Once the 'owdev-install-packages' Pod is in the Completed state, your OpenWhisk 
 Once the deployment is ready, you can verify it using: 
  $ helm test owdev [--tls] --cleanup
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 過程中，需要稍微留意下安裝過程中所出現的 `<whisk.ingress.apiHostName>：<whisk.ingress.apiHostPort>` ，這組 HostName 與 HostPort 稍後會到用。但如果沒注意到也沒關係，可藉由下列指令再看一次：
 ```bash
@@ -385,13 +385,13 @@ Once the deployment is ready, you can verify it using:
 
   $ helm test owdev [--tls] --cleanup
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 另外一個相對應的刪除指令，可以用來刪除所有已部署的 OpenWhisk 組件：
 ```bash
 $  helm uninstall owdev -n openwhisk
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 把整個 [Openwhisk](https://github.com/apache/openwhisk) 全弄來好了後，就可測試是否安裝成功，下列指令中  `WHISK_SERVER` 和 `WHISK_AUTH` ，可以使用 `wsk property get --apihost` and `wsk property get --auth`  來查訊：
 
@@ -399,7 +399,7 @@ $  helm uninstall owdev -n openwhisk
 cd openwhisk
 $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https://$WHISK_SERVER -Dopenwhisk.home=`pwd`
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 它會給出一個測試結果：
 
@@ -424,7 +424,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
         print(command)
         return {"command":command}  
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
     準備好程式碼後，就使用指令建立 action，其中下列指令中的：
     1. `catapi` ；是指 ACTION_NAME。
@@ -437,7 +437,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
     $ wsk action create catapi catapi.py --kind python:3 --web true -i $ wsk action create catapi catapi.py --kind python:3 --web true -i
     ok: created action catapi
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
     建立了後，就可以透過 invoke 來呼叫這些 action，會顯示一組回傳結果：
 
@@ -455,7 +455,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
     catapiDatetime            Activation ID                    Kind     Start Duration   Status  Entity
     2020-04-13 11:05:55 3eb4e20951ed4194b4e20951ed919498 python:3 cold  11ms       success guest/catapi:0.0.1
     ```
-    <br> 
+    <p class="paragraph-spacing"></p> 
 
     因為我剛剛 `web` 設置為 true，允許使用 url 調用這個 action。這邊先將其建立為 api 並取得其 api path：    
     ```bash
@@ -473,7 +473,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
       "command": "INSERT INTO catdb VALUES( CC , black )"
     }
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
 2. **action with bash**  
     這邊試著建立一個 bash 的 action，雖然[明面上所支援的語言](/Installation-and-Deployment-Notes-of-OpenWhisk-01#動作-Action)並不包括 bash，但在 [GitHub 的討論](https://github.com/apache/openwhisk/issues/2927)中發現，有人提到默認的 docker 框架實際上是可以執行 bash 腳本的，因此這邊按照[這篇網誌](https://medium.com/openwhisk/serverless-functions-in-your-favorite-language-with-openwhisk-f7c447558f42)試著來建立 bash 的 action。
@@ -528,7 +528,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
     P.S. 我在後來找不到 runtime manifest，它好像變成 [runtimes.json](https://github.com/apache/openwhisk/blob/556cd3d7e2fb12a3419555411b181bc1c080af8a/ansible/files/runtimes.json)？
     
 
-    <br>
+    <p class="paragraph-spacing"></p>
 
 3. **action with C**   
     再來根據[文件](https://github.com/apache/openwhisk/blob/master/docs/actions-docker.md#example-static-c-binary)的敘述試著建立 C 語言的 action。
@@ -562,7 +562,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
     }
     ```
 
-    <br>
+    <p class="paragraph-spacing"></p>
 
 4. **action with C++**  
     最後試著建立一個 C++ 的 action，這邊預期可以像 C 一樣，先進行編譯後使用 native 建立 action。所以還是先準備一個原始碼 `helloworld.cpp`
@@ -631,7 +631,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
     CMD ["/bin/bash", "-c", "cd actionProxy && python -u actionproxy.py"]
     ```
 
-    <br>
+    <p class="paragraph-spacing"></p>
     
 5. **action with other**  
     至於其他與研究不一一嘗試嘗試了，可以直接從 [Openwhisk 官方文件](https://openwhisk.apache.org/documentation.html#actions-creating-and-invoking)中了解其他內建語言的基礎用法。
@@ -692,7 +692,7 @@ $ wsk -i action invoke numpytext --result
     2. 否，有檔案大小的限制。  
        在之前的 Survey [系統限制](/Installation-and-Deployment-Notes-of-OpenWhisk-01#Actions)時，說明有列出檔案大小僅支援 48MB，因此若壓縮檔超出檔案大小限制，則須改用 docker。
     
-    <br>
+    <p class="paragraph-spacing"></p>
     
 3. **支援的編譯語言要能在平台上進行編譯，並能選擇編譯的環境，例如 Java 選擇 JDK 版本，Golang 選擇 Golang 版本**  
     1. 目前各個平台都無法在直接在平台上進行編譯，create action 時必須提供編譯好的結果或是直譯式的原始碼。這段真要做需要 UI 配合。
@@ -714,7 +714,7 @@ $ wsk -i action invoke numpytext --result
     $ wsk activation list -i 
     $ wsk action get [action_name] -i
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
 6. **每個函數設定不同的資源用量限制，例如：RAM 或是 CPU**     
     在 `wsk action create` 的參數中，有些相關的 flag 可以用：    
@@ -729,7 +729,7 @@ $ wsk -i action invoke numpytext --result
         -t, --timeout LIMIT the timeout LIMIT in milliseconds after which the action is terminated (default 60000)
         -l, --logsize LIMIT the maximum log size LIMIT in MB for the action (default 10)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
 7. **每個相關功能進行監控**    
     <p class="illustration">
@@ -759,7 +759,7 @@ $ wsk -i action invoke numpytext --result
     ```shell
     $ wsk activation poll
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
 8. **提供管理網頁介面讓每個用戶對每個功能進行管理，包括線上編寫函數程式碼、建立、刪除、監控函數。**    
     管理網頁介面需要由 UI 實做，不過各功能可以藉由 cli 完成： 

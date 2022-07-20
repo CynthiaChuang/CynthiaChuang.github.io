@@ -27,12 +27,14 @@ tags:
 舉例來說，X 光是利用組織間對輻射吸收能力不同來成像，其吸收能力與密度呈正比，並將原本三維的空間關係疊壓在二維平面上成像。因此，涵蓋的資訊較為龐雜，且病灶可能會被組織或器官給遮擋。反之，電腦斷層可以用三維重建技術計算恢復人體的斷層面影像。
 
 但電腦斷層影像的單筆資料較大，會造成訓練上的困難，且電腦斷層並非常規檢查，整體資料量也較少。反之，X 光是初階檢查因此容易累積出大量資料，滿足訓練的先決條件。兩者各有利弊，需視訓練目標來挑選資料。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 一般來說，深度學習在醫療影像應用上，較適合需要透過影像判別腫瘤位置、偵測骨頭裂縫線條...等單純且單一的識別工作。之後再將識別結果交由醫師，醫師可進一步參考臨床資訊進行最終的診斷。
 
 在現階段過程中，對於 AI 系統定位仍僅止於助手或是診療工具，醫師必須知曉工具的能力與限制，最後的決策仍以醫師為主。就實務層面來說，這也是最不涉及醫生利益，與診斷所產生的醫療糾紛的定位。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 此外，AI 在醫學影像領域中，另一個需要克服的困難是資料部分，雖然各大醫療院所在長年累月下累積了大量的醫學影像，但這些影像的儲存方式並非為 AI 應用而設計，且再考慮到不同廠商、機器之間可能會儲存方式的差異，因此必須要進一步整理與提取成可供深度學習使用的資料。
 
@@ -48,7 +50,8 @@ tags:
 為目前最大規模的肺部 X 光資料集，由 [NIH 美國國立衛生研究院](https://www.nih.gov/news-events/news-releases/nih-clinical-center-provides-one-largest-publicly-available-chest-x-ray-datasets-scientific-community)所提供（[載點](https://nihcc.app.box.com/v/ChestXray-NIHCC)）。
 
 ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影像（約 42G），研究人員對數據採用 NLP 方法從病例報告中提取關鍵字對影像進行標注，1-14 類分別對應 14 種肺部疾病，第 15 類表示未發現疾病。據稱，該數據庫使用 NLP 標注準確率超過 90%。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 <div class="alert info"> 
 關於資料標注的相關研究，請參考 <a href="https://arxiv.org/abs/1705.02315">X. Wang, Y. Peng, L. Lu, Z. Lu, M. Bagheri, and  R.M. Summers. ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks on Weakly-Supervised Classification and Localization of Common Thorax Diseases. 2017 </a>。ChestX-ray14 Data 的描述，請看論文的附件 B 。
@@ -59,7 +62,8 @@ ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影�
 14 種肺部疾病包含：Atelectasis、Hernia、Cardiomegaly、Infiltration、Consolidation、Mass、Edema、Nodule、Effusion、Pleural_Thickening、Emphysema、Pneumonia、Fibrosis、Pneumothorax。
 
 中文翻譯對照分別為：肺陷落 / 肺不張、疝氣 / 脫腸、心臟肥大、滲透、實變、腫塊、浮腫 / 水腫、結節、滲出、胸膜增厚、氣腫 / 肺氣腫、肺炎、纖維化、氣胸。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 先前提過資料集中約有 10 萬張胸部前視圖 X 光影像，每張圖片大小為 1024 * 1024、格式為 PNG，下圖隨機展示些 ChestX-ray14 中的 X 光影像，並搭配額外的標注框，以顯示病灶所在。
 
@@ -72,13 +76,13 @@ ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影�
 
 另外雖說有 10 萬張胸部前視圖 X 光影像，但只有約 1000 張影像有標注框而已，所以這部分資訊，可能只能來當 test set 確認模型的效能，無法用來參與訓練。
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 再來看看影像的標記，會發現這是一個 Multilabel Classification，每張影像都會被標注上一或多種疾病。
 
 在印出各個類別的資料個數，會發現除了疾病與疾病間極度不平衡外，如：滲透的影像有近兩萬張，但疝氣只有兩百多張；患病與未患病之間的影響也頗為懸殊，大約是 6 : 4。
-<br>
 
+<p class="paragraph-spacing"></p>
 
 | Pathology| |Total||Pathology||Total||
 | --------|--------|--------|--------|--------|-------- |-------- |-------- |
@@ -93,12 +97,15 @@ ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影�
 
 P.S. 這數據因為我刪除過些影像，所以數字可能有出入，但概觀比例應該不受影響。
 
-<br> 這樣的不平衡，預期會對訓練過程中造成一些影響。
+<p class="paragraph-spacing"></p> 
+
+這樣的不平衡，預期會對訓練過程中造成一些影響。
 
 
 ### 資料集問題
 除去資料不平衡外，資料集中還包含部分質量很差的影像，並不建議用於訓練。這部分 Azure 有列出一些[黑名單](https://github.com/Azure/AzureChestXRay/tree/master/AzureChestXRay_AMLWB/Code/src/finding_lungs)，可以參考這些名單將不適用的影像加以排除。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 但這份資料集最引人討論的並非影像本身，而是它的<mark>標籤</mark>。有位放射科醫生 Luke Oakden-Rayner （盧克·奧克登·雷納），這位醫生也曾在 2017 年 5 月的 Nature 上發表關於[利用深度學習技術預測人類壽命的相關研究](https://www.nature.com/articles/s41598-017-01931-W)，是一名同時熟悉深度學習與醫療影像的研究者。
 
@@ -110,7 +117,8 @@ P.S. 這數據因為我刪除過些影像，所以數字可能有出入，但概
 在他所提出的[質疑](https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/?fbclid=IwAR0oc-Zwz4EOPyp_rDvs8i__6ODgjWNqv-LHJ2B0t5KZiEIkwmF_o3hcUsU)中，他開宗明義講到：「我認為目前的 ChestXray14 資料集並<mark>不適合</mark>用於訓練醫用 AI 系統以進行診斷工作」。
 
 他認為與人類醫生的視覺評估相比，這份資料集中的標籤準確度值得商榷，其標注並不準確或不清楚，且部分標籤屬於醫學上的次要發現，因此認為，無法匹配影像中顯示的疾病，並對這些標籤在臨床上的真實意義與實用性進行討論。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 但，針對使用 NLP 挖掘疾病標籤的功效以及導致不良標籤質量的討論，Azure 倒是[認為](https://github.com/Azure/AzureChestXRay#criticisms)，即使標籤很髒，深度學習模型有時仍能夠學到良好的分類性能。
 
@@ -125,7 +133,8 @@ P.S. 這數據因為我刪除過些影像，所以數字可能有出入，但概
 會特別提到這件事的原因是，Google 有對社群[開放](https://console.cloud.google.com/storage/browser/gcs-public-data--healthcare-nih-chest-xray-labels/) ChestX-ray14 資料集中所有裁決標籤，以幫助社群對胸部 X 光片進行研究。
 
 但數量比不上原先的資料集大小，僅包含 2,412 張圖像的訓練與驗證資料集，還有 1,962 張圖像的測試集，且與原先的資料集一樣存在<mark>資料傾斜</mark>的現象需要克服。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 | Pathology | train | test |
 | ---------- | ----------|---------- | 
@@ -182,14 +191,15 @@ class DenseNet121(nn.Module):
         x = self.densenet121(x)
         return x
 ```
-<br>
+
+<p class="paragraph-spacing"></p>
 
 不過如果是自己刻模型，還必須自己重新訓練模型，對於我這個只是想看看成果的人來說有點費時，所以我這邊用了人家已經訓練完成模型 - PyTorch ChexNet（[master](https://github.com/zoogzog/chexnet) /  [torch.1.1.0](https://github.com/dgrechka/chexnet/tree/torch.1.1.0)） 
 
 
 還找到如何 Azure 在架構 ChexNet 的[手把手教學](https://github.com/Azure/AzureChestXRay) XD
 
-<br>
+<p class="paragraph-spacing"></p>
 
 根據 ptrtoch 版本的 ChexNet 實做，要達到與論文的相同的效能大約需要：
 
@@ -218,7 +228,7 @@ The training was done using single Tesla P100 GPU and took approximately 22h.
 |P.T.	|0.7948 	|0.793416|
 |Hernia	|0.9416	|0.889089|
 
-<br>
+<p class="paragraph-spacing"></p>
 
 可以看到所得的分數相當的漂亮，大約座落在 0.866 ，用此數據畫出來的 ROC 曲線也很"標準" XD
 <p class="illustration">
@@ -245,9 +255,13 @@ The training was done using single Tesla P100 GPU and took approximately 22h.
 |Pleural_Thickening |0.04171453|
 |Hernia |0.0019557325|
 
-<br> 此外，我還印出 Precision Mean 與 Recall Mean，分數只有 0.696 與 0.242，這樣的分數感覺不太符合我預期的說...
+<p class="paragraph-spacing"></p> 
 
-<br> 最後來看看預測結果與熱力圖的效果：
+此外，我還印出 Precision Mean 與 Recall Mean，分數只有 0.696 與 0.242，這樣的分數感覺不太符合我預期的說...
+
+<p class="paragraph-spacing"></p>
+
+最後來看看預測結果與熱力圖的效果：
 <p class="illustration">
     <img src="https://i.imgur.com/kQ2SSuA.png" alt="熱力圖">
     由左而右分別是原始圖、熱力圖和標註框

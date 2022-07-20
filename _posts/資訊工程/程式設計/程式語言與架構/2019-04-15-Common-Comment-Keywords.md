@@ -13,7 +13,7 @@ tags:
 這篇主要記錄一下，我在寫 code 時常用的註解標籤，這個習慣是以前用 Eclipse 時留下的 - **TODO、FixMe、XXX**，不過最近才發現似乎不同語言，對於這些標籤也有不同的解釋？
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 就我自己的解釋
  1. **TODO：**  
@@ -25,7 +25,7 @@ tags:
  3. **XXX：**  
  雖然功能已經實作，但實作方法有待商榷，希望能進行改進。
 
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 不過我在[其他的地方](http://www.cnblogs.com/syfwhu/p/4814435.html)看到其他幾個不同的標籤與解釋：
 1. **TODO 與 FixMe：**  

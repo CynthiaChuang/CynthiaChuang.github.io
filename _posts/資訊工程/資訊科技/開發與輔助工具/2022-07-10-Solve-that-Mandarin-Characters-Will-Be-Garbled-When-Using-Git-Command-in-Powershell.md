@@ -18,7 +18,7 @@ tags:
 但它有個麻煩的問題...雖然開發過程中少有用到中文，但像是我在寫網誌的時候就會用到，此時就會發現中文變成了亂碼...:cry: 
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 不是我要說...，但 diff 長這樣是要我通靈喔！
 
@@ -41,7 +41,7 @@ tags:
     <img src="https://i.imgur.com/8ghsyVP.png.png" alt="中文 diff 呈現亂碼">
 </p>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過，我如果用 cat 來看內文的話，一切正常：
 
@@ -49,7 +49,7 @@ tags:
     <img src="https://imgur.com/DstRxNK.png" alt="cat 指令中文正常呈現">
 </p>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 推測兩個可能原因：
 1. 終端機的編碼設定
@@ -62,7 +62,7 @@ tags:
 ## 預設使用 UTF-8 編碼
 根據 [Stackoverflow](https://stackoverflow.com/questions/57131654/using-utf-8-encoding-chcp-65001-in-command-prompt-windows-powershell-window) 上所提到的，先來確認 `[console]::OutputEncoding`、 `[console]::InputEncoding`、 `$OutputEncoding` 這三個變數：
 
-<br>
+<p class="paragraph-spacing"></p>
 
 可以發現 `[console]::OutputEncoding`、`[console]::InputEncoding` 兩個變數的顯示是使用 Big5：
 
@@ -81,7 +81,7 @@ tags:
 </p>
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 最後還是決定先繼續往下做，先把<mark>所有編碼都改成 UTF-8 再說</mark>。所以接下來先來查查，個人設定檔的配置路徑，這個值可以藉由 `$PROFILE` 變數得知：
 
@@ -95,7 +95,7 @@ tags:
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.UTF8Encoding]::UTF8
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 完成後啟動一個新的視窗，理論上預設編碼就都會呈現 UTF-8 了。
 
@@ -108,7 +108,7 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.U
 </p>
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 題外話，那天跟同事討論了**踩坑排行榜**，雖然我不像前面兩位同事是踩坑專業戶，該踩得、不該踩得坑全都一個不落；但該掉的坑我似乎也沒有幸運躲過，你看這不就來一個錯誤訊息了嗎？
 
@@ -119,7 +119,7 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.U
 </p>
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 查了下原因，發現是因為是 Windows 執行安全性設置所導致的，在 PowerShell 預設的執行原則是 **Restricted**，也就是限制原則，它**阻止所有 script 的運行**，包含剛剛的 PowerShell 配置文件 (.ps1)。
 
@@ -135,7 +135,7 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.U
 </p>
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 修改完成後，再次看看 diff 結果，結果仍然是亂碼 :cry: 
 
@@ -171,7 +171,7 @@ $ git config --global i18n.commit.encoding utf-8
 $ git config --global i18n.logoutputencoding utf-8 
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 這時看看 status，可以正常顯示檔名了：
 
@@ -206,7 +206,7 @@ $env:LESSCHARSET='utf-8'
     <img src="https://i.imgur.com/wQNMA0o.png" alt="git 其他指令中文正常呈現">
 </p>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 
 是說，如果是設定 git 指令可以解掉大半，那麼在命令提示字元上效果應該也是可行的？果不其然，在命令提示字元上，status 已經正常顯示，而 log、diff 跟使用者名稱則還是亂碼。因此這個時候，僅需設定命令提示字元上的 `LESSCHARSET` 即可。
@@ -231,7 +231,7 @@ $ SET LC_ALL=C.UTF-8
 $ SETX LC_ALL C.UTF-8 
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 完成後，就可以看到顯靈結果啦！再也不用通靈看 diff 了：
 

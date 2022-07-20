@@ -12,15 +12,17 @@ tags:
 
 離開了學校看的論文反而比以前多，偏偏下載論文的難度反而增加 Orz...之前還會用 VPN 繞回學校下載，但後來山姆大直接叫我從 Sci-Hub 比較快。
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 這邊不評論 Sci-Hub 與出版商之間的訂閲/授權費、版權糾紛與科學推展之間的關係，有興趣的去閱讀這兩篇：
 1. [被美國關停的學術論文免費下載網站Sci-Hub復活了](https://theinitium.com/article/20160225-dailynews-sci-hub/)
 2. [推倒知識高牆！Sci-Hub 免費下載千萬篇期刊論文電子全文](https://free.com.tw/sci-hub/)
 
-<br> 只記錄一下網站的存在，另外因為這網站的網域並不固定，如果有需要可以查查 [Where is Sci-Hub now?](https://sci-hub.now.sh/) 或問問 [Google](https://www.google.com/search?rlz=1C1ASUM_enTW843TW843&ei=uOc-XuzQH8uWr7wPkriAmA8&q=sci-hub&oq=sci-hub&gs_l=psy-ab.3..0l10.3278.3278..3559...0.0..0.40.111.3......0....1..gws-wiz.......0i7i10i30j0i7i30.q_unyAihvd4&ved=0ahUKEwjsjJ3atcLnAhVLy4sBHRIcAPMQ4dUDCAs&uact=5)，通常第一個就是了。
+<p class="paragraph-spacing"></p> 
+
+只記錄一下網站的存在，另外因為這網站的網域並不固定，如果有需要可以查查 [Where is Sci-Hub now?](https://sci-hub.now.sh/) 或問問 [Google](https://www.google.com/search?rlz=1C1ASUM_enTW843TW843&ei=uOc-XuzQH8uWr7wPkriAmA8&q=sci-hub&oq=sci-hub&gs_l=psy-ab.3..0l10.3278.3278..3559...0.0..0.40.111.3......0....1..gws-wiz.......0i7i10i30j0i7i30.q_unyAihvd4&ved=0ahUKEwjsjJ3atcLnAhVLy4sBHRIcAPMQ4dUDCAs&uact=5)，通常第一個就是了。
  
-<br> 
+<p class="paragraph-spacing"></p> 
  
 <div class="alert info"> 
 <div class="head">2020-02-08 補充</div>

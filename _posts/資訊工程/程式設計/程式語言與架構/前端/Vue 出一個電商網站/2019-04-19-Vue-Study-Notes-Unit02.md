@@ -47,14 +47,16 @@ var app = new Vue({
 </script>
 ```
 {% endraw %}
-<br>
+
+<p class="paragraph-spacing"></p>
 
 其中 el 是應用程式與 Vue 綁定的方法，綁定時不定要用 id 綁定，可綁定 class :
 ```html
 <div id='app'> 改成 <div class='app'>
 el: '.app',    改成  el: '.app',
 ```
-<br>
+
+<p class="paragraph-spacing"></p>
 
 需注意的是 Vue 一次只能綁定一個元素，因此即便改用 class 重複的 class，也無法顯示相對應的 text。與 id 一樣具有唯一性，因此建議使用 id 。
 
@@ -86,7 +88,8 @@ var app2 = new Vue({
 </script>
 ```
 {% endraw %}
-<br>
+
+<p class="paragraph-spacing"></p>
 
 
 會得到下列的錯誤：
@@ -94,7 +97,8 @@ var app2 = new Vue({
 >
 >(found in Root)
 
-<br>
+<p class="paragraph-spacing"></p>
+
 <div class="alert info">
 前面章節介紹的都是<b>直接在網頁上運行</b>，初始化的方法直接用 new Vue 就能夠運行，屬於基本觀念。 <br>
 
@@ -111,7 +115,7 @@ var app2 = new Vue({
 
 Vue 是一種受到 [MVVM（Model–view–viewmodel）](https://zh.wikipedia.org/wiki/MVVM) 啟發的架構。實際上寫程式碼時，並不會寫到 VM 的部分，只需要寫 Model 即可。在資料變動的同時 VM 就會去控制視圖的話，反之，若從 UI 更改相關資料， VM 則會通知 Model 改寫資料   
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 將 data 中的字串綁定至 DOM 上可使用下列方法：
 
@@ -126,13 +130,15 @@ v-text 和 Mustache 語法起到的效果是一樣的。同樣的，動態修改
 `innerHTML` 的概念，會將包含 html 的字串解析成 `字符實體`。
 {% endraw %} 
 
-<br> 
+<p class="paragraph-spacing"></p> 
+
 若想透過 UI 改變資料，則使用 **v-model**， 雙向綁並資料，一旦改變 UI 資料，則後端資料更著改變。
 ```html
 <input type="text" v-model="message">
 ```
 
-<br> 
+<p class="paragraph-spacing"></p> 
+
 <div class="alert warning">
 重點說三次！<br>
 <b>VUE JS是以資料狀態操作畫面</b>！<br>
@@ -231,7 +237,7 @@ var app = new Vue({
 {% endraw %} 
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另外在後面章節有提到， <mark>v-on:click="reverseText"</mark> 可縮寫成 <mark>@click="reverseText"</mark>。
 
@@ -240,7 +246,7 @@ var app = new Vue({
 ## 預先定義資料狀態的重要性
 在 Vue 中若要操作它的資料，必須要<mark>先定義好它的資料結構</mark>。若未事先定義，將無法綁定資料內容，會得到該變數 is not define 的錯誤。且事前定義資料有利於程式的程式的維護，並有助於提升可讀性。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過那天寫程式時被同事提醒，忘了在 data 定義該變數，但卻發現 UI 參考的到，資料也可以進行操作。稍微檢查了一下，發現是因為是在 created 時有進行過一次初始化的動作。
 
@@ -254,7 +260,7 @@ var app = new Vue({
 提供一個範例給你參考，<a href="https://codepen.io/pvt5r486/pen/YMaKZq?editors=1010">codepen</a>
 </div>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="alert info">
 <div class="head">2019.05.09 更新</div>
@@ -275,13 +281,14 @@ reverseText(event) {
    ...
 }
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 或是直接使用事件修飾符
 ```html
 v-on:click.prevent="reverseText"
 ```
-<br>
+
+<p class="paragraph-spacing"></p>
 
 除了事件修飾符外還有[鍵盤修飾符](https://vuejs.org/v2/guide/events.html#Key-Modifiers)與[滑鼠按鈕修飾符](https://vuejs.org/v2/guide/events.html#Mouse-Button-Modifiers) ... 等。
 
@@ -318,7 +325,7 @@ var app = new Vue({
 }
 ```
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 簡單來說就是
 ```html
@@ -354,7 +361,8 @@ var app = new Vue({
 </script>
 ```
 {% endraw %} 
-<br>
+
+<p class="paragraph-spacing"></p>
 
 而在[使用 v-on 來操作頁面行為](#使用-v-on-來操作頁面行為)一章中，我們使用 ``v-on:click="reverseText2"`` ，這邊綁定 reverseText2 則是一個 methods，methods 是互動函式，**需要觸發才會運作**。
 
@@ -404,7 +412,8 @@ checkboxArray = []
 
 
 #### 5. **string 與 selected 的雙向綁定**  
-在 string 與 selected  相互綁定後，string 記錄目前選定 option 的 value。option 放在首項，表示這是 default 值，若 default 值在引導使用者下拉後，就不讓使用者再次選取此選項，可以在 option 的屬性中加上 disabled 。<br>
+在 string 與 selected  相互綁定後，string 記錄目前選定 option 的 value。option 放在首項，表示這是 default 值，若 default 值在引導使用者下拉後，就不讓使用者再次選取此選項，可以在 option 的屬性中加上 disabled 。
+
 ```html
 selected = "" ; 
 <select name="" id="" class="form-control" v-model="selected"> 
@@ -438,7 +447,7 @@ Vue.component('元件名稱', {
    template: `html 語法`  
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 component 的元件名稱，這個元件名稱會是我們在 html 中所使用的元素標籤，按官方 style guide 建議元件名稱儘量採用組合字，不使用一個單字，避免原生元素標籤衝突。
 

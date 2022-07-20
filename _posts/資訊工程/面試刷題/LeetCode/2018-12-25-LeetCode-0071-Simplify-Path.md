@@ -19,7 +19,7 @@ For example,
 In a UNIX-style file system, a period ('.') refers to the current directory, so it can be ignored in a simplified path. 
 
 Additionally, a double period ("..") moves up a directory, so it cancels out whatever the last directory was. For more information, look here: [https://en.wikipedia.org/wiki/Path_(computing)#Unix_style](https://en.wikipedia.org/wiki/Path_(computing)#Unix_style)
-<br>
+<p class="paragraph-spacing"></p>
 
 **Corner Cases:**
 -   Did you consider the case where  **path**=  `"/../"`?  
@@ -27,7 +27,7 @@ Additionally, a double period ("..") moves up a directory, so it cancels out wha
 -   Another corner case is the path might contain multiple slashes  `'/'`  together, such as  `"/home//foo/"`.  
     In this case, you should ignore redundant slashes and return  `"/home/foo"`.
   
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:**`String`、`Stack`
 
@@ -81,7 +81,7 @@ class Solution:
       return "/"+"/".join(stack)
 ```
 不過跑出來的效能有點不盡理想，只有 96 ms,  2.95% 。
-<br>
+<p class="paragraph-spacing"></p>
 
 所以稍微 Tune 了一下，放棄使用 Regular Expression 做正規化了，改成直接使用左斜線切斷後，若是遇到需要正規化的部分，切斷後的結果會是空字串，此時跳過不處理，就可以達到對左斜線做正規化的效果了。
 

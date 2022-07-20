@@ -10,13 +10,13 @@ tags:
 
 Given a  **non-empty**  string  _s_  and a dictionary  _wordDict_  containing a list of  **non-empty** words, add spaces in  _s_  to construct a sentence where each word is a valid dictionary word. Return all such possible sentences.
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 > **Note:**
 > -   The same word in the dictionary may be reused multiple times in the segmentation.
 > -   You may assume the dictionary does not contain duplicate words.
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Example 1:**
 ```python
@@ -47,7 +47,7 @@ wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: []
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:**`Dynamic Programming`、`Backtracking`
 

@@ -43,7 +43,7 @@ tags:
       }
     }
     ```
-<br>
+<p class="paragraph-spacing"></p>
 
 完成設定後，在文句中需畫螢光筆的地方，插入下列程式碼，就可以看到使用的效果了。
 
@@ -70,7 +70,6 @@ tags:
 拜託，請幫我畫<mark>重點</mark>。
 ```
 
-<br>
 
 ### 顏色
 唯一讓我不太滿意的是就是它的顏色，預設的顏色真的很像螢光黃。所以我要做的第一件事，就是先把顏色換掉！
@@ -82,7 +81,6 @@ $mark-warning: #f5deb3;
 $mark-danger: #ffb6c1;
 ```
 
-<br>
 
 ### 外觀
 好了，搞定顏色後，我另外一件想做的事 - 就是換定螢光筆的外觀。在使用螢光筆的時候，比起粗的那端，我更喜歡使用細的那邊，所以決定來做版細的螢光筆，並將它設為預設的樣式。
@@ -114,7 +112,6 @@ $mark-danger: #ffb6c1;
 }
 ```
 
-<br>
 
 #### 細螢光筆
 而我偏好的細螢光筆的製作則稍微麻煩，必須透過將 `background` 設置成[漸層色](https://wcc723.github.io/css/2013/09/24/css-background/)、並將 `background-color` 設為透明。
@@ -129,7 +126,7 @@ $mark-danger: #ffb6c1;
 linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $mark-default 90%, transparent 95%);
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 完整程式碼如下：
 ```sass

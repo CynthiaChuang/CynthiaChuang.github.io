@@ -64,19 +64,27 @@ $ docker-compose up
 $ sudo apt install docker-compose
 ```
 
-<br>原本以為這樣就安裝完成了，但重新執行時跳出了下面的 Error
+<p class="paragraph-spacing"></p>
+
+原本以為這樣就安裝完成了，但重新執行時跳出了下面的 Error
 > ERROR: Version in “./docker-compose.yml” is unsupported. You might be seeing this error because you’re using the wrong Compose file version. Either specify a version of “2” (or “2.0”) and place your service definitions under the `services` key, or omit the `version` key and place your service definitions at the root of the file to use version 1.  
 For more on the Compose file format versions, see [https://docs.docker.com/compose/compose-file/](https://docs.docker.com/compose/compose-file/)
 
-<br>查了一下，根據 [issue #58](https://github.com/10up/wp-local-docker/issues/58#issuecomment-337963951) 的 commit，發現與 docker-compose 版號有關：
+<p class="paragraph-spacing"></p>
+
+查了一下，根據 [issue #58](https://github.com/10up/wp-local-docker/issues/58#issuecomment-337963951) 的 commit，發現與 docker-compose 版號有關：
 > docker-compose v3 syntax is not supported by docker-compose until version 1.10.0. You’ll need to update docker-compose to a newer version to get rid of that error. Current version is 1.16.1
 
-<br>果然下了 `docker-compose --version` 後，發現的版號只有 **1.8.0**，所以現在有兩個選擇：
+<p class="paragraph-spacing"></p>
+
+果然下了 `docker-compose --version` 後，發現的版號只有 **1.8.0**，所以現在有兩個選擇：
 1. 修改 docker-compose.yml 的版號，由 version: '3' 降成 version: '2'。
 2. 是升級 docker-compose 版本。
 
 
-<br>但目前 docker-compose [版本](https://github.com/docker/compose/tags) 已經來到 1.25.0-rc1，版本差的有點多，還是升級一下好了。
+<p class="paragraph-spacing"></p>
+
+但目前 docker-compose [版本](https://github.com/docker/compose/tags) 已經來到 1.25.0-rc1，版本差的有點多，還是升級一下好了。
 
 ```shell
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose 
@@ -84,13 +92,17 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 $ docker-compose --version
 ```
 
-<br>在執行 `docker-compose --version` 時 ，可能會遇到 `/usr/bin/docker-compose: 沒有此一檔案或目錄`，可以直接把先直接把檔案從 /usr/local/bin 搬到 /usr/bin，不然就是就是建立連結指令：
+<p class="paragraph-spacing"></p>
+
+在執行 `docker-compose --version` 時 ，可能會遇到 `/usr/bin/docker-compose: 沒有此一檔案或目錄`，可以直接把先直接把檔案從 /usr/local/bin 搬到 /usr/bin，不然就是就是建立連結指令：
 
 ```shell
 $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
    
-<br>再次查詢版號，此時就會顯示正確版號了，到這邊 docker-compose 算是安裝完成。
+<p class="paragraph-spacing"></p>
+
+再次查詢版號，此時就會顯示正確版號了，到這邊 docker-compose 算是安裝完成。
 
 ```shell
 $ docker-compose --version
@@ -105,8 +117,9 @@ docker-compose version 1.25.0-rc1, build 8552e8e2
 ERROR: could not find an available, non-overlapping IPv4 address pool among the defaults to assign to the network
 ```
 
+<p class="paragraph-spacing"></p>
 
-<br>根據大家的[踩雷心得](https://stackoverflow.com/questions/43720339/docker-error-could-not-find-an-available-non-overlapping-ipv4-address-pool-am)（誤），大抵可分成三種狀況：
+根據大家的[踩雷心得](https://stackoverflow.com/questions/43720339/docker-error-could-not-find-an-available-non-overlapping-ipv4-address-pool-am)（誤），大抵可分成三種狀況：
  1. openvpn 執行中 running，這個狀況下
 	```shell
 	$ service openvpn stop
@@ -122,8 +135,9 @@ ERROR: could not find an available, non-overlapping IPv4 address pool among the 
 	$ sudo service network-manager restart
 	```
  
-<br>我自己是屬於第三種狀況，重起網路就 OK 了｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡
+<p class="paragraph-spacing"></p>
 
+我自己是屬於第三種狀況，重起網路就 OK 了｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡
 
 不過我同事試過前面的指令都不行。但他後來發現 disable 掉某張網卡就行了，懷疑是與那張網卡的網段衝到了，因此他根據[這篇](http://www.itmuch.com/docker/24-docker-compose-network/)，建立一個網路然後在 yaml 中設定名稱。
 ```shell
@@ -148,12 +162,16 @@ networks:
 $ docker-compose exec database pg_dump hackmd -U hackmd  > backup.sql
 ```
 
-<br>根據 README 文件，而若要還原資料則是下：
+<p class="paragraph-spacing"></p>
+
+根據 README 文件，而若要還原資料則是下：
 ```shell
 $ cat backup.sql | docker exec -i $(docker-compose ps -q database) psql -U hackmd
 ```
 
-<br> 但我在還原資料時，直接得到一個 error
+<p class="paragraph-spacing"></p> 
+
+但我在還原資料時，直接得到一個 error
 
 ```shell
 SET
@@ -225,7 +243,9 @@ ERROR:  relation "notes_alias" already exists
 ERROR:  relation "notes_shortid" already exists
 ```
 
-<br><br>[問了一下](https://community.codimd.org/t/i-got-a-error-when-i-restored/42)，才知道不能在 CodiMD 執行時恢復資料庫...，想想也合理，我為啥會在運行去恢復資料庫阿，白痴...。還好管理者沒有嫌棄我 ~~（反正他嫌棄了我也看不到）~~，還很熱心的告訴我還原的詳細步驟：
+<p class="paragraph-spacing"></p>
+
+[問了一下](https://community.codimd.org/t/i-got-a-error-when-i-restored/42)，才知道不能在 CodiMD 執行時恢復資料庫...，想想也合理，我為啥會在運行去恢復資料庫阿，白痴...。還好管理者沒有嫌棄我 ~~（反正他嫌棄了我也看不到）~~，還很熱心的告訴我還原的詳細步驟：
 
 1.  先停止所有服務，下 `docker-compose down` 或 `docker-compose down -v`，-v 會直接刪除 database。
 2.  接下來單獨運行 database container，`docker-compose up -d database`。
@@ -234,7 +254,9 @@ ERROR:  relation "notes_shortid" already exists
 
 不過這恢復步驟有個前提就是：  <mark class="danger">nothing meaningful in the database yet</mark>。
 
-<br>如果是用預設那份 yml 檔，mount 的那個資料夾應該會對應到 **/var/lib/docker/volumes/codimd-container_database**，原本想說能不能用 `docker volume create`，並複製資料裡面的東西到新的 volume 中，事實證明可以，但不確定這樣的複製方法與文件的備份方法差了多少資料。
+<p class="paragraph-spacing"></p>
+
+如果是用預設那份 yml 檔，mount 的那個資料夾應該會對應到 **/var/lib/docker/volumes/codimd-container_database**，原本想說能不能用 `docker volume create`，並複製資料裡面的東西到新的 volume 中，事實證明可以，但不確定這樣的複製方法與文件的備份方法差了多少資料。
 
 需要注意的是，在複製 volume 必須確保 database 已經停止，不然資料可能會不一致，因此管理者還是推薦用文件的備份方法 。
 
@@ -249,7 +271,9 @@ $ docker-compose up ## turn on
 升級看來還滿簡單，不過因為 yml 檔與 config.json 有做了點客製化，所以沒有打算直接從 repository git pull 下來，我是直接換掉目前 yml 檔中 CodiMD 的 image 來源，取代 git pull 的步驟。
 
 
-<br>不過重新 `docker-compose up` 時遇到了點小問題
+<p class="paragraph-spacing"></p>
+
+不過重新 `docker-compose up` 時遇到了點小問題
 ```shell
 2019-06-04T06:16:56.142Z error: 	uncaughtException: HSTS must be passed a numeric maxAge parameter.
   TypeError: HSTS must be passed a numeric maxAge parameter.

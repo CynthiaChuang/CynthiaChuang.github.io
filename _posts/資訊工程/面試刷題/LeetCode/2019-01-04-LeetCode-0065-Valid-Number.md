@@ -29,7 +29,7 @@ Some examples:
 "95a54e53"  =>  False
 ```
 
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 > **Note:**  It is intended for the problem statement to be ambiguous. You should gather all requirements up front before implementing one. However, here is a list of characters that can be in a valid decimal number:
 >
@@ -40,7 +40,7 @@ Some examples:
 > 
 > Of course, the context of these characters also matters in the input.
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:** `Math`、`String`
 

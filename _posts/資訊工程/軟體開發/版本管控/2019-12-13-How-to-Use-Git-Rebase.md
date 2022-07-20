@@ -14,12 +14,16 @@ tags:
 ## 情境假設
 假設目前 git log 存在多筆 commit ， A → B → C → D → E， e 是目前最新的 commit ，也就是 HEAD。
 
-<br>現在我想對某一筆 commit 進行修改，可以使用 rebase -i 命令選擇要修改的提交
+<p class="paragraph-spacing"></p>
+
+現在我想對某一筆 commit 進行修改，可以使用 rebase -i 命令選擇要修改的提交
 ```shell
 $ git rebase -i <B 的 commit id>
 ```
 
-<br>此時文字編輯器會顯示從 HEAD 到 B 的 commit 之間的所有 commit，如下圖顯示：
+<p class="paragraph-spacing"></p>
+
+此時文字編輯器會顯示從 HEAD 到 B 的 commit 之間的所有 commit，如下圖顯示：
 
 ```shell
 pick <C 的 commitId> <C 的 commit 內容>

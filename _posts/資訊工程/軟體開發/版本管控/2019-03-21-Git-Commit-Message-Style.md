@@ -56,7 +56,7 @@ tags:
 ex. [fix] 修正文字大小
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 標籤的部分常用的有：
 - **fix**：顧名思義，修bug用的
@@ -68,14 +68,14 @@ ex. [fix] 修正文字大小
 - **merge**：合併 branch
 - **update**：更新文件（非程式碼）、db、 json、 md
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另外，這些是我看[這篇](https://github.com/oracle-design/guides/wiki/Git-commit-message-的寫法)有用到的：
 - **hotfix**：緊急嚴重的 bug 修正
 - **disable**：拿掉某功能
 - **upgrade**：版本更新
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 個人習慣標籤之前會再加上 branch 或 module 的識別標籤，方便進行功能辨識：
 

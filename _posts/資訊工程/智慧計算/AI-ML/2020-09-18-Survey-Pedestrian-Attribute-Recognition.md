@@ -38,7 +38,7 @@ tags:
 
 若用更正式的數學式來定義，可以說成給定一張人物圖像 $I$，行人屬性辨識目的是從從預先定義的屬性列表 $A= \{a_1, a_2, ..., a_L\}$ 中，預測一組屬性 $a_i$ 來描述此人的特徵。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Attribute**  
 至於為什麼選擇屬性作為描述行人的特徵？
@@ -47,7 +47,7 @@ tags:
 
 而且，當用來描述行人的特徵由低階的線條變成高階富有語意的物件時，這樣的描述會更適應視角與外在條件的變化，不太容易因為這些條件的變動而變化。當然，或許這些變動會造成辨識上的困難，但不至於完全變成另一個特徵。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過，對於什麼是屬性或屬性有哪些，其實並沒有明確定義。但一般我們用來描述一個陌生人時，可能使用的形容詞會有下面幾類：
 1. **體態**：身高、體重...。
@@ -89,9 +89,8 @@ tags:
 
 此外就是低解析度的問題，主要是因為行人屬性辨識的圖像來源會是監視器，容易產生低解析度品質的圖像（因為好的監視器太貴了，沒辦法大量佈置 XDDD）。但部分屬性因為顆粒度小，低解析度的成像會對辨識造成困難。
     
-<br>
+<p class="paragraph-spacing"></p>
 
-    
 除了上述共有的問題外，根據幾篇論文跟文章，列出了些專屬於這領域的問題：
  
 1. **類別間差異（intra-class variations）大**  
@@ -252,7 +251,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
 
 此外針對標籤不平衡，有部分研究會對於 loss 權重做調整，以得到較好的擬合效果。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 根據上面的發展，這邊我就我看過得論文挑選了幾篇來介紹。
 
@@ -304,7 +303,7 @@ Fashion Classification，個人覺得它跟行人屬性辨識的定義相似，�
 
 結果表明，不同的視角確實會影響到部分屬性的識別，例如：背包使用背面視角判斷的準確度最高、長短袖的判斷則是側面的準確度較高。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **遮擋**   
 實驗結果表明，有遮擋的性能相較無遮擋的性能，局部屬性性能下降，表明遮擋會對局部屬性的識別造成影響。
@@ -493,7 +492,7 @@ LSTM 的 time steps 會對應到剛剛對資料集所做的分組，而每一組
 7. **MsVAA**：[Deep imbalanced attribute classification using visual attention aggregation](https://arxiv.org/abs/1807.03903)
 8. **VAC**：[Visual attention consistency under image transforms for multi-label image classification](https://openaccess.thecvf.com/content_CVPR_2019/papers/Guo_Visual_Attention_Consistency_Under_Image_Transforms_for_Multi-Label_Image_Classification_CVPR_2019_paper.pdf).
  
-<br>
+<p class="paragraph-spacing"></p>
  
 另外附上幾篇有找到程式碼的論文
 1. **WPAL-network**：  

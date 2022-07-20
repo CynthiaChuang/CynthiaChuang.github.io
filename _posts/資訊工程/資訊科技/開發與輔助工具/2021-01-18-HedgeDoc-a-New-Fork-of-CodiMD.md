@@ -39,7 +39,7 @@ HedgeDoc（圖片來源: <a href="https://demo.hedgedoc.org/">HedgeDoc Demo</a>�
 
 因此基於種種原因，社群版的 CodiMD 後來更名成為 HedgeDoc，並將 logo 換成一隻可愛小刺蝟。
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 總結來說：
 
@@ -61,7 +61,7 @@ HedgeDoc 的安裝步驟在之前的[《安裝踩雷筆記…》](/How-to-Setup-
 - Source code：[codimd/server](https://github.com/codimd/server)
 - Container： [codimd/container](https://github.com/codimd/container)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 對了，那刺蝟真的好可愛 :heart_eyes: ，害我對 HedgeDoc 愛不釋手...
 
@@ -110,7 +110,7 @@ volumes:
 - [CodiMd](https://hub.docker.com/r/hackmdio/hackmd/tags/?page=1&ordering=last_updated)
 - [HedgeDoc](https://quay.io/repository/hedgedoc/hedgedoc?tag=1.7.2&tab=tags)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 啟動用的指令一樣是用：
 ```bash

@@ -14,7 +14,7 @@ Vim 是大部分系統都有內建的編輯器，有時在陌生環境不想安�
 但在使用 vim 時偶爾會卡死，無法輸出任何文字，有點像當掉了。偏偏終端機中其他頁籤可以輸出...
 
 <!--more-->
-<br><br> 
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p> 
 
 ## Q：Vim 卡死動不了的解決方法
 ### 狀況描述

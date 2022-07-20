@@ -20,7 +20,7 @@ tags:
 本堂課程為此系列的第一講，主要來探討 Serverless 在 API 經濟中可以產生怎樣的作用。
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="alert warning">
 <div class="head">文中的 IBM 文件連結</div>
@@ -49,7 +49,7 @@ tags:
 
 不過如同上一堂課所說的，Serverless 雖然包含了兩種服務概念，但因為實做複雜度的偏向，因此一般在討論 Serverless 時多集中在 FaaS。
  
-<br>
+<p class="paragraph-spacing"></p>
 
 Function-as-a-Service FaaS，中文翻譯為**函式即服務**，...恩...函式就是一般會在程式碼裡面寫的函式。不過需要注意的是這些函式是
 <mark>無狀態</mark>、<mark>短暫的</mark>、且是<mark>有限制的</mark>。
@@ -124,7 +124,9 @@ OpenWhisk　是一個典型的<mark>事件驅動型</mark>的程式編輯模型�
 服務的提供者將專有軟體、應用程式或是 web...等服務，通過網路，向服務使用者提供訪問的interface，且這樣的服務必須是安全且穩定的。
 </div>
 
-<br> 在 API 經濟之下，越來越多的企業通過 API 將自己企業的功能和數據開放出去供別人調用，從而給企業本身帶來直接的價值。可是很多情況下，企業已有的功能不適合直接暴露給外部使用戶，需要考慮相關認證的機制以及隱私資料遮蔽，做一定的限制和修改。
+<p class="paragraph-spacing"></p> 
+
+在 API 經濟之下，越來越多的企業通過 API 將自己企業的功能和數據開放出去供別人調用，從而給企業本身帶來直接的價值。可是很多情況下，企業已有的功能不適合直接暴露給外部使用戶，需要考慮相關認證的機制以及隱私資料遮蔽，做一定的限制和修改。
 
 
 ### Serverless 平台實現 Open API
@@ -177,7 +179,7 @@ API Gateway 這邊主要負責安全性、流量管理、拜訪與響應的策�
 2. 安裝 IBM Cloud Developer Tools 
 3. 配置 CLI
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **IBM Cloud Developer Tools**  
 前面提過課程中安裝的是 wsk CLI，但因為我在 IBM 找不到文件的關係，所以先改用 IBM 的 CLI。
@@ -194,7 +196,7 @@ API Gateway 這邊主要負責安全性、流量管理、拜訪與響應的策�
     $ docker run -ti ibmcom/ibm-cloud-developer-tools-amd64
     ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="alert warning">
 <div class="head">Docker Container 環境</div>
@@ -202,7 +204,7 @@ API Gateway 這邊主要負責安全性、流量管理、拜訪與響應的策�
 IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操作指令需要注意一下。
 </div>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 記錄一下，在 Docker Container 中我需要反覆查詢的指令：
 1. **安裝**  
@@ -229,7 +231,7 @@ IBM 所提供的 Container 作業系統環境是 Alpine Linux。所以一些操�
     $ docker exec -ti [ID] /bin/sh
     ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **配置 CLI**  
 依照[教學文件](
@@ -299,7 +301,7 @@ def main(args):
     return {"command":command}  
 ``` 
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 依照 [教學文件](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions) 來 Creating actions    
 
@@ -309,7 +311,7 @@ def main(args):
     $ ibmcloud fn action create catapi catapi.py --kind python:3.7 --web true
     ok: created action catapi
     ``` 
-    <br>
+    <p class="paragraph-spacing"></p>
 
     **kind**  
     因為我是挑 python 所以 `kind` 參數需要設置為 `python:3.7` ，如果是其他語言撰寫請查詢相對應的 [tag](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cli-plugin-functions-cli#cli_action_create)。

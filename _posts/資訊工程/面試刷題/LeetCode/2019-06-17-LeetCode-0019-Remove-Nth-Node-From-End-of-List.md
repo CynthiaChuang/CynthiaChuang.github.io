@@ -18,16 +18,17 @@ Given linked list: 1->2->3->4->5, and _n_ = 2.
 
 After removing the second node from the end, the linked list becomes 1->2->3->5.
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 > **Note:**
 > Given  _n_  will always be valid.
 
-<br>
+<p class="paragraph-spacing"></p>
+
 >**Follow up:**
 >Could you do this in one pass?
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:**`Linked List`、`Two Pointers`
 
@@ -73,10 +74,9 @@ class Solution:
       return dummy.next
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
-只是上面的作法，並不符合 **Follow up** 的要求，而且效率也並不是很突出，*~~重點是程式碼好醜~~*。所以又進一步使用 dict 優化，這邊先將 node 本身與對應的 index 放入 dict，之後即得出鏈結串列長度，且可用 dict 操作元素的方式來進行 node 移除。<br>
-
+只是上面的作法，並不符合 **Follow up** 的要求，而且效率也並不是很突出，*~~重點是程式碼好醜~~*。所以又進一步使用 dict 優化，這邊先將 node 本身與對應的 index 放入 dict，之後即得出鏈結串列長度，且可用 dict 操作元素的方式來進行 node 移除。
 
 ```python 
 class Solution:
@@ -109,12 +109,12 @@ class Solution:
       return dummy.next
 ```
 
-<br>執行結果顯示第二版的效能（36 ms /  91.17%），也比第一版有所提昇（40 ms / 77.72 %）。
+<p class="paragraph-spacing"></p>
 
-<br>
+執行結果顯示第二版的效能（36 ms /  91.17%），也比第一版有所提昇（40 ms / 77.72 %）。
+
 
 ### Two Pointers
-
 不過這題如果去網路查查，看到最多的會是 **Two Pointers** 的作法。
 
 分別定義兩個指標 prev 與 cur，一開始由 prev 先尋訪 n 個 node，如果走完 n 個 node 後尚把未整個鏈結串列給尋訪完的話，就讓 prev 繼續向下尋訪，且讓 cur 也開始尋訪，直到 prev 尋訪整個鏈結串列後 cur 也停止尋訪。

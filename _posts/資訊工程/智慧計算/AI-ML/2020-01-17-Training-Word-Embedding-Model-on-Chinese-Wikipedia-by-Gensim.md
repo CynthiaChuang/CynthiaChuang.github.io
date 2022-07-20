@@ -43,8 +43,8 @@ $$
 在 Skip-Gram 中，一次只輸入一個字，輸出為其前後一定距離內的文字，所以<mark>同一個輸入會有多個輸出</mark>；與 Skip-Gram 不同的是，CBOW 是將一段句子的中間字當作輸出為，其左右文字為輸入，所以是<mark>多個輸入一個輸出輸入</mark>。
 
 簡單來說，Skip-Gram 是給定 input word 來預測上下文。而 CBOW 則是給定上下文，反過來預測 input word。
-<br>
 
+<p class="paragraph-spacing"></p>
 
 不過，我們這邊不討論 word2vec 的數學公式，也不討論 word2vec 的訓練模型，這邊就只想辦法訓練一包詞向量而已 XD
 
@@ -66,14 +66,17 @@ $$
 $ pip install --upgrade gensim
 ```
 
-<br> 另外，需要準備一套斷詞工具，顧名思義就是將整篇的語料拆成一個一個詞，才能交給 word2vec 進行訓練。這邊可以依照自己的需求挑選斷詞工具，例如： [jieba](https://github.com/ckiplab/ckiptagger)，而我所挑選的是 [pyhanlp](https://github.com/hankcs/pyhanlp)，在自定義的字典檔添加上它還滿方便的。
+<p class="paragraph-spacing"></p> 
+
+另外，需要準備一套斷詞工具，顧名思義就是將整篇的語料拆成一個一個詞，才能交給 word2vec 進行訓練。這邊可以依照自己的需求挑選斷詞工具，例如： [jieba](https://github.com/ckiplab/ckiptagger)，而我所挑選的是 [pyhanlp](https://github.com/hankcs/pyhanlp)，在自定義的字典檔添加上它還滿方便的。
 
 ```shell
 $ pip install pyhanlp
 ```
 
-<br> HanLP 最近似乎有釋出 [HanLP 2.0](https://github.com/hankcs/HanLP) ，但還在 Alpha 階段就是了。不過，不管是 jieba 或是 pyhanlp/HanLP 都是以簡體中文為核心，若想使用繁體中文為核心的，可以考慮在去年(2019)中研院釋出 [CKIP](https://github.com/ckiplab/ckiptagger)的 python API 。
-<br>
+<p class="paragraph-spacing"></p> 
+
+HanLP 最近似乎有釋出 [HanLP 2.0](https://github.com/hankcs/HanLP) ，但還在 Alpha 階段就是了。不過，不管是 jieba 或是 pyhanlp/HanLP 都是以簡體中文為核心，若想使用繁體中文為核心的，可以考慮在去年(2019)中研院釋出 [CKIP](https://github.com/ckiplab/ckiptagger)的 python API 。
 
 最後記錄一下我所使用的 pyhanlp 版號，我有一陣子沒更新了說，[1.x branch](https://github.com/hankcs/HanLP/tree/1.x) 最後的版號應該是 v1.7.6 吧
 
@@ -133,7 +136,9 @@ with open(output, "w") as f:
         f.write(" ".join(corpus) + ' \n')
 ```
 
-<br> 在解析的過程中，我發現這份檔案有繁簡交雜的現象，導致我最終的結果不如預期，因此我在寫出檔案前多做了些處理：
+<p class="paragraph-spacing"></p> 
+
+在解析的過程中，我發現這份檔案有繁簡交雜的現象，導致我最終的結果不如預期，因此我在寫出檔案前多做了些處理：
 1. 每個 token，依序做一次繁簡轉換。
 2. 檢查轉換的結果是否符合編碼，若結果符合則留下，反之則保留轉換前的輸入。
  
@@ -151,12 +156,16 @@ with open(output, "w") as f:
 $ cd ~/py3.6/lib/python3.6/site-packages/pyhanlp
 ```
 
-<br> 接著修改 `__init__.py`，在最下方的 API 列表中加入：
+<p class="paragraph-spacing"></p> 
+
+接著修改 `__init__.py`，在最下方的 API 列表中加入：
 ```python
 TraditionalChineseTokenizer= SafeJClass('com.hankcs.hanlp.tokenizer.TraditionalChineseTokenizer')
 ```
 
-<br> 如此一來就可以使用繁體的斷詞器了：
+<p class="paragraph-spacing"></p> 
+
+如此一來就可以使用繁體的斷詞器了：
 ```python
 from pyhanlp import *
 
@@ -175,14 +184,17 @@ HanLP.segment('你好，歡迎在Python中調用HanLP的API')
 TraditionalChineseTokenizer.segment('你好，歡迎在Python中調用HanLP的API')
 ```
 
-<br> 若是不想修改 init 檔案，也可以在使用繁體斷詞器前才引入：
+<p class="paragraph-spacing"></p> 
+
+若是不想修改 init 檔案，也可以在使用繁體斷詞器前才引入：
 ```python
 from pyhanlp import *
 
 TraditionalChineseTokenizer= SafeJClass('com.hankcs.hanlp.tokenizer.TraditionalChineseTokenizer')
 TraditionalChineseTokenizer.segment('你好，歡迎在Python中調用HanLP的API')
 ```
-<br> 
+
+<p class="paragraph-spacing"></p> 
 
 完成繁體斷詞器配置之後，就可以針對上一個步驟所解析出來的語料進行斷詞：
 
@@ -255,7 +267,7 @@ sentences = word2vec.LineSentence(source)
 model = word2vec.Word2Vec(sentences, size=vector_size, min_count=min_count, window=window_size, workers=workers)
 model.save(model_name)
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 回頭看看程式碼的部分：
 

@@ -50,7 +50,9 @@ beforeMount(){
 不要在選項屬性上使用<b>箭頭函數</b>！<br>
 </div>
 
-<br>例如：
+<p class="paragraph-spacing"></p>
+
+例如：
 
 ```javascript
 created：() => console.log(this.a)
@@ -116,7 +118,7 @@ Uncaught TypeError: this.myMethod is not a function`
 2. [ ] init  
 3. [x] Created  
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **問題 2： keep-alive 標籤內的元件描述，以下何者為對？**  
 1. [ ] v-if 判斷隱藏後，一樣會觸發 destroyed 的生命週期。  

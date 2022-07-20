@@ -15,7 +15,6 @@ tags:
 只是...買回來後，開模擬器還是好卡 (〒︿〒)，只好安裝其他模擬器試試看，山姆大推薦用 Genymotion 聽說比較好用。
 
 <!--more-->
-<br> 
 
 <p class="illustration">
     <img src="https://i.imgur.com/TTwPWQc.png">
@@ -44,7 +43,7 @@ tags:
     <img src="https://i.imgur.com/psZKhX0.png">
     </p>    
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 2.  **下載 Virtual Box**   
     下載到合適的 deb 檔後，點選右鍵選單中的<mark>以 Ubuntu 軟體中心開啟</mark>來安裝即可。
@@ -66,7 +65,7 @@ tags:
         <img src="https://i.imgur.com/IjSSoLr.png">
     </p>
     
-   <br>  
+   <p class="paragraph-spacing"></p>  
       
 2. **安裝 Genymotion**   
     啟動終端機，先切換到下載的檔案（genymotion-2.6.0-linux_x64.bin）所在的目錄，再輸入下列兩條指令：
@@ -77,7 +76,7 @@ tags:
     <p class="illustration">
     <img src="https://i.imgur.com/TVMBBxb.png">
     </p>
-    <br> 
+    <p class="paragraph-spacing"></p> 
 
 3.  **執行**   
     當安裝完成後，會在資料夾中多了一個名為 genymotion 的資料夾，進入點擊 genymotion 執行檔，即可執行。
@@ -102,12 +101,12 @@ tags:
 
 1. **Virtualization technology not enabled in bios**   
     顧名思義就是 Virtualization technology 沒開，在重新開機後進入 BIOS 介面 → Advanced BISO Feature → Virtualization 改成 enable 即可  
-    P.S. 我的是 Award 主機板，各個主機板的開啟方法可能會不同。<br>
-    
+    P.S. 我的是 Award 主機板，各個主機板的開啟方法可能會不同。
+    <p class="paragraph-spacing"></p>    
 2.  **The Virtual device got no IP address**   
     這個我在懷疑是因為ㄧ開始 Virtualization 沒開，所以才會取不到 IP address，因為我將 Virtualization 啟動後，就正常了。  
-    如果 Virtualization 開啟後還出現這問題，試試這個 [Genymotion, Fix Error "Could Not Obtain An IP Address"](https://www.youtube.com/watch?v=YuJ6ZfudFp8%20%20%20genymotion)<br>
-    
+    如果 Virtualization 開啟後還出現這問題，試試這個 [Genymotion, Fix Error "Could Not Obtain An IP Address"](https://www.youtube.com/watch?v=YuJ6ZfudFp8%20%20%20genymotion)
+    <p class="paragraph-spacing"></p>    
 3.  **Unable to configure the network adapter for the virtual device**   
     會出現這條問題最基本原因是，我使用的指令來安裝，但貌似安裝的是舊的？還是因為我忘記多打 update 的指令，我就不得而知了，總之我將 virtualbox 改成自己下載安裝的就算 ok了，接下來會跳出 Virtualization 沒開的問題  
 	```shell

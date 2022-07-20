@@ -66,7 +66,7 @@ tags:
     <img src="https://i.imgur.com/SWMolYX.png" alt="內政部的網站">
 </p>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="alert info"> 
 <div class="head">補充資料</div>

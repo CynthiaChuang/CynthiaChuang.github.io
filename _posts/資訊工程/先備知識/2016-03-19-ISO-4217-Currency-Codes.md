@@ -30,7 +30,8 @@ tags:
 
 P.S. 說不想整理，結果最後還是把它弄出來了。
 
-<br>
+<p class="paragraph-spacing"></p>
+
 <center>表1、代碼和所對應的幣別名</center>
 
 |     代碼           |幣別名|幣別名(中)|
@@ -210,7 +211,7 @@ P.S. 說不想整理，結果最後還是把它弄出來了。
 |ZWL|Zimbabwean dollar A/10|辛巴威元A/10
 
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 另一種比較常見的做法是用 [Currency](https://docs.oracle.com/javase/8/docs/api/java/util/Currency.html) 所提供的類別來實作，只是這種做法我認為存在兩個缺點：
 1. 無法送翻譯，實現多國語系。

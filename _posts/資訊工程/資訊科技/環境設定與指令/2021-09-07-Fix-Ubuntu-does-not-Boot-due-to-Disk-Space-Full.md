@@ -15,7 +15,7 @@ tags:
 ```
 <!--more-->
 
-<br>
+<p class="paragraph-spacing"></p>
 
 雖然在網路上找到很多可能的原因，但我依稀記得開機前有看到 Chrome 給了我一條提示：**說我的空間已滿，建議我刪除一些網頁暫存紀錄**，尋思是不是因為硬碟空間滿了導致開不了機？雖然覺得不可思議，但還是決定先朝這方向來試試。
 
@@ -40,7 +40,7 @@ tags:
     
     果然滿載了，雖然百思不得其解，不過既然是硬碟滿了，那就刪掉冗餘的軟體與檔案就好啦～！
     
-    <br>
+    <p class="paragraph-spacing"></p>
     
 - **Step2：釋放硬碟空間**  
     先清掉一些快取檔案、安裝檔、舊版本檔案和相依性軟體，放掉硬碟空間。 
@@ -49,7 +49,7 @@ tags:
     $ sudo apt-get clean
     $ sudo apt-get autoremove
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
     
     不想下指令的話，剛剛 UI 上有一個 clean 的選項也能達到類似的效果：
     <p class="illustration">
@@ -64,20 +64,20 @@ tags:
     $ find / -size +400000k -exec rm -rf {} \;
     ```
         
-    <br>
+    <p class="paragraph-spacing"></p>
     
     如果擔心誤刪的的話，可以先將大於 400MB 的文件列出在手動刪除：
     ```bash
     $ find / -size +400000k -exec ls -lhS {} \;
     ```
         
-    <br>
+    <p class="paragraph-spacing"></p>
        
     搞定後，再次檢查硬碟空間，OK 的話，就可以下重新開機：
     ```
     $ reboot
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
     
 ...這才是我的正常應得使用量咩，剛剛到底發生了啥事阿！
 <p class="illustration">

@@ -13,7 +13,6 @@ tags:
 我會知道她其實只是個巧合，我原先是在 YouTube 上找一位同名的日本歌手 ELISA，但卻跑出她來，我還在奇怪怎好像跟資料上看起來不一樣，結果後來才發現不是不太一樣是根本不同人阿 XDDD，不過她的聲音也很好聽，適合靜靜的聽，跟另一位 ELISA 的風格不太一樣（這位是一位動畫歌手）。
 
 <!--more-->
-<br>
 
 <p class="illustration">
     <img src="https://i.imgur.com/thdMrqs.png" alt="《Then Comes the Sun》專輯封面">

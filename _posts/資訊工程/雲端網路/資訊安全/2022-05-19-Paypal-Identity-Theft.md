@@ -15,7 +15,6 @@ tags:
 那天在看球的時候，發現信箱中收 Paypal 寄來了兩封信，分別是「**你已將新的電子郵件地址新增至 PayPal 帳戶**」和「**你已成功移除支付及提領限額**」，在看到提領限額的信件時我還一頭霧水，但當我看到電子信箱的新增了時，我才意識到，我·被·盜·了！
 
 <!--more-->
-<br>
 
 <p class="illustration">
     <img src="https://i.imgur.com/iIagdGC.png" alt="Paypal brand">
@@ -62,7 +61,7 @@ tags:
 2. 致電客服：00801444304
 3. FB上傳送訊息：[🚪](https://www.facebook.com/PayPal)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過這些方法各有各的缺點：
 1. **訊息中心**  
@@ -110,7 +109,7 @@ tags:
 ### 交易安全設定
 除了刪掉信用卡外，我還跑到`設定`中的`交易安全`，設定了安全認證，我設定了兩種認證，分別是**2 步驟認證**與**密碼提示問題**。2 步驟認證是指登入時除了密碼之外，會透過 Authenticator App 取得單次用安全代碼，對了，我這邊用的 Authenticator App 是 Google Authenticator。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 在處理完這件事情後，突然有種鬆了一口氣的的感覺。第一次遇到帳號被盜有點慌張，由衷感謝 Allee 的文章的幫忙 🙏🏻。
 

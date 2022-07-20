@@ -55,7 +55,7 @@ document.addEventListener('copy', function (evt) {
 });
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過，這樣直接硬幹似乎有點問題，我遲遲沒看到應該出現的 log，反而出現 Error：
 
@@ -71,14 +71,14 @@ document.addEventListener('copy', function (evt) {
     console.log(text);
 });
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 不過，這樣出來的值卻是 null 的，或許跟瀏覽器的版本有關？所以我又翻了些資料發現相關的寫法五花八門，有諸如：  
 `event.originalEvent.clipboardData.getData('text');`、   
 `window.event.clipboardData.getData('text');`  
 ...等寫法，不過這些寫法不是 Error 就是 null（沮喪 😔）。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 最後終於找到一個可用的寫法：
 ```javascript
@@ -93,7 +93,7 @@ document.addEventListener('copy', function (evt) {
     <img src="https://i.imgur.com/kUxMiy7.png" alt="使用者允許授權">
 </p>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 所以我換了個想法，改用了 `document.getSelection`。不同於前面的實作方法，是從剪貼簿中取值，在進行複製前有一個必備的前行動作–<mark>反白</mark>，這個方法就是將反白的文字取出。
 ```javascript

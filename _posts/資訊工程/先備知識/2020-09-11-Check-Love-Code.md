@@ -36,7 +36,7 @@ ID 驗證系列第三彈！
 ^\d{3,7}$
 ```
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 上次說要用 C 寫，可能得先去複習一下語法，好久沒寫 C 了，而且好像沒有用 C 寫過 regex？都可以再[寫一篇網誌](/Regular-Expressions-in-C)了...
 
@@ -74,7 +74,7 @@ int main(){
 }
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 加點錯誤訊息：
 ```cpp
@@ -111,7 +111,7 @@ int main(){
 }
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
  
 難得兩個長度差不多 XDDD，通常 regex 會簡潔很多。
 

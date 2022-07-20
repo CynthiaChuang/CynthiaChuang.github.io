@@ -20,37 +20,37 @@ tags:
 ### 招呼語
 跟一般的郵件往來一樣，先來個招呼語：
 
-> Thank you for your email. <br>
+> Thank you for your email.   
 > 謝謝來信。
 
 
 ### 離開時間
 然後告知你的<mark>狀況</mark>與<mark>離開的時間</mark>，敘述一個大慨的情況就好，不用留下太私人的訊息或與公事無關訊息；但時間一定要標清楚。
  
-> I am out of the office until 8/30. I am only able to check email sporadically and will reply to your email after I return. <br> 
+> I am out of the office until 8/30. I am only able to check email sporadically and will reply to your email after I return.  
 > 我直到 8/30 前都不在辦公室。我只能偶爾檢查電子郵件，等到回來後我會回覆您的郵件。
     
-> I have little or no access to email at present. I will be returning to work on 8/30 and will get back to you at that time.<br>
+> I have little or no access to email at present. I will be returning to work on 8/30 and will get back to you at that time.   
 > 我目前很少或幾乎沒有電子郵件訪問權限。我將在 8/30 返回辦公室，屆時會回覆您的訊息。
     
-> I am out of the office attending a meeting today and may be slow to respond. <br>
+> I am out of the office attending a meeting today and may be slow to respond.   
 > 我今天要出席會議並且不在辦公室，回覆可能會較慢。
   
-> Our office is closed today due to a national holiday. I will be back in the office tomorrow and will reply to your email as soon as possible.　<br>
+> Our office is closed today due to a national holiday. I will be back in the office tomorrow and will reply to your email as soon as possible.   
 > 因國定假日我們公司今天不上班，我明天進辦公室會儘快回覆您的訊息。
 
 
 ### 急件處理
 另外，也可留下代理人或是額外的聯絡方式，進行急件處理。
 
-> For urgent queries please call me on XXXXXXX. <br>
+> For urgent queries please call me on XXXXXXX.   
 > 如有緊急查詢，請致電 XXXXXXX。
 
 
-> Please refer all urgent matters to OOOOOOO at the following email address XXXXXXX. <br>
+> Please refer all urgent matters to OOOOOOO at the following email address XXXXXXX.   
 > 有急事請找 OOOOOOO，她的 mail 是 XXXXXXX。
 
-> Please contact OOOOOOO should you require an immediate response. <br>
+> Please contact OOOOOOO should you require an immediate response.   
 > 如果您需要立即回覆，請與 OOOOOOO 聯繫。
 
 
@@ -63,7 +63,7 @@ tags:
 
 ## 範例
 之前寫的信被系統洗掉，記錄下先前寫的 mail：
-> Thank you for your email. I am out of the office until 日期,  I will look to reply to your email when I return. Please refer all urgent matters to 代理人 on 分機. <br>
+> Thank you for your email. I am out of the office until 日期,  I will look to reply to your email when I return. Please refer all urgent matters to 代理人 on 分機.  
 > Regards, Cynthia
  
 如果要~~照抄~~參考其他範例的，可以看看[大英國辦公室小職員 的 Po 文](https://www.facebook.com/ukcareerideas/posts/1235998673179509:0)。

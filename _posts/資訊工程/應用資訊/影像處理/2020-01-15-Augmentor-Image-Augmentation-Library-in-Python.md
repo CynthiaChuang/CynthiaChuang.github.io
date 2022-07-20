@@ -49,14 +49,16 @@ $ pip install Augmentor
  
 ### 純圖片增強
 幾本上，就只有三個步驟：
-<br>
+
+<p class="paragraph-spacing"></p>
 
 首先，初始化 pipeline 物件，並指向所需處理影像的目錄
 ```python
 import Augmentor
 p = Augmentor.Pipeline("./images")
 ```
-<br>
+
+<p class="paragraph-spacing"></p>
 
 接下來，添加所需的影像增強操作
 ```python
@@ -68,7 +70,8 @@ p.skew(probability=0.5, magnitude=0.12)
 p.random_erasing(probability=0.5, rectangle_area=0.11)
 p.rotate(probability=0.5, max_left_rotation=4, max_right_rotation=4)
 ```
-<br>
+
+<p class="paragraph-spacing"></p>
 
 最後，指定增強後圖片數目總量
 ```python
@@ -96,7 +99,8 @@ for i, file in enumerate(img_files):
 # batch_imgs shape = (bs, 3)             
 p = Augmentor.DataPipeline(batch_imgs, batch_texts)
 ```
-<br>
+
+<p class="paragraph-spacing"></p>
 
 原本以為這樣就可行了，但卻發現影像過了 pipeline 後，套用的影像增強不如預期，詳讀文件也沒找到可用的訊息，只好去細看他們所提供的[範例](https://github.com/mdbloice/Augmentor/blob/master/notebooks/Multiple-Mask-Augmentation.ipynb)。
 
@@ -105,7 +109,8 @@ p = Augmentor.DataPipeline(batch_imgs, batch_texts)
 ```python
 images = [[np.asarray(Image.open(y)) for y in x] for x in collated_images_and_masks]
 ```
-<br>
+
+<p class="paragraph-spacing"></p>
 
 發現它讀入圖片後，外面有多一層 array，所以當這個步驟結束時，預期的維度會是 3 維，而非我的 2 維。依照這個邏輯，再將圖片放入 `DataPipeline` 前，先<mark>擴展維度</mark>：
 ```python
@@ -125,7 +130,7 @@ p = Augmentor.DataPipeline(batch_imgs, batch_texts)
 
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 最後再取出增強後圖片，與相對應的標籤。別忘了，記得把剛剛擴展維度的<mark>維度降回去</mark>：
 ```python
@@ -145,7 +150,7 @@ batch_imgs = np.squeeze(batch_imgs, axis=1)
 
 登愣！！
 
-<br>
+<p class="paragraph-spacing"></p>
 
 只好來研究如何[自定義增強器](https://augmentor.readthedocs.io/en/master/userguide/extend.html)
 
@@ -157,7 +162,7 @@ batch_imgs = np.squeeze(batch_imgs, axis=1)
 3. 重載（Overload）`perform_operation()`，以自定義新的增強。
 4. `perform_operation()` 的回傳資料型態必須是 `PIL.Image`。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 快速實做版簡單的 `HSVShifting` 進行驗證：
  

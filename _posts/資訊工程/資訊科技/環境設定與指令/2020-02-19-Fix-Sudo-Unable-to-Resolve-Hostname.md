@@ -29,14 +29,16 @@ sudo: unable to resolve host ubuntu16-x64
 $ vim /etc/hosts
 ```
 
-<br> 然後把新的 hostname，也就是 ubuntu16-x64 加到檔案中：
+<p class="paragraph-spacing"></p> 
+
+然後把新的 hostname，也就是 ubuntu16-x64 加到檔案中：
 
 ```diff 
 - 127.0.0.1 localhost
 + 127.0.0.1 localhost ubuntu16-x64
 ```
- 
-<br> 設完後, 使用 sudo 就不會出現那條錯誤訊息了~
+
+設完後, 使用 sudo 就不會出現那條錯誤訊息了~
 
 
 

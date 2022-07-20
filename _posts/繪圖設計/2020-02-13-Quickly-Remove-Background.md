@@ -13,7 +13,7 @@ tags:
 看到[電獺少女]((https://agirls.aotter.net/post/54641))分享的，一個快速去背的網站，雖然結果沒有很完美，但拿來應付寫網誌是夠用的。
 
 <!--more-->
-<br><br> 
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p> 
 
 [removebg](https://www.remove.bg/zh) 超強，不用用筆刷，上傳圖片直接去背給你 XDDD 
 

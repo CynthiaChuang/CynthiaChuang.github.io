@@ -19,13 +19,14 @@ If the first sequence of non-whitespace characters in str is not a valid integra
 If no valid conversion could be performed, a zero value is returned.
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 > **Note:**
 > -   Only the space character  `' '`  is considered as whitespace character.
 > -   Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: $[−2^{31}, 2^{31} − 1]$. If the numerical value is out of the range of representable values, INT_MAX ($2^{31} − 1)$ or INT_MIN ($−2^{31}$) is returned.
 
-<br>
+<p class="paragraph-spacing"></p>
+
 **Example 1:**
 ```
 Input: "42"
@@ -63,7 +64,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
              Thefore INT_MIN (−231) is returned
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:** `Math`、`String`
 
@@ -71,7 +72,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 
 ## 解題邏輯與實作
 這題是要將給定的字串轉成數字，字串轉數字不難，但討厭的是傳進來的字串有太多的整可能，例如：空格、正負號、非數字字元...等。
-<br>
+<p class="paragraph-spacing"></p>
 
 依照題目給的範例，稍微列舉了一下可能狀況：
 1. **字串前後若有空字元，不影響轉換：**  
@@ -83,7 +84,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 3. **最後是 overflow 的狀況：**  
 但這對 python 來說可以最後在判斷就好。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 也就是說，我需要取出字首含正負號的數字出來轉換，若不存在則回傳 0 ；反之，若存在則進行轉換。思考了下條件，決定用 **Regular Expression** 進行抽取。
 
@@ -104,7 +105,7 @@ class Solution:
       return val
 ```
 
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 後來又試著不用  Regular Expression 做了一版，並進一步在轉換字串時，不使用 int 來實做
 ```python
@@ -130,7 +131,9 @@ class Solution:
 
       return min(INT_MAX, max(INT_MIN, val * sign))
 ```
-<br>執行速度由 **44 ms / 83.62 %** 提升到 **40 ms / 92.02 %** 。
+<p class="paragraph-spacing"></p>
+
+執行速度由 **44 ms / 83.62 %** 提升到 **40 ms / 92.02 %** 。
 
 
 

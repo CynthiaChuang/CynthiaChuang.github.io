@@ -59,7 +59,7 @@ tags:
 不過想當然爾，安裝過程中怎麼可能不出包 XDDD 當我按下後立刻跳出錯誤訊息：
 > Checking for a new Ubuntu release Please install all available updates for your release before upgrading
 
-<br>
+<p class="paragraph-spacing"></p>
 
 它告訴必須把所有的更新先做完才可以，只好回頭處理剛剛的錯誤訊息：
 
@@ -67,7 +67,7 @@ tags:
 處理時發生錯誤：/var/cache/apt/archives/docker.io_20.10.7-0ubuntu1~18.04.1_amd64.deb
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 我還以為是安裝檔損壞了，所以先嘗試刪除損壞的安裝檔後，重新更新系統：
 ```bash
@@ -75,7 +75,7 @@ $ sudo dpkg --remove --force-remove-reinstreq docker.io_20.10.7-0ubuntu1~18.04.1
 $ sudo apt-get update
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過依舊跳出錯誤訊息，但細細研究錯誤訊息發現解法就寫在第一行了，不過我忘了複製訊息，大意是某個資料夾在 20 時不再使用，請確認無容器在使用後將它刪除，所以直接照做即可，最後更新後直接升級，大約等 2~3 小時，就可以享受 Ubuntu 20.04 了！ :+1:
 
@@ -89,7 +89,7 @@ $ sudo apt-get update
 5. flydream0 (2013-02-28)。[apt-get指令的autoclean,clean,autoremove的区别](https://blog.csdn.net/flydream0/article/details/8620396)。檢自 放飞梦想，成就未来｜CSDN博客 (2021-09-04)。
 6. Ubuntu問答 (2020-06-26)。[apt – 如何刪除Ubuntu中損壞的軟件包](https://ubuntuqa.com/zh-tw/article/10754.html)。檢自 Ubuntu問答 (2021-09-04)。
 
-<br><br>  
+
 
 ## 更新紀錄
 <details class="update_stamp">

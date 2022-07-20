@@ -45,7 +45,9 @@ var newExtends = Vue.extend({
 },
 ```
 
-<br> 在子類別中，去繼承並客製化所需求的部分：
+<p class="paragraph-spacing"></p> 
+
+在子類別中，去繼承並客製化所需求的部分：
 
 ```javascript
 var childOne = {
@@ -65,11 +67,11 @@ var childTwo = {
 }
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 就我自己理解當使用 Extend 擴充父類別時，Object 會被繼承，（如：mounted，computed）。若在子類別的 Object 中宣告與父類別相同名稱的 <mark>變數</mark> 或 <mark>函式</mark> 名稱，則會 Override 父類別的。是說不曉得有 super 可以用？
 
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="alert info">
 <div class="head">2019.05.10 補充</div>
@@ -81,7 +83,9 @@ var childTwo = {
 ## Filter 自訂畫面資料呈現格式
 Vue.js 還有提供 Filter（過濾器）的功能，主要用於處理格式化文字等狀況。filter 可重複使用，一個值可以套用多個 filter。
 
-<br> filter 一樣可以分為 <mark>全域</mark> 與 <mark>局部</mark>，全域的宣告是在外層使用 <mark>Vue.filter</mark>
+<p class="paragraph-spacing"></p> 
+
+filter 一樣可以分為 <mark>全域</mark> 與 <mark>局部</mark>，全域的宣告是在外層使用 <mark>Vue.filter</mark>
 
 ```javascript
 Vue.filter(filterName,function(n){
@@ -89,7 +93,9 @@ Vue.filter(filterName,function(n){
 })
 ```
 
-<br> 而局部宣告是在元件中加入 <mark>filters</mark> 的物件
+<p class="paragraph-spacing"></p> 
+
+而局部宣告是在元件中加入 <mark>filters</mark> 的物件
 ```javascript
 var child = {
    data:function() {
@@ -105,7 +111,7 @@ var child = {
 }
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 如要使用 filter 過濾器，則在 Mustache 中在變數後方使用 <mark>「|」（pipe）</mark>符號聯集多個 filter，執行時由左向右執行，它會將 pipe 符號左方的結果當作參數傳數入右方的 filter ，所以在撰寫 filter function 時記得宣告參數。
 
@@ -140,7 +146,9 @@ filters: {
     <img src="https://i.imgur.com/vrR6i8A.png">
 </p>
 
-<br> 未被綁定在 DOM 的資料，雖然 log 或 tool 上看到的資料內容可能正確，但並不會觸發 UI 的更新。
+<p class="paragraph-spacing"></p> 
+
+未被綁定在 DOM 的資料，雖然 log 或 tool 上看到的資料內容可能正確，但並不會觸發 UI 的更新。
 
 不過 get 與 set 似乎只有物件才有，其他變數型態如 String、boolean 並沒有，似乎沒有其他方式可以觀察。...不過好像也不用觀察...直接看有沒有在 data 裡面就好了 XD
 
@@ -152,7 +160,9 @@ filters: {
 ```javascript
 mixins:[object1, object2]
 ```
-<br> 完整程式碼如下：
+<p class="paragraph-spacing"></p> 
+
+完整程式碼如下：
 
 ```javascript
 // 用物件將元件的功能寫好
@@ -210,10 +220,12 @@ Vue.directive('focus', {
 </script>
 ```
  
- <br> 通常 function 常用的參數有
- - el：指令所绑定的元素，可以用来直接操作 HTML
- - binding：directive 所自帶的一些屬性  
- - vnode：Vue 的虛擬節點 
+<p class="paragraph-spacing"></p> 
+
+通常 function 常用的參數有
+- el：指令所绑定的元素，可以用来直接操作 HTML
+- binding：directive 所自帶的一些屬性  
+- vnode：Vue 的虛擬節點 
 
 這邊需要搭配 console.log 印出 this，才會比較清楚要對這些參數下的哪些元素做操作。
 

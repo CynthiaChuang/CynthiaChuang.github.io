@@ -16,7 +16,7 @@ A P L S I I G
 Y   I   R
 ```
 And then read line by line:  `"PAHNAPLSIIGYIR"`
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 Write the code that will take a string and make this conversion given a number of rows:
 ```
@@ -40,7 +40,7 @@ A   L S  I G
 Y A   H R
 P     I
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:** `String`
 
@@ -59,7 +59,7 @@ row2:  2  6  10   14   18   22
 row3:  3 5   11 13     19 21
 row4:  4     12        20 
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 取出各個 row ，直行的部分，會發現它們都是等差數列，其差值可表示為 $2\ast(n-1)$
 ```
@@ -69,7 +69,7 @@ row2:  2, 10, 18
 row3:  3, 11, 19
 row4:  4, 12, 20 
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 另外可以發現，除了第一列與最後一列（row = 0 與 n-1）外，其他列在兩個直行之間會在多輸出一個字元，將這個字元與前一個字元合併用 pair 表示，每一個 pair 都是一個等差，其差值可表示為 $2\ast(n-1-i)$，其中 $i = 1, ... n-2$。
 ```
@@ -77,10 +77,10 @@ row1:  (1,7), (9,15),  (17,23)
 row2:  (2,6), (10,14), (18,22)
 row3:  (3,5), (11,13), (19,21)
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 此外，需要稍微注意一下corner case，為了簡單起見，我將 numRows 小於等於 1，以及 numRows 大於等於 s 的長度的 case，做了特別判斷，直接將輸入的 s 回傳回去。
-<br>
+<p class="paragraph-spacing"></p>
 
 ```python
 class Solution:

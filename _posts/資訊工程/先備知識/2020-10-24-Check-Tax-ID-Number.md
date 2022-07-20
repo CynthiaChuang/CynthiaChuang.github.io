@@ -48,7 +48,7 @@ $$
 s_i = t_i + d_i，\text{ where }  0 \le i \le 7 \text{ and } 0 \le s_i < 10
 $$
  
-<br>
+<p class="paragraph-spacing"></p>
 
 最後新的 8 碼數字總和若為 **10 的倍數**，即為有效的驗證碼。
 
@@ -76,7 +76,7 @@ $$
 s_6 = t_6 + d_6 = 2 + 8 = 10
 $$
 
-<br>
+<p class="paragraph-spacing"></p>
 
 當遇到這情況時，會採用一個折衷的方法，將 $10$ 的兩個位數分別當成：
 
@@ -84,7 +84,7 @@ $$
 s_6 = 1, s_6' = 0
 $$
 
-<br>
+<p class="paragraph-spacing"></p>
 
 把這兩個數分別計算總和，得到 $Sum$ 與 $Sum'$ ：
 
@@ -93,7 +93,7 @@ Sum = \sum_{i=0}^{7}s_i \text{ , }
 Sum' = \sum_{i=0, i \not = 6}^{7}s_i + s_6'
 $$
 
-<br>
+<p class="paragraph-spacing"></p>
 
 若其中一個和為 **10 的倍數**，即為有效的驗證碼。
 
@@ -115,7 +115,7 @@ $$
 ^\d{8}$
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 至於其他的驗證只能靠程式了，regexp 派不上用場，對了這次是 C++。偷個懶直接把 checkNumber 拉成變數並設置為 5，就自己視需求要用 10 或 5。
 ```cpp

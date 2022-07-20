@@ -10,7 +10,7 @@ tags:
 
 今天開發的時候踩的一個坑，發現我的一個 flag 每次都是 true，後來才發現我掉的 `bool()` 的陷阱了 :crying_cat_face: 
 <!--more-->
-<br> 
+<p class="paragraph-spacing"></p> 
 
 情境是這樣的我們用了一個全域變數給使用者傳值，當它使用 multi gpu 時傳入 `1` 否則傳入 `0` ，用來作為判斷是否進行分散式訓練的前處理，按這個邏輯交出了這樣的程式碼：
 
@@ -20,7 +20,9 @@ import os
 IS_MULTI_GPU = bool(os.environ.get("IS_MULTI_GPU",0))
 ```
 
-<br> 但卻發現我這個 flag 每次都是 true，導致 flag 有設跟沒設是一樣 :expressionless:
+<p class="paragraph-spacing"></p> 
+
+但卻發現我這個 flag 每次都是 true，導致 flag 有設跟沒設是一樣 :expressionless:
 
 
 
@@ -35,10 +37,11 @@ bool(1)
 >>> True
 ```
 
-<br>但回頭去查文件發現 <mark>bool 其實是 int 的子類別</mark>。看到這句話，我大概知道我的判斷式哪邊出錯了，`os.environ.get` 取回來的是<mark>字串</mark>，而不是整數...
+<p class="paragraph-spacing"></p>
 
+但回頭去查文件發現 <mark>bool 其實是 int 的子類別</mark>。看到這句話，我大概知道我的判斷式哪邊出錯了，`os.environ.get` 取回來的是<mark>字串</mark>，而不是整數...
 
-<br>果然細看可以發現 `bool（）` 只有在下列情況回傳 false 而已，其他狀況都是回傳 true：
+果然細看可以發現 `bool（）` 只有在下列情況回傳 false 而已，其他狀況都是回傳 true：
 
 1. 傳入 False 值。
 2. 傳入 None。
@@ -46,7 +49,7 @@ bool(1)
 4. 傳入數字 0 ，資料型態為整數或浮點數都算。
 5. 傳入物件類別具有 `__bool __` 或 `__len（）__`，且其回傳值為 `False` 或 `0`。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 ```python
 ## case 1 : 傳入 False 值
@@ -100,7 +103,7 @@ bool(Test())
 >>> False
 ```
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 而按照這規則 `os.environ.get` 取回來的是非空字串，所以這個 flag 每次都是 true...。既然知道哪邊出問題了，就好修正了...
 
@@ -109,7 +112,9 @@ import os
 
 IS_MULTI_GPU = os.environ.get("MULTI_GPU", 0) == "1"
 ```
-<br> 最後嚴格要求當輸入為字串 `1` 時，才會啟動這個 flag。
+<p class="paragraph-spacing"></p> 
+
+最後嚴格要求當輸入為字串 `1` 時，才會啟動這個 flag。
 
 
 

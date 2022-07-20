@@ -15,7 +15,7 @@ tags:
 人家是衣食父母也不好不甩人家，只好先擱置手邊的工作啦...
 <!--more-->
 
-<br>
+<p class="paragraph-spacing"></p>
 
 此時，有幾個方式可以保留手邊的工作進度。
 
@@ -48,7 +48,7 @@ $ git stash
 Saved working directory and index state WIP on master: 3a9842d
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 若是你的此次修改有新增加檔案，或是存在 <mark>untracked</mark> 狀態的檔案，則應該在指令後 `-u` 指定包含untracked 狀態的檔案：
 
@@ -56,7 +56,7 @@ Saved working directory and index state WIP on master: 3a9842d
 $ git stash -u 
 ```
 
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 我在網路上找資料的時候，發現有三個指令，`git stash` / `git stash push` / `git stash save`，都可以達到相同的目的。
 
@@ -76,7 +76,7 @@ $ git stash list
 stash@{0}: WIP on master: 3a9842d 
 stash@{1}: WIP on master: 3a9842d  
 ```
-<br> 
+<p class="paragraph-spacing"></p> 
 
 像這樣表示暫存區存在兩個暫存的工作，我們可以使用 `show -p` 來查看指定工作的 diff：
 ```shell
@@ -89,7 +89,7 @@ $ git stash show -p stash@{0}
 ```shell
 $ git stash pop stash@{0}
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 若是某個暫存的工作進度確定不要，則可以使用 `drop` 來丟棄：
 ```shell

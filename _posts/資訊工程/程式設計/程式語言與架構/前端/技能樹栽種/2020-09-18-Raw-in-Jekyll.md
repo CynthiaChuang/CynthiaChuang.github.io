@@ -32,7 +32,7 @@ tags:
 ```
 {% endraw %}
 
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="blockquote-center">Liquid 的問題需要用 Liquid 來解</div>
 

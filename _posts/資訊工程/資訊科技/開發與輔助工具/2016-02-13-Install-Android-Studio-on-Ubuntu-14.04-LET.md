@@ -33,7 +33,9 @@ $ sudo apt-get update
 $ sudo apt-get install oracle-java8-installer oracle-java8-set-default;
 ```
 
-<br>安裝完成後，檢查是否有安裝成功，若一切順利，會看到 JDK 的版號會是 8
+<p class="paragraph-spacing"></p>
+
+安裝完成後，檢查是否有安裝成功，若一切順利，會看到 JDK 的版號會是 8
 ```shell
 $ java  -version
 ```

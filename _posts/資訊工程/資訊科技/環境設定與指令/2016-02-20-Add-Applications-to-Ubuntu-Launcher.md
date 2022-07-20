@@ -23,7 +23,7 @@ tags:
 $ cd  /usr/share/applications
 ```
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 反之，若只希望單一使用者使用，則路徑切換到：
 ```shell
@@ -38,7 +38,7 @@ $ cd  ~/.local/share/applicationss
 ```shell
 $ sudo vim web-strom.desktop
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 檔案內容如下：
 ```
@@ -52,7 +52,7 @@ Exec=/opt/webStorm/WebStorm-191.6183.63/bin/webstorm.sh
 Icon=/opt/webStorm/WebStorm-191.6183.63/bin/webstorm.png
 Categories=Development;IDE
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 其中
 

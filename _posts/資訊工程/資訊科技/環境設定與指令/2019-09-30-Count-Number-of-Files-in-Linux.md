@@ -19,16 +19,19 @@ tags:
 $ find ./ -type f | wc -l
 ```
 
-<br> 若只想計算某特定副檔名的檔案數，則加上 `-name`
+<p class="paragraph-spacing"></p> 
+
+若只想計算某特定副檔名的檔案數，則加上 `-name`
 
 ```shell
 $ find ./ -type f -name *.py | wc -l
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 其中 `find ./ -type f` 是指找到此目錄下的所有一般文件。
-<br> 而 `wc` 指令則是用於計算文件的 byte 數、字數或列數，`-l` 就是指定輸出列數。由於我們未指定文件名稱，所以指令會從輸入設備，也就是前一個指令的輸出結果，讀取數據。
+
+而 `wc` 指令則是用於計算文件的 byte 數、字數或列數，`-l` 就是指定輸出列數。由於我們未指定文件名稱，所以指令會從輸入設備，也就是前一個指令的輸出結果，讀取數據。
 
 
 
@@ -39,14 +42,13 @@ $ find ./ -type f -name *.py | wc -l
 $ ls -lR | grep "^-" | wc -l
 ```
 
+<p class="paragraph-spacing"></p> 
 
-<br> 計算某特定副檔名，則在 `ls` 指令後加上
+計算某特定副檔名，則在 `ls` 指令後加上
 
 ```shell
 $ ls -lR *.py | grep "^-" | wc -l
 ```
-
-<br>
 
 其中 `ls -l` 就是列出詳細資料，而 `-R` 則是表明，若目錄下有仍有文件，則以下的文皆依序列出。在使用 `ls -l` 時，資訊的展示方式如下，可看到首碼若為 `d` 表目錄、為 `-` 則是文件：
 ```
@@ -54,7 +56,9 @@ drwxr-xr-x  8 Cynthia_Chuang cynthia-chuang 4096 12月 31 16:16 .git/
 -rw-r--r--  1 Cynthia_Chuang cynthia-chuang 1315 12月  9 09:49 .gitignore
 ```
 
-<br> 在 `grep "^-"` 中後面的字串是 [Regular Expression](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions#special-caret)，是在宣告開頭字元匹配要 `-`，換句話說就是要濾出檔案。反之若是想計算有幾個資料夾，則下
+<p class="paragraph-spacing"></p> 
+
+在 `grep "^-"` 中後面的字串是 [Regular Expression](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions#special-caret)，是在宣告開頭字元匹配要 `-`，換句話說就是要濾出檔案。反之若是想計算有幾個資料夾，則下
 
 ```shell
 $ ls -lR | grep "^-d" | wc -l
@@ -69,7 +73,9 @@ $ ls -lR | grep "^-d" | wc -l
 $ ls -l | grep "^-" | wc -l
 ```
 
-<br> 想知道檔案+目錄有多少個
+<p class="paragraph-spacing"></p> 
+
+想知道檔案+目錄有多少個
 ```shell
 $ ls -l | grep "^[-d]" | wc -l
 ```

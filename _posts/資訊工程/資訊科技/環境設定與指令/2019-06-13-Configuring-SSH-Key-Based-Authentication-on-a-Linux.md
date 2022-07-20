@@ -35,7 +35,7 @@ $ chmod 700 ~/.ssh
 ```bash
 $ ssh-keygen
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 在產生金鑰的過程中，會詢問一些問題，如果沒有特殊需求可以全部使用預設值（按 Enter）就好：
 
@@ -51,7 +51,7 @@ $ ssh-keygen
 第 2 跟 3 個問題則是指定金鑰保護密碼。若有設定密碼的話，之後每次使用這把金鑰時就要輸入密碼，因此請務必牢記密碼。別像我一樣，我有一次設完密碼後，數個月沒登入就忘記密碼了，只好在重新產生一把金鑰惹...
 (っ╥╯﹏╰╥c)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 最後看到 fingerprint 與 randomart ，就代表產生成功了。
 ```bash
@@ -75,24 +75,24 @@ The key's randomart image is:
 1. **公開金鑰（Public Key）**：這把是對外公開的金鑰，之後把它<mark>上傳到伺服器上使用</mark>。
 2. **私密金鑰（Private Key）**：這把則是<mark>放在自己電腦</mark>的金鑰，它等同於你的密碼，請務必保護好。此外，私鑰在使用時，權限僅能是 `400`、 `600` 或 `700`，否則會出現下列的錯誤訊息：
     
-    > Permissions for {{filename}}  are too open.<br>
-    > It is required that your private key files are NOT accessible by others.<br>
+    > Permissions for {{filename}}  are too open.  
+    > It is required that your private key files are NOT accessible by others.   
     > This private key will be ignored.
 
-<br>
+<p class="paragraph-spacing"></p>
 
 上傳金鑰的方法有幾種，個人偏好第 1 種與第 2 種，因為一條指令就搞定了：
 
 ```bash
 $ ssh user@host 'mkdir -p ~/.ssh; cat >> ~/.ssh/authorized_keys' <  /home/username/.ssh/tn_key.pub
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 也可以用 `ssh-copy-id` ，指令最短：
 ```bash
 $ ssh-copy-id -i ~/.ssh/tn_key.pub user@host
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 真的不想記指令的話，就把金鑰傳上去，在寫過去 `authorized_keys` 。不過說真的這條就是把第 1 種上傳方式拆開下而已：
 ```bash
@@ -101,7 +101,7 @@ $ ssh user@host
 $ cat .ssh/tn_key.pub >> .ssh/authorized_keys
 ```
  
-<br> 
+<p class="paragraph-spacing"></p> 
 
 最懶的大概是直接複製貼上！？
 ```bash
@@ -124,7 +124,7 @@ PubkeyAuthentication yes
 ```bash
 $ systemctl restart sshd
 ```
-<br> 
+<p class="paragraph-spacing"></p> 
 
 是說我有點好奇，如果把 PasswordAuthentication 跟 PubkeyAuthentication 同時設成 no 會出現什麼狀況？但我慫（台語），而且機台在遠端，所以沒敢嘗試，要是搞壞就真的 GG 了  (つ﹏⊂)
 

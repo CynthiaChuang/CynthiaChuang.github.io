@@ -23,7 +23,7 @@ tags:
 ## 所有的操作記錄都保留下來
 求救文在下方的留言中，有一位[米一粒](https://www.facebook.com/groups/1403852566495675/permalink/2823371291210455/?comment_id=2823410504539867)的留言，他說當你製作提交紀錄時，就已經讓紀錄進入版本管控中，而 Push 這動作只是將紀錄推送遠端數據庫而已。因此，只要有提交過紀錄、產生過 Hash，就有機會藉由這筆 Hash 拿回這筆紀錄？
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過問題來了，我都把 commit 給丟了，我要怎查詢 commit 的 Hash code？這時可以用 `git reflog` 指令，來顯示每個指令的 SHA-1 值：
 ```bash
@@ -35,7 +35,7 @@ fc22a64 (HEAD -> master) HEAD@{3}: commit: commit2
 807e915 HEAD@{4}: commit (initial): commit1
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 從紀錄看來，依序製作了三個 commit，接下來下了 `rebase` 指令，最後把 HEAD 移動到了 commit2 的位置，也就是我把 commit3 給丟了。好了，重點是第四行，那邊有被刪除的 commit3 的 Hash code！
 
@@ -49,7 +49,7 @@ $ git reset 45f3987 --hard
 HEAD is now at 45f3987 commit3
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 再用 `git reflog` 看看目前 HEAD　的狀況：
 

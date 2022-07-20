@@ -20,7 +20,7 @@ tags:
 5. 刪除項目補充說明 
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 先來看看成品長怎樣
 
@@ -36,34 +36,36 @@ tags:
 1. **新增變數與函式**  
     - newTask：字串，用於儲存輸入框文字 
 	- todoList：陣列，記錄代辦事項，裡面為 key / value ，包含 id、taskName 與完成狀況（completed） 
-	- addToList：methods function，當點擊新增按鈕時，會被觸發的函式。 <br>
+	- addToList：methods function，當點擊新增按鈕時，會被觸發的函式。 
+
+    <p class="paragraph-spacing"></p>
 
 2. **輸入框與變數雙向綁定**  
-將變數 `newTodo` 使用 **v-model** 與 `input` 建立雙向綁定。
+    將變數 `newTodo` 使用 **v-model** 與 `input` 建立雙向綁定。
 
 3. **按鈕點擊事件與函式綁定**  
-將 `addToList` 與 `button` 使用 **v-on:click** / **@click** 進行綁定。
+    將 `addToList` 與 `button` 使用 **v-on:click** / **@click** 進行綁定。
 
 4. **將 todoList 顯示在 UI 上**  
-這邊打算用 label 來顯示文字，且因每筆代辦事項之前，想會加入一個核選方塊，因此使用一個區塊標籤 div，包覆住 label 與 checkbox，並在區塊標籤上使用 **v-for='item in todoList'** 進行綁定。
+    這邊打算用 label 來顯示文字，且因每筆代辦事項之前，想會加入一個核選方塊，因此使用一個區塊標籤 div，包覆住 label 與 checkbox，並在區塊標籤上使用 **v-for='item in todoList'** 進行綁定。
 
 5. **將每筆代辦事項的 label 和 checkbox 綁定**  
-將所取出的 item 的 id 與 checkbox 和 label 的 id 屬性使用 **v-bind** 進行綁定。
+    將所取出的 item 的 id 與 checkbox 和 label 的 id 屬性使用 **v-bind** 進行綁定。
 
 6. **將 checkbox 狀態與 item 的完成狀況進行綁定**  
-將 item.completed 與 checkbox 使用 **v-model** 建立雙向綁定。
+    將 item.completed 與 checkbox 使用 **v-model** 建立雙向綁定。
 
 7. **將事件內容顯示在 UI 上**  
-將 item.taskName 使用 Mustache 語法包覆在 label 中顯示於 UI 上。
+    將 item.taskName 使用 Mustache 語法包覆在 label 中顯示於 UI 上。
 
 8. **實做 addToList 函式**  
-取 timestamp 做為 item 的 id，並將 newTask 視為 taskName，預設完成狀況為 false，包成一筆 Object 後，使用 `array.push` 將新 Object 加入陣列尾端，最後記得清空輸入欄。
+    取 timestamp 做為 item 的 id，並將 newTask 視為 taskName，預設完成狀況為 false，包成一筆 Object 後，使用 `array.push` 將新 Object 加入陣列尾端，最後記得清空輸入欄。
 
 9. **支援 enter 新增**  
-順便為輸入欄加上 ``@keyup.enter="addToList"`` ，讓輸入欄可以支援按 enter 提交。
+    順便為輸入欄加上 ``@keyup.enter="addToList"`` ，讓輸入欄可以支援按 enter 提交。
 
 10. **避免加入空的任務**  
-建議可以針對輸入的內容去刪除前後的空格，並判斷是否為空字串，避免加入空字串。
+    建議可以針對輸入的內容去刪除前後的空格，並判斷是否為空字串，避免加入空字串。
 
 
 
@@ -90,7 +92,7 @@ tags:
 ### 頁簽功能
 頁簽功能分成兩部分來實做，一是上方頁簽切換，二是下方資料切換。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 先實做上方頁簽切換的部分
 1.  **新增變數**  
@@ -109,7 +111,7 @@ tags:
     ```
     一旦 `visibilityTab` 指向自己，`:class` 的判斷式就會為真，因此就會為該頁簽加上渲染效果。
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 下方資料切換
 1.  **動態過濾陣列內容**  
@@ -121,7 +123,8 @@ tags:
     PS. 如果為確認 `filteredList` 與 v-for 的搭配是否正常運作，可以在 `filteredList` 中直接回傳 `todoList` 做為測試。 
 
 3. **實作 filteredList 函數**  
-    依照 `visibilityTab` 的內容回傳不同的過濾結果。實作如下，課程影片中老師是用 forEach 的方式，不過個人偏好 filter XD：<br>
+    依照 `visibilityTab` 的內容回傳不同的過濾結果。實作如下，課程影片中老師是用 forEach 的方式，不過個人偏好 filter XD：
+    
     ```javascript
     filteredList: function(){
       if (this.visibility == "allItem"){
@@ -182,7 +185,7 @@ tags:
 
 如果直接刪除所傳入 index 會出現誤刪的情況，因此改利用傳入 id 反查該筆資料在原始陣列中正確的位置，然後在進行刪除。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 課程中在實做時方法有二，一是使用 **array.forEach** ，當遇到 id 同時就記錄下目前的 index，最後在刪除所記錄下的 index：
 ```javascript
@@ -197,7 +200,7 @@ removeItem: function(item){
 },
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過個人更偏好第二種方法：
 ```javascript

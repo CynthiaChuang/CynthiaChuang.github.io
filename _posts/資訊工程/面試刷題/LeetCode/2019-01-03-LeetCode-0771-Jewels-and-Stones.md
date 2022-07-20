@@ -13,7 +13,7 @@ You're given strings  J  representing the types of stones that are jewels, and  
 The letters in  J  are guaranteed distinct, and all characters in  J  and  S  are letters. Letters are case sensitive, so  "a"  is considered a different type of stone from  "A".
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 **Example 1:**
 ```python
@@ -27,13 +27,13 @@ Output: 3
 Input: J = "z", S = "ZZ"
 Output: 0
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 > **Note:**
 > -   `S`  and  `J`  will consist of letters and have length at most 50.
 > -   The characters in  `J`  are distinct.
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:**`Hash Table`
 
@@ -42,7 +42,7 @@ Output: 0
 ## 解題邏輯與實作
 還滿簡單的一題，連想都不太需要想。題目翻譯成白話文是這樣的，給定兩個字串 J 與 S，檢查字串 S 中有多少字元屬於字串 J。不用管它寶石還石頭啦 XD
 
-<br>
+<p class="paragraph-spacing"></p>
 
 這題用暴力法逐一搜索就好了，為了改善時間複雜度，我將 J 放入 HashSet 中
 ```python
@@ -53,7 +53,7 @@ class Solution:
       return len(counter)
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 程式碼可以進一使用 map 來化簡 
 ```python

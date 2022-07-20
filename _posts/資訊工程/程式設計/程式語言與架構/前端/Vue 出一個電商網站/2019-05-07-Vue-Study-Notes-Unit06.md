@@ -56,7 +56,7 @@ Vue.component('row-comp', {
       </tr>
 }	`
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 若是 template 中的語法太過複雜，會使用 x-template 的方式來改善程式的可讀性。 
 
@@ -76,7 +76,7 @@ Vue.component('row-comp', {
    emplate: '#rowCompTemp'
 })
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 其中，component 裡的 props 是提供給父元件傳值給子元件使用。完整 component 使用如下：
 
@@ -92,7 +92,7 @@ Vue.component('row-comp', {
    </table>
 </div>
 ```
-<br> 
+<p class="paragraph-spacing"></p> 
 
 不過在使用時 component 需要特別注意 HTML 的結構。
 
@@ -101,7 +101,7 @@ Vue.component('row-comp', {
 以上例來說，**\<tbody\>** 的標籤中正常來說只能放 **\<tr\>**，如果放了自製的 **\<row-comp\>**，會被視作無效的內容提升到外部，並導致最終渲染結果出錯。
 
 <mark>簡單來說就是資料顯示的出來，但 UI 卻會不合預期。</mark>
-<br> 
+<p class="paragraph-spacing"></p> 
 
 這種情況可以使用 Vue 的 **[is](https://cn.vuejs.org/v2/api/#is)** 來動態切換模板。在一開始載入 HTML 模板會正確，但在開始運行以後才動態的方式使用該屬性的標籤替換成指定的 component 。
 
@@ -122,7 +122,7 @@ Vue.component('row-comp', {
 ```javascript
 Vue.component(tagName, options)
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 若要限定 component 在某個 Vue app 下才使用，應使用 <mark>局部註冊（Local Registration）</mark>：
 
@@ -175,11 +175,11 @@ props 為<mark>父元件向子元件</mark>傳遞資料的方式。在子元件�
 <script>
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 需要注意一點的是，JavaScript 中習慣是用小駝峰命名，但在 HTML 中因為 HTML 對大小寫不敏感，小駝峰式命名需要轉換成使用中線命名，如這邊的 **imgUrl**，在 HTML 中是使用 **img-url** 。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 傳遞資料的方式又可分成兩種：**靜態傳遞**、**動態傳遞**。
  - **靜態傳遞**：就是直接傳入字串。
@@ -221,10 +221,14 @@ props: {
    }
 }
 ```
-<br> 為 props 定義資料型別，可以避免傳入錯誤的資料內容...至少傳錯會跳 Warnning ！？
+<p class="paragraph-spacing"></p> 
+
+為 props 定義資料型別，可以避免傳入錯誤的資料內容...至少傳錯會跳 Warnning ！？
 > [Vue warn]: Invalid prop: type check failed for prop "cash". Expected Number, got String.
 
-<br> 另外需注意的是，使用靜態屬性傳入時，所傳入的一定會是**字串**，若是使用動態屬性，則
+<p class="paragraph-spacing"></p> 
+
+另外需注意的是，使用靜態屬性傳入時，所傳入的一定會是**字串**，若是使用動態屬性，則
 - 傳入變數：傳入資料的型態依照變數而定。
 - 傳入值：若是直接 hard code 值，傳入轉成宣告的型態，如果轉得過去的話...如果轉不過去，它就會傳入系統所判定的型態，然後...再丟 Warnning 給你。
  
@@ -277,7 +281,9 @@ props: {
 ```
 {% endraw %}
 
-<br> 實作步驟如下：
+<p class="paragraph-spacing"></p> 
+
+實作步驟如下：
 
 1. **實作父元件函式**  
     先在父元件中定義一個名為 incrementTotal 的 method，incrementTotal 所執行的動作就是 this.cash 做累加。
@@ -299,7 +305,7 @@ props: {
        this.$emit("increment")
     }
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
     若有需要做參數傳遞，則 
 
     ```javascript
@@ -351,8 +357,10 @@ component 的 template 中設置的預設內容，只有在子元件標籤內沒
    <slot name="footer">這是預設的 Footer</slot>  
 </script>
 ```
-<br> 備註：一個不帶 **name** 的 **\<slot\>**，其 name 的預設值為 default。
-<br>
+<p class="paragraph-spacing"></p> 
+
+備註：一個不帶 **name** 的 **\<slot\>**，其 name 的預設值為 default。
+<p class="paragraph-spacing"></p>
 
 > 在2.6.0中，Vue 為具名插槽和作用域插槽引入了一個新的統一的語法（即 v-slot 指令）。它取代了slot 和slot-scope 這兩個目前已被廢棄但未被移除且仍在文檔中的特性。 
 
@@ -375,12 +383,12 @@ component 的 template 中設置的預設內容，只有在子元件標籤內沒
 1. [x] props  
 2. [ ] emit  
 3. [ ] on  
-<br>
+<p class="paragraph-spacing"></p>
 
 **問題 2： Vue 的元件中，外部資料要傳入到內層的字串、數值，內層可以再次修改它？**  
 1. [ ] 對，它都傳進來了，怎麼做都可以。  
 2. [x] 不對，這樣會有錯誤提示。  
-<br>
+<p class="paragraph-spacing"></p>
 
 **問題 3：Vue 的元件中，資料建構需額外使用 function return 的方式？**  
 ```javascript
@@ -390,13 +398,13 @@ return {}
 ```
 1. [x] 對。  
 2. [ ] 錯，沒有那個必要。  
-<br>
+<p class="paragraph-spacing"></p>
 
 **問題 4：Vue 的元件，如果外層有使用 keep-alive 包起來，在 created 生命週期加上 Ajax 則？**
 1. [ ] 每次切換元件時，資料都會重新載入。  
 2. [x] 只有第一次會載入資料，重新切換則會維持就有狀態。  
 3. [ ] 元件將無法被 v-if 切換。  
-<br>
+<p class="paragraph-spacing"></p>
 
 **問題 5：內層的元件，如何傳遞數值到外層？**  
 1. [x] 內層元件使用 emit 向外做事件傳遞。  

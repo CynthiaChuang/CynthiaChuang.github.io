@@ -15,7 +15,7 @@ The digits are stored such that the most significant digit is at the head of the
 You may assume the integer does not contain any leading zero, except the number 0 itself.
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 **Example 1:**
 ```python
@@ -31,7 +31,7 @@ Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:**`Array`
 
@@ -81,7 +81,7 @@ class Solution:
 
       return [1] + digits if digits[0] == 0 else digits
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 相同想法的另一個實作，但好像也沒比較快，三個程式碼都落在 56ms~60ms 左右。
 ```python

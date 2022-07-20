@@ -13,7 +13,7 @@ Write a function to find the longest common prefix string amongst an array of st
 If there is no common prefix, return an empty string  `""`.
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 **Example 1:**
 ```
@@ -27,12 +27,12 @@ Input: ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 > **Note:**
 All given inputs are in lowercase letters  `a-z`.
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:** `String`
 
@@ -75,7 +75,7 @@ class Solution:
       return prefix
 ```
 
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 除了直接兩兩比較外，另一個想法是以第一個字串當做基準，依序取出其字元與其他字串做比較，若該字元與任一字串相同位址的字元不同時，則停止輪巡，回傳該字元之前的字串作為共同字首。
 

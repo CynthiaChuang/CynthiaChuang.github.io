@@ -60,7 +60,8 @@ tags:
 3. 視野調整
 
 不過這些修正我都沒做，有興趣的可以嘗試看看。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 另外，關於第二點的**額外的繁體中文修正檔**，他所提供的修正檔連結死掉了，如果想下載  zh0.w2strings ，可以從下面的連結
 - [The Witcher 2 Chinese Text Fixes](https://www.nexusmods.com/witcher2/mods/268/?tab=files&navtag=%2Fajax%2Fmodimages%2F%3Fuser%3D0%26id%3D268)

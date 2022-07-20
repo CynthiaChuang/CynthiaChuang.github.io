@@ -36,7 +36,7 @@ img = cv2.imread(filepath)
 函數從指定的記憶體快取中讀取數據，並把數據解碼成圖像格式；主要用於從網路傳輸數據中恢復出圖像。
 </div>
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 看到<mark>網路傳輸數據</mark>眼睛就亮起來了有沒有！當下就決定把 `cv.imread` 換成 `cv2.imdecod`，並搭配 `numpy` 的`fromstring` 使用字串來建立一個矩陣，完整程式碼如下：
 
@@ -55,7 +55,7 @@ img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 Value passed to parameter input has DataType uint8 not in list of allowed values: float16, float32
 </div>
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 所以我又在最後加了行型態轉換：
 
@@ -66,7 +66,7 @@ img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 img = img.astype("float32")
 ```
 
-<br><br>
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
 
 <div class="alert danger"> 
 <div class="head">關於 IO 錯誤描述</div>

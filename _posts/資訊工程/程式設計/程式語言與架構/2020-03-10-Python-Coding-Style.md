@@ -53,7 +53,9 @@ self.train_batches = datagen.flow_from_directory(
 
 ```
 
-<br> 如果是遇到計算式需要換行，則在運算子之前換行
+<p class="paragraph-spacing"></p> 
+
+如果是遇到計算式需要換行，則在運算子之前換行
 ```python
 income = (gross_wages
           + taxable_interest
@@ -76,7 +78,9 @@ import sys
 from subprocess import Popen, PIPE
 ```
  
-<br> 另外 guideline 建議 <mark>import 要分群</mark>，每群之間使一行空白分隔，分群規則則按照：
+<p class="paragraph-spacing"></p> 
+
+另外 guideline 建議 <mark>import 要分群</mark>，每群之間使一行空白分隔，分群規則則按照：
 - 標準函式庫
 - 第三方函式庫
 - 本地端檔案及函式庫引用
@@ -106,7 +110,9 @@ Yes: spam(1)
 No:  spam (1)
 ```
 
-<br> 參數名稱與值之間也不用留白。
+<p class="paragraph-spacing"></p> 
+
+參數名稱與值之間也不用留白。
 ```python
 Yes:
 def complex(real, imag=0.0):
@@ -130,7 +136,9 @@ def complex(real, imag:float=0.0):
 ```
 
 
-<br> 但我會在低優先權的運算子兩邊加上空白。
+<p class="paragraph-spacing"></p> 
+
+但我會在低優先權的運算子兩邊加上空白。
 ```python
 i = i + 1
 submitted += 1

@@ -54,7 +54,7 @@ tags:
     // 以下開始撰寫你的文章
     ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 出來的效果如下圖。但是我不是很喜歡這效果，原因有二：  
 1.  **陳列的資訊太多的**  
@@ -115,7 +115,8 @@ tags:
 </time>
 ```
 {% endraw %}
-<br>
+
+<p class="paragraph-spacing"></p>
 
 確認要提取的變數後，就可以開始進行修改：
 1. **移除原始程式碼**  

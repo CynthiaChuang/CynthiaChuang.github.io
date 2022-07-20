@@ -10,7 +10,7 @@ tags:
 
 Given a string containing just the characters  `'('`  and  `')'`, find the length of the longest valid (well-formed) parentheses substring.
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 **Example 1:**
 ```python
@@ -24,7 +24,7 @@ Input: "`)()())`"
 Output: 4
 Explanation: The longest valid parentheses substring is `"()()"`
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:**`String`、`Stack`、`Dynamic Programming`
 

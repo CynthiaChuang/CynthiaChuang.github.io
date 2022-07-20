@@ -38,10 +38,10 @@ tags:
 - [公式對齊](#公式對齊)
 - [參考資料](#參考資料)
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
-> **Warning**<br>
-> 下列指令前後應該皆用 **\$\$** 包圍，告訴編譯器這邊是應該用 mathjax 來渲染。<br>
+> **Warning**  
+> 下列指令前後應該皆用 **\$\$** 包圍，告訴編譯器這邊是應該用 mathjax 來渲染。   
 >  `$$ 指令 $$`
 
 
@@ -196,7 +196,7 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\Pi$|\Pi||$\Sigma$|\Sigma||$\Upsilon$|\Upsilon||$\Phi$|\Phi|
 |$\Psi$|\Psi||$\Omega$|\Omega|
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **小寫字母**  
 

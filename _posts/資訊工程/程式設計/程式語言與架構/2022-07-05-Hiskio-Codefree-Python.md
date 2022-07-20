@@ -14,7 +14,6 @@ tags:
 又是喝咖啡學程式系列，這次是學 Python。筆記內容包括[基礎](https://codefree.hiskio.com/courses/27)與[進階](https://codefree.hiskio.com/courses/28)兩堂課。
 
 <!--more-->
-<br>
 
 <p class="illustration">
     <img src="https://i.imgur.com/ibijtxL.png" alt="hiskio codefree">
@@ -61,7 +60,7 @@ Python 設計哲學是 **「優雅」** 、 **「明確」** 、 **「簡單」*
 1. Python 的標準輸出是 `print()`
 1. 輸出內容以引號將其包圍，**雙引號或單引號皆可**，但必須<mark>成對</mark>出現。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 使用 `print()` 螢幕輸出：
 ```python
@@ -87,7 +86,7 @@ Hello World!
     ```python
     print("Hello~")
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **使用 `print()` 新增文字**  
     承上題（保留上一題的程式），請新增新的 print() 在原有的程式碼下，並輸出「Today is a good day」。
     ```bash
@@ -107,7 +106,7 @@ Python 在識別程式指令時，是由上往下逐一識別。理論上，呼�
 
 我會說理論上是因為...如果我在輸出內容插了換行符號的話，這到底算幾行？
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **多行輸出指令**
 ```python
@@ -148,7 +147,7 @@ My name is HiSKIO!
 
 等等，這邊不是 clean code 的讀書心得，先回到課程上。總之註解，好的註解可以幫助理解程式，在 Python 中，用 **一個井號 `#`** 做<mark>單行註解</mark>、用 **三個雙引號 `"`** 或 **三個單引號 `'`** 做<mark>多行註解</mark>。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **註解指令**
 
@@ -176,7 +175,7 @@ My name is HiSKIO!
     print("Nice to meet you")
     print(1)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **運用「多行註解」符號註解程式**  
     承上題，請利用多行註解方法，註解程式碼，註解內容為「前兩行程式碼」，其餘照常輸出。
         
@@ -201,7 +200,7 @@ print("Hello"
 SyntaxError: invalid syntax
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另外，錯誤訊息通常會提示錯誤在第幾行附近，甚至是哪個位置，<mark>仔細觀察訊息可以快速排除錯誤</mark>。
 ```bash
@@ -230,7 +229,7 @@ SyntaxError: invalid syntax
 name="HiSKIO"
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 在訂定變數名稱須遵守 Python 的變數命名規則：
 1. 變數首字元須為英文字母或底線字元。
@@ -255,7 +254,7 @@ name="HiSKIO"
 ### CH 2-2｜變數的輸出
 使用變數最大的好處是，當需要運用該資料時，可以直接呼叫變數名稱得到該值，毋須重複撰寫資料內容與計算。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **輸出儲存於 name 這個變數的內容**
 ```python
@@ -272,7 +271,7 @@ HiSKIO
 HiSKIO
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 若改動變數內資料，則輸出結果也會跟著變動。舉例來說將 `name` 值由 「HiSKIO」 改成 「Hi」，結果如下：
 ```python
@@ -289,7 +288,7 @@ Hi
 Hi
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
  
 引用變數時必須完全正確。若引用錯誤會被視為使用未宣告變數，因而找不到對應資料輸出，出現 **NameError** 的錯誤。
 ```python
@@ -302,7 +301,7 @@ print(nam)
 NameError: name 'nam' is not defined
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
  
 若要做資料拼接，可在輸出時使用逗號來拼接變數。
 ```python
@@ -315,7 +314,7 @@ print("My name is" , name)
 My name is Hiskio
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
  
 若使用多個逗號，在輸出時會依照順序，由左至右疊加。
 ```python
@@ -328,7 +327,7 @@ print("My name is" , name , "nice to meet you" , "!")
 My name is HiSKIO nice to meet you !
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 說到做字串拼接，如果複雜點的字串我應該會用**字串格式化**或是**字串插值**的方法，這兩個寫起來可讀性比較好，就是得注意一下 Pytnon 版號。
 ```python
@@ -368,7 +367,7 @@ Python 資料型別有以下幾種：
 2. 字串型態（String）：str, char 
 3. 容器型態（Container）：list, set, dict, tuple
 
-<br>
+<p class="paragraph-spacing"></p>
 
 其中比較常用的資料型態，如下：
 
@@ -404,7 +403,7 @@ id="" #變數id的資料值等於空，因為雙引號內無任何資料
 print(id) #輸出無任何資料
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 字串可透過加號由左至右拼接。
 ```python
@@ -417,7 +416,7 @@ print(name)
 HiSKIO!
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 教材中說到，**對於數學四則運算符號（`+ - * /`），文字只支援「加號」符號**。我想它這句話的意思，是說只有加號能支援被加數跟加數都是文字，其他的運算符號無法，會直接迸出 **TypeError**。
 
@@ -443,7 +442,7 @@ print(say3)
     color="blue"
     print(color)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **使用加號完成文字相加**     
     請設計一道程式，觀察以下執行後的結果格式，將文字相加，變數 color 與 data 分別儲存「blue」與「book」。
     
@@ -470,7 +469,7 @@ print(type(a+b))
 <class 'float'>
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 對了課程中沒提及，這些運算符號稱為 **運算子（operator）**，而用來算術計算的被特稱為 **算術運算子（arithmetic operator）** ，而常見的算術運算子除四則運算符號外，還包括取商數、取餘數跟次方三種。
 
@@ -503,7 +502,7 @@ a=a+3 #a=11
 a+=3 #a=11
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 進行除法運算時，得注意除數不得為 0。在數學上除以 0 沒有意義，但在電腦中除以 0 它會直接掛給你看：
 ```python
@@ -550,11 +549,11 @@ print("Hello~")
 IndentationError: unexpected indent
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 在課程中它是 **Tab** 來縮排，不過要注意的是 Tab 在不同的環境、不同的編輯器開啟，所呈現的效果會不同，可能會被展開成空格，有的不會，即便展開成空格也有 4 個或 8 個的長度區別。記得有一次進 code 就是因為這樣產生了 conflict。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 所以你說我是空白派的嗎？其實不算，因為我習慣按 Tab 縮排；但你說我是 Tab 派的嗎？也不算，因為我會習慣調整 IDE 讓它在按下 Tab 時插入 4 個空格。不管哪一派，反正你統一一種用就是了。
 
@@ -587,7 +586,7 @@ if(期中考數學考100分):
 ```
  
  
-<br>
+<p class="paragraph-spacing"></p>
 
 在進行條件判斷時會用到 **關係運算子（Relational operator）** 或稱 **比較運算子（Comparison operator）** 來比較兩數間的關係。
 
@@ -609,7 +608,7 @@ if(score==100):
 
 現在寫習慣了是還好，但剛開始學寫程式的時候常常把等於的運算子打成 `=`，每次都 debug 好久 XDDD
 
-<br>
+<p class="paragraph-spacing"></p>
 
 說到錯誤，這部分在撰寫時常見的錯誤不外乎是**少冒號**或**縮排錯誤**，不過這些錯誤都能從錯誤訊息得知：
 ```python
@@ -626,7 +625,7 @@ if(score==100)
 SyntaxError: invalid syntax
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 或是
 ```python
@@ -748,7 +747,7 @@ if(條件1):
 
 是說，如果你覺得巢狀多到難以閱讀，或是已經會混淆縮排的狀況，真心建議重構你的程式碼 XDDD
 
-<br>
+<p class="paragraph-spacing"></p>
 
 一樣來個傷媽媽荷包的範例：「若媽媽規定期中考數學考 100 分而且國文也考 100 分，就獎勵雞排和泡芙。」
 ```python
@@ -806,7 +805,7 @@ if(math_score==100):
 ### CH 4-6｜符號 and 與 or
 像剛剛那種簡單條件判斷，很少會把它拆成巢狀來寫，更多時候會用**邏輯運算子（Logical operators）**，來釐清所有條件之間的關係。常用的邏輯運算子有`and`、`or` 和 `not` 三種，運算的結果不是 `True` 就是 `False`。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 讓我們繼續獻祭媽媽的錢包
 - **條件皆達成**： 數學考100分 而且（and） 國文考100分 → 獎勵雞排和泡芙
@@ -818,7 +817,7 @@ elif(math_score==100 or CH chinese_score==100):
    print("獎勵雞排")
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 題外話，如果兩邊運算元都是布林值的情況下，這時 `and` 跟 `or` 會跟位元運算子的 `&` 和 `|` 等價。不過還是別這麼做會比較好，小心把自己給搞混了。
 - [Python Tips: and, or, &, ｜ 的差別](https://killer0001.blogspot.com/2018/10/python-tips-and-or.html)
@@ -851,7 +850,7 @@ elif(math_score==100 or CH chinese_score==100):
 ### CH 5-1｜迴圈介紹
 另一種常見的控制流程方法是**迴圈**，它在程式中只被撰寫一次，但可能會<mark>重複執行數次</mark>。在 Python 中實作迴圈的方式有 for 迴圈和 while 迴圈兩種。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不過實作迴圈前，這邊先來介紹迴圈控制的指令 `break` 與 `continue`：
 - **break**：打破迴圈，強制跳出**整個**迴圈。
@@ -890,7 +889,7 @@ for i in range(首項，末項，差值):
    #要重複執行的指令
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 常見的次數控制型迴圈多會搭配 `range` 來函數使用，在函數中會定義首項、末項與差值的參數：
 - **首項**  
@@ -900,7 +899,7 @@ for i in range(首項，末項，差值):
 - **差值**  
     遞增值。每一輪迴圈結束後，變數 i 會加上此差值，作為下一輪迴圈的變數值，預設為 1。因此， `range(0,5,1)` 等價於 `range(0,5)`。
 
-<br>
+<p class="paragraph-spacing"></p>
   
 實際執行結果如下：
 ```python
@@ -925,7 +924,7 @@ for i in range(0,3,1):
 2
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 在課程中提到，當迴圈的**首項一定要小於末項**。因為當首項大於末項且差值為1時，是沒有辦法執行該迴圈的，因為首項大於末項使終止恆成立，則無法進入迴圈。
  
@@ -941,7 +940,7 @@ for i in range(0,3,1):
     for i in range(1,8,2):
         print(i)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **觀察 for 迴圈程式執行結果並完成程式改寫**  
     承上題，若輸出規律變為如下，請觀察以下輸出規律，並利用 for 迴圈完成程式撰寫。
     - 每一行兩數字間有一空格，使用逗點輸出變數
@@ -975,7 +974,7 @@ for i in range(0,5,1):
 1
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另一個迴圈控制指令 `continue` 的效果如下：
 ```python
@@ -1083,7 +1082,7 @@ while(條件判斷):
    #要重複執行的指令
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 不同於 for 迴圈有一個很明顯的計數器的存在，在 while 迴圈中只要判斷條件成立，就會一直執行下去，並沒有執行次數的初始限制在；因此較適合用於<mark>不確定會執行幾次，但只要條件符合就一直執行</mark>的情況。所以在寫 while 迴圈要注意迴圈終止條件的檢查，不然真的很容易搞出無窮迴圈。
 ```python
@@ -1143,7 +1142,7 @@ while(True):
 2
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 沒有認真去看過 Python 的原始碼，不過就行為來說 `while` 後面的判斷式跟 `bool()` 的行為一樣，有興趣的可以去看看上次[踩的坑](https://cynthiachuang.github.io/Python-Bool-Function/)。`while` 只有在下列情況回傳 False 而已，其他狀況都是回傳 True：
 1. 傳入 False 值。
@@ -1284,7 +1283,7 @@ print(mylist)
 len(串列變數名稱)
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 還是剛剛的串列例子：
 ```python
@@ -1322,7 +1321,7 @@ print(len(mylist))
 
 針對最後一筆資料，除可使用 `總長度-1` 來表示外，也可以直接使用 `-1` 來讀取。
  
-<br>
+<p class="paragraph-spacing"></p>
 
 ```python
 mylist=["hi","你好","Bonjour","こんにちは",15]
@@ -1336,7 +1335,7 @@ print(mylist[-1])
 15
 ```
  
-<br>
+<p class="paragraph-spacing"></p>
 
 如果存取了超過串列長度的索引，會而引起的 **IndexError**：
 ```python
@@ -1414,7 +1413,7 @@ IndexError: list index out of range
     fruit.append("peach")
     print(fruit)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **新增資料值至串列指定位置**  
     承上題，請使用新增多筆資料值至串列後方的方法，新增新的資料「tomato」、「lemon」至串列 fruit 最後，並輸出一整個串列。
     ```bash
@@ -1428,7 +1427,7 @@ IndexError: list index out of range
     fruit.insert(0,"guava")
     print(fruit)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 - **挑戰3. 新增多筆資料值至串列後方**  
     承上題，請使用「新增多筆資料值至串列後方」的方法，新增新的資料「tomato」、「lemon」至串列fruit最後，並輸出一整個串列。
     ```bash
@@ -1474,7 +1473,7 @@ IndexError: list index out of range
     ```
  
 
-<br>
+<p class="paragraph-spacing"></p>
 
 如果指定刪除的資料不在串列時，會得到 **ValueError**： 
 ```python
@@ -1502,7 +1501,7 @@ ValueError: list.remove(x): x not in list
     del fruit[len(fruit)-1]
     print(fruit)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **刪除串列內特定資料值**    
     承上題，請刪除串列 fruit 中資料名稱為「pineapple」的資料。
     ```bash
@@ -1531,7 +1530,7 @@ ValueError: list.remove(x): x not in list
     country.extend(['Japan', 'India', 'Algeria', 'Brazil'])
     print(country)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **將「該串列長度」資料放至特定位子**  
     計算串列 country 長度，並將結果新增至串列最一開始的位子，輸出整個串列內容。
     
@@ -1545,7 +1544,7 @@ ValueError: list.remove(x): x not in list
 
     print(country)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 3. **刪除串列規定資料值**  
     刪除串列最後一個資料值，並輸出該串列。
     **答：**
@@ -1560,7 +1559,7 @@ ValueError: list.remove(x): x not in list
 
     print(country)
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 4. **修改串列資料值**  
     修改串列索引值第 0 位的資料內容，讀取第 0 位資料值後減 1，並輸出該串列。
 
@@ -1787,7 +1786,7 @@ print(sum(score))
 254
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另一種則是我們定義的函式，這可以實做我們想要的邏輯。這邊有個重要的關鍵字 `def`，用來定義即將實做的函式：
 
@@ -1937,7 +1936,7 @@ print("呼叫 countsum 函式之後的 a：",countsum(3))
     - [ ] 類別（class）和方法（method）
     - [x] 屬性（attribute）和方法（method）
     - [ ] 類別（class）和物件（object）
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **關於物件導向程式設計特色，以下何者並非為特色？**   
     - [ ] 繼承
     - [x] 屬性
@@ -1979,7 +1978,7 @@ blackcat = Cat()
     #呼叫類別
     dog = Dog()
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 2. **在創造類別（Class）時需注意名字的第一個字要特別做什麼動作？**  
     - [x] 第一個字母需大寫
     - [ ] 最後一個字母需小寫
@@ -2010,7 +2009,7 @@ print(chinese.peoplevoice) #讀取該實例的 peoplevoice 資料
 你好~
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 而方法的定義，則與前一節的 function 定義一樣：
 ```python

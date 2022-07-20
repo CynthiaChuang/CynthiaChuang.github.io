@@ -36,7 +36,7 @@ tags:
 ^[A-Z]{2}[0-9]{14}$
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 寫完了 C/C++，這次換成 Golang。
 
@@ -109,12 +109,12 @@ $> go build main.go
 $> ./main AB12345678901234
 ```
 
-<br><br> 
+
 
 ## 參考資料 
 1. (2017-12-05)。[手機條碼、自然人憑證條碼與捐贈碼檢核規則](https://www.cetustek.com.tw/news.php?id=186) 。檢自 鯨躍科技有限公司官方網站 (2020-12-17)。
 
-<br><br> 
+
 
 ## 更新紀錄
 <details class="update_stamp">

@@ -15,7 +15,7 @@ tags:
 這次的主要目的是為 CodiMD 做一個定期備份，另外為了儲存空間上的考量，備份檔案只保留 30 天，一旦超過就刪除資料。
 
 <!--more-->
-<br><br> 
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p> 
 
 不過太久沒重頭寫 Shell Script 了，連起手式都有點忘了 Orz，快速找[鳥哥](http://linux.vbird.org/linux_basic/0340bashshell-scripts.php#script_why)複習一下~~塵封在記憶中的起手式~~
 ```shell
@@ -40,7 +40,7 @@ tags:
     foldername=codimd_backup_$(date +%Y%m%d%H%M)
     mkdir -p -- ~/${foldername}
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
 
 2. 接下來複製整個資料夾，不過因為權限問題，所以我 **cp** 指令前加上了 **sudo**，之後在用 **chown** 更改資料夾權限。
@@ -50,7 +50,7 @@ tags:
     ```
     建議在使用 cp 指令時加上 **-p**，保留時間、擁有者...等資訊
     
-    <br>
+    <p class="paragraph-spacing"></p>
 
 
 3. 因為這是針對 CodiMD 的備份，所以除了一般資料夾的複製外，我也執行了 CodiMD 的 Backup 指令。
@@ -60,7 +60,7 @@ tags:
     ```
     PS. 這邊需要特別注意一下在 crontab 中使用 docker-compose 的一些[坑](/Backup-CodiMD-When-Using-Docker-Compose/)...。 恩...，會這麼提醒當然是因為我踩過了 Orz ... 我老是到處踩坑...
 
-    <br>
+    <p class="paragraph-spacing"></p>
 
 
 4. 最後把所有備份的東西壓成一份壓縮檔，然後把壓縮檔統一放到個資料夾下 e.g. ~/codimd_backup，備份階段就完成了
@@ -76,7 +76,7 @@ tags:
 # only keep 30 days backup
 find ~/codimd_backup -type f -name "*.tgz" -mtime +30 -exec rm -rf {} \;
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 指令可以分成兩部分：
 ```shell
@@ -88,7 +88,9 @@ find ~/codimd_backup -type f -name "*.tgz" -mtime +30
 3. `-name "*.tgz"` ： 尋找檔名為 .tgz 結尾
 4. `-mtime +30`：檔案的<mark>最後修改時間</mark>是 30 天以前的
 
-<br><br> exec 後面的 command 是要執行的指令，這執行刪除指令：
+<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p> 
+
+exec 後面的 command 是要執行的指令，這執行刪除指令：
 ```shell
 -exec rm -rf {} \;
 ```
@@ -102,13 +104,17 @@ Script 寫完之後最後就是讓它定期執行了，這邊直接使用 cronta
 $ crontab -e
 ```
 
-<br>此時會進入 vi 的編輯畫面，就可以進行工作的排程。注意每一行都是一項工作排程。而每項工作的格式都是由六個欄位所組成：
+<p class="paragraph-spacing"></p>
+
+此時會進入 vi 的編輯畫面，就可以進行工作的排程。注意每一行都是一項工作排程。而每項工作的格式都是由六個欄位所組成：
 
 |**代表意義**|分鐘|小時|日期|月份|週|指令|
 |---|---|---|---|---|---|---|
 |**數字範圍**|0-59|0-23|1-31|1-12|0-7|就指令啊|
 
-<br>寫起來會像是這樣
+<p class="paragraph-spacing"></p>
+
+寫起來會像是這樣
 ```shell
 0 0 * * * sh /home/user/codimd_backup.sh
 ```
@@ -118,7 +124,7 @@ $ crontab -e
 ### 異地備份
 原本我的想法很簡單，用 scp 將備份的檔案從 CodiMD 的伺服器（簡稱 ServerA）送到備份用的伺服器（簡稱 ServerB）就好。偏偏遇到一個有點尷尬的問題，ServerA 在外網，而 ServerB 在內網，兩邊是互相 ping 不到的。最後沒辦法只好先貢獻我的電腦當跳板 (´_ゝ`)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 所以整體步驟就變成需要先 Download 再 Upload 了：
 
@@ -130,7 +136,9 @@ foldername=codimd_backup
 mkdir -p -- ~/${foldername}
 ```
 
-<br> 然後進行下載
+<p class="paragraph-spacing"></p> 
+
+然後進行下載
 ```shell
 filename=`ssh -i ~/.ssh/ServerA_key.pem ServerA@HostA ls -t codimd_backup|head -n 1`
 scp -p  -i ~/.ssh/ServerA_key.pem ServerA@HostA:~/codimd_backup/${filename} ~/${foldername}/
@@ -154,7 +162,8 @@ expect eof"
 
 ### 刪除 30 天前的檔案
 最後我一樣希望 ServerB 備儲檔案別無限制儲存下去，所以我一樣希望它刪除 30 天前（或許 60 天？）的檔案。這邊我稍微猶豫了一下這件事是要在跳板這台機器下 Script ，還是在 ServerB 另外起一個 Script ，最後我決定偷懶跟著目前的 Script 一起做。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 ```shell
 expect -c "
@@ -167,7 +176,9 @@ expect eof"
 
 這指令與先前的差不多唯一需要注意的是在 <mark>spawn</mark> 中需要注意<mark>字元的跳脫</mark>，不然就會跟我一樣 de 了好久的 bug ...
 
-<br> 後來雖然抓完蟲，不過還是一氣之下把 ServerB 的改成了[使用 SSH Key-based 的登入驗證方式](/Configuring-SSH-Key-Based-Authentication-on-a-Linux/)，所以程式可以化簡成：
+<p class="paragraph-spacing"></p> 
+
+後來雖然抓完蟲，不過還是一氣之下把 ServerB 的改成了[使用 SSH Key-based 的登入驗證方式](/Configuring-SSH-Key-Based-Authentication-on-a-Linux/)，所以程式可以化簡成：
 
 ```shell
 # upload
@@ -180,7 +191,8 @@ ssh -i ~/.ssh/ServerB_key ServerB@HostB "find $foldername -type f -name *.tgz -m
 
 ### （補充）找出只存於 ServerA 的檔案並下載
 後來想到一件事，我的電腦偶而會關機，所以為了以防異地備份的檔案有少，將 Download 最新的檔案，改成 Download 不在 ServerB 中的所有檔案。
-<br>
+
+<p class="paragraph-spacing"></p>
 
 ```shell
 diff -q folderA folderB | grep "folderA"| awk 'BEGIN {FS="："}{print $2}' > files.txt
@@ -188,22 +200,27 @@ diff -q folderA folderB | grep "folderA"| awk 'BEGIN {FS="："}{print $2}' > fil
  一般來說，如果要找可以 <mark>diff -q</mark> ，可以列出哪些檔案只存於 folderA ，哪些檔案又只存於 folderB。取出只存於 folderA 檔案，再用 awk 取出檔名的部分，最後寫檔。
 
 
-<br> 只是因為目前我的資料夾存在兩台不同的伺服器上，所以必須用到 <mark>process substitution</mark> ，但 process substitution 是拿來<mark>暫存檔案</mark>用的，如果我用 <mark>diff -q</mark> 會行不通，所以稍微換了個方式實做：
-<br> 
+<p class="paragraph-spacing"></p> 
+
+只是因為目前我的資料夾存在兩台不同的伺服器上，所以必須用到 <mark>process substitution</mark> ，但 process substitution 是拿來<mark>暫存檔案</mark>用的，如果我用 <mark>diff -q</mark> 會行不通，所以稍微換了個方式實做：
 
 ```shell
 diff <(ssh -i ~/.ssh/ServerA_key.pem ServerA@ServerA  "ls codimd_backup|sort") <(ssh -i ~/.ssh/ServerB_key ServerB@ServerB  "ls codimd_backup|sort") | grep "^<" | awk '{print $2}' > files.txt
 ```
 先使用 process substitution 分別列出兩台伺服器上的檔案並排序，然後使用 diff 比較兩份暫存檔的內容，濾出僅存於 ServerA 檔案，再用 awk 取出檔名的部分，最後寫檔。
 
-<br> 最後在依序從檔案中讀出要下載的檔名，並依序下載：
+<p class="paragraph-spacing"></p> 
+
+最後在依序從檔案中讀出要下載的檔名，並依序下載：
 ```shell
 cat files.txt |  while read line; do 
 scp -p -i~/.ssh/ServerA_key.pem ServerA@ServerA:~/codimd_backup/${line} ~/${foldername}/
 done
 ```
 
-<br>對了，使用 process substitution 時，要改用 <mark>bash</mark> 來執行 Script ，不能用 sh，不然會一直收到錯誤訊息：
+<p class="paragraph-spacing"></p>
+
+對了，使用 process substitution 時，要改用 <mark>bash</mark> 來執行 Script ，不能用 sh，不然會一直收到錯誤訊息：
 >  Syntax error: "(" unexpected
 
 

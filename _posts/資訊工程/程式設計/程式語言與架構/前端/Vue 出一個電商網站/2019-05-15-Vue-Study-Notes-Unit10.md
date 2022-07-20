@@ -67,7 +67,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
     });
     ```
-	<br>
+	<p class="paragraph-spacing"></p>
 3. **引入Vue Router**  
     在 **entry**（src/main.js）匯入 Vue Router，並在 Vue 元件中引入該物件。
 	```javascript
@@ -82,23 +82,26 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     router,
 	})
 	```
-	<br>我自己在練習的時候在這步驟卡好久，一直得到下面 error
+	<p class="paragraph-spacing"></p>
+  
+  我自己在練習的時候在這步驟卡好久，一直得到下面 error
 
 	<p class="illustration">
 	  <img src="https://i.imgur.com/xjcYc56.png">
 	</p>
 
-	<br>找了一陣子才發現，我一開始寫的時候是用 
-    ```javascript
-    import Router from "./router" 
-    ``` 
-    
-    只要把它改成
-    ```javascript
-    import router from "./router"
-    ``` 
-    下面 Vue 元件中引入該物件的地方也把 **Router** 換成 **router** 就好了。  
+	<p class="paragraph-spacing"></p>
+  找了一陣子才發現，我一開始寫的時候是用 
+  ```javascript
+  import Router from "./router" 
+  ``` 
   
+  只要把它改成
+  ```javascript
+  import router from "./router"
+  ``` 
+  下面 Vue 元件中引入該物件的地方也把 **Router** 換成 **router** 就好了。  
+
 	就是不曉得為什麼這樣就 work 了？ 
     
 4. **定義路徑**  
@@ -113,7 +116,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 	   }],
 	});
 	```
-	<br>
+	<p class="paragraph-spacing"></p>
 	
 5. **加上 router-view**  
     回到 **App.vue** 中更改 template，在 template 中加上 router-view 的標籤（可以順便 mark 掉原先的 HelloWorld 標籤）
@@ -126,7 +129,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     ```
 
 6. **測試**  
-    在網址中加上 Hello，就可連到所定義的元件。<br>
+    在網址中加上 Hello，就可連到所定義的元件。
 
 
 
@@ -148,7 +151,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     是 Bootstrap 不是 <a href="https://bootstrap-vue.js.org/">Bootstrap Vue</a>！<br>
     </div>
 
-	<br>
+	<p class="paragraph-spacing"></p>
 
 1. **新增頁面**  
     在 components 的資料夾中新增一個新的元件命名為 page.vue，並將它與 HelloWorld 元件做出差異。
@@ -174,7 +177,8 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     }
     </script>
     ```
-	<br>這邊用 Bootstrap 的 card 元件做 page.vue，可以直接照[範例](https://getbootstrap.com/docs/4.3/components/card/)貼上就好。如果不想這麼麻煩，直接在 template 裡面塞一段文字也行，分得出 HelloWorld 與 Page 就可以了。
+	<p class="paragraph-spacing"></p>
+  這邊用 Bootstrap 的 card 元件做 page.vue，可以直接照[範例](https://getbootstrap.com/docs/4.3/components/card/)貼上就好。如果不想這麼麻煩，直接在 template 裡面塞一段文字也行，分得出 HelloWorld 與 Page 就可以了。
 
 2. **為新頁面配置網址**  
     在 **src/router/index.js** 中添加新增 page.vue 
@@ -206,7 +210,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
       ],
     });
     ```
-	  <br>
+	  <p class="paragraph-spacing"></p>
     加上後可以試著在 url 上分別加上 /Hello 或 /Page 確定是否能夠順列切換。
     
 	
@@ -250,7 +254,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     ```
     
         
-    <br>
+    <p class="paragraph-spacing"></p>
     
 	除了聲明式外，也可在程式中使用 **router.push** 方法 進行跳轉。
     
@@ -262,7 +266,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     this.$router.push('{name:"HelloWorld"}');
     ``` 
     
-    <br>
+    <p class="paragraph-spacing"></p>
 	比起輸入完整的 url，個人更喜歡傳送路由物件，我覺得可讀性更高，程式維護起來也比較容易，尤其當你還需要傳遞 params 與 query 時，還可以避免做字串串接。
     	
 	PS. 是說如果覺得 Navbar 不貼頂很奇怪，可以修改下面的 style，把 **margin-top** 移除掉。
@@ -277,7 +281,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
 巢狀路由比較適合用在，只變換主體內容的元件其餘元件（如上方 Navbar）不變的情況。這樣可以專心撰寫主體內容的元件，並大幅減少重複其餘元件的重複撰寫。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 1. **實作個頁面**  
     試著在剛剛製作出來 page.vue 中加上 **\<router-view\>** ，並新增另外三個子原元件。 
@@ -305,8 +309,9 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
           </div>
         </template>
         ```
-        <br> 這邊為了做出來漂亮，因此將 card 中的 card-body 抽出來放到各個子元件中，如果偷懶的話，其實可以不再抽，把 \<router-view\> 放在卡片下方，子元件中隨便塞一行字就好，你自己分的出來有切換就好。<br>	
-    <br>	
+        <p class="paragraph-spacing"></p> 
+        這邊為了做出來漂亮，因此將 card 中的 card-body 抽出來放到各個子元件中，如果偷懶的話，其實可以不再抽，把 \<router-view\> 放在卡片下方，子元件中隨便塞一行字就好，你自己分的出來有切換就好。	
+    <p class="paragraph-spacing"></p>	
 
 2. **設置路由**  
     在 **src/router/index.js** 中添加新增這幾個元件，並在要配置巢狀路由元件中使用 ``children`` 配置， 
@@ -340,7 +345,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
      ]
     }
     ```
-	<br> 
+	<p class="paragraph-spacing"></p> 
     
     注意在設定子元件的路徑時，前方不需要再加入 **/** 了。若 children 的路徑為空，代表父元件預設為帶入這個子元件。各個元件詳細路徑如下
 	- Card1：/Page
@@ -361,7 +366,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
 在 Vue 中這樣的情況可以採用動態路由來實做，將符合 products/:id 這樣的路由，全導向特定商品介紹的元件，而實際載入的商品資料由 id 來控制。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 這邊以使個人資料卡為例
 
@@ -370,15 +375,15 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
     ```shell
     $ npm install --save axios vue-axios
     ```
-    <br> 安裝完成後回到 entry（src/main.js）匯入 vue-axios
-    
+    <p class="paragraph-spacing"></p> 
+    安裝完成後回到 entry（src/main.js）匯入 vue-axios    
     ```javascript
     import  axios  from  'axios'
     import  VueAxios  from  'vue-axios'
     Vue.use(VueAxios, axios)
     ```
     
-	<br>
+	<p class="paragraph-spacing"></p>
 	
 1. **設定動態路由**  
     在 **src/router/index.js** 中去設定動態路由匹配模式。使用以冒號開頭動態路徑參數，例如：
@@ -388,7 +393,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
     去宣告一個路徑參數，當 url 匹配到一個路由時，這個參數值會被設置到 **this.\$route.params**。
 
-    <br>
+    <p class="paragraph-spacing"></p>
 
 2. **實作資料讀取**  
     回到卡片元件中，使用 vue-axios 去讀取 [user](https://randomuser.me/documentation) 的資料。
@@ -402,8 +407,9 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
       })
     },
     ```
-	<br> `https://randomuser.me/api/?seed=${id}` 這是由 randomuser 所提供的 API，給定一個 seed 後，會回傳特定使用者資料，而所送出的 seed 是取自 **this.\$route.params.id**，也就剛剛所設定的動態路徑參數。
-    <br>	
+	<p class="paragraph-spacing"></p>
+  `https://randomuser.me/api/?seed=${id}` 這是由 randomuser 所提供的 API，給定一個 seed 後，會回傳特定使用者資料，而所送出的 seed 是取自 **this.\$route.params.id**，也就剛剛所設定的動態路徑參數。
+  <p class="paragraph-spacing"></p>	
 	this.\$http.get 是一個非同步的動作，最終取得一個 Promise ，必須再呼叫 then 將個人資料取出放入變數，最終將變數在 UI 中呈現。		
 		
 3. **測試**  
@@ -432,7 +438,7 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 </template>
 ```
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 並在 router 設定相對定的設置。一個路由若要選染多個元件，並需改用 ``components``（有 s）
  
@@ -459,35 +465,36 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
 需注意的是，在實務中要使用文件所提到 method ，如：``router.push``，需加上前綴變成 ``this.$router.push`` 才能成功調用。
 
-<br> 課堂發問區有人提問：**請問老師為什麼我們的router前面還要多補一個\$呢?**
+<p class="paragraph-spacing"></p> 
+課堂發問區有人提問：**請問老師為什麼我們的router前面還要多補一個\$呢?**
 > 講師回覆：因為我們是在 CLI 內運行  
 > 前方有先執行了 vue.use(....)
 >
 >因此外部資源會被掛載到 vue 內  
 >就可以使用 this 來呼叫這些資源（包含 router 及接下來的 axios 都是這個概念）
 
-<br>
+<p class="paragraph-spacing"></p>
 
 文件中常用的 method 如下：
 - **router.push**  
 跳轉到指定路由，並將此動作加到跳轉紀錄中。如果使用 stack 來想像這個行為，就是一個 Push into the history stack 的概念。
-<br>
+<p class="paragraph-spacing"></p>
 
 - **router.back**  
 回到上一頁。可想像成是一個 pop from history stack，另外這邊的 pop 方法可以想像成是使用移動 top 標籤的那種實做方式。
-<br>
+<p class="paragraph-spacing"></p>
 
 - **router.go**  
 回到指定動作。可想像成是一個 top 的移動到指定位置去讀 history stack。
-<br>
+<p class="paragraph-spacing"></p>
 
 - **router.forward**  
 回到下一頁。可想像成是一個把 top 標籤加 1 後讀取 history stack 。
-<br>
+<p class="paragraph-spacing"></p>
 
 - **router.replace**  
 跟 router.push  類似一樣會跳轉到到指定路由，但會取代掉最上層的紀錄。可想像成他先 pop history stack 最上層的紀錄後，在 Push 新的紀錄到 the history stack 。
-<br>
+<p class="paragraph-spacing"></p>
 
 PS. stack 中用到的名稱可以參考 [Stack: 以Array與Linked list實作](http://alrightchiu.github.io/SecondRound/stack-yi-arrayyu-linked-listshi-zuo.html)
 

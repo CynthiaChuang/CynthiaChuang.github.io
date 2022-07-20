@@ -12,7 +12,7 @@ tags:
   
 不過今天重點不是這個，我在找資料的時候找的一段很可愛的[影片](https://www.youtube.com/watch?v=c5vvTiZtP7s)，大概是葡萄牙的姓名太長、命名規則又與英語語系不太一樣，所以小C羅（迷你羅）一直搞不清楚自己的全名，還頗好笑的，尤其那句真的超甜：
   
-> Oh my god is you! <br>
+> Oh my god is you!   
 > *我的上帝是你*
 
 <!--more-->
@@ -28,7 +28,7 @@ tags:
 
 影片看到這我想說，小朋友這麼說好像也不算錯！？他只說了 First Name 跟 Last Name，把 Middle Name 全省了，雖然不是全名，但好歹也算是他的名字？不過看C羅反應好像也不太對，不然也不會出現這句話：
 
-> It's not Cristiano Santos boy. <br>
+> It's not Cristiano Santos boy.   
 > *不是 Cristiano Santos 阿，兒子。*
 
 <p class="illustration">
@@ -38,7 +38,7 @@ tags:
 
 我的另一個問題則是在影片中出現的另一句話：
 
-> It's not. You don't have Aveiro. <br>
+> It's not. You don't have Aveiro.  
 > *不是啦。你沒有阿維羅。*
 
 <p class="illustration">
@@ -75,7 +75,7 @@ tags:
     
     在傳統的命名中，首姓通常來自母親，所以又被稱為母姓。但在這邊我不會使用母姓來特指第一個姓氏，因為葡萄牙法律規定：「<mark>一個孩子需要至少一個名字和來自父母任一方的至少一個姓氏</mark>」，也就是說孩子可以只有一個姓氏，且不一定來自母親。小C羅的名字就是一個例子，桑托斯是他的首姓，但很明顯不是來自於母親 XDDD。
     
-    <br>
+    <p class="paragraph-spacing"></p>
     
     有沒有發現，我說這邊是用**桑托斯（Santos）** 而不是**多斯桑托斯（dos Santos）**？
     
@@ -107,7 +107,7 @@ tags:
     
     C羅本身沒有後綴啦，但跟他名字一模一樣的兒子有...
    
-<br>   
+<p class="paragraph-spacing"></p>   
 
 第一次看到C羅的全名時，覺得他真的超級長，光算英文字母就有 31 個，比 A-Z 的 26 字母還多。不過查了資料才知道，跟葡萄牙[末任國王妻子](https://zh.wikipedia.org/wiki/%E5%A5%A7%E5%8F%A4%E6%96%AF%E5%A1%94%C2%B7%E7%B6%AD%E5%A4%9A%E5%88%A9%E4%BA%9E_(%E9%9C%8D%E4%BA%A8%E7%B4%A2%E5%80%AB-%E8%A5%BF%E6%A0%BC%E9%A6%AC%E6%9E%97%E6%A0%B9)) *Augusta Vitória Guilhermina Antónia Matilde Luísa Josefina Maria Isabel de Hohenzollern-Sigmaringen* 相比，根本小巫見大巫阿。
 
@@ -167,7 +167,7 @@ B. Cristiano R. S. Aveiro
 說到姓氏，另一個姓氏變動的狀況是**冠夫姓**或**冠妻姓**，但跟臺灣一樣冠姓並不是強制性的，而且實務上冠姓的人數已越來越少。像C羅的母親就有冠夫姓瑪莉亞·多洛蕾絲·多斯桑托斯·阿維羅（Maria Dolores dos Santos Aveiro）。
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 最後來個福利照 🧡
 

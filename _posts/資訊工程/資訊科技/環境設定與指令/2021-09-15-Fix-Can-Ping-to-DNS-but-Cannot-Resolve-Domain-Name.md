@@ -49,7 +49,7 @@ PING google.com (142.251.43.14) 56(84) bytes of data.
 
 但這個方法有個嚴重的問題，這個 DNS 參考檔是由電腦自動產生的，每次**重啟網路**時，DNS 參考檔都會被覆寫。所以這次修改只是暫時的，若不想每次重起都來一次，可能還是得另外找一個方法。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 <div class="alert info"> 
 <div class="head">Public DNS</div>
@@ -78,7 +78,7 @@ nameserver 8.8.8.8
 nameserver 1.1.1.1
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 完成後，重起網路去看看剛剛的 `resolv.conf`：
 ```bash
@@ -92,7 +92,7 @@ nameserver 8.8.8.8
 nameserver 1.1.1.1
 ```
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 OK，打完收工！
 

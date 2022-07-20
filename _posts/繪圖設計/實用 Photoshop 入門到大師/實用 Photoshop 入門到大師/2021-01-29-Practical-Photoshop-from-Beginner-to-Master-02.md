@@ -21,7 +21,7 @@ tags:
 3. 圖層管理的方法 & 快速選取圖層
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 在課程開始前我看了 [Adobe Photoshop 使用手冊](https://helpx.adobe.com/tw/photoshop/using/layer-basics.html)中關於**圖層**介紹。
 
@@ -115,7 +115,7 @@ tags:
     </p>
     </div>
 
-    <br>
+    <p class="paragraph-spacing"></p>
     
 6. **取消選取圖層物件**  
     若要取消選取，則按下 `Ctrl` + `D`。

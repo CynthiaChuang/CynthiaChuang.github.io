@@ -15,7 +15,7 @@ Write a SQL query for a report that provides the following information for each 
 `FirstName, LastName, City, State`
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 Table:  `Person`
 
@@ -26,7 +26,7 @@ Table:  `Person`
 | LastName        | varchar  |
 
 PersonId is the primary key column for this table.
-<br>
+<p class="paragraph-spacing"></p>
 
 Table:  `Address`
 

@@ -87,7 +87,7 @@ Multilabel classification 多標籤分類任務，在此訓練任務中存在著
  [0 0 1 1]
  [0 2 0 0]]
 ```
-<br>
+<p class="paragraph-spacing"></p>
 
 **2020-08-12 更新**  
 後來發現如果是在說 Multitask 時，大家會傾向是在說 **Multitask Learning（多任務學習）**。一般的學習，一次只學習一個任務，無論是上述所提到的分類文章或是分類貓狗，他們實際上都只學習一件事，所以稱作 Single Task Learning（單任務學習)。

@@ -31,18 +31,19 @@ p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個�
 
 ## 建置步驟
 ### 1. 新增專案
-新增名為「`username`.github.io」的專案，這個 `username` 指的是自己的 GitHub 帳號。這不僅是你的專案名稱，也是你的 blog 網址。<br>
-專案成立後，按照 Quick setup 的提示準備好專案的資料夾。<br>
+新增名為「`username`.github.io」的專案，這個 `username` 指的是自己的 GitHub 帳號。這不僅是你的專案名稱，也是你的 blog 網址。<p class="paragraph-spacing"></p>
+專案成立後，按照 Quick setup 的提示準備好專案的資料夾。
 
 
 ### 2. 安裝 Ruby
-剛剛提過 Jekyll 是 Ruby 所編寫出來的 framework，因此在安裝 Jekyll 之前要先安裝，由於我家用的環境是 Windows  ~~（因為要打電動）~~ ，所以以下的步驟是在 Windows 上進行的。在 Windows 平台上安裝 Ruby 可以使用 [RubyInstaller](https://rubyinstaller.org/)，下載符合您自己系統的版本後，可以直接透過 UI 界面完成安裝步驟。<br>
+剛剛提過 Jekyll 是 Ruby 所編寫出來的 framework，因此在安裝 Jekyll 之前要先安裝，由於我家用的環境是 Windows  ~~（因為要打電動）~~ ，所以以下的步驟是在 Windows 上進行的。在 Windows 平台上安裝 Ruby 可以使用 [RubyInstaller](https://rubyinstaller.org/)，下載符合您自己系統的版本後，可以直接透過 UI 界面完成安裝步驟。
 
-> **Note**<br>
-> 使用 UI 界面安裝過程中，請記得勾選 **Add Ruby executables to your PATH** 這個選項，讓安裝程式會自動設定環境變數。<br>
+> **Note**  
+> 使用 UI 界面安裝過程中，請記得勾選 **Add Ruby executables to your PATH** 這個選項，讓安裝程式會自動設定環境變數。  
 > 否則當你想使用 ruby 指令時，會出現**不是內部或外部命令、可執行的程式或批次檔**的錯訊息，如果出現該訊息就必須手動設定環境變數。
 
-<br> 	
+<p class="paragraph-spacing"></p> 	
+
 安裝完成後，接著開啟命令提示字元確認 Ruby 是否安裝成功，若成功應該可以看到目前的版號，請務必確認所安裝的 Ruby 是 Jekyll 所要求的 **2.0 以上**的版本 。
 ```sh
 $ ruby -v
@@ -61,7 +62,10 @@ $ gem install jekyll
 ```sh
 $ jekyll new myblog  --force 
 ```
-<br> 到此網站就算建立完成了，若想在上線前預覽建置的結果，可先進入專案進行編譯。
+
+<p class="paragraph-spacing"></p> 
+
+到此網站就算建立完成了，若想在上線前預覽建置的結果，可先進入專案進行編譯。
 ```sh
 $ cd myblog
 $ jekyll serve
@@ -82,12 +86,16 @@ Traceback (most recent call last):
 C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require': cannot load such file -- bundler (LoadError)
 ```
 
-<br> 根據錯誤訊息 ``cannot load such file -- bundler`` 應該是我漏裝了bundler，因此用 gem 裝一下 bundler。
+<p class="paragraph-spacing"></p> 
+
+根據錯誤訊息 ``cannot load such file -- bundler`` 應該是我漏裝了bundler，因此用 gem 裝一下 bundler。
 ```sh
 $ gem install bundler
 ```
 
-<br> 不過裝完太心急，忘記 install 就直接執行 jekyll serve ，果不其然又收到錯誤 **Bundler::GemNotFound** 的錯誤。
+<p class="paragraph-spacing"></p> 
+
+不過裝完太心急，忘記 install 就直接執行 jekyll serve ，果不其然又收到錯誤 **Bundler::GemNotFound** 的錯誤。
 ```sh
 $ jekyll server
 Traceback (most recent call last):
@@ -108,7 +116,9 @@ Traceback (most recent call last):
 	1: from C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-2.0.2/lib/bundler/resolver.rb:255:in `each'
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-2.0.2/lib/bundler/resolver.rb:287:in `block in verify_gemfile_dependencies_are_found!': Could not find gem 'minima (~> 2.5) x64-mingw32' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
 ```
-<br> 補一下，install 就 run 的起來了
+<p class="paragraph-spacing"></p> 
+
+補一下，install 就 run 的起來了
 ```sh
 $ bundle install
 ```
@@ -125,7 +135,9 @@ $ bundle install
 - [Lanyon ](https://github.com/poole/lanyon) :   [Demo](http://lanyon.getpoole.com)
 - [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next):   [Demo](https://simpleyyt.com/jekyll-theme-next/)
 
-<br>其實有點大同小異啦，最後挑了第三個 jekyll-theme-next。運氣不錯，它還附有[安裝教學](http://theme-next.simpleyyt.com/getting-started.html)，可以直接照著做就好，不過因為剛剛我已經把專案建好了我就不學它 git clone project 來執行 jekyll serve，而是直接複製貼上了 XD
+<p class="paragraph-spacing"></p>
+
+其實有點大同小異啦，最後挑了第三個 jekyll-theme-next。運氣不錯，它還附有[安裝教學](http://theme-next.simpleyyt.com/getting-started.html)，可以直接照著做就好，不過因為剛剛我已經把專案建好了我就不學它 git clone project 來執行 jekyll serve，而是直接複製貼上了 XD
 
 
 ###  2. 重新安裝相依性
@@ -140,7 +152,9 @@ To update to the latest version installed on your system, run `bundle update --b
 To install the missing version, run `gem install bundler:1.17.1`
 ```
 
-<br>又得到錯誤訊息了，按照它的提示先 update 後再重新安裝
+<p class="paragraph-spacing"></p>
+
+又得到錯誤訊息了，按照它的提示先 update 後再重新安裝
 ```sh
 $ bundle update --bundler
 $ bundle install
@@ -165,7 +179,9 @@ Traceback (most recent call last):
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.17.1/lib/bundler/runtime.rb:319:in `check_for_activated_spec!': You have already activated concurrent-ruby 1.1.5, but your Gemfile requires concurrent-ruby 1.1.3. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
 ```
 
-<br> 似乎是我所安裝的 concurrent-ruby 版本與主題中 Gemfile  所要求的版號不相符，不過這問題不大，在指令前加上 **bundle exec** 即可
+<p class="paragraph-spacing"></p> 
+
+似乎是我所安裝的 concurrent-ruby 版本與主題中 Gemfile  所要求的版號不相符，不過這問題不大，在指令前加上 **bundle exec** 即可
 ```sh
 $ bundle exec jekyll server
 ```	
@@ -189,17 +205,23 @@ ERROR: YOUR SITE COULD NOT BE BUILT:
 No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository.
 ```
 	
-<br> 我拿到了一條 **GitHub Metadata: No GitHub API authentication could be found** 的錯誤訊息，google 了一下，網上很多[方法](https://0xl2oot.cn/2018/01/26/jekyll-error-github-api/) 說是到 Github 申請一個 token，再配置一個環境變數。只是我覺得有點莫名其妙，為啥一定要跟 Github 綁定？ 最後在 jekyll-theme-next 的 issue 中，找到[有人](https://github.com/Simpleyyt/jekyll-theme-next/issues/19#issuecomment-362142730)提出不用申請 token 的解法：
+<p class="paragraph-spacing"></p> 
+
+我拿到了一條 **GitHub Metadata: No GitHub API authentication could be found** 的錯誤訊息，google 了一下，網上很多[方法](https://0xl2oot.cn/2018/01/26/jekyll-error-github-api/) 說是到 Github 申請一個 token，再配置一個環境變數。只是我覺得有點莫名其妙，為啥一定要跟 Github 綁定？ 最後在 jekyll-theme-next 的 issue 中，找到[有人](https://github.com/Simpleyyt/jekyll-theme-next/issues/19#issuecomment-362142730)提出不用申請 token 的解法：
 ```直接在 _config.yml 中，為空的 description 加上描述後就不會出現```
 
-<br>在 description 加上描述後，錯誤訊息終於變了：
+<p class="paragraph-spacing"></p>
+
+在 description 加上描述後，錯誤訊息終於變了：
 ```sh
 Rendering Markup: assets/css/style.scss
 	Conversion error: Jekyll::Converters::Scss encountered an error while converting 'assets/css/style.scss':
 					Invalid CP950 character "\xE2" on line 5
 jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 ```
-<br> 照著[說明](https://github.com/mmistakes/jekyll-theme-hpstr/issues/185#issuecomment-340777090)，我在 `assets/css` 這個路徑下新增一個 `style.scss`  的檔案，檔案內容如下：	
+<p class="paragraph-spacing"></p> 
+
+照著[說明](https://github.com/mmistakes/jekyll-theme-hpstr/issues/185#issuecomment-340777090)，我在 `assets/css` 這個路徑下新增一個 `style.scss`  的檔案，檔案內容如下：	
 
 ```css
 ---
@@ -231,7 +253,7 @@ jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 	// 以下開始撰寫你的文章
 	```
 
-	> 2019/12/13 紀錄<br>
+	> 2019/12/13 紀錄   
 	> 目前我使用 jekyll-theme-next 測試 categories 無法接受中文，一旦使用中文，會導致找不到該頁面，而導向 404 Page ([#63](https://github.com/Simpleyyt/jekyll-theme-next/issues/63))
 
 

@@ -14,7 +14,7 @@ tags:
 之前在做進度報告時，有需要用到**流程圖**，所謂的一圖勝千言咩，好的流程圖可以在報告時省下不少麻煩，只是好的流程圖繪製工具還真不好找阿... 好不容易才找到一個順手的工具 -  [draw.io](https://www.draw.io) ，我個人還滿喜歡它的 ~ ❤️
 
 <!--more-->
-<br> 
+<p class="paragraph-spacing"></p> 
 
 說到流程圖繪製軟體，我用的比較順手的只有三套：<mark>Microsoft 的 Visio</mark>、<mark>Cacoo</mark> 與 <mark>draw.io</mark>。
 
@@ -27,12 +27,12 @@ tags:
 </p>
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 如果對這兩套軟體（draw.io、Cacoo）有興趣的可以看看電腦玩物的介紹：
 1. [Draw.io 中文線上製作流程圖首選！專業水準完全免費](https://www.playpcesor.com/2015/02/drawio.html)
 2. [Cacoo 線上中文免費畫流程圖軟體，即時協同設計多種企劃草圖](https://www.playpcesor.com/2011/04/cacoo.html)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 恩...打完收工，有點懶的對它詳細介紹 XD

@@ -11,7 +11,7 @@ tags:
 Shell Script 的條件宣告是用 <mark>[]</mark> ，if 條件後面需接 <mark>then</mark> ，block 結束後接 <mark>fi</mark>
 
 <!--more-->
-<br>
+<p class="paragraph-spacing"></p>
 
 寫法大概長這樣
 ```bash
@@ -24,8 +24,9 @@ else
 fi
 ```
 
+<p class="paragraph-spacing"></p>
 
-<br><br> 是說在寫條件式的時候稍微卡了一下，習慣性比較時直接用了 ``==`
+是說在寫條件式的時候稍微卡了一下，習慣性比較時直接用了 ``==`
 ```bash
 name="Cynthia" 
 if [ "$name" == "Cynthia" ]; then

@@ -68,7 +68,7 @@ tags:
 
 身分證字號與居留證編碼，兩種編碼最大的差異在於第二碼的**性別代碼**。與身分證用 1、2 分別表示男女性不同，舊版居留證的性別碼依照人民來源與性別來賦予一個<mark>英文代號</mark>。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 整體來說，一個完整的居留證編碼如下：
 
@@ -95,7 +95,7 @@ tags:
     </tbody>
 </table>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 
 
@@ -117,7 +117,7 @@ tags:
 
 而次碼的性別碼，也是需要依照上表將其轉成二位數字後，只取其**個位數**，如 A 就會被轉換成 `0`。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 將轉換完成的數值，乘上相對應的權重後進行加總：  
 
@@ -127,7 +127,7 @@ tags:
 
 若總和為 **10 的倍數**，即為有效的驗證碼。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 詳細的計算步驟跟[身分證字號的驗證](/CheckUID)方式相同，這邊就不再算一次了。
 
@@ -172,7 +172,7 @@ tags:
     </tbody>
 </table>
 
-<br>
+<p class="paragraph-spacing"></p>
  
 除用 8、9 分別表示男女外，其他的轉換方式跟[身分證字號的驗證](/CheckUID)方式相同。
 

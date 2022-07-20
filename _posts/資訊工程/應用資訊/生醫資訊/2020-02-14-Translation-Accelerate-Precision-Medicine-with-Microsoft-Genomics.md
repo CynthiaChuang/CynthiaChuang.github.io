@@ -169,7 +169,6 @@ Microsoft Genomics 管線則完全不同。它僅對資料進行兩次讀寫，�
 19. [SNAP Scalable Nucleotide Alignment Program](http://snap.cs.berkeley.edu/#publications)。檢自 UC Berkeley AMP Lab (2020-02-10)。
 
 
-<br><br>
 
 ## 註解
 

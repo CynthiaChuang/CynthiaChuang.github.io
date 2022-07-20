@@ -21,13 +21,13 @@ For k  = 2, you should return:  2->1->4->3->5
 For k  = 3, you should return:  3->2->1->4->5
 ```
 
-<br>
+<p class="paragraph-spacing"></p>
 
 >**Note:**
 >-   Only constant extra memory is allowed.
 >-   You may not alter the values in the list's nodes, only nodes itself may be changed.
 
-<br>
+<p class="paragraph-spacing"></p>
 
 **Related Topics:** `Linked List`
 

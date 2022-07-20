@@ -35,7 +35,9 @@ tags:
 1. to cause something 造成；引起；導致
 2. to cause to be, to become, or to appear as 使成為；使變成；使顯得
  
-<br> 例句  
+<p class="paragraph-spacing"></p>
+
+例句  
 1. What made you change your mind?  
     甚麼讓（導致）你改變了想法？    
 2. Just seeing Woody Allen's face is enough to make me laugh.   
@@ -51,7 +53,9 @@ tags:
 3. used to say that you wish something to happen very much （表示非常希望）讓…發生
 4. used to express a suggestion or request that includes you and the other person or people （表示建議或請求）讓我們
 
-<br> 例句
+<p class="paragraph-spacing"></p> 
+
+例句
 1. She wanted to go but her parents wouldn't let her.   
     她想走，但父母不讓（允許）。
 2. Don't let it worry you.  

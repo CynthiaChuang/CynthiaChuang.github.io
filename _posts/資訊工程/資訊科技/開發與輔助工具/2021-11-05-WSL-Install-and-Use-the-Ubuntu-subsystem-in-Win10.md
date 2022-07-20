@@ -53,21 +53,21 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
 
     - [v7.2.0 Release of PowerShell](https://github.com/PowerShell/powershell/releases)
  
-<br> 
+<p class="paragraph-spacing"></p> 
 
 2. **安裝 WSL**  
     在終端機中輸入下列指令：
     ```
     $ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
-    <br> 
+    <p class="paragraph-spacing"></p> 
 
     進度條跑完後請按照指令提示重新啟動電腦：
     ```    
     是否要立即重新啟動電腦以完成此操作?  
     > [Y] Yes  [N] No  [?] Help (default is "Y"):    
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
     
     重啟後，再次啟動 PowerShell，測試是否安裝成功：
     ```    
@@ -77,14 +77,14 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
     https://aka.ms/wslstore       
     如果看到提示訊息代表安裝成功，可以開始來安裝所需要德 Linux 發行。
     ```
-<br> 
+<p class="paragraph-spacing"></p> 
 
 3. **安裝 Linux 發行**  
     在這邊遇到了點小問題，如果我按照剛剛的提示訊息連接到 [https://aka.ms/wslstore](https://aka.ms/wslstore)，會被向 Microsoft Store，但卻會得到下列訊息：
     ```   
     Wait a while, then try again. Something happened on our end.
     ```
-    <br>
+    <p class="paragraph-spacing"></p>
 
     所以我改在 Microsoft Store 中直接輸入 **Ubuntu**，不過如果直接輸入搜尋的話，需要注意 WSL 相容問題；或者考以直接使用網友提供的[連結](ms-windows-store://search/?query=WSL)，找到與 WSL 相容的 Ubuntu 版本，我這邊選擇了了目前正在使用的 Ubuntu20.04：
 
@@ -112,7 +112,7 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
     <img src="https://i.imgur.com/GMIWpQG.png" alt="Ubuntu">
 </p>
 
-<br>
+<p class="paragraph-spacing"></p>
 
 安裝完成後，可以打開 Windows PowerShell，輸入：
 ```
@@ -122,7 +122,7 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
 ```
 你可以看到已經完成安裝的子系統。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 下次再次執行時，除了從開始選單點擊 Ubuntu20.04 的 icon 外，你也可以在 PowerShell 中輸入：
 ```
@@ -137,7 +137,7 @@ $ wsl
     <img src="https://i.imgur.com/CjBhdGB.png" alt="Ubuntu 解除安裝">
 </p>
 
-<br> 
+<p class="paragraph-spacing"></p> 
 
 如果你還想要使用子系統，但嫌環境太髒想要重裝，也可以幫它「回復成出廠預設值」。一樣前往「應用程式與功能」，選擇 Ubuntu，會注意到有一個進階選項。
 
@@ -160,7 +160,7 @@ https://aka.ms/wslstore
 ```
 接下來只要重複[前一章](#執行-ubuntu)的執行步驟重來一次就好了。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另外還有一個方法可以重設，雖然文件中說這叫「取消登錄發佈」，但我目前看不出兩者的差異，所以還是稱之為重設吧 XDDD 這個方法就不用去設定了，在 PowerShell 就可以了：
 
@@ -175,14 +175,14 @@ $ wsl --unregister Ubuntu20.04
 1. 如何在存取 Windows 中的檔案？
 2. Home 目錄下的資料又會存在 Windows 中的哪個位置？
 
-<br>
+<p class="paragraph-spacing"></p>
 
 找了下，Windows 的檔案會被掛載在 `/mnt/` 下，例如 D 槽就會被掛載在 `/mnt/d`。Home 目錄中的資料則存在 C 槽的 user 資料中，完整路徑如下：
 > C:\Users\%UserName%\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs
 
 不過 `CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc` 這個會依照 Linux 系統版本而有所不同，所以可能要注意找一下。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 在打這段的時候忽然想到，我能不能將 Home 目錄資料放到 D 槽？說道立刻就去查，不過看起來好像不行，因為[文件](https://docs.microsoft.com/zh-tw/windows/wsl/troubleshooting)上提到：「<mark>適用於 Linux 的 Windows 子系統只會在系統磁碟機(通常是 C)上執行</mark>」，因此看來是不能換了。
 
