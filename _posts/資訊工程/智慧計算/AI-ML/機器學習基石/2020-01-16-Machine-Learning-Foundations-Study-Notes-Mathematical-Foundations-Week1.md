@@ -51,7 +51,7 @@ tags:
 以銀行核發信用卡為例，銀行使用機器學習目的是學習如何核發信用卡，能讓它獲利或是服務評比最好。 
 
 <p class="illustration">
-    <img src="https://i.imgur.com/The Learning Model.png" alt="《Then Comes the Sun》專輯封面">
+    <img src="https://i.imgur.com/pnpAk7a.png" alt="The Learning Model">
     The Learning Model（圖片來源: <a href="https://www.coursera.org/learn/ntumlone-mathematicalfoundations/lecture/1YgVk/components-of-machine-learning">課程截圖</a>）
 </p>
  
