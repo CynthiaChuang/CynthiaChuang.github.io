@@ -7,8 +7,8 @@ categories:
 tags:
 - AI/ML
 - 車牌辨識
-- 光學字元辨識 OCR(tags)
-- 電腦視覺 CV(tags)
+- 光學字元辨識 OCR
+- 電腦視覺 CV
 - CRNN
 - CTC
 --- 
