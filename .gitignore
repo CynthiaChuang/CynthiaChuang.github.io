@@ -9,6 +9,7 @@ Thumbs.db
 .rbenv-version
 .rvmrc
 /vendor
+/.vscode
 
 .jekyll-cache
 
