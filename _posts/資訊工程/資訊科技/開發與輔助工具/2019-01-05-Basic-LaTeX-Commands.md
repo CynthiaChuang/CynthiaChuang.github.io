@@ -1,7 +1,7 @@
 ---
 title: 常用 LaTeX 數學符號指令
-date: 2019-01-05
-is_modified: false
+date: 2022-10-03
+is_modified: true
 categories:
 - "資訊科技 › 開發與輔助工具"
 tags:
@@ -28,6 +28,7 @@ tags:
 - [大尺寸運算符號](#大尺寸運算符號)
 - [標準函式符號](#標準函式符號)
 - [根號與分數](#根號與分數)
+- [微積分符號](#微積分符號)
 - [二項式係數](#二項式係數)
 - [箭號](#箭號)
 - [分隔符號](#分隔符號)
@@ -37,6 +38,7 @@ tags:
 - [書寫時, 英文字體顯示](#書寫時-英文字體顯示)
 - [公式對齊](#公式對齊)
 - [參考資料](#參考資料)
+- [更新紀錄](#更新紀錄)
 
 <p class="paragraph-spacing"></p> 
 
@@ -142,6 +144,14 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$\surd$|\surd||$\sqrt{2}$|\sqrt{2}||$\sqrt[n]{}$|\sqrt[n]{}||$\sqrt[3]{2}$|\sqrt[3]{2}|
 |$\frac{2}{4}$|\frac{2}{4}||$\tfrac{2}{4}$|\tfrac{2}{4}||$\cfrac{2}{4}$|\cfrac{2}{4}|
+
+
+
+## 微積分符號
+
+|預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
+|---|---|---|---|---|---|---|---|---|---|---|
+|$\nabla{x}$|\nabla{x}||$\partial{x}$|\partial{x}||$x^{\prime}$|x^{\prime}||||
 
 
 
@@ -333,3 +343,14 @@ $$
 http://blog.sina.com.cn/s/blog_4ddef8f80100iwwv.html)
 5. [【LaTeX入门】05、换行、换段、换页、首行缩进等命令｜xiazdong](
 https://blog.csdn.net/xiazdong/article/details/8892105)
+
+
+
+## 更新紀錄
+<details class="update_stamp">
+  <summary>最後更新日期：2022-10-03</summary>
+  <ul>  
+    <li>2022-10-03 更新：新增微積分符號</li>
+    <li>2019-01-05 發布</li>
+  </ul>
+</details>
