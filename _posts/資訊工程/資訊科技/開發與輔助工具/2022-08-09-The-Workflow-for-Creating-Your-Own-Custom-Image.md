@@ -291,7 +291,7 @@ Successfully tagged demo-push:v1
     Docker daemon 與 client 的交互運作（圖片來源: <a href="https://ithelp.ithome.com.tw/articles/10236066">iT 邦幫忙</a>）
 </p> 
 
-在 Docker 的運行架構中，存在 Docker Daemon（服務端守護進程）和 Client 兩個部份。Docker Daemon 會提供一組名為 Docker Remote API 的 REST API；而 Client 的代表就是我們常用的指令，指令則會透過 Docker Remote API 與 Docker Daemon 互動，從而完成各種功能。<br><br>
+在 Docker 的運行架構中，存在 Docker Daemon（服務端守護進程）和 Client 兩個部分。Docker Daemon 會提供一組名為 Docker Remote API 的 REST API；而 Client 的代表就是我們常用的指令，指令則會透過 Docker Remote API 與 Docker Daemon 互動，從而完成各種功能。<br><br>
  
 簡而言之， Docker 的運行架構就是個標準的 C/S 架構。<br>
 

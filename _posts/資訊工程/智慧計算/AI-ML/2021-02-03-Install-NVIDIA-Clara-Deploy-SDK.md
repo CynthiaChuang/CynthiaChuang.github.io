@@ -88,7 +88,7 @@ Deploy SDK Part2！
     <p class="paragraph-spacing"></p>
     
 3. **配置 NGC 憑證**  
-    安裝 Clara CLI 須配置 NGC 憑證，稍等 Clara CLI 才能從 NGC Pull 相關 Helm Chart 以進行部屬。
+    安裝 Clara CLI 須配置 NGC 憑證，稍等 Clara CLI 才能從 NGC Pull 相關 Helm Chart 以進行部署。
     
     這邊你須要拿到一把 `NGC_API_KEY`。這次就必須一定要登入 NGC 了，登入後點選右上角頭像選單中的 `Setup`，並選擇 `Generate API Key` 
     
@@ -549,7 +549,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
 
 當然，如果像我這個白目的安裝就沒有那順利了...
     
-## 錯誤嘗試：部屬 Clara Platform 與 啟動 Helm Chart
+## 錯誤嘗試：部署 Clara Platform 與 啟動 Helm Chart
 在環境要求的部分，對我來說比較麻煩的是 Kubernetes 與 Helm 的版號，因為我的伺服器環境是與組員共用，所以一開始我決定保留同事需要的環境來硬幹，試試能不能安裝成功，如果真的不行再來嘗試退版安裝。
 
 所以這段如果只是要完成 Deploy SDK 安裝的可以跳過，這邊只是因為我的一時興起所產生的錯誤紀錄而已，當然如果想看我怎麼焦頭爛額的可以繼續往下拉。

@@ -76,7 +76,7 @@ HedgeDoc 的安裝步驟在之前的[《安裝踩雷筆記…》](/How-to-Setup-
 不過，從那張歷史分支圖看來，兩邊的開發紀錄已經分開了。而 PM 所要求的功能的圖片放大縮小功能， 是 Hackmd 團隊底下所維護的 CodiMd 才有，所以還是得來看看怎安裝。
 
 
-按照 CodiMd 官方的 [Docker Deployment](https://hackmd.io/c/codimd-documentation/%2Fs%2Fcodimd-docker-deployment) 的文件，我們一樣可以藉由 `docker-compose.yml` 部屬，其中 `<my_user>` 與 `<my_password>` 換成自己的名字跟密碼：
+按照 CodiMd 官方的 [Docker Deployment](https://hackmd.io/c/codimd-documentation/%2Fs%2Fcodimd-docker-deployment) 的文件，我們一樣可以藉由 `docker-compose.yml` 部署，其中 `<my_user>` 與 `<my_password>` 換成自己的名字跟密碼：
 ```yaml
 version: "3"
 services:

@@ -115,7 +115,7 @@ Microsoft Genomics 系統由上而下總共可分為三個部分，分別是：S
 
 
 **Service Controller**  
-此區塊是用來管理分佈在機器集區（pools of machines）裡的一批基因體的處理，主要用接收 API 請求、安排工作佇列以及管理 Azure Batch 中跨機器集區的執行。
+此區塊是用來管理分布在機器集區（pools of machines）裡的一批基因體的處理，主要用接收 API 請求、安排工作佇列以及管理 Azure Batch 中跨機器集區的執行。
 
 前端會接受來自 Azure API 的請求，並將它放置在工作佇列中。而 Web Job Application 則會為佇列中每個項目進行排程，將它們分發到運行基因體引擎的伺服器，並監視其性能與進度，最後評估結果。
 

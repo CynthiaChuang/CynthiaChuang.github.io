@@ -19,7 +19,7 @@ tags:
 想了想原因，可能是因為我在升級時順手將 hostname 由 `ubuntu18` 改成了 `ubuntu20`。
 
 而至於更確切的原因？我在網路上找到了 [Kiritow](https://blog.csdn.net/Kiritow/article/details/80687036) 的解說：
-> Ubuntu Server 被設計成一種類似於分佈式的操作系統網路結構，允許 `/etc/sudoers` 中的成員不在本機上。因此 sudo 時會先從網路上尋找可能的 sudoer 然後才是本地。 而這 10 秒左右的時間就是整個 DNS 流程的最長時間。
+> Ubuntu Server 被設計成一種類似於分布式的操作系統網路結構，允許 `/etc/sudoers` 中的成員不在本機上。因此 sudo 時會先從網路上尋找可能的 sudoer 然後才是本地。 而這 10 秒左右的時間就是整個 DNS 流程的最長時間。
 
 
 

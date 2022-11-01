@@ -112,7 +112,7 @@ tags:
     應該是在說<mark>類別不平均</mark>的問題。
  
 4. **Low Resolution**  
-    低解析度問題影像圖像品質。好的攝影機太貴了，沒辦法大量佈置 XDDD
+    低解析度問題影像圖像品質。好的攝影機太貴了，沒辦法大量布置 XDDD
     
 5. **Illumination**  
     光照問題。光源條件不同，可能導致白天影子干擾，把影子也認成一個人；或是晚上感光度太差。
@@ -163,7 +163,7 @@ tags:
     Dataset Overview（圖片來源: <a href="https://sites.google.com/view/ahu-pedestrianattributes/">論文 Blog</a>）
 </p>
 
-文章中列了將近 10 個 dataset，不過其中最著名的 RAP 與 PETA，還有 2017 公佈的 PA-100K 。下列排序按照論文排序，不做調整：
+文章中列了將近 10 個 dataset，不過其中最著名的 RAP 與 PETA，還有 2017 公布的 PA-100K 。下列排序按照論文排序，不做調整：
 
 1. **PETA datase**  
     - [Paper](http://personal.ie.cuhk.edu.hk/~pluo/pdf/mm14.pdf") / [Blog](http://mmlab.ie.cuhk.edu.hk/projects/PETA.html)
@@ -587,7 +587,7 @@ Global Image-based Models，顧名思義就是整張圖下去訓練，不做任�
 1.  WPAL-network (BMVC-2017)
 2.  AWMT (MM-2017)
 
-這邊比較經典是 WPAL-network ，他考慮資料的不平衡分佈，並根據訓練集中所有屬性類別上標籤的比例，提出 <mark>weighted cross-entropy loss function</mark>，已經廣泛使用在許多行人屬性是別的演算法中。。
+這邊比較經典是 WPAL-network ，他考慮資料的不平衡分布，並根據訓練集中所有屬性類別上標籤的比例，提出 <mark>weighted cross-entropy loss function</mark>，已經廣泛使用在許多行人屬性是別的演算法中。。
 
 
 ### 5.6 Curriculum Learning based Algorithms

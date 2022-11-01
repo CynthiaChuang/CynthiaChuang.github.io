@@ -21,20 +21,20 @@ tags:
 
 
 ## Deploys anywhere
-從 [Openwhisk 官網](http://openwhisk.incubator.apache.org/)上看到，OpenWhisk 可以利用一些常見的 Container 框架，例如： Kubernetes and OpenShift, Mesos and Compose 快速部屬。
+從 [Openwhisk 官網](http://openwhisk.incubator.apache.org/)上看到，OpenWhisk 可以利用一些常見的 Container 框架，例如： Kubernetes and OpenShift, Mesos and Compose 快速部署。
 
 <p class="illustration">
     <img src="http://openwhisk.apache.org/images/illustrations/OW-Deployments.png" alt="The Learning Model">
     Deploys anywhere（圖片來源: <a href="http://openwhisk.apache.org/" >Openwhisk</a>）
 </p>
 
-從 Apache 的 [Githib](https://github.com/apache) 上，找到了幾份部屬的教學：
+從 Apache 的 [Githib](https://github.com/apache) 上，找到了幾份部署的教學：
 - [Kubernetes](https://github.com/apache/openwhisk-deploy-kube)
 - [Openshift](https://github.com/apache/openwhisk-deploy-openshift)
 - [Mesos](https://github.com/apache/openwhisk-deploy-mesos)
 - [Compose](https://github.com/apache/openwhisk-devtools/tree/master/docker-compose)
 
-研究了一下安裝難度與實際需要部屬的環境考量，最終決定挑 Kubernetes 來快速部屬。
+研究了一下安裝難度與實際需要部署的環境考量，最終決定挑 Kubernetes 來快速部署。
  
 
 
@@ -206,7 +206,7 @@ Environment variables:
 
  
 ## 部署
-有了 K8S 叢集與 Helm 後，就可以使用 Helm 將 OpenWhisk 部署到 K8S 叢集上了，這邊依照文件的四個部屬動作來進行：
+有了 K8S 叢集與 Helm 後，就可以使用 Helm 將 OpenWhisk 部署到 K8S 叢集上了，這邊依照文件的四個部署動作來進行：
 
 
 ### Step 1. 初始化叢集設定

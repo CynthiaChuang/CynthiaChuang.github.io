@@ -59,7 +59,7 @@ tags:
 ### 什是 Serverless?
 Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並非實現字面意上的『無伺服器』，而是由第三方雲端計算平台供應商負責後端基礎設施的維護，以服務（aaS）的方式為開發者提供所需功能，例如：認證、授權與資料庫服務等。
 
-簡單地說，這裡所強調的『無伺服器』，指的是我們的<mark>程式碼不會明確地被部署在某些特定的軟體或者硬體的伺服器上</mark>，不需要在伺服器上持續執行行程以等待 HTTP 請求或 API 調用；是通過某種事件機制來觸發程式碼的執行，此時供應商才會將此服務進行部屬。這樣的架構可以讓開發人員更專注程式碼的運行，而不需要分心管理任何的基礎設施。
+簡單地說，這裡所強調的『無伺服器』，指的是我們的<mark>程式碼不會明確地被部署在某些特定的軟體或者硬體的伺服器上</mark>，不需要在伺服器上持續執行行程以等待 HTTP 請求或 API 調用；是通過某種事件機制來觸發程式碼的執行，此時供應商才會將此服務進行部署。這樣的架構可以讓開發人員更專注程式碼的運行，而不需要分心管理任何的基礎設施。
 
 <p class="paragraph-spacing"></p>
 
@@ -255,7 +255,7 @@ Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽�
 
 
 ### Apache OpenWhisk 的部署方式
-Apache OpenWhisk 的部屬看理來很簡單，只要支援 docker 的設備都可以安裝，Apache 已將相關內容都把包成 docker image。相關配置步驟可以看這兩份官方的說明文件：[文件1](https://openwhisk.apache.org/documentation.html#openwhisk_deployment)、[文件2](https://github.com/apache/openwhisk#quick-start)
+Apache OpenWhisk 的部署看理來很簡單，只要支援 docker 的設備都可以安裝，Apache 已將相關內容都把包成 docker image。相關配置步驟可以看這兩份官方的說明文件：[文件1](https://openwhisk.apache.org/documentation.html#openwhisk_deployment)、[文件2](https://github.com/apache/openwhisk#quick-start)
 
 ...不過有沒有真的這麼簡單，可能要頭洗下去才知道。
 

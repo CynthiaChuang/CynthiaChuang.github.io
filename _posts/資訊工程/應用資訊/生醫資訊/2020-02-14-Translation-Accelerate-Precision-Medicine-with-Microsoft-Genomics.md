@@ -58,7 +58,7 @@ Microsoft Azure 雲端運算服務憑藉著可靠性、安全性、全球資料�
 
 為使 Microsoft Azure 成為基因體學最佳的雲端運算服務，Microsoft Genomics 開發了一種優化的輔助分析服務，可以在幾小時內處理 30x 基因體，而不需要花費一天或以上的時間來處理。 Microsoft Genomics Service 包含一個經過優化的高效能引擎，可以讀取較大的基因體資料文件，並使用多核心進行處理、排序並對結果進行過濾，最後再將過濾結果寫回。該引擎協調 BWA 與 GATK HaplotypeCaller 的變異位點偵測操作以實現最大吞吐量。此外，它還整合其他一些標準基因體管線中較為簡易的部分，如：重複標記（Duplicate Marking）、定序質量分數重新校正（Base Quality Score Recalibration，BQSR）與索引（indexing）。從單一樣本的原始資料讀取、定序片段比對到變異點偵測，該引擎在一台多核心伺服器上可以在幾個小時以內完成。
  
-Microsoft Genomics service controller 管理雲端運算服務中分佈在機器集區（pools of machines）裡的一批基因體的處理。它維護傳入請求的佇列，將它們分發到運行基因體引擎的伺服器，並監視其性能與進度，最後評估結果。它確保服務在安全的 Web Service API 的後方可以可靠且安全地大規模運行。客戶端無需處理複雜的軟硬體維護與更新，並且可以快速且有效地執行精確的 GATK 標準分析流程。其分析結果可以輕鬆連接到三級分析和與機器學習服務，如：Azure 上的 Microsoft R Server。
+Microsoft Genomics service controller 管理雲端運算服務中分布在機器集區（pools of machines）裡的一批基因體的處理。它維護傳入請求的佇列，將它們分發到運行基因體引擎的伺服器，並監視其性能與進度，最後評估結果。它確保服務在安全的 Web Service API 的後方可以可靠且安全地大規模運行。客戶端無需處理複雜的軟硬體維護與更新，並且可以快速且有效地執行精確的 GATK 標準分析流程。其分析結果可以輕鬆連接到三級分析和與機器學習服務，如：Azure 上的 Microsoft R Server。
 
 
 ### 2.1 Client Architecture
@@ -98,7 +98,7 @@ Microsoft Genomics service 在 Azure 中負責處理基因體資料。整個系�
 
 
 #### 2.1.1  Service Controller
-Service Controller 是個具有可執行後端服務的分佈式 C＃ 網路應用程式。前端接受來自 Azure API 管理的客戶端請求，並將它放置在工作佇列中。Azure Web Job application 會為佇列中每個項目進行排程與監控 Azure Batch 任務。當 Azure Batch 執行任務時，service executable 下載參考資料和輸入文件，並執行 SNAP 引擎以進行比對和變異點偵測，再將結果寫入文件流回到 Azure Storage，最後報告完成情況。整個應用遵循 Azure 在安全性、合規性、審核和監視的方面最佳實踐流程，例如：所有客戶端和應用程式機密均保存在 Azure Key Vault 中以提供保護。
+Service Controller 是個具有可執行後端服務的分布式 C＃ 網路應用程式。前端接受來自 Azure API 管理的客戶端請求，並將它放置在工作佇列中。Azure Web Job application 會為佇列中每個項目進行排程與監控 Azure Batch 任務。當 Azure Batch 執行任務時，service executable 下載參考資料和輸入文件，並執行 SNAP 引擎以進行比對和變異點偵測，再將結果寫入文件流回到 Azure Storage，最後報告完成情況。整個應用遵循 Azure 在安全性、合規性、審核和監視的方面最佳實踐流程，例如：所有客戶端和應用程式機密均保存在 Azure Key Vault 中以提供保護。
 
 
 #### 2.1.2  SNAP Engine

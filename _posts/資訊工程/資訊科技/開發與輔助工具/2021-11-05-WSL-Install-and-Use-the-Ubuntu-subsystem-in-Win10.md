@@ -122,7 +122,7 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
 安裝完成後，可以打開 Windows PowerShell，輸入：
 ```
  $ wsl --list 
- Windows 子系統 Linux 版發佈:
+ Windows 子系統 Linux 版發布:
  Ubuntu-20.04 (預設值)         
 ```
 你可以看到已經完成安裝的子系統。
@@ -167,7 +167,7 @@ https://aka.ms/wslstore
 
 <p class="paragraph-spacing"></p>
 
-另外還有一個方法可以重設，雖然文件中說這叫「取消登錄發佈」，但我目前看不出兩者的差異，所以還是稱之為重設吧 XDDD 這個方法就不用去設定了，在 PowerShell 就可以了：
+另外還有一個方法可以重設，雖然文件中說這叫「取消登錄發布」，但我目前看不出兩者的差異，所以還是稱之為重設吧 XDDD 這個方法就不用去設定了，在 PowerShell 就可以了：
 
 ```
 $ wsl --unregister Ubuntu20.04   
