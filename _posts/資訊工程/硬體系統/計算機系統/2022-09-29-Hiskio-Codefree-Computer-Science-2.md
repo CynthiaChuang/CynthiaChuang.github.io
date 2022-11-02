@@ -36,7 +36,7 @@ IP 位址（Internet Protocol Address，IP Address），可譯為網際協定位
 
 忽然想到我上次把地址填錯，最後竟然還是送達了 XDDD。不過我那個沒錯得很離譜啦，只是把 Tainan 拼成了 Taiwan 而已，我郵遞區號還是寫對的！ 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 課程這邊介紹的是 **IPv4**。在 IPv4 中是使用 **32 位元以點區隔的十進位表示法**：簡單來說，就是用 4 個 0 ~ 255 的數字來表示，類似 `172.217.163.36`。另外，含有一個正在取代 IPv4 的是 IPv6，它是使用 **128 位元冒號區隔的十六進位表示法**，例如：`2001:0DB8:02de:0000:0000:0000:0000:0e13`。
 
@@ -124,7 +124,7 @@ IP 根據用途可以分為 **實體 IP（Public IP）** 及 **虛擬 IP（Priva
 
 小甜餅的正式名稱是 Cookie(s)，它是一個「小型文字檔案」。是為了克服 HTTP 協定的無狀態性，所採用的「額外手段」之一，以維護使用者跟伺服器對談中的狀態。它會儲存一些瀏覽資訊、個人偏好、偏好語言與位置、內容定制...等資訊，通常不會存儲有關敏感訊息，例如信用卡、身分證等。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 根據儲存位置，Cookie 可分為**記憶體 Cookie** 和**硬碟 Cookie**。
 1. **記憶體 Cookie**  
@@ -133,7 +133,7 @@ IP 根據用途可以分為 **實體 IP（Public IP）** 及 **虛擬 IP（Priva
 2. **硬碟 Cookie**  
     當瀏覽器關閉後，尚未到期的 Cookie 會被儲存到硬碟，除非使用者手動清理或過期，否則硬碟 Cookie 不會被刪除。會長期存在，是長期的 Cookie。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 常見的 Cookie 使用情境有：
 1. **網路購物**   
@@ -198,7 +198,7 @@ IP 根據用途可以分為 **實體 IP（Public IP）** 及 **虛擬 IP（Priva
     CIA 三要素（圖片來源: <a href="https://medium.com/hannah-lin/從零開始學資安-什麼是資訊安全-75a7a208e8db">Hannah Lin｜Medium</a>）
 </p> 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 另外介紹系統安全防護的三個面向（3A，AAA）：
 
@@ -211,7 +211,7 @@ IP 根據用途可以分為 **實體 IP（Public IP）** 及 **虛擬 IP（Priva
 3. **稽查（Accounting）**    
     **收集使用者與系統之間互動的資料，並留下軌跡紀錄**。紀錄內容包含監控（Monitoring）、報告（Reporting）與日誌(Logging)，以及稽核（Auditing）、計費（Billing）、分析（Analysis）...等資訊提供未來使用。
  
-<br>
+<p class="paragraph-spacing"></p>
 
 最後，提供了些基本的資安意識。
 1. **杜絕盜版**：不接觸不在規範內的違法使用行為，可以大幅降低資安風險。
@@ -251,7 +251,7 @@ IP 根據用途可以分為 **實體 IP（Public IP）** 及 **虛擬 IP（Priva
     沒有技術的劊客，算是個貶義詞。他不像真正的駭客那樣會發現系統漏洞，通常使用別人開發的程式來惡意破壞他人系統，因而稱之為腳本小子。
 
 
-<br>
+<p class="paragraph-spacing"></p>
 
 
 除了上述的幾個分類外，我還聽過紅帽，知名組織匿名者（Anonymous）記憶中就屬於紅帽。會說記憶中是因為我現在找不到資料出處，不過真的有紅帽這個分類啦，雖然不算主流分類。
@@ -455,7 +455,7 @@ IP 根據用途可以分為 **實體 IP（Public IP）** 及 **虛擬 IP（Priva
     - [CodePen](https://codepen.io/)
     - [JSFiddle](https://jsfiddle.net/)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 嗚，課程中還有稍微提了下網頁三巨頭 － HTML、CSS、JavaScript，不過我這邊就不提了，有需要的話去看看 [〈CodeFree｜喝一杯咖啡，輕鬆學 HTML〉](https://cynthiachuang.github.io/Hiskio-Codefree-HTML)這篇。
 
@@ -854,7 +854,7 @@ RWD 是目前最受歡迎的網頁設計之一，其優點如下：
 
 這種工作模式我看過我前主管跟另外一位組員做過幾次，不過他們不會整個專案都這們幹，因為太耗時了！通常都是在開發新功能或重構才會這麼做 XDDD
 
-<br>
+<p class="paragraph-spacing"></p>
 
 它這邊提了 3 個結對程式設計的優點，有點懶直接把課程內容整個貼過來：
  
@@ -869,7 +869,7 @@ RWD 是目前最受歡迎的網頁設計之一，其優點如下：
 3. **產出質量**  
     因結對時，會有觀察員負責審查所輸入的程式碼。因此錯漏與 bug 能在第一時間及時修正，如此便能在成果初次呈現之時就提升其質量並且省去最後 debug 步驟的精力和時間。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 至於結對程式設計的效率則與結對的人選有關：
 
@@ -1146,7 +1146,7 @@ IDE 整合開發環境（圖片來源: <a href="https://codefree.hiskio.com/cour
 5. **雲端開發環境**  
     另外一種我常用的開發方式，是用 SaaS，也就是[雲端開發環境](https://www.inside.com.tw/article/4177-best-online-ides-let-you-code-anywhere)，它可以免除繁瑣複雜的前置作業。不過也因為它是 SaaS，所以程式碼會儲存在供應商的儲存服務中，所以我通常是用來快速驗證，或是臨時寫程式時才會用。
 
-<br>
+<p class="paragraph-spacing"></p>
 
 <p class="illustration">
 <img src="https://i.imgur.com/RP7vuw2.png" alt="IDE 整合開發環境">
@@ -1334,7 +1334,7 @@ IDE 整合開發環境（圖片來源: <a href="https://codefree.hiskio.com/cour
 
 > 想了解算術運算子，點[這裡](https://cynthiachuang.github.io/Hiskio-Codefree-Python/#3-3資料型態數字)；想了解邏輯運算子，點[這裡](https://cynthiachuang.github.io/Hiskio-Codefree-Python/#4-6符號-and-與-or)
 
-<br>
+<p class="paragraph-spacing"></p>
 
 而 **賦值運算子（Assignment operators）** 之前沒有專門整理過，這邊在稍微整理下。
 

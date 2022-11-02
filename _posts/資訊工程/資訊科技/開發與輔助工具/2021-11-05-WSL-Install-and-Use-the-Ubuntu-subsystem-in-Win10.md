@@ -53,7 +53,7 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
 
     - [v7.2.0 Release of PowerShell](https://github.com/PowerShell/powershell/releases)
  
-<p class="paragraph-spacing"></p> 
+    <p class="paragraph-spacing"></p> 
 
 2. **安裝 WSL**  
     在終端機中輸入下列指令：
@@ -82,7 +82,7 @@ WSL 是 Windows Subsystem for Linux 的縮寫，是由 Microsoft 與 Canonical �
     🤟 補充 WSL2 安裝方式 → <a href="https://cynthiachuang.github.io/Install-Docker-in-WSL2/#安裝-wsl2">安裝 WSL2</a>
     </div>
 
-<p class="paragraph-spacing"></p> 
+    <p class="paragraph-spacing"></p> 
 
 3. **安裝 Linux 發行**  
     在這邊遇到了點小問題，如果我按照剛剛的提示訊息連接到 [https://aka.ms/wslstore](https://aka.ms/wslstore)，會被向 Microsoft Store，但卻會得到下列訊息：
