@@ -2,7 +2,6 @@
 title: CodeFree｜喝一杯咖啡，輕鬆學電腦科學 - 下
 date: 2022-10-07
 is_modified: false
-disqus: cynthiahackmd
 categories:
 - "硬體系統 › 計算機系統"
 tags:
