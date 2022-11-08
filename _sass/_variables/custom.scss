@@ -56,7 +56,7 @@ $image-text                 : Gainsboro;
 // Font, line-height, and elements colors.
 // --------------------------------------------
 // Font size
-$font-size-base           : 16px;
+$font-size-base           : 18px;
 $font-size-small          : $font-size-base - 2px;
 $font-size-smaller        : $font-size-base - 4px;
 $font-size-large          : $font-size-base + 2px;
@@ -65,5 +65,29 @@ $font-size-larger         : $font-size-base + 4px;
 // Global line height
 $line-height-base           : 1.8;
 
-$content-desktop                : 800px;
+$content-desktop                : 900px;
 $content-desktop-large          : 1000px;
+
+// Table
+// --------------------------------------------------
+$table-font-size : $font-size-base;
+
+
+// Code & Code Blocks
+// --------------------------------------------------
+$code-font-size : $font-size-small;
+
+// Posts Collpase
+// --------------------------------------------------
+$read-more-font-size : $font-size-small; 
+
+
+// Sidebar
+// Variables for sidebar section elements.
+// --------------------------------------------------
+$site-author-name-font-size : 20px;
+$site-description-font-size : 16px;
+$site-state-item-count-font-size : 22px;
+$site-state-item-name-font-size : 16px;
+
+$font-size-headings-base : 26px;
