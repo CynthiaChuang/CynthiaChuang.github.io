@@ -1,7 +1,7 @@
 ---
 title: "【K8S Beginners 筆記】CH 1~3 Introduction、Overview and Setup"
-date: 2022-11-03 
-is_modified: false
+date: 2022-11-09 
+is_modified: true
 categories:
 - "雲端網路 › 雲端運算"
 tags:
@@ -133,7 +133,7 @@ Kubernetes，簡稱為 K8S，是用於<mark>自動部署、擴充和管理「容
     虛擬機和容器之間的差異（圖片來源: <a href="https://www.udemy.com/course/learn-kubernetes/">課程截圖</a>）
 </p>
 
-這邊節錄部份 [Microsoft 對於容器與虛擬機器](https://learn.microsoft.com/zh-tw/virtualization/windowscontainers/about/containers-vs-vm)的比較：
+這邊節錄部分 [Microsoft 對於容器與虛擬機器](https://learn.microsoft.com/zh-tw/virtualization/windowscontainers/about/containers-vs-vm)的比較：
 
 
 | 功能       | 虛擬機器                                                                      | 容器                                                                                           |
@@ -368,6 +368,11 @@ Workers node，也就是我們的負責執行 container 的小小兵（minion）
     - [ ] docker
 
 
+### 2-5｜補充資料
+
+- [Kubernetes Concepts](https://kubernetes.io/docs/concepts/) 
+
+
 
 ## CH 3｜Setup Kubernetes 
 快速設置 K8S 的 N 個方法。
@@ -438,6 +443,42 @@ Workers node，也就是我們的負責執行 container 的小小兵（minion）
 </p>
 
 
+### 3-4｜Google Kubernetes Engine (GKE)
+是說，我沒有打算在 local 端安裝 minikube，但我也需要環境測試課程中的指令，所以我是去申請 [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine?hl=zh-tw)，基本上新客戶地一個月有 300 美元的扣打，夠這堂課程用了。
+
+<p class="illustration">
+    <img src="https://i.imgur.com/xYBglvz.png" alt="領取 $300 美元的免費抵免額立即試用">
+    領取 $300 美元的免費抵免額立即試用
+</p>
+
+基本上進去後，點選 Kubernetes Engine 就能從 UI 上來建立 cluster，不然啟用 cloud shell 也可以藉由指令來啟動 cluster：
+
+```shell
+## 設定預設區域
+$ gcloud config set compute/zone us-west1-a
+
+## 建立 cluster，需花點時間
+$ gcloud container clusters create kuar-cluster                                                                         
+Default change: VPC-native is the default mode during cluster creation for versions greater than 1.21.0-gke.1500. To create advanced routes based clusters, please pass the `--no-enable-ip-alias` flag
+Default change: During creation of nodepools or autoscaling configuration changes for cluster versions greater than 1.24.1-gke.800 a default location policy is applied. For Spot and PVM it defaults to ANY, and for all other VM kinds a BALANCED policy is used. To change the default values use the `--location-policy` flag.
+Note: Your Pod address range (`--cluster-ipv4-cidr`) can accommodate at most 1008 node(s).Creating cluster kuar-cluster in us-west1-a... Cluster is being configured...working.
+
+## 取得權限操作 cluster 的權限
+$ gcloud container clusters get-credentials kuar-cluster --zone us-west1-a --project your-project-id
+Fetching cluster endpoint and auth data.
+kubeconfig entry generated for kuar-cluster.
+```
+
+<br>
+
+建立完之後的 UI 長這樣：
+
+<p class="illustration">
+    <img src="https://i.imgur.com/lJNe5Vz.png" alt="GKE UI">
+    GKE UI
+</p>
+
+
 
 ## 其他連結
 1. 課程內容：[Kubernetes for the Absolute Beginners - Hands-on](https://www.udemy.com/course/learn-kubernetes/)
@@ -459,8 +500,9 @@ Workers node，也就是我們的負責執行 container 的小小兵（minion）
 
 ## 更新紀錄
 <details class="update_stamp">
-  <summary>最後更新日期：2022-11-03</summary>
+  <summary>最後更新日期：2022-11-09</summary>
   <ul>
+    <li>2022-11-09 更新：新增 GKE、K8S 補充資料</li>
     <li>2022-11-03 發布</li>
     <li>2022-11-02 完稿</li>
     <li>2022-10-05 起稿</li>
