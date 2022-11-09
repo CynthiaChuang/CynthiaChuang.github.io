@@ -31,7 +31,7 @@ tags:
     在本次演講中，我將使用 aetherAI 的真實案例來說明人工智慧如何將更高的標準引入醫學影像分析，將傳統的定性實踐轉變為定量實踐並最終對臨床決策過程產生影響的潛力。
 - **相關連結**：
     - 演講： [A21810RT](https://www.nvidia.com/zh-tw/gtc/session-catalog/?search=A21810RT&search.language=1594320459782004L0mo&tab.catalogtabfields=1600209910618002Tlxt#/session/1598497404859001a22b)
-    - [雲象科技將玻片影像數位化，打造世界級 AI 醫療影像公司 | TechNews 科技新報](https://technews.tw/2019/07/09/aetherai-digitizes-microscope-images-and-possesses-identification-ability-equal-to-that-of-a-pathologist/)       
+    - [雲象科技將玻片影像數位化，打造世界級 AI 醫療影像公司｜TechNews 科技新報](https://technews.tw/2019/07/09/aetherai-digitizes-microscope-images-and-possesses-identification-ability-equal-to-that-of-a-pathologist/)       
     <p class="illustration">
         <img src="https://i.imgur.com/S8Li945.png" alt="">
     </p>
@@ -274,8 +274,8 @@ tags:
     </p>    
      
 <div class="alert info"> 
-<div class="head"參考資料</div>
-1. <a href="http://www.ipshop.xyz/12632.html">小樣本學習（Few-shot Learning）綜述</a><p class="paragraph-spacing"></p>
+<div class="head">參考資料</div>
+1. <a href="http://www.ipshop.xyz/12632.html">小樣本學習（Few-shot Learning）綜述</a><br>
 2. <a href="https://medium.com/sherry-ai/%E8%81%AF%E7%9B%9F%E5%BC%8F%E5%AD%B8%E7%BF%92-federated-learning-b4cc5af7a9c0">聯盟式學習(Federated Learning). 突破隱私權的重圍！</a><br>
 </div>
     

@@ -31,7 +31,10 @@ p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個�
 
 ## 建置步驟
 ### 1. 新增專案
-新增名為「`username`.github.io」的專案，這個 `username` 指的是自己的 GitHub 帳號。這不僅是你的專案名稱，也是你的 blog 網址。<p class="paragraph-spacing"></p>
+新增名為「`username`.github.io」的專案，這個 `username` 指的是自己的 GitHub 帳號。這不僅是你的專案名稱，也是你的 blog 網址。
+
+<p class="paragraph-spacing"></p>
+
 專案成立後，按照 Quick setup 的提示準備好專案的資料夾。
 
 

@@ -31,26 +31,30 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
 
 ### 安裝與配置流程
-0. **事前準備**  
+1. **事前準備**  
     請先閱讀[參考文件](https://router.vuejs.org/zh/)
 
-1. **Vue Router**  
+2. **Vue Router**    
     在專案下輸入安裝指令
-	```shell
-	$ npm install vue-router --save
-	```
-    
-	指令最後的 `-save` 或是 `save-dev` 是指自動將把套件稱和版本號添加到 package.json 文件中 dependencies / devdependencies 部分。
-    
+    ```shell
+    $ npm install vue-router --save
+    ```  
+    指令最後的 `-save` 或是 `save-dev` 是指自動將把套件稱和版本號添加到 package.json 文件中 dependencies / devdependencies 部分。
+
+    <p class="paragraph-spacing"></p>
+
     一般來說，為專案添加套件時必須先進行安裝，即在專案下輸入安裝指令，然後連同版本號手動將他們添加到配置文件 package.json 中的 dependencies 裡
     ```shell
     $ npm install vue-router
     ```
-    
+
+    <p class="paragraph-spacing"></p>
+
     若在指令中添加 `-save` 或是 `save-dev` 可以省掉你手動修改的 package.json 文件的步驟。
 
-2.  **路由的配置**  
-    添加 **src/router/index.js**，當作前端路由的配置檔案，決定哪個網址讀取哪份檔案。
+3. **路由的配置**  
+    添加 **src/router/index.js**，當作前端路由的配置檔案，決定哪個網址讀取哪份檔案。  
+
     ```javascript
     // 引入官方元件
     import Vue from 'vue'
@@ -67,68 +71,67 @@ Vue Router 是由前端所模擬的網頁路由技術，可以讓使用者透過
 
     });
     ```
-	<p class="paragraph-spacing"></p>
-3. **引入Vue Router**  
-    在 **entry**（src/main.js）匯入 Vue Router，並在 Vue 元件中引入該物件。
-	```javascript
-	import Vue from 'vue'
-	import App from './App'
-	import router from "./router" 
-	 
-	new Vue({
-	   el: '#app',
-	   components: { App },
-	   template: '<App/>',
+
+4. **引入Vue Router**  
+    在 **entry**（src/main.js）匯入 Vue Router，並在 Vue 元件中引入該物件。  
+    ```javascript
+    import Vue from 'vue'
+    import App from './App'
+    import router from "./router" 
+
+    new Vue({
+    el: '#app',
+    components: { App },
+    template: '<App/>',
     router,
-	})
-	```
-	<p class="paragraph-spacing"></p>
-  
-  我自己在練習的時候在這步驟卡好久，一直得到下面 error
+    })
+    ```
 
-	<p class="illustration">
-	  <img src="https://i.imgur.com/xjcYc56.png">
-	</p>
+    <p class="paragraph-spacing"></p>
 
-	<p class="paragraph-spacing"></p>
-  找了一陣子才發現，我一開始寫的時候是用 
-  ```javascript
-  import Router from "./router" 
-  ``` 
-  
-  只要把它改成
-  ```javascript
-  import router from "./router"
-  ``` 
-  下面 Vue 元件中引入該物件的地方也把 **Router** 換成 **router** 就好了。  
+    我自己在練習的時候在這步驟卡好久，一直得到下面 error：  
+    <p class="illustration">
+    <img src="https://i.imgur.com/xjcYc56.png">
+    </p>
 
-	就是不曉得為什麼這樣就 work 了？ 
+    找了一陣子才發現，我一開始寫的時候是用   
+    ```javascript
+    import Router from "./router" 
+    ``` 
+    只要把它改成  
+    ```javascript
+    import router from "./router"
+    ``` 
+    下面 Vue 元件中引入該物件的地方也把 **Router** 換成 **router** 就好了。  
+
+    <p class="paragraph-spacing"></p>
+
+    就是不曉得為什麼這樣就 work 了？ 
     
-4. **定義路徑**  
-    回到 src/router/index.js 定義路徑，在 VueRouter 元件中新增一個名為 **routes** 的 **陣列** ，裡面包含數的定義好的路徑物件。
-	```javascript
-	// 匯出給 entry 使用
-	export  default  new  VueRouter({
-	   routes:[{
-	      name:"HomePage", // 元件呈現的名稱
-	      path:"/Hello", // 對應的虛擬路徑
-	      component:  Hello  // 對應的元件
-	   }],
-	});
-	```
-	<p class="paragraph-spacing"></p>
+5. **定義路徑**  
+    回到 src/router/index.js 定義路徑，在 VueRouter 元件中新增一個名為 **routes** 的 **陣列** ，裡面包含數的定義好的路徑物件。   
+    ```javascript
+    // 匯出給 entry 使用
+    export  default  new  VueRouter({
+        routes:[{
+        name:"HomePage", // 元件呈現的名稱
+        path:"/Hello", // 對應的虛擬路徑
+        component:  Hello  // 對應的元件
+        }],
+    });
+    ```
 	
-5. **加上 router-view**  
+6. **加上 router-view**  
     回到 **App.vue** 中更改 template，在 template 中加上 router-view 的標籤（可以順便 mark 掉原先的 HelloWorld 標籤）
     ```html
     <template>
-       <div id="app">
-          <router-view></router-view>
-       </div>
+        <div id="app">
+        <router-view></router-view>
+        </div>
     </template>
     ```
 
-6. **測試**  
+7. **測試**  
     在網址中加上 Hello，就可連到所定義的元件。
 
 
