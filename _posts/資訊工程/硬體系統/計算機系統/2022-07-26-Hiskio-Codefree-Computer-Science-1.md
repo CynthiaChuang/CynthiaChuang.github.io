@@ -5,8 +5,6 @@ is_modified: false
 categories:
 - "硬體系統 › 計算機系統"
 tags:
-- "Editing"
-- "硬體系統 › 計算機系統"
 - 計算機概論
 - 讀書筆記
 - Hiskio
