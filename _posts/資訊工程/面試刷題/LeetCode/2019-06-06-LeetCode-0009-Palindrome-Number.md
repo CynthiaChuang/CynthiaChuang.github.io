@@ -11,7 +11,7 @@ tags:
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```
@@ -33,12 +33,12 @@ Input: 10
 Output: false
 Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ```
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 
 >**Follow up:**
 Coud you solve it without converting the integer to a string?
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:** `Math`
 
@@ -47,7 +47,7 @@ Coud you solve it without converting the integer to a string?
 ## 解題邏輯與實作
 既然是判斷回文，那麼直覺作法就是比頭尾是否相同，如果轉字串實做會變得很簡單，所以我就直接做 Follow up 要求了。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 取尾數比較常見使用 mod (%) 即可。但取最高數的頭則比較麻煩，以 20001 為例，想取出最高位數，則必須計算 20001 // 10000 ，而除數 10000，其實可以換成這樣表示 $10^{len(被除數)-1}$ 。但另一個問題是，被除數是 int 沒有 len 這個函數，因此實際計算時改用迴圈計算被除數除以 10 直到小於 10 的次數，即為 len(被除數)-1 的值。
 
@@ -75,13 +75,13 @@ class Solution:
 
       return True		
 ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 一開始的判斷是判斷兩種 case：
 1. 是否為負數，若是負數則不可能是回文
 2. 判斷尾數使否為 0，因為最高位數不可為 0 ，因此若尾數為 0 則不可能是回文，當然必須排除掉 0 本身。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 除比頭尾外，另一個想法是翻轉後兩數直接相比，個人推測這種方法的效能應該會比較好。
 
@@ -102,7 +102,7 @@ class Solution:
 
       return res
 ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 果然效能好很很多，從 **88 ms/60.57 %** 提升到 **56 ms/ 99.10%** 。
 

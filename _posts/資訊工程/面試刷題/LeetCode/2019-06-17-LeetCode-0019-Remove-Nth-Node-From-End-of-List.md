@@ -18,17 +18,17 @@ Given linked list: 1->2->3->4->5, and _n_ = 2.
 
 After removing the second node from the end, the linked list becomes 1->2->3->5.
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 > **Note:**
 > Given  _n_  will always be valid.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 >**Follow up:**
 >Could you do this in one pass?
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`Linked List`、`Two Pointers`
 
@@ -74,7 +74,7 @@ class Solution:
       return dummy.next
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 只是上面的作法，並不符合 **Follow up** 的要求，而且效率也並不是很突出，*~~重點是程式碼好醜~~*。所以又進一步使用 dict 優化，這邊先將 node 本身與對應的 index 放入 dict，之後即得出鏈結串列長度，且可用 dict 操作元素的方式來進行 node 移除。
 
@@ -109,7 +109,7 @@ class Solution:
       return dummy.next
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 執行結果顯示第二版的效能（36 ms /  91.17%），也比第一版有所提昇（40 ms / 77.72 %）。
 

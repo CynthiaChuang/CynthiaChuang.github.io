@@ -50,7 +50,7 @@ tags:
     $ sudo dpkg-reconfigure gdm3
     ```
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     輸入完密碼後，會出互動介面，選擇上面的 GDM3：
     <p class="illustration">
@@ -67,7 +67,7 @@ tags:
     <img src="https://i.imgur.com/NrTbmF0.png" alt="LightDM">
     </p>
    
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>   
+<br class="big"><br class="big">   
 
 既然 LightDM 有指令可以鎖定螢幕，GDM3 當然也有：    
 ```bash

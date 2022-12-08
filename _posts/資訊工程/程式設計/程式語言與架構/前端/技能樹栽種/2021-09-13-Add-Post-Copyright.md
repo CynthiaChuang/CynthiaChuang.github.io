@@ -57,7 +57,7 @@ tags:
       license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
     ```
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 2. **多語系設定**  
     預設文字會被放在 `_data/languages/default.yml` 中，不過實際顯示文字通常會根據你在 `/_config.yml` 中所設定的 `language` 而有所不同。
@@ -104,7 +104,7 @@ tags:
     ```
     {% endraw %}
      
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 2.  **修改 HTML**   
     我不喜歡原本的 style，所以我完整複寫 `include _macro/post-copyright.html` 中所有的程式碼：
@@ -127,7 +127,7 @@ tags:
     ```
     {% endraw %}
        
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 3.  **修改 CSS**  
     根據原本的的實做架構，CSS 的設定分別散落在 `_sass/_common/components/post/post-copyright.scss` 與 `_sass/_variables/base.scss` 兩隻程式中。
@@ -165,7 +165,7 @@ tags:
         color: $greendark-ligh ,
     );
     ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 最後出來的結果長這樣：
 
@@ -189,7 +189,7 @@ tags:
     ``` 
     {% endraw %}
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 2. **ymal 設定**  
     搞定後，當你某篇文章不放置版權訊息時，就在文章上方的 yaml 區，設定的 `copyright` 的 flag：

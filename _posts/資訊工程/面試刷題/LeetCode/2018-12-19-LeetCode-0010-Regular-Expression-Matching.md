@@ -19,7 +19,7 @@ The matching should cover the  **entire**  input string (not partial).
 > -   `s` could be empty and contains only lowercase letters  `a-z`.
 > -   `p`  could be empty and contains only lowercase letters  `a-z`, and characters like `.` or `*`.
 
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 **Example 1:**
 ```python
 Input:**
@@ -63,7 +63,7 @@ s = "mississippi"
 p = "mis*is*p*."
 Output: false
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`Backtracking`、`Dynamic Programming`、`String`
 
@@ -90,7 +90,7 @@ Output: false
 		- 是，則呼叫遞迴傳入 string[1:] 與 pattern[1:]
 		- 否，則回傳 False
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外針對流程中幾個遞迴傳入的Case進行說明：
 - **Case1**： pattern 第二字元為 `*` 且 string 是為空字串，則呼叫遞迴傳入 string 與 pattern[2:]   

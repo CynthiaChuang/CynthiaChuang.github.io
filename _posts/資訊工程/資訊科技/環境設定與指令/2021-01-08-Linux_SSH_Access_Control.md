@@ -25,7 +25,7 @@ $ ssh 帳號@主機
 
 建立連線時，輸入相對應的密碼，以完成認證。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 因為有些是開發用的伺服器，為了方便大家隨時使用，過往僅用密碼設置進行認證。不過根據這次的資安政策，需要針對伺服器最下列的設置：
 
@@ -83,7 +83,7 @@ Linux 伺服器的預設是允許 root 管理者帳號遠端登入的，若要�
 - PermitRootLogin yes
 + PermitRootLogin no
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在修改了 `sshd_config` 文件之後，一樣必須重起 sshd，以套用變更。
 ```bash

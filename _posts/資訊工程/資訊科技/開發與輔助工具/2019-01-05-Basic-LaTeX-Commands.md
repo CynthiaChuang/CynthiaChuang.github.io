@@ -40,7 +40,7 @@ tags:
 - [參考資料](#參考資料)
 - [更新紀錄](#更新紀錄)
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 > **Warning**  
 > 下列指令前後應該皆用 **\$\$** 包圍，告訴編譯器這邊是應該用 mathjax 來渲染。   
@@ -206,7 +206,7 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\Pi$|\Pi||$\Sigma$|\Sigma||$\Upsilon$|\Upsilon||$\Phi$|\Phi|
 |$\Psi$|\Psi||$\Omega$|\Omega|
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **小寫字母**  
 

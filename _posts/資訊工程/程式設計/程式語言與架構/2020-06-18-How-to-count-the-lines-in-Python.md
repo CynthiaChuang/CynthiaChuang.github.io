@@ -28,7 +28,7 @@ count = len(open(file_name,'rb').readlines())
 ```
 
 但這方法並不適用於大檔案，我的測試檔案有 187 份每一份的大小是 5G，用這方法讀應該會卡到往生 :ghost: 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 因此為了減輕讀取壓力，我設定了每次讀取位元組的限制：
 
@@ -84,7 +84,7 @@ print ((endtime - start))
 ```
 
 不過它讀進來的是字串，沒有行的概念，所以統計換行符號個數來計算行數。算下來讀取一份檔案約 **4.244061231613159** 秒。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 組長問我用 `rb` 跟 `r` 來取檔案速度到底差多少？反正也就點工，趁出去吃飯的時候，順便跑了下。出來結果一份檔案要  **16.770071983337402** 秒，是用 `rb` 模式讀取時間的 4 倍。
  
@@ -103,7 +103,7 @@ endtime = time.time()
 print ((endtime - start))
 ```
 一份文件的讀取時間約 **4.3013999462127686** 秒。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 有看到有人在把跟 `enumerate` 一起用，省掉 count 累加的部分，跑出來的時間 **4.196686029434204** 秒，倒是目前最低的。
 

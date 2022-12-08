@@ -42,7 +42,7 @@ Sets the current device.  <br>
 <br>
 Usage of this function is discouraged in favor of device. In most cases it’s better to use CUDA_VISIBLE_DEVICES environmental variable.
 </div>
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外在看 Horovod 所提供的兩隻範例程式碼（[resnet50](https://github.com/horovod/horovod/blob/master/examples/pytorch/pytorch_imagenet_resnet50.py) 與 [mnist](https://github.com/horovod/horovod/blob/master/examples/pytorch/pytorch_mnist.py)）的時候，發現在 `set_device` 之後後都會接著：
 
@@ -52,7 +52,7 @@ torch.cuda.manual_seed(args.seed)
 
 推測是因為每個節點在起網路的時候，初始值不盡相同，因此為了使初始值相同所以啟用了該值。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過, 我想了一下，我只有在做分散式訓練的會希望所有網路擁有相同的初始值，所以我改了下程式，多點判斷式：  
 1. 進行分散式訓練的時候。
@@ -82,7 +82,7 @@ lr = 0.001
 opt = optim.Adam(model.parameters(), lr=lr*hvd.size())
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 後來在 [resnet50](https://github.com/horovod/horovod/blob/master/examples/pytorch/pytorch_imagenet_resnet50.py) 中有看到它們實做的學習率調整，看起來是做 warmup ，不過這部分我沒跟著調整了。
 

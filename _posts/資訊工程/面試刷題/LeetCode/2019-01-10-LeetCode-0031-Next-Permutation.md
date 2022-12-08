@@ -15,7 +15,7 @@ If such arrangement is not possible, it must rearrange it as the lowest possible
 <!--more-->
 The replacement must be  **[in-place](http://en.wikipedia.org/wiki/In-place_algorithm)**  and use only constant extra memory.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.
 ```python
@@ -24,7 +24,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 1,1,5  →  1,5,1
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:** `Array`
 
@@ -45,7 +45,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 [1, 9, 4, **5,  2,  1**]   
 [1,  9,  4, **1,  2, 5**]  
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 那麼還有一個問題：如何找到第一個需要變動的的數字？
 
@@ -53,7 +53,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 實作時，建議從後面向前找，從後面找來如果是升序的，就比較下一個數字，直到找到第一個降序的點為止。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 整理一下實做步驟：
 1. 由後向前搜尋找到第一個降序的點，其 index 為 i，若無則，將整個數列反轉後回傳

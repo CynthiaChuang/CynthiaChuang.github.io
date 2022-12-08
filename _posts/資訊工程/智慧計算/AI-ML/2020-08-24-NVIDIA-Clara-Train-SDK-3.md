@@ -33,7 +33,7 @@ tags:
 一個百寶袋的概念?（圖片來源: <a href="https://www.dora-world.com.tw/character.php">哆啦A夢台灣官網</a>）
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這次重新造訪 Clara，發現除了原先的醫療影像平台外，還多了兩個平台：
 1. **Clara for Medical Imaging**：傳送門 [link1](https://developer.nvidia.com/clara-medical-imaging)、[link2](https://www.nvidia.com/zh-tw/healthcare/clara-imaging/)
@@ -184,7 +184,7 @@ DEXTR3D（圖片來源: <a href="https://docs.nvidia.com/clara/tlt-mi/clara-trai
 > Tomas Sakinis, Fausto Milletari, Holger Roth, Panagiotis Korfiatis, Petro Kostandy, Kenneth Philbrick, Zeynettin
 Akkus, Ziyue Xu, Daguang Xu, Bradley J. Erickson
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 除了 DEXTR3D Model 外，本次 AIAA 新增了 DeepGrow，它可透過 CNN 接收標注前後景的方式，生成切割結果，以協助器官標注。
   
@@ -260,7 +260,7 @@ MMAR 是 Clara Train SDK 用來安排在開發生命週期中工作的資料結�
 4.  `eval`：eval 預設結果輸出的目錄。    
 5.  `models`：tensorflow checkpoint 儲存的目錄。
   
-<p class="paragraph-spacing"></p>
+<br class="big">
   
 不過，比較重要的就三個目錄`commands`、`config` 和 `models`  
 <p class="illustration">
@@ -366,7 +366,7 @@ Clara Train v3.0 AutoML workflow（圖片來源: <a href="https://developer.nvid
 Using Auto ML for float parameter using RL（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nvidia:med:clara:getting_started">NVIDIA</a>）
 </p>
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 針對 Clara Training Framework 所提出的 RL 自動搜索方法。該方法適合用於超參數調整，並設置機率以挑選資料增強的方法。該方法在 3D medical image segmentation 進行驗證，搜索後可以有效提升模型基礎性能，並且可與其他手動調整參數的 SOTA 切割演算法相比擬。
 
@@ -389,7 +389,7 @@ A comparison of validation accuracy（圖片來源: <a href="https://developer.n
 
 看到這裡有種分散式訓練的即視感，像是多節點訓練中，每個人讀取資料集中不同部分，i.e. 資料集中的子資料集。但話說回來資料不離開設備就算是遵守了隱私條款嗎？這些訓練所得權重也算是資料的一部分吧？算了，先別戰這個問題，我們先假設這滿足了隱私的需求吧。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在聯盟式學習可以根據資料型態有可在細分成：
 1. **橫向聯盟式學習（horizontal federated learning）**  
@@ -425,13 +425,13 @@ Federated Learning 步驟（圖片來源: <a href="https://secbuzzer.co/post/70"
 Federated Learning 步驟（圖片來源: <a href="https://docs.nvidia.com/clara/tlt-mi/clara-train-sdk-v3.0/nvmidl/additional_features/federated_learning.html">documentationg</a>）
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在運行聯盟式學習模型訓練時，必須先啟動伺服器訓練服務。伺服器 session 會控制每次訓練所需最少與最多的節點數量。若是一個節點要加入訓練則必須先發送請求。伺服器會檢查節點的憑證，並執行身分驗證過程以驗證節點。若驗證成功，則伺服器將會發送 token 到節點；否則，則拒絕。
  
 完成驗證後，節點會發送另一個請求從伺服器取得目前訓練模型，以開始訓練。節點決定在每個聯盟式學習的 step 中，要進行多少 epoch 訓練，當完成該輪訓練後，就把訓練後的參數送往伺服器。當伺服器從所有參與的節點接收到所有更新的參數後，會根據權重演算法執行模型聚合，並得到更新後的整體訓練模型。聯盟式學習會達到 config 中配置 `num_rounds` 後才停止訓練。  
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這張圖把剛剛說到節點的訓練過中詳細標了出來。
 
@@ -528,7 +528,7 @@ Smart Cache（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nv
 1. 保留數若設置太高，則 OS 可能會使用硬碟上的虛擬記憶體來進行交換，導致速度大大降低；但若太低，則會使得訓練速度仍受到 IO 速度的影響。
 2. 而替換比例若設置太高，可能在一個 epoch 完成前來不及完成 non-deterministic 轉換序列；但若太低，替換速率緩慢，可能需要更多的 epoch 數已進行收斂。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 要實現 Smart Cache，只需使用 ImagePipelineWithCache 的子類，並：
 1. 關閉 `batched_by_transforms`

@@ -34,7 +34,7 @@ tags:
 ## 路由組件傳參
 因為剔除動態路由的關係，使得我碰到了點瓶頸。還好後來在文件找到[路由組件傳參](https://router.vuejs.org/zh/guide/essentials/passing-props.html)，它可以通過 props 解耦，這正是我需要的。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 根據文件，有三種方式可以透過 props 解耦
 
@@ -67,7 +67,7 @@ export default {
 </script>
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 接下來再 router/index.js 的檔案中，定義相關路由與一個動態路徑參數，最重要的是<mark> 為你的命名視圖添加 `props` 選項並設置為True</mark>。
 
@@ -85,11 +85,11 @@ export default new Router({
   ]
 })
 ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 若你的路徑參數與 props 變數名稱不相同，或是路徑參數多於 props 所定義的變數，這些<mark>無法被元件的 prop 所識別且獲取的特性</mark>，則可以在 `vm.$attrs` 中查看。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 
 如果你的主視圖是巢狀路由架構，則為命名視圖所添加的 `props` 需配合 `components` 一同改成物件，其 key 值則對應到在主視圖中 router-view 的標籤所定義的名字。
@@ -104,7 +104,7 @@ export default new Router({
 </template>
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 則路由定義如下，在路由中定義的所有動態路徑參數，將會全數傳遞這兩個元件，若參數可被該元件的 prop 所識別且獲取，則會對應到 props 變數反之則會出現 `vm.$attrs` 中。
 
@@ -125,7 +125,7 @@ export default new Router({
 })
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 若僅其中一個元件不需要接收 props，則可將將其布林模式設定為 False。
 
@@ -150,7 +150,7 @@ export default new Router({
   ]
 })
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 若是巢狀路由架構，則與布林模式一樣使用物件來為不同的 router-view 元件傳遞物件。
 
@@ -169,7 +169,7 @@ export default new Router({
   ]
 })
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 若是其中一個元件不需要接收 props，則可將其布林模式設定為 False，或是不將其加入 key 值。
 ```javascript
@@ -201,7 +201,7 @@ export default new Router({
 
 以這組code 為例，如過在 URL 中輸入 `/from?w=Taiwan`，將會傳入 `{from: 'Taiwan'}`，交由元件的 prop 進行識別。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 也可以透過函式將參數轉成你所需要的名稱
 ```javascript
@@ -215,7 +215,7 @@ export default new Router({
     }
     
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 巢狀路由架構的部分，一樣使用物件來為不同的 router-view 元件傳遞函式
 ```javascript
@@ -235,7 +235,7 @@ export default new Router({
   ]
 })
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 關閉其中一個元件的 props，與前兩個模式一樣則將它設定為 False，或是不將其加入 key 值。
 ```javascript

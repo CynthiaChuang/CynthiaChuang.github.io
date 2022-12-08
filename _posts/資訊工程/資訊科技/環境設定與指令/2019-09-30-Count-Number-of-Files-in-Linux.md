@@ -19,7 +19,7 @@ tags:
 $ find ./ -type f | wc -l
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 若只想計算某特定副檔名的檔案數，則加上 `-name`
 
@@ -27,7 +27,7 @@ $ find ./ -type f | wc -l
 $ find ./ -type f -name *.py | wc -l
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 其中 `find ./ -type f` 是指找到此目錄下的所有一般文件。
 
@@ -42,7 +42,7 @@ $ find ./ -type f -name *.py | wc -l
 $ ls -lR | grep "^-" | wc -l
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 計算某特定副檔名，則在 `ls` 指令後加上
 
@@ -56,7 +56,7 @@ drwxr-xr-x  8 Cynthia_Chuang cynthia-chuang 4096 12月 31 16:16 .git/
 -rw-r--r--  1 Cynthia_Chuang cynthia-chuang 1315 12月  9 09:49 .gitignore
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 在 `grep "^-"` 中後面的字串是 [Regular Expression](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions#special-caret)，是在宣告開頭字元匹配要 `-`，換句話說就是要濾出檔案。反之若是想計算有幾個資料夾，則下
 
@@ -73,7 +73,7 @@ $ ls -lR | grep "^-d" | wc -l
 $ ls -l | grep "^-" | wc -l
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 想知道檔案+目錄有多少個
 ```shell

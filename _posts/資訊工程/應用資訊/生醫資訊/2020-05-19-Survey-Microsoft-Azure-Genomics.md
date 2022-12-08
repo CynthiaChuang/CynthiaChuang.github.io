@@ -123,7 +123,7 @@ Microsoft Genomics 系統由上而下總共可分為三個部分，分別是：S
 
 最後的分析結果接著向下做三級分析和或是其他機器學習。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **SNAP Engine**  
 SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發的 [SNAP short read aligner](http://snap.cs.berkeley.edu/#publications)。不過此版本不使用 SNAP alignment 演算法，而是改採 BWA MEM。主要用來規劃單一樣本於單一機器上的 IO 與所有計算的流程。。
@@ -154,7 +154,7 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
 
 根據微軟的[合作夥伴表示](http://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-ebook-PartneringToAdvanceClinicalGenomics.pdf)，整套次級分析的時間由先的 28 小時降至 4 小時，僅需原先時間的 1/7 。
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **BWA-MEM & GATK HaplotypeCaller**   
 先提一下 HaplotypeCaller 的核心操作就是四步：
@@ -188,7 +188,7 @@ CromwellOnAzure</a>）
 ### 執行 Microsoft Genomics 服務
 其實這邊有如果需要以直接看 MS Genomics 的[官方文件](https://docs.microsoft.com/zh-tw/azure/genomics/quickstart-run-genomics-workflow-portal)。若是想要看圖文手把手教學，可以看看這篇《[次世代定序二次分析 Microsoft Azure Genomics](https://medium.com/@102316115/%E6%AC%A1%E4%B8%96%E4%BB%A3%E5%AE%9A%E5%BA%8F%E4%BA%8C%E6%AC%A1%E5%88%86%E6%9E%90microsoft-azure-genomics-77f2cc4994b6)》。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 不過這邊還是留一下記錄：
 
@@ -236,7 +236,7 @@ CromwellOnAzure</a>）
     2. 新增 emit_ref_confidence 參數設定為 gvcf，以輸出 gvcf。
 2. 無法提交<mark>多個個體</mark>的 FASTQ 或 BAM 檔案，所以若要分析多個個體資料只能分別下指令。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過跟同事討論了一下，MS 這套 WDL 的設計應該是先前 Survey 的資訊一樣，是為了研究員或臨床醫生這些非資訊背景人員所設計的，所以設計的挺好上手的，但代價就是可以修改的地方不多。
 

@@ -64,7 +64,7 @@ BLINK 有能與混合線性模型相比的控制 false positives 能力，但需
 
 在 FarmCPU 中，它將混合線性模型分離成固定效應模型（FEM）與隨機效應模型（REM），然後迭代地使用它們。但隨機效應模型（REM）計算成本計算成本較高，所以 BLINK，使用貝氏訊息準則  (Bayesian Information Criteria, BIC)將隨機效應模型替換為固定效應模型。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info">
 <div class="head">BIC</div>
@@ -72,7 +72,7 @@ BLINK 有能與混合線性模型相比的控制 false positives 能力，但需
 </div>
 
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 根據實際和模擬數據分析顯示，與 FarmCPU 相比，BLINK 提高了統計功效，同時顯著縮短了計算時間。兩者分分析具有一百萬個人和五十萬個標記的數據集，FarmCPU 所需時間為一週，而 BLINK 可以在三小時內完成。 
 
@@ -95,7 +95,7 @@ PLINK軟體輸入檔案的常見格式型別：
 	--map <filename>
 	```
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 2. 二進位制格式（PLINK 1 binary）：BED/BIM/FAM  
 	```bash
@@ -107,7 +107,7 @@ PLINK軟體輸入檔案的常見格式型別：
 
 	> **PLINK 1 binary is PLINK 1.9's preferred input format.**. In fact, PLINK 1.9 automatically converts most other formats to PLINK 1 binary before the main loading sequence.
 
-	<p class="paragraph-spacing"></p> 
+	<br class="big"> 
     
     所以可以直接用來把其他檔案轉換成二進位制格式
 	```bash
@@ -120,7 +120,7 @@ PLINK軟體輸入檔案的常見格式型別：
     $ plink --file text_fileset --freq --keep-autoconv --out results
     ```
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
   
 3. Variant Call Format 
 	```bash
@@ -131,7 +131,7 @@ PLINK軟體輸入檔案的常見格式型別：
 		
 	> VCF reference alleles are set to A2 by the autoconverter even when they appear to be minor. However, to maintain backwards compatibility with PLINK 1.07, PLINK 1.9 normally forces major alleles to A2 during its loading sequence. One workaround is permanently keeping the .bim file generated during initial conversion, for use as --a2-allele input whenever the reference sequence needs to be recovered. (If you use this method, note that, when your initial conversion step invokes **--make-bed** instead of just --out, you also need **--keep-allele-order** to avoid losing track of reference alleles before the very first write, because --make-bed triggers the regular loading sequence.)
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 4. 其他： 
 	1.  transposed text fileset：TPED/TFAM
@@ -171,7 +171,7 @@ PLINK軟體輸入檔案的常見格式型別：
 $ plink --file wgas1 --make-bed --out wgas1 --mind 0.05
 ```
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 結果：
 ```
@@ -235,7 +235,7 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
 	.imiss : 樣本缺失率  
 	.lmiss : 位點缺失率  
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
  2. 最小等位基因頻率  
 	``` bash
@@ -260,7 +260,7 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
 	--freq: Allele frequencies (founders only) written to freq_stat.frq .
 	```
 
-	<p class="paragraph-spacing"></p>
+	<br class="big">
     
     區分群組的計算MAF
 	``` bash
@@ -287,7 +287,7 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
 	freq_stat.frq.strat 
 	```
 
-    <p class="paragraph-spacing"></p> 
+    <br class="big"> 
 
  3. 主成分分析   
     > 在全基因體關聯性研究(Genome-Wide Association Study, GWAS)的分析中，干擾因子(confounder)的控制是重要的課題，其中最重要的干擾因子為族群分層(population stratification)。
@@ -319,7 +319,7 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
     --pca: Results saved to wgas1_pca.eigenval and wgas1_pca.eigenvec .
     ```
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 4. 關聯分析  
     [https://zhuanlan.zhihu.com/p/72490817](https://zhuanlan.zhihu.com/p/72490817)  
@@ -376,7 +376,7 @@ Allele frequency --maf 0.05 MAF <= 0.05 排除  ###最小等位基因頻率
     --adjust values (188187 variants) written to as2.assoc.adjusted .
     ```
 
-    <p class="paragraph-spacing"></p> 
+    <br class="big"> 
 
 5. 關聯分析 - 經過一定篩選的特定位點的細化分析  
     ```bash

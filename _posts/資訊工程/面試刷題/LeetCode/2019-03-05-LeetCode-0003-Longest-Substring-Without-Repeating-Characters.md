@@ -13,7 +13,7 @@ Given a string, find the length of the  **longest substring**  without repeating
 > **Note**    
 > that the answer must be a **substring**, `"pwke"` is a _subsequence_ and not a substring.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```python
@@ -35,7 +35,7 @@ Input: "pwwkew"
 Output: 3 
 Explanation: The answer is `"wke"`, with the length of 3. 
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:** `Hash Table`、`String`
 
@@ -50,7 +50,7 @@ Explanation: The answer is `"wke"`, with the length of 3.
 
 若有，則更改  ```start```  位置，將指標移動到第一個重複字元的下一個位置。若無，則  ```start```  停留在原位，最後記錄總長度並結束此輪。直到字串輪巡結束後回傳最長長度。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 理論上是這樣啦，不過實做上為了效能考量這邊使用了 <mark>HashMap</mark> 來記錄，實做步驟如下：
 

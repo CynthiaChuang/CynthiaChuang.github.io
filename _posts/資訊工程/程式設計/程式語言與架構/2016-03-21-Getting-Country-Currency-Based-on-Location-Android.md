@@ -34,14 +34,14 @@ tags:
 
 > Locale represents a language/country/variant combination. Locales are used to alter the presentation of information such as numbers or dates to suit the conventions in the region they describe.
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 語言環境（Locale） 代表一個語言/國家/ variant 組合。這三個參數足夠的資訊來描述該地區的語言文化及行為。不過說是這說，我有點搞不清楚最後的 variant 是在描述哪一部分，在 Android 官網中是給了這樣個範例：
 ```java
 new  Locale("en", "US", "POSIX")
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 先不管 variant 的部分，目前我想取出的是 **國家** 這項資訊：
  
@@ -54,7 +54,7 @@ new  Locale("en", "US", "POSIX")
 	// 取得目前國家區域
 	String mCountry = Locale.getDefault().getCountry();
 	```
-	<p class="paragraph-spacing"></p>
+	<br class="big">
  
 2. **取得該位置所對應貨幣代碼**  
 	在 [Currency](https://www.tutorialspoint.com/java/util/currency_getinstance.htm) 中提供了一個 function，可藉由傳入 Locale 參數取得到該 Locale 國家所對應的貨幣，一旦得知該貨幣，就可取出得該貨幣的代碼。

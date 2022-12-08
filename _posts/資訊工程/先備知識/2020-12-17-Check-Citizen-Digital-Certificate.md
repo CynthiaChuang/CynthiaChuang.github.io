@@ -36,7 +36,7 @@ tags:
 ^[A-Z]{2}[0-9]{14}$
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 寫完了 C/C++，這次換成 Golang。
 

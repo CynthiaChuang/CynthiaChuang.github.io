@@ -33,7 +33,7 @@ OCR 為光學字元辨識（Optical Character Recognition）的縮寫，主要�
 
 雖說整套流程包含三個部分，但在這邊我們只將目光放在光學字元辨識系統上。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 細分光學字元辨識系統，可在分成兩個步驟：分別是<mark>文字檢測</mark>與<mark>文字識別</mark>。
 - **文字檢測**：  
@@ -49,7 +49,7 @@ OCR 為光學字元辨識（Optical Character Recognition）的縮寫，主要�
 ### 文字辨識方法
 文字辨識的方法依照實做的方式，可區分成 <mark>Two Stage</mark> 或 <mark>End To End</mark> 兩種。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區域中的字元進行分割，也就是將車牌中的字一個一個擷出來，並將擷出的字元進行正規化，最後透過特徵截取將字元一一進行辨識。
 
@@ -83,7 +83,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 2. Recurrent Layers
 3. Transcription Layer
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Convolutional Layers**  
 這層的主要目的是使用 Convolutional Layers 的特性，去提取圖像特徵。
@@ -118,7 +118,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 
 在論文中作者將這樣的轉換稱之為 <mark>Map-to-Sequence</mark>，不過其實就是做 reshape 變成 $(\frac{W}{4} * 1, 512)$，恩...可以想像成依照寬度將原圖分成 $\frac{W}{4} * 1$ 等分，每等分會有 512 個特徵。因此最後產生就是，原圖從左到右按照順序生成的特徵向量，做為下一階段的輸入。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Recurrent Layers**  
 由於車牌長度是不定的，因此第二階段引入了雙向 RNN。不過習慣上說是 RNN，但實際上指的是 LSTＭ，用 GRU 也行，別真的用 RNN，不然應該會遇到梯度消失的問題。
@@ -127,7 +127,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 
 最後再將輸出結果透過 softmax 「壓縮」成各個字元的機率分布，作為 CTC 層計算的輸入。假若你的目標字元為 A~Z 與 0~1，共 36 個，而此層的輸出為  $(\frac{W}{4} * 1, 36+1)$，多出來的一個類別保留給 CTC 層計算時所使用的 Blank。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Transcription Layer**  
 將從 Recurrent Layers 取的標籤通過去重複、整合等動作得到最終的辨識結果。白話的說就是將 RNN 的輸出做 Softmax 後得到各字元。
@@ -165,7 +165,7 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 2. <a href="http://fancyerii.github.io/books/ctc/">CTC理论和实战 | lili on | 李理的博客</a>
 </div>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <p class="illustration">
     <img src="https://i.imgur.com/JTaLcpw.png" alt="直接序列分類可能會出現冗餘資訊">
@@ -187,14 +187,14 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 ### 優化與改善
 我們分別針對資料本身、前處理、模型與後處理做了些嘗試與調整，這些調整約提昇了 3.37%，準確度由 94.69% 來到了 98.06%。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 **資料本身**  
 在這邊我們重新檢閱了資料集本身清除訓練資料集中品質不好、非車牌與標注錯誤...等資料，以得到較好資料集本質。而針對加入非車牌資料，我們以全 Blank 作為它的標籤，一齊加入訓練，以增強模型的容錯能力。預期看到非車牌資料時能有辨識，並輸出空值，如此一來，可以在利用系統面的設計，來作為例外處理或補救。
 
 另外依照臺灣的車牌比例更了輸入資料的尺寸，並添加更多實際場景資料作為訓練集，重新進行訓練。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 **前處理**  
 另外採用第三方 library 的 [aleju/imgaug](https://github.com/aleju/imgaug) 與 [mdbloice/Augmentor](https://github.com/mdbloice/Augmentor) ，來做 **Data Augmentation** 以增加模型的泛化能力。Augmentation 主要針對對比、變焦、偏斜、旋轉進行調整，並對高反光、耀光、雨景、日落、鏡頭模糊...等情況進行模擬。
@@ -202,12 +202,12 @@ Two Stage 顧名思義會分成兩個主步驟來進行，它會先將目標區�
 
 P.S. Augmentor 的安裝與使用可以看[這篇](/Augmentor-Image-Augmentation-Library-in-Python)。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 **後處理**  
 後處理則是預測後校正，主要針對[維基百科](https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E8%BB%8A%E8%BC%9B%E7%89%8C%E7%85%A7)所提及的一些規則進行校正，主要是 0、1、I、O 這些規則的調整。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 **模型**  
 這邊參考語音作法，先針對不同特性的聲音訓練分類器（男生、女生、外國人...），並提取其內某一層當作特徵，當作額外輸入資訊。這邊則是這邊增加了一個車牌樣式分類器，抽取分類器 Dense 層特徵，當作 CRNN LSTM 額外的 input 資料一起訓練。

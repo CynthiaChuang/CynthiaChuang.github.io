@@ -61,7 +61,7 @@ tags:
 2. 致電客服：00801444304
 3. FB上傳送訊息：[🚪](https://www.facebook.com/PayPal)
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過這些方法各有各的缺點：
 1. **訊息中心**  
@@ -109,7 +109,7 @@ tags:
 ### 交易安全設定
 除了刪掉信用卡外，我還跑到`設定`中的`交易安全`，設定了安全認證，我設定了兩種認證，分別是**2 步驟認證**與**密碼提示問題**。2 步驟認證是指登入時除了密碼之外，會透過 Authenticator App 取得單次用安全代碼，對了，我這邊用的 Authenticator App 是 Google Authenticator。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在處理完這件事情後，突然有種鬆了一口氣的的感覺。第一次遇到帳號被盜有點慌張，由衷感謝 Allee 的文章的幫忙 🙏🏻。
 

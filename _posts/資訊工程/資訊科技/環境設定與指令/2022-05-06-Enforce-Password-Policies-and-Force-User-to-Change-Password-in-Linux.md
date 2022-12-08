@@ -53,7 +53,7 @@ password	[success=1 default=ignore]	pam_unix.so obscure use_authtok try_first_pa
 ...
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 找到以下這一行 pam_pwquality.so 的設定值：
 ```bash
@@ -65,7 +65,7 @@ password   requisite   pam_pwquality.so ....
 password   requisite   pam_pwquality.so retry=3 minlen=15 maxrepeat=3 difok=4 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1 reject_username enforce_for_root
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 其中：
 

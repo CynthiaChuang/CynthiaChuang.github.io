@@ -25,7 +25,7 @@ Input: "cbbd"
 Output: "bb"
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`Dynamic Programming`、`String`
 
@@ -42,27 +42,27 @@ Output: "bb"
 
 但這樣做，不僅時間複雜度高，且在實做還必須分奇偶長度的回文進行討論，有夠麻煩的。
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 後來找到一篇關於最長回文子串的[討論](https://www.zhihu.com/question/40965749)，裡面提到不少針對這個問題的演算法與分析，其中有一個被暱稱為<mark>馬拉車演算法</mark>的 <mark>Manacher's algorithm</mark>，這個方法可以將時間複雜度降到線性，討論中不少人推崇這是計算最長回文子串的最理想方法。
 
 關於~~馬拉車~~ Manacher 演算法的介紹可以看看[這篇](https://segmentfault.com/a/1190000003914228#articleHeader3)，實做這題時我也是基於這篇的。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 實做步驟如下：
 1. 先做前處理，在頭尾與兩兩字元中間加上 **#**，另外為了避免處理時的邊界判斷，我在頭尾又分別加上 **\$** 與 **＠**。
-   <p class="paragraph-spacing"></p>
+   <br class="big">
 2. 判斷目前的 idx 是否在 max_right **左側**，若在左側表示之前已經被接觸過，因此可取 idx 以 center 為對稱軸所對應 idx' 的回文半徑作為 idx 初始的半徑，但其長度不得超過 max_right。因為此時我們只能確認以 center 為中心、半徑為 max_right 的部分是回文。
-   <p class="paragraph-spacing"></p>
+   <br class="big">
 3. 嘗試以 idx 為中心，並以初始的回文半徑向外擴展回文，直到左右兩邊字元不同，或者到達邊界。
-   <p class="paragraph-spacing"></p>
+   <br class="big">
 4. 最後，判斷此次擴展是否有觸及更右邊的字元，也就是 idx 加上其回文半徑大於是否有大於 max_right，若有則將 idx 設為 center，並更新 max_right。
-   <p class="paragraph-spacing"></p>
+   <br class="big">
 5. 直到所有字元的回文半徑計算完畢後，回傳最長的最長回文子字串。
 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 ```python
 class Solution:

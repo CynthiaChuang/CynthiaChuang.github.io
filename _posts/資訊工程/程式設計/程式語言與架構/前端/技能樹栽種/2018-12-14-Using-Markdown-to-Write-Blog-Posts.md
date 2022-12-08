@@ -60,7 +60,7 @@ tags:
 
 在 google 的時候，偶然發現有 [StackEdit](https://stackedit.io/)  工程師在 [Stack Exchange](https://webapps.stackexchange.com/questions/40737/markdown-for-blogger) 上~~自薦枕蓆~~。原本它是沒有特別吸引我，因為同為 Markdown 的文字編輯器，目前我 [HackMD](https://hackmd.io/) 使用得正順手，並沒有想換掉它的想法，而且 HackMD 還是繁中界面的哩！ 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 >  Amongst others, you can **post to Blogger.**
 

@@ -17,19 +17,19 @@ A mapping of digit to letters (just like on the telephone buttons) is given belo
 </p>
 
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```
 Input: "23"
 Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 > **Note:**
 > Although the above answer is in lexicographical order, your answer could be in any order you want.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:** `String`、`Backtracking`
 

@@ -50,7 +50,7 @@ $ tr "\n\r" "\r" < input.file > output.file
 ```
 這條指令的意思是：「將 input.file 中的 \n\r 字串，轉換成 \r 後，寫到 output.file 去」，在只有一份檔案需要轉換的情況，下這條指令是最迅速的，只是可惜的是...我找不到它在 Dos 中相對應的指令 ~~（好吧！我承認我懶得找）~~ 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另一種是使用編譯器，我記得 **NodePad++** 做得到，可是我現在改用 VS Code，原本以為更改它的 **files:eol** 設定就可以了，但 git 還是把我擋下來了 QAQ
 
@@ -78,13 +78,13 @@ $ tr "\n\r" "\r" < input.file > output.file
 根據 core.autocrlf 的設置規則與建議。
 1. **當在 Window 系統上開發時**   
     應將 core.autocrlf 設為 true，這樣在提交會將程式碼轉換成 LF，但在檢出則將換行符號換回 CRLF。
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 2. **當在 Linux 或 Mac 系統上開發時** 
     應將 core.autocrlf 設為 input，由於 Linux 與 Mac 本身就是使用 LF，因此檢出不需要進行轉換，但提交時依舊得使用 LF。
-    <p class="paragraph-spacing"></p> 
+    <br class="big"> 
 3. **當專案只會在 Window 系統上開發時**
     如果你確定你的專案只會在 Window 上開發與執行，這時將 core.autocrlf 設為 false，因此你提交時會是 CRLF。不過個人實在不建議，畢竟你不能確認你的交接者是否還是使用相同的系統開法。
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 
 
@@ -114,7 +114,7 @@ $ git config --global core.safecrlf false
 $ git config --global core.autocrlf true
 $ git config --global core.safecrlf true
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 反之，Linux 或 Mac 建議設置
 ```shell
@@ -122,7 +122,7 @@ $ git config --global core.autocrlf input
 $ git config --global core.safecrlf true
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 若遇到 `fatal:LF would be replaced by CRLF` 或 `fatal:CRLF would be replaced by LF` 直接按照錯誤訊息要求，將檔案中錯誤的換行符號替換掉。
 

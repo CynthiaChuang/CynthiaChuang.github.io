@@ -43,7 +43,7 @@ tags:
       }
     }
     ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 完成設定後，在文句中需畫螢光筆的地方，插入下列程式碼，就可以看到使用的效果了。
 
@@ -126,7 +126,7 @@ $mark-danger: #ffb6c1;
 linear-gradient(transparent 40%, rgba(255,255,255,0) 50%, $mark-default  75%, $mark-default 90%, transparent 95%);
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 完整程式碼如下：
 ```sass

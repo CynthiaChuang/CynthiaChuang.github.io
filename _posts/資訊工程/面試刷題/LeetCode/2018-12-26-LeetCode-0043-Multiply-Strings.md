@@ -11,7 +11,7 @@ tags:
 Given two non-negative integers `num1` and `num2` represented as strings, return the product of `num1` and `num2`, also represented as a string.
 
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```python
@@ -24,7 +24,7 @@ Output: "6"
 Input: num1 = "123", num2 = "456"
 Output: "56088"
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 > **Note:**
 > 1 .  The length of both  `num1`  and  `num2`  is < 110.    
@@ -32,7 +32,7 @@ Output: "56088"
 > 3 .  Both  `num1`  and  `num2` do not contain any leading zero, except the number 0 itself.     
 > 4 .  You  **must not use any built-in BigInteger library**  or  **convert the inputs to integer**  directly.   
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`String`、`Math`
 
@@ -49,7 +49,7 @@ Output: "56088"
 2. n1[i] 與 n2[j] 相乘結果會出現在 answer[i+j]上 ← 忘了說，這條是因為我把乘數與被乘數反轉才成立的
 3. **corner case** ：任何與 0 相乘都會是 0 ，所以遇到是 0 可以直接回傳了
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 實做過程如下：
  1.  判斷乘數與被乘數是否 0 ，若任一數為 0 ，則回傳答案為 0 ，否則繼續向下執行。 

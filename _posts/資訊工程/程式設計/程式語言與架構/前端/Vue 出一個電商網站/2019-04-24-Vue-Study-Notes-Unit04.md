@@ -31,7 +31,7 @@ tags:
 {% raw %}
 1. 在 UI 上顯示變數內容，可在直接使用 ``{{}}`` 包覆變數即可顯示。
 2. 在 Vue 中無法直接使用 ``{{}}`` 插入一段 **HTML** 語法，該語法會直接轉成純文字後顯示，若要插入 HTML 語法請使用 **v-html**。
-    <p class="paragraph-spacing"></p> 
+    <br class="big"> 
     <div class="alert warning">
     <div class="head">注意</div>
     在網站上動態渲染任意 HTML 是非常危險的，因為容易導致 XSS 攻擊。因此只在可信內容上使用 v-html，永不用在使用者提交的內容（例如：使用者留言）上。
@@ -56,7 +56,7 @@ tags:
     :class = objectClass
     ```
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     若是想在 HTML 中變更 objectClass 內容，可以使用下列方式來讀取及修改。
     ```html
@@ -75,7 +75,7 @@ tags:
     class = ['className1','className2']
     ```
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     也可以把 array 的部分拉出拉獨立成為一個變數 
     ```html
@@ -88,21 +88,21 @@ tags:
 
     備註：checkbox 與 array 資料的綁定方法，請看第二章節中 [Vue 表單與資料的綁定](/Vue-Study-Notes-Unit02#vue-表單與資料的綁定)的部分。
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 4. **綁定行內樣式**  
 	注意原先 CSS 是使用中線命名規則，要改成駝峰式，例如 background-color 改成 backgroundColor，在綁定時可以直接插入物件即可。 
     ```html
     :style="{屬性:"值"}"></div>
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     或是將物件抽取出來成為一個獨立變數後在指定給 style，若是傳入物件多於一個可以是用物件陣列的方式來處理：
     ```html
     :style=[{屬性1:"值1"},{屬性2:"值2"}]
     ```
 
-    <p class="paragraph-spacing"></p> 
+    <br class="big"> 
     
     PS. 關於變數在 HTML 使用時，使用中線命名或駝峰式都可以，只是若是使用中線命名必須要用單引號括起來，backgroundColor → 'background-color'。 
 
@@ -117,14 +117,14 @@ tags:
     
 2. **Key**  
     根據[文件](https://cn.vuejs.org/v2/guide/list.html#key)表示，v-for 正在更新**已渲染過**的元素列表時，需要特別注意它默認用 **就地複用** 策略。
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
     <div class="alert info">
     <div class="head">就地複用</div>
     所謂的就地複用指的是，如果數據項的順序被改變，Vue 不會移動 DOM 元素來匹配數據項的順序，而是直接重複使用原本位置上的元素。
     </div>
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
     舉例來說，下圖是資料反轉前後的對照圖，可以看到資料反轉，但輸入框不會隨數據項順序改變而一起變動：
     
@@ -154,7 +154,7 @@ tags:
     }
     ```
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     因為 <mark>Vue 無法探測普通的新增屬性</mark>，它必須用於向響應式對象上添加新屬性，因此必須使用 <mark>Vue.set</mark> 強制將資料寫入視圖中：
 
@@ -213,7 +213,7 @@ tags:
     </template>
     ```
 	
-	<p class="paragraph-spacing"></p>
+	<br class="big">
     
     因為兩個模板使用了相同的元素，**input** 不會被替換掉，僅僅是替換了它的 **placeholder** 。但是一旦你在輸入框輸入文字，就會出現下面的情況：
 	
@@ -221,7 +221,7 @@ tags:
         <img src="https://i.imgur.com/UKtfhdO.png">
     </p>
 	
-	<p class="paragraph-spacing"></p>
+	<br class="big">
     
     為了使完整渲染，可在輸入框元素加上 key ，一旦 key 不同就會重新渲染。注意這邊 key 只加在輸入框上，因此 label  依舊會被重複使用。
 	
@@ -237,7 +237,7 @@ tags:
       <input class="form-control" placeholder="Enter your email address" key="email">
     </template>
     ```
-	<p class="paragraph-spacing"></p>
+	<br class="big">
 		
 3. **v-if v.s v-show**
     根據[教學文章](https://v1-cn.vuejs.org/guide/conditional.html)說明，因為 v-if 是真實的條件渲染，在切換 v-if 區域時，Vue.js 有一個局部編譯/卸載過程，它會確保該區域在切換過程中能合適地銷毀與重建條件塊內的事件監聽器和子組件。
@@ -298,7 +298,7 @@ tags:
 4. **@click.once**  
     只觸發一次回調，第二次就不再觸發。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 PS. 稍微找了一下相關資料，弄懂事件傳遞傳遞過程：[【Vue.js】DOM 的事件傳遞機制： capture 與 propagation](/DOM-Phases-of-Event-Capture-and-Propagation/)
 

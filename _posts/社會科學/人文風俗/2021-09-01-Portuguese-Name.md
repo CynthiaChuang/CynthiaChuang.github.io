@@ -75,7 +75,7 @@ tags:
     
     在傳統的命名中，首姓通常來自母親，所以又被稱為母姓。但在這邊我不會使用母姓來特指第一個姓氏，因為葡萄牙法律規定：「<mark>一個孩子需要至少一個名字和來自父母任一方的至少一個姓氏</mark>」，也就是說孩子可以只有一個姓氏，且不一定來自母親。小C羅的名字就是一個例子，桑托斯是他的首姓，但很明顯不是來自於母親 XDDD。
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     有沒有發現，我說這邊是用**桑托斯（Santos）** 而不是**多斯桑托斯（dos Santos）**？
     
@@ -107,7 +107,7 @@ tags:
     
     C羅本身沒有後綴啦，但跟他名字一模一樣的兒子有...
    
-<p class="paragraph-spacing"></p>   
+<br class="big">   
 
 第一次看到C羅的全名時，覺得他真的超級長，光算英文字母就有 31 個，比 A-Z 的 26 字母還多。不過查了資料才知道，跟葡萄牙[末任國王妻子](https://zh.wikipedia.org/wiki/%E5%A5%A7%E5%8F%A4%E6%96%AF%E5%A1%94%C2%B7%E7%B6%AD%E5%A4%9A%E5%88%A9%E4%BA%9E_(%E9%9C%8D%E4%BA%A8%E7%B4%A2%E5%80%AB-%E8%A5%BF%E6%A0%BC%E9%A6%AC%E6%9E%97%E6%A0%B9)) *Augusta Vitória Guilhermina Antónia Matilde Luísa Josefina Maria Isabel de Hohenzollern-Sigmaringen* 相比，根本小巫見大巫阿。
 
@@ -167,7 +167,7 @@ B. Cristiano R. S. Aveiro
 說到姓氏，另一個姓氏變動的狀況是**冠夫姓**或**冠妻姓**，但跟臺灣一樣冠姓並不是強制性的，而且實務上冠姓的人數已越來越少。像C羅的母親就有冠夫姓瑪莉亞·多洛蕾絲·多斯桑托斯·阿維羅（Maria Dolores dos Santos Aveiro）。
 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 最後來個福利照 🧡
 

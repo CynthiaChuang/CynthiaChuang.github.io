@@ -42,10 +42,10 @@ int regcomp(regex_t *preg, const char *pattern, int cflags)
     2. **REG_ICASE**：忽略字母大小寫。        
     3. **REG_NOSUB**：僅回報匹配成功或失敗。        
     4. **REG_NEWLINE**： 識別換行符號。  
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     思考了下，我應該會開 **ERE**，因為我會的**流派**應該算是 <mark>PCRE （Perl Compatible Regular Expressions）</mark>一派，跟 BRE（Basic Regular Expression，基本型正規表示式）[差異](http://www.greenend.org.uk/rjk/tech/regexp.html) 看起來頗多，相較之下 ERE 還稍微相近一點，不過還是有些差異。 
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 回傳值的部分，編譯成功會回傳 0，否則傳回其他值。來個片段看一下：
 ```cpp
@@ -68,7 +68,7 @@ assert(success==0);
 int regexec (regex_t *preg, char *target, size_t nmatch, 
              regmatch_t matchptr [], int eflags)
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 先提一下 `regmatch_t` 這個資料格式，在程式碼中它是長這樣：
 ```cpp
@@ -79,7 +79,7 @@ typedef struct{
 ```
 其中的 `rm_so` 是用來記錄匹配結果在字串中的起始位置，`rm_eo` 是結束位置。一般會將它宣告為陣列，index 為 0 存放 full match，之後存放 group，陣列長度會決定記錄多少的 group。 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 我們來看下要傳啥參數進去，
@@ -88,7 +88,7 @@ typedef struct{
 3. **nmatch** 與 **matchptr**：`matchptr` 就是上面所提過 `regmatch_t` 陣列。`nmatch` 則是 `matchptr` 的長度。
 4. **eflags**：有兩個值 **REG_NOTBOL**、**REG_NOTEOL**。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 繼續我們的 Code：
 ```cpp

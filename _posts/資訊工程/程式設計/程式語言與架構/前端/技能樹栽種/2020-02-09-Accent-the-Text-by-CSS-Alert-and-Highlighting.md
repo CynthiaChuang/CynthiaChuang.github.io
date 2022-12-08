@@ -29,7 +29,7 @@ tags:
 
 ### 實作
 在實作時我參考了 kanboo.github.io 的[程式碼](https://github.com/kanboo/kanboo.github.io/blob/4292e79031c3f8005add53df25e519f9fd4355cf/themes/next/source/css/_common/components/tags/note.styl)，雖然網站外觀看起來很相似，但它是用的是另外一套網誌框架 - [hexo](https://hexo.io/zh-tw/)，所以那份程式碼不能直接移植 So sad :crying_cat_face: 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過看了一下沒有很難做，所以仿照這份程式做了一份：
 
@@ -180,7 +180,7 @@ $alert-default-icon          : "\f0a9";
 這是 default 底色、有 icon 、有 header 的版本
 </div>
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert primary no-icon">
 <div class="head">Primary Without Icon</div>
@@ -248,7 +248,7 @@ $highlighting-default              : #e6fcf2;
 ```html
 拜託，請幫我畫<span class="highlighting">重點</span>。
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <p class="illustration">
     <img src="https://i.imgur.com/VDn59fA.png" alt="Highlighting">
@@ -259,7 +259,7 @@ $highlighting-default              : #e6fcf2;
 拜託，請幫我畫<span class="highlighting warning">重點</span>。
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info">
 <div class="head">HTML <mark\> Tag</div>

@@ -45,7 +45,7 @@ var newExtends = Vue.extend({
 },
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 在子類別中，去繼承並客製化所需求的部分：
 
@@ -67,11 +67,11 @@ var childTwo = {
 }
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 就我自己理解當使用 Extend 擴充父類別時，Object 會被繼承，（如：mounted，computed）。若在子類別的 Object 中宣告與父類別相同名稱的 <mark>變數</mark> 或 <mark>函式</mark> 名稱，則會 Override 父類別的。是說不曉得有 super 可以用？
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info">
 <div class="head">2019.05.10 補充</div>
@@ -83,7 +83,7 @@ var childTwo = {
 ## Filter 自訂畫面資料呈現格式
 Vue.js 還有提供 Filter（過濾器）的功能，主要用於處理格式化文字等狀況。filter 可重複使用，一個值可以套用多個 filter。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 filter 一樣可以分為 <mark>全域</mark> 與 <mark>局部</mark>，全域的宣告是在外層使用 <mark>Vue.filter</mark>
 
@@ -93,7 +93,7 @@ Vue.filter(filterName,function(n){
 })
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 而局部宣告是在元件中加入 <mark>filters</mark> 的物件
 ```javascript
@@ -111,7 +111,7 @@ var child = {
 }
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 如要使用 filter 過濾器，則在 Mustache 中在變數後方使用 <mark>「|」（pipe）</mark>符號聯集多個 filter，執行時由左向右執行，它會將 pipe 符號左方的結果當作參數傳數入右方的 filter ，所以在撰寫 filter function 時記得宣告參數。
 
@@ -146,7 +146,7 @@ filters: {
     <img src="https://i.imgur.com/vrR6i8A.png">
 </p>
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 未被綁定在 DOM 的資料，雖然 log 或 tool 上看到的資料內容可能正確，但並不會觸發 UI 的更新。
 
@@ -160,7 +160,7 @@ filters: {
 ```javascript
 mixins:[object1, object2]
 ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 完整程式碼如下：
 
@@ -220,7 +220,7 @@ Vue.directive('focus', {
 </script>
 ```
  
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 通常 function 常用的參數有
 - el：指令所绑定的元素，可以用来直接操作 HTML

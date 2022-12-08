@@ -32,7 +32,7 @@ permalink: pretty
 permalink: /:categories/:year/:month/:day/:title/
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 permalink 的模板格式中，是用 `:關鍵字` 的格式引用標記的動態內容。在先前的網址格式中，所使用到的關鍵詞所代表的意義如下：
 
@@ -45,20 +45,20 @@ permalink 的模板格式中，是用 `:關鍵字` 的格式引用標記的動�
 
 至於[其他的關鍵字](https://jekyllrb.com/docs/permalinks/#placeholders)，因為舊網址沒用，而新網址也不需要，所以這邊我就不列出來了。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 應該有注意到 `pretty` 並不再上述列出的關鍵詞中，而且它前面也沒有用冒號做前綴。
 
 因為 pretty 是屬於 Jekyll <mark>內建模板變數</mark>，它會指到事前定義好的靜態網址，在這邊 `pretty` 與 `/:categories/:year/:month/:day/:title/` 兩個是等價的。雖然...我不覺得這串網址到底哪裡漂亮了？
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 按一開始的規畫，我打算移掉類別與時間，所以最後網址就只剩下：
 ```yaml
 permalink: /:title/
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 好了，到這邊就修改完全部文章的網址了。剩下的工作就是把之前引用的舊網址全部改掉了!
 

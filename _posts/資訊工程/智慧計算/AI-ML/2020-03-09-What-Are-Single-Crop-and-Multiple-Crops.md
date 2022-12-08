@@ -28,7 +28,7 @@ tags:
 ## multiple crops
 最常見的 multiple crops 是 10-corp。它會先執行 centor crop，裁出中間影像，接著依序從左上、右上、左下與右下進行裁剪，緊接著，鏡像反轉輸入圖片，重複此步驟分別截中間、左上、右上、左下與右下五張（把之前截下鏡像反轉也行），合計共 10 張圖片。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 另外還有看過 144-crops，這個略為複雜，依照 [ChrisZZ 的解釋](https://www.cnblogs.com/zjutzz/articles/8733044.html)，先將輸入的圖片 resize 成 4 種相異尺寸，例如：256xN、320xN、384xN 與 480xN，並在各尺寸中由左至右截取出各三個正方形區域，針對正方形區域進行 10-corp 裁剪，到此已得 4x3x10=120 張圖片。針對正方形 10-corp 執行完畢後，將此正方形區域直接 resize 成 224x224，並做水平翻轉，如此又得到 4x3x2=24 張，合計共 144 張圖片。
  

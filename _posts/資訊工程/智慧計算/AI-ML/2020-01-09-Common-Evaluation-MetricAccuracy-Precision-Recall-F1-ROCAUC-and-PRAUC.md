@@ -19,7 +19,7 @@ tags:
 假定一個具體場景作為例子：
 > 假如現在有 100 筆檢體進行流感快篩，其中已知 70 位為正常人、30 位為流感病患。快篩目的是找出所有的流感病患，現在快篩結果顯示 50 人罹患流感，但這 50 人之中僅有 16 位真的罹患流感，其他 34 位屬於正常人但被誤判的情況。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 依照此情境我們可以繪製出下列表格：
 
@@ -29,7 +29,7 @@ tags:
 | **正常人** | 34 人  （FP） | 36 人  （TN） | 70 人 | 
 |       | 50 人 | 50 人 |
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 依此假定情境，我們可以先來定義 **True Positives**、**True Negatives**、**False Positives**、**False Negatives** 這四個名詞解釋。
 
@@ -49,7 +49,7 @@ tags:
 ### **FN，False Negatives**
 **診斷錯誤，且此人被診斷為正常**，即，<mark>病人但並沒有被檢出罹患流感</mark>。在本情境中共有 14 人。
 
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 
 接下來各個指標的計算，都是基於 TP、TN、FP、FN 這四種狀況進行排列組合：
 
@@ -64,7 +64,7 @@ $$
 Accuracy =\cfrac{TP+TN}{TP+TN+FP+FN}
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 依照假定場景我們可計算：  
 
@@ -72,7 +72,7 @@ $$
 Accuracy =\cfrac{16+36}{16+36+34+14} = 0.52
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 雖然這是最常見的衡量指標，但對於<mark>資料正反例不平衡</mark>的狀況下，如：肺炎、癌症檢測...等，Accuracy 指標幾乎不具參考價值。
 
@@ -98,7 +98,7 @@ $$
 Precision =\cfrac{TP}{TP+FP}
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 依照假定場景我們可計算，<mark>被診斷成有病的人中，有多少位是真的病人</mark>： 
 
@@ -106,7 +106,7 @@ $$
 Precision =\cfrac{16}{16+34} = 0.32
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在一般的應用中，如果更在乎的是預測出來的結果，就可以採用這個指標。看到的一個例子是<mark>門禁系統</mark>，它更在乎的是有否讓未經許可的人進去（也就是 FP 越小越好）
 
@@ -121,7 +121,7 @@ $$
 Recall =\cfrac{TP}{TP+FN}
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 依照假定場景我們可計算，<mark>在病人中真的被診斷出來的比例</mark>： 
 
@@ -129,7 +129,7 @@ $$
 Recall =\cfrac{16}{16+14} = 0.53
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 如果你的應用場景更偏向在意是否觸及了所有的 Positive case，例如：廣告投放它更在意的是你是否觸及了所有的潛在客戶（Positive case），寧可錯殺也不放過 XDDD
 
@@ -145,7 +145,7 @@ $$
 \cfrac{2}{F_1} = \cfrac{1}{P} + \cfrac{1}{R}
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 調整後：
 
@@ -153,7 +153,7 @@ $$
 F_1 = \cfrac{2PR}{P+R} = \cfrac{2TP}{2TP+FP+FN} 
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 依照假定場景我們可計算 F1-score：
 
@@ -161,7 +161,7 @@ $$
 F_1 = \cfrac{2*16}{2*16+34+14} = 0.4
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 F1 中，認為 Precision 與 Recall 的權重是一樣，因此有人將其一般化，列出了這樣的公式：
 
@@ -178,7 +178,7 @@ $$
 FPR = \cfrac{FP}{FP+TN}，  TPR = \cfrac{TP}{TP+FN}
 $$
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 因此在空間中若存在一點離<mark>左上角越近</mark>的點預測準確率越高。反之，離右下角越近的點，預測越不準。
 
@@ -189,7 +189,7 @@ $$
 
 以這張圖為例，用 A、B 與 C 三不同的模型進行預測，並將結果繪製在 ROC 上，依此圖判斷最好的結果是 A 模型，反之，最糟糕的預測是 C 模型甚至劣於隨機分類。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 上述 ROC 空間裡的單點，是指給定特定分類模型一個閾值後得出的預測結果。但對於同一個分類模型來說給定不同的閾值，會影響到模型的準確率，進而得到不同的 FPR 和 TPR。因此 ROC 曲線指的是，將同一模型不同閾值所得到的結果一一繪製在 ROC 空間中，所得到的曲線。
 

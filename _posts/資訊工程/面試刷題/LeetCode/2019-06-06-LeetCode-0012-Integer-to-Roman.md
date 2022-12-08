@@ -21,18 +21,18 @@ Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `
 |D|500|
 |M|1000|
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 For example, two is written as  `II` in Roman numeral, just two one's added together. Twelve is written as,  `XII`, which is simply  `X`  +  `II`. The number twenty seven is written as  `XXVII`, which is  `XX`  +  `V`  +  `II`.
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not  `IIII`. Instead, the number four is written as  `IV`. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as  `IX`. There are six instances where subtraction is used:
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 -   `I`  can be placed before  `V`  (5) and  `X`  (10) to make 4 and 9.
 -   `X`  can be placed before  `L`  (50) and  `C`  (100) to make 40 and 90.
 -   `C`  can be placed before  `D`  (500) and  `M`  (1000) to make 400 and 900.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
 
 
@@ -68,7 +68,7 @@ Output: "MCMXCIV"
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:** `Math`、`String`
 
@@ -96,11 +96,11 @@ class Solution:
 ```
 P.S. 這應該算是貪婪演算法！？
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過這個版本直接把 4 這個特殊情況都直接 hard code 進去。所以後來又試著做只使用標準符號的。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 array
 
 |int|1000|500|100|50|10|5|1|
@@ -108,7 +108,7 @@ array
 |roman|M|D|C|L|X|V|I|
 |index|0|1|2|3|4|5|6|
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 觀察一下，以百位數區間為例（index == 2），除了本身有符號表示的 500 與 100 ，可在細分成
 1.  100 ~ 300： _C*n_ ，這區間直接以 100 的羅馬符號 _C_ 表示，最高位則是羅馬符號的出現次數。

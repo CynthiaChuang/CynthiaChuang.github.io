@@ -124,7 +124,7 @@ tags:
 
 以老師舉的例子，你會得到每個使用者的 ID 以及這 ID 評分過的歌曲，必須分別找出 ID 中的使用者特徵，如：年齡、居住地、語言...等，與歌曲的特徵，如：曲風、演唱者、類型、語言...等，將所得資料轉化成具體特徵後，才能進行特徵的提取。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 一般來說，若所提供的特徵越抽象，機器需要費力氣從中找出具體特徵，才能進行學習。因此特徵越抽象，學習難度會越高。
 
@@ -137,7 +137,7 @@ tags:
 2. [x] multiclass classification  
 3. [ ] regression  
 4. [ ] structured learning  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Q2. To build a tree recognition system, a company decides to gather one million of pictures on the Internet. Then, it asks each of the 1010 company members to view 100100 pictures and record whether each picture contains a tree. The pictures and records are then fed to a learning algorithm to build the system. What type of learning problem does the algorithm need to solve?**
 
@@ -145,7 +145,7 @@ tags:
 2. [ ] unsupervised  
 3. [x] semi-supervised  
 4. [ ] reinforcement  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Q3. A photographer has 100,000100,000 pictures, each containing one baseball player. He wants to automatically categorize the pictures by its player inside. He starts by categorizing 1,0001,000pictures by himself, and then writes an algorithm that tries to categorize the other pictures if it is `confident` on the category while pausing for learning from human input if not. What protocol best describes the nature of the algorithm?**
 
@@ -153,7 +153,7 @@ tags:
 2. [ ] online  
 3. [x] active  
 4. [ ] random  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Q4. Consider a problem of building an online image advertisement system that shows the users the most relevant images. What features can you choose to use?**
 

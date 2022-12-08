@@ -13,14 +13,14 @@ tags:
 我這個金魚腦，每次重設一次 IDE 就要查一次 - <mark>如何新增自定義 task 標籤</mark>，只好來寫一篇記錄一下，省的每次都要查。
 
 <!--more-->
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 其實還滿簡單，
 1. 依序點擊 File → Settings → Editor → TODO 
 2. 打開 TODO 設定頁面，點擊 Patterns 區域右上方的 + 號
 3. 新增一個 pattern
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 截圖如下：
 

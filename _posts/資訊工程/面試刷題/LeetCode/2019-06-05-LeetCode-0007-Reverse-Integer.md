@@ -28,11 +28,11 @@ Output: -321
 Input: 120
 Output: 21
 ```
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 
 > Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [$−2^{31}$, $2^{31} − 1$]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:** `Math`
 
@@ -58,7 +58,7 @@ class Solution:
       x = 0 if   x < -2147483648 or x > 2147483647 else x
       return x
 ```
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 不過這一題，應該不是希望這樣寫才對，所以又乖乖著墨了一版不轉成字串的版本。
 
 ```python

@@ -20,7 +20,7 @@ tags:
 5. 刪除項目補充說明 
 
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 先來看看成品長怎樣
 
@@ -38,7 +38,7 @@ tags:
 	- todoList：陣列，記錄代辦事項，裡面為 key / value ，包含 id、taskName 與完成狀況（completed） 
 	- addToList：methods function，當點擊新增按鈕時，會被觸發的函式。 
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 2. **輸入框與變數雙向綁定**  
     將變數 `newTodo` 使用 **v-model** 與 `input` 建立雙向綁定。
@@ -92,7 +92,7 @@ tags:
 ### 頁簽功能
 頁簽功能分成兩部分來實做，一是上方頁簽切換，二是下方資料切換。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 先實做上方頁簽切換的部分
 1.  **新增變數**  
@@ -111,7 +111,7 @@ tags:
     ```
     一旦 `visibilityTab` 指向自己，`:class` 的判斷式就會為真，因此就會為該頁簽加上渲染效果。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 下方資料切換
 1.  **動態過濾陣列內容**  
@@ -185,7 +185,7 @@ tags:
 
 如果直接刪除所傳入 index 會出現誤刪的情況，因此改利用傳入 id 反查該筆資料在原始陣列中正確的位置，然後在進行刪除。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 課程中在實做時方法有二，一是使用 **array.forEach** ，當遇到 id 同時就記錄下目前的 index，最後在刪除所記錄下的 index：
 ```javascript
@@ -200,7 +200,7 @@ removeItem: function(item){
 },
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過個人更偏好第二種方法：
 ```javascript

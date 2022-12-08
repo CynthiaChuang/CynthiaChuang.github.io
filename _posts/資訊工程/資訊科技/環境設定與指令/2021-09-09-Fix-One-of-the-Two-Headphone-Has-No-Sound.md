@@ -11,7 +11,7 @@ tags:
 一樣升級後遇到的小問題，我的耳機剩下右耳有聲音...有試過調整平衡但沒啥效果。
 
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 開始前我先將耳機拔去插了手機試試，確定耳機沒壞...耳朵也沒壞 XDDD 既然都沒壞，那應該是哪裡設定出了問題了，希望啦，不然真的壞音效卡會很麻煩的。
 
@@ -35,7 +35,7 @@ tags:
     $ alsamixer
     ```    
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     此時會跳出 UI 界面，一看果然發現我的耳機音量的其中一耳幾乎貼底了：
     <p class="illustration">

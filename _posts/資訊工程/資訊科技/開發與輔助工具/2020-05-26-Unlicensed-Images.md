@@ -19,7 +19,7 @@ tags:
 這邊列舉一些免授權圖庫，方便之後使用 :heart_decoration: 
 
 <!--more-->
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p> 
+<br class="big"><br class="big"> 
 
 其實網路上介紹免授權圖庫的資料，因此我也不針對每個圖庫一一介紹了，直接列舉 [ncuadmin](http://ncux.ncu.edu.tw/?p=389) 與 [Randy](https://www.randy24.com/blog/free-picture-download-webstie/) 這兩位的推薦：
 

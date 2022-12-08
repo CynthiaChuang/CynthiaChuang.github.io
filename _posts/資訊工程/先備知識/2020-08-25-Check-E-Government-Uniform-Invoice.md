@@ -41,7 +41,7 @@ tags:
 ^/[\dA-Z0-9+-\.]{7}$
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 這次來寫 Java 好了，好久沒寫了，自從不寫 App 後都沒動過了。
 
@@ -67,7 +67,7 @@ class Main {
 java Main /ABC+123
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 加點錯誤訊息：
 ```java
@@ -96,7 +96,7 @@ public static boolean verifyEgui(String egui){
 } 
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 阿阿阿，太久沒有寫 Jave，不是忘了寫分號，不然就是忘了宣告，動態程式語言寫太多的後遺症 XDDD
 

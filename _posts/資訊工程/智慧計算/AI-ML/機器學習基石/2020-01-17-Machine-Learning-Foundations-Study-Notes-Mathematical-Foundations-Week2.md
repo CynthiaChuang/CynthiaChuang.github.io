@@ -66,7 +66,7 @@ score = 0 ,\ ignored
 \right .
 $$
 
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 
 我們將其輸出 $y$ 的結果集合使用符號來表示，可稱為Label，可表示為 $y = \{ +1 (approve) , -1 (reject)\}$ , 0 ignored，因此式子可簡化成：
 
@@ -86,7 +86,7 @@ sign(x) =  \left\{
 \right .
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 為簡化數學式的表示，可針對數學符號再做進一步的化簡：
 
@@ -99,7 +99,7 @@ h(x) &=  sign(\sum_{i=1}^{d}{w_ix_i} - T) \\
 \end{aligned}
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 個人經驗雖然兩者意義上相同，但在實務上偏向使用矩陣運算，因為矩陣運算的可以藉由 GPU 使用 CUDA 來加速。
 
@@ -138,7 +138,7 @@ $$
 
 因此這邊採用逐漸修正的方式，在取得一條初始線段 $g_0$ 的情況下，經過不斷的錯誤修正，對線段進行平移旋轉等操作，最終能找到一條 $g_f$ ，這就是 Perceptron Learning Algorithm (PLA) 演算法的核心。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info">
 <div class="head">提醒</div>
@@ -153,7 +153,7 @@ $W$ 其實是直線方程的法向量
     1. 若存在，則更新權重 $W$ 後，重新執行步驟二。
     2. 若不存在，停止執行。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 其中，我們將所找到分類結果的資料標記為 $(X_{n(t)}, Y_{n(t)})$ ，而權重更新公式如下：
 
@@ -170,7 +170,7 @@ $$
 
 如果 $sign()=+1$，但是 $y=-1$，也就是说 $W$ 和  $X$ 的夾角過小，需要使 $W$ 與  $X$ 遠離，即右圖。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 雖然 PLA 的核心相當的簡單，但仍有幾個最基本的問題需要解決：
 1. 這演算法何時會停下來？
@@ -194,17 +194,17 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
 
     $\because$ $D$ 為線性可分    
     $\therefore$ 必存在一條直線其法向量為 $W_f$ ，使 $D$ 中所有點皆符合 $Y_n = sign(W_f^TX_n)$  
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     $\because$ 已知存在一條法向量為 $W_f$ 的直線且 $Y_n = sign(W_f^TX_n)$  
     $\because$ 可知平面上任一點皆與法向量為 $W_f$ 的直線存在一定距離  
     $\therefore$ 故推知 $Y_nW_f^TX_n > 0$ 且 $min( Y_nW_f^TX_n) > 0$  
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     $\because$  在運行  $t$ 次時，存在一個分類錯誤的點  $(X_{n(t)}, Y_{n(t)})$  
     $\because$ 又 $(X_{n(t)}, Y_{n(t)}) \in D$   
     $\therefore$  可推知  $Y_{n(t)}W_f^TX_{n(t)} \geq\  min( Y_nW_f^TX_n) > 0$   
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     為評估 $W_f$ 與 $W_{t+1}$ 的相近程度，故使向量內積　
     
@@ -219,7 +219,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
     
     可得 $W_f^TW_{t+1}  >  W_f^TW_t$ ，向量內積隨執行次數增加而增加。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 2. 向量內積的增長可能原因有二：<mark>向量長度增加或向量夾縮小</mark>。為排除向量長度增長對向量內積增加的影響，進行下列證明：  
 
@@ -227,7 +227,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
 
     $\therefore$ 可推知 $Y_{n(t)}(W_t^T, X_{n(t)}) \leq 0$ 
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
     $\because$ 已知 $W_{t+1} \leftarrow W_t + Y_{n(t)}X_{n(t)}$ ，故可得  
 
@@ -244,7 +244,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
       
     可得 ${ \parallel  W_{t+1} \parallel}^2 \leq {\parallel W_t \parallel} ^2  + {max\parallel X_{n(t)} \parallel } ^2$ ，證明在運行中向量長度增加緩慢
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 3. 證明隨執行次數增加而 $W_{t+1}$ 與 $W_f$ 逐漸靠近    
     $\because$ 已知向量內積公式為 $\vec a \cdot \vec b = |\vec a||\vec b| cos{\theta}$  
@@ -253,11 +253,11 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
     $\therefore$  向量內積的增加，為 $cos{\theta}$ 增加所導致  
     $\therefore$  證明隨執行次數增加而 $W_{t+1}$ 與 $W_f$ 逐漸靠近  
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 4. 證明PLA會停止  
     設定初始向量為 $W_0 = 0$，從 0 開始進行 $T$ 次迭代  
-    <p class="paragraph-spacing"></p>
+    <br class="big">
    
     由(2)推知： 
    
@@ -270,7 +270,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
         \end{aligned}
     $$
 
-   <p class="paragraph-spacing"></p>
+   <br class="big">
    
     由(1)推知：
     
@@ -283,7 +283,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
     \end{aligned} 
     $$
 
-   <p class="paragraph-spacing"></p>
+   <br class="big">
    
     結合上述兩結論，可得
     
@@ -297,7 +297,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
          \end{aligned} \\
     $$
 
-   <p class="paragraph-spacing"></p>
+   <br class="big">
    
     已知內積中正規化後，乘積最多為 1  
     故可得  
@@ -309,7 +309,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
     \end{aligned}
     $$
 
-   <p class="paragraph-spacing"></p>
+   <br class="big">
    
     化簡後  
 
@@ -317,7 +317,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
     \frac{R^2}{\rho^2} = \frac {\parallel W_f\parallel^2  max\parallel X_{n(t)} \parallel^2 } { min( Y_nW_f^TX_n)^2}  \geq T
     $$
 
-   <p class="paragraph-spacing"></p>
+   <br class="big">
     
     其中
 
@@ -325,7 +325,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
     R^2 =  max\parallel X_{n(t)} \parallel^2  \qquad \qquad \rho^2 =  min(Y_n  \frac {W_f^T}{\parallel W_f\parallel }X_n)
     $$
 
-   <p class="paragraph-spacing"></p>
+   <br class="big">
 
     從最後一條式子看來T是有上限的，因此在線性可分的情況下，<mark>PLA 最終會停止</mark>。
  
@@ -333,7 +333,7 @@ PLA 演算法停止必須滿足訓練集所有樣本都是<mark>線性可分的�
 
 ## Non-Separable Data
 PLA 演算法的優缺點相當清楚，優點是簡易實做，可以適用於任何維度，缺點是<mark>資料必須是線性可分的</mark>，可是是否為線性可分通常<mark>無法事前得知</mark>。即使資料是線性可分的，但因為時間複雜度高，執行時間也會耗費相當久。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另一種情況是 $f$ 產生的資料本身是線性可分，但因雜訊（noise）、輸入錯誤...等因素，最終產生出線性不可分的資料，也會使得 PLA 無法停止。
 
@@ -343,10 +343,10 @@ $$
 W_g = argmin \sum_{n=1}^N (Y_n \neq sign(W^TX_n)
 $$
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 但此類問題已經被證實是一個 **NP-hard 問題**，不可能找到最佳解，只能找到近似解。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這邊提出了一個近似的演算法 Pocket，它本質是一個貪婪演算法，屬於 PLA 演算法的變形，演算法如下：
 
@@ -367,7 +367,7 @@ $$
 3. [ ] machine, learning, statistics, textbook  
 4. [ ] national, Taiwan, university, coursera  
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Q2 . Let  $n = n(t)$, according to the rule of PLA below, which formula is true?**
 
@@ -380,7 +380,7 @@ $$
 3. [x] $y_nw^T_{t+1}x_n \geq  y_nw^T_tx_n$  
 4. [ ] $y_nw^T_{t+1}x_n < y_nw^T_tx_n$  
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Q3 . Define  $R^2 = max_n \parallel x_n\parallel^2$ , $\rho = min_ny_n \frac {w^T_f}{\parallel x_f \parallel} x_n$. We want to show that  $T \leq □$. Express the upper bound $□$ by the two terms above.**
 
@@ -389,7 +389,7 @@ $$
 3. [ ] $R/\rho^2$   
 4. [ ] $\rho^2/R^2$   
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Q4 .Since we do not know whether   $D$  is linear separable in advance, we may decide to just go with pocket instead of PLA. If $D$  is actually linear separable, what's the difference between the two?**
 

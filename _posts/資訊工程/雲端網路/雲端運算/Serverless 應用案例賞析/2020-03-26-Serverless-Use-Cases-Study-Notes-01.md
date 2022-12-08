@@ -51,7 +51,7 @@ tags:
 
 換句話說，隨著對底層屏蔽的增加，使的開發人員能<mark>專注於功能或程式本身的開發設計</mark>，加速整個開發流程的推進。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 而在最近幾年的技術中，又將粒度再次縮小，提出了所謂的 Function as a Service（FaaS），也就是 Serverless，試圖讓開發人員程從系統、運行環境、軟體相依性等複雜的環境中解脫。
 
@@ -61,7 +61,7 @@ Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並
 
 簡單地說，這裡所強調的『無伺服器』，指的是我們的<mark>程式碼不會明確地被部署在某些特定的軟體或者硬體的伺服器上</mark>，不需要在伺服器上持續執行行程以等待 HTTP 請求或 API 調用；是通過某種事件機制來觸發程式碼的執行，此時供應商才會將此服務進行部署。這樣的架構可以讓開發人員更專注程式碼的運行，而不需要分心管理任何的基礎設施。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 目前已有有些這樣的服務：<mark>由第三方供應，且無須安裝、管理和維護，只在需要的時候使用，並按照使用資源計費<span>。
 
@@ -71,7 +71,7 @@ Serverless 是雲端計算 IaaS 、 PaaS 的下一個方向，但這像技術並
 
 這兩類型的服務都被稱作 Serverless，也都是雲端計算的發展方向。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 這邊整理兩種服務的特性：
@@ -94,14 +94,14 @@ Serverless 僅是一個概念，目前還沒有一個普遍公認的權威的定
 
 P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資源來收費，不過兩種的核心的使用了才付費，就看平台供應商的計價方式了。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 至於所使用究竟是 FaaS 或 BaaS 則是次要的。但若採用的 FaaS ，對於函式還是有些要求：
 1. 為事件驅動的調用方式。
 2. 函式是無狀態、短暫的、且是有限制的，例如：所需記憶體的限制、執行時間的限制。  
 3. 另外，因為 FaaS 可被 HTTP 調用，因此 API Gateway 設定也是其中的要點。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外，講師提到一件事 Serverless 雖然包含了兩種服務概念 FaaS 與 BaaS，不過在講解中多會集中在 FaaS，這點在多數的文章中也是。因為 BaaS 這邊複雜度在提供此服務的開發者那邊，對於我們來說會用就好。因此在提到 Serverless 時大家多著墨在 FaaS 這塊。
 
@@ -127,7 +127,7 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 
 所以可以推測 FaaS 是 PaaS 的上層，但還不到 SaaS。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 而在 [AWS 的官方博客](https://aws.amazon.com/cn/blogs/china/iaas-faas-serverless/) 上，則是有說到些兩者的差異：  
 
@@ -137,14 +137,14 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 2. **縮放能力**  
     兩者在維運方面最大的差異在於<mark>縮放能力</mark>。對於大部分 PaaS 平台，租戶依然需要考慮縮放，就算將它設置為自動縮放，依然無法在具體請求的層面上進行縮放。但是對於 FaaS 應用，這種問題完全是透明的。
     
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 文章比較末端，使用 AWS 雲端架構戰略副總裁 Adrian Cockcroft 給的簡單定義來收尾：
 
 > 如果你的 PaaS 能夠有效地在 20 毫秒內啟動實例並運行半秒，那麼就可以稱之為 Serverless
     
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 最後附上一篇兩者的比較： [FaaS、PaaS 和无服务器体系结构的优势](https://www.infoq.cn/article/2016/06/faas-serverless-architecture)
 
@@ -175,7 +175,7 @@ P.S. 對於按使用來計費，我有兩種理解，按調用次數或使用資
 
 OpenWhisk 是一個開源 FaaS 平台，現在已經脫離孵化器，是 Apache 的一個頂級項目，也在 IBM 公有雲上有做了驗證。它是一個典型的<mark>事件驅動型</mark>的程式編輯模型。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 事件驅動顧名思義就是，事件來了才去做一件事情。以講師給的流程圖為例：  
 當事件源觸動觸發器後進入系統，然後在系統中通過規則的匹配去決定要觸發的動作，最終產生所需的結果。通常來說，輸入與輸出的的資料格式都是 Json。
@@ -224,7 +224,7 @@ Action 中什麼都可以放，諸如：計算、資料格式轉換、資料抽�
 
 動作序列顧名思義，就是把一系列的動作鏈結來。它是一串按順序呼叫的動作，其中某個動作的輸出會傳遞為下一個動作的輸入，達到動作重複使用的目的。 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **規則 (Rule)**  
 

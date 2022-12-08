@@ -77,7 +77,7 @@ clara-monitor-server        clara-monitor-server-0.7.1-2008.1
 clara-render-server        clara-renderer-0.7.1-2008.1
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 稍微對應並說明一下每個 chart 的角色與用途：
 
@@ -144,7 +144,7 @@ Triton Inference Server（圖片來源: <a href="https://docs.nvidia.com/clara/d
 
 例如，前面所提到的 DICOM Adapter，當接收到 DICOM 資料時，它會依靠 Clara Platform API 來啟動和監視 Pipeline Jobs。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外一個，使用 Clara Platform API 的代表是 **Clara CLI**，它是 Clara 提供給應用開發者用來管理、進行交互操作的命令行介面。它除了能與 API 進行上述所提到的操作外，它也可以對 Platfrom 本身進行操作，如：`clara platform start`、`clara platform stop`，也可以對 helm chart 進行操作，如：`clara pull dicom`、`clara dicom start`。
 
@@ -216,7 +216,7 @@ Clara Pipelines/Applications（圖片來源: <a href="https://docs.nvidia.com/cl
 
     為特定資料集所執行的 Pipeline 實例。
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 完整的 Pipeline 流程如下圖所示：
 
@@ -227,7 +227,7 @@ Clara deploy SDK（圖片來源: <a href="https://www.nvidia.com/zh-tw/gtc/sessi
 
 資料從圖中 Pipeline 左方讀入，最後右方寫出，且相關的狀態也會呈現在 Web UI 上。之前所提到的 Platform Server 會負責 Pipeline 與 Workflow 的管控，完成後其中的 Results Service 會將所產生的結果，送到指定的位置。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 若是從 Operator 微觀的角度來看資料的流動，會如下面所示：
 
@@ -272,7 +272,7 @@ operators:
           port: 8000
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這是一份部署胸部 X 光分類的範例，在這份模板中主要可以分成三個區域：
 1. **`api-version`**  
@@ -310,7 +310,7 @@ operators:
           format: dicom
     ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
     
 在上述的範例，是個較為簡單的例子，它所使用的 Operator 只有一個，也就是只有一個步驟，若將它 Workflow 繪出，會如下圖所示：      
 
@@ -369,7 +369,7 @@ operators:
   - path: /raconOutput/
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這是 Clara 基因體分析的[部署範例](https://docs.nvidia.com/clara/deploy_archive/R6_2/sdk/Applications/Pipelines/Genomics/public/docs/README.html)。在範例中使用了 3 個 Operator 分別名為 `mapper`、 `miniasm` 與 `racon`，其中 `racon` 同時接收了 `mapper`、 `miniasm` 的輸出作為它自己的輸入，最終可以看到這樣的 Workflow：
 
@@ -377,7 +377,7 @@ operators:
 <img src="https://i.imgur.com/uXY7PoO.png?1" alt="Multi Input">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 目前 NVIDIA 有提供了不少現成的 Pipelines，這對於我這種懶人來說是個福音，因為可以省去撰寫模板的麻煩，或只要做少量的修改就好。
 
@@ -409,7 +409,7 @@ operators:
 3. <a href="https://docs.nvidia.com/clara/tlt-mi/clara-train-sdk-v3.1/nvmidl/appendix/mapping_of_old_to_new.html">Converting from previous TLT</a>
 </div>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Step2. 下載基礎應用容器的映像檔**  
 還記得每個 Operator 其實是一個容器？NVIDIA 提供一版[基礎的映像檔](https://ngc.nvidia.com/catalog/containers/nvidia:clara:app_base_inference)，讓我們可以以此為基礎來擴充自己的映像檔。
@@ -419,7 +419,7 @@ $ docker pull nvcr.io/nvidia/clara/app_base_inference:0.7.3-2011.5
 $ docker tag nvcr.io/nvidia/clara/app_base_inference:0.7.3-2011.5 app_base_inference:latest
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Step3. 建立一個 Python 專案**  
 為了方便操作，可以建立一個 Python 專案，且專案中應有下列的文件結構
@@ -438,7 +438,7 @@ my_custom_app
 
 其中 model_config.json 包含了模型屬性，而 config_inference.json 可以直接複製訓練期間中所使用的 MMAR 配置 。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Step4. 修改 MMAR 文件**    
 文件中的前後處理無須更改。需要更改的是 `name` 、 `inferer` 與 `model_loader`。
@@ -464,7 +464,7 @@ my_custom_app
 }
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Step5. Dockerfile**   
 最後來撰寫 Dockerfile，並將前述所準備的東西一起放進映像檔中。 
@@ -491,7 +491,7 @@ COPY ./$MY_APP_NAME/config/* ./$BASE_NAME/config/
 $ docker build -t ${APP_NAME} -f ${APP_NAME}/Dockerfile .
 ```
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 遵循這樣的步驟，就可以準備一份映像檔來作為我們自製的 Operator。當然不同的需求與操作，所需準備的資料不盡相同。若是真有需要，再回頭來 K 文件好了。
 

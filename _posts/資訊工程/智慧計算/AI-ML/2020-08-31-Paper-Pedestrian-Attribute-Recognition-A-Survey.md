@@ -42,7 +42,7 @@ tags:
 5. 對於其他領域將屬性納入考慮後，識別結果更好？
 6. 提出可能的研究方向。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 下方的 Index Terms 有幾個不太熟悉的字彙： <mark>Graph Convolutional Network</mark> 與 <mark>Visual Attention</mark>。 
 
@@ -82,7 +82,7 @@ tags:
 <br>
 </div> 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Pedestrian Attribute Recognition**   
 而行人屬性辨識目的在於，從中挖掘出目標人物圖像中所能被觀察到的一些高階語義描述，如性別、年齡、服飾、配件等，如下圖所示：
@@ -465,7 +465,7 @@ tags:
 3. **高階策略**  
     考慮所有屬性之間的關聯，並通過對每個標籤對其他標籤的影響進行建模，來實現多標籤識別系統。泛化性最佳，但是具有很高的複雜度，難以處理大規模學習問題。
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 若是依照演算法的核心來看，目前 Multilabel Learning 大致可以成兩類：
 

@@ -209,7 +209,7 @@ Login Succeeded
 
 `docker login` 可以登入到指定倉庫，如果未指定倉庫位址，則會預設登入官方的公開倉庫 Docker Hub。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 完成登入後，後續的操作可能會與公開倉庫取的存取步驟有所差異，但整體流程差不多：
 1. 確認所要下載的映像檔與標籤
@@ -254,14 +254,14 @@ $ docker build -t demo-push:v1 -f MyDockerfile .
 
 如果需要更多關於 docker build 的介紹，請閱讀 [Docker 官方文件](https://docs.docker.com/engine/reference/commandline/build/)。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert warning">
 <div class="head">符號注意</div>
 注意！兩個命令的末尾都有一個點 `.`
 </div>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
  
 當建立成功後可在終端機上看到下列訊息：
 ```bash
@@ -271,7 +271,7 @@ Successfully built 2c7464ff7613
 Successfully tagged demo-push:v1
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info">
 <div class="head">補充說明｜docker build 命令後的點號（.）</div>
@@ -281,7 +281,7 @@ Successfully tagged demo-push:v1
 
 重點說三次！在這邊 <code>.</code> 確實是用來表示目前目錄，但卻不是用在指定 Dockerfile 所在路徑，因為那是 <code>-f</code> 的守備範圍！<br>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 那麼指定這目錄的目的？這與 Docker 的運行架構有關：
 
@@ -294,15 +294,15 @@ Successfully tagged demo-push:v1
  
 簡而言之， Docker 的運行架構就是個標準的 C/S 架構。<br>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 那麼這邊又產生了一個問題，如果在建構映像檔時有涉及 <code>COPY</code>、 <code>ADD</code>...等操作文件的指令時，因為並非在本地建構，而是在服務端建構的，那麼在 C/S 架構中， Docker Daemon 該如何獲得本地檔案？<br>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
  
 這邊就有一個 <strong>映像檔建構上下文（Context）</strong>的概念。當建構的時候，使用者會指定建構映像檔上下文的路徑，而 docker build 指令再得知這路徑後，會將這路徑下的所有內容打包上傳給 Docker Daemon。而 Docker Daemon 在收到打包的內容後，會將它展開就能獲得建構映像檔所需的一切檔案。<br>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 那回到一開始的問題 <strong>docker build 命令後點號（.）的意思</strong>，指得就是將目前的目錄下的所有內容打包上傳給 Docker Daemon。
 </div>
@@ -363,7 +363,7 @@ The push refers to repository [cynthia/demo-push]
 An image does not exist locally with the tag: cynthia/demo-push
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這是因為剛剛在建立映像檔時，所使用的倉庫與映像檔名稱為 `demo-push`，而非 `cynthia/demo-push`，因此需要先重命名：
 ```bash
@@ -378,7 +378,7 @@ $ docker tag demo-push:v1 cynthia/demo-push:v1
 docker push cynthia/demo-push:v1
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 上傳完成後，在終端機與平台上都可以看到相對應的提示：
 

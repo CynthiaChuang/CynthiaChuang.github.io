@@ -81,7 +81,7 @@ tags:
 
 8. **Loss Function**  
     不在這次的課程內，損失函數是用計算<mark>實際值和預測值的殘差</mark>，也就是用來評估 $g$ 挑選的是否夠好的一個依據。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 總結來說機器學習整個流程就是，從資料出發經由模型得到一個 Hypothesis $g$，這個 $g$ 期望上能盡可能接近 $f$。而模型是由學習演算法 $A$ 與用來進行預測的公式合集 $H$ 所組成。
 

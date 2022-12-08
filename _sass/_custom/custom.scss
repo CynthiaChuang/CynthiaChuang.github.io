@@ -382,13 +382,13 @@
   margin-right: 10px;
 }
 
-.paragraph-spacing {
-  content: "";
+br.big {
   display: block;
-  margin-bottom: 48px
+  content: "";
+  margin-top: 56px;
+  line-height: 190%;
+  vertical-align: top;
 }
-
-
 
 // --------------------------------------------------
 .blockquote-center {

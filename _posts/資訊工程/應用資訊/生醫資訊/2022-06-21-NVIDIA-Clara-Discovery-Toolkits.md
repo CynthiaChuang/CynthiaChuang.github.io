@@ -44,12 +44,12 @@ tags:
     - 用於 GPU 加速的對話式 AI 開源 Python 專案。 
     - 具有三個主要集合：ASR、NLP、TTS。 
     - 相關資料：[YouTube](https://youtu.be/2kTZ0oST8wg)、[NVIDIA 官方部落格](https://blogs.nvidia.com.tw/2021/08/31/accelerating-conversational-ai-research-with-new-cutting-edge-neural-networks-and-features-from-nemo-1-0/)
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**BioBert**](https://github.com/dmis-lab/biobert)
     - 第一個基於生物醫學語料庫的特定領域 BERT 模型。 
     - 表明在生物醫學語料庫上對 BERT 進行預訓練可以大大提高其性能。 
     - 相關資料：[論文](https://arxiv.org/abs/1901.08746)
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - **BioMegatron**
     - 是由 NVIDIA 開發，使用 PubMed 進行遷移訓練。 
     - 是目前生物醫學以 transformer 為基礎之最大的語言模型。它最大可達 BERT 的 3.5 倍。 
@@ -76,7 +76,7 @@ tags:
     - 模型重構通常需要對幾萬甚至幾十萬張投影圖片進行分析、組裝和最佳化，計算量巨大。
     - 借助 GPU CUDA 平行運算架構，改進了演算法，解決了Cryo-EM 中計算量最大的過程。
     - 相關資料：[RELION 官網](https://relion.readthedocs.io/en/release-3.1/)、[NGC](https://catalog.ngc.nvidia.com/orgs/hpc/containers/relion)
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**RoseTTAFold**](https://github.com/RosettaCommons/RoseTTAFold)   
     - 一種 AI 模型，旨在根據其氨基酸序列提供準確的蛋白質結構。
     - 利用深度學習在有限的資訊基礎上快速預測蛋白質結構，從而壓縮研究一種蛋白質所需的數年時間。
@@ -88,7 +88,7 @@ tags:
     - 在藥物設計中的有一項任務是搜索、篩選和組織大型化學資料庫。
     - 分子基於化學相似性進行聚合，並通過交互式繪圖進行視覺化。
     - 相關資料：[NGC](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara/resources/cheminformatics)
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 -  [**MegaMolBART**](https://ngc.nvidia.com/catalog/containers/nvidia:clara:cheminformatics_demo)
     - 用於藥物設計中的各種化學資訊。
     - Seq2Seq Transformer 模型，可用於藥物設計中的各種化學資訊。
@@ -96,7 +96,7 @@ tags:
     - Encoder 和 Decoder  可以一起使用，通過對模型的潛在空間進行採樣來生成新分子。
     - 能夠預測化學反應、最佳化和從頭分子合成（De Novo Molecular Generation）
     - 相關資料：[YouTube](https://youtu.be/pySSYb0Jftk)、[本文章節](#megamolbart)
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 -  [**SE(3)-Transformer**](https://github.com/NVIDIA/DeepLearningExamples/tree/master/DGLPyTorch/DrugDiscovery/SE3Transformer)
     - 預測 QM9 資料集中有機小分子的量子化學特性。
     - graph neural network，self-attention for 3D points and graphs processing。
@@ -112,7 +112,7 @@ tags:
 ### DOCKING
 - [**RAPID**](https://ngc.nvidia.com/catalog/containers/hpc:relion)
     - GPU 加速資料科學運算。
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**AutoDock**](https://github.com/RosettaCommons/RoseTTAFold)  
     - 是一款開源的分子模擬軟體，主要應用於執行受體與配體嵌合，識別最有可能與藥物靶點結合的結構。
     - 找到受體與配體間自由能最小的構型。 
@@ -125,7 +125,7 @@ tags:
     - 分子動力學，研究人員理解蛋白質的主要方法之一。
     - 利用貝葉斯推斷一些外部結構訊息和啟發式的經驗規則，引入蛋白折疊模擬，可以顯著加快構型搜索的速度。
     - 在藥物的設計和開發中，病毒或細菌 3D 模型最有助於識別其防禦系統中的薄弱環節。首先，分子動力學模擬可以確定哪些小分子可能會與攻擊者結合，並使得這些攻擊者的運作陷入癱瘓。
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**GROMACS**](https://ngc.nvidia.com/catalog/containers/hpc:gromacs)
     - 是一種分子動力學模擬應用程式。
     - 主要用來模擬研究蛋白質、脂質、核酸等具有複雜鍵合相互作用的生化分子的性質。
@@ -134,7 +134,7 @@ tags:
     <p class="illustration">
         <img src="https://imgur.com/Hhl9XrD.png" alt="">
     </p>
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**NAMD**](https://ngc.nvidia.com/catalog/containers/hpc:namd)
     - 平行計算分子動力學模擬的軟體。
     - 適用於在大規模平行計算上快速模擬大分子體系。
@@ -142,7 +142,7 @@ tags:
     <p class="illustration">
         <img src="https://i.imgur.com/n8SX8ng.png" alt="">
     </p>
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**Tinker-HP**](https://ngc.nvidia.com/catalog/containers/hpc:tinkerhp)
 - [**VMD**](https://ngc.nvidia.com/catalog/containers/hpc:vmd)
     - 視覺化分子動力學是一套分子建模與視覺化軟體。
@@ -150,11 +150,11 @@ tags:
     <p class="illustration">
         <img src="https://i.imgur.com/BnENtoe.png" alt="">
     </p>
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**TorchANI**](https://catalog.ngc.nvidia.com/orgs/hpc/containers/torchani)
     - PyTorch implementation of ANI。
     - 量子力學（QM） DFT 計算上訓練的深度神經網路（NN）如何學習有機分子的準確且可轉移的潛力。
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**DeePMD-Kit**](https://catalog.ngc.nvidia.com/orgs/hpc/containers/deepmd-kit)
     - 旨在最大限度地減少構建基於深度學習的原子間勢能和力場模型以及執行分子動力學（MD）所需的工作。
 
@@ -162,13 +162,13 @@ tags:
 - [**Clara Imaging**](https://developer.nvidia.com/clara-medical-imaging)
     - 一套能加快醫學影像人工智慧開發和部署的應用程式框架。
     - 順便幫之前文章騙騙流量 → [【Survey】NVIDIA Clara Train SDK 3.0](https://cynthiachuang.github.io/NVIDIA-Clara-Train-SDK-3#introduction-for-medical-imaging)
-    <p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+    <br class="big"><br class="big">
 - [**MONAI**](https://monai.io/)
     - Medical Open Network for AI 為一款針對醫療領域進行最佳化的開源框架。
     - MONAI 是一個以 PyTorch 為基礎的框架，透過處理特定產業資料、高效能訓練工作流程，以及可複製最先進方法的參考實施，促進醫學影像 AI 技術的發展。
 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 NVIDIA 除了將這些工具包裝成映像檔提供的使用外，並針對 GPU 使用進行加速：
@@ -203,7 +203,7 @@ BART 常用於**翻譯**或**對話**問題，是一種 **Seq2Seq Transformer** 
 
 Seq2Seq Transformer 預期可用於生物、圖像、NLP、化學...等領域，而 [MegaMolBART](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara/models/megamolbart) 就是一個用於化學領域的模型。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在應用上，MegaMolBART 也是發揮了 Transformer 的特性，除了 Encoder-Decoder 結構的組合使用生成新分子或反應物，也可以單獨使用 Encoder 的 embeddings 可以用作預測模型的特徵。下面這張圖是在說訓練時，所採用的訓練項目與遮罩狀況，不過放在這邊應該也算適合？
 
@@ -212,7 +212,7 @@ Seq2Seq Transformer 預期可用於生物、圖像、NLP、化學...等領域，
     Chemformer（圖片來源: <a href="https://chemrxiv.org/engage/chemrxiv/article-details/60ee8a3eb95bdd06d062074b">Chemformer: A Pre-Trained Transformer for Computational Chemistry.</a>）
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info"> 
 <div class="head">網路架構</div>
@@ -336,7 +336,7 @@ AutoDock 是一款開源的分子模擬軟體，主要應用於執行**分子嵌
 - [ZINC-15](https://zinc15.docking.org/)：[前面](#megamolbart)所提到的資料庫，收錄配體。
 - [蛋白質線上資料庫集](http://lions.nchc.org.tw/proteinOnlineDBb.jsp)
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 可以發現從 PDB Bank 上下載的幾乎都是 **PDB 文件**，這是存取蛋白質結構的公用格式。在進行嵌合與動力學模擬時皆是採用該格式。
 
@@ -351,7 +351,7 @@ PDB 與 SMILES 都是記錄蛋白質的資料格式，兩種資料格式可以�
 - [Smi2Depict: Generate 2D Images from Molecule Files](http://cdb.ics.uci.edu/cgibin/Smi2DepictWeb.py)
 - [Online SMILES Translator](https://cactus.nci.nih.gov/translate/)
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在 AutoDock 的操作過程中，另外存在 **PDBQT 文件**。它是 AutoDock 的專屬蛋白質文件格式，兩者格式類似，但在 PDBQT 文件 中，每一筆紀錄在原子座標之後會比 PDB 多出兩個直行，用以記錄原子的局部電荷（partial charges）和 AutoDock 可以識別原子類型代碼。
 
@@ -392,7 +392,7 @@ PDB 與 SMILES 都是記錄蛋白質的資料格式，兩種資料格式可以�
     - [AutoDock-4](https://autodock.scripps.edu/download-autodock4/)
     - [AutoDock-GPU](https://catalog.ngc.nvidia.com/orgs/hpc/containers/autodock)
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 稍微聊一下 AutoDockTools。AutoDockTools（ADT），它是配合 AutoDock 體系的一套視覺化軟體，是基於結構的藥物設計的基本工具，並包括一系列用於分析嵌合結果的方法。
 
@@ -447,7 +447,7 @@ PDB 與 SMILES 都是記錄蛋白質的資料格式，兩種資料格式可以�
     $ pythonsh  ./prepare_receptor4.py -r 1AC8.pdb –A hydrogens –U waters
     ```
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 2. **配體準備（Ligand Preparation）**       
     從影片看來這次的嵌合屬於半柔性嵌合，因為這邊沒有做額外設定與處理。一樣點選左上角的 `Read Molecule or Python Script` 將剛剛下載的 `flex-xray.pdbqt` 讀入。
@@ -456,7 +456,7 @@ PDB 與 SMILES 都是記錄蛋白質的資料格式，兩種資料格式可以�
         <img src="https://i.imgur.com/4ftj5LF.png" alt="加上極性">
     </p>
       
-    <p class="paragraph-spacing"></p>  
+    <br class="big">  
 
 3. **嵌合盒子（Grid Box）的設置**  
     選擇要進行模擬的受體與配體，生成模擬用 grid map，並設置嵌合位置。在實際操作時，我認為這個步驟非需要視覺輔助，是 terminal 版無法取代的部分。
@@ -525,7 +525,7 @@ $ autodock_gpu_128wi -ffile 1ac8.maps.fld -lfile flex-xray.pdbqt -nrun 100 -lsme
 ```
 其中 ffile 是剛剛所產生的 `.maps.fld` 檔、lfile 則是我們要嵌合的配體，nrun 是迭帶次數、lsmet 是選擇所要使用的搜尋演算法、最後 resnam 則是模擬結果的寫出路徑。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 執行前可能需要稍微注意下它的硬體需求：
 - Pascal(sm60), Volta(sm70), or Ampere (sm80) NVIDIA GPU(s)
@@ -543,7 +543,7 @@ $ autodock_gpu_128wi -ffile 1ac8.maps.fld -lfile flex-xray.pdbqt -nrun 100 -lsme
 
 可以看到在第 34 回合中，有較好的結合自由能，這回的模擬結果可能會是我們優先挑選的對象。不過 -3.97 這個分數實在不太理想啦，但也只能矮子隊裡選將軍了。
 
-<p class="paragraph-spacing"></p>    
+<br class="big">    
 
 
 如果要將結果視覺化，可 `result.dlg` 用 ADT 開啟：`Analyze` → `Dockings` → `Open`。
@@ -577,7 +577,7 @@ $ autodock_gpu_128wi -ffile 1ac8.maps.fld -lfile flex-xray.pdbqt -nrun 100 -lsme
     <img src="https://i.imgur.com/cCAYwlv.png" alt="兩相結合後">
 </p>   
 
-<p class="paragraph-spacing"></p>    
+<br class="big">    
 
 <div class="alert info"> 
 <div class="head">中間產物</div>
@@ -595,7 +595,7 @@ $ autodock_gpu_128wi -ffile 1ac8.maps.fld -lfile flex-xray.pdbqt -nrun 100 -lsme
 
 在深入了解後，其實分子嵌合軟體還滿多，在[維基百科的嵌合軟體列表](https://en.wikipedia.org/wiki/List_of_protein-ligand_docking_software)中就足足有 76 套，但很多都是由實驗室開發與發布，功能可能有所偏向，並不完善。在表格中的算是比較出名且完善的，因此有些已經被收購成了商業版本。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 回來聊聊欺騙我感情的 AutoDock Vina，一開始在看分子嵌合模擬工具時我把它與 AutoDock 給搞混了，我真的拿著 AutoDock Vina 的教學手冊去操作 AutoDock 🤣。
 
@@ -636,7 +636,7 @@ GROMACS 是分子動力學模擬領域的重要軟體之一，但本身不具有
 </ul>
 </div>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在 NVIDIA 的 GROMACS 文件當中，有列出一串支援的 GPU ：**Pascal（sm60）, Volta（sm70）, or Ampere（sm80）NVIDIA GPU**。
 
@@ -666,7 +666,7 @@ GROMACS 是分子動力學模擬領域的重要軟體之一，但本身不具有
         除初始結構文件外，還需準備力場參數文件，根據選用的力場不同，文件中可能包含電荷、鍵合參數和非鍵相互作用力...等函數。
     - **建立盒子並添加溶劑與離子**  
         對於盒子的理解我是是將它想像成模擬的空間，而空間的大小會由分子系統的大小來決定。完成盒子建立後，會在其中注入溶劑，形成一個溶劑化的分子系統。最後會在系統中添加離子，避免淨電荷存在。   
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 2. **模擬過程**：為使系統進行一連串的運算並進行能量最小化，以模擬計算出其平衡的狀態。
     - **能量最小化**   
         由於初始結構中可能會存在兩個原子靠得太近的情況（稱之為 bad contact），故在正式模擬前會先對分子系統進行能量最小化，避免結構的不合理而導致模擬出現錯誤。  
@@ -674,7 +674,7 @@ GROMACS 是分子動力學模擬領域的重要軟體之一，但本身不具有
     - **平衡模擬**  
         需要設置適當的模擬參數，並且確保參數的設置與力場的構造過程相一致。通常對系統升溫，先在 NVT 下限制住溶質劑做較短時間的限制性模擬以達到初步平衡；當溫度達標後，接著做 NPT 模擬使系統密度收斂。在兩個平衡階段完成後，此時系統會在所需的溫度和壓力下維持平衡，就可進行真正的分子動力學模擬。
         
-        <p class="paragraph-spacing"></p>     
+        <br class="big">     
         
         判斷系統是否已達到平衡可利用以下幾點作為判斷的依據：
         1. 看能量是否下降
@@ -682,7 +682,7 @@ GROMACS 是分子動力學模擬領域的重要軟體之一，但本身不具有
         3. 看系統的 RMSD 是否達到可接受的範圍
         4. 其他經驗
 
-        <p class="paragraph-spacing"></p>
+        <br class="big">
 
         <div class="alert info"> 
             <div class="head">NVT 與 NPT 系綜</div>
@@ -692,7 +692,7 @@ GROMACS 是分子動力學模擬領域的重要軟體之一，但本身不具有
                 <li><bold>NPT</bold>：NPT 系綜會同時進行控溫與控壓。一樣通過調節原子速度調控溫度，此外它會通過改變盒子尺寸調節壓力。</li>
                 </ul>
         </div>
-        <p class="paragraph-spacing"></p>
+        <br class="big">
 3. **後處理**：模擬結束後，GROMACS 會產生一系列的文件，我們可利用 GROMACS 所提供的分析程式，觀察並分析模擬的結果。
 
 <p class="illustration">
@@ -723,7 +723,7 @@ GROMACS 是分子動力學模擬領域的重要軟體之一，但本身不具有
 $ docker run -it --rm --runtime nvidia --privileged -v $HOME/data:/data nvcr.io/hpc/gromacs:2022.1
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 進入容器後，前往 RCSB 下載編號為 [1AKI](https://www.rcsb.org/structure/1AKI) 的蛋白質：
 ```bash
@@ -781,7 +781,7 @@ From '/data/software/gromacs/gromacs-2020.3/share/gromacs/top':
 
 盒子指的應該是晶胞（Unit Cell），它是構成晶體的最基本的幾何單元，其形狀、大小與空間格子的平行六面體單位相同，保留了整個晶格的所有特徵，能完整反映晶體內部原子或離子在三維空間分布。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在這邊使用一個簡單的立方體作為我們的 cell 。如果上手後可以改成其他形狀，這 cell 的形狀會影響的蛋白質的配置與溶劑添加的數量。
 
@@ -792,7 +792,7 @@ $ gmx editconf -f 1AKI_processed.gro -o 1AKI_newbox.gro -c -d 1.0 -bt cubic
 上面的命令將蛋白質 `1AKI_processed.gro` 放在立方體（-bt cubic）的中央（-c），並指定其放置在距方框邊緣至少 1.0 nm（-d 1.0）的位置，並將輸出結果命名為 `1AKI_newbox.gro` 。
 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 完成 cell 的定義後，我們可以用溶劑（水）填充它，使用溶劑化物完成溶劑化：
 
@@ -828,7 +828,7 @@ mdp 檔通常用於分子動力模擬與運行能量最小化，不過這邊用�
 $ gmx grompp -f ions.mdp -c 1AKI_solv.gro -p topol.top -o ions.tpr
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 最後將離子加入 cell 中：  
 ```bash
@@ -838,7 +838,7 @@ $ gmx genion -s ions.tpr -o 1AKI_solv_ions.gro -p topol.top -pname NA -nname CL 
 
 在 genion 指令中，我們提供 tpr 檔作為輸入（-s），生成（-o） gro 檔，處理拓撲結構（-p）以反映水分子的去除和離子的添加，-pname 和 -nname，別定義正負離子的種類，其中 NA 就 NA 不是鈉、CL 就真的是氯離子了，為達電荷平衡（-neutral）這邊會添加 8 個 Cl- 離子以抵消蛋白質上的 +8 電荷。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 此時模擬系統狀態如下：
 ```bash
@@ -865,7 +865,7 @@ CL                8
 $ curl -o minim.mdp http://www.mdtutorials.com/gmx/lysozyme/Files/ions.mdp
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 打開看了下 `minim.mdp` 的內容，發現它除了註解，參數其實 `ions.mdp` 一模一樣，不過這次上半部可以派上用場了：
 <p class="illustration">
@@ -877,7 +877,7 @@ $ curl -o minim.mdp http://www.mdtutorials.com/gmx/lysozyme/Files/ions.mdp
 $ gmx grompp -f minim.mdp -c 1AKI_solv_ions.gro -p topol.top -o em.tpr
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 現在，我們準備調用 mdrun 來執行能量最小化：
 
@@ -942,7 +942,7 @@ plt.show()
     $ curl -o nvt.mdp http://www.mdtutorials.com/gmx/lysozyme/Files/nvt.mdp
     ```
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     這次的 nvt.mdp 就多了很多的資訊
     
@@ -1070,7 +1070,7 @@ $ gmx rms -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsd.xvg -tu ns
 3. **Amber 的力場單一，但 Gromacs 所提供的力場多**  
     Amber 似乎只有一個 Amber 力場，而 Gromacs 的力場從選單看來有 15 個。
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 但關於計算速度與操作便利性而言，卻在論壇上有不同的評價，斜體字的部分是兩相異的部分：
     
@@ -1084,7 +1084,7 @@ $ gmx rms -s md_0_1.tpr -f md_0_1_noPBC.xtc -o rmsd.xvg -tu ns
 >  
 > ***Gromacs，速度快***，力場多，分析系統模塊化，用起來很爽，***操作稍微複雜些***，但是用熟了之後，覺得還行！群概念的引入著實不錯，很實用。不足的就是對 MD 延伸方法的支持較少，用深了之後，覺得總是讓人有些遺憾，好多功能不好實現！
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 考慮到網路上對於 Gromacs 與 Amber 計算速度的分析不一，這其中可能因為涉及版號、環境與實驗項目的不同。所以後來我有找到新加坡國立大學這篇《[HOW FAST CAN AMBER AND GROMACS JOB RUN WITH P100 GPU ACCELERATOR](https://nusit.nus.edu.sg/services/hpc-newsletter/how-fast-can-amber-and-gromacs-job-run-with-p100-gpu-accelerator/)》，它的比較基準較為一致，結果可能會比較可靠。
 

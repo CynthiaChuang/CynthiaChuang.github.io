@@ -59,7 +59,7 @@ tags:
 不過想當然爾，安裝過程中怎麼可能不出包 XDDD 當我按下後立刻跳出錯誤訊息：
 > Checking for a new Ubuntu release Please install all available updates for your release before upgrading
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 它告訴必須把所有的更新先做完才可以，只好回頭處理剛剛的錯誤訊息：
 
@@ -67,7 +67,7 @@ tags:
 處理時發生錯誤：/var/cache/apt/archives/docker.io_20.10.7-0ubuntu1~18.04.1_amd64.deb
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 我還以為是安裝檔損壞了，所以先嘗試刪除損壞的安裝檔後，重新更新系統：
 ```bash
@@ -75,7 +75,7 @@ $ sudo dpkg --remove --force-remove-reinstreq docker.io_20.10.7-0ubuntu1~18.04.1
 $ sudo apt-get update
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過依舊跳出錯誤訊息，但細細研究錯誤訊息發現解法就寫在第一行了，不過我忘了複製訊息，大意是某個資料夾在 20 時不再使用，請確認無容器在使用後將它刪除，所以直接照做即可，最後更新後直接升級，大約等 2~3 小時，就可以享受 Ubuntu 20.04 了！ :+1:
 

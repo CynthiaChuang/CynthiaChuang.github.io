@@ -29,7 +29,7 @@ sudo: unable to resolve host ubuntu16-x64
 $ vim /etc/hosts
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 然後把新的 hostname，也就是 ubuntu16-x64 加到檔案中：
 

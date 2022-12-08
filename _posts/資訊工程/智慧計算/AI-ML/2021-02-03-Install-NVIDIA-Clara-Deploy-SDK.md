@@ -63,7 +63,7 @@ Deploy SDK Part2！
        
     是說，如果不想登入 NGC 也行，登入與否其實不影響下載。不過還是建議登入下，否則很有機會在接下來的步驟中被它打斷，它實在很吵...
  
-    <p class="paragraph-spacing"></p>   
+    <br class="big">   
 
 2.  **下載並安裝 CLI**  
      接下來再去 [NGC](https://ngc.nvidia.com/catalog/collections?orderBy=modifiedDESC&pageNumber=0&query=&quickFilter=collections&filters=)，找 [Clara CLI](https://ngc.nvidia.com/catalog/resources/nvidia:clara:clara_cli) 來下載與解壓縮：
@@ -85,7 +85,7 @@ Deploy SDK Part2！
     Clara CLI version: 0.7.1-12788.ae65aea0
     ```
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 3. **配置 NGC 憑證**  
     安裝 Clara CLI 須配置 NGC 憑證，稍等 Clara CLI 才能從 NGC Pull 相關 Helm Chart 以進行部署。
@@ -110,7 +110,7 @@ Deploy SDK Part2！
     ✔ Yes
     Configuration "ngc-clara"successfully created    
     ``` 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     是說 **successfully** 的意思，是指你成功配置了憑證，但憑證是否能使用必須使用後才知道，可以試著使用 `pull` 指令來試試：
     ```bash
@@ -138,7 +138,7 @@ Deploy SDK Part2！
     403 Forbidden
     ```
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 4. **啟動 Helm Chart**   
    在上一篇提到 [Helm Charts](/NVIDIA-Clara-Deploy-SDK#Helm-Charts) 時有提過，除了 Triton Inference Server 之外的 charts，都可以藉由這步驟啟動。 
@@ -156,7 +156,7 @@ Deploy SDK Part2！
     Note: If there is a running instance of Clara Console, Clara Dicom Adapter or Clara Renderer, they should be restarted.
     ```
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     接下來下載 Clara Deploy Services 的 Helm Charts：
     ```bash
@@ -218,7 +218,7 @@ clara-monitor-server        clara-monitor-server-0.7.1-2008.1
 clara-render-server        clara-renderer-0.7.1-2008.1
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 或是下 `kubectl get pods` 應該會看到下面這些 Pods：
 * clara-clara-platformapiserver-
@@ -250,7 +250,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     $ kubectl get pods
     No resources found.
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 2. **clara platform start**  
     ```bash
@@ -285,7 +285,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     replicaset.apps/clara-ui-6f89b97df8                        1         1         1       95s
     replicaset.apps/clara-workflow-controller-69cbb55fc8       1         1         1       95s
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     
 3. **clara dicom start**  
@@ -331,7 +331,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     replicaset.apps/clara-ui-6f89b97df8                        1         1         1       2m44s
     replicaset.apps/clara-workflow-controller-69cbb55fc8       1         1         1       2m44s
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 
 4. **clara render start**    
@@ -383,7 +383,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     replicaset.apps/clara-ui-6f89b97df8                            1         1         1       24m
     replicaset.apps/clara-workflow-controller-69cbb55fc8           1         1         1       24m
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 5. **clara monitor start**  
     ```bash
@@ -458,7 +458,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
     NAME                                    READY   AGE
     statefulset.apps/elasticsearch-master   2/2     14m
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 6. **clara console start**  
     ```bash
@@ -545,7 +545,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
 
     ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 當然，如果像我這個白目的安裝就沒有那順利了...
     
@@ -556,7 +556,7 @@ clara-render-server        clara-renderer-0.7.1-2008.1
 
 恩...我先跟大家說最後的嘗試結果好了，我最後還是退版了。不過我有將過程的一些錯誤紀錄保留下來，看看之後還有沒機會回來再看，絕對不是因為單純湊數字 XDDD
  
-<p class="paragraph-spacing"></p>
+<br class="big">
  
   
 這邊接續安裝步驟-**配置 NGC 憑證**，在完成 platform chart 的下載後，試著啟動 platform，得到了第一條錯誤訊息：
@@ -577,7 +577,7 @@ Global Flags:
 Error: could not find tiller
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在 [Stack Overflow](https://stackoverflow.com/questions/51646957/helm-could-not-find-tiller) 上看到了一條類似錯誤訊息的提問，似乎重新初始化 Helm 即可：
 
@@ -591,7 +591,7 @@ Did you mean this?
 Run 'helm --help' for usage.
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 結果沒有 `helm init`！
 
@@ -604,7 +604,7 @@ version.BuildInfo{Version:"v3.1.2", GitCommit:"d878d4d45863e42fd5cff6743294a11d2
 lean", GoVersion:"go1.13.8"}
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 Helm2 與 Helm3 的變動已經屬於系統架構的變動，這個實在不好改。經過調查與[論壇](https://forums.developer.nvidia.com/t/error-could-not-find-tiller/157960)上發問，最後只好將 Helm 降版。我是透過 [ Binary Releases 安裝](https://helm.sh/docs/intro/install/#helm)的方式，將版本降回到 [v2.15.2](https://github.com/helm/helm/releases/tag/v2.15.2)。
 
@@ -617,7 +617,7 @@ tate:"clean"}
 Error: could not find tiller
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 不過版本都降了，`helm init` 指令應該可以使用了：
 ```shell
@@ -632,7 +632,7 @@ For more information on securing your installation see: https://docs.helm.sh/usi
 lm-installation
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 再次檢查 Helm 的版號，可以發現多出了 Server，用 kubectl 查看正在運行的 Pod，可以看到 Tiller 正在努力工作：  
 ```shell
@@ -659,7 +659,7 @@ kube-scheduler-esccluster-control-plane            1/1     Running   0          
 tiller-deploy-58f57c5787-bsfkh                     1/1     Running   0          14m
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 好了，排除 Tiller 的錯誤訊息後，重新 platform 的 Chart 後再重新 start 一次，看看會不會成功。
 
@@ -677,14 +677,14 @@ Starting clara...
 RPC error: code = Unknown desc = namespaces "default" is forbidden: User "system:serviceaccount:kube-system:default" cannot get resource "namespaces" in API group "" in the namespace "default"
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 呃，又出現 rpc 的 error。看到錯誤訊息，幾個可能的猜測：
 1. **Server 安裝配置的問題**：會考慮這個是因為我的 Tiller 後來降版後我自己重起的。
 2. **權限問題**：這個的機會比較大，在查資料的時候，幾乎碰到的是這個狀況。
 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 算了先試試看 [Helm2 文件](https://v2.helm.sh/docs/install/#running-tiller-locally)中說的本地運行分 Tiller 試試看：
  
@@ -699,7 +699,7 @@ $ ~/bin/tiller
 
 但文件中第二步驟連接到新的本地 Tiller 主機，看起來怪怪的，所還是沒做了，
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 
@@ -712,7 +712,7 @@ Note: If there is a running instance of Clara Console, Clara Dicom Adapter or Cl
 ```
 
  
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 
 喔耶！ platform 起動後，就跟前面一樣來下載 Clara Deploy Services 的 Helm Charts：
 
@@ -760,7 +760,7 @@ $ clara console start
 NAME: clara-console
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 就知道沒這麼好過年的，是有看到有個 [Issue](https://github.com/helm/helm/issues/6374) 在討論這問題的，不過必須承認的是，這個討論超過我這個初學者對於 K8S 的掌握了，我才剛入門沒幾天阿（崩潰 
  

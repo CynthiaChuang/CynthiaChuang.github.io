@@ -10,7 +10,7 @@ tags:
 
 Given an array, rotate the array to the right by  _k_  steps, where _k_ is non-negative.
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```
@@ -30,13 +30,13 @@ Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 > Note:
 > 1. Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 > 2. Could you do it in-place with O(1) extra space?
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`Dynamic Programming`、`Backtracking`
 

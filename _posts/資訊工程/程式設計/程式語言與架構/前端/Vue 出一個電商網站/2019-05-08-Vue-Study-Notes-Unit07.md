@@ -51,10 +51,10 @@ tags:
     let testLet = 5 ; 
     ```
     
-    <p class="paragraph-spacing"></p> 
+    <br class="big"> 
     
     雖然 **undefined** 與 **not defined**，中文都可以翻成是未定義或無定義。不過在 JavaScript 中，代表的意思有些不同。在編譯階段，JavaScript 會預留記憶體給變數，執行時才會將變數內容指進記憶體中。如果是留了記憶體，但是未被賦值，因此會印出變數的值是 undefined。但若得到的是 not defined ，則是代表這個東西並沒有被定義其存在，因此沒有幫它留記憶體的意思。
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 2. **作用域**  
     var 作用域是 **function** scope，而 let 作用域是 **block**。
@@ -68,7 +68,7 @@ tags:
        }, 10);
     }
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     當使用 **var** 來宣告迴圈變數 i 時，會輸出 10次 **這執行第10次**，而非預期中 **這執行第0~9次**。
     
@@ -77,7 +77,7 @@ tags:
     而若是用 let 宣告變數，它的作用域是 block，因此每一次 for 迴圈執行 setTimeout 中的 function 都引用到 for 這個 block 作用域下的 i。不過需要注意的是，因為這樣的引用關係，這些變數 i 所佔的記憶體，在 setTimeout 未執行前都不會被釋放。
     
     詳細內容可以看看[這篇文章](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/231181/)。
- <p class="paragraph-spacing"></p>
+ <br class="big">
     
 3. **重複命名**  
     var 同個區塊上重複命名沒關係，而 let 同個區塊上**不能**重複命名。
@@ -130,7 +130,7 @@ console.log(groupA);
 //["小明", "杰倫", "阿姨", "阿明"]
 ```
     
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 為了避免這種影響到互相影響發生，可以改採<mark>深複製</mark>的方式（下圖右），借助上一節所提到的<mark>展開語法</mark>，將 groupA 值一一取出後，放入一個新的陣列中，處理物件也是相同宣告方法。
 
@@ -157,12 +157,12 @@ let myArray = [...myNodeList]
 
 ### **其餘參數**
 就是不定長度參數的宣告，在 Python 中是使用 ``*args``、Hava 中是使用 ``int... nums``，而在 JavaScript 中的宣告有點類似 Java 是使用 ``...nums``，傳入的結果會是一個名為 nums 的陣列。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 跟其他語言的不定參數一樣需遵守兩個規定：
 1. 一個 function 的參數列表中最多只有一個不定長度參數。
 2. 不定長度參數必須放在參數列表的最後一個。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 JavaScript 還有一個（個人認為）比較神奇的特性，如果你傳入參數多於你宣告的個數，多餘的部分會變成名為 arguments 的類陣列物件，我之前學的語言多直接報錯的說... 
 ```javascript
@@ -197,7 +197,7 @@ let auntie = family[2];
 let [ming, jay, auntie, mom, dad] = family;
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 若要捨棄或略過陣列中部分的值 
 
@@ -225,7 +225,7 @@ let str = "基紐特攻隊";
 let [q,a,z,w,s]=str;
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 如果要拆成字元陣列
 ```javascript 
@@ -286,7 +286,7 @@ const allTeam = {
   GinyuTeam}  
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 這種做法在使用 CLI 建構 project 時很常被使用到，例如引用 router 時，將 import 命名直接命名 router，在 new Vue 元件時，就不需要寫成 ``router:router``，直接使用 router 即可：
 ```javascript
@@ -324,13 +324,13 @@ functionName(){
 	    at updateEasyCard (arrow_function.html:118)
 	    at arrow_function.html:120
 	    
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外一點需要注意的是，<mark>兩種的函式所綁定的 this 是不同的</mark>，
 - 傳統函式：依呼叫的方法而定
 - 箭頭函式：綁定到其定義時所在的物件
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 ~~超級~~有點難懂，所以後來找了相關的資料來看 [鐵人賽：箭頭函式 (Arrow functions)｜卡斯伯 Blog - 前端，沒有極限](https://wcc723.github.io/javascript/2017/12/21/javascript-es6-arrow-function/)
 
@@ -348,7 +348,7 @@ let originString = "我叫作 " + this.name ;
 let newString = `我叫作 ${this.name}`;
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 大括號的範圍內，除了引用變數，也可以直接引用 JavaScript code。
 {% raw %}
@@ -407,7 +407,7 @@ const total = people.reduce((prev,item,idex)=>{
   return prev + item.money
 },0)
 ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 也可以拿來做比較器
 ```javascript
@@ -422,13 +422,13 @@ const max = people.reduce((prev,item,idex)=>{
 **問題 1： const 是宣告一個常數，宣告後的變數不能隨意修改。  但是 const 所宣告的如果是物件變數，則物件內的屬性可隨意修改？**  
 1. [x] 對  
 2. [ ] 不對，就說不能亂改了，還想挑戰我  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **問題 2： var 與 let 的作用域分別為何？**  
 1. [ ] var 是 function; let 是 block "{}"。  
 2. [ ] var 是 block "{}"; let 是 function。  
 3. [x] var 是全域宣告; let 是 block "{}"。  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **問題 3：在物件中使用縮寫的 function 如下：  此時的 aa.doSomething() 等同於？**  
 ```javascript
@@ -441,12 +441,12 @@ var aa = {
 1. [x] 傳統 function 函式  
 2. [ ] 箭頭函式  
 3. [ ] 傳統 function 與 箭頭函式 是一樣的，所以是沒差的　  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **問題 4：使用 ES6 時不需要在意瀏覽器的支援性，用就對了**  
 1. [ ] 對。  
 2. [x] 錯，還是要注意一下能使用的瀏覽器，或者使用編譯工具(如: Babel)編譯。  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **問題 5：陣列方法中的 forEach 基本上要搭配 jQuery 或 Vue 才能使用。**  
 1. [ ] 對，這是框架所提供的方法。  

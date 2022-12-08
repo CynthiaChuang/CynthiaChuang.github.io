@@ -20,7 +20,7 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`Linked List`
 
@@ -30,7 +30,7 @@ Explanation: 342 + 465 = 807.
 這題不算難，就是兩個數字做相加，進位的話向後放，需要注意的就是兩個數字長度不相同以及最高位進位的情況。
 
 比較討厭的大概就是很久沒有寫鏈結串列了，操作起來有點討厭。奇怪，為啥以前我會很喜歡寫鏈結串列呢 (*´･д･)?
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 實做步驟如下：
 1. 新增一個 fake 的 head 節點，並將 end 也指向這個節點。
@@ -44,7 +44,7 @@ Explanation: 342 + 465 = 807.
 4. 返回第二步，繼續計算，若鏈結串列取出的節點不存在，則以 0 進行計算，直到兩陣列都計算完畢。
 
 5. 計算結束後回傳 head 的下一個節點。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 ```python
 class Solution:

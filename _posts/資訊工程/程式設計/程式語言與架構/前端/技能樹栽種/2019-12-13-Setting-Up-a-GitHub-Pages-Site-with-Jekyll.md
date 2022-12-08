@@ -33,7 +33,7 @@ p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個�
 ### 1. 新增專案
 新增名為「`username`.github.io」的專案，這個 `username` 指的是自己的 GitHub 帳號。這不僅是你的專案名稱，也是你的 blog 網址。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 專案成立後，按照 Quick setup 的提示準備好專案的資料夾。
 
@@ -45,7 +45,7 @@ p.s. 是說我一直覺得**『連猴子都能懂的Git入門指南』**這個�
 > 使用 UI 界面安裝過程中，請記得勾選 **Add Ruby executables to your PATH** 這個選項，讓安裝程式會自動設定環境變數。  
 > 否則當你想使用 ruby 指令時，會出現**不是內部或外部命令、可執行的程式或批次檔**的錯訊息，如果出現該訊息就必須手動設定環境變數。
 
-<p class="paragraph-spacing"></p> 	
+<br class="big"> 	
 
 安裝完成後，接著開啟命令提示字元確認 Ruby 是否安裝成功，若成功應該可以看到目前的版號，請務必確認所安裝的 Ruby 是 Jekyll 所要求的 **2.0 以上**的版本 。
 ```sh
@@ -66,7 +66,7 @@ $ gem install jekyll
 $ jekyll new myblog  --force 
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 到此網站就算建立完成了，若想在上線前預覽建置的結果，可先進入專案進行編譯。
 ```sh
@@ -89,14 +89,14 @@ Traceback (most recent call last):
 C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require': cannot load such file -- bundler (LoadError)
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 根據錯誤訊息 ``cannot load such file -- bundler`` 應該是我漏裝了bundler，因此用 gem 裝一下 bundler。
 ```sh
 $ gem install bundler
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 不過裝完太心急，忘記 install 就直接執行 jekyll serve ，果不其然又收到錯誤 **Bundler::GemNotFound** 的錯誤。
 ```sh
@@ -119,7 +119,7 @@ Traceback (most recent call last):
 	1: from C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-2.0.2/lib/bundler/resolver.rb:255:in `each'
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-2.0.2/lib/bundler/resolver.rb:287:in `block in verify_gemfile_dependencies_are_found!': Could not find gem 'minima (~> 2.5) x64-mingw32' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
 ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 補一下，install 就 run 的起來了
 ```sh
@@ -138,7 +138,7 @@ $ bundle install
 - [Lanyon ](https://github.com/poole/lanyon) :   [Demo](http://lanyon.getpoole.com)
 - [jekyll-theme-next](https://github.com/Simpleyyt/jekyll-theme-next):   [Demo](https://simpleyyt.com/jekyll-theme-next/)
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 其實有點大同小異啦，最後挑了第三個 jekyll-theme-next。運氣不錯，它還附有[安裝教學](http://theme-next.simpleyyt.com/getting-started.html)，可以直接照著做就好，不過因為剛剛我已經把專案建好了我就不學它 git clone project 來執行 jekyll serve，而是直接複製貼上了 XD
 
@@ -155,7 +155,7 @@ To update to the latest version installed on your system, run `bundle update --b
 To install the missing version, run `gem install bundler:1.17.1`
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 又得到錯誤訊息了，按照它的提示先 update 後再重新安裝
 ```sh
@@ -182,7 +182,7 @@ Traceback (most recent call last):
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.17.1/lib/bundler/runtime.rb:319:in `check_for_activated_spec!': You have already activated concurrent-ruby 1.1.5, but your Gemfile requires concurrent-ruby 1.1.3. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 似乎是我所安裝的 concurrent-ruby 版本與主題中 Gemfile  所要求的版號不相符，不過這問題不大，在指令前加上 **bundle exec** 即可
 ```sh
@@ -208,12 +208,12 @@ ERROR: YOUR SITE COULD NOT BE BUILT:
 No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository.
 ```
 	
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 我拿到了一條 **GitHub Metadata: No GitHub API authentication could be found** 的錯誤訊息，google 了一下，網上很多[方法](https://0xl2oot.cn/2018/01/26/jekyll-error-github-api/) 說是到 Github 申請一個 token，再配置一個環境變數。只是我覺得有點莫名其妙，為啥一定要跟 Github 綁定？ 最後在 jekyll-theme-next 的 issue 中，找到[有人](https://github.com/Simpleyyt/jekyll-theme-next/issues/19#issuecomment-362142730)提出不用申請 token 的解法：
 ```直接在 _config.yml 中，為空的 description 加上描述後就不會出現```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在 description 加上描述後，錯誤訊息終於變了：
 ```sh
@@ -222,7 +222,7 @@ Rendering Markup: assets/css/style.scss
 					Invalid CP950 character "\xE2" on line 5
 jekyll 3.7.4 | Error:  Invalid CP950 character "\xE2" on line 5
 ```
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 照著[說明](https://github.com/mmistakes/jekyll-theme-hpstr/issues/185#issuecomment-340777090)，我在 `assets/css` 這個路徑下新增一個 `style.scss`  的檔案，檔案內容如下：	
 

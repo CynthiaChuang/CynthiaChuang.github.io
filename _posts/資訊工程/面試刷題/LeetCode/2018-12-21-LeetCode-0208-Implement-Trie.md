@@ -10,7 +10,7 @@ tags:
 
 Implement a trie with  ``insert``,  ``search``, and  ``startsWith``  methods.
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example:**
 ```python
@@ -22,14 +22,14 @@ trie.startsWith("app"); // returns true
 trie.insert("app");   
 trie.search("app");     // returns true
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 > **Note:**
 > -   You may assume that all inputs are consist of lowercase letters  `a-z`.
 > -   All inputs are guaranteed to be non-empty strings.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`Trie`
 

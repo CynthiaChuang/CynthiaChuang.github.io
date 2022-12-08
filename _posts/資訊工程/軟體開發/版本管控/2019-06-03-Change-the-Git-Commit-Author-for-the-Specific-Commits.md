@@ -13,7 +13,7 @@ tags:
 原本想說回家後，用 `git cherry-pick` 一個 commit 一個 commit 搬移後，再重新 commit。結果發現...靠！有將近 20 個 commit ，這樣搬會瘋掉的。
 
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 還好找到了這篇 [修改 Git commits 的作者資訊](https://yulun.me/2014/git-tips-change-author-and-email-in-previous-commits/) ，雖然情境不太一樣，人家是回家加班寫 code，我是上班時間~~摸魚~~進修，不過目的都是一樣的都是修改 Git commits 的作者資訊。
 

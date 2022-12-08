@@ -33,7 +33,7 @@ $ service ssh start
 $ ssh <目標電腦 user name>@<目標電腦 ip> 
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 理論上是這樣就可行了...但我忘了我的電腦是在內網，且還是屬於使用 VPN 也尋訪不到的部分...只好先用 VPM 進到內網，再找台機器當跳板連回來...
 
@@ -49,7 +49,7 @@ $ systemctl stop anydesk.service
 $ systemctl start anydesk.service
 ```
  
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 不過如果機台在內網或是公司有阻擋 port，遠端桌面也不能用就是了...
  

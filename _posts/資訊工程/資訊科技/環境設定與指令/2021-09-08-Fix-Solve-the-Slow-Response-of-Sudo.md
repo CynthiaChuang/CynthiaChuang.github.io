@@ -40,7 +40,7 @@ $ sudo nano /etc/hosts
 
 設完後，sudo 速度恢復正常。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 如果沒有恢復正常，可以試試 [Kiritow](https://blog.csdn.net/Kiritow/article/details/80687036) 的方法，他除了加上 hostname 外，他還額外加了 localdomain 變成了：
 ```diff
@@ -48,7 +48,7 @@ $ sudo nano /etc/hosts
 + 127.0.0.1 localhost ubuntu20 ubuntu20.localdomain
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 如果你不知道你的 hostname，可以用指令先查查：
 ```bash

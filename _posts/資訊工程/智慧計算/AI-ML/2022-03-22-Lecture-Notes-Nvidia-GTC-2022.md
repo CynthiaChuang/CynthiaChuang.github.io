@@ -37,7 +37,7 @@ tags:
     <p class="illustration">
     <img src="https://i.imgur.com/wq07B95.png" alt="">
     </p>
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這場是 Nvidia 自己的演講，可分成兩個部分：**生物醫學的發展**與**創業投資現況**。
 
@@ -53,7 +53,7 @@ tags:
     - 表型篩選因資料集、細胞成像和電腦視覺再度崛起  
         P.S. 表型篩選的藥物發現方法就是製藥裡面的神農嘗百草。  
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 2. 深度學習和機器學習技術正在廣泛適用於更廣泛的問題
     > **Q**: 資料量太龐大如何從中篩選出有意義的東西？       
@@ -74,7 +74,7 @@ tags:
             2. 是編碼和擴展這些模型是一項艱鉅的任務。 
        
        
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 3. 多樣工具的衍生  
     - 因模型的成功，進而衍生出大量工具，如 AlphaFold、RoseTTAFold  
@@ -88,14 +88,14 @@ tags:
       </p>
 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 總結原因：
 1. 不斷增長的生物資料集。  
 2. 顯著的演算法進步提供了新的分析能力。  
 3. 模擬技術的進步，將幫助我們更深入了解疾病並以為這些疾病設計新療法。  
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 恩...最後誇了下 Nvidia 自己
 1. 它們提供了硬體資源，滿足數據中心、規模計算的需求。  
@@ -130,7 +130,7 @@ tags:
     <p class="illustration">
        <img src="https://imgur.com/Lc5teJ4.png" alt="">
     </p>
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 總體來說跟 [S42631](#S42631-Dawn-of-a-New-Era-of-Discovery---The-Convergence-of-AI-and-Life-Sciences) 的內容相似，有很大的重複性。
 
@@ -151,7 +151,7 @@ tags:
 - 新演算法興起
     - 每隔幾個月就推陳出新，改善計算準確度、效果...等。  
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <p class="illustration">
    <img src="https://imgur.com/ntaHav6.png" alt="">
@@ -163,7 +163,7 @@ tags:
     - **製造供應**：生產庫存管理
     - **上市**：監測患者的不良反應...等。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 - 名詞解說與歷史（略）
     - [什麼是人工智慧、機器學習和深度學習?](https://chih-sheng-huang821.medium.com/%E4%BB%80%E9%BA%BC%E6%98%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92-587e6a0dc72a)  
@@ -217,7 +217,7 @@ tags:
         <img src="https://imgur.com/VFlYjAX.png" alt="">
     </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 全篇涉及了 3 個腳色：
 1. 慈濟：收集資料與使用者
@@ -231,7 +231,7 @@ tags:
    - 標注操作層面
    - 臨床通知
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 報告我直接跳過慈濟歷史跟證嚴法師的部分，直接快進資策會防守範圍，就一開始的說明看來他們擅長醫療影像的部分：
 
@@ -239,7 +239,7 @@ tags:
     <img src="https://imgur.com/nPKZfPJ.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **乳房攝影流程**  
 乳房攝影工作流程是一項耗時的任務，在目前的的流程中，健檢車會到社區進行健檢，待健檢完畢後，資料會被帶回醫院，在行政人員完成整理後，資料會被送往放射科醫生進行標注，由於每次出診後帶回來的資料眾多，等待資料標注完畢寄回給受檢者後，往往需要耗時 27 周。但若真有任何異常情況，這樣的時間間隔可能錯過治療得黃金期。
@@ -248,7 +248,7 @@ tags:
     <img src="https://imgur.com/Gfzawu7.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 在這流程中 AI 可介入的範圍有 3 ：
@@ -272,7 +272,7 @@ tags:
    <img src="https://imgur.com/SgFSvP1.png" alt="">
    </p>
 
-<p class="paragraph-spacing"></p>   
+<br class="big">   
 
 按計算，若 3 步驟皆導入可省下 30% 的時間：
 
@@ -280,7 +280,7 @@ tags:
     <img src="https://imgur.com/XHTUJX3.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>     
+<br class="big">     
 
 **EMB**  
 設備公司負責終端設備與深度學習模型的整合：
@@ -297,7 +297,7 @@ tags:
     <img src="https://imgur.com/Ms2lsA2.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 除了查看結果。AI 平台還提供了報表系統的集成界面。該系統採用了平台商所提供的 SDK 和 API，為放射科醫師創建了一個交互式報告環境。他們只需單擊左側的匯總表，即可從右側瀏覽所有 AI 發現。如果醫生擔心，發現他們可以點擊複選框以生成報告內容。
@@ -306,7 +306,7 @@ tags:
     <img src="https://imgur.com/8xI3XCf.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不僅放射科醫生可以從 AI 模型中受益。平台商還開發了一個會議室系統，該系統也為臨床醫生提供。在系統中，加入了AI警告通知。如果對結果有重大發現，系統會觸發通知以提醒其臨床。
 
@@ -314,7 +314,7 @@ tags:
     <img src="https://imgur.com/AdqnOSD.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 通知臨床醫生衝突的藥物劑量。
 <p class="illustration">
@@ -338,11 +338,11 @@ tags:
     <img src="https://imgur.com/FIlR266.png" alt="">
     </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這邊大概是這幾篇製藥相關最硬的一篇，害我還先去讀書…是說這是不是**基於片段的藥物設計（Fragment-based drug design, FBDD）**？
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 小藥物藥物設計
 - 市場的要求設計或修改一個具有高親和力的大化合物以找到感興趣的疾病目標。
@@ -352,7 +352,7 @@ tags:
     <img src="https://imgur.com/3e6ok8G.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 本文建立了一個名為 [DRDOCK](https://dyn.life.nthu.edu.tw/drdock/) 的藥物設計平台
 - 集成了一個 NVIDIA DGX A100 節點，用於 GPU 加速的分子動力學模擬（MD）、基於 AI 的結構預測（Alphafold2）、和小分子對接（Docking）。
@@ -376,7 +376,7 @@ tags:
        </p>
 
      
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **多點打靶策略**  
 研究人員在篩選藥物親和性的時候，往往希望得到親和性較高的化合物。但親和性高可能也表示藥物對靶點的選擇性高，因此親和性強未必會是良藥，甚至不能成藥，為了得到較好的療效和較低的不良反應，多靶點藥物則成關注焦點。
@@ -430,7 +430,7 @@ Drug Repurposing Screening Identifies Tioconazole as an ATG4 Inhibitor that Supp
     <img src="https://imgur.com/ZE7IBeZ.png" alt="">
   </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 藥物設計平台中使用 MIG 技術
 - **Multi-Instance GPU (MIG)**
@@ -443,7 +443,7 @@ Drug Repurposing Screening Identifies Tioconazole as an ATG4 Inhibitor that Supp
         <img src="https://imgur.com/GAbf6Hw.png" alt="">
     </p>
     
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 藥物設計平台架構      
 <p class="illustration">

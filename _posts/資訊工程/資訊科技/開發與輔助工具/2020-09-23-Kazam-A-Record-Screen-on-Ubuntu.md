@@ -24,7 +24,7 @@ tags:
 $ sudo apt-get install kazam
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 驚奇的發現，我電腦竟然裝過！所以它是內建的嗎？還是我夢遊安裝的？不過既然裝過了，我就試著升級一下：
 ```bash
@@ -93,7 +93,7 @@ $ sudo apt install kazam
 
 查了一下好像是解碼器的問題，[xueliang2007](https://blog.csdn.net/qq_31806429/article/details/78832902) 說可以透過 [HandBrake](https://handbrake.fr/downloads.php) 這套軟體來轉檔。不過這是套 Windows 的軟體，我不可能直接把影片丟給 Designer 叫他們自己安裝軟體轉檔，他們應該會直接退件給我。（雖然這個想法讓我很心動！）
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 後來找到 StackExchange 發現相同的[問題](https://video.stackexchange.com/questions/20162/convert-kazam-video-file-to-a-file-playable-in-windows-media-player)，根據下面的回答，可以使用 <mark>fmpeg</mark> 來轉檔，指令如下：
 
@@ -104,7 +104,7 @@ $ ffmpeg -i in.mp4 -pix_fmt yuv420p -c:a copy -movflags +faststart out.mp4
 
 這次再請用 Windows 的同仁幫我試試看不能播放，終於得到可以順利播放的回覆了。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過如果你的影片帶有音源，上面的指令可能會跳出錯誤訊息：
 ```bash
@@ -119,7 +119,7 @@ or
 $ ffmpeg -i input.mp4 -c:v copy -crf 19 output.mkv
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 是說，ffmpeg 好像也能用來錄影，但是我找不到只錄製特定區域或單一視窗的功能，只好放棄用這套了。
 

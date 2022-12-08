@@ -23,7 +23,7 @@ tags:
 ## 前置閱讀
 與 Openwhisk 最相關的條目就是 <mark>Fass/Serverless</mark>，因此在開始前可以先看看 [IBM 微講堂系列 - 《Serverless 應用案例賞析》](/Serverless-Use-Cases-Study-Notes-Contents)，複習下 Fass/Serverless 的概念場景。可以的話，順便玩玩 [IBM Cloud Functions](https://cloud.ibm.com/functions/)，這套是以 Apache OpenWhisk 為基礎所架設 FaaS 平台，可以透過操作 IBM Cloud Functions 對 OpenWhisk 的功能有個概念。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info"> 
 <div class="head">Fass/Serverless 補充說明</div>
@@ -51,7 +51,7 @@ tags:
 1. <a href="https://juejin.im/post/5d1abf09f265da1bc8544227">【译】Kubernetes Serverless 框架的全面对比（OpennFaas，OpenWhisk，Fission，Kubeless 等）</a>
 </div>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 與 AWS Lambda  相同，OpenWhisk 是一個<mark>事件驅動</mark>的無狀態的計算模型。<mark>理論上</mark>它可以支持任何程式語言，使用者僅需上傳程式碼到 OpenWhisk 中，並設定相對應的觸發事件與處理數據流即可，OpenWhisk 負責處理計算資源的擴展。
 
@@ -158,7 +158,7 @@ tags:
     2. **輪詢（Polling）**
     3. **連接（Connections）**   
  
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 
 最後來貼張漂亮的流程圖：
 
@@ -169,7 +169,7 @@ tags:
 
 簡單複述一下架構，由 Event Sources 產生 Event，而這些 Event 會被 Feed 所捕獲，而當後 Feed 捕獲 Event 後會觸發 Trigger。一個 Trigger 會綁定一到多個 Rules，而符合條件 Rule 會觸發相對應的 Action 或 Action Sequence 都會被執行，而這些 Action 在執行時，依照需求可能會呼叫第三方程式。Action 除了被 Trigger 觸發外，也可以透過 REST 直接呼叫，當成 API 使用。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 貼下另外一張我也很喜歡的流程圖：
 

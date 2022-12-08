@@ -17,7 +17,7 @@ An input string is valid if:
 
 Note that an empty string is also considered valid.
 <!--more-->
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```python
@@ -48,7 +48,7 @@ Output: False
 Input: "{[]}"
 Output: True
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`String`、`Stack`
 
@@ -108,7 +108,7 @@ class Solution:
       return legal
 ```
 
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p>
+<br class="big"><br class="big">
 
 依照題目的輸入限制，進一步優化與精簡程式碼：
 ```python

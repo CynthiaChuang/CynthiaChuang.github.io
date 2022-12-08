@@ -19,7 +19,7 @@ The matching should cover the  **entire**  input string (not partial).
 > -   `s` could be empty and contains only lowercase letters  `a-z`.
 > -   `p`  could be empty and contains only lowercase letters  `a-z`, and characters like  `?` or `*`.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```python
@@ -55,7 +55,7 @@ Input: s = "acdcb" p = "a*c?b"
 Output: False
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`String`、`Backtracking`、`Dynamic Programming`、`Greedy`
 
@@ -82,7 +82,7 @@ Output: False
 		 2. 否，則呼叫遞迴傳入 string[1:] 與 pattern[1:] 
 	2.  否，則回傳 False
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 一樣多加了參數暫存比較結果，節省呼叫次數。不過按照上面那個邏輯去寫在遇到這個 [testcase](https://leetco%20de.com/submissions/detail/195948838/testcase/) 時會 Memory Limit Exceeded，所以修改了第二個判斷式的邏輯，判斷 pattern 扣除掉 `*` 長度：
 1. 若 pattern 扣除掉 `*`長度為 0，則回傳 True

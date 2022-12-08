@@ -34,7 +34,7 @@ command 'extension.launch' not found
 ```
 所以我直接改用另一個套件 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 是說，關於 Vue 延展模組有發現另一套星星更多的 [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)，它的功能看起來是 vue + Vue 2 Snippets 的合併版，也可以拿來試試看。
 

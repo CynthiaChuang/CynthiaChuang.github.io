@@ -15,7 +15,7 @@ tags:
 但這不適用於 Python。
 
 <!--more-->
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 在 Python 中沒有 `?:` ，而是類似 `if...else` 的寫法
 

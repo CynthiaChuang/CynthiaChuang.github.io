@@ -10,13 +10,13 @@ tags:
 
 Given a  **non-empty**  string  _s_  and a dictionary  _wordDict_  containing a list of  **non-empty**words, determine if  _s_  can be segmented into a space-separated sequence of one or more dictionary words.
 <!--more-->
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 > **Note:**
 >  - The same word in the dictionary may be reused multiple times in the segmentation.
 > - You may assume the dictionary does not contain duplicate words.
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Example 1:**
 ```python
@@ -38,7 +38,7 @@ Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: False
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 **Related Topics:**`Dynamic Programming`
 

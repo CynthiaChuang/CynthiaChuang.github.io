@@ -38,7 +38,7 @@ tags:
 $ mkdir ~/.ssh 
 $ chmod 700 ~/.ssh
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 然後使用 `ssh-keygen` 這個指令產生金鑰，依照[教學文件](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)的提示，我們選擇 **ED25519** 作為金鑰的加密演算法，並使用電子郵件作為標籤，創建一個新的 SSH 金鑰。 
 
@@ -52,7 +52,7 @@ Generating public/private ed25519 key pair.
 ```bash
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這邊稍微補充下，在 `ssh-keygen` 中常用參數如下：
 - `-t`：指定金鑰的加密演算法，預設使用 `SSH2d` 的 `rsa`。 
@@ -62,7 +62,7 @@ $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 - `-b`：指定金鑰長度（bits）。
 - `-C`：提供一個新標籤。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 在產生金鑰的過程中，會詢問 3 個問題，如果沒有特殊需求可以全部使用預設值（按 Enter）就好：
@@ -83,7 +83,7 @@ Enter same passphrase again:
     如果之後想修改金鑰密碼的話，可以透過 `ssh-keygen` 來設定。
     
     
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 完成上述設定後，會看到 fingerprint 與 randomart ，就代表產生成功了
 
@@ -118,7 +118,7 @@ $ ssh-add ~/.ssh/github_key
 1. **公鑰**：這把是對外公開的金鑰，也就是我們要上傳的金鑰。
 2. **私鑰**：這把則是放在自己電腦的金鑰，它等同於你的密碼。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
  
 知道要上傳的是那把鑰匙後，就可以依照下列方式進行設定
 1. **檢視並複製生成的公鑰**：  
@@ -126,7 +126,7 @@ $ ssh-add ~/.ssh/github_key
     $ cat ~/.ssh/github_key.pub 
     ssh-ed25519 ........ your_email@example.com
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
 2. **新增金鑰**：  
     接下來登陸你的 GitHub 帳號，點選你的頭像 → `Settings` 。
@@ -153,7 +153,7 @@ $ ssh-add ~/.ssh/github_key
     $ ssh -T git@github.com
     Hi XXX! You’ve successfully authenticated, but GitHub does not provide shell access.
     ```     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     不過，很不幸的我看到是這樣：
     ```bash
@@ -170,7 +170,7 @@ $ ssh-add ~/.ssh/github_key
     debug1: Trying private key: /home/Cynthia_Chuang/.ssh/id_ed25519
     debug1: No more authentication methods to try.
     ```
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     
     發現它在連線測試的時候，使用的預設的檔名，但我剛剛在建立金鑰時，更改了金鑰的名稱，難怪找不到，這時必須在配置一個 `config` 檔：
     ```bash
@@ -217,7 +217,7 @@ $ git remote set-url origin git@github.com:user_name/project.git
 
 是也可以[修改 config 檔案來達成該換遠端伺服器倉庫](/Git-Remote-Set-Url)，不過個人偏愛指令的設定方式。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 完成後，可以試著上傳 commit，並查看金鑰的使用狀況，應該會發現金鑰有了使用紀錄：
 

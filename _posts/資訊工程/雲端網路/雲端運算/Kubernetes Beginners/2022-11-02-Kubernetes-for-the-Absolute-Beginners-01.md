@@ -167,7 +167,7 @@ Kubernetes，簡稱為 K8S，是用於<mark>自動部署、擴充和管理「容
 - **Registry**  
     課程中並沒有出現這個字，不過課程提到的 Dockerhub 其實就是這概念了，所以我還是把它寫出來了。在課程提到可以將 Image 推到 Dockerhub，這概念就如同 **Github 跟 Repository 是一樣的概念**，它們一樣可以 pull 跟 push，只是 Git Repository 是存放 source code，而 Docker Repository 是存放 Docker images。
   
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 找到一張圖我覺得還滿清楚說明三者間的關係，雖然有些 keyword 還沒介紹，但應該不影響理解這張流程圖：
 
@@ -271,7 +271,7 @@ Kubernetes，簡稱為 K8S，是用於<mark>自動部署、擴充和管理「容
 5. **Controllers**  
     Controllers 則是 orchestration 背後的大腦，當 node、container 或 endpoint 出現故障時，controllers 會進行通知與回應，通常情況下，controllers 會啟動新的 container。
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
     是說找資料時有注意到，controllers 裡的 s 真的有很多控制器，後面的課程應該會提到？
     
@@ -307,7 +307,7 @@ Workers node，也就是我們的負責執行 container 的小小兵（minion）
 - **`kubectl cluster-info`**：查看有關集 cluster 的資訊。
 - **`kubectl get nodes/pods`**： 列出 cluster 中的所有 node 資訊。 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這邊忽然冒出了一個專有名詞 pod，所以我去查查相關定義：
 1. **Pod**  
@@ -431,7 +431,7 @@ Workers node，也就是我們的負責執行 container 的小小兵（minion）
 4. **執行測試**  
     在 minikube 上執行 hello-minikube app。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 是說，在教學文件中除了 minikube 外，還有 **kubeadmin** 的教學。不過我在影片中找不到這部分，但我想即便有應該也跟 minikube 一樣很多都不適用了，因此如果有要相關教學就看看這篇吧 - [〈Kubeadm｜Kubernetes〉](https://kubernetes.io/docs/reference/setup-tools/kubeadm/)
 

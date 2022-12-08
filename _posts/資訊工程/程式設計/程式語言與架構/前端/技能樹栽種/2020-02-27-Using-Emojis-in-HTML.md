@@ -24,13 +24,13 @@ tags:
      title=":mask:">
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 出來的效果長這樣：  
 
 <img alt=":mask:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mask.png" title=":mask:">  
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這種方式出來的圖片較固定，不像其他的方式有可能隨瀏覽器變化。
 
@@ -47,16 +47,16 @@ tags:
 <span style="font-size:100px">&#x1F637;</span>
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 出來的效果長這樣：  
 &#x1F637; <span style="font-size:100px">&#x1F637;</span>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 好處是可以使用 style 調整 Emoji 大小，又不像圖片會失真，但這種方式回隨作業系統與瀏覽器而變化 XDDD
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 **備註一下 Unicode 的插入**  

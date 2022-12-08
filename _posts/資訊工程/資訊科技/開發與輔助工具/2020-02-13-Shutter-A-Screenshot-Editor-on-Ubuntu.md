@@ -35,7 +35,7 @@ tags:
   <img src="https://i.imgur.com/GW0aBea.png" alt="Shutter">
   </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 2. **Ubuntu 20.04**      
   但，在 Ubuntu 20.04 時，我從軟體中心卻找不到這個軟體了，無論是搜尋 **Shutter** 或是**快門**，只好改由終端機安裝了。
@@ -45,7 +45,7 @@ tags:
   $ sudo add-apt-repository ppa:shutter/ppa
   ```
 
-  <p class="paragraph-spacing"></p>
+  <br class="big">
   
   然後用 apt-get 來安裝：
   ```bash
@@ -72,7 +72,7 @@ $ wget https://launchpad.net/ubuntu/+archive/primary/+files/libgoocanvas-common_
 $ wget https://launchpad.net/ubuntu/+archive/primary/+files/libgoocanvas3_1.0.0-1_amd64.deb
 $ wget https://launchpad.net/ubuntu/+archive/primary/+files/libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 之後才能進行安裝，安裝過程或許會需要 `apt-get install -f` 指令來處理相依套件衝突問題：
 
@@ -82,7 +82,7 @@ $ sudo dpkg -i libgoocanvas3_1.0.0-1_amd64.deb
 $ sudo dpkg -i libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
 $ sudo apt -f install
 ```
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 安裝結束後就可以把下載的 deb 刪掉了
 
@@ -94,7 +94,7 @@ $ sudo rm libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
 
 最後啟動 Shutter 可以發現我的編輯又可以用了（開心
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 補充一下，是說我發現在這版的截圖在使用時變得超級糊。找了下原因，發現它的影像品質預設只有 9，滿級是 100，難怪超級糊。
 

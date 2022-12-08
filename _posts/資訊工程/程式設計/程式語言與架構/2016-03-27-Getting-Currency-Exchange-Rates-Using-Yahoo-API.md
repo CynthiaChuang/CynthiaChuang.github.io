@@ -35,7 +35,7 @@ Yahoo! 財務 API 服務，該服務已停止並且不再起作用。<br>
 其中 URL 中
 - **f=c4l1**   
     這是只取下**兌換幣別（美金）的代碼與匯率**。若想取得更詳細的資料，可以將 **f=c4l1** 換成 **f=sl1d1t1**，這個分別指定了代碼（含原始幣別跟兌換幣別）、匯率、日期、時間這四個欄位。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 - **s=TWDUSD=x**   
     其中 **TWD（新臺幣）為原始幣別**、 **USD （美金）為兌換幣別**，可以依需求自行更換，如果要查詢多筆資料則在後在後接續即可，例如：
@@ -108,7 +108,7 @@ String line = in.readLine();
 }
    ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 基本上在 JSON 中
 - 大括號 { } 指物件（object）

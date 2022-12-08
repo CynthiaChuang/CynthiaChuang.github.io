@@ -15,7 +15,7 @@ tags:
   
 在 Survey 過程中最痛苦的大概是，看懂並搞懂那些那些專有名詞，我的生物程度只停留在高三，而且還有退化的趨勢阿(( 崩潰
 
-<p class="paragraph-spacing"></p>
+<br class="big">
   
  
 <div class="alert warning">
@@ -98,14 +98,14 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
 ### Ensembl ID
 不過搜尋的時候看到那堆 ID、敘述...等，不禁讓人眼花撩亂，而且聽說不同的資料庫還都有不同的規則...這已經不是眼花撩亂而是頭痛欲裂了吧！不過也只能咬牙看下去了 QAQ
  
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 1. **先看看頁面中最顯眼的 <mark>Gene: BRCA2</mark>**  
     BRCA2 是由 HGNC（ HUGO Gene Nomenclature Committee，人類基因命名委員會）對基因進行命名描述的一個 HGNC Symbol，又稱為**縮寫標識符**，具有**唯一性**。 
 
     人類基因命名委員會，顧名思義就是為人類基因進行命名的。由於 HUGO 是國際權威的權威機構，因此多數資料庫都會引入它的命名與 ID ，方便跨資料庫進行搜尋。
  
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 2. **再看看 HGNC Symbol 右方的 <mark>ENSG00000139618</mark>**  
     這跟下方的 <mark>Ensembl version</mark> 是同一組編碼。是給 HGNC Symbol 在 Ensembl 中的一個編號，由五個部分所組成：  
@@ -119,19 +119,19 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
     5. **版本號**  
         在小數點之後的數字是版號，為了維持 stable，Ensembl ID 儘量不會變動，因此在基因資料發生一些小的改動食指會去變動最後的版號。不過，如果整個基因整體模式都變動的話，還是會重新分配一個 ID。
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 3. **往下看到 <mark>Description</mark>**  
     這行其實有兩項資訊。前面的 **BRCA2 DNA repair associated** ，其實是 HGNC [批准的全基因名稱](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101)，對應於上面的 HGNC Symbol。  
 
     而後面的 **HGNC:1101**，則是 HGNC 分配的基因編號。雖然 HGNC Symbol 的可讀性較高，但在資料處理時一般會說建議使用 HGNC ID 作為唯一標識符。因為有時候 HGNC 會對一些已經命名過的基因進行重新審查和命名，以確保新的基因命名在描述基因功能方面更加的準確，但 HGNC ID 卻是固定不變的。
     
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 4. **最後看 <mark>Gene Synonyms</mark> 的部分**  
     前面 HGNC 會對一些已經命名過的基因重新命名，而此時舊有的名稱就會被當作同義詞來使用。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 剩下的資訊就比較好懂了，如基因位置，就不贅述的。  
 P.S. 其實沒比較好懂...不過至少知道它是只基因上的座標 XD
@@ -152,7 +152,7 @@ P.S. 其實沒比較好懂...不過至少知道它是只基因上的座標 XD
 - [變異註釋軟件SnpEff, VEP, Annovar的比較(上)](https://www.weiwenku.org/d/200114289)  
 ↑ 不是我不貼下，而是我真的找不到下。 
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 這邊接下來記錄一下 VEP 安裝方式。
 ### Installation VEP
@@ -203,7 +203,7 @@ $ perl INSTALL.pl
 $ ./vep -i examples/homo_sapiens_GRCh38.vcf --cache
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 執行完的後 VEP 會為它的 VCF 輸出在每個 row 後面加上 [CSQ field](https://www.ensembl.org/info/docs/tools/vep/vep_formats.html)。
 
@@ -221,7 +221,7 @@ D大提出關於 VCF annotation 可以歸納出幾項是需要進一步了解的
     3. 變異對於蛋白質序列與調控區域的影響
     4. 變異與 frequareucy data(?)
 
-    <p class="paragraph-spacing"></p>
+    <br class="big">
 
 2. **會使用到哪些工具與資料庫？**  
     在 VEP 中用到的資料庫有：GENCODE、dbSNP、Loop Genomics、ESP、ExAC、COSMIC、HGMD public、clinvar、PolyPhen、SIFT。

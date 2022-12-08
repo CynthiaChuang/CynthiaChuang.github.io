@@ -197,7 +197,7 @@ ENIAC 是第一部以**真空管取代繼電器**的通用電子電腦，設計�
 
 另一個小趣聞是，ENIAC 是在 1946 年 2 月 14 日發表的耶！不虧是工程師，情人節還是跟電腦作伴，還顛覆世界了呢！是說，它是為二戰設計，但 1946 年二戰應該結束了吧？
 
-<p class="paragraph-spacing"></p>
+<br class="big">
  
 在 1973 年以前，ENIAC 普遍被認為是第一台現代意義上的電子電腦。但是在 1973 年時，美國聯邦地方法院註銷了 ENIAC 的專利，認定 ENIAC 發明是從 ABC 電腦那裡繼承了電子電腦的主要構件思想。因此，ABC 電腦被認定為世界上第一台電子電腦，而這台 ABC 電腦，就是我們之前提過阿坦那索夫在 1937 年所發明的。
 
@@ -209,7 +209,7 @@ ENIAC 是第一部以**真空管取代繼電器**的通用電子電腦，設計�
 - <a href="https://pansci.asia/archives/193801">〈第一台通用型電子計算機——專利糾葛、優劣並存的 ENIAC │《電腦簡史》數位時代（十）〉</a>
 </div>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過嚴格說來，ABC 並**不是台圖靈完備的電腦**，也**沒能實現儲存程式結構**，更**不具備通用性**，就這幾點看來 ENIAC 完勝只能解線性方程式的 ABC。
 
@@ -220,7 +220,7 @@ ENIAC 是第一部以**真空管取代繼電器**的通用電子電腦，設計�
 
 前面雖然把兩者相比較，但有趣的是，ENIAC 其實跟 ABC 電腦很不一樣。例如：在 ENIAC 中，還是使用十進制來計算，而非二進制，這是兩個剛好互補嗎？我的缺點是你的優點，你的缺點是我的優點 XDDD
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 ENIAC 的另一個致命缺點，就是它是使用機械碼，換句話說它必須**依靠重新接線、切換開關的方式來切換不同程式**。即便它計算迅速，但每每更換程式，就得花半天的時間，嚴重拖累整體效能。
 
@@ -516,7 +516,7 @@ $$
 2. **否，沒有點擊叉叉**  
    反之，會記錄 **False 假**，並記錄 0 表示不成立。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過實際運行時，整個系統是多工處理，可能會同時檢查好幾件事，並根據這些事件來做出反應，這時就會用到**邏輯閘**/**邏輯運算**了。
 
@@ -527,7 +527,7 @@ $$
 
 用來釐清所有條件之間的關係，檢查兩個事件是不是都成立，就是邏輯閘的工作了。這些布林代數或者說是 0 和 1 ，在經過不同的閘時會產生出不同的結果。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 最常用的邏輯閘可歸納為 8 項，最基本的 4 個分別為 **NOT**、 **OR**、 **AND**、 **XOR**，另外的 **NOR**、 **NAND**、 **XNOR** 則是前述的反向結果，最後 **Buffer 緩衝器**在這邊先別管它，因為它是起到緩衝或強波的作用，並不會對布林值的輸出有任何的變化。
 
@@ -579,7 +579,7 @@ NOT 是 7 個邏輯閘中，唯一一個**一元運算子**，它的工作就是
 | X    | O              | O    |
 | O    | O              | O    |
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 我們把例子換回符號，我們已經知道，否決表示不成立，記為 0、False；反之同意則為 1、True，因此其真值表如下：
 
@@ -601,7 +601,7 @@ NOR Gate，看文字就知道它是把 OR 跟 NOT 組在一起。因此其結果
 | X      | O      | X        |
 | O      | O      | X        |
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 真值表長這樣：
 
@@ -631,7 +631,7 @@ NOR Gate，看文字就知道它是把 OR 跟 NOT 組在一起。因此其結果
 | X      | O      | X        |
 | O      | O      | O        |
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 換回符號長這樣：
 
@@ -653,7 +653,7 @@ NOR Gate，看文字就知道它是把 OR 跟 NOT 組在一起。因此其結果
 | X        | O                    | O    |
 | O        | O                    | X    |
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 真值表：
 
@@ -733,7 +733,7 @@ ASCII code 跟 Unicode 大概是世界上最廣為人知的編碼之二。
 
 它的全名是 American Standard Code for Information Interchange，中文翻譯為美國資訊交換標準程式碼。這套編碼用了 <mark>7 個位元來表示每一個字元</mark>，共可以表示出 $2^7 = 128$ 個字元，數量雖不多但足以滿足英語系國家。在如今 **ASCII 已被納入 Unicode 中**。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 ASCII 雖可滿足英語系國家的需求，但對於其他西歐語系，他們並非使用純英文表示的字元。因此後期發展出的 EASCII（Extended ASCII），就將 ASCII 閒置的首碼拿來使用，將其由 7 位元<mark>擴充為 8 位元</mark>，共計 256 個字元，擴充了許多符號、希臘或拉丁符號使用。
 
@@ -741,7 +741,7 @@ ASCII 雖可滿足英語系國家的需求，但對於其他西歐語系，他�
 
 當然，對於我們亞洲語系而言，看到亂碼成因會更加的複雜。因為 EASCII 雖解決了部分西歐語言的顯示問題，但對其他使用符號更多的語言仍無能為力。因此他們被迫**採用了更多的位元組（byte）來表示一個字元**，比如說繁體中文常用的 **Big5** ，<mark>2 個位元組表示一個字元</mark>，所以理論上最多可以表示 $256\times256 = 65536$ 個符號。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 題外話，當你在 Windows 當中使用記事本存檔時，看一下它所支援的編碼。那些 UT 開頭的跟等等的 Unicode 有關，課程還沒提到先略過不提，有趣的是第一個 ANSI 編碼。
 
@@ -799,7 +799,7 @@ UTF-8 最著名的特點就是<mark>可變長度的編碼</mark>，它採用 **1
     
     一般說來，字組長度較長的電腦，處理速度較快、主記憶體的容量較大、數值精度較高。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 課程最後附了張電腦儲存單位表：
 
@@ -819,7 +819,7 @@ UTF-8 最著名的特點就是<mark>可變長度的編碼</mark>，它採用 **1
 - [為什麼我的硬碟機所回報的容量低於硬碟機標籤上註明的容量？](https://www.seagate.com/tw/zh/support/kb/why-does-my-hard-drive-report-less-capacity-than-indicated-on-the-drives-label-172191en/)
 - [為什麼SSD顯示容量小於宣傳容量？](https://www.crucial.tw/support/articles-faq-ssd/ssd-showing-smaller-than-advertised)
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 是說，我在看資料的時候發現 Mac OS X 的檔案管理器是走十進制，而 Windows 是走二進制。我跟 Mac 不熟，所以這件事我還是第一次知道欸！所以我拿顆相同的硬碟，在 Mac 跟 Windows 上看到的數字是不一樣的？🤔
 
@@ -868,7 +868,7 @@ UTF-8 最著名的特點就是<mark>可變長度的編碼</mark>，它採用 **1
     馮紐曼模型（圖片來源: <a href="https://shopee.tw/【欣明】Foundations-of-computer-science-2e-計算機概論-原文書-i.66892677.8437790606">《計算機概論 2/e》</a>）
 </p> 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <p class="blockquote-center">
 馮紐曼模型的偉大之處，就是他通過抽象化的方式抓住了電腦的本質，你再怎麼變，也跳不出我定義的模型，任何事物都是從理論到實踐，理論要做的事情就是抽象抽象再抽象，抓住事物的本質。
@@ -1017,7 +1017,7 @@ CPU 應該是還滿常聽到的一個詞？它是電腦的大腦，是個極為�
     CPU 和 GPU 繪圖有什麼差異（圖片來源: <a href="https://codefree.hiskio.com/courses/4">課程</a>）
 </p> 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 是說，有人沒看過這兩圖的故事嗎？忘記是哪一年的 NVIDIA 請流言終結者來做的實驗，速度差距果然顯著，有興趣的可以去看看 [NVIDIA 的活動影片](https://youtu.be/-P28LKWTzrI)。
 <p class="illustration">
@@ -1092,7 +1092,7 @@ CPU 應該是還滿常聽到的一個詞？它是電腦的大腦，是個極為�
 1. **Android**  
     非正式中文名稱為安卓，但我其實不太喜歡這個名字 XDDD。它是由 Google 公司收購同名公司後開發而成，被視為是 Google 跨足行動領域並邁向成功的一步。
     <br>
-    <p class="paragraph-spacing"></p>
+    <br class="big">
     作業系統本身是以 **Linux** 為核心的開放原始碼系統，因此任何人都可以使用或者開發其相關的應用程式，市佔率高達八成。是說，雖然 Android 是開源的，但它其實不是免費的 XDDD。有興趣的可以去找找他們的授權費的相關資料，前幾年因為歐盟的反托拉斯法鬧得沸沸揚揚的。
 
 2. **iOS**   
@@ -1115,7 +1115,7 @@ CPU 應該是還滿常聽到的一個詞？它是電腦的大腦，是個極為�
 3. **Symbian / Meego**   
     Nokia 公司旗下的作業系統，由於改革緩慢，在智慧型手機市場始終無法有所突破，最終放棄了這兩個作業系統，轉向 Windows Phone。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在找資料的時候看到幾張有趣演進。從圖中可以看到 2009 時，手機作業系統市場相當分散，黑莓機跟 Nokia 依舊是主流，Android 還被壓得出不了頭；但大約到 2013 之後，這些作業系統就幾乎被雙頭壟斷，兩者佔了快 80%。
 
@@ -1177,7 +1177,7 @@ CPU 應該是還滿常聽到的一個詞？它是電腦的大腦，是個極為�
 
 簡單來說，就是不用更新或維護任何軟硬體、可隨時存取且有備援。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外，全球近幾年來最有價值五間的公司，分別是：Apple、Amazon、Alphabet（Google）、Microsoft 及 Facebook，五間公司。
 
@@ -1214,7 +1214,7 @@ CPU 應該是還滿常聽到的一個詞？它是電腦的大腦，是個極為�
 3. **韌體 Firmware**     
     介於軟體與硬體之間，特別指<mark>用來驅動硬體進行作業</mark>的軟體，主要是透過程式語言來操控硬體，像是控制主機板、晶片的驅動程式，或是電腦的BIOS。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 
 那麼，這「三體」工程師有什麼差別呢？

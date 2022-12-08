@@ -14,7 +14,7 @@ tags:
 是說才剛開始刷題，長路漫漫阿...
 <!--more-->
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 | NO. | 題目 | 難度 | 備註 |
 | ------------- | --- | --- | --- |

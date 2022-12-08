@@ -29,7 +29,7 @@ $ git push -f origin <rbranch>:<lbranch>
 
 **使用前請注意！**`-f` 是個非常危險的指令，它可以無視一切先來後到的規則，讓你的 commit，直接取代線上所有內容。不是讓團隊進度付之一炬，不然就是像這些 Jenkins 的開發人員一樣[不小心強制更新了 150 多個 github repos](https://groups.google.com/forum/#!searchin/jenkinsci-dev/force$20push/jenkinsci-dev/-myjRIPcVwU/mrwn8VkyXagJ)。真的做了你應該會被組員拖去套麻布袋 XD
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 <div class="alert info"> 
 <div class="head">強烈建議</div>
@@ -38,7 +38,7 @@ $ git push -f origin <rbranch>:<lbranch>
 3. 務必頭腦清晰確認自己在做啥，不清晰，<b>回去睡飽</b>再回來。<br>
 </div>
 
-<p class="paragraph-spacing"></p><p class="paragraph-spacing"></p> 
+<br class="big"><br class="big"> 
 
 做完才想到一件事。我是一個人開發沒錯，但我在兩台機器上都有程式碼，所以另一台的 repo 怎麼辦？
 
@@ -54,7 +54,7 @@ $ git push -f origin <rbranch>:<lbranch>
 $ git pull --force origin <rbranch>:<lbranch> 
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 不過一開始我並沒下完整分支，所以一直跳出 merge 的訊息。所以我回頭看了文件，發現它寫到：
 

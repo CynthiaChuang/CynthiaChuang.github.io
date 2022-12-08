@@ -62,7 +62,7 @@ tags:
 
 或者直接使用 Windows 11。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 想要確認版本與組建號碼的話，按 `Win 鍵 + R` 並輸入 `winver`，就可以看到相關數字了：
  
@@ -90,7 +90,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外也可以藉由 UI 來啟動。開啟 `控制台 → 程式集 → 開啟或關閉 Windows 功能`，勾選其中「Windows 子系統 Linux 版」與「虛擬機器平台」。
  
@@ -100,7 +100,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 設定完後，得重新開機，才能套用設定。
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 是說，我在許多教學中發現都會**啟用 Hyper-V**，因為 WSL2 是使用 Hyper-V 架構來實現虛擬化的，但在官方的教學過程中好像並沒有啟動 Hyper-V 的步驟？
 
@@ -149,7 +149,7 @@ $ wsl --set-default-version 2
     <img src="https://i.imgur.com/wLnXIoo.png" alt="建議我們到 Docker Desktop 設定 WSL instegration">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 不過，因為我要復現 QA 的操作，所以我還是把預載的 `docker.io` 給移除，重新按照[文件]( https://docs.docker.com/engine/install/ubuntu/)裝新版的 Docker。安裝好後，則是會直接看到 QA 反應的狀況：
 
@@ -163,7 +163,7 @@ $ wsl --set-default-version 2
 #### ⎚ Step2｜在 Docker Desktop 設定 WSL instegration
 因為我的環境中已經裝有 Docker Desktop，所以就不截圖安裝步驟了，有需要的可以看看[文件](https://docs.docker.com/desktop/install/windows-install/)的說明。印象中還挺簡單，至少...我沒有踩到奇怪的坑 XDDD
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 首先，開啟 Docker Desktop 上的  setting，並且在 General 中開啟 `Expose daemon on tcp://localhost:2375 without TLS`。
 
@@ -189,7 +189,7 @@ $ source ~/.bashrc
     <img src="https://imgur.com/M7Kubev.png" alt="Cannot connect to the Docker daemon at tcp://127.0.0.1:2375">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 我不得要領，只能先按照[論壇上](https://stackoverflow.com/questions/48047810/cannot-connect-to-the-docker-daemon-on-bash-on-ubuntu-windows)的解法一一試過去：
 
@@ -204,7 +204,7 @@ $ source ~/.bashrc
     <img src="https://imgur.com/Y4UuIl3.png" alt="Docker Desktop 的版號">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 我照著提示 `Settings > Resources > WSL Integration` 來到一個全新世界（誤）！在這我開啟了跟 Ubuntu 20.04 的連線，並重啟 Docker Desktop。
 
@@ -235,7 +235,7 @@ $ sudo service docker start
 測試 `docker run` 可以順利進行耶！
 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 回到一開始的問題**為何需要依賴 Windows 的 Docker Desktop**？[Survey 得到結論](https://ithelp.ithome.com.tw/articles/10235035)是因為<mark>有了 Linux Core 所以 Windows Docker Desktop 可以不需要，但跟 Windows 的整合就會差一點</mark>。
 

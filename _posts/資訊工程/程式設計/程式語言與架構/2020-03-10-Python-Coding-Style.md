@@ -53,7 +53,7 @@ self.train_batches = datagen.flow_from_directory(
 
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 如果是遇到計算式需要換行，則在運算子之前換行
 ```python
@@ -78,7 +78,7 @@ import sys
 from subprocess import Popen, PIPE
 ```
  
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 另外 guideline 建議 <mark>import 要分群</mark>，每群之間使一行空白分隔，分群規則則按照：
 - 標準函式庫
@@ -110,7 +110,7 @@ Yes: spam(1)
 No:  spam (1)
 ```
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 參數名稱與值之間也不用留白。
 ```python
@@ -136,7 +136,7 @@ def complex(real, imag:float=0.0):
 ```
 
 
-<p class="paragraph-spacing"></p> 
+<br class="big"> 
 
 但我會在低優先權的運算子兩邊加上空白。
 ```python

@@ -35,7 +35,7 @@ tags:
     <p class="illustration">
         <img src="https://i.imgur.com/S8Li945.png" alt="">
     </p>
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 醫療影像可分兩個方向進行：  
 
@@ -54,7 +54,7 @@ tags:
     3. **預測病患的癒後**，如：存活的時間、癒合狀況
     4. **預測免疫治療**，如：是否對治療有反應，避免醫療浪費
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外講者也分享了他們的實際案例：
 
@@ -145,7 +145,7 @@ tags:
     <img src="https://i.imgur.com/Ty2aRm6.png" alt="">
     </p> 
     
-<p class="paragraph-spacing"></p>
+<br class="big">
     
 在演講的一開始，講者提到將人工智慧引入醫療影像會遭遇的困難：
 
@@ -171,7 +171,7 @@ tags:
 <img src="https://i.imgur.com/l4v6VJm.png" alt="">
 </p> 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
  
 在後面講者提到了在醫療影像中會面對到的資料量問題，主要是源於醫療影像的特殊性，這些影像會來自不同醫療設備、儲存方式、不同參數設定，且又涉及病患的隱私...等因素，導致在醫療影像上的資料少於其他 CV 領域，而資料量的多寡直接影響的是模型的精準度：
 
@@ -206,7 +206,7 @@ tags:
     <p class="illustration">
     <img src="https://i.imgur.com/ptVbC3t.png" alt="">
     </p> 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 這邊特別說明，Medical AI 也是醫療器材，它的販售必須經過主管機關的核准，以確保其**安全性**及**有效性**。
 
@@ -220,7 +220,7 @@ tags:
 1. 台灣 TFDA 認證的第一個診斷軟體 GMP 工廠  
 2. ISO 13485 認證的台灣第一個診斷軟體品質系統
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 接下來講者介紹了他們的彩色眼底圖輔助診斷糖尿病視網膜病變 Versee DR。在糖尿病患的照護流程中，在定期的門診中醫生可以使用眼底攝影進行檢查，若被診斷出有病變的風險，則進行轉診。
 
@@ -243,7 +243,7 @@ tags:
 <img src="https://i.imgur.com/BTNvZCR.png" alt="">
 </p> 
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在這篇中也提及了資料量不足的問題，在這篇也提到資料的不足主要源自於：設備費用高、數量少、嚴重不平均、不同廠牌設定...等。
 
@@ -279,14 +279,14 @@ tags:
 2. <a href="https://medium.com/sherry-ai/%E8%81%AF%E7%9B%9F%E5%BC%8F%E5%AD%B8%E7%BF%92-federated-learning-b4cc5af7a9c0">聯盟式學習(Federated Learning). 突破隱私權的重圍！</a><br>
 </div>
     
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 但也說明跨醫院的資料在使用上會遇到的問題：
 
 1. 來自不同醫院以及不同醫生，要如何成為訓練資料？
 2. 跨廠牌的設備、不同的設定、操作醫生或技師的也會有不同的喜好
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 因此若想進行跨醫院的訓練，必須：
 1. 統一的 Terminology 
@@ -294,14 +294,14 @@ tags:
 3. 統一得標注方式
 4. 統一得標注儲存方式 
   
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 聯邦是學習在醫院實際應用的挑戰：
 1. 不同體系的醫院有可能進行這樣的合作
 2. 權利與義務？結果屬於誰？要如何分配？
 3. 誰來主導？
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外，講者也做一些效能的比較與測試，供大家參考：
 <p class="illustration">
@@ -330,7 +330,7 @@ tags:
     <img src="https://i.imgur.com/PnSUJYG.png" alt="">
     </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 目前馬偕醫院導入**輔助流程**用以：
 
@@ -353,12 +353,12 @@ tags:
 但是人類容易過度利用錨點，來對其他資訊與決定做出詮釋，當錨點與實際上的事實之間的有很大出入，就會出現當局者迷的情況。
 </div>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外涉及不同職級（醫學院學生、住院醫師、住院總醫師、主治醫師）、不同領域，導致除了放射線科醫師外，其他醫生不一定能判斷 AI 資訊的對錯，例如：腸胃科醫生不一定會看胸腔 X 光，所以不建議將 AI 診斷結果直接給其他科醫生看。
 
 因此在講師不建議開放結果給臨床醫師，而結果又對放射科又沒有幫助的情況下，因此 AI 在醫院的角色會趨向分類與預警。
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 在目前的的流程的中，健檢車會到社區進行健檢，待健檢完畢後，資料會被帶回醫院，在行政人員完成整理後，資料會被送往放射科醫生進行標注，由於每次出診後待回來的資料眾多，等待資料標注完畢寄回給受檢者後，往往需要耗時 2 周與 1 月。但若真有任何異常情況，這樣的時間間隔可能錯過治療得黃金期。
 
@@ -372,7 +372,7 @@ tags:
 <img src="https://i.imgur.com/ICkfrJ2.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 接下來講者介紹了他們所引入的平台— Quibim，在 Quibim Precision 中利用十六個類神經網絡訓練了超過 1,000,000 張圖像的資料庫，以估評估胸部 X 光存在以下病變的可能性：肺塌陷、心臟擴大、積液、浸潤、腫塊、結節、肺炎、氣胸、肺實變、水腫、肺氣腫、纖維化、胸膜增厚和疝氣。
 
@@ -408,7 +408,7 @@ tags:
 <img src="https://i.imgur.com/LZeOSx5.png" alt="">
 </p>
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 演講的後期做了一些比較，首先先比較了資料移出院外或留在院內實作的優缺點：
 
@@ -420,7 +420,7 @@ tags:
     2. 醫院其實不會想要把資料移出院外
     3. IRB 期限資料出不去
 
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 另外，講者還在一些公開平台上做了測試，並比較優缺點：
 
@@ -450,7 +450,7 @@ tags:
     <img src="https://i.imgur.com/KX8zys4.png" alt="以深度學習為基礎的影像分析平台">
     以深度學習為基礎的影像分析平台（圖片來源: <a href="https://www.nvidia.com/zh-tw/gtc/session-catalog/?search=A21188&search.language=1594320459782004L0mo&tab.catalogtabfields=1600209910618002Tlxt#/session/1596599680443001MpjE">演講 A21188 </a>）
     </p>
-<p class="paragraph-spacing"></p>
+<br class="big">
 
 主要介紹了一個名為 VAIDIO 的影像分析與搜尋系統，用來管理大量攝影機，並提供搜尋與即時告知的功能。
 
