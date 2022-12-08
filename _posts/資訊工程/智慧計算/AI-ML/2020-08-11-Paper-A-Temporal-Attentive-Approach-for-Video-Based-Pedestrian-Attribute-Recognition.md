@@ -79,8 +79,8 @@ MARS 的資料是來自於 6 隻監視器中所監控到 1261 人的 20478 條�
 下圖是重標注後 14 種屬性，除運動（Motion）與姿態（Post）是行為相關屬性外，其餘皆是身分相關屬性。
 
 <p class="illustration">
-    <img src="https://i.imgur.com/2F56VgW.png" alt="MARS 行人屬性標註">
-    MARS 行人屬性標註（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" >論文</a>）
+    <img src="https://i.imgur.com/2F56VgW.png" alt="MARS 行人屬性標注">
+    MARS 行人屬性標注（圖片來源: <a href="https://arxiv.org/pdf/1901.05742.pdf" >論文</a>）
 </p>
 
 

@@ -224,8 +224,8 @@ DeepGrow 在 3D Slicer 操作效果（圖片來源: <a href="https://ngc.nvidia.
 官網中，還貼了張效能的示意圖，號稱可以提升 10x 的標注速度：
 
 <p class="illustration">
-<img src="https://i.imgur.com/UXZLQgk.png" alt="標註速度的提升">
-標註速度的提升（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nvidia:med:clara:getting_started">NVIDIA</a>）
+<img src="https://i.imgur.com/UXZLQgk.png" alt="標注速度的提升">
+標注速度的提升（圖片來源: <a href="https://ngc.nvidia.com/catalog/resources/nvidia:med:clara:getting_started">NVIDIA</a>）
 </p>
 
 是說每次說到效能提升，我都會想到這兩張圖 XDDD

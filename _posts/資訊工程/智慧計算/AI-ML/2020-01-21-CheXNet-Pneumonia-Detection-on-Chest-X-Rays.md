@@ -69,7 +69,7 @@ ChestX-ray 資料集包含 30 萬名病人與 10 萬張胸部前視圖 X 光影�
 
 <p class="illustration">
     <img src="https://i.imgur.com/CZ53CBj.png" alt="ChestX-ray14">
-    ChestX-ray14圖片 + Box 標註（圖片來源: <a href="https://arxiv.org/abs/1705.02315">ChestX-ray14</a>）
+    ChestX-ray14圖片 + Box 標注（圖片來源: <a href="https://arxiv.org/abs/1705.02315">ChestX-ray14</a>）
 </p>
 
 好吧，說實話就算把病灶框給我，我也看不出差異在哪裡 orz 
@@ -264,7 +264,7 @@ The training was done using single Tesla P100 GPU and took approximately 22h.
 最後來看看預測結果與熱力圖的效果：
 <p class="illustration">
     <img src="https://i.imgur.com/kQ2SSuA.png" alt="熱力圖">
-    由左而右分別是原始圖、熱力圖和標註框
+    由左而右分別是原始圖、熱力圖和標注框
 </p>
 
 隨機選了三組結果，剛好最對應到了三種 case：

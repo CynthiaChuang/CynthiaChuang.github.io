@@ -153,13 +153,13 @@ tags:
 <img src="https://i.imgur.com/VOICuiE.png" alt="">
 </p> 
 
-為了克服上述的原因，講者提出了 DeepQ AI Platform，在這個平台上統一了標註工具，並提供標註人員協作的環境以加速開發的進行：
+為了克服上述的原因，講者提出了 DeepQ AI Platform，在這個平台上統一了標注工具，並提供標注人員協作的環境以加速開發的進行：
 
 <p class="illustration">
 <img src="https://i.imgur.com/NMNUeK9.png" alt="">
 </p> 
 
-在這頁講者稍微介紹了他們的平台的工作流程，大抵上是平台可以協助資料標記後，在將標註完的資料用於訓練，而訓練所得的模型可用於 inference 或是導回平台以優化標註過程：
+在這頁講者稍微介紹了他們的平台的工作流程，大抵上是平台可以協助資料標記後，在將標注完的資料用於訓練，而訓練所得的模型可用於 inference 或是導回平台以優化標注過程：
 
 <p class="illustration">
 <img src="https://i.imgur.com/kcbfnOF.png" alt="">

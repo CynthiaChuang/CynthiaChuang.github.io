@@ -31,11 +31,11 @@ tags:
     Ensembl Logo（圖片來源: <a href="https://asia.ensembl.org/info/about/legal/logo_policy.html">ensembl</a>）
 </p>
 
-Ensembl 其實是一項開始於 1999 年的生物資訊學的研究計劃，由是一個由歐洲生物資訊研究所（European Bioinformatics Institute, EMBL）和維康基金桑格研究院（Wellcome Trust Sanger Institute）所推動。其目標是其致力於<mark>統整基因註釋（Annotation）和定序資料的整合</mark>，並讓研究人員可以透過網路來取得所需資料。
+Ensembl 其實是一項開始於 1999 年的生物資訊學的研究計劃，由是一個由歐洲生物資訊研究所（European Bioinformatics Institute, EMBL）和維康基金桑格研究院（Wellcome Trust Sanger Institute）所推動。其目標是其致力於<mark>統整基因注釋（Annotation）和定序資料的整合</mark>，並讓研究人員可以透過網路來取得所需資料。
   
-而網站則開始於 2000 年，原是一個真核生物註釋項目，主要側重在脊椎動物，但隨著時間推移，Ensembl 資料庫也包含了越來越多的基因體資料，同時它的可用資料的範圍也擴展到了比較基因體學、變異位點...等方面。 
+而網站則開始於 2000 年，原是一個真核生物注釋項目，主要側重在脊椎動物，但隨著時間推移，Ensembl 資料庫也包含了越來越多的基因體資料，同時它的可用資料的範圍也擴展到了比較基因體學、變異位點...等方面。 
   
-Ensembl 可支援將基因體變異、基因體大範圍重組（e.g. chromothripsis, chromoplexy）以<mark>視覺化方式呈現</mark>、檢視基因在染色體上的註釋、探索某個基因同源性（Homology）和進化樹、檢視比對到基因上的 mRNA 或蛋白的序列位置及 Variant Effect Predictor...等功能
+Ensembl 可支援將基因體變異、基因體大範圍重組（e.g. chromothripsis, chromoplexy）以<mark>視覺化方式呈現</mark>、檢視基因在染色體上的注釋、探索某個基因同源性（Homology）和進化樹、檢視比對到基因上的 mRNA 或蛋白的序列位置及 Variant Effect Predictor...等功能
 
 截至目前為止，Ensembl 發布的最新資料庫版號為 97。  
 P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia.ensembl.org/index.html)查詢。
@@ -139,14 +139,14 @@ P.S. 其實沒比較好懂...不過至少知道它是只基因上的座標 XD
 
 
 ##  Variant Effect Predictor (VEP)
-不過這次 Survey 的主要目標是關於 <mark>annotation</mark> 的步驟。在 Ensembl 中有提供一套註釋與分析工具 - Variant Effect Predictor（簡稱 VEP），它可以對測試結果產生的變異進行註釋，包括 SNPs、Indel 等，每個註釋用來預測可能受到影響的轉錄。此外所輸出的結果也可以根據資料庫內容與需求，對變異進行過濾與排序，並列出最具致病性的或是全部的效應。
+不過這次 Survey 的主要目標是關於 <mark>annotation</mark> 的步驟。在 Ensembl 中有提供一套注釋與分析工具 - Variant Effect Predictor（簡稱 VEP），它可以對測試結果產生的變異進行注釋，包括 SNPs、Indel 等，每個注釋用來預測可能受到影響的轉錄。此外所輸出的結果也可以根據資料庫內容與需求，對變異進行過濾與排序，並列出最具致病性的或是全部的效應。
 
 <p class="illustration">
-    <img src="https://i.imgur.com/P8DYMOP.png" alt="VEP 註釋流程">
-    VEP 註釋流程（圖片來源: <a href="https://www.genedock.com/article/2017/10/16/vep-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%8F%98%E5%BC%82%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7/">GeneDock 文档</a>）
+    <img src="https://i.imgur.com/P8DYMOP.png" alt="VEP 注釋流程">
+    VEP 注釋流程（圖片來源: <a href="https://www.genedock.com/article/2017/10/16/vep-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%8F%98%E5%BC%82%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7/">GeneDock 文档</a>）
 </p>
 
-此外，在找尋資料的過程中，發現關於 annotation tool 中有三套被反覆提及，分別是 <mark>Annovar</mark>、<mark>SnpEff</mark> 與 Ensembl 的 <mark>VEP</mark>，這三套都是做變異註釋的工具：
+此外，在找尋資料的過程中，發現關於 annotation tool 中有三套被反覆提及，分別是 <mark>Annovar</mark>、<mark>SnpEff</mark> 與 Ensembl 的 <mark>VEP</mark>，這三套都是做變異注釋的工具：
 
 - [突变注释工具SnpEff,Annovar,VEP,oncotator比较分析](https://www.jianshu.com/p/6284f57664b9)
 - [變異註釋軟件SnpEff, VEP, Annovar的比較(上)](https://www.weiwenku.org/d/200114289)  
@@ -213,7 +213,7 @@ $ ./vep -i examples/homo_sapiens_GRCh38.vcf --cache
 D大提出關於 VCF annotation 可以歸納出幾項是需要進一步了解的。
 
 1. **通常 VCF annotation 步驟的用意是什麼？**  
-    annotation 主要是註釋 VCF，每個註釋用來預測可能受到影響的轉錄（transcription）。根據配置會列出最具致病性的或是全部的效應。
+    annotation 主要是注釋 VCF，每個注釋用來預測可能受到影響的轉錄（transcription）。根據配置會列出最具致病性的或是全部的效應。
 
     VEP 會用於：
     1. 變異的位置、轉錄物的上游
@@ -226,7 +226,7 @@ D大提出關於 VCF annotation 可以歸納出幾項是需要進一步了解的
 2. **會使用到哪些工具與資料庫？**  
     在 VEP 中用到的資料庫有：GENCODE、dbSNP、Loop Genomics、ESP、ExAC、COSMIC、HGMD public、clinvar、PolyPhen、SIFT。
 
-    其他用於註釋的工具有 Annovar、VEP、SnpEff 與 oncotator，其中 oncotator 主要是用於癌症特異性變異位點的註釋，而 SnpEff 主要是面向臨床和精準醫療的。
+    其他用於注釋的工具有 Annovar、VEP、SnpEff 與 oncotator，其中 oncotator 主要是用於癌症特異性變異位點的注釋，而 SnpEff 主要是面向臨床和精準醫療的。
 
 
 3. **經過 annotation 步驟後, 檔案格式內容是什麼？**  
