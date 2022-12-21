@@ -59,8 +59,10 @@ class Main {
         System.out.println(verification); 
     }
     
+    // 在 java 中遇到反斜線要跳脫，所以這邊用兩個反斜線
+    // 如果你看到四個反斜線，那是我為了讓 NexT.Mist 主題順利渲染所再做跳脫
     public static boolean checkEgui(String egui){
-        return egui.matches("^/[\\dA-Z0-9+-\\.]{7}$");
+        return egui.matches("^/[\\\\dA-Z0-9+-\\\\.]{7}$");
     }
 }
 
