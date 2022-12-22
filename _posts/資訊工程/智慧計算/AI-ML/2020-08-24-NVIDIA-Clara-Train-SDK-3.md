@@ -398,7 +398,7 @@ A comparison of validation accuracy（圖片來源: <a href="https://developer.n
 2. **縱向聯盟式學習（vertical federated learning）**  
     這適用於樣本重疊多且特徵重疊少的情境，舉例來說像是同一社區不同診別的診所，他們病患重疊性比較高，但資料中的特徵卻不相同。
  
-但在於縱向聯盟中有個大麻煩，就是如果參與者如果越多，會使的它的流程架構就會越複雜，不僅難以執行也不適合推廣。因此在實務上比較常見的會是<mark>橫向聯盟</mark>，NVIDIA 所提供的也是這個。
+但在於縱向聯盟中有個大麻煩，就是如果參與者越多，會使的它的流程架構就會越複雜，不僅難以執行也不適合推廣。因此在實務上比較常見的會是<mark>橫向聯盟</mark>，NVIDIA 所提供的也是這個。
 
 <p class="illustration">
 <img src="https://i.imgur.com/N1LmQQD.png" alt="horizontal federated learning">

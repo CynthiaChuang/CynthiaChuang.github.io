@@ -638,7 +638,7 @@ $ ./gradlew :tests:testSystemBasic -Dwhisk.auth=$WHISK_AUTH -Dwhisk.server=https
 
 
 ### 第三方函式庫
-忽然想到如果如果有相依函式庫的怎麼辦？如果是編譯語言應該連同相依函式庫一起傳入應該可行，但是直譯語言就必須來找找了。還好最後有找到[文件](https://github.com/apache/openwhisk/blob/master/docs/actions-python.md#packaging-python-actions-with-a-virtual-environment-in-zip-files)。
+忽然想到如果有相依函式庫的怎麼辦？如果是編譯語言應該連同相依函式庫一起傳入應該可行，但是直譯語言就必須來找找了。還好最後有找到[文件](https://github.com/apache/openwhisk/blob/master/docs/actions-python.md#packaging-python-actions-with-a-virtual-environment-in-zip-files)。
 
 一樣準備一支原始碼 `__main__.py` ，根據我看到資料好像一定要叫這個？
 ```python

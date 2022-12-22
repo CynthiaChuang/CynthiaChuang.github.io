@@ -112,7 +112,7 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
     1. **ENS**  
         用來闡明這是一個 Ensembl ID。
     2. **物種前綴**  
-        用來表示這是啥物種，如果有需要可以看對照表 → [Species prefixes](https://asia.ensembl.org/info/genome/stable_ids/prefixes.html)。值得一提的是，如果是如果物種是人類，這欄位會是空的。
+        用來表示這是啥物種，如果有需要可以看對照表 → [Species prefixes](https://asia.ensembl.org/info/genome/stable_ids/prefixes.html)。值得一提的是，如果物種是人類，這欄位會是空的。
     3. **功能前綴**  
         用來註明這是一個基因、外顯子或是蛋白質家族...等。對照表 [Feature prefixes](https://asia.ensembl.org/info/genome/stable_ids/prefixes.html) 在這。
     4. **唯一的 11 碼數字**
