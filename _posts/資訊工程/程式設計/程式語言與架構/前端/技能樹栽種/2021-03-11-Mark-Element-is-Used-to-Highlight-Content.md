@@ -7,7 +7,7 @@ categories:
 tags:
 - Github Page
 - Jekyll-NextT
-- CSS
+- CSS/SCSS
 - 前端
 - 技能樹栽種
 --- 
