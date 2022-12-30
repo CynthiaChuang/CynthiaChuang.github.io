@@ -157,7 +157,7 @@ $ sudo chage --warndays 7 <user>
 
 
 ## 強迫使用者登入更換密碼  
-常見情境是我們生成亂數密碼給使用者，然後請使用者第一次登入時修改密碼，或是當我更新密碼複雜度時，請舊有使用者改密碼遵循新的密碼規則。這功能可以用剛剛的 `chage` 來達成：
+常見情境是我們[生成亂數密碼](https://cynthiachuang.github.io/Generate-a-Password-in-Ubuntu/)給使用者，然後請使用者第一次登入時修改密碼，或是當我更新密碼複雜度時，請舊有使用者改密碼遵循新的密碼規則。這功能可以用剛剛的 `chage` 來達成：
 
 ```bash
 $ chage --lastday 0 <user>
