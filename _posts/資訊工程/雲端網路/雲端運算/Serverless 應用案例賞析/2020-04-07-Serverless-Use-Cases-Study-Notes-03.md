@@ -7,6 +7,7 @@ categories:
 tags:
 - 其他課程平台
 - Serverless 應用案例賞析
+- 讀書筆記
 - Fass/Serverless
 - 網站與雲端平台
 - OpenWhisk
