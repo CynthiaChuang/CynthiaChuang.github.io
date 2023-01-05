@@ -32,5 +32,6 @@ tags:
 | ☑️  | [CH 1｜Introduction](https://cynthiachuang.github.io/Kubernetes-for-the-Absolute-Beginners-01#ch-1introduction)                      |
 | ☑️  | [CH 2｜Kubernetes Overview](https://cynthiachuang.github.io/Kubernetes-for-the-Absolute-Beginners-01#ch-2kubernetes-overview) |
 | ☑️  | [CH 3｜Setup Kubernetes](https://cynthiachuang.github.io/Kubernetes-for-the-Absolute-Beginners-01#ch-3setup-kubernetes)|
-
- 
+| ☑️  | [CH 4｜Kubernetes Concepts](https://cynthiachuang.github.io/Kubernetes-for-the-Absolute-Beginners-02/#ch-4kubernetes-concepts)  |
+| ☑️  | [CH 5｜YAML Introduction](https://cynthiachuang.github.io/Kubernetes-for-the-Absolute-Beginners-02/#ch-5yaml-introduction)  |
+| ☑️  | [CH 6｜Kubernetes Concepts - Pods, ReplicaSets, Deployments](https://cynthiachuang.github.io/Kubernetes-for-the-Absolute-Beginners-02/#ch-6kubernetes-concepts---pods-replicasets-deployments)  |
