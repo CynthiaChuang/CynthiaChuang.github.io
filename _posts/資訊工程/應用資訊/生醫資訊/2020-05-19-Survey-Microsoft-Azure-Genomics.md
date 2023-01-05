@@ -22,7 +22,7 @@ tags:
     DNA（圖片來源: <a href="https://pixabay.com/">Pixabay</a>）
 </p>
 
-在開始之前，我們先提提基因定序的流程。一般來說，從採檢到生物樣本到最終提出變異報告，可分成三個階段。
+在開始之前，我們先提提基因定序的流程。一般來說，從採檢生物樣本到最終提出變異報告，可分成三個階段。
 
 這裡採用 MS 在 [Genomics 白皮書](https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf)中的分類定義：
 
@@ -76,7 +76,7 @@ tags:
      
  - **資料管理**  
    1. 資料的操作與保管使用有通過 ISO 認證並遵循 HIPAA 法規 ，確保患者紀錄和健康資訊的隱私。
-   2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://azure.microsoft.com/en-us/resources/a-practical-guide-to-designing-secure-health-solutions-using-microsoft-azure/)。(:cold_sweat:...誰看完了分享一下吧！記錄一下有這東西就好，需要實在回頭看。
+   2. [A Practical Guide to Designing Secure Health Solutions using Microsoft Azure](https://azure.microsoft.com/en-us/resources/a-practical-guide-to-designing-secure-health-solutions-using-microsoft-azure/)。(:cold_sweat:...誰看完了分享一下吧！記錄一下有這東西就好，實在有需要再回頭看吧。
 
 <p class="illustration">
     <img src="https://i.imgur.com/EsOa8j3.png" alt="Microsoft Genomics">
@@ -87,14 +87,14 @@ tags:
 **簡單來說**  
 MS Genomics 提供儲存與運算空間，讓使用者做無需處理軟硬體維護與更新，就可以執行<mark>次級分析</mark>： GATK 標準分析流程。其他的附加價值是突顯在儲存的可靠性、方便性、計算速度與計價方式上。
 
-上一張他家合作夥伴 [Persistent](https://www.persistent.com/partner-ecosystem/) 的圖，這張圖很的詮釋了 MS Genomics 所提供的服務範圍。下圖中橘色的部分是 Persistent 所提供的服務，可以看出來是針對三級分析與二級分析的輸出結果進行衡量；而鐵灰色的部分則是所提供的服務次級分析的 GATK 最佳 pipeline。
+上一張他家合作夥伴 [Persistent](https://www.persistent.com/partner-ecosystem/) 的圖，這張圖很好的詮釋了 MS Genomics 所提供的服務範圍。下圖中橘色的部分是合作夥伴 Persistent 所提供的服務，可以看出來是針對三級分析與二級分析的輸出結果進行衡量，這也是第三方所能做的部份；而鐵灰色的部分則是MS Genomics 所提供的次級分析服務。
 
 <p class="illustration">
     <img src="https://i.imgur.com/aVzl6bv.jpg" alt="Persistent Analysis Pipeline">
     灰色底的為 MS Genomics 所提供的服務，橘色底則為 Persistent 所提供的服務（圖片來源: <a href="https://www.persistent.com/partner-ecosystem/microsoft/genomics-and-azure/">Persistent Systems</a>）
 </p>
 
-// 再看看要塞哪裡
+還有一張我覺得也可以的說明圖，但我不曉得要塞哪裡 😂 ，只能先放這之後再看看要塞哪裡吧 XDDD
 <p class="illustration">
     <img src="https://i.imgur.com/jjZ8wwi.png" alt="Persistent Analysis Pipeline">
     Microsoft Genomics Service（圖片來源: <a href="https://www.microsoft.com/en-us/genomics/">Microsoft Genomics</a>）
@@ -144,7 +144,7 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
     Standard BWA/GATK Pipeline（圖片來源: <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/accelerate-precision-medicine-with-microsoft-genomics/Accelerate_precision_medicine_with_Microsoft_Genomics.pdf">白皮書</a>）
 </p>
 
-可以看到改良後的 pipeline 分成兩個階段，在第一階段是跨所有核心進行大量批次定序片段比對，並進行前處理時不依賴任何的排序，例如：收集用來做定序質量分數重新校正的統計資料。然後，將定序片段依序批次寫入中間文件。
+可以看到改良後的 pipeline 會分成兩個階段，在第一階段是跨所有核心進行大量批次定序片段比對；但特別的是，進行前處理時不依賴任何的排序，例如：收集用來做定序質量分數重新校正的統計資料。完成後，將定序片段依序批次寫入中間文件。
 
 第二階段將所有 batches 合併到一個定序片段的 single fully-sorted stream 中，並完成預處理和後處理步驟：應用 BQSR 統計信息、標記重複項、構建 BAM 索引以及壓縮 BAM 文件。
 
@@ -152,19 +152,19 @@ SNAP Engine 這是 Microsoft Research 與 UC Berkeley AMPLab 一起合作開發�
 
 標準的 GATK 分析流程管線中通常按順序執行每個步驟。每個步驟都必須讀入上一步生成的文件，因此必須等待它完成。如圖 2 所示，若將工作依基因體的不同區域分進行劃分，則在一個步驟中就會存在平行性可能（例如：分別在每個染色體上運行 MarkDuplicates）。
 
-根據微軟的[合作夥伴表示](http://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-ebook-PartneringToAdvanceClinicalGenomics.pdf)，整套次級分析的時間由先的 28 小時降至 4 小時，僅需原先時間的 1/7 。
+根據[微軟的合作夥伴表示](http://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-ebook-PartneringToAdvanceClinicalGenomics.pdf)，整套次級分析的時間會由原先的 28 小時降至 4 小時，僅需原先時間的 1/7 。
  
 <br class="big">
 
 **BWA-MEM & GATK HaplotypeCaller**   
 先提一下 HaplotypeCaller 的核心操作就是四步：
 
-1. 尋找激活區域，就是和參考基因體不同部分較多的區域
-2. 通過對該區域進行局部重組裝，確定單倍型（haplotypes）。就是這一步可以省去indel realignment
+1. 尋找激活區域，就是和參考基因體不同部分較多的區域。
+2. 通過對該區域進行局部重組裝，確定單倍型（haplotypes）。就是這一步可以省去 indel realignment！
 3. 在給定的read數據下，計算單倍型的可能性。
-4. 分配樣本的基因型
+4. 分配樣本的基因型。
 
-在這 BWAMEM 和 GATK HaplotypeCaller 程式碼的大部分保持不變，以保持與標準 pipelines 的兼容性。僅進行少量修改預先計算的激活區域通過 pipelines 輸入到標準 input 中，也就是上述提到的第一步驟，這步驟沒有相依性可以拆開來做。
+在這裡 BWAMEM 和 GATK HaplotypeCaller 大部分的程式碼保持不變，以確保與標準 pipelines 的兼容性。僅少量修改預先計算的激活區域通過 pipelines 輸入到標準 input 中，也就是上述提到的第一步驟，因為這步驟沒有相依性，故可以拆開來做。
 
 
 #### 整體的工作流程
@@ -177,9 +177,9 @@ CromwellOnAzure</a>）
 由找到的流程圖看來，他們後面用的 Cromwell，不過是有經過客製化，稱作[Cromwell on Azure](https://github.com/microsoft/CromwellOnAzure)，搭配 TES 最回後端來調用 Azure Batch 。若是對回服務內部的架構來看，被我暱稱飛天豬+TES的這部分，會對照回 Service Controller。
 
 <div class="alert warning">
-越寫越不確定 SNAP Engine， 是對照的途中的那一塊。
+越寫越不確定 SNAP Engine， 是對照的圖中的哪一塊。
 
-原本推論，是 Trigger Service 的部分，但後來有覺得的是 compute environment 上的 VM ，因為文件中對它描述的規劃單一樣本於單一機器上流程。
+原本推測 SNAP Engine 是屬於 Trigger Service 的部分，但後來又覺得的是 compute environment 上的 VM ，因為文件中對它描述是：「規劃單一樣本於單一機器上流程」。
 </div>
 
 至於 WDL 則是下一張會提到的 msgen。
@@ -190,7 +190,7 @@ CromwellOnAzure</a>）
 
 <br class="big"> 
 
-不過這邊還是留一下記錄：
+不過這邊還是留一下紀錄：
 
 #### 事前準備
 1. Azure 帳戶 ~~(廢話)~~，並準備 **Azure Blob 儲存體** 帳戶與 **Microsoft Genomics** 帳戶。
@@ -243,10 +243,11 @@ CromwellOnAzure</a>）
 看起來整套的核心就是，Controller 的 Batch 監控與 Engine 的用跨多核心的計算密集型工作排程並結果回收，其實這兩區塊要刻應該也是可以，但工會非常的大。這邊應該有辦法可以不借助 msgen 自己撰寫 WDL 才對(不負責任猜測。 
 
  
+
 ## 使用案例
 這邊就不寫了，直接看這份《[Partnering to Advance Clinical Genomics](http://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-ebook-PartneringToAdvanceClinicalGenomics.pdf)》 。
 
-就目前看來最多人使用的 AWS > Azure > google。
+就目前 servey 看來幾個基因雲端平台最多人使用的依序分別為：AWS > Azure > google。
 
 
 

@@ -13,7 +13,7 @@ tags:
 
 最近（2019/08）因為公司專案需求，因此稍微 Survey 一下 [Ensembl](https://asia.ensembl.org/index.html) 這個網站，不過 Survey 方向只會專注在專案需求上，並不會全面的 Survey 。
   
-在 Survey 過程中最痛苦的大概是，看懂並搞懂那些那些專有名詞，我的生物程度只停留在高三，而且還有退化的趨勢阿(( 崩潰
+在 Survey 過程中最痛苦的大概是看懂並搞懂那些那些專有名詞，我的生物程度只停留在高三，而且還有退化的趨勢阿(( 崩潰
 
 <br class="big">
   
@@ -33,19 +33,19 @@ tags:
 
 Ensembl 其實是一項開始於 1999 年的生物資訊學的研究計劃，由是一個由歐洲生物資訊研究所（European Bioinformatics Institute, EMBL）和維康基金桑格研究院（Wellcome Trust Sanger Institute）所推動。其目標是其致力於<mark>統整基因注釋（Annotation）和定序資料的整合</mark>，並讓研究人員可以透過網路來取得所需資料。
   
-而網站則開始於 2000 年，原是一個真核生物注釋項目，主要側重在脊椎動物，但隨著時間推移，Ensembl 資料庫也包含了越來越多的基因體資料，同時它的可用資料的範圍也擴展到了比較基因體學、變異位點...等方面。 
+而網站則開始於 2000 年，原是一個真核生物注釋項目，主要側重在脊椎動物；但隨著時間推移，Ensembl 資料庫也包含了越來越多的基因體資料，同時，它的可用資料的範圍也擴展到了比較基因體學、變異位點...等方面。 
   
-Ensembl 可支援將基因體變異、基因體大範圍重組（e.g. chromothripsis, chromoplexy）以<mark>視覺化方式呈現</mark>、檢視基因在染色體上的注釋、探索某個基因同源性（Homology）和進化樹、檢視比對到基因上的 mRNA 或蛋白的序列位置及 Variant Effect Predictor...等功能
+Ensembl 可支援將基因體變異、基因體大範圍重組（e.g. chromothripsis, chromoplexy）以<mark>視覺化方式呈現</mark>、檢視基因在染色體上的注釋、探索某個基因同源性（Homology）和進化樹、檢視比對到基因上的 mRNA 或蛋白的序列位置及 Variant Effect Predictor...等功能。
 
-截至目前為止，Ensembl 發布的最新資料庫版號為 97。  
-P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia.ensembl.org/index.html)查詢。
+截至目前為止，Ensembl 發布的最新資料庫版號為 97。但它有持續更新，需要可以自行上[官網](https://asia.ensembl.org/index.html)查詢。
+- 2023/01/05：我今天看好像已經到 **Release 108 (Oct 2022)**。
 
 
 
 ### 其他資料庫
-除外 [Ensembl 資料庫](http://asia.ensembl.org/index.html)外，還有 NCBI (National Center for Biotechnology information）所提供的 [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) 以及 UCSC 與其他資料庫，e.g. UniProt，前三者（在某些文章中）並列目前三大資料庫。
+除外 [Ensembl 資料庫](http://asia.ensembl.org/index.html)外，還有 NCBI（National Center for Biotechnology information）所提供的 [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) 以及 UCSC 與其他資料庫，e.g. UniProt，前三者（在某些文章中）並列目前三大資料庫。
   
-如果對三者的介紹有興趣可以看看這篇：[《NCBI, UCSC, Ensembl, Uniprot, 一次学完统统不要钱》](http://www.sohu.com/a/161725404_170798)，要不要錢我是不知道啦，~~反正我的 WeChat 救不回來了~~，反正它前面公開的部分有稍微說到三個的資料庫差異，我只需要先對它們有個概念就好。
+如果對三者的介紹有興趣可以看看這篇：[〈NCBI, UCSC, Ensembl, Uniprot, 一次学完统统不要钱〉](http://www.sohu.com/a/161725404_170798)，要不要錢我是不知道啦，~~反正我的 WeChat 救不回來了~~，反正它前面公開的部分有稍微說到三個的資料庫差異，我只需要先對它們有個概念就好。
 
 
  
@@ -101,7 +101,7 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
 <br class="big">
 
 1. **先看看頁面中最顯眼的 <mark>Gene: BRCA2</mark>**  
-    BRCA2 是由 HGNC（ HUGO Gene Nomenclature Committee，人類基因命名委員會）對基因進行命名描述的一個 HGNC Symbol，又稱為**縮寫標識符**，具有**唯一性**。 
+    BRCA2 是由 HGNC（HUGO Gene Nomenclature Committee，人類基因命名委員會）對基因進行命名描述的一個 HGNC Symbol，又稱為**縮寫標識符**，具有**唯一性**。 
 
     人類基因命名委員會，顧名思義就是為人類基因進行命名的。由於 HUGO 是國際權威的權威機構，因此多數資料庫都會引入它的命名與 ID ，方便跨資料庫進行搜尋。
  
@@ -117,7 +117,7 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
         用來註明這是一個基因、外顯子或是蛋白質家族...等。對照表 [Feature prefixes](https://asia.ensembl.org/info/genome/stable_ids/prefixes.html) 在這。
     4. **唯一的 11 碼數字**
     5. **版本號**  
-        在小數點之後的數字是版號，為了維持 stable，Ensembl ID 儘量不會變動，因此在基因資料發生一些小的改動食指會去變動最後的版號。不過，如果整個基因整體模式都變動的話，還是會重新分配一個 ID。
+        在小數點之後的數字是版號，為了維持 stable，Ensembl ID 儘量不會變動，因此在基因資料發生一些小的改動時會去變動最後的版號。不過，如果整個基因整體模式都變動的話，還是會重新分配一個 ID。
 
     <br class="big">
 
@@ -133,8 +133,7 @@ P.S. 這是後來好像有出更新的了，可以自行上[官網](https://asia
 
 <br class="big">
 
-剩下的資訊就比較好懂了，如基因位置，就不贅述的。  
-P.S. 其實沒比較好懂...不過至少知道它是只基因上的座標 XD
+剩下的資訊就比較好懂了，如基因位置，就不贅述的。好吧，其實沒比較好懂...不過至少知道它是只基因上的座標 XDDD
   
 
 
@@ -148,9 +147,10 @@ P.S. 其實沒比較好懂...不過至少知道它是只基因上的座標 XD
 
 此外，在找尋資料的過程中，發現關於 annotation tool 中有三套被反覆提及，分別是 <mark>Annovar</mark>、<mark>SnpEff</mark> 與 Ensembl 的 <mark>VEP</mark>，這三套都是做變異注釋的工具：
 
-- [突变注释工具SnpEff,Annovar,VEP,oncotator比较分析](https://www.jianshu.com/p/6284f57664b9)
-- [變異註釋軟件SnpEff, VEP, Annovar的比較(上)](https://www.weiwenku.org/d/200114289)  
-↑ 不是我不貼下，而是我真的找不到下。 
+- [〈突变注释工具SnpEff,Annovar,VEP,oncotator比较分析〉](https://www.jianshu.com/p/6284f57664b9)
+    - 文章好像掛，可以直接拿標題去搜尋可以看到有人轉載。
+- [〈變異註釋軟件SnpEff, VEP, Annovar的比較(上)〉](https://www.gushiciku.cn/dc_hk/200114289)  
+    - 不是我不貼下，而是我真的找不到下。 
 
 <br class="big"> 
 
@@ -255,7 +255,7 @@ D大提出關於 VCF annotation 可以歸納出幾項是需要進一步了解的
 8. [Ensembl ID /  Ensembl Stable ID](https://asia.ensembl.org/info/genome/stable_ids/index.html)。檢自 Ensembl (2019-08-28)。
 9. Liu Xuanzhu (2017-10-16)。[VEP--强大的变异注释工具](https://www.genedock.com/article/2017/10/16/vep-%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%8F%98%E5%BC%82%E6%B3%A8%E9%87%8A%E5%B7%A5%E5%85%B7/)。檢自 GeneDock 文档 (2019-08-28)。
 10. 生信杂谈 (2017-09-26)。[突变注释工具SnpEff,Annovar,VEP,oncotator比较分析](https://www.jianshu.com/p/6284f57664b9)。檢自 簡書 (2019-08-28)。
-11. GCBI知識庫 (2019-04-14)。[變異註釋軟件SnpEff, VEP, Annovar的比較 (上)](https://www.weiwenku.org/d/200114289)。檢自 微文庫 (2019-08-28)。
+11. GCBI知識庫 (2019-04-14)。[變異註釋軟件SnpEff, VEP, Annovar的比較 (上)](https://www.gushiciku.cn/dc_hk/200114289)。檢自 微文庫 (2019-08-28)。
 12. [Annotation & Prediction](https://asia.ensembl.org/info/genome/index.html)。檢自 Ensembl (2019-08-28)。
 13. [Ensembl Variant Effect Predictor (VEP)](https://asia.ensembl.org/info/docs/tools/vep/index.html)。檢自 Ensembl (2019-08-28)。
 14. [Variant Effect Predictor - Data formats](http://asia.ensembl.org/info/docs/tools/vep/vep_formats.html#input)。檢自 Ensembl (2019-08-28)。
