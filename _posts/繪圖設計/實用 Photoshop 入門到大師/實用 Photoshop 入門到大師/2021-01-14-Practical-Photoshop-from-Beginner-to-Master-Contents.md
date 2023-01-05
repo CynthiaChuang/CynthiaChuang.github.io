@@ -6,7 +6,6 @@ categories:
 - "繪圖設計與藝術 › 平面設計"
 - "資訊科技 › 開發與輔助工具"
 tags:
-- 課程
 - Hahow
 - 實用 Photoshop 入門到大師
 - Photoshop
