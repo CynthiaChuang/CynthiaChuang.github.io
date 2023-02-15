@@ -1,7 +1,7 @@
 ---
 title: 【LeetCode】0000. 解題目錄
-date: 2018-12-19
-is_modified: false
+date: 2023-02-15
+is_modified: true
 categories:
 - 面試刷題
 tags:
@@ -38,13 +38,13 @@ tags:
 | 0031. | [Next Permutation](/LeetCode-0031-Next-Permutation/) | M |  |
 | 0030. | Substring with Concatenation of All Words | H |  |
 | 0029. | Divide Two Integers | M |  |
-| 0028. | Implement strStr() | E |  |
-| 0027. | Remove Element | E |  |
-| 0026. | Remove Duplicates from Sorted Array | E |  |
+| 0028. | [Find the Index of the First Occurrence in a String](/LeetCode-0028-Find-the-Index-of-the-First-Occurrence-in-a-String) | E |  |
+| 0027. | [Remove Element](/LeetCode-0027-Remove-Element) | E |  |
+| 0026. | [Remove Duplicates from Sorted Array](/LeetCode-0026-Remove-Duplicates-from-Sorted-Array) | E |  |
 | 0025. | [Reverse Nodes in k-Group](/LeetCode-0025-Reverse-Nodes-in-k-Group/) | H |  |
 | 0024. | [Swap Nodes in Pairs](/LeetCode-0024-Swap-Nodes-in-Pairs/) | M |  |
-| 0023. | Merge k Sorted Lists | H |  |
-| 0022. | Generate Parentheses | M |  |
+| 0023. | [Merge k Sorted Lists](/LeetCode-0023-Merge-k-Sorted-Lists) | H |  |
+| 0022. | [Generate Parentheses](/LeetCode-0022-Generate-Parentheses) | M |  |
 | 0021. | [Merge Two Sorted Lists](/LeetCode-0021-Merge-Two-Sorted-Lists/) | E |  |
 | 0020. | [Valid Parentheses](/LeetCode-0020-Valid-Parentheses/) | E |  |
 | 0019. | [Remove Nth Node From End of List](/LeetCode-0019-Remove-Nth-Node-From-End-of-List/) | M |  |
