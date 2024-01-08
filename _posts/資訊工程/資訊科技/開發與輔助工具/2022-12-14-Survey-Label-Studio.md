@@ -1,7 +1,7 @@
 ---
 title: Survey｜Label Studio
-date: 2023-02-16
-is_modified: false
+date: 2023-12-20
+is_modified: true
 image: https://i.imgur.com/rlEl5Z6.png
 categories:
 - "資訊科技 › 開發與輔助工具"
@@ -126,7 +126,7 @@ A 混在 Backend 的 project 內，安裝 Backend 時會順便起起來，如果
 
 <p class="illustration">
 	<img src="https://i.imgur.com/mIWHD8y.png" alt="LabelStudio API Workflow">
-	LabelStudio API Workflow（圖片來源: 拍謝，一年前留的圖片我忘記來源了，知道的麻煩告訴我一聲，謝謝！）
+	LabelStudio API Workflow（圖片來源: <a href="https://github.com/HumanSignal/dm2/blob/master/docs/dm_architecture_diagram.pdf">dm2｜GitHub</a>）
 </p>
 
 
@@ -660,8 +660,9 @@ Hi, Heidi（圖片來源: <a href="https://labelstud.io/blog/what-s-with-the-lab
 
 ## 更新紀錄
 <details class="update_stamp">
-  <summary>最後更新日期：2023-02-16</summary>
+  <summary>最後更新日期：2023-12-20</summary>
   <ul>
+    <li>2023-12-20 更新：更新 API Workflow 圖片來源。</li>
     <li>2023-02-16 發布</li>
     <li>2022-12-14 完稿</li>
     <li>2021-08-04 起稿</li>
