@@ -1,6 +1,6 @@
 ---
 title: ID驗證系列｜公司統一編號驗
-date: 2022-05-01 00:07
+date: 2023-12-20 00:07
 is_modified: true
 categories:
 - 先備知識
@@ -161,6 +161,7 @@ bool checkTaxId(string idStr){
         idArray[i] = idStr[i] - '0' ;
         int p = idArray[i] * weight[i];
         int s = p/10 + p%10;
+        s = s==10?0:s;
         sum += s ;  
     }
 
@@ -188,8 +189,9 @@ bool checkTaxId(string idStr){
 
 ## 更新紀錄
 <details class="update_stamp">
-  <summary>最後更新日期：2022-05-01</summary>
+  <summary>最後更新日期：2023-12-20</summary>
   <ul>
+    <li>2023-12-20 更新：使計算過程與文件相符，但不影響判別是否為合法統編</li>
     <li>2022-05-01 更新：檢查碼邏輯修正說明</li>
     <li>2022-05-01 更新：檢查碼判別式錯誤修正</li>
     <li>2020-12-31 發布</li>
