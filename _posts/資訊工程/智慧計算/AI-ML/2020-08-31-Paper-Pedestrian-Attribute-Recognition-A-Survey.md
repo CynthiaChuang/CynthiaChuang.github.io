@@ -638,7 +638,7 @@ Curriculum Learning，課程學習，主要思想是模仿人類學習的特點�
 ### 7.1 More Accurate and Efficient Part Localization Algorithm
 在部分研究中，會提供人體區域或是姿勢的資訊，來輔助或進行屬性的推測。但這些資訊的準度或是標注方式可以再做進一步的改良。
 1. 標注方式可以朝向弱監督或是無監督的方向進行。
-2. 標注的精準度的提昇。
+2. 標注的精準度的提升。
 
 
 ### 7.2 Deep Generative Models for Data Augmentation
