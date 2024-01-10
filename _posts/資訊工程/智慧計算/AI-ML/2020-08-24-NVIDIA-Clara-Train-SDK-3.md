@@ -231,7 +231,7 @@ DeepGrow 在 3D Slicer 操作效果（圖片來源: <a href="https://ngc.nvidia.
 是說每次說到效能提升，我都會想到這兩張圖 XDDD
 
 <p class="illustration">
-<img src="https://i.imgur.com/mwWwsQB.png" alt="效能提昇">
+<img src="https://i.imgur.com/mwWwsQB.png" alt="效能提升">
 （圖片來源: <a href="https://www.facebook.com/photo?fbid=10209456134591075&set=pcb.10209456134991085">Facebook</a>）
 </p>
 
@@ -579,7 +579,7 @@ BT + Smart Cache V2圖片來源: <a href="https://ngc.nvidia.com/catalog/resourc
 <img src="https://i.imgur.com/za1YD85.png" alt=" GPU 使用率">
 </p>
 
-而在運算速度方面，這邊在不同的設置上，使用了同一個脾臟的資料集（[Medical Segmentation Decathlon](http://medicaldecathlon.com/) 中的  Task09_Spleen.tar）進行訓練，依照圖表最高的效率可以提昇 54x。
+而在運算速度方面，這邊在不同的設置上，使用了同一個脾臟的資料集（[Medical Segmentation Decathlon](http://medicaldecathlon.com/) 中的  Task09_Spleen.tar）進行訓練，依照圖表最高的效率可以提升 54x。
 
 不過我懷疑實務上不會這高，因為那個 replace 是 0，其實不受保留數與替換數設置的影響。而且拿單 GPU 跟 4-GPU 這樣比，這也太...
 
