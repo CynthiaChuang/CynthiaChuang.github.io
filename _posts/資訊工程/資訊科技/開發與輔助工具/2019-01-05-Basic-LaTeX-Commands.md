@@ -10,11 +10,11 @@ tags:
 - 工具介紹與操作
 --- 
 
-整理一些我自己用過的 LaTex  數學符號指令，下次就不用再像無投蒼蠅般亂找了 XD
+整理一些我自己用過的 LaTex  數學符號指令，下次就不用再像無頭蒼蠅般亂找了 XD
 
 不過我的使用情境多數是在寫網誌時，插入公式用，偶爾寫寫課堂上的證明題，比較少拿它來寫文件，所以缺少關於排版部分的語法，只在文章後面稍微提到了點公式的排版。
 
-是說，後面部分有點亂，是不是應該把這篇拆成兩篇
+是說，後面部分有點亂，是不是應該把這篇拆成兩篇？
 <!--more-->
 
 
@@ -94,6 +94,7 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |$\bigvee$|\bigvee|
 |$\land$|\land||$\wedge$|\wedge||$\curlywedge$|\curlywedge|
 |$\bigwedge$|\bigwedge|
+|$\neg$|\neg|
 
 
 
@@ -101,14 +102,12 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 
 |預覽|指令|.|預覽|指令|
 |---|---|---|---|---|
-|$a^b$|a^b||$a_t$|a_t|
-|$a^b_t$|a^b_t||$a^{b+1}_{t+1}$|a^{b+1}_{t+1}|
-|$\overline{m+n}$|\overline{m+n}||$\underline{m+n}$|\underline{m+n}|
-|$\overbrace{m+\cdots+n}^{26}$|\overbrace{m+\cdots+n}^{26}||$\underbrace{m+\cdots+n}_{26}$|\underbrace{m+\cdots+n}_{26}|
-|$\bar{a}$|\bar{a}||$\vec{a}$|\vec{a}|
-|$\hat{a}$|\hat{a}||$\dot{a}$|\dot{a}|
-|$\overrightarrow{ab}$|\overrightarrow{ab}||$\overleftarrow{ab}$|\overleftarrow{ab}|
-|$\widehat{abc}$|\widehat{abc}||$\overset{\frown} {ab}$|\overset{\frown} {ab}|
+|$a^b$|a^b||$a_t$|a_t||$a^b_t$|a^b_t|
+|$a^{b+1}_{t+1}$|a^{b+1}_{t+1}||$\overline{m+n}$|\overline{m+n}||$\underline{m+n}$|\underline{m+n}|
+|$\overbrace{m+\cdots+n}^{26}$|\overbrace{m+\cdots+n}^{26}||$\underbrace{m+\cdots+n}_{26}$|\underbrace{m+\cdots+n}_{26}||$\bar{a}$|\bar{a}|
+|$\vec{a}$|\vec{a}||$\hat{a}$|\hat{a}||$\dot{a}$|\dot{a}|
+|$\overrightarrow{ab}$|\overrightarrow{ab}||$\overleftarrow{ab}$|\overleftarrow{ab}||$\widehat{abc}$|\widehat{abc}|
+|$\overset{\frown} {ab}$|\overset{\frown} {ab}|
 
 
 
@@ -152,6 +151,7 @@ $\triangleright$|\triangleright||$\triangleleft$| \triangleleft|
 |預覽|指令|.|預覽|指令|.|預覽|指令|.|預覽|指令|
 |---|---|---|---|---|---|---|---|---|---|---|
 |$\nabla{x}$|\nabla{x}||$\partial{x}$|\partial{x}||$x^{\prime}$|x^{\prime}||||
+|$\int_{-N}^{N} e^x\, dx$|\int_{-N}^{N} e^x\, dx| |$\infty$|\infty|
 
 
 
