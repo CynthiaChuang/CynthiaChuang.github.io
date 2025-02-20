@@ -1,7 +1,7 @@
 ---
 title: CodeFree｜喝一杯咖啡，輕鬆學電腦科學 - 下
-date: 2022-10-07
-is_modified: false
+date: 2024-01-09
+is_modified: true
 categories:
 - "硬體系統 › 計算機系統"
 tags:
@@ -13,7 +13,7 @@ tags:
 
 今天又是喝咖啡學習系列，不過不是學程式，而是學電腦科學。筆記內容包括[上](https://codefree.hiskio.com/courses/4)、[中](https://codefree.hiskio.com/courses/5)、[下](https://codefree.hiskio.com/courses/6)三門課。
    
-這門課看了下內文其實就是計算機概論，有點令人懷念的一門課…想當初算二進制還算到超挫折的 XDDD 不過怎感覺這篇不是在寫讀書筆記，而是重寫了一次課程？很多東西它沒提到，是我自己忽然想到其他關鍵字就一併寫進去了 XDDD
+這門課看了下內文其實就是計算機概論，有點令人懷念的一門課…想當初算二進制還算到超挫折的 XDDD 不過總感覺這篇不是在寫讀書筆記，而是重寫了一次課程？很多東西它沒提到，是我自己忽然想到其他關鍵字就一併寫進去了 XDDD
 
 <!--more-->
 
@@ -30,10 +30,10 @@ tags:
 不過隨著社群網路的興起，這網路直徑正在逐漸下降。根據 Facebook 2016 年的研究 [〈Three and a half degrees of separation〉](https://research.facebook.com/blog/2016/2/three-and-a-half-degrees-of-separation/)，每個人與其他人間隔約為 4.57 人。
 
 
-### 9-1｜網站的地址 － IP 位址
-IP 位址（Internet Protocol Address，IP Address），可譯為網際協定位址、網際網路協定位址。IP 相當於每戶人家的門牌號，<mark>在網際協定中用於標識傳送或接收資料所示用來帶代表裝置的一串數字</mark>，每個裝置的 IP 都是獨一無二的，不然郵差怎麼把信送到你家？
+### 9-1｜網站的地址：IP 位址
+IP 位址（Internet Protocol Address，IP Address），可譯為網際協定位址、網際網路協定位址。IP 相當於每戶人家的門牌號，在網際協定中用於<mark>標識傳送或接收資料所示用來帶代表裝置的一串數字</mark>，每個裝置的 IP 都是獨一無二的，不然郵差怎麼把信送到你家？
 
-忽然想到我上次把地址填錯，最後竟然還是送達了 XDDD。不過我那個沒錯得很離譜啦，只是把 Tainan 拼成了 Taiwan 而已，我郵遞區號還是寫對的！ 
+忽然想到我上次把地址填錯，最後竟然還是送達了 XDDD。不過我那個沒錯得很離譜啦，只是把 Tainan 拼成了 Taiwan 而已，我郵遞區號還是寫對的！
 
 <br class="big">
 
@@ -76,7 +76,7 @@ IP 根據用途可以分為 **實體 IP（Public IP）** 及 **虛擬 IP（Priva
 
 網域名稱會由幾個部分組成的，每個部分以 `.` 做為區隔：
 1. **https（http）**   
-    **通訊協定**。這邊採用超文本傳輸協定（HyperText Transfer Protocol），是一種用於分布式、協作式和超媒體訊息系統的應用層協定。HTTP 是全球資訊網的通訊基礎。 
+    **通訊協定**。這邊採用超文本傳輸協定（HyperText Transfer Protocol），是一種用於分布式、協作式和超媒體訊息系統的應用層協定。HTTP 是全球資訊網的通訊基礎。
     
 2. **www**   
     www 是可以自行設定的主機名稱，並非註冊域名的主體，或稱子網域及次網域。最常用的主機名稱有 www 及 FTP 等，或是省略不用，它會直接轉向網域名稱。
@@ -1122,7 +1122,7 @@ IDE 整合開發環境（圖片來源: <a href="https://codefree.hiskio.com/cour
 
     簡稱 VS，是由微軟開發的 IDE，是目前應用廣泛的 IDE 之一。它同時能在 Windows、Linux 和 macOS 作業系統上執行，還能支援 C++、C#、.NET、F#、JavaScript、Ruby、Go 及 Python 等程式。
 
-    我記得這是我大學教授指定的 IDE，不過我大學之後就在也沒用過了 XDDD 不過需要注意的是，這邊介紹的 Visual Studio 而不是 Visual Studio Code，兩者的定位並不一樣。VS 是 IDE，而 VS Code 則僅是單純的程式碼編輯器，不過說真的最新的 VS Code 加上那龐大的擴充套件，幾乎可以取代 IDE 來用。
+    我記得這是我大學教授指定的 IDE，不過我大學之後就再也沒用過了 XDDD 不過需要注意的是，這邊介紹的 Visual Studio 而不是 Visual Studio Code，兩者的定位並不一樣。VS 是 IDE，而 VS Code 則僅是單純的程式碼編輯器，不過說真的，最新的 VS Code 加上龐大的擴充套件，幾乎可以取代 IDE 使用。
 
 2. **Eclipse**  
     > [Eclipse 下載教學](https://www.kjnotes.com/devtools/80)
@@ -1399,6 +1399,12 @@ IDE 整合開發環境（圖片來源: <a href="https://codefree.hiskio.com/cour
 ### 16-1｜人工智慧的巨量資料學習法
 害我想到我的草稿夾，有一篇關於人工智慧、機器學習與深度學習之間的網誌，我決定等那邊篇寫完再來給連結...恩...希望有吧 XDDD
 
+:::info
+:information_source: **關於人工智慧、機器學習與深度學習之間的網誌**  
+
+我竟然寫完（感動 
+- [從人工智慧到機器學習、深度學習](https://cynthiachuang.github.io/From-Artificial-Intelligence-to-Machine-Learning-and-Deep-Learning/)
+:::
 
 #### 單元測驗
 1. **現在你終於搞懂人工智慧、機器學習、深度學習之間的關係了！讓我們來複習一下吧！請選出下列正確的選項**
@@ -1474,8 +1480,9 @@ IDE 整合開發環境（圖片來源: <a href="https://codefree.hiskio.com/cour
 
 ## 更新紀錄
 <details class="update_stamp">
-  <summary>最後更新日期：2022-10-07</summary>
+  <summary>最後更新日期：2024-01-09</summary>
   <ul>
+    <li>2024-01-09 更新：新增人工智慧介紹網誌連結。</li>
     <li>2022-10-07 發布</li>
     <li>2022-09-29 完稿</li>
     <li>2022-07-29 起稿</li>
